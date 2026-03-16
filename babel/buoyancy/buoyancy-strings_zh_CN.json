@@ -1,0 +1,68 @@
+{
+  "screen.compare": {
+    "value": "比较",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553803,
+        "oldValue": "",
+        "newValue": "比较"
+      }
+    ]
+  },
+  "screen.applications": {
+    "value": "应用",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553803,
+        "oldValue": "",
+        "newValue": "应用"
+      }
+    ]
+  },
+  "screen.explore": {
+    "value": "探索",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553803,
+        "oldValue": "",
+        "newValue": "探索"
+      }
+    ]
+  },
+  "screen.shapes": {
+    "value": "形状",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553803,
+        "oldValue": "",
+        "newValue": "形状"
+      }
+    ]
+  },
+  "screen.lab": {
+    "value": "实验室",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553803,
+        "oldValue": "",
+        "newValue": "实验室"
+      }
+    ]
+  },
+  "buoyancy.title": {
+    "value": "Buoyancy_浮力",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553803,
+        "oldValue": "",
+        "newValue": "Buoyancy_浮力"
+      }
+    ]
+  }
+}

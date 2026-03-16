@@ -1,0 +1,67 @@
+// Copyright 2021-2025, University of Colorado Boulder
+
+/**
+ * SubitizerRevealButton re-reveals the subitizer shape when pressed.
+ *
+ * @author Luisa Vargas
+ * @author Chris Klusendorf (PhET Interactive Simulations)
+ */
+
+import DerivedProperty from '../../../../axon/js/DerivedProperty.js';
+import Disposable from '../../../../axon/js/Disposable.js';
+import TProperty from '../../../../axon/js/TProperty.js';
+import { TReadOnlyProperty } from '../../../../axon/js/TReadOnlyProperty.js';
+import Dimension2 from '../../../../dot/js/Dimension2.js';
+import SceneryPhetConstants from '../../../../scenery-phet/js/SceneryPhetConstants.js';
+import Path from '../../../../scenery/js/nodes/Path.js';
+import Color from '../../../../scenery/js/util/Color.js';
+import eyeSolidShape from '../../../../sherpa/js/fontawesome-5/eyeSolidShape.js';
+import RectangularPushButton from '../../../../sun/js/buttons/RectangularPushButton.js';
+import NumberPlayColors from '../../common/NumberPlayColors.js';
+import numberPlay from '../../numberPlay.js';
+
+// constants
+const BUTTON_SIDE_LENGTH = SceneryPhetConstants.DEFAULT_BUTTON_RADIUS * 2;
+const BUTTON_CONTENT_MARGIN = 6;
+const BUTTON_TOUCH_AREA_DILATION = 10;
+
+class SubitizeRevealButton extends RectangularPushButton {
+
+  public constructor( isChallengeSolvedProperty: TReadOnlyProperty<boolean>, subitizerIsInputEnabledProperty: TReadOnlyProperty<boolean>,
+                      isShapeVisibleProperty: TProperty<boolean> ) {
+
+    const eyeNode = new Path( eyeSolidShape, {
+      fill: Color.BLACK
+    } );
+
+    // The reveal button is visible only when a challenge is unsolved, when the subitizer is accepting input, and
+    // when the subitizer shape is not visible.
+    const revealButtonVisibleProperty = new DerivedProperty(
+      [ isChallengeSolvedProperty, subitizerIsInputEnabledProperty, isShapeVisibleProperty ],
+      ( isChallengeSolved, subitizerIsInputEnabled, isShapeVisible ) => {
+        return !isChallengeSolved && subitizerIsInputEnabled && !isShapeVisible;
+      } );
+
+    super( {
+      content: eyeNode,
+      xMargin: BUTTON_CONTENT_MARGIN,
+      yMargin: BUTTON_CONTENT_MARGIN,
+      touchAreaXDilation: BUTTON_TOUCH_AREA_DILATION,
+      touchAreaYDilation: BUTTON_TOUCH_AREA_DILATION,
+      size: new Dimension2( BUTTON_SIDE_LENGTH, BUTTON_SIDE_LENGTH ),
+      baseColor: NumberPlayColors.subitizeGameLightColorProperty,
+      visibleProperty: revealButtonVisibleProperty,
+      listener: () => {
+        isShapeVisibleProperty.value = true;
+      }
+    } );
+  }
+
+  public override dispose(): void {
+    Disposable.assertNotDisposable();
+    super.dispose();
+  }
+}
+
+numberPlay.register( 'SubitizeRevealButton', SubitizeRevealButton );
+export default SubitizeRevealButton;

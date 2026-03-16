@@ -1,0 +1,288 @@
+{
+  "screen.derivative": {
+    "value": "导数",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553804,
+        "oldValue": "",
+        "newValue": "导数"
+      }
+    ]
+  },
+  "screen.lab": {
+    "value": "实验室",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553804,
+        "oldValue": "",
+        "newValue": "实验室"
+      }
+    ]
+  },
+  "screen.integral": {
+    "value": "积分",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553804,
+        "oldValue": "",
+        "newValue": "积分"
+      }
+    ]
+  },
+  "screen.advanced": {
+    "value": "进阶",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553804,
+        "oldValue": "",
+        "newValue": "进阶"
+      }
+    ]
+  },
+  "discontinuities": {
+    "value": "不连续点",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553804,
+        "oldValue": "",
+        "newValue": "不连续点"
+      }
+    ]
+  },
+  "values": {
+    "value": "数值",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553804,
+        "oldValue": "",
+        "newValue": "数值"
+      }
+    ]
+  },
+  "valuesPreferenceDescription": {
+    "value": "在图形轴上显示数值、参考线、切线斜率与净符号面积",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553804,
+        "oldValue": "",
+        "newValue": "在图形轴上显示数值、参考线、切线斜率与净符号面积"
+      }
+    ]
+  },
+  "notation": {
+    "value": "符号",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553804,
+        "oldValue": "",
+        "newValue": "符号"
+      }
+    ]
+  },
+  "lagrange": {
+    "value": "拉格朗日：",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553804,
+        "oldValue": "",
+        "newValue": "拉格朗日："
+      }
+    ]
+  },
+  "leibniz": {
+    "value": "莱布尼兹：",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553804,
+        "oldValue": "",
+        "newValue": "莱布尼兹："
+      }
+    ]
+  },
+  "variable": {
+    "value": "变数",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553804,
+        "oldValue": "",
+        "newValue": "变数"
+      }
+    ]
+  },
+  "predictPreference": {
+    "value": "预测",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553804,
+        "oldValue": "",
+        "newValue": "预测"
+      }
+    ]
+  },
+  "predictPreferenceDescription": {
+    "value": "新增一个模式让您可以预测 f({{variable}}) 。",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553804,
+        "oldValue": "",
+        "newValue": "新增一个模式让您可以预测 f({{variable}}) 。"
+      }
+    ]
+  },
+  "barometer.slopeOfTangent": {
+    "value": "切线斜率",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553804,
+        "oldValue": "",
+        "newValue": "切线斜率"
+      }
+    ]
+  },
+  "checkbox.tangent": {
+    "value": "切线",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553804,
+        "oldValue": "",
+        "newValue": "切线"
+      }
+    ]
+  },
+  "barometer.netSignedArea": {
+    "value": "净符号面积",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553804,
+        "oldValue": "",
+        "newValue": "净符号面积"
+      }
+    ]
+  },
+  "checkbox.areaUnderCurve": {
+    "value": "曲线下面积",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553804,
+        "oldValue": "",
+        "newValue": "曲线下面积"
+      }
+    ]
+  },
+  "symbol.d": {
+    "value": "d",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553804,
+        "oldValue": "",
+        "newValue": "d"
+      }
+    ]
+  },
+  "symbol.x": {
+    "value": "x",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553804,
+        "oldValue": "",
+        "newValue": "x"
+      }
+    ]
+  },
+  "symbol.f": {
+    "value": "f",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553804,
+        "oldValue": "",
+        "newValue": "f"
+      }
+    ]
+  },
+  "symbol.t": {
+    "value": "t",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553804,
+        "oldValue": "",
+        "newValue": "t"
+      }
+    ]
+  },
+  "smooth": {
+    "value": "平滑化",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553804,
+        "oldValue": "",
+        "newValue": "平滑化"
+      }
+    ]
+  },
+  "predict": {
+    "value": "预测",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553804,
+        "oldValue": "",
+        "newValue": "预测"
+      }
+    ]
+  },
+  "referenceLine": {
+    "value": "参考线",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553804,
+        "oldValue": "",
+        "newValue": "参考线"
+      }
+    ]
+  },
+  "show": {
+    "value": "显示",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553804,
+        "oldValue": "",
+        "newValue": "显示"
+      }
+    ]
+  },
+  "calculus-grapher.title": {
+    "value": "Calculus Grapher_微积分图形",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553804,
+        "oldValue": "",
+        "newValue": "Calculus Grapher_微积分图形"
+      }
+    ]
+  }
+}

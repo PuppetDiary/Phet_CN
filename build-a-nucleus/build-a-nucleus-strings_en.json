@@ -1,0 +1,209 @@
+{
+  "build-a-nucleus.title": {
+    "value": "Build a Nucleus"
+  },
+  "screen.decay": {
+    "value": "Decay"
+  },
+  "screen.chartIntro": {
+    "value": "Chart Intro"
+  },
+  "protonsColon": {
+    "value": "Protons:"
+  },
+  "neutronsColon": {
+    "value": "Neutrons:"
+  },
+  "seconds": {
+    "value": "seconds"
+  },
+  "halfLifeColon": {
+    "value": "Half-life:"
+  },
+  "unknown": {
+    "value": "Unknown"
+  },
+  "unknownSpacePattern": {
+    "value": "unknown{{space}}"
+  },
+  "s": {
+    "value": "s"
+  },
+  "lessStable": {
+    "value": "less stable"
+  },
+  "moreStable": {
+    "value": "more stable"
+  },
+  "halfLifeTimescale": {
+    "value": "Half-Life Timescale"
+  },
+  "timeForLightToCrossANucleus": {
+    "value": "Time for light to cross a nucleus"
+  },
+  "timeForLightToCrossAnAtom": {
+    "value": "Time for light to cross an atom"
+  },
+  "timeForLightToCrossOneThousandAtoms": {
+    "value": "Time for light to cross 1000 atoms"
+  },
+  "timeForSoundToTravelOneMillimeter": {
+    "value": "Time for sound to travel 1 mm"
+  },
+  "aBlinkOfAnEye": {
+    "value": "A blink of an eye"
+  },
+  "oneMinute": {
+    "value": "One minute"
+  },
+  "oneYear": {
+    "value": "One year"
+  },
+  "averageHumanLifespan": {
+    "value": "Average human lifespan"
+  },
+  "ageOfTheUniverse": {
+    "value": "Age of the Universe"
+  },
+  "lifetimeOfLongestLivedStars": {
+    "value": "Lifetime of longest lived stars"
+  },
+  "A": {
+    "value": "A"
+  },
+  "B": {
+    "value": "B"
+  },
+  "C": {
+    "value": "C"
+  },
+  "D": {
+    "value": "D"
+  },
+  "E": {
+    "value": "E"
+  },
+  "F": {
+    "value": "F"
+  },
+  "G": {
+    "value": "G"
+  },
+  "H": {
+    "value": "H"
+  },
+  "I": {
+    "value": "I"
+  },
+  "J": {
+    "value": "J"
+  },
+  "availableDecays": {
+    "value": "Available Decays"
+  },
+  "proton": {
+    "value": "Proton"
+  },
+  "neutronUppercase": {
+    "value": "Neutron"
+  },
+  "neutronLowercase": {
+    "value": "neutron"
+  },
+  "electron": {
+    "value": "Electron"
+  },
+  "positron": {
+    "value": "Positron"
+  },
+  "alphaDecay": {
+    "value": "α decay"
+  },
+  "betaMinusDecay": {
+    "value": "β<sup>-</sup> decay"
+  },
+  "betaPlusDecay": {
+    "value": "β<sup>+</sup> decay"
+  },
+  "protonEmission": {
+    "value": "Proton emission"
+  },
+  "neutronEmission": {
+    "value": "Neutron emission"
+  },
+  "symbol": {
+    "value": "Symbol"
+  },
+  "stable": {
+    "value": "Stable"
+  },
+  "unstable": {
+    "value": "Unstable"
+  },
+  "doesNotForm": {
+    "value": "does not form"
+  },
+  "protons": {
+    "value": "Protons"
+  },
+  "neutronsUppercase": {
+    "value": "Neutrons"
+  },
+  "neutronsLowercase": {
+    "value": "neutrons"
+  },
+  "nameMassPattern": {
+    "value": "{{name}} - {{mass}}"
+  },
+  "elementDoesNotFormPattern": {
+    "value": "{{nameMass}} {{doesNotForm}}"
+  },
+  "zeroParticlesDoesNotFormPattern": {
+    "value": "{{mass}} {{particleType}} {{doesNotForm}}"
+  },
+  "electronCloud": {
+    "value": "Electron Cloud"
+  },
+  "clusterOfNeutronsPattern": {
+    "value": "Cluster of {{neutronNumber}} neutrons"
+  },
+  "availableDecaysInfoPanelText": {
+    "value": "While other decays may exist, the available decays shown are the most common. In cases where there is no known decay, no available decays are shown."
+  },
+  "energy": {
+    "value": "Energy"
+  },
+  "nuclearShellModel": {
+    "value": "Nuclear Shell Model"
+  },
+  "partialNuclideChart": {
+    "value": "Partial Nuclide Chart"
+  },
+  "axis.protonNumber": {
+    "value": "Proton Number"
+  },
+  "axis.neutronNumber": {
+    "value": "Neutron Number"
+  },
+  "mostLikelyDecayType": {
+    "value": "Most likely decay type"
+  },
+  "percentageInParenthesesPattern": {
+    "value": "({{decayLikelihoodPercent}}%)"
+  },
+  "magicNumbers": {
+    "value": "Magic Numbers"
+  },
+  "fullChartInfoPanelTextPattern": {
+    "value": "A full, interactive chart of the nuclides and their decays is available from Energy Education Project at University of Calgary, see {{link}}."
+  },
+  "fullChartLowercase": {
+    "value": "full chart"
+  },
+  "fullNuclideChart": {
+    "value": "Full Nuclide Chart"
+  },
+  "fullChartCapitalized": {
+    "value": "Full Chart"
+  }
+}

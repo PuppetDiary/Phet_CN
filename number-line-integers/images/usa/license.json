@@ -1,0 +1,42 @@
+{
+  "usaExploreHomeScreenIcon.png": {
+    "text": [
+      "Copyright 2023 University of Colorado Boulder"
+    ],
+    "projectURL": "https://phet.colorado.edu",
+    "license": "contact phethelp@colorado.edu",
+    "notes": "created by Mariah Hermsmeyer"
+  },
+  "usaExploreScreenNavbarIcon.png": {
+    "text": [
+      "Copyright 2023 University of Colorado Boulder"
+    ],
+    "projectURL": "https://phet.colorado.edu",
+    "license": "contact phethelp@colorado.edu",
+    "notes": "created by Mariah Hermsmeyer"
+  },
+  "usaGirlHiking.png": {
+    "text": [
+      "Copyright 2019 University of Colorado Boulder"
+    ],
+    "projectURL": "https://phet.colorado.edu",
+    "license": "contact phethelp@colorado.edu",
+    "notes": "created by Megan Lai for use by PhET"
+  },
+  "usaGirlInAir.png": {
+    "text": [
+      "Copyright 2019 University of Colorado Boulder"
+    ],
+    "projectURL": "https://phet.colorado.edu",
+    "license": "contact phethelp@colorado.edu",
+    "notes": "created by Megan Lai for use by PhET"
+  },
+  "usaGirlInWater.png": {
+    "text": [
+      "Copyright 2019 University of Colorado Boulder"
+    ],
+    "projectURL": "https://phet.colorado.edu",
+    "license": "contact phethelp@colorado.edu",
+    "notes": "created by Megan Lai for use by PhET"
+  }
+}

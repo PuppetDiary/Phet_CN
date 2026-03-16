@@ -1,0 +1,48 @@
+/* eslint-disable */
+/* @formatter:off */
+
+import asyncLoader from '../../phet-core/js/asyncLoader.js';
+import base64SoundToByteArray from '../../tambo/js/base64SoundToByteArray.js';
+import WrappedAudioBuffer from '../../tambo/js/WrappedAudioBuffer.js';
+import phetAudioContext from '../../tambo/js/phetAudioContext.js';
+
+const soundURI = 'data:audio/mpeg;base64,//tAxAAAAAAAAAAAAAAAAAAAAAAASW5mbwAAAA8AAAALAAAIkQAXFxcXFxcXFxcuLi4uLi4uLi5FRUVFRUVFRUVdXV1dXV1dXV10dHR0dHR0dHSLi4uLi4uLi4uioqKioqKioqK6urq6urq6urrR0dHR0dHR0dHo6Ojo6Ojo6Oj///////////8AAAA8TEFNRTMuOTlyAZYAAAAAAAAAABQ4JAUDQgAAOAAACJG+9WoLAAAAAAD/+0DEAAAJCFdGdYYAATaRLAM08AAAFa4Au+ARmUoGOp8LANDjg4BQBw0V0i2Xy+5SclYgAgAIAQRFCcliWIgkEw866/6GZmvXr1758moEAQd4gOHP/g+/8oCH/4fhIhBREhC2hEBN+tUoOGeQDB6hJd3o3JjCBFSq2i5CVFjPAgNWhway7sJw675qZ6YPs0lOoJf5Mz6p1Crl+8X//33//ChB47+sVYK/6CyAAASv4B16d2XFWf/7QsQFgAokf0s9t4AxH5BnHdwY4kYOSHBlp7h6ZEMmDghgIQoE16XXYEhqmUorogBlRsva/2zWC9ezfVoW6vc6x92t85zB+66+MWjFg6PgUtUbdljzxRYB/xFAsNyQABfUigphYwAQVDkyiks1kEscEtQyyV22ajpPZu6vbEPRo/xM1zh1Ukz7ZsgFVJFKJV7NY18f+Z9HKKJOrGhpx51FtBYAAAkRTG0RAAAgfMKgcMaRtNvJpP/7QsQKAAkQTx5u5MbwhoKmNBAMBuGEnOzgyIA+c+rUqINX0q5dsHawGNdGecjNOckaE/CKq2Fiz1B3Z37RL9np6j///t//7vlQCSU5RKII5uc1agoaj1qea+pZlQV/+z9X/6f5H/01w3/0VSNtttsLbAAA+de4kRqAU6elfkte3K91BFzASI2kKexZn1vi1nwFCQUBp4iDsOy1JWeBp8qoO1Hg7T/539Xhr//rd1r/o0jEnFdf6P/7QsQlgELsARmghGAwrQNZlp4wBFAcYMXBN9f/0x6YzJKN44zAR0Hc5os4FyAsCFT8nCcW4kopMzKH38QuLeLgFlkT//NyfHPK6Bf//zcuIuXEP+U8SARACAJUtCQq/84ZhlrKmK6ZbKw853mJSKUymMy2a0OhKMkMSTFdaEmh8/7wgob02EFDf/IKCQU3gUCm/+IKCm//9NN/EFBf//8KfkFX/gUEm//IoKCm+CgtAIDWAKZP1P/7QsRVAAkIxVYZqQABaYgtN7LAA23Vi7VhoCjFAQTIQMTB6JTPpsDEAOTDIQSsqdmGu1vym1oubE5DKrkEptG38HdPzTbx3ErK/kqqhyHACwRSyrOzNLX601kvFng17qhEADJIpKLNv/yRo8Qbu8C40KTBlc8hZIgRT8Jo1GGbvwcN55zFrrvPAiNQlP98ytStMuXDAWIuVO/yX+r//6P9P+kAIJOCKQ+9jbNNaGRBhoK8ZSlHOf/7QsRUgApYkzbO5QtRCQ1otbYJ3nYN3j51Q7qwqUzOpFYeFDwk60a2XyjVJEgoPS38KgIkFR6f7BiGf1/yX//R/kgGwxJvv/vQAFPKhVimxYXpMmWOrk/o/f1eePcZ/SoLgDgcTcUYAAUEizdL+tj/W79X/o/+nuvWHJbLZZJAwABKK0dIvIKSAQCrzhwVmms4sh0KJcJUESx6iss5s7Br/nfEVUxBTUUzLjk5LjVVVVVVVVVVVf/7QsRbAAg4Qxxt5MpwdoBidGCEBlVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVMQU1FMy45OS41VVVVVVVVVVVVVVVVVVVVVf/7QMR8AAMcAvOkhGAgqggctGCOBlVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVMQU1FMy45OS41VVVVVVVVVVVVVVVVVVVV//tCxKqDwAABpAAAACAAADSAAAAEVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV//tCxK6DwAABpAAAACAAADSAAAAEVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV//tCxK6DwAABpAAAACAAADSAAAAEVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV';
+const soundByteArray = base64SoundToByteArray( phetAudioContext, soundURI );
+const unlock = asyncLoader.createLock( soundURI );
+const wrappedAudioBuffer = new WrappedAudioBuffer();
+
+// safe way to unlock
+let unlocked = false;
+const safeUnlock = () => {
+  if ( !unlocked ) {
+    unlock();
+    unlocked = true;
+  }
+};
+
+const onDecodeSuccess = decodedAudio => {
+  if ( wrappedAudioBuffer.audioBufferProperty.value === null ) {
+    wrappedAudioBuffer.audioBufferProperty.set( decodedAudio );
+    safeUnlock();
+  }
+};
+const onDecodeError = decodeError => {
+  console.warn( 'decode of audio data failed, using stubbed sound, error: ' + decodeError );
+  wrappedAudioBuffer.audioBufferProperty.set( phetAudioContext.createBuffer( 1, 1, phetAudioContext.sampleRate ) );
+  safeUnlock();
+};
+const decodePromise = phetAudioContext.decodeAudioData( soundByteArray.buffer, onDecodeSuccess, onDecodeError );
+if ( decodePromise ) {
+  decodePromise
+    .then( decodedAudio => {
+      if ( wrappedAudioBuffer.audioBufferProperty.value === null ) {
+        wrappedAudioBuffer.audioBufferProperty.set( decodedAudio );
+        safeUnlock();
+      }
+    } )
+    .catch( e => {
+      console.warn( 'promise rejection caught for audio decode, error = ' + e );
+      safeUnlock();
+    } );
+}
+export default wrappedAudioBuffer;

@@ -1,0 +1,169 @@
+// Copyright 2020-2026, University of Colorado Boulder
+
+/**
+ * Base class for the top-level view of every screen in the 'Calculus Grapher' simulation.
+ *
+ * @author Brandon Li
+ * @author Martin Veillette
+ * @author Chris Malley (PixelZoom, Inc.)
+ */
+
+import ScreenView, { ScreenViewOptions } from '../../../../joist/js/ScreenView.js';
+import affirm from '../../../../perennial-alias/js/browser-and-node/affirm.js';
+import optionize, { combineOptions } from '../../../../phet-core/js/optionize.js';
+import PickRequired from '../../../../phet-core/js/types/PickRequired.js';
+import StrictOmit from '../../../../phet-core/js/types/StrictOmit.js';
+import ResetAllButton from '../../../../scenery-phet/js/buttons/ResetAllButton.js';
+import VBox from '../../../../scenery/js/layout/nodes/VBox.js';
+import Node from '../../../../scenery/js/nodes/Node.js';
+import calculusGrapher from '../../calculusGrapher.js';
+import CalculusGrapherFluent from '../../CalculusGrapherFluent.js';
+import CalculusGrapherConstants from '../CalculusGrapherConstants.js';
+import CalculusGrapherModel from '../model/CalculusGrapherModel.js';
+import CalculusGrapherCheckboxGroup from './CalculusGrapherCheckboxGroup.js';
+import CalculusGrapherControlPanel, { CalculusGrapherControlPanelOptions } from './CalculusGrapherControlPanel.js';
+import GraphSetRadioButtonGroup, { GraphSetRadioButtonGroupItem } from './GraphSetRadioButtonGroup.js';
+import GraphsNode from './GraphsNode.js';
+
+type SelfOptions = {
+
+  // Items to include in the GraphSetRadioButtonGroupItem
+  graphSetRadioButtonGroupItems?: GraphSetRadioButtonGroupItem[];
+
+  // Options for the main control panel
+  controlPanelOptions?: Partial<CalculusGrapherControlPanelOptions>;
+};
+
+export type CalculusGrapherScreenViewOptions = SelfOptions & PickRequired<ScreenViewOptions, 'tandem'>;
+
+export default class CalculusGrapherScreenView extends ScreenView {
+
+  private readonly model: CalculusGrapherModel;
+
+  // Node responsible for displaying all graphs and their decorations
+  public readonly graphsNode: GraphsNode;
+
+  // Instead of adding children directly to the ScreenView, add them to this parent Node.
+  protected readonly screenViewRootNode: Node;
+
+  // For setting pdomOrder in subclasses
+  protected readonly curveManipulatorAndSettingsHeading: Node;
+  protected readonly checkboxGroup: Node;
+  protected readonly resetAllButton: Node;
+  protected readonly graphSetRadioButtonGroup?: Node;
+
+  protected constructor( model: CalculusGrapherModel, providedOptions: CalculusGrapherScreenViewOptions ) {
+
+    const options = optionize<CalculusGrapherScreenViewOptions,
+      StrictOmit<SelfOptions, 'controlPanelOptions'>,
+      ScreenViewOptions>()( {
+
+      // SelfOptions
+      graphSetRadioButtonGroupItems: []
+    }, providedOptions );
+
+    affirm( ( model.graphSets.length === 1 && options.graphSetRadioButtonGroupItems.length === 0 ) ||
+            ( model.graphSets.length === options.graphSetRadioButtonGroupItems.length ),
+      'If > 1 graphSets, then there must be a radio button for each graphSet' );
+
+    super( options );
+
+    this.model = model;
+
+    this.resetAllButton = new ResetAllButton( {
+      right: this.layoutBounds.right - CalculusGrapherConstants.SCREEN_VIEW_X_MARGIN,
+      bottom: this.layoutBounds.bottom - CalculusGrapherConstants.SCREEN_VIEW_Y_MARGIN,
+      listener: () => this.reset(),
+      tandem: options.tandem.createTandem( 'resetAllButton' )
+    } );
+
+    const controlPanel = new CalculusGrapherControlPanel(
+      model.curveManipulationProperties,
+      model.predictSelectedProperty,
+      model.predictEnabledProperty,
+      model.interactiveCurveProperty,
+      model.activeCurveManipulatorProperty,
+      combineOptions<CalculusGrapherControlPanelOptions>( {
+        tandem: options.tandem.createTandem( 'controlPanel' )
+      }, options.controlPanelOptions ) );
+
+    this.checkboxGroup = new CalculusGrapherCheckboxGroup( model.gridVisibleProperty,
+      model.referenceLine.visibleProperty, options.tandem.createTandem( 'checkboxGroup' ) );
+
+    const rightVBox = new VBox( {
+      children: [ controlPanel, this.checkboxGroup ],
+      spacing: 20,
+      align: 'left'
+    } );
+
+    this.graphsNode = new GraphsNode( model, {
+      centerX: this.layoutBounds.centerX - 25,
+      y: this.layoutBounds.top + 40,
+      tandem: options.tandem.createTandem( 'graphsNode' )
+    } );
+
+    // Put everything having to do with curve manipulation under a heading for core description.
+    // See https://github.com/phetsims/calculus-grapher/issues/387
+    this.curveManipulatorAndSettingsHeading = new Node( {
+      pdomOrder: [
+        this.graphsNode.getPrimaryCurveManipulatorNode(),
+        this.graphsNode.getPredictCurveManipulatorNode(),
+        this.graphsNode.getShowPrimaryCurveCheckbox(),
+        controlPanel
+      ],
+      accessibleHeading: CalculusGrapherFluent.a11y.curveManipulatorAndSettingsStringProperty
+    } );
+
+    // Put control panel in the negative space to the right of the ChartRectangles, top-aligned with graphsNode.y.
+    rightVBox.boundsProperty.link( () => {
+      const chartRectangleRight = this.graphsNode.x + CalculusGrapherConstants.CHART_RECTANGLE_WIDTH;
+      rightVBox.centerX = this.layoutBounds.right - ( this.layoutBounds.right - chartRectangleRight ) / 2;
+      rightVBox.top = this.graphsNode.y;
+    } );
+
+    const children: Node[] = [
+
+      // Accessible headings can be put anywhere in rendering order because they have no children. Put them first.
+      this.curveManipulatorAndSettingsHeading,
+
+      this.graphsNode,
+      rightVBox,
+      this.resetAllButton
+    ];
+
+    if ( options.graphSetRadioButtonGroupItems.length > 0 ) {
+      const graphSetRadioButtonGroup = new GraphSetRadioButtonGroup( model.graphSetProperty,
+        options.graphSetRadioButtonGroupItems, options.tandem.createTandem( 'graphSetRadioButtonGroup' ) );
+      children.push( graphSetRadioButtonGroup );
+      this.graphSetRadioButtonGroup = graphSetRadioButtonGroup;
+
+      // Center graphSetRadioButtonGroup in the negative space to the left of graphNode. We're only adjusting centerX
+      // dynamically so that GraphSetsAnimation doesn't cause tiny shifts in y.
+      graphSetRadioButtonGroup.centerY = this.graphsNode.centerY;
+      this.graphsNode.boundsProperty.link( () => {
+        const toggleButtonLeft = this.graphsNode.x + this.graphsNode.getCurveVisibilityToggleButtonXOffset();
+        graphSetRadioButtonGroup.centerX = this.layoutBounds.left + ( toggleButtonLeft - this.layoutBounds.left ) / 2;
+      } );
+    }
+
+    this.screenViewRootNode = new Node( {
+      children: children
+    } );
+    this.addChild( this.screenViewRootNode );
+  }
+
+  /**
+   * Reset all
+   */
+  public reset(): void {
+    this.model.reset();
+    this.graphsNode.reset();
+  }
+
+  public override step( dt: number ): void {
+    this.graphsNode.step( dt );
+    super.step( dt );
+  }
+}
+
+calculusGrapher.register( 'CalculusGrapherScreenView', CalculusGrapherScreenView );

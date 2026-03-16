@@ -1,0 +1,533 @@
+calculus-grapher.title:       Calculus Grapher
+screen.derivative:            Derivative
+screen.integral:              Integral
+screen.advanced:              Advanced
+screen.lab:                   Lab
+smooth:                       Smooth
+symbol.d:                     d
+symbol.f:                     f
+symbol.x:                     x
+symbol.t:                     t
+discontinuities:              Discontinuities
+values:                       Values
+notation:                     Notation
+lagrange:                     'Lagrange:'
+leibniz:                      'Leibniz:'
+variable:                     Variable
+checkbox.areaUnderCurve:      Area Under<br>Curve
+checkbox.tangent:             Tangent
+barometer.netSignedArea:      Net Signed<br>Area
+barometer.slopeOfTangent:     Slope of<br>Tangent
+predict:                      Predict
+show:                         Show
+predictPreference:            Predict
+valuesPreferenceDescription: Shows values on graph axes, Reference Line, "Slope of Tangent", and "Net Signed Area".
+predictPreferenceDescription: Adds a mode that allows you to predict f of {{variable}}.
+referenceLine:                Reference<br>Line
+
+curveManipulatorKeyboardCue:  to <b>Grab</b> or <b>Release</b> curve
+
+keyboardHelp:
+  curveManipulator:                  Curve Manipulator
+  grabOrReleaseCurve:                Grab or release curve
+  tangentToolOrReferenceLine:        Tangent Tool or Reference Line
+  areaUnderCurveToolOrReferenceLine: Area Under Curve Tool or Reference Line
+  referenceLine:                     Reference Line
+  readValues:                        With screen reader enabled, read values
+
+a11y:
+
+  #=======================================================================================================
+  # Screens (screen summaries & screen buttons)
+  #=======================================================================================================
+
+  screens:
+
+    # Defaults for all screens
+    defaults:
+      screenSummary:
+        currentDetails:
+          leadingParagraph:
+            widthPattern: 'Right now, Curve Manipulation Type is {$curveManipulationType}. Shape width is {$width}. {$curveSentence}'
+            noWidthPattern: 'Right now, Curve Manipulation Type is {$curveManipulationType}. {$curveSentence}'
+            curveSentence:
+              curvesShown:     'Curves shown are:'
+              allCurvesHidden: 'All curves hidden.'
+          accessibleList:
+            primary:          f, in Primary Graph Area
+            predict:          Predict f, in Primary Graph Area
+            integral:         Integral, in Integral Graph Area
+            derivative:       Derivative, in Derivative Graph Area
+            secondDerivative: Second Derivative, in Second Derivative Graph Area
+        controlArea: |-
+                     You can add Exploration Tools to the graph areas to promote making connections between values on each graph.
+                     Reset the sim to start over.
+
+    # Derivative screen
+    derivative:
+      screenButtonsHelpText: Manipulate a graph and explore its derivative curve in real time.
+      screenSummary:
+        playArea:        |-
+                         There is an interactive curve in the Primary Graph Area representing the graph of f and a 
+                         derived non interactive curve representing the derivative of f. You can choose a Curve Manipulation Type
+                         to modify the curve in different ways in the Primary Graph Area at any point. There are 
+                         Exploration Tools allowing flexible investigation of all curves with {$variable} coordinates aligned.
+        interactionHint: |-
+                         Get started by finding the Curve Manipulator. Grab manipulator to modify curve in any direction.
+                         Use Exploration Tools to investigate steepness of f curve at different points.
+
+    # Integral screen
+    integral:
+      screenButtonsHelpText: Manipulate a graph and explore its integral curve in real time.
+      screenSummary:
+        playArea:        |-
+                         There is an interactive curve in the Primary Graph Area representing the graph of f and a
+                         derived non interactive curve representing the integral of f. You can choose a Curve Manipulation Type to
+                         modify the curve in different ways in the Primary Graph Area at any point. There are Exploration
+                         Tools allowing flexible investigation of all curves with {$variable} coordinates aligned.
+        interactionHint: |-
+                         Get started by finding the Curve Manipulator. Grab manipulator to modify curve in any direction.
+                         Use Exploration Tools to investigate net signed area under f curve bounded by horizontal axis 
+                         and f of {$variable} starting from left.
+
+    # Advanced screen
+    advanced:
+      screenButtonsHelpText: |-
+                             Manipulate a graph and explore its derivative and integral curves in real time,
+                             with or without discontinuities.
+      screenSummary:
+        playArea:        |-
+                         There is an interactive curve in the Primary Graph Area representing the graph of f and
+                         derived non interactive curves in other Graph Areas. You can choose a Curve Manipulation Type to
+                         modify the curve in different ways in the Primary Graph Area at any point. You can change
+                         which set of two Graph Areas are viewable: Integral and Primary or Primary and Derivative.
+                         There are Exploration Tools allowing flexible investigation of all viewable curves with
+                         {$variable} coordinates aligned.
+        interactionHint: |-
+                         Get started by finding the Curve Manipulator. Grab manipulator to modify curve in any direction.
+                         Use Exploration Tools to explore relationships between graphs in viewable graph set.
+
+    # Lab screen
+    lab:
+      screenButtonsHelpText: |-
+                             Manipulate a graph and explore its integral, derivative, and second derivative curves in 
+                             real time, with or without discontinuities.
+      screenSummary:
+        playArea:        |-
+                         There is an interactive curve in the Primary Graph Area representing the graph of f and
+                         derived non interactive curves in other Graphs Areas. You can choose a Curve Manipulation Type
+                         to modify the curve in different ways in the Primary Graph Area at any point. You can change 
+                         which set of three Graph Areas are viewable: Integral, Primary, and Derivative, or Primary,
+                         Derivative, and Second Derivative. There are Exploration Tools allowing flexible investigation
+                         of all curves with {$variable} coordinates aligned.
+        interactionHint: |-
+                         Get started by finding the Curve Manipulator. Grab manipulator to modify curve in any direction.
+                         Use Exploration Tools to explore relationships between graphs in viewable graph set.
+
+  #=======================================================================================================
+  # Accordion Boxes
+  #=======================================================================================================
+
+  slopeOfTangentAccordionBox:
+    accessibleHelpTextCollapsed: Explore slope of line tangent to f curve at {$variable} coordinate of Tangent tool.
+    accessibleParagraph:
+      zero:     At {$variable} equals {$x}, slope of line tangent to f is zero.
+      positive: At {$variable} equals {$x}, slope of line tangent to f is positive {$absoluteSlope}.
+      negative: At {$variable} equals {$x}, slope of line tangent to f is negative {$absoluteSlope}.
+
+  netSignedAreaAccordionBox:
+    accessibleHelpTextCollapsed: |-
+                                 Explore net signed area under f curve between {$variable} equals 0 and current
+                                 {$variable} coordinate of Area Under Curve tool.
+    accessibleParagraph:
+      zero:     Net signed area under f curve is zero between {$variable} equals 0 and {$x}.
+      positive: Net signed area under f curve is positive {$absoluteArea} between {$variable} equals 0 and {$x}.
+      negative: Net signed area under f curve is negative {$absoluteArea} between {$variable} equals 0 and {$x}.
+
+  #=======================================================================================================
+  # Checkboxes
+  #=======================================================================================================
+
+  # Checkboxes below the control panel.
+  checkboxGroup:
+    accessibleHeading: Exploration Tool Controls
+
+  tangentCheckbox:
+    accessibleHelpText:                 Add or remove Tangent Tool to make connections between graphs.
+    accessibleContextResponseChecked:   Tangent Tool added.
+    accessibleContextResponseUnchecked: Tangent Tool removed.
+
+  referenceLineCheckbox:
+    accessibleName:                     Reference Line
+    accessibleHelpText:                 Add or remove vertical Reference Line to align {$variable} coordinates on all graphs.
+    accessibleContextResponseChecked:   Reference Line added.
+    accessibleContextResponseUnchecked: Reference Line removed.
+
+  areaUnderCurveCheckbox:
+    accessibleName:                     Area Under Curve Tool
+    accessibleHelpText:                 Add or remove Area Under Curve Tool and shading under curve bounded by horizontal axis and f.
+    accessibleContextResponseChecked:   Area Under Curve Tool added.
+    accessibleContextResponseUnchecked: Area Under Curve Tool removed.
+
+  gridCheckbox:
+    accessibleName:                     Coordinate Grid
+    accessibleHelpText:                 Show or hide coordinate grid on all graphs.
+    accessibleContextResponseChecked:   Coordinate grid shown.
+    accessibleContextResponseUnchecked: Coordinate grid hidden.
+
+  showPrimaryCurveCheckbox:
+    accessibleName:                     Show f of {$variable}
+    accessibleHelpText:                 Show or hide f of {$variable} to compare your predicted shape to shape of f of {$variable}.
+    accessibleContextResponseChecked:   f of {$variable} shown.
+    accessibleContextResponseUnchecked: f of {$variable} hidden.
+
+  #=======================================================================================================
+  # Curve Manipulation Types
+  #=======================================================================================================
+
+  # Values for the {$curveManipulationType} parameter in screen summaries, and the accessibleName of radio buttons.
+  curveManipulationType:
+    hill:     Smooth Hill
+    triangle: Rigid V with Corners on {$variable} Axis
+    pedestal: Pedestal with Smooth Corners
+    parabola: Parabola with Corners on {$variable} Axis
+    sinusoid: Sinusoid
+    freeform: Freeform, Discontinuities Likely
+    tilt:     Diagonal Tilt Pinned at Left Edge
+    shift:    Vertical Shift Up or Down
+  
+  #=======================================================================================================
+  # Graph Areas
+  #=======================================================================================================
+
+  graphAreas:
+
+    # Defaults for all graph areas.
+    defaults:
+      accessibleList:
+        leadingParagraph:    Right now,
+        coordinateGridShown: Coordinate grid shown.
+        valuesLabeledOnAxes: Values labeled on axes.
+
+    # Primary Graph Area
+    primary:
+      accessibleHeading: Primary Graph Area
+      accessibleList:
+        primaryCurve:
+          continuousAndDifferentiable: f is continuous and differentiable at all points.
+          hasDiscontinuities:          f is not differentiable at one or more discontinuities.
+          hasCusps:                    f is continuous but not differentiable at one or more cusps.
+          hasDiscontinuitiesAndCusps:  f is not differentiable at one or more discontinuities and one or more cusps.
+          hidden:                      f curve hidden.
+        predictCurve:
+          continuousAndDifferentiable: Predict f is continuous and differentiable at all points.
+          hasDiscontinuities:          Predict f is not differentiable at one or more discontinuities.
+          hasCusps:                    Predict f is continuous but not differentiable at one or more cusps.
+          hasDiscontinuitiesAndCusps:  Predict f is not differentiable at one or more discontinuities and one or more cusps.
+          hidden:                      Predict f curve hidden.
+
+    # Integral Graph Area
+    integral:
+      accessibleHeading: Integral Graph Area
+      accessibleList:
+        continuous: Integral curve is continuous and represents definite integral from zero to {$variable} for f of {$variable}.
+        hidden:     Integral curve hidden.
+
+    # Derivative Graph Area
+    derivative:
+      accessibleHeading: Derivative Graph Area
+      accessibleList:
+        continuous:    Derivative curve is continuous and differentiable at all points.
+        discontinuous: Derivative curve is not differentiable at one or more discontinuities.
+        hidden:        Derivative curve hidden.
+
+    # Second Derivative Graph Area
+    secondDerivative:
+      accessibleHeading: Second Derivative Graph Area
+      accessibleList:
+        continuous:    Second derivative curve is continuous and differentiable at all points.
+        discontinuous: Second derivative curve is not differentiable at one or more discontinuities.
+        hidden:        Second derivative curve hidden.
+
+  #=======================================================================================================
+  # Headings (standalone)
+  #=======================================================================================================
+
+  curveManipulatorAndSettings: Curve Manipulator and Settings
+
+  #=======================================================================================================
+  # Push Buttons
+  #=======================================================================================================
+
+  # Push buttons at the bottom of the control panel.
+  curveActionsButtonGroup:
+    accessibleHeading:  Curve Actions
+    accessibleHelpText: Choose action to take on curve in Primary Graph Area.
+
+  smoothButton:
+    accessibleName:     Smooth
+    accessibleHelpText: Smooth sharp corners and discontinuities on curve in Primary Graph Area.
+    accessibleContextResponse:
+      allCurves:    f and derived curves smoothed.
+      predictCurve: Predict curve only smoothed.
+
+  eraserButton:
+    accessibleName:     Erase Curve Manipulations
+    accessibleHelpText: Reset curve to y equals zero, maintain curve manipulation settings.
+    accessibleContextResponse:
+      primaryCurve: f and derived curves reset, settings unchanged.
+      predictCurve: Predict curve reset, other curves and settings unchanged.
+
+  undoButton:
+    accessibleName:     Undo
+    accessibleHelpText: Undo most recent curve manipulation.
+    accessibleContextResponse:
+      primaryCurve: Last manipulation removed from f and derived curves.
+      predictCurve: Last manipulation removed from predict curve only.
+
+  # Zooms the y-axis of a graph. accessibleName is specific to the graph.
+  yZoomButtonGroup:
+    zoomInButton:
+      accessibleName:
+        integral:         Zoom In Integral y Axis
+        derivative:       Zoom In Derivative y Axis
+        secondDerivative: Zoom In Second Derivative y Axis
+      accessibleHelpText:        Zoom in y axis only.
+      accessibleContextResponse: 'zoomed in, y range {$min} to {$max}'
+    zoomOutButton:
+      accessibleName:
+        integral:         Zoom Out Integral y Axis
+        derivative:       Zoom Out Derivative y Axis
+        secondDerivative: Zoom Out Second Derivative y Axis
+      accessibleHelpText:        Zoom out y axis only.
+      accessibleContextResponse: 'zoomed out, y range {$min} to {$max}'
+
+  #=======================================================================================================
+  # Radio Buttons
+  #=======================================================================================================
+
+  # Selects whether to manipulate f(x) or Predict curve.
+  predictRadioButtonGroup:
+    accessibleName:     Curve to Manipulate
+    accessibleHelpText: Choose which curve is manipulable in Primary Graph Area.
+    primaryCurveRadioButton:
+      accessibleName:            f of {$variable}
+      accessibleContextResponse: f curve ready to manipulate.
+    predictCurveRadioButton:
+      accessibleName:            Predict
+      accessibleContextResponse: Predict curve ready to manipulate.
+
+  # Selects the type of manipulation to be applied to the curve in the primary graph area.
+  curveManipulationTypeRadioButtonGroup:
+    accessibleName:     Curve Manipulation Type
+    accessibleHelpText: |-
+                        Choose curve modification type for Curve Manipulator, then change curve in Primary Graph Area.
+                        Find Curve Manipulator under Curve Manipulator and Settings.
+
+  # Selects the set of graphs that are visible.
+  graphSetRadioButtonGroup:
+    accessibleName:     Viewable Graph Set
+    accessibleHelpText: Choose which set of Graph Areas to investigate and find relationships.
+    integralPrimaryRadioButton:
+      accessibleName:            Integral and Primary Graph Areas
+      accessibleContextResponse: Primary Graph Area below Integral.
+    primaryDerivativeRadioButton:
+      accessibleName:            Primary and Derivative Graph Areas
+      accessibleContextResponse: Primary Graph Area above Derivative.
+    integralPrimaryDerivativeRadioButton:
+      accessibleName:            Integral, Primary, and Derivative Graph Areas
+      accessibleContextResponse: Primary Graph Area between Integral and Derivative
+    primaryDerivativeSecondDerivativeRadioButton:
+      accessibleName:            Primary, Derivative, and Second Derivative Graph Areas
+      accessibleContextResponse: Primary Graph Area above Derivative and Second Derivative
+
+  # Preferences > Simulation > Variable
+  variableRadioButtonGroup:
+    accessibleHelpText: Choose variable for horizontal axis.
+    xRadioButton:
+      accessibleContextResponse: Horizontal axis labeled with x.
+    tRadioButton:
+      accessibleContextResponse: Horizontal axis labeled with t.
+
+  # Preferences > Simulation > Notation
+  notationRadioButtonGroup:
+    accessibleHelpText: Choose derivative notation.
+    lagrangeRadioButton:
+      accessibleName:            Lagrange, f prime of {$variable}
+      accessibleContextResponse: Derivative notation uses f prime and f double prime.
+    leibnizRadioButton:
+      accessibleName:            Leibniz, d f over d {$variable}
+      accessibleContextResponse: Derivative notation shows ratio of change in y with respect to {$variable}.
+
+  # Preferences > Simulation > Discontinuities
+  discontinuitiesRadioButtonGroup:
+    accessibleHelpText: Choose how to display discontinuities in curves.
+    noLineRadioButton:
+      accessibleName: No Line Connecting Discontinuities
+    dashedLineRadioButton:
+      accessibleName: Dashed Line Connecting Discontinuities
+
+  #=======================================================================================================
+  # Sliders
+  #=======================================================================================================
+
+  shapeWidthSlider:
+    accessibleName:     Shape Width
+    accessibleHelpText: Adjust width of curve manipulation shape. Width ranges from {$min} to {$max} {$variable} axis units.
+
+  #=======================================================================================================
+  # Switches
+  #=======================================================================================================
+
+  # Preferences > Simulation > Predict
+  predictToggleSwitch:
+    accessibleHelpText: Adds a mode that allows you to predict f of {$variable}.
+
+  #=======================================================================================================
+  # Toggle Buttons
+  #=======================================================================================================
+
+  # Controls visibility of curves on a graph. accessibleNameOn/Off is specific to the graph.
+  curveVisibilityToggleButton:
+    accessibleNameOn:
+      integral:         Hide Integral Curve
+      primary:          Hide Primary Curve
+      derivative:       Hide Derivative Curve
+      secondDerivative: Hide Second Derivative Curve
+    accessibleNameOff:
+      integral:         Show Integral Curve
+      primary:          Show Primary Curve
+      derivative:       Show Derivative Curve
+      secondDerivative: Show Second Derivative Curve
+    accessibleHelpText:           Show or hide curve to support predictions.
+    accessibleContextResponseOff: Curve hidden.
+    accessibleContextResponseOn:  Curve shown.
+
+  #=======================================================================================================
+  # Tools
+  #=======================================================================================================
+
+  curveManipulators:
+
+    # Defaults for all curve manipulators.
+    defaults:
+      accessibleObjectResponse:
+        focusedReleased: 'at {$x}, {$y}, off curve'
+        focusedGrabbed:  'at {$x}, {$y}, grabbed'
+        grabbed:         'grabbed at {$x}, {$y}, curve modified'
+        released:        'released at {$x}, {$y}, off curve'
+        movedReleased:   '{$x}, {$y}'
+        movedGrabbed:    '{$x}, {$y}, curve modified'
+      accessibleRoleDescription:
+        movable:       movable
+        movableButton: movable button
+
+    # Curve manipulator for the primary curve.
+    primary:
+      accessibleName:     f Curve Manipulator
+      accessibleHelpText: |-
+                          Move curve manipulator in any direction to set location, then space to grab and dynamically
+                          manipulate curve using chosen Curve Manipulation Type.
+
+    # Curve manipulator for the predict curve.
+    predict:
+      accessibleName:     Predict Curve Manipulator
+      accessibleHelpText: |-
+                          Move predict curve manipulator in any direction to set location, then space to grab and 
+                          dynamically manipulate curve using chosen Curve Manipulation Type.
+
+  # For all tools
+  explorationTools:
+    accessibleHeading: Exploration Tools
+    accessibleObjectResponse:
+      # Used in patterns that have a {$xPhrase} placeholder.
+      xPhrase:
+        min:   at {$variable} min, {$variable} equals {$value}
+        max:   at {$variable} max, {$variable} equals {$value}
+        other: at {$variable} equals {$value}
+
+  # Reference Line
+  referenceLine:
+    accessibleName:     Reference Line
+    accessibleHelpText: |-
+                        Move vertical line horizontally to change {$variable} value and explore y values on all graphs.
+                        Vertical line passes through all graphs at same {$variable} value.
+    accessibleObjectResponse:
+
+      # Each graph set has an associated pattern with phrase placeholders that define the general form of the response.
+      patterns:
+        primaryDerivative:                 '{$xPhrase}, {$primaryPhrase}, {$derivativePhrase}'
+        integralPrimary:                   '{$xPhrase}, {$integralPhrase}, {$primaryPhrase}'
+        integralPrimaryDerivative:         '{$xPhrase}, {$integralPhrase}, {$primaryPhrase}, {$derivativePhrase}'
+        primaryDerivativeSecondDerivative: '{$xPhrase}, {$primaryPhrase}, {$derivativePhrase}, {$secondDerivativePhrase}'
+
+      # These phrases are substituted into referenceLineTool.accessibleObjectResponse.patterns.*
+      # Key names match the placeholder names in the patterns above.
+      primaryPhrase:
+        predictAndPrimary: '{$predictPhrase}, {$primaryPhrase}'
+        predictUndefined:  predict f of {$variable} is undefined
+        predictValue:      predict f of {$variable} is {$value}
+        predictHidden:     predict curve hidden
+        primaryUndefined:  f of {$variable} is undefined
+        primaryValue:      f of {$variable} is {$value}
+        primaryHidden:     f curve hidden
+      integralPhrase:
+        integralValue:  integral up to {$variable} is {$value}
+        integralHidden: integral curve hidden
+      derivativePhrase:
+        derivativeUndefined: derivative at {$variable} is undefined
+        derivativeValue:     derivative at {$variable} is {$value}
+        derivativeHidden:    derivative curve hidden
+      secondDerivativePhrase:
+        secondDerivativeUndefined: second derivative at {$variable} is undefined
+        secondDerivativeValue:     second derivative at {$variable} is {$value}
+        secondDerivativeHidden:    second derivative curve hidden
+
+  # Tangent Tool
+  tangentTool:
+    accessibleName:     Tangent Tool
+    accessibleHelpText: |-
+                        Move vertical line horizontally to change {$variable} value and explore relationship between
+                        steepness of visible line tangent to f at {$variable}, and y value on derivative curve at same
+                        {$variable} coordinate. Information provides current {$variable} value, slope of line tangent
+                        to f at {$variable}, and value of derivative at {$variable} on derivative curve.
+    accessibleObjectResponse:
+
+      # Pattern with phrase placeholders that define the general form of the response.
+      pattern: '{$xPhrase}, {$slopePhrase}, {$derivativePhrase}'
+
+      # These phrases are substituted into tangentTool.accessibleObjectResponse.pattern.
+      # Key names match the placeholder names in that pattern.
+      slopePhrase:
+        zero:     slope is zero
+        positive: slope is positive {$absoluteSlope}
+        negative: slope is negative {$absoluteSlope}
+        hidden:   f curve hidden
+      derivativePhrase:
+        derivativeValue: derivative at {$variable} is {$value}
+        hidden:          derivative curve hidden
+
+  # Area Under Curve Tool
+  areaUnderCurveTool:
+    accessibleName:     Area Under Curve Tool
+    accessibleHelpText: |-
+                        Move vertical line horizontally to change {$variable} value and explore relationship between
+                        cumulative net signed area under f up to current {$variable} value. Shaded area is bounded by
+                        {$variable} axis and f curve. Vertical line passes through all graphs at same {$variable} value.
+                        Information provides current {$variable} value, value of integral up to {$variable}, and
+                        net signed area under f curve.
+    accessibleObjectResponse:
+
+      # Pattern with phrase placeholders that define the general form of the response.
+      pattern: '{$xPhrase}, {$integralPhrase}, {$areaPhrase}'
+
+      # These phrases are substituted into areaUnderCurveTool.accessibleObjectResponse.pattern.
+      # Key names match the placeholder names in that pattern.
+      integralPhrase:
+        integralValue: integral up to {$variable} is {$value}
+        hidden:        integral curve hidden
+      areaPhrase:
+        zero:     net signed area is zero under f
+        positive: net signed area is positive {$absoluteArea} under f
+        negative: net signed area is negative {$absoluteArea} under f
+        hidden:   f curve hidden

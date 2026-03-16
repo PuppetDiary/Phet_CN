@@ -1,0 +1,1003 @@
+{
+  "averagePolarizationDialog.title": {
+    "value": "平均偏振表示",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "平均偏振表示"
+      }
+    ]
+  },
+  "preferences.classicalCoinsStartHidden.title": {
+    "value": "经典硬币，初始隐藏",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "经典硬币，初始隐藏"
+      }
+    ]
+  },
+  "preferences.showGlobalPhase.title": {
+    "value": "显示全局相位",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "显示全局相位"
+      }
+    ]
+  },
+  "quantum-measurement.title": {
+    "value": "量子测量",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "量子测量"
+      }
+    ]
+  },
+  "screen.blochSphere": {
+    "value": "布洛赫球",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "布洛赫球"
+      }
+    ]
+  },
+  "screen.coins": {
+    "value": "硬币",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "硬币"
+      }
+    ]
+  },
+  "screen.photons": {
+    "value": "光子",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "光子"
+      }
+    ]
+  },
+  "screen.spin": {
+    "value": "自旋",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "自旋"
+      }
+    ]
+  },
+  "H": {
+    "value": "垂直",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "垂直"
+      }
+    ]
+  },
+  "N": {
+    "value": "N",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "N"
+      }
+    ]
+  },
+  "P": {
+    "value": "P",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "P"
+      }
+    ]
+  },
+  "SternGerlachMeasurements": {
+    "value": "斯特恩-格拉赫（SG）测量",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "斯特恩-格拉赫（SG）测量"
+      }
+    ]
+  },
+  "V": {
+    "value": "水平",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "水平"
+      }
+    ]
+  },
+  "atom": {
+    "value": "原子",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "原子"
+      }
+    ]
+  },
+  "atoms": {
+    "value": "原子",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "原子"
+      }
+    ]
+  },
+  "averagePolarization": {
+    "value": "平均偏振",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "平均偏振"
+      }
+    ]
+  },
+  "averagePolarizationDialog.explanatoryParagraph": {
+    "value": "该方程给出一个介于 +1 和 -1 之间的值。该值表示检测到的光子偏振的加权平均值，其中每次检测到垂直偏振映射为 +1，每次检测到水平偏振映射为 -1。该值也可以表示为介于 +1 和 -1 之间的矢量表示。",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "该方程给出一个介于 +1 和 -1 之间的值。该值表示检测到的光子偏振的加权平均值，其中每次检测到垂直偏振映射为 +1，每次检测到水平偏振映射为 -1。该值也可以表示为介于 +1 和 -1 之间的矢量表示。"
+      }
+    ]
+  },
+  "averagePolarizationDialog.numberOfPhotonsPatternPhrase": {
+    "value": "{{function}} - {{direction}}偏振探测器检测到的光子数",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "{{function}} - {{direction}}偏振探测器检测到的光子数"
+      }
+    ]
+  },
+  "averagePolarizationDialog.subTitle": {
+    "value": "在平均偏振方程中：",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "在平均偏振方程中："
+      }
+    ]
+  },
+  "averagePolarizationDialog.totalNumberOfPhotonsPatternPhrase": {
+    "value": "{{function}} - 检测到的光子总数",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "{{function}} - 检测到的光子总数"
+      }
+    ]
+  },
+  "averagePolarizationRate": {
+    "value": "平均偏振率",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "平均偏振率"
+      }
+    ]
+  },
+  "azimuthalAngleParenthesesSymbolPattern": {
+    "value": "方位角（{{symbol}}）",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "方位角（{{symbol}}）"
+      }
+    ]
+  },
+  "basisColon": {
+    "value": "基：",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "基："
+      }
+    ]
+  },
+  "basisState": {
+    "value": "基态",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "基态"
+      }
+    ]
+  },
+  "behavior": {
+    "value": "行为",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "行为"
+      }
+    ]
+  },
+  "blochSphere": {
+    "value": "布洛赫球",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "布洛赫球"
+      }
+    ]
+  },
+  "blockDown": {
+    "value": "阻挡下方",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "阻挡下方"
+      }
+    ]
+  },
+  "blockUp": {
+    "value": "阻挡上方",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "阻挡上方"
+      }
+    ]
+  },
+  "classical": {
+    "value": "经典",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "经典"
+      }
+    ]
+  },
+  "classicalCoin": {
+    "value": "经典硬币",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "经典硬币"
+      }
+    ]
+  },
+  "coin": {
+    "value": "硬币",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "硬币"
+      }
+    ]
+  },
+  "coinBias": {
+    "value": "硬币偏差（持续）",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "硬币偏差（持续）"
+      }
+    ]
+  },
+  "continuous": {
+    "value": "连续",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "连续"
+      }
+    ]
+  },
+  "custom": {
+    "value": "自定义",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "自定义"
+      }
+    ]
+  },
+  "decimalValues": {
+    "value": "十进制值",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "十进制值"
+      }
+    ]
+  },
+  "eventsPerSecondPattern": {
+    "value": "{{value}}/秒",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "{{value}}/秒"
+      }
+    ]
+  },
+  "expectationValue": {
+    "value": "期望值",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "期望值"
+      }
+    ]
+  },
+  "expectedPercentage": {
+    "value": "预期百分比",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "预期百分比"
+      }
+    ]
+  },
+  "experimentNPattern": {
+    "value": "实验 {{number}} {{order}}",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "实验 {{number}} {{order}}"
+      }
+    ]
+  },
+  "flip": {
+    "value": "抛掷",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "抛掷"
+      }
+    ]
+  },
+  "flipAndReveal": {
+    "value": "抛掷并揭示",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "抛掷并揭示"
+      }
+    ]
+  },
+  "fortyFiveDegrees": {
+    "value": "45°",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "45°"
+      }
+    ]
+  },
+  "hide": {
+    "value": "隐藏",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "隐藏"
+      }
+    ]
+  },
+  "horizontal": {
+    "value": "水平",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "水平"
+      }
+    ]
+  },
+  "identicalCoins": {
+    "value": "相同硬币",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "相同硬币"
+      }
+    ]
+  },
+  "initialOrientation": {
+    "value": "初始方向",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "初始方向"
+      }
+    ]
+  },
+  "itemToPreparePattern": {
+    "value": "待准备的{{item}}",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "待准备的{{item}}"
+      }
+    ]
+  },
+  "lots": {
+    "value": "大量",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "大量"
+      }
+    ]
+  },
+  "magneticField": {
+    "value": "磁场",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "磁场"
+      }
+    ]
+  },
+  "manyPhotons": {
+    "value": "多光子",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "多光子"
+      }
+    ]
+  },
+  "measurementDelay": {
+    "value": "测量延迟 (ns)",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "测量延迟 (ns)"
+      }
+    ]
+  },
+  "mirror": {
+    "value": "反射镜",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "反射镜"
+      }
+    ]
+  },
+  "multipleCoinMeasurements": {
+    "value": "多硬币测量",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "多硬币测量"
+      }
+    ]
+  },
+  "nameAndAbbreviationPattern": {
+    "value": "{{name}}（<b>{{abbreviation}}</b>）",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "{{name}}（<b>{{abbreviation}}</b>）"
+      }
+    ]
+  },
+  "newCoin": {
+    "value": "新硬币",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "新硬币"
+      }
+    ]
+  },
+  "none": {
+    "value": "无",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "无"
+      }
+    ]
+  },
+  "numberOfAtoms": {
+    "value": "原子数量",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "原子数量"
+      }
+    ]
+  },
+  "numberOfCoinsPattern": {
+    "value": "N = {{number}}",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "N = {{number}}"
+      }
+    ]
+  },
+  "observe": {
+    "value": "观测",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "观测"
+      }
+    ]
+  },
+  "photonPolarizationAngle": {
+    "value": "光子偏振角",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "光子偏振角"
+      }
+    ]
+  },
+  "photonSource": {
+    "value": "光子源",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "光子源"
+      }
+    ]
+  },
+  "polarAngleParenthesesSymbolPattern": {
+    "value": "极角（{{symbol}}）",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "极角（{{symbol}}）"
+      }
+    ]
+  },
+  "polarizationDetectorLabelPattern": {
+    "value": "{{orientation}}偏振<br>探测器",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "{{orientation}}偏振<br>探测器"
+      }
+    ]
+  },
+  "polarizingBeamSplitter": {
+    "value": "偏振<br>分束器",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "偏振<br>分束器"
+      }
+    ]
+  },
+  "preferences.classicalCoinsStartHidden.description": {
+    "value": "准备好后隐藏经典硬币",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "准备好后隐藏经典硬币"
+      }
+    ]
+  },
+  "preferences.showGlobalPhase.description": {
+    "value": "在布洛赫球屏幕上显示量子态的全局相位",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "在布洛赫球屏幕上显示量子态的全局相位"
+      }
+    ]
+  },
+  "preparedState": {
+    "value": "已准备状态",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "已准备状态"
+      }
+    ]
+  },
+  "probability": {
+    "value": "概率",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "概率"
+      }
+    ]
+  },
+  "probabilityOfValuePattern": {
+    "value": "P({{value}})",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "P({{value}})"
+      }
+    ]
+  },
+  "projection": {
+    "value": "投影：",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "投影："
+      }
+    ]
+  },
+  "propagation": {
+    "value": "传播",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "传播"
+      }
+    ]
+  },
+  "propagationIntoPage": {
+    "value": "传播<br>（向页面内）",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "传播<br>（向页面内）"
+      }
+    ]
+  },
+  "quantum": {
+    "value": "量子",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "量子"
+      }
+    ]
+  },
+  "quantumCoinQuoted": {
+    "value": "量子\"硬币\"",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "量子\"硬币\""
+      }
+    ]
+  },
+  "reprepare": {
+    "value": "重新准备",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "重新准备"
+      }
+    ]
+  },
+  "reprepareAndReveal": {
+    "value": "重新准备并观测",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "重新准备并观测"
+      }
+    ]
+  },
+  "reveal": {
+    "value": "揭示",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "揭示"
+      }
+    ]
+  },
+  "singleCoinMeasurements": {
+    "value": "单硬币测量",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "单硬币测量"
+      }
+    ]
+  },
+  "singleParticle": {
+    "value": "单粒子",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "单粒子"
+      }
+    ]
+  },
+  "singlePhoton": {
+    "value": "单光子",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "单光子"
+      }
+    ]
+  },
+  "sourceMode": {
+    "value": "源模式",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "源模式"
+      }
+    ]
+  },
+  "spinMeasurementAxis": {
+    "value": "自旋测量轴",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "自旋测量轴"
+      }
+    ]
+  },
+  "spinSource": {
+    "value": "自旋-1/2 源",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "自旋-1/2 源"
+      }
+    ]
+  },
+  "spinStateToPrepare": {
+    "value": "待准备的自旋态",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "待准备的自旋态"
+      }
+    ]
+  },
+  "start": {
+    "value": "开始",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "开始"
+      }
+    ]
+  },
+  "stateToPrepare": {
+    "value": "待准备的状态",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "待准备的状态"
+      }
+    ]
+  },
+  "total": {
+    "value": "总计",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "总计"
+      }
+    ]
+  },
+  "unknownProbabilitySymbol": {
+    "value": "?",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "?"
+      }
+    ]
+  },
+  "unpolarized": {
+    "value": "非偏振",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "非偏振"
+      }
+    ]
+  },
+  "vectorRepresentation": {
+    "value": "矢量表示",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "矢量表示"
+      }
+    ]
+  },
+  "vertical": {
+    "value": "垂直",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "垂直"
+      }
+    ]
+  }
+}

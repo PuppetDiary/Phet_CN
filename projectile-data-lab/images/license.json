@@ -1,0 +1,274 @@
+{
+  "launchButtonSingle.png": {
+    "text": [
+      "Copyright 2002-2024 University of Colorado Boulder"
+    ],
+    "projectURL": "https://phet.colorado.edu",
+    "license": "contact phethelp@colorado.edu",
+    "notes": "created by Amy Rouinfar"
+  },
+  "launchButtonContinuous.png": {
+    "text": [
+      "Copyright 2002-2024 University of Colorado Boulder"
+    ],
+    "projectURL": "https://phet.colorado.edu",
+    "license": "contact phethelp@colorado.edu",
+    "notes": "created by Amy Rouinfar and Matthew Blackman"
+  },
+  "launchButtonAutoGenerate.png": {
+    "text": [
+      "Copyright 2002-2024 University of Colorado Boulder"
+    ],
+    "projectURL": "https://phet.colorado.edu",
+    "license": "contact phethelp@colorado.edu",
+    "notes": "created by Amy Rouinfar and Matthew Blackman"
+  },
+  "cannonball.png": {
+    "text": [
+      "Copyright 2002-2024 University of Colorado Boulder"
+    ],
+    "projectURL": "https://phet.colorado.edu",
+    "license": "contact phethelp@colorado.edu",
+    "notes": "created by Mariah Hermsmeyer"
+  },
+  "cannonballLandedSelected.png": {
+    "text": [
+      "Copyright 2002-2024 University of Colorado Boulder"
+    ],
+    "projectURL": "https://phet.colorado.edu",
+    "license": "contact phethelp@colorado.edu",
+    "notes": "created by Matthew Blackman"
+  },
+  "cannonballLanded.png": {
+    "text": [
+      "Copyright 2002-2024 University of Colorado Boulder"
+    ],
+    "projectURL": "https://phet.colorado.edu",
+    "license": "contact phethelp@colorado.edu",
+    "notes": "created by Sam Reid"
+  },
+  "pumpkin.png": {
+    "text": [
+      "Copyright 2002-2024 University of Colorado Boulder"
+    ],
+    "projectURL": "https://phet.colorado.edu",
+    "license": "contact phethelp@colorado.edu",
+    "notes": "created by Mariah Hermsmeyer"
+  },
+  "pumpkin1LandedSelected.png": {
+    "text": [
+      "Copyright 2002-2024 University of Colorado Boulder"
+    ],
+    "projectURL": "https://phet.colorado.edu",
+    "license": "contact phethelp@colorado.edu",
+    "notes": "created by Mariah Hermsmeyer"
+  },
+  "pumpkin2LandedSelected.png": {
+    "text": [
+      "Copyright 2002-2024 University of Colorado Boulder"
+    ],
+    "projectURL": "https://phet.colorado.edu",
+    "license": "contact phethelp@colorado.edu",
+    "notes": "created by Mariah Hermsmeyer"
+  },
+  "pumpkin3LandedSelected.png": {
+    "text": [
+      "Copyright 2002-2024 University of Colorado Boulder"
+    ],
+    "projectURL": "https://phet.colorado.edu",
+    "license": "contact phethelp@colorado.edu",
+    "notes": "created by Mariah Hermsmeyer"
+  },
+  "pumpkin1Landed.png": {
+    "text": [
+      "Copyright 2002-2024 University of Colorado Boulder"
+    ],
+    "projectURL": "https://phet.colorado.edu",
+    "license": "contact phethelp@colorado.edu",
+    "notes": "created by Mariah Hermsmeyer"
+  },
+  "pumpkin2Landed.png": {
+    "text": [
+      "Copyright 2002-2024 University of Colorado Boulder"
+    ],
+    "projectURL": "https://phet.colorado.edu",
+    "license": "contact phethelp@colorado.edu",
+    "notes": "created by Mariah Hermsmeyer"
+  },
+  "pumpkin3Landed.png": {
+    "text": [
+      "Copyright 2002-2024 University of Colorado Boulder"
+    ],
+    "projectURL": "https://phet.colorado.edu",
+    "license": "contact phethelp@colorado.edu",
+    "notes": "created by Mariah Hermsmeyer"
+  },
+  "piano.png": {
+    "text": [
+      "Copyright 2002-2024 University of Colorado Boulder"
+    ],
+    "projectURL": "https://phet.colorado.edu",
+    "license": "contact phethelp@colorado.edu",
+    "notes": "created by Mariah Hermsmeyer"
+  },
+  "pianoLandedSelected.png": {
+    "text": [
+      "Copyright 2002-2024 University of Colorado Boulder"
+    ],
+    "projectURL": "https://phet.colorado.edu",
+    "license": "contact phethelp@colorado.edu",
+    "notes": "created by Mariah Hermsmeyer"
+  },
+  "pianoLanded.png": {
+    "text": [
+      "Copyright 2002-2024 University of Colorado Boulder"
+    ],
+    "projectURL": "https://phet.colorado.edu",
+    "license": "contact phethelp@colorado.edu",
+    "notes": "created by Mariah Hermsmeyer"
+  },
+  "launcherPattern1.svg": {
+    "text": [
+      "Copyright 2002-2024 University of Colorado Boulder"
+    ],
+    "projectURL": "https://phet.colorado.edu",
+    "license": "contact phethelp@colorado.edu",
+    "notes": "created by Matthew Blackman"
+  },
+  "launcherPattern2.svg": {
+    "text": [
+      "Copyright 2002-2024 University of Colorado Boulder"
+    ],
+    "projectURL": "https://phet.colorado.edu",
+    "license": "contact phethelp@colorado.edu",
+    "notes": "created by Matthew Blackman"
+  },
+  "launcherPattern3.svg": {
+    "text": [
+      "Copyright 2002-2024 University of Colorado Boulder"
+    ],
+    "projectURL": "https://phet.colorado.edu",
+    "license": "contact phethelp@colorado.edu",
+    "notes": "created by Matthew Blackman"
+  },
+  "launcherPattern4.svg": {
+    "text": [
+      "Copyright 2002-2024 University of Colorado Boulder"
+    ],
+    "projectURL": "https://phet.colorado.edu",
+    "license": "contact phethelp@colorado.edu",
+    "notes": "created by Matthew Blackman"
+  },
+  "launcherPattern5.svg": {
+    "text": [
+      "Copyright 2002-2024 University of Colorado Boulder"
+    ],
+    "projectURL": "https://phet.colorado.edu",
+    "license": "contact phethelp@colorado.edu",
+    "notes": "created by Matthew Blackman"
+  },
+  "launcherPattern6.svg": {
+    "text": [
+      "Copyright 2002-2024 University of Colorado Boulder"
+    ],
+    "projectURL": "https://phet.colorado.edu",
+    "license": "contact phethelp@colorado.edu",
+    "notes": "created by Matthew Blackman"
+  },
+  "spring.svg": {
+    "text": [
+      "Copyright 2002-2024 University of Colorado Boulder"
+    ],
+    "projectURL": "https://phet.colorado.edu",
+    "license": "contact phethelp@colorado.edu",
+    "notes": "created by Matthew Blackman"
+  },
+  "springIcon.svg": {
+    "text": [
+      "Copyright 2002-2024 University of Colorado Boulder"
+    ],
+    "projectURL": "https://phet.colorado.edu",
+    "license": "contact phethelp@colorado.edu",
+    "notes": "created by Matthew Blackman"
+  },
+  "pressureWithNeedle.png": {
+    "text": [
+      "Copyright 2002-2024 University of Colorado Boulder"
+    ],
+    "projectURL": "https://phet.colorado.edu",
+    "license": "contact phethelp@colorado.edu",
+    "notes": "created by Matthew Blackman"
+  },
+  "pressureWithoutNeedle.png": {
+    "text": [
+      "Copyright 2002-2024 University of Colorado Boulder"
+    ],
+    "projectURL": "https://phet.colorado.edu",
+    "license": "contact phethelp@colorado.edu",
+    "notes": "created by Matthew Blackman"
+  },
+  "pressureNeedle.png": {
+    "text": [
+      "Copyright 2002-2024 University of Colorado Boulder"
+    ],
+    "projectURL": "https://phet.colorado.edu",
+    "license": "contact phethelp@colorado.edu",
+    "notes": "created by Matthew Blackman"
+  },
+  "explosion.svg": {
+    "text": [
+      "Copyright 2002-2024 University of Colorado Boulder"
+    ],
+    "projectURL": "https://phet.colorado.edu",
+    "license": "contact phethelp@colorado.edu",
+    "notes": "created by Matthew Blackman"
+  },
+  "gear.svg": {
+    "text": [
+      "Copyright 2002-2024 University of Colorado Boulder"
+    ],
+    "projectURL": "https://phet.colorado.edu",
+    "license": "contact phethelp@colorado.edu",
+    "notes": "created by Matthew Blackman"
+  },
+  "forceField.png": {
+    "text": [
+      "Copyright 2002-2024 University of Colorado Boulder"
+    ],
+    "projectURL": "https://phet.colorado.edu",
+    "license": "contact phethelp@colorado.edu",
+    "notes": "created by Matthew Blackman"
+  },
+  "orientationButton1.svg": {
+    "text": [
+      "Copyright 2002-2024 University of Colorado Boulder"
+    ],
+    "projectURL": "https://phet.colorado.edu",
+    "license": "contact phethelp@colorado.edu",
+    "notes": "created by Matthew Blackman"
+  },
+  "orientationButton2.svg": {
+    "text": [
+      "Copyright 2002-2024 University of Colorado Boulder"
+    ],
+    "projectURL": "https://phet.colorado.edu",
+    "license": "contact phethelp@colorado.edu",
+    "notes": "created by Matthew Blackman"
+  },
+  "orientationButton3.svg": {
+    "text": [
+      "Copyright 2002-2024 University of Colorado Boulder"
+    ],
+    "projectURL": "https://phet.colorado.edu",
+    "license": "contact phethelp@colorado.edu",
+    "notes": "created by Matthew Blackman"
+  },
+  "orientationButton4.svg": {
+    "text": [
+      "Copyright 2002-2024 University of Colorado Boulder"
+    ],
+    "projectURL": "https://phet.colorado.edu",
+    "license": "contact phethelp@colorado.edu",
+    "notes": "created by Matthew Blackman"
+  }
+}

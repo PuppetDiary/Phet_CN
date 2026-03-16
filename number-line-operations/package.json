@@ -1,0 +1,36 @@
+{
+  "name": "number-line-operations",
+  "version": "1.2.0-dev.0",
+  "license": "GPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/phetsims/number-line-operations.git"
+  },
+  "devDependencies": {
+    "grunt": "~1.5.3"
+  },
+  "phet": {
+    "phetLibs": [
+      "number-line-common",
+      "twixt"
+    ],
+    "requirejsNamespace": "NUMBER_LINE_OPERATIONS",
+    "simulation": true,
+    "runnable": true,
+    "supportedBrands": [
+      "phet",
+      "adapted-from-phet"
+    ],
+    "supportsOutputJS": true,
+    "published": true,
+    "screenNameKeys": [
+      "NUMBER_LINE_OPERATIONS/screen.chips",
+      "NUMBER_LINE_OPERATIONS/screen.netWorth",
+      "NUMBER_LINE_OPERATIONS/screen.operations",
+      "NUMBER_LINE_OPERATIONS/screen.generic"
+    ],
+    "simFeatures": {
+      "supportsDynamicLocale": true
+    }
+  }
+}

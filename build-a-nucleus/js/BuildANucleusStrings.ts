@@ -1,0 +1,96 @@
+// Copyright 2021-2024, University of Colorado Boulder
+
+/* eslint-disable */
+/* @formatter:off */
+
+/**
+ * Auto-generated from modulify, DO NOT manually modify.
+ */
+
+import getStringModule from '../../chipper/js/browser/getStringModule.js';
+import type LocalizedStringProperty from '../../chipper/js/browser/LocalizedStringProperty.js';
+import buildANucleus from './buildANucleus.js';
+
+type StringsType = {
+  'build-a-nucleus': {
+    'titleStringProperty': LocalizedStringProperty;
+  };
+  'screen': {
+    'decayStringProperty': LocalizedStringProperty;
+    'chartIntroStringProperty': LocalizedStringProperty;
+  };
+  'protonsColonStringProperty': LocalizedStringProperty;
+  'neutronsColonStringProperty': LocalizedStringProperty;
+  'secondsStringProperty': LocalizedStringProperty;
+  'halfLifeColonStringProperty': LocalizedStringProperty;
+  'unknownStringProperty': LocalizedStringProperty;
+  'unknownSpacePatternStringProperty': LocalizedStringProperty;
+  'sStringProperty': LocalizedStringProperty;
+  'lessStableStringProperty': LocalizedStringProperty;
+  'moreStableStringProperty': LocalizedStringProperty;
+  'halfLifeTimescaleStringProperty': LocalizedStringProperty;
+  'timeForLightToCrossANucleusStringProperty': LocalizedStringProperty;
+  'timeForLightToCrossAnAtomStringProperty': LocalizedStringProperty;
+  'timeForLightToCrossOneThousandAtomsStringProperty': LocalizedStringProperty;
+  'timeForSoundToTravelOneMillimeterStringProperty': LocalizedStringProperty;
+  'aBlinkOfAnEyeStringProperty': LocalizedStringProperty;
+  'oneMinuteStringProperty': LocalizedStringProperty;
+  'oneYearStringProperty': LocalizedStringProperty;
+  'averageHumanLifespanStringProperty': LocalizedStringProperty;
+  'ageOfTheUniverseStringProperty': LocalizedStringProperty;
+  'lifetimeOfLongestLivedStarsStringProperty': LocalizedStringProperty;
+  'AStringProperty': LocalizedStringProperty;
+  'BStringProperty': LocalizedStringProperty;
+  'CStringProperty': LocalizedStringProperty;
+  'DStringProperty': LocalizedStringProperty;
+  'EStringProperty': LocalizedStringProperty;
+  'FStringProperty': LocalizedStringProperty;
+  'GStringProperty': LocalizedStringProperty;
+  'HStringProperty': LocalizedStringProperty;
+  'IStringProperty': LocalizedStringProperty;
+  'JStringProperty': LocalizedStringProperty;
+  'availableDecaysStringProperty': LocalizedStringProperty;
+  'protonStringProperty': LocalizedStringProperty;
+  'neutronUppercaseStringProperty': LocalizedStringProperty;
+  'neutronLowercaseStringProperty': LocalizedStringProperty;
+  'electronStringProperty': LocalizedStringProperty;
+  'positronStringProperty': LocalizedStringProperty;
+  'alphaDecayStringProperty': LocalizedStringProperty;
+  'betaMinusDecayStringProperty': LocalizedStringProperty;
+  'betaPlusDecayStringProperty': LocalizedStringProperty;
+  'protonEmissionStringProperty': LocalizedStringProperty;
+  'neutronEmissionStringProperty': LocalizedStringProperty;
+  'symbolStringProperty': LocalizedStringProperty;
+  'stableStringProperty': LocalizedStringProperty;
+  'unstableStringProperty': LocalizedStringProperty;
+  'doesNotFormStringProperty': LocalizedStringProperty;
+  'protonsStringProperty': LocalizedStringProperty;
+  'neutronsUppercaseStringProperty': LocalizedStringProperty;
+  'neutronsLowercaseStringProperty': LocalizedStringProperty;
+  'nameMassPatternStringProperty': LocalizedStringProperty;
+  'elementDoesNotFormPatternStringProperty': LocalizedStringProperty;
+  'zeroParticlesDoesNotFormPatternStringProperty': LocalizedStringProperty;
+  'electronCloudStringProperty': LocalizedStringProperty;
+  'clusterOfNeutronsPatternStringProperty': LocalizedStringProperty;
+  'availableDecaysInfoPanelTextStringProperty': LocalizedStringProperty;
+  'energyStringProperty': LocalizedStringProperty;
+  'nuclearShellModelStringProperty': LocalizedStringProperty;
+  'partialNuclideChartStringProperty': LocalizedStringProperty;
+  'axis': {
+    'protonNumberStringProperty': LocalizedStringProperty;
+    'neutronNumberStringProperty': LocalizedStringProperty;
+  };
+  'mostLikelyDecayTypeStringProperty': LocalizedStringProperty;
+  'percentageInParenthesesPatternStringProperty': LocalizedStringProperty;
+  'magicNumbersStringProperty': LocalizedStringProperty;
+  'fullChartInfoPanelTextPatternStringProperty': LocalizedStringProperty;
+  'fullChartLowercaseStringProperty': LocalizedStringProperty;
+  'fullNuclideChartStringProperty': LocalizedStringProperty;
+  'fullChartCapitalizedStringProperty': LocalizedStringProperty;
+};
+
+const BuildANucleusStrings = getStringModule( 'BUILD_A_NUCLEUS' ) as StringsType;
+
+buildANucleus.register( 'BuildANucleusStrings', BuildANucleusStrings );
+
+export default BuildANucleusStrings;

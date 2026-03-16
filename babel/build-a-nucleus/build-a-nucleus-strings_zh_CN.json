@@ -1,0 +1,574 @@
+{
+  "decay": {
+    "value": "衰变",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553801,
+        "oldValue": "",
+        "newValue": "衰变"
+      }
+    ]
+  },
+  "symbol": {
+    "value": "符号",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553801,
+        "oldValue": "",
+        "newValue": "符号"
+      }
+    ]
+  },
+  "electronCloud": {
+    "value": "电子云",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553801,
+        "oldValue": "",
+        "newValue": "电子云"
+      }
+    ]
+  },
+  "stable": {
+    "value": "稳定",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553801,
+        "oldValue": "",
+        "newValue": "稳定"
+      }
+    ]
+  },
+  "unstable": {
+    "value": "不稳定",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553801,
+        "oldValue": "",
+        "newValue": "不稳定"
+      }
+    ]
+  },
+  "alphaDecay": {
+    "value": "α 衰变",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553801,
+        "oldValue": "",
+        "newValue": "α 衰变"
+      }
+    ]
+  },
+  "betaMinusDecay": {
+    "value": "β<sup>-</sup> 衰变",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553801,
+        "oldValue": "",
+        "newValue": "β<sup>-</sup> 衰变"
+      }
+    ]
+  },
+  "betaPlusDecay": {
+    "value": "β<sup>+</sup> 衰变",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553801,
+        "oldValue": "",
+        "newValue": "β<sup>+</sup> 衰变"
+      }
+    ]
+  },
+  "protonEmission": {
+    "value": "质子放射性",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553801,
+        "oldValue": "",
+        "newValue": "质子放射性"
+      }
+    ]
+  },
+  "neutronEmission": {
+    "value": "中子放射性",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553801,
+        "oldValue": "",
+        "newValue": "中子放射性"
+      }
+    ]
+  },
+  "lessStable": {
+    "value": "较不稳定",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553801,
+        "oldValue": "",
+        "newValue": "较不稳定"
+      }
+    ]
+  },
+  "moreStable": {
+    "value": "较稳定",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553801,
+        "oldValue": "",
+        "newValue": "较稳定"
+      }
+    ]
+  },
+  "availableDecays": {
+    "value": "可用的衰变",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553801,
+        "oldValue": "",
+        "newValue": "可用的衰变"
+      }
+    ]
+  },
+  "availableDecaysInfoPanelText": {
+    "value": "虽然还有一些其他的衰变，“可用的衰变”显示的是最常见的。如果没有任何已知的衰变，则不会显示。",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553801,
+        "oldValue": "",
+        "newValue": "虽然还有一些其他的衰变，“可用的衰变”显示的是最常见的。如果没有任何已知的衰变，则不会显示。"
+      }
+    ]
+  },
+  "protons": {
+    "value": "质子",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553801,
+        "oldValue": "",
+        "newValue": "质子"
+      }
+    ]
+  },
+  "neutronsUppercase": {
+    "value": "中子",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553801,
+        "oldValue": "",
+        "newValue": "中子"
+      }
+    ]
+  },
+  "neutronsLowercase": {
+    "value": "中子",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553801,
+        "oldValue": "",
+        "newValue": "中子"
+      }
+    ]
+  },
+  "doesNotForm": {
+    "value": "未形成",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553801,
+        "oldValue": "",
+        "newValue": "未形成"
+      }
+    ]
+  },
+  "neutronLowercase": {
+    "value": "中子",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553801,
+        "oldValue": "",
+        "newValue": "中子"
+      }
+    ]
+  },
+  "clusterOfNeutronsPattern": {
+    "value": "{{neutronNumber}} 个中子形成的丛集",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553801,
+        "oldValue": "",
+        "newValue": "{{neutronNumber}} 个中子形成的丛集"
+      }
+    ]
+  },
+  "proton": {
+    "value": "质子",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553801,
+        "oldValue": "",
+        "newValue": "质子"
+      }
+    ]
+  },
+  "neutronUppercase": {
+    "value": "中子",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553801,
+        "oldValue": "",
+        "newValue": "中子"
+      }
+    ]
+  },
+  "electron": {
+    "value": "电子",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553801,
+        "oldValue": "",
+        "newValue": "电子"
+      }
+    ]
+  },
+  "positron": {
+    "value": "正电子",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553801,
+        "oldValue": "",
+        "newValue": "正电子"
+      }
+    ]
+  },
+  "halfLifeColon": {
+    "value": "半衰期：",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553801,
+        "oldValue": "",
+        "newValue": "半衰期："
+      }
+    ]
+  },
+  "unknown": {
+    "value": "未知",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553801,
+        "oldValue": "",
+        "newValue": "未知"
+      }
+    ]
+  },
+  "s": {
+    "value": "秒",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553801,
+        "oldValue": "",
+        "newValue": "秒"
+      }
+    ]
+  },
+  "seconds": {
+    "value": "秒",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553801,
+        "oldValue": "",
+        "newValue": "秒"
+      }
+    ]
+  },
+  "A": {
+    "value": "A",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553801,
+        "oldValue": "",
+        "newValue": "A"
+      }
+    ]
+  },
+  "B": {
+    "value": "B",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553801,
+        "oldValue": "",
+        "newValue": "B"
+      }
+    ]
+  },
+  "C": {
+    "value": "C",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553801,
+        "oldValue": "",
+        "newValue": "C"
+      }
+    ]
+  },
+  "D": {
+    "value": "D",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553801,
+        "oldValue": "",
+        "newValue": "D"
+      }
+    ]
+  },
+  "E": {
+    "value": "E",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553801,
+        "oldValue": "",
+        "newValue": "E"
+      }
+    ]
+  },
+  "F": {
+    "value": "F",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553801,
+        "oldValue": "",
+        "newValue": "F"
+      }
+    ]
+  },
+  "G": {
+    "value": "G",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553801,
+        "oldValue": "",
+        "newValue": "G"
+      }
+    ]
+  },
+  "H": {
+    "value": "H",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553801,
+        "oldValue": "",
+        "newValue": "H"
+      }
+    ]
+  },
+  "I": {
+    "value": "I",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553801,
+        "oldValue": "",
+        "newValue": "I"
+      }
+    ]
+  },
+  "J": {
+    "value": "J",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553801,
+        "oldValue": "",
+        "newValue": "J"
+      }
+    ]
+  },
+  "halfLifeTimescale": {
+    "value": "半衰期时间表",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553801,
+        "oldValue": "",
+        "newValue": "半衰期时间表"
+      }
+    ]
+  },
+  "protonsColon": {
+    "value": "质子：",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553801,
+        "oldValue": "",
+        "newValue": "质子："
+      }
+    ]
+  },
+  "neutronsColon": {
+    "value": "中子：",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553801,
+        "oldValue": "",
+        "newValue": "中子："
+      }
+    ]
+  },
+  "timeForLightToCrossANucleus": {
+    "value": "光通过原子核的时间",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553801,
+        "oldValue": "",
+        "newValue": "光通过原子核的时间"
+      }
+    ]
+  },
+  "timeForLightToCrossAnAtom": {
+    "value": "光通过原子的时间",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553801,
+        "oldValue": "",
+        "newValue": "光通过原子的时间"
+      }
+    ]
+  },
+  "timeForLightToCrossOneThousandAtoms": {
+    "value": "光通过 1000 个原子的时间",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553801,
+        "oldValue": "",
+        "newValue": "光通过 1000 个原子的时间"
+      }
+    ]
+  },
+  "timeForSoundToTravelOneMillimeter": {
+    "value": "声音前进 1 毫米的时间",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553801,
+        "oldValue": "",
+        "newValue": "声音前进 1 毫米的时间"
+      }
+    ]
+  },
+  "aBlinkOfAnEye": {
+    "value": "眨眼的时间",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553801,
+        "oldValue": "",
+        "newValue": "眨眼的时间"
+      }
+    ]
+  },
+  "oneMinute": {
+    "value": "一分钟",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553801,
+        "oldValue": "",
+        "newValue": "一分钟"
+      }
+    ]
+  },
+  "oneYear": {
+    "value": "一年",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553801,
+        "oldValue": "",
+        "newValue": "一年"
+      }
+    ]
+  },
+  "averageHumanLifespan": {
+    "value": "人类平均寿命",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553801,
+        "oldValue": "",
+        "newValue": "人类平均寿命"
+      }
+    ]
+  },
+  "ageOfTheUniverse": {
+    "value": "宇宙的寿命",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553801,
+        "oldValue": "",
+        "newValue": "宇宙的寿命"
+      }
+    ]
+  },
+  "lifetimeOfLongestLivedStars": {
+    "value": "存在最久的星体的寿命",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553801,
+        "oldValue": "",
+        "newValue": "存在最久的星体的寿命"
+      }
+    ]
+  },
+  "build-a-nucleus.title": {
+    "value": "Build a Nucleus_建立原子核",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553801,
+        "oldValue": "",
+        "newValue": "Build a Nucleus_建立原子核"
+      }
+    ]
+  }
+}

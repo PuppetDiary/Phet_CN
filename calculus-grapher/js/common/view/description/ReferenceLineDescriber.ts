@@ -1,0 +1,234 @@
+// Copyright 2026, University of Colorado Boulder
+
+/**
+ * ReferenceLineDescriber creates accessible responses for the Reference Line.
+ *
+ * @author Chris Malley (PixelZoom, Inc.)
+ */
+
+import { TReadOnlyProperty } from '../../../../../axon/js/TReadOnlyProperty.js';
+import { toFixedNumber } from '../../../../../dot/js/util/toFixedNumber.js';
+import affirm from '../../../../../perennial-alias/js/browser-and-node/affirm.js';
+import calculusGrapher from '../../../calculusGrapher.js';
+import CalculusGrapherFluent from '../../../CalculusGrapherFluent.js';
+import CalculusGrapherConstants from '../../CalculusGrapherConstants.js';
+import CalculusGrapherSymbols from '../../CalculusGrapherSymbols.js';
+import GraphSet from '../../model/GraphSet.js';
+import GraphType from '../../model/GraphType.js';
+import ReferenceLine from '../../model/ReferenceLine.js';
+import ExplorationToolDescriber from './ExplorationToolDescriber.js';
+
+export default class ReferenceLineDescriber extends ExplorationToolDescriber {
+
+  public constructor( private readonly referenceLine: ReferenceLine,
+                      private readonly graphSetProperty: TReadOnlyProperty<GraphSet>,
+                      private readonly predictEnabledProperty: TReadOnlyProperty<boolean>,
+                      private readonly showPrimaryCurveProperty: TReadOnlyProperty<boolean>,
+                      private readonly primaryCurveLayerVisibleProperty: TReadOnlyProperty<boolean>,
+                      private readonly integralCurveLayerVisibleProperty: TReadOnlyProperty<boolean>,
+                      private readonly derivativeCurveLayerVisibleProperty: TReadOnlyProperty<boolean>,
+                      private readonly secondDerivativeCurveLayerVisibleProperty: TReadOnlyProperty<boolean>
+  ) {
+    // All fields are defined and initialized via constructor params.
+    super( referenceLine );
+  }
+
+  /**
+   * Gets the accessible object response that describes the tool's position and what its vertical line intersects.
+   */
+  public override getAccessibleObjectResponse(): string {
+
+    let response: string;
+    const graphSet = this.graphSetProperty.value;
+
+    if ( graphSet.matches( [ GraphType.PRIMARY, GraphType.DERIVATIVE ] ) ) {
+      response = CalculusGrapherFluent.a11y.referenceLine.accessibleObjectResponse.patterns.primaryDerivative.format( {
+        xPhrase: this.getXPhrase(),
+        primaryPhrase: this.getPrimaryPhrase(),
+        derivativePhrase: this.getDerivativePhrase()
+      } );
+    }
+    else if ( graphSet.matches( [ GraphType.INTEGRAL, GraphType.PRIMARY ] ) ) {
+      response = CalculusGrapherFluent.a11y.referenceLine.accessibleObjectResponse.patterns.integralPrimary.format( {
+        xPhrase: this.getXPhrase(),
+        integralPhrase: this.getIntegralPhrase(),
+        primaryPhrase: this.getPrimaryPhrase()
+      } );
+    }
+    else if ( graphSet.matches( [ GraphType.INTEGRAL, GraphType.PRIMARY, GraphType.DERIVATIVE ] ) ) {
+      response = CalculusGrapherFluent.a11y.referenceLine.accessibleObjectResponse.patterns.integralPrimaryDerivative.format( {
+        xPhrase: this.getXPhrase(),
+        integralPhrase: this.getIntegralPhrase(),
+        primaryPhrase: this.getPrimaryPhrase(),
+        derivativePhrase: this.getDerivativePhrase()
+      } );
+    }
+    else {
+      affirm( graphSet.matches( [ GraphType.PRIMARY, GraphType.DERIVATIVE, GraphType.SECOND_DERIVATIVE ] ) );
+      response = CalculusGrapherFluent.a11y.referenceLine.accessibleObjectResponse.patterns.primaryDerivativeSecondDerivative.format( {
+        xPhrase: this.getXPhrase(),
+        primaryPhrase: this.getPrimaryPhrase(),
+        derivativePhrase: this.getDerivativePhrase(),
+        secondDerivativePhrase: this.getSecondDerivativePhrase()
+      } );
+    }
+
+    return response;
+  }
+
+  /**
+   * Gets the phrase that describes the tool's intersection with the primary graph, which may be showing
+   * the primary curve, the predict curve, both, or neither.
+   */
+  private getPrimaryPhrase(): string {
+    let primaryPhrase: string;
+    if ( this.predictEnabledProperty.value ) {
+      primaryPhrase = CalculusGrapherFluent.a11y.referenceLine.accessibleObjectResponse.primaryPhrase.predictAndPrimary.format( {
+        predictPhrase: this.getPredictCurvePhrase(),
+        primaryPhrase: this.getPrimaryCurvePhrase()
+      } );
+    }
+    else {
+      primaryPhrase = this.getPrimaryCurvePhrase();
+    }
+    return primaryPhrase;
+  }
+
+  /**
+   * Gets the phrase that describes the tool's intersection with the predict curve.
+   * The predict curve is described as undefined (if there is a discontinuity), a y-value, or hidden.
+   */
+  private getPredictCurvePhrase(): string {
+    let predictPhrase: string;
+    if ( this.primaryCurveLayerVisibleProperty.value && this.predictEnabledProperty.value ) {
+      const point = this.referenceLine.predictCurvePointProperty.value;
+      if ( point.isDiscontinuous ) {
+        // undefined
+        predictPhrase = CalculusGrapherFluent.a11y.referenceLine.accessibleObjectResponse.primaryPhrase.predictUndefined.format( {
+          variable: CalculusGrapherSymbols.accessibleVariableSymbolProperty.value
+        } );
+      }
+      else {
+        // y-value
+        predictPhrase = CalculusGrapherFluent.a11y.referenceLine.accessibleObjectResponse.primaryPhrase.predictValue.format( {
+          variable: CalculusGrapherSymbols.accessibleVariableSymbolProperty.value,
+          value: toFixedNumber( point.y, CalculusGrapherConstants.Y_DESCRIPTION_DECIMALS )
+        } );
+      }
+    }
+    else {
+      // hidden
+      predictPhrase = CalculusGrapherFluent.a11y.referenceLine.accessibleObjectResponse.primaryPhrase.predictHiddenStringProperty.value;
+    }
+    return predictPhrase;
+  }
+
+  /**
+   * Gets the phrase that describes the tool's intersection with the primary curve.
+   * The primary curve is described as undefined (if there is a discontinuity), a y-value, or hidden.
+   */
+  private getPrimaryCurvePhrase(): string {
+    let primaryCurvePhrase: string;
+    if ( this.primaryCurveLayerVisibleProperty.value && ( !this.predictEnabledProperty.value || this.showPrimaryCurveProperty.value ) ) {
+      const point = this.referenceLine.primaryCurvePointProperty.value;
+      if ( point.isDiscontinuous ) {
+        // undefined
+        primaryCurvePhrase = CalculusGrapherFluent.a11y.referenceLine.accessibleObjectResponse.primaryPhrase.primaryUndefined.format( {
+          variable: CalculusGrapherSymbols.accessibleVariableSymbolProperty.value
+        } );
+      }
+      else {
+        // y-value
+        primaryCurvePhrase = CalculusGrapherFluent.a11y.referenceLine.accessibleObjectResponse.primaryPhrase.primaryValue.format( {
+          variable: CalculusGrapherSymbols.accessibleVariableSymbolProperty.value,
+          value: toFixedNumber( point.y, CalculusGrapherConstants.Y_DESCRIPTION_DECIMALS )
+        } );
+      }
+    }
+    else {
+      // hidden
+      primaryCurvePhrase = CalculusGrapherFluent.a11y.referenceLine.accessibleObjectResponse.primaryPhrase.primaryHiddenStringProperty.value;
+    }
+    return primaryCurvePhrase;
+  }
+
+  /**
+   * Gets the phrase that describes the tool's intersection with the integral graph.
+   * The integral is described as a y-value or hidden.
+   */
+  private getIntegralPhrase(): string {
+    let integralPhrase: string;
+    if ( this.integralCurveLayerVisibleProperty.value ) {
+      // y-value
+      integralPhrase = CalculusGrapherFluent.a11y.referenceLine.accessibleObjectResponse.integralPhrase.integralValue.format( {
+        variable: CalculusGrapherSymbols.accessibleVariableSymbolProperty.value,
+        value: toFixedNumber( this.referenceLine.integralCurvePointProperty.value.y, CalculusGrapherConstants.Y_DESCRIPTION_DECIMALS )
+      } );
+    }
+    else {
+      // hidden
+      integralPhrase = CalculusGrapherFluent.a11y.referenceLine.accessibleObjectResponse.integralPhrase.integralHiddenStringProperty.value;
+    }
+    return integralPhrase;
+  }
+
+  /**
+   * Gets the phrase that describes the tool's intersection with the derivative graph.
+   * The derivative is described as undefined (if there is a discontinuity), a y-value, or hidden.
+   */
+  private getDerivativePhrase(): string {
+    let derivativePhrase: string;
+    if ( this.derivativeCurveLayerVisibleProperty.value ) {
+      const point = this.referenceLine.derivativeCurvePointProperty.value;
+      if ( point.isDiscontinuous ) {
+        // undefined
+        derivativePhrase = CalculusGrapherFluent.a11y.referenceLine.accessibleObjectResponse.derivativePhrase.derivativeUndefined.format( {
+          variable: CalculusGrapherSymbols.accessibleVariableSymbolProperty.value
+        } );
+      }
+      else {
+        // y-value
+        derivativePhrase = CalculusGrapherFluent.a11y.referenceLine.accessibleObjectResponse.derivativePhrase.derivativeValue.format( {
+          variable: CalculusGrapherSymbols.accessibleVariableSymbolProperty.value,
+          value: toFixedNumber( point.y, CalculusGrapherConstants.Y_DESCRIPTION_DECIMALS )
+        } );
+      }
+    }
+    else {
+      // hidden
+      derivativePhrase = CalculusGrapherFluent.a11y.referenceLine.accessibleObjectResponse.derivativePhrase.derivativeHiddenStringProperty.value;
+    }
+    return derivativePhrase;
+  }
+
+  /**
+   * Gets the phrase that describes the tool's intersection with the second derivative graph.
+   * The second derivative is described as undefined (if there is a discontinuity), a y-value, or hidden.
+   */
+  private getSecondDerivativePhrase(): string {
+    let secondDerivativePhrase: string;
+    if ( this.secondDerivativeCurveLayerVisibleProperty.value ) {
+      const point = this.referenceLine.secondDerivativeCurvePointProperty.value;
+      if ( point.isDiscontinuous ) {
+        // undefined
+        secondDerivativePhrase = CalculusGrapherFluent.a11y.referenceLine.accessibleObjectResponse.secondDerivativePhrase.secondDerivativeUndefined.format( {
+          variable: CalculusGrapherSymbols.accessibleVariableSymbolProperty.value
+        } );
+      }
+      else {
+        // y-value
+        secondDerivativePhrase = CalculusGrapherFluent.a11y.referenceLine.accessibleObjectResponse.secondDerivativePhrase.secondDerivativeValue.format( {
+          variable: CalculusGrapherSymbols.accessibleVariableSymbolProperty.value,
+          value: toFixedNumber( point.y, CalculusGrapherConstants.Y_DESCRIPTION_DECIMALS )
+        } );
+      }
+    }
+    else {
+      // hidden
+      secondDerivativePhrase = CalculusGrapherFluent.a11y.referenceLine.accessibleObjectResponse.secondDerivativePhrase.secondDerivativeHiddenStringProperty.value;
+    }
+    return secondDerivativePhrase;
+  }
+}
+
+calculusGrapher.register( 'ReferenceLineDescriber', ReferenceLineDescriber );

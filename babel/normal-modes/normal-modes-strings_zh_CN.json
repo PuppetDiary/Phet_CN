@@ -1,0 +1,167 @@
+{
+  "screen.oneDimension": {
+    "value": "一维",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553815,
+        "oldValue": "",
+        "newValue": "一维"
+      }
+    ]
+  },
+  "screen.twoDimensions": {
+    "value": "二维",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553815,
+        "oldValue": "",
+        "newValue": "二维"
+      }
+    ]
+  },
+  "initialPositions": {
+    "value": "回到起始点",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553815,
+        "oldValue": "",
+        "newValue": "回到起始点"
+      }
+    ]
+  },
+  "zeroPositions": {
+    "value": "回到原点",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553815,
+        "oldValue": "",
+        "newValue": "回到原点"
+      }
+    ]
+  },
+  "showSprings": {
+    "value": "显示弹簧",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553815,
+        "oldValue": "",
+        "newValue": "显示弹簧"
+      }
+    ]
+  },
+  "showPhases": {
+    "value": "显示相位",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553815,
+        "oldValue": "",
+        "newValue": "显示相位"
+      }
+    ]
+  },
+  "normal-modes.title": {
+    "value": "Normal Modes_简正模",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553815,
+        "oldValue": "",
+        "newValue": "Normal Modes_简正模"
+      }
+    ]
+  },
+  "amplitude": {
+    "value": "振幅：",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553815,
+        "oldValue": "",
+        "newValue": "振幅："
+      }
+    ]
+  },
+  "frequency": {
+    "value": "频率：",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553815,
+        "oldValue": "",
+        "newValue": "频率："
+      }
+    ]
+  },
+  "frequencyRatioOmegaPattern": {
+    "value": "{{frequencyRatio}}ω₀",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553815,
+        "oldValue": "",
+        "newValue": "{{frequencyRatio}}ω₀"
+      }
+    ]
+  },
+  "normalModeSpectrum": {
+    "value": "简正模频谱",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553815,
+        "oldValue": "",
+        "newValue": "简正模频谱"
+      }
+    ]
+  },
+  "normalMode": {
+    "value": "简正模：",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553815,
+        "oldValue": "",
+        "newValue": "简正模："
+      }
+    ]
+  },
+  "phase": {
+    "value": "相位：",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553815,
+        "oldValue": "",
+        "newValue": "相位："
+      }
+    ]
+  },
+  "normalModeAmplitudes": {
+    "value": "简正模振幅",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553815,
+        "oldValue": "",
+        "newValue": "简正模振幅"
+      }
+    ]
+  },
+  "numberOfMasses": {
+    "value": "弹簧数量：",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553815,
+        "oldValue": "",
+        "newValue": "弹簧数量："
+      }
+    ]
+  }
+}

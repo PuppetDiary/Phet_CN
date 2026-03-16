@@ -1,0 +1,32 @@
+{
+  "usa": {
+    "exploreHomeScreenIcon": "images/usa/usaExploreHomeScreenIcon_png.ts",
+    "exploreNavbarIcon": "images/usa/usaExploreNavbarIcon_png.ts",
+    "person": "images/usa/usaPerson_png.ts"
+  },
+  "africa": {
+    "exploreHomeScreenIcon": "images/africa/africaExploreHomeScreenIcon_png.ts",
+    "exploreNavbarIcon": "images/africa/africaExploreNavbarIcon_png.ts",
+    "person": "images/africa/africaPerson_png.ts"
+  },
+  "africaModest": {
+    "exploreHomeScreenIcon": "images/africaModest/africaModestExploreHomeScreenIcon_png.ts",
+    "exploreNavbarIcon": "images/africaModest/africaModestExploreNavbarIcon_png.ts",
+    "person": "images/africaModest/africaModestPerson_png.ts"
+  },
+  "asia": {
+    "exploreHomeScreenIcon": "images/asia/asiaExploreHomeScreenIcon_png.ts",
+    "exploreNavbarIcon": "images/asia/asiaExploreNavbarIcon_png.ts",
+    "person": "images/asia/asiaPerson_png.ts"
+  },
+  "latinAmerica": {
+    "exploreHomeScreenIcon": "images/latinAmerica/latinAmericaExploreHomeScreenIcon_png.ts",
+    "exploreNavbarIcon": "images/latinAmerica/latinAmericaExploreNavbarIcon_png.ts",
+    "person": "images/latinAmerica/latinAmericaPerson_png.ts"
+  },
+  "oceania": {
+    "exploreHomeScreenIcon": "images/oceania/oceaniaExploreHomeScreenIcon_png.ts",
+    "exploreNavbarIcon": "images/oceania/oceaniaExploreNavbarIcon_png.ts",
+    "person": "images/oceania/oceaniaPerson_png.ts"
+  }
+}

@@ -1,0 +1,1025 @@
+{
+  "screen.discrete": {
+    "value": "离散",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "离散"
+      }
+    ]
+  },
+  "screen.waveGame": {
+    "value": "波形游戏",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "波形游戏"
+      }
+    ]
+  },
+  "screen.wavePacket": {
+    "value": "波包",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "波包"
+      }
+    ]
+  },
+  "harmonicsChart": {
+    "value": "谐波",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "谐波"
+      }
+    ]
+  },
+  "sum": {
+    "value": "总和",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "总和"
+      }
+    ]
+  },
+  "sawtoothWithCosines": {
+    "value": "您不能用余弦产生锯齿波，<br>因为它是非对称性的。请切换到正弦。",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "您不能用余弦产生锯齿波，<br>因为它是非对称性的。请切换到正弦。"
+      }
+    ]
+  },
+  "matchUsing1Harmonic": {
+    "value": "<b>第 1 关</b>：请用 <b>1</b> 个谐波来产生粉红色的波形。",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "<b>第 1 关</b>：请用 <b>1</b> 个谐波来产生粉红色的波形。"
+      }
+    ]
+  },
+  "info1Harmonic": {
+    "value": "<b>第 1 关</b>：1 个谐波",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "<b>第 1 关</b>：1 个谐波"
+      }
+    ]
+  },
+  "matchUsingNOrMoreHarmonics": {
+    "value": "<b>第 {{levelNumber}} 关</b>：请用 <u><b>{{numberOfHarmonics}}</b> 个以上的谐波</u>来产生粉红色的波形。",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "<b>第 {{levelNumber}} 关</b>：请用 <u><b>{{numberOfHarmonics}}</b> 个以上的谐波</u>来产生粉红色的波形。"
+      }
+    ]
+  },
+  "infoNOrMoreHarmonics": {
+    "value": "<b>第 {{levelNumber}} 关</b>：{{numberOfHarmonics}} 个<u>以上</u>的谐波",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "<b>第 {{levelNumber}} 关</b>：{{numberOfHarmonics}} 个<u>以上</u>的谐波"
+      }
+    ]
+  },
+  "keyboardHelpDialog.checkYourAnswer": {
+    "value": "请检查您的答案",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "请检查您的答案"
+      }
+    ]
+  },
+  "keyboardHelpDialog.gameControls": {
+    "value": "游戏控制",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "游戏控制"
+      }
+    ]
+  },
+  "amplitudesOfFourierComponents": {
+    "value": "傅立叶成分振幅",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "傅立叶成分振幅"
+      }
+    ]
+  },
+  "fourierComponents": {
+    "value": "傅立叶成分",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "傅立叶成分"
+      }
+    ]
+  },
+  "symbol.A": {
+    "value": "A",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "A"
+      }
+    ]
+  },
+  "symbol.cos": {
+    "value": "cos",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "cos"
+      }
+    ]
+  },
+  "symbol.d": {
+    "value": "d",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "d"
+      }
+    ]
+  },
+  "symbol.F": {
+    "value": "F",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "F"
+      }
+    ]
+  },
+  "symbol.f": {
+    "value": "f",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "f"
+      }
+    ]
+  },
+  "symbol.k": {
+    "value": "k",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "k"
+      }
+    ]
+  },
+  "symbol.L": {
+    "value": "L",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "L"
+      }
+    ]
+  },
+  "symbol.lambda": {
+    "value": "λ",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "λ"
+      }
+    ]
+  },
+  "symbol.n": {
+    "value": "n",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "n"
+      }
+    ]
+  },
+  "symbol.omega": {
+    "value": "ω",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "ω"
+      }
+    ]
+  },
+  "symbol.sigma": {
+    "value": "σ",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "σ"
+      }
+    ]
+  },
+  "symbol.sin": {
+    "value": "sin",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "sin"
+      }
+    ]
+  },
+  "symbol.T": {
+    "value": "T",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "T"
+      }
+    ]
+  },
+  "symbol.t": {
+    "value": "t",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "t"
+      }
+    ]
+  },
+  "symbol.x": {
+    "value": "x",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "x"
+      }
+    ]
+  },
+  "keyboardHelpDialog.moveTool": {
+    "value": "移动工具",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "移动工具"
+      }
+    ]
+  },
+  "keyboardHelpDialog.moveToolSlower": {
+    "value": "移动慢一点",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "移动慢一点"
+      }
+    ]
+  },
+  "keyboardHelpDialog.measurementTools": {
+    "value": "测量工具",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "测量工具"
+      }
+    ]
+  },
+  "minToMax": {
+    "value": "{{min}} 到 {{max}}",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "{{min}} 到 {{max}}"
+      }
+    ]
+  },
+  "enter": {
+    "value": "输入",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "输入"
+      }
+    ]
+  },
+  "fourierSeries": {
+    "value": "傅立叶级数",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "傅立叶级数"
+      }
+    ]
+  },
+  "waveform": {
+    "value": "波形：",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "波形："
+      }
+    ]
+  },
+  "harmonics": {
+    "value": "谐波：",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "谐波："
+      }
+    ]
+  },
+  "graphControls": {
+    "value": "图形控制：",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "图形控制："
+      }
+    ]
+  },
+  "functionOf": {
+    "value": "函数：",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "函数："
+      }
+    ]
+  },
+  "series": {
+    "value": "级数：",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "级数："
+      }
+    ]
+  },
+  "equation": {
+    "value": "方程式：",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "方程式："
+      }
+    ]
+  },
+  "measurementTools": {
+    "value": "测量工具",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "测量工具"
+      }
+    ]
+  },
+  "expandedForm": {
+    "value": "展开式",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "展开式"
+      }
+    ]
+  },
+  "infiniteHarmonics": {
+    "value": "无限谐波",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "无限谐波"
+      }
+    ]
+  },
+  "matchUsingNHarmonics": {
+    "value": "<b>第 {{levelNumber}} 关</b>：请用 <b>{{numberOfHarmonics}}</b> 个谐波来产生粉红色的波形。",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "<b>第 {{levelNumber}} 关</b>：请用 <b>{{numberOfHarmonics}}</b> 个谐波来产生粉红色的波形。"
+      }
+    ]
+  },
+  "infoNHarmonics": {
+    "value": "<b>第 {{levelNumber}} 关</b>：{{numberOfHarmonics}} 个谐波",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "<b>第 {{levelNumber}} 关</b>：{{numberOfHarmonics}} 个谐波"
+      }
+    ]
+  },
+  "checkAnswer": {
+    "value": "检查答案",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "检查答案"
+      }
+    ]
+  },
+  "showAnswer": {
+    "value": "显示答案",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "显示答案"
+      }
+    ]
+  },
+  "newWaveform": {
+    "value": "下一题",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "下一题"
+      }
+    ]
+  },
+  "chooseYourLevel": {
+    "value": "选择关卡",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "选择关卡"
+      }
+    ]
+  },
+  "continuousWaveform": {
+    "value": "连续波形",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "连续波形"
+      }
+    ]
+  },
+  "waveformEnvelope": {
+    "value": "波形包络",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "波形包络"
+      }
+    ]
+  },
+  "infiniteComponentsCannotBePlotted": {
+    "value": "无法绘制无限的分量",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "无法绘制无限的分量"
+      }
+    ]
+  },
+  "componentSpacing": {
+    "value": "成分空间",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "成分空间"
+      }
+    ]
+  },
+  "wavePacketCenter": {
+    "value": "波包中心",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "波包中心"
+      }
+    ]
+  },
+  "wavePacketWidth": {
+    "value": "波包宽度",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "波包宽度"
+      }
+    ]
+  },
+  "spaceSymbol": {
+    "value": "空间（{{symbol}}）",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "空间（{{symbol}}）"
+      }
+    ]
+  },
+  "timeSymbol": {
+    "value": "时间（{{symbol}}）",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "时间（{{symbol}}）"
+      }
+    ]
+  },
+  "spaceAndTimeSymbols": {
+    "value": "空间与时间（{{spaceSymbol}},{{timeSymbol}}）",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "空间与时间（{{spaceSymbol}},{{timeSymbol}}）"
+      }
+    ]
+  },
+  "symbolsDialog.title": {
+    "value": "符号",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "符号"
+      }
+    ]
+  },
+  "symbolsDialog.A": {
+    "value": "{{A}} - 振幅",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "{{A}} - 振幅"
+      }
+    ]
+  },
+  "symbolsDialog.f": {
+    "value": "{{f}} - 频率（赫兹）",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "{{f}} - 频率（赫兹）"
+      }
+    ]
+  },
+  "symbolsDialog.lambda": {
+    "value": "{{lambda}} - 波长（公尺）",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "{{lambda}} - 波长（公尺）"
+      }
+    ]
+  },
+  "symbolsDialog.k": {
+    "value": "{{k}} - 空间波数（弧度/公尺）",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "{{k}} - 空间波数（弧度/公尺）"
+      }
+    ]
+  },
+  "symbolsDialog.L": {
+    "value": "{{L}} - 绳长（若为拨弦，公尺）",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "{{L}} - 绳长（若为拨弦，公尺）"
+      }
+    ]
+  },
+  "symbolsDialog.n": {
+    "value": "{{n}} - 模式，谐波数量，顺序",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "{{n}} - 模式，谐波数量，顺序"
+      }
+    ]
+  },
+  "symbolsDialog.t": {
+    "value": "{{t}} - 时间（毫秒）",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "{{t}} - 时间（毫秒）"
+      }
+    ]
+  },
+  "symbolsDialog.T": {
+    "value": "{{T}} - 间隔（毫秒）",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "{{T}} - 间隔（毫秒）"
+      }
+    ]
+  },
+  "symbolsDialog.omega": {
+    "value": "{{omega}} - 角波数（弧度/毫秒）",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "{{omega}} - 角波数（弧度/毫秒）"
+      }
+    ]
+  },
+  "symbolsDialog.x": {
+    "value": "{{x}} - 空间中的位置（公尺）",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "{{x}} - 空间中的位置（公尺）"
+      }
+    ]
+  },
+  "hidden": {
+    "value": "隐藏",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "隐藏"
+      }
+    ]
+  },
+  "symbolAndSymbol": {
+    "value": "{{symbol1}} & {{symbol2}}",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "{{symbol1}} & {{symbol2}}"
+      }
+    ]
+  },
+  "period": {
+    "value": "期间",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "期间"
+      }
+    ]
+  },
+  "sinusoid": {
+    "value": "正弦曲线",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "正弦曲线"
+      }
+    ]
+  },
+  "triangle": {
+    "value": "三角波",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "三角波"
+      }
+    ]
+  },
+  "square": {
+    "value": "方波",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "方波"
+      }
+    ]
+  },
+  "sawtooth": {
+    "value": "锯齿波",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "锯齿波"
+      }
+    ]
+  },
+  "wavePacket": {
+    "value": "波包",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "波包"
+      }
+    ]
+  },
+  "custom": {
+    "value": "自订",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "自订"
+      }
+    ]
+  },
+  "wavelength": {
+    "value": "波长：",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "波长："
+      }
+    ]
+  },
+  "amplitude": {
+    "value": "振幅",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "振幅"
+      }
+    ]
+  },
+  "amplitudeControls": {
+    "value": "振幅控制：",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "振幅控制："
+      }
+    ]
+  },
+  "levels": {
+    "value": "关卡",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "关卡"
+      }
+    ]
+  },
+  "symbolUnits": {
+    "value": "{{symbol}} ({{units}})",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "{{symbol}} ({{units}})"
+      }
+    ]
+  },
+  "units.meters": {
+    "value": "公尺",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "公尺"
+      }
+    ]
+  },
+  "units.milliseconds": {
+    "value": "毫秒",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "毫秒"
+      }
+    ]
+  },
+  "units.radiansPerMeter": {
+    "value": "弧度/公尺",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "弧度/公尺"
+      }
+    ]
+  },
+  "units.radiansPerMillisecond": {
+    "value": "弧度/毫秒",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "弧度/毫秒"
+      }
+    ]
+  },
+  "symbolValueUnits": {
+    "value": "{{symbol}} = {{value}} {{units}}",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "{{symbol}} = {{value}} {{units}}"
+      }
+    ]
+  },
+  "symbolSymbolValueUnits": {
+    "value": "{{symbol1}} = 1/{{symbol2}} = {{value}} {{units}}",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "{{symbol1}} = 1/{{symbol2}} = {{value}} {{units}}"
+      }
+    ]
+  },
+  "symbolsDialog.sigma": {
+    "value": "{{sigma}} - 高斯波包标准差",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "{{sigma}} - 高斯波包标准差"
+      }
+    ]
+  },
+  "widthIndicators": {
+    "value": "宽度指示器",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "宽度指示器"
+      }
+    ]
+  },
+  "fourier-making-waves.title": {
+    "value": "Fourier: Making Waves_傅立叶：产生波形",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553808,
+        "oldValue": "",
+        "newValue": "Fourier: Making Waves_傅立叶：产生波形"
+      }
+    ]
+  }
+}

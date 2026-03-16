@@ -1,0 +1,266 @@
+{
+  "measure.clearWaves": {
+    "value": "清除波纹",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553821,
+        "oldValue": "",
+        "newValue": "清除波纹"
+      }
+    ]
+  },
+  "meters": {
+    "value": "公尺",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553821,
+        "oldValue": "",
+        "newValue": "公尺"
+      }
+    ]
+  },
+  "atm": {
+    "value": "大气压",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553821,
+        "oldValue": "",
+        "newValue": "大气压"
+      }
+    ]
+  },
+  "one": {
+    "value": "1.0",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553821,
+        "oldValue": "",
+        "newValue": "1.0"
+      }
+    ]
+  },
+  "zero": {
+    "value": "0.0",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553821,
+        "oldValue": "",
+        "newValue": "0.0"
+      }
+    ]
+  },
+  "airDensityControlPanel.reset": {
+    "value": "重置",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553821,
+        "oldValue": "",
+        "newValue": "重置"
+      }
+    ]
+  },
+  "airDensityControlPanel.title": {
+    "value": "盒里的空气密度",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553821,
+        "oldValue": "",
+        "newValue": "盒里的空气密度"
+      }
+    ]
+  },
+  "reflectionControlPanel.positionSlider": {
+    "value": "墙的位置",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553821,
+        "oldValue": "",
+        "newValue": "墙的位置"
+      }
+    ]
+  },
+  "reflectionControlPanel.rotationSlider": {
+    "value": "墙的角度",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553821,
+        "oldValue": "",
+        "newValue": "墙的角度"
+      }
+    ]
+  },
+  "soundModeControlPanel.title": {
+    "value": "声音模式",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553821,
+        "oldValue": "",
+        "newValue": "声音模式"
+      }
+    ]
+  },
+  "soundModeControlPanel.continuous": {
+    "value": "连续",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553821,
+        "oldValue": "",
+        "newValue": "连续"
+      }
+    ]
+  },
+  "soundModeControlPanel.pulse": {
+    "value": "脉冲",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553821,
+        "oldValue": "",
+        "newValue": "脉冲"
+      }
+    ]
+  },
+  "soundModeControlPanel.firePulse": {
+    "value": "发射脉冲",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553821,
+        "oldValue": "",
+        "newValue": "发射脉冲"
+      }
+    ]
+  },
+  "hzPattern": {
+    "value": "{{value}} Hz",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553821,
+        "oldValue": "",
+        "newValue": "{{value}} Hz"
+      }
+    ]
+  },
+  "audioControlPanel.title": {
+    "value": "音效控制",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553821,
+        "oldValue": "",
+        "newValue": "音效控制"
+      }
+    ]
+  },
+  "audioControlPanel.audioEnabled": {
+    "value": "听者音效",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553821,
+        "oldValue": "",
+        "newValue": "听者音效"
+      }
+    ]
+  },
+  "frequency": {
+    "value": "频率",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553821,
+        "oldValue": "",
+        "newValue": "频率"
+      }
+    ]
+  },
+  "amplitude": {
+    "value": "振幅",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553821,
+        "oldValue": "",
+        "newValue": "振幅"
+      }
+    ]
+  },
+  "sound-waves.title": {
+    "value": "Sound Waves_声波",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553821,
+        "oldValue": "",
+        "newValue": "Sound Waves_声波"
+      }
+    ]
+  },
+  "screen.singleSource": {
+    "value": "介绍",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553821,
+        "oldValue": "",
+        "newValue": "介绍"
+      }
+    ]
+  },
+  "screen.measure": {
+    "value": "测量",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553821,
+        "oldValue": "",
+        "newValue": "测量"
+      }
+    ]
+  },
+  "screen.twoSource": {
+    "value": "两个来源",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553821,
+        "oldValue": "",
+        "newValue": "两个来源"
+      }
+    ]
+  },
+  "screen.reflection": {
+    "value": "反射",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553821,
+        "oldValue": "",
+        "newValue": "反射"
+      }
+    ]
+  },
+  "screen.airPressure": {
+    "value": "空气压力",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553821,
+        "oldValue": "",
+        "newValue": "空气压力"
+      }
+    ]
+  }
+}

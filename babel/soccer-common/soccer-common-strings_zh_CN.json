@@ -1,0 +1,46 @@
+{
+  "characterSet.unitedStatesOfAmerica": {
+    "value": "美国",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553819,
+        "oldValue": "",
+        "newValue": "美国"
+      }
+    ]
+  },
+  "characterSet.africa": {
+    "value": "非洲",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553819,
+        "oldValue": "",
+        "newValue": "非洲"
+      }
+    ]
+  },
+  "characterSet.africaModest": {
+    "value": "非洲（小型区域）",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553819,
+        "oldValue": "",
+        "newValue": "非洲（小型区域）"
+      }
+    ]
+  },
+  "needAtLeastOneKick": {
+    "value": "至少要踢一次球吧",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553819,
+        "oldValue": "",
+        "newValue": "至少要踢一次球吧"
+      }
+    ]
+  }
+}

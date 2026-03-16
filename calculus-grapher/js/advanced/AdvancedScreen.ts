@@ -1,0 +1,75 @@
+// Copyright 2020-2026, University of Colorado Boulder
+
+/**
+ * The 'Advanced' screen.
+ *
+ * @author Brandon Li
+ * @author Martin Veillette
+ * @author Chris Malley (PixelZoom, Inc.)
+ */
+
+import Screen from '../../../joist/js/Screen.js';
+import AlignGroup from '../../../scenery/js/layout/constraints/AlignGroup.js';
+import Tandem from '../../../tandem/js/Tandem.js';
+import calculusGrapher from '../calculusGrapher.js';
+import CalculusGrapherFluent from '../CalculusGrapherFluent.js';
+import CalculusGrapherColors from '../common/CalculusGrapherColors.js';
+import GraphSet from '../common/model/GraphSet.js';
+import GraphType from '../common/model/GraphType.js';
+import CalculusGrapherScreenIconFactory from '../common/view/CalculusGrapherScreenIconFactory.js';
+import GraphSetRadioButtonGroup from '../common/view/GraphSetRadioButtonGroup.js';
+import AdvancedModel from './model/AdvancedModel.js';
+import AdvancedKeyboardHelpContent from './view/AdvancedKeyboardHelpContent.js';
+import AdvancedScreenView from './view/AdvancedScreenView.js';
+
+export default class AdvancedScreen extends Screen<AdvancedModel, AdvancedScreenView> {
+
+  public constructor( tandem: Tandem ) {
+
+    const modelTandem = tandem.createTandem( 'model' );
+
+    // In the order that they will appear in radio buttons
+    const graphSets: GraphSet[] = [
+      new GraphSet( [ GraphType.INTEGRAL, GraphType.PRIMARY ], {
+        tandem: modelTandem.createTandem( 'graphSet0' ),
+        phetioDocumentation: 'Choosing this GraphSet shows the integral and primary graphs.'
+      } ),
+      new GraphSet( [ GraphType.PRIMARY, GraphType.DERIVATIVE ], {
+        tandem: modelTandem.createTandem( 'graphSet1' ),
+        phetioDocumentation: 'Choosing this GraphSet shows the primary and derivative graphs.'
+      } )
+    ];
+
+    const labelAlignGroup = new AlignGroup(); // to give radio-button labels the same effective size
+    const graphSetRadioButtonGroupItems = [
+      GraphSetRadioButtonGroup.createItem( graphSets[ 0 ], GraphType.INTEGRAL, labelAlignGroup,
+        CalculusGrapherFluent.a11y.graphSetRadioButtonGroup.integralPrimaryRadioButton.accessibleNameStringProperty,
+        CalculusGrapherFluent.a11y.graphSetRadioButtonGroup.integralPrimaryRadioButton.accessibleContextResponseStringProperty ),
+      GraphSetRadioButtonGroup.createItem( graphSets[ 1 ], GraphType.DERIVATIVE, labelAlignGroup,
+        CalculusGrapherFluent.a11y.graphSetRadioButtonGroup.primaryDerivativeRadioButton.accessibleNameStringProperty,
+        CalculusGrapherFluent.a11y.graphSetRadioButtonGroup.primaryDerivativeRadioButton.accessibleContextResponseStringProperty )
+    ];
+
+    const createModel = () => new AdvancedModel( {
+      graphSets: graphSets,
+      graphSet: graphSets[ 1 ], // see https://github.com/phetsims/calculus-grapher/issues/250
+      tandem: modelTandem
+    } );
+
+    const createView = ( model: AdvancedModel ) => new AdvancedScreenView( model, {
+      graphSetRadioButtonGroupItems: graphSetRadioButtonGroupItems,
+      tandem: tandem.createTandem( 'view' )
+    } );
+
+    super( createModel, createView, {
+      name: CalculusGrapherFluent.screen.advancedStringProperty,
+      backgroundColorProperty: CalculusGrapherColors.screenBackgroundColorProperty,
+      homeScreenIcon: CalculusGrapherScreenIconFactory.createAdvancedScreenIcon(),
+      createKeyboardHelpNode: () => new AdvancedKeyboardHelpContent(),
+      screenButtonsHelpText: CalculusGrapherFluent.a11y.screens.advanced.screenButtonsHelpTextStringProperty,
+      tandem: tandem
+    } );
+  }
+}
+
+calculusGrapher.register( 'AdvancedScreen', AdvancedScreen );

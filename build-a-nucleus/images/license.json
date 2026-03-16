@@ -1,0 +1,10 @@
+{
+  "fullNuclideChart.png": {
+    "text": [
+      "Copyright 2023 energyeducation.ca"
+    ],
+    "projectURL": "https://energyeducation.ca/",
+    "license": "contact phethelp@colorado.edu",
+    "notes": "Modified screenshot of project found at https://energyeducation.ca/simulations/nuclear/nuclidechart.html. Created by Luisa Vargas by changing background color to black, label colors to white, and all chart colors to match BAN simulations decay colors."
+  }
+}

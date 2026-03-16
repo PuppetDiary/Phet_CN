@@ -1,0 +1,73 @@
+// Copyright 2020-2026, University of Colorado Boulder
+
+/**
+ * The 'Lab' screen.
+ *
+ * @author Martin Veillette
+ * @author Chris Malley (PixelZoom, Inc.)
+ */
+
+import Screen from '../../../joist/js/Screen.js';
+import AlignGroup from '../../../scenery/js/layout/constraints/AlignGroup.js';
+import Tandem from '../../../tandem/js/Tandem.js';
+import calculusGrapher from '../calculusGrapher.js';
+import CalculusGrapherFluent from '../CalculusGrapherFluent.js';
+import CalculusGrapherColors from '../common/CalculusGrapherColors.js';
+import GraphSet from '../common/model/GraphSet.js';
+import GraphType from '../common/model/GraphType.js';
+import CalculusGrapherScreenIconFactory from '../common/view/CalculusGrapherScreenIconFactory.js';
+import GraphSetRadioButtonGroup from '../common/view/GraphSetRadioButtonGroup.js';
+import LabModel from './model/LabModel.js';
+import LabKeyboardHelpContent from './view/LabKeyboardHelpContent.js';
+import LabScreenView from './view/LabScreenView.js';
+
+export default class LabScreen extends Screen<LabModel, LabScreenView> {
+
+  public constructor( tandem: Tandem ) {
+
+    const modelTandem = tandem.createTandem( 'model' );
+
+    // In the order that they will appear in radio buttons
+    const graphSets: GraphSet[] = [
+      new GraphSet( [ GraphType.INTEGRAL, GraphType.PRIMARY, GraphType.DERIVATIVE ], {
+        tandem: modelTandem.createTandem( 'graphSet0' ),
+        phetioDocumentation: 'Choosing this GraphSet shows the integral, primary, and derivative graphs.'
+      } ),
+      new GraphSet( [ GraphType.PRIMARY, GraphType.DERIVATIVE, GraphType.SECOND_DERIVATIVE ], {
+        tandem: modelTandem.createTandem( 'graphSet1' ),
+        phetioDocumentation: 'Choosing this GraphSet shows the primary, derivative, and second derivative graphs.'
+      } )
+    ];
+
+    const labelAlignGroup = new AlignGroup(); // to give radio-button labels the same effective size
+    const graphSetRadioButtonGroupItems = [
+      GraphSetRadioButtonGroup.createItem( graphSets[ 0 ], GraphType.INTEGRAL, labelAlignGroup,
+        CalculusGrapherFluent.a11y.graphSetRadioButtonGroup.integralPrimaryDerivativeRadioButton.accessibleNameStringProperty,
+        CalculusGrapherFluent.a11y.graphSetRadioButtonGroup.integralPrimaryDerivativeRadioButton.accessibleContextResponseStringProperty ),
+      GraphSetRadioButtonGroup.createItem( graphSets[ 1 ], GraphType.SECOND_DERIVATIVE, labelAlignGroup,
+        CalculusGrapherFluent.a11y.graphSetRadioButtonGroup.primaryDerivativeSecondDerivativeRadioButton.accessibleNameStringProperty,
+        CalculusGrapherFluent.a11y.graphSetRadioButtonGroup.primaryDerivativeSecondDerivativeRadioButton.accessibleContextResponseStringProperty )
+    ];
+
+    const createModel = () => new LabModel( {
+      graphSets: graphSets,
+      tandem: modelTandem
+    } );
+
+    const createView = ( model: LabModel ) => new LabScreenView( model, {
+      graphSetRadioButtonGroupItems: graphSetRadioButtonGroupItems,
+      tandem: tandem.createTandem( 'view' )
+    } );
+
+    super( createModel, createView, {
+      name: CalculusGrapherFluent.screen.labStringProperty,
+      backgroundColorProperty: CalculusGrapherColors.screenBackgroundColorProperty,
+      homeScreenIcon: CalculusGrapherScreenIconFactory.createLabScreenIcon(),
+      createKeyboardHelpNode: () => new LabKeyboardHelpContent(),
+      screenButtonsHelpText: CalculusGrapherFluent.a11y.screens.lab.screenButtonsHelpTextStringProperty,
+      tandem: tandem
+    } );
+  }
+}
+
+calculusGrapher.register( 'LabScreen', LabScreen );

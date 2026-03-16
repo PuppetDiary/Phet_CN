@@ -1,0 +1,387 @@
+{
+  "screen.intro": {
+    "value": "介绍",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553822,
+        "oldValue": "",
+        "newValue": "介绍"
+      }
+    ]
+  },
+  "screen.lab": {
+    "value": "实验室",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553822,
+        "oldValue": "",
+        "newValue": "实验室"
+      }
+    ]
+  },
+  "followCenterOfMass": {
+    "value": "跟随质量中心",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553822,
+        "oldValue": "",
+        "newValue": "跟随质量中心"
+      }
+    ]
+  },
+  "dataPanel.bodies": {
+    "value": "星体",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553822,
+        "oldValue": "",
+        "newValue": "星体"
+      }
+    ]
+  },
+  "unitsInfo.title": {
+    "value": "关于单位的说明",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553822,
+        "oldValue": "",
+        "newValue": "关于单位的说明"
+      }
+    ]
+  },
+  "dataPanel.moreData": {
+    "value": "更多资料",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553822,
+        "oldValue": "",
+        "newValue": "更多资料"
+      }
+    ]
+  },
+  "mode.sunAndPlanet": {
+    "value": "太阳与行星",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553822,
+        "oldValue": "",
+        "newValue": "太阳与行星"
+      }
+    ]
+  },
+  "mode.sunPlanetAndMoon": {
+    "value": "太阳、行星与月球",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553822,
+        "oldValue": "",
+        "newValue": "太阳、行星与月球"
+      }
+    ]
+  },
+  "mode.sunPlanetAndComet": {
+    "value": "太阳、行星与慧星",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553822,
+        "oldValue": "",
+        "newValue": "太阳、行星与慧星"
+      }
+    ]
+  },
+  "mode.trojanAsteroids": {
+    "value": "特洛伊小行星",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553822,
+        "oldValue": "",
+        "newValue": "特洛伊小行星"
+      }
+    ]
+  },
+  "mode.ellipses": {
+    "value": "椭圆",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553822,
+        "oldValue": "",
+        "newValue": "椭圆"
+      }
+    ]
+  },
+  "mode.hyperbolic": {
+    "value": "双曲线",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553822,
+        "oldValue": "",
+        "newValue": "双曲线"
+      }
+    ]
+  },
+  "mode.slingshot": {
+    "value": "弹弓弹射",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553822,
+        "oldValue": "",
+        "newValue": "弹弓弹射"
+      }
+    ]
+  },
+  "mode.doubleSlingshot": {
+    "value": "双弹弓弹射",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553822,
+        "oldValue": "",
+        "newValue": "双弹弓弹射"
+      }
+    ]
+  },
+  "mode.binaryStarPlanet": {
+    "value": "联星，行星",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553822,
+        "oldValue": "",
+        "newValue": "联星，行星"
+      }
+    ]
+  },
+  "mode.fourStarBallet": {
+    "value": "四星芭蕾",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553822,
+        "oldValue": "",
+        "newValue": "四星芭蕾"
+      }
+    ]
+  },
+  "mode.doubleDouble": {
+    "value": "双星舞蹈",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553822,
+        "oldValue": "",
+        "newValue": "双星舞蹈"
+      }
+    ]
+  },
+  "mode.custom": {
+    "value": "自订",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553822,
+        "oldValue": "",
+        "newValue": "自订"
+      }
+    ]
+  },
+  "pattern.labelParenthesesUnits": {
+    "value": "{{label}} {{units}}",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553822,
+        "oldValue": "",
+        "newValue": "{{label}} {{units}}"
+      }
+    ]
+  },
+  "mass": {
+    "value": "质量",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553822,
+        "oldValue": "",
+        "newValue": "质量"
+      }
+    ]
+  },
+  "units.kg": {
+    "value": "10<sup>28</sup> 公斤",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553822,
+        "oldValue": "",
+        "newValue": "10<sup>28</sup> 公斤"
+      }
+    ]
+  },
+  "centerOfMass": {
+    "value": "质量中心",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553822,
+        "oldValue": "",
+        "newValue": "质量中心"
+      }
+    ]
+  },
+  "dataPanel.X": {
+    "value": "x",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553822,
+        "oldValue": "",
+        "newValue": "x"
+      }
+    ]
+  },
+  "dataPanel.Y": {
+    "value": "y",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553822,
+        "oldValue": "",
+        "newValue": "y"
+      }
+    ]
+  },
+  "dataPanel.Vx": {
+    "value": "V<sub>x</sub>",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553822,
+        "oldValue": "",
+        "newValue": "V<sub>x</sub>"
+      }
+    ]
+  },
+  "dataPanel.Vy": {
+    "value": "V<sub>y</sub>",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553822,
+        "oldValue": "",
+        "newValue": "V<sub>y</sub>"
+      }
+    ]
+  },
+  "pattern.range": {
+    "value": "{{min}} 到 {{max}}",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553822,
+        "oldValue": "",
+        "newValue": "{{min}} 到 {{max}}"
+      }
+    ]
+  },
+  "my-solar-system.title": {
+    "value": "My Solar System_我的太阳系",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553822,
+        "oldValue": "",
+        "newValue": "My Solar System_我的太阳系"
+      }
+    ]
+  },
+  "unitsInfo.content": {
+    "value": "<b>说明 1：</b>1 个天文单位（Astronomical Unit，AU）大约是 1 亿 5 千万公里。这是指太阳与地球间的平均距离。",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553822,
+        "oldValue": "",
+        "newValue": "<b>说明 1：</b>1 个天文单位（Astronomical Unit，AU）大约是 1 亿 5 千万公里。这是指太阳与地球间的平均距离。"
+      }
+    ]
+  },
+  "unitsInfo.content2": {
+    "value": "<b>说明 2：</b> 此模拟教材中的质量值范围从 1 个木星的质量到 1.5 个太阳质量。所有的天文物件在强大的引力场中都显示出相似的行为，包括行星、慧星、小行星等。",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553822,
+        "oldValue": "",
+        "newValue": "<b>说明 2：</b> 此模拟教材中的质量值范围从 1 个木星的质量到 1.5 个太阳质量。所有的天文物件在强大的引力场中都显示出相似的行为，包括行星、慧星、小行星等。"
+      }
+    ]
+  },
+  "unitsInfo.content3": {
+    "value": "<b>说明 3：</b>此模拟教材中因为数值的范围相当广大，重力向量有时会过小或过大以至于无法显示。重力向量可以用缩放控制来重新调整它的显示。",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553822,
+        "oldValue": "",
+        "newValue": "<b>说明 3：</b>此模拟教材中因为数值的范围相当广大，重力向量有时会过小或过大以至于无法显示。重力向量可以用缩放控制来重新调整它的显示。"
+      }
+    ]
+  },
+  "returnBodies": {
+    "value": "回复失落的星体",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553822,
+        "oldValue": "",
+        "newValue": "回复失落的星体"
+      }
+    ]
+  },
+  "dataPanel.mass": {
+    "value": "质量",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553822,
+        "oldValue": "",
+        "newValue": "质量"
+      }
+    ]
+  },
+  "dataPanel.position": {
+    "value": "位置",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553822,
+        "oldValue": "",
+        "newValue": "位置"
+      }
+    ]
+  },
+  "dataPanel.velocity": {
+    "value": "速率",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553822,
+        "oldValue": "",
+        "newValue": "速率"
+      }
+    ]
+  }
+}

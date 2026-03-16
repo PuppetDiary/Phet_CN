@@ -1,0 +1,208 @@
+{
+  "mean-share-and-balance.title": {
+    "value": "Mean: Share and Balance"
+  },
+  "screen.levelOut": {
+    "value": "Level Out"
+  },
+  "screen.distribute": {
+    "value": "Distribute"
+  },
+  "screen.fairShare": {
+    "value": "Fair Share"
+  },
+  "screen.balancePoint": {
+    "value": "Balance Point"
+  },
+  "predictMean": {
+    "value": "Predict Mean"
+  },
+  "mean": {
+    "value": "Mean"
+  },
+  "tickMarks": {
+    "value": "Tick Marks"
+  },
+  "sync": {
+    "value": "Sync"
+  },
+  "collect": {
+    "value": "Collect"
+  },
+  "share": {
+    "value": "Share"
+  },
+  "numberOfCups": {
+    "value": "Number of Cups"
+  },
+  "introQuestion": {
+    "value": "What is the average amount of water per container?"
+  },
+  "distributeQuestion": {
+    "value": "What is the average number of candy bars per person?"
+  },
+  "fairShareQuestion": {
+    "value": "What is the average number of apples per person?"
+  },
+  "numberOfPeople": {
+    "value": "Number of People"
+  },
+  "meanEqualSignPattern": {
+    "value": "mean {{equals}} "
+  },
+  "totalCandyBarsPattern": {
+    "value": "Total = {{total}} candy {{measurement}}"
+  },
+  "bar": {
+    "value": "bar"
+  },
+  "bars": {
+    "value": "bars"
+  },
+  "totalApplesPattern": {
+    "value": "Total = {{total}} {{measurement}}"
+  },
+  "apple": {
+    "value": "apple"
+  },
+  "apples": {
+    "value": "apples"
+  },
+  "totalDistancePattern": {
+    "value": "Total Distance = {{total}} m"
+  },
+  "balancePointQuestion": {
+    "value": "What is the average kick distance?"
+  },
+  "numberOfBalls": {
+    "value": "Number of Balls"
+  },
+  "check": {
+    "value": "Check"
+  },
+  "reset": {
+    "value": "Reset"
+  },
+  "remainderPattern": {
+    "value": "{{wholeNumber}}, remainder {{remainder}}"
+  },
+  "total": {
+    "value": "Total"
+  },
+  "keyboardHelpDialog.balancePointScreen.sliderControlHeading": {
+    "value": "Fulcrum Balance Point"
+  },
+  "keyboardHelpDialog.balancePointScreen.sliderVerb": {
+    "value": "Move"
+  },
+  "keyboardHelpDialog.balancePointScreen.sliderNoun": {
+    "value": "fulcrum triangle"
+  },
+  "keyboardHelpDialog.balancePointScreen.numberSpinnerHeading": {
+    "value": "Number of People"
+  },
+  "keyboardHelpDialog.numberSpinnerVerb": {
+    "value": "Change"
+  },
+  "keyboardHelpDialog.numberSpinnerNoun": {
+    "value": "number"
+  },
+  "keyboardHelpDialog.fairShareScreen.numberSpinnerHeading": {
+    "value": "Number of Apples or People"
+  },
+  "keyboardHelpDialog.distributeScreen.numberSpinnerHeading": {
+    "value": "Number of Candy Bars or People"
+  },
+  "keyboardHelpDialog.distributeScreen.sliderControlHeading": {
+    "value": "Predict Mean"
+  },
+  "keyboardHelpDialog.distributeScreen.sliderControlNoun": {
+    "value": "prediction mark"
+  },
+  "keyboardHelpDialog.distributeScreen.grabOrReleaseItemHeading": {
+    "value": "Notepad Candy Bar"
+  },
+  "keyboardHelpDialog.distributeScreen.grabOrReleaseItem": {
+    "value": "candy bar"
+  },
+  "keyboardHelpDialog.distributeScreen.moveHeading": {
+    "value": "Move Notepad Candy Bar"
+  },
+  "keyboardHelpDialog.distributeScreen.moveDescription": {
+    "value": "Move grabbed candy bar"
+  },
+  "keyboardHelpDialog.levelOutScreen.numberSpinnerHeading": {
+    "value": "Number of Cups"
+  },
+  "keyboardHelpDialog.levelOutScreen.sliderControlHeading": {
+    "value": "Water Level or Mean Prediction"
+  },
+  "keyboardHelpDialog.levelOutScreen.sliderControlNoun": {
+    "value": "water or prediction mark"
+  },
+  "a11y": {
+    "predictBalancePoint": {
+      "value": "Predict Balance Point"
+    },
+    "observeBalancePoint": {
+      "value": "Observe Balance Point"
+    },
+    "totalDistance": {
+      "value": "Total Distance"
+    },
+    "findBalancePoint": {
+      "value": "Find Balance Point"
+    },
+    "predictionMark": {
+      "value": "Prediction Mark"
+    },
+    "info": {
+      "value": "Info"
+    },
+    "totalNumberPattern": {
+      "value": "Total Number of {{snack}}"
+    },
+    "apples": {
+      "value": "Apples"
+    },
+    "candyBars": {
+      "value": "Candy Bars"
+    },
+    "personSnackPattern": {
+      "value": "Person {{index}} {{snack}}"
+    },
+    "pipeFlow": {
+      "value": "Pipe Flow"
+    },
+    "cupWaterLevelPattern": {
+      "value": "Cup {{index}} Water Level"
+    },
+    "checkBalance": {
+      "value": "Check Balance"
+    },
+    "resetPillars": {
+      "value": "Reset Pillars"
+    },
+    "noCandyBarsToGrab": {
+      "value": "No candy bars to grab"
+    },
+    "sortingCandyBarPattern": {
+      "value": "Stack {{currentStack}} of {{totalStacks}}, Move Top of {{stackHeight}} Candy Bars"
+    },
+    "selectingCandyBarPattern": {
+      "value": "Stack {{currentStack}} of {{totalStacks}}, Top of {{stackHeight}} Candy Bars"
+    },
+    "closePipe": {
+      "value": "Close Pipe"
+    },
+    "openPipe": {
+      "value": "Open Pipe"
+    },
+    "fulcrumOptions": {
+      "value": "Fulcrum Options"
+    },
+    "appleActions": {
+      "value": "Apple Actions"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "example-sim.title": {
+    "value": "Example Simulation_范例模拟动画",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553806,
+        "oldValue": "",
+        "newValue": "Example Simulation_范例模拟动画"
+      }
+    ]
+  },
+  "flipPolarity": {
+    "value": "反转极性",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553806,
+        "oldValue": "",
+        "newValue": "反转极性"
+      }
+    ]
+  }
+}

@@ -1,0 +1,75 @@
+// Copyright 2022-2026, University of Colorado Boulder
+
+/**
+ * PredictControl is the control in the Preferences dialog for setting whether the 'Predict' feature is
+ * available in the user interface. It is a labeled on/off switch.
+ *
+ * @author Chris Malley (PixelZoom, Inc.)
+ */
+
+import PatternStringProperty from '../../../../../axon/js/PatternStringProperty.js';
+import Property from '../../../../../axon/js/Property.js';
+import PreferencesControl from '../../../../../joist/js/preferences/PreferencesControl.js';
+import PreferencesDialogConstants from '../../../../../joist/js/preferences/PreferencesDialogConstants.js';
+import { combineOptions } from '../../../../../phet-core/js/optionize.js';
+import RichText from '../../../../../scenery/js/nodes/RichText.js';
+import Text from '../../../../../scenery/js/nodes/Text.js';
+import ToggleSwitch, { ToggleSwitchOptions } from '../../../../../sun/js/ToggleSwitch.js';
+import Tandem from '../../../../../tandem/js/Tandem.js';
+import calculusGrapher from '../../../calculusGrapher.js';
+import CalculusGrapherFluent from '../../../CalculusGrapherFluent.js';
+import CalculusGrapherConstants from '../../CalculusGrapherConstants.js';
+import CalculusGrapherSymbols from '../../CalculusGrapherSymbols.js';
+
+export default class PredictControl extends PreferencesControl {
+
+  public constructor( predictPreferenceEnabledProperty: Property<boolean>, tandem: Tandem ) {
+
+    // Note that this control has its own StringProperty, separate from the StringProperty used to label the 'Predict'
+    // radio button. It's not uncommon to duplicate strings when they have very different contexts, because translators
+    // or PhET-iO clients may want to use different strings for the different contexts. In the case of "Predict" -
+    // No one questioned labeling the radio button with "Predict". But there was discussion/concern about whether
+    // "Predict" was sufficient for labeling the control in Preferences. So there are separate StringProperties for
+    // each context. See https://github.com/phetsims/calculus-grapher/issues/285
+    const labelText = new Text( CalculusGrapherFluent.predictPreferenceStringProperty, {
+      font: CalculusGrapherConstants.PREFERENCES_LABEL_FONT,
+      maxWidth: CalculusGrapherConstants.PREFERENCES_LABEL_MAX_WIDTH,
+      tandem: tandem.createTandem( 'labelText' )
+    } );
+
+    const toggleSwitch = new ToggleSwitch( predictPreferenceEnabledProperty, false, true,
+      combineOptions<ToggleSwitchOptions>( {}, PreferencesDialogConstants.TOGGLE_SWITCH_OPTIONS, {
+        accessibleHelpText: CalculusGrapherFluent.a11y.predictToggleSwitch.accessibleHelpText.createProperty( {
+          variable: CalculusGrapherSymbols.accessibleVariableSymbolProperty
+        } ),
+        tandem: tandem.createTandem( 'toggleSwitch' ),
+        phetioVisiblePropertyInstrumented: false
+      } ) );
+
+    const descriptionStringProperty = new PatternStringProperty( CalculusGrapherFluent.predictPreferenceDescriptionStringProperty, {
+      variable: CalculusGrapherSymbols.visualVariableSymbolProperty
+    }, {
+      tandem: tandem.createTandem( RichText.STRING_PROPERTY_TANDEM_NAME )
+    } );
+    const descriptionText = new RichText( descriptionStringProperty, {
+      lineWrap: CalculusGrapherConstants.PREFERENCES_DESCRIPTION_LINE_WRAP,
+      maxHeight: 50,
+      font: CalculusGrapherConstants.PREFERENCES_DESCRIPTION_FONT,
+      tandem: tandem.createTandem( 'descriptionText' )
+    } );
+
+    super( {
+      isDisposable: false,
+      labelNode: labelText,
+      controlNode: toggleSwitch,
+      descriptionNode: descriptionText,
+      labelSpacing: 20,
+      tandem: tandem,
+      visiblePropertyOptions: {
+        phetioFeatured: true
+      }
+    } );
+  }
+}
+
+calculusGrapher.register( 'PredictControl', PredictControl );

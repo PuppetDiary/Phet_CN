@@ -1,0 +1,794 @@
+{
+  "membrane-transport.title": {
+    "value": "膜转运",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "膜转运"
+      }
+    ]
+  },
+  "screen.activeTransport": {
+    "value": "主动转运",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "主动转运"
+      }
+    ]
+  },
+  "screen.facilitatedDiffusion": {
+    "value": "协助扩散",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "协助扩散"
+      }
+    ]
+  },
+  "screen.playground": {
+    "value": "实验场",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "实验场"
+      }
+    ]
+  },
+  "screen.simpleDiffusion": {
+    "value": "简单扩散",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "简单扩散"
+      }
+    ]
+  },
+  "NaPlusKPlusPump": {
+    "value": "Na<sup>+</sup>-K<sup>+</sup><br>泵",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "Na<sup>+</sup>-K<sup>+</sup><br>泵"
+      }
+    ]
+  },
+  "activeTransporters": {
+    "value": "主动转运体",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "主动转运体"
+      }
+    ]
+  },
+  "addLigands": {
+    "value": "添加配体",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "添加配体"
+      }
+    ]
+  },
+  "animateLipids": {
+    "value": "脂质动画",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "脂质动画"
+      }
+    ]
+  },
+  "animateLipidsDescription": {
+    "value": "是否对构成细胞膜的磷脂进行动画显示",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "是否对构成细胞膜的磷脂进行动画显示"
+      }
+    ]
+  },
+  "atp": {
+    "value": "ATP",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "ATP"
+      }
+    ]
+  },
+  "carbonDioxide": {
+    "value": "CO<sub>2</sub>",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "CO<sub>2</sub>"
+      }
+    ]
+  },
+  "glucose": {
+    "value": "葡萄糖",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "葡萄糖"
+      }
+    ]
+  },
+  "inside": {
+    "value": "细胞内",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "细胞内"
+      }
+    ]
+  },
+  "leakageChannels": {
+    "value": "泄漏通道",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "泄漏通道"
+      }
+    ]
+  },
+  "ligandGatedChannels": {
+    "value": "配体门控通道",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "配体门控通道"
+      }
+    ]
+  },
+  "membranePotentialLabels": {
+    "value": "膜电位标签",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "膜电位标签"
+      }
+    ]
+  },
+  "membranePotential_mV": {
+    "value": "膜电位 (mV)",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "膜电位 (mV)"
+      }
+    ]
+  },
+  "outside": {
+    "value": "细胞外",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "细胞外"
+      }
+    ]
+  },
+  "oxygen": {
+    "value": "O<sub>2</sub>",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "O<sub>2</sub>"
+      }
+    ]
+  },
+  "potassiumIon": {
+    "value": "K<sup>+</sup>",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "K<sup>+</sup>"
+      }
+    ]
+  },
+  "potassiumIonKPlus": {
+    "value": "钾离子<br>(K<sup>+</sup>)",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "钾离子<br>(K<sup>+</sup>)"
+      }
+    ]
+  },
+  "removeLigands": {
+    "value": "移除配体",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "移除配体"
+      }
+    ]
+  },
+  "signs": {
+    "value": "符号",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "符号"
+      }
+    ]
+  },
+  "sodiumGlucoseCotransporter": {
+    "value": "Na<sup>+</sup>-葡萄糖<br>协同转运体",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "Na<sup>+</sup>-葡萄糖<br>协同转运体"
+      }
+    ]
+  },
+  "sodiumIon": {
+    "value": "Na<sup>+</sup>",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "Na<sup>+</sup>"
+      }
+    ]
+  },
+  "sodiumIonNaPlus": {
+    "value": "钠离子<br>(Na<sup>+</sup>)",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "钠离子<br>(Na<sup>+</sup>)"
+      }
+    ]
+  },
+  "soluteConcentrations": {
+    "value": "溶质浓度",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "溶质浓度"
+      }
+    ]
+  },
+  "solutes": {
+    "value": "溶质",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "溶质"
+      }
+    ]
+  },
+  "voltageGatedChannels": {
+    "value": "电压门控通道",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "电压门控通道"
+      }
+    ]
+  },
+  "keyboardHelp.soluteAdjusters.title": {
+    "value": "溶质调节",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "溶质调节"
+      }
+    ]
+  },
+  "keyboardHelp.sortOrDeleteProteins.title": {
+    "value": "排列或删除膜中的蛋白质",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "排列或删除膜中的蛋白质"
+      }
+    ]
+  },
+  "keyboardHelp.transportProteinsAndLigands.title": {
+    "value": "转运蛋白或配体",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "转运蛋白或配体"
+      }
+    ]
+  },
+  "soluteConcentrationsAccordionBox.title": {
+    "value": "溶质浓度",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "溶质浓度"
+      }
+    ]
+  },
+  "cellRegions.inside": {
+    "value": "细胞内",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "细胞内"
+      }
+    ]
+  },
+  "cellRegions.outside": {
+    "value": "细胞外",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "细胞外"
+      }
+    ]
+  },
+  "keyboardHelp.soluteAdjusters.addOrRemoveALittle": {
+    "value": "小幅调节",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "小幅调节"
+      }
+    ]
+  },
+  "keyboardHelp.soluteAdjusters.addOrRemoveALot": {
+    "value": "大幅调节所选溶质量",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "大幅调节所选溶质量"
+      }
+    ]
+  },
+  "keyboardHelp.sortOrDeleteProteins.deleteProtein": {
+    "value": "删除已选蛋白质",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "删除已选蛋白质"
+      }
+    ]
+  },
+  "keyboardHelp.sortOrDeleteProteins.grabProtein": {
+    "value": "抓取膜中的蛋白质",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "抓取膜中的蛋白质"
+      }
+    ]
+  },
+  "keyboardHelp.sortOrDeleteProteins.moveGrabbedProtein": {
+    "value": "在插槽之间移动当前蛋白质",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "在插槽之间移动当前蛋白质"
+      }
+    ]
+  },
+  "keyboardHelp.sortOrDeleteProteins.navigateProteins": {
+    "value": "浏览膜中的蛋白质",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "浏览膜中的蛋白质"
+      }
+    ]
+  },
+  "keyboardHelp.sortOrDeleteProteins.releaseProtein": {
+    "value": "将已选蛋白质释放到空插槽中，或交换位置",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "将已选蛋白质释放到空插槽中，或交换位置"
+      }
+    ]
+  },
+  "keyboardHelp.transportProteinsAndLigands.cancelGrab": {
+    "value": "取消抓取或移动操作",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "取消抓取或移动操作"
+      }
+    ]
+  },
+  "keyboardHelp.transportProteinsAndLigands.grabOrRelease": {
+    "value": "抓取或释放",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "抓取或释放"
+      }
+    ]
+  },
+  "keyboardHelp.transportProteinsAndLigands.moveGrabbedItem": {
+    "value": "在可用的放置位置之间移动已抓取的蛋白质或配体",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "在可用的放置位置之间移动已抓取的蛋白质或配体"
+      }
+    ]
+  },
+  "keyboardHelp.transportProteinsAndLigands.navigate": {
+    "value": "浏览工具箱中的蛋白质或已添加的配体",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "浏览工具箱中的蛋白质或已添加的配体"
+      }
+    ]
+  },
+  "outsideSodiumTooLow": {
+    "value": "外部钠离子不足！",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "外部钠离子不足！"
+      }
+    ]
+  },
+  "soluteNames.atp": {
+    "value": "ATP",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "ATP"
+      }
+    ]
+  },
+  "soluteNames.carbonDioxide": {
+    "value": "CO<sub>2</sub>",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "CO<sub>2</sub>"
+      }
+    ]
+  },
+  "soluteNames.glucose": {
+    "value": "葡萄糖",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "葡萄糖"
+      }
+    ]
+  },
+  "soluteNames.oxygen": {
+    "value": "O<sub>2</sub>",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "O<sub>2</sub>"
+      }
+    ]
+  },
+  "soluteNames.potassiumIon": {
+    "value": "K<sup>+</sup>",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "K<sup>+</sup>"
+      }
+    ]
+  },
+  "soluteNames.sodiumIon": {
+    "value": "Na<sup>+</sup>",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "Na<sup>+</sup>"
+      }
+    ]
+  },
+  "transportProteinToolbox.activeTransporters": {
+    "value": "主动转运体",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "主动转运体"
+      }
+    ]
+  },
+  "transportProteinToolbox.addLigands": {
+    "value": "添加配体",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "添加配体"
+      }
+    ]
+  },
+  "transportProteinToolbox.charges": {
+    "value": "电荷",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "电荷"
+      }
+    ]
+  },
+  "transportProteinToolbox.leakageChannels": {
+    "value": "泄漏通道",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "泄漏通道"
+      }
+    ]
+  },
+  "transportProteinToolbox.ligandGatedChannels": {
+    "value": "配体门控通道",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "配体门控通道"
+      }
+    ]
+  },
+  "transportProteinToolbox.membranePotentialMV": {
+    "value": "膜电位 (mV)",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "膜电位 (mV)"
+      }
+    ]
+  },
+  "transportProteinToolbox.naPlusKPlusPump": {
+    "value": "Na<sup>+</sup>/K<sup>+</sup><br>泵",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "Na<sup>+</sup>/K<sup>+</sup><br>泵"
+      }
+    ]
+  },
+  "transportProteinToolbox.removeLigands": {
+    "value": "移除配体",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "移除配体"
+      }
+    ]
+  },
+  "transportProteinToolbox.sodiumGlucoseCotransporter": {
+    "value": "Na<sup>+</sup>/葡萄糖<br>协同转运体",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "Na<sup>+</sup>/葡萄糖<br>协同转运体"
+      }
+    ]
+  },
+  "transportProteinToolbox.voltageGatedChannels": {
+    "value": "电压门控通道",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "电压门控通道"
+      }
+    ]
+  },
+  "preferencesDialog.audio.sounds.stereoCrossingSounds.description": {
+    "value": "通过将声音映射到右声道（从外到内）和左声道（从内到外）来突出溶质的转运方向。",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "通过将声音映射到右声道（从外到内）和左声道（从内到外）来突出溶质的转运方向。"
+      }
+    ]
+  },
+  "preferencesDialog.audio.sounds.stereoCrossingSounds.label": {
+    "value": "立体声穿越音效",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "立体声穿越音效"
+      }
+    ]
+  },
+  "preferencesDialog.simulation.animateLipids.description": {
+    "value": "构成细胞膜的磷脂双分子层的摆动动画。",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "构成细胞膜的磷脂双分子层的摆动动画。"
+      }
+    ]
+  },
+  "preferencesDialog.simulation.animateLipids.label": {
+    "value": "脂质动画",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "脂质动画"
+      }
+    ]
+  },
+  "preferencesDialog.simulation.glucoseMetabolism.description": {
+    "value": "葡萄糖分子在细胞内逐渐消失，以模拟转化为细胞代谢。",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "葡萄糖分子在细胞内逐渐消失，以模拟转化为细胞代谢。"
+      }
+    ]
+  },
+  "preferencesDialog.simulation.glucoseMetabolism.label": {
+    "value": "葡萄糖代谢",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "葡萄糖代谢"
+      }
+    ]
+  },
+  "settings.crossingHighlights": {
+    "value": "穿越事件",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "穿越事件"
+      }
+    ]
+  },
+  "settings.crossingSounds": {
+    "value": "穿越音效",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "穿越音效"
+      }
+    ]
+  }
+}

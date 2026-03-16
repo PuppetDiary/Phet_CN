@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "chinese-conv": "^4.0.0",
+    "google-translate-api": "^2.3.0",
+    "translatte": "^3.0.1"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "name": "gases-intro",
+  "version": "1.2.0-dev.0",
+  "license": "GPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/phetsims/gases-intro.git"
+  },
+  "devDependencies": {
+    "grunt": "~1.5.3"
+  },
+  "phet": {
+    "requirejsNamespace": "GASES_INTRO",
+    "simulation": true,
+    "runnable": true,
+    "phetLibs": [
+      "gas-properties",
+      "twixt"
+    ],
+    "supportedBrands": [
+      "phet",
+      "phet-io",
+      "adapted-from-phet"
+    ],
+    "simFeatures": {
+      "supportsDynamicLocale": true,
+      "supportsSound": true,
+      "supportsInteractiveDescription": true,
+      "colorProfiles": [
+        "default",
+        "projector"
+      ]
+    },
+    "phet-io": {
+      "compareDesignedAPIChanges": true
+    },
+    "supportsOutputJS": true,
+    "published": true,
+    "screenNameKeys": [
+      "GASES_INTRO/screen.intro",
+      "GASES_INTRO/screen.laws"
+    ]
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "name": "mean-share-and-balance",
+  "version": "1.2.0-dev.0",
+  "license": "GPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/phetsims/mean-share-and-balance.git"
+  },
+  "devDependencies": {
+    "grunt": "~1.5.3"
+  },
+  "phet": {
+    "requirejsNamespace": "MEAN_SHARE_AND_BALANCE",
+    "phetLibs": [
+      "bamboo",
+      "twixt",
+      "soccer-common"
+    ],
+    "simulation": true,
+    "runnable": true,
+    "supportedBrands": [
+      "phet",
+      "adapted-from-phet",
+      "phet-io"
+    ],
+    "generatedUnitTests": true,
+    "supportsOutputJS": true,
+    "simFeatures": {
+      "supportsInteractiveDescription": true,
+      "supportsDynamicLocale": true,
+      "supportedRegionsAndCultures": [
+        "usa",
+        "africa",
+        "africaModest",
+        "asia",
+        "latinAmerica",
+        "oceania"
+      ],
+      "supportsSound": true
+    },
+    "screenNameKeys": [
+      "MEAN_SHARE_AND_BALANCE/screen.levelOut",
+      "MEAN_SHARE_AND_BALANCE/screen.distribute",
+      "MEAN_SHARE_AND_BALANCE/screen.fairShare",
+      "MEAN_SHARE_AND_BALANCE/screen.balancePoint"
+    ],
+    "published": true
+  }
+}

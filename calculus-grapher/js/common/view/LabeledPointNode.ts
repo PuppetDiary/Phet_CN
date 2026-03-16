@@ -1,0 +1,102 @@
+// Copyright 2022-2026, University of Colorado Boulder
+
+/**
+ * LabeledPointNode is a point on primaryCurve, with a label. The point is a scenery/Circle
+ * The label updates its positions, and is set perpendicular to the tangent of the curve
+ *
+ * @author Martin Veillette
+ * @author Chris Malley (PixelZoom, Inc.)
+ */
+
+import DerivedProperty from '../../../../axon/js/DerivedProperty.js';
+import Multilink from '../../../../axon/js/Multilink.js';
+import { TReadOnlyProperty } from '../../../../axon/js/TReadOnlyProperty.js';
+import ChartTransform from '../../../../bamboo/js/ChartTransform.js';
+import Vector2 from '../../../../dot/js/Vector2.js';
+import optionize, { EmptySelfOptions } from '../../../../phet-core/js/optionize.js';
+import PickRequired from '../../../../phet-core/js/types/PickRequired.js';
+import BackgroundNode from '../../../../scenery-phet/js/BackgroundNode.js';
+import Node, { NodeOptions } from '../../../../scenery/js/nodes/Node.js';
+import Text from '../../../../scenery/js/nodes/Text.js';
+import BooleanIO from '../../../../tandem/js/types/BooleanIO.js';
+import calculusGrapher from '../../calculusGrapher.js';
+import CalculusGrapherConstants from '../CalculusGrapherConstants.js';
+import LabeledPoint from '../model/LabeledPoint.js';
+import PlottedPoint from './PlottedPoint.js';
+
+type SelfOptions = EmptySelfOptions;
+
+type LabeledPointNodeOptions = SelfOptions & PickRequired<NodeOptions, 'tandem'>;
+
+export default class LabeledPointNode extends Node {
+
+  public constructor( labeledPoint: LabeledPoint,
+                      chartTransform: ChartTransform,
+                      predictEnabledProperty: TReadOnlyProperty<boolean>,
+                      curveLayerVisibleProperty: TReadOnlyProperty<boolean>,
+                      providedOptions: LabeledPointNodeOptions ) {
+
+    const options = optionize<LabeledPointNodeOptions, SelfOptions, NodeOptions>()( {
+
+      // NodeOptions
+      isDisposable: false,
+      pickable: false, // optimization, see https://github.com/phetsims/calculus-grapher/issues/210
+      visibleProperty: new DerivedProperty(
+        [ labeledPoint.visibleProperty, curveLayerVisibleProperty, predictEnabledProperty,
+          labeledPoint.primaryCurvePointProperty ],
+        ( labeledPointVisible, curveLayerVisible, predictEnabled, point ) =>
+          labeledPointVisible && curveLayerVisible && !predictEnabled && chartTransform.modelXRange.contains( point.x ) && chartTransform.modelYRange.contains( point.y ), {
+          tandem: providedOptions.tandem.createTandem( 'visibleProperty' ),
+          phetioValueType: BooleanIO
+        } )
+    }, providedOptions );
+
+    // point that is plotted on the curve
+    const plottedPoint = new PlottedPoint( labeledPoint.primaryCurvePointProperty, chartTransform, {
+      fill: labeledPoint.pointColorProperty
+    } );
+
+    // label for the point
+    const text = new Text( labeledPoint.stringProperty, {
+      font: CalculusGrapherConstants.POINT_LABEL_FONT,
+      maxWidth: 50,
+      tandem: options.tandem.createTandem( 'text' )
+    } );
+
+    const labelNode = new BackgroundNode( text, {
+      rectangleOptions: {
+        cornerRadius: 3
+      }
+    } );
+
+    // update the positions of the label Node
+    // we use some heuristic algorithm to prevent the label to overlap with the curve
+    const updateLabelPosition = () => {
+
+      // value of the tangent (slope) at the y point
+      const tangent = labeledPoint.derivativeCurvePointProperty.value.y;
+
+      // angle (with respect to x-axis) associated with the normal vector to the tangent
+      const modelPerpendicularTangent = Math.atan( tangent ) + Math.PI / 2;
+
+      // determine a distance between the label and plottedPoint (center to center) - put them as close as possible
+      const distance = ( labelNode.height / 2 ) + ( plottedPoint.height / 2 ) + 1;
+
+      // vector perpendicular to the tangent in view (hence the minus sign for the angle, since y is inverted)
+      const perpendicularDisplacement = Vector2.createPolar( distance, -modelPerpendicularTangent );
+
+      // position the label node perpendicular to the curve
+      labelNode.center = plottedPoint.center.plus( perpendicularDisplacement );
+    };
+
+    Multilink.multilink( [ plottedPoint.boundsProperty, labeledPoint.derivativeCurvePointProperty, labeledPoint.stringProperty ],
+      () => updateLabelPosition() );
+
+    options.children = [ plottedPoint, labelNode ];
+
+    super( options );
+
+    this.addLinkedElement( labeledPoint );
+  }
+}
+calculusGrapher.register( 'LabeledPointNode', LabeledPointNode );

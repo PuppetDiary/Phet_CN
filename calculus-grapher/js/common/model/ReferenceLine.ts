@@ -1,0 +1,56 @@
+// Copyright 2023-2026, University of Colorado Boulder
+
+/**
+ * ReferenceLine is the model element for the reference line. This is vertical line that you can slide horizontally,
+ * to place it where it's useful as a reference.
+ *
+ * @author Chris Malley (PixelZoom, Inc.)
+ */
+
+import ProfileColorProperty from '../../../../scenery/js/util/ProfileColorProperty.js';
+import Tandem from '../../../../tandem/js/Tandem.js';
+import calculusGrapher from '../../calculusGrapher.js';
+import CalculusGrapherColors from '../CalculusGrapherColors.js';
+import AncillaryTool from './AncillaryTool.js';
+import DerivativeCurve from './DerivativeCurve.js';
+import IntegralCurve from './IntegralCurve.js';
+import PredictCurve from './PredictCurve.js';
+import PrimaryCurve from './PrimaryCurve.js';
+import SecondDerivativeCurve from './SecondDerivativeCurve.js';
+
+export default class ReferenceLine extends AncillaryTool {
+
+  // Color for the scrubber handle
+  public readonly handleColorProperty: ProfileColorProperty;
+
+  // Color for the vertical line
+  public readonly lineColorProperty: ProfileColorProperty;
+
+  public constructor( integralCurve: IntegralCurve,
+                      primaryCurve: PrimaryCurve,
+                      predictedCurve: PredictCurve,
+                      derivativeCurve: DerivativeCurve,
+                      secondDerivativeCurve: SecondDerivativeCurve,
+                      tandem: Tandem ) {
+
+    super( integralCurve, primaryCurve, predictedCurve, derivativeCurve, secondDerivativeCurve, {
+
+      // A bit right of center, see https://github.com/phetsims/calculus-grapher/issues/248
+      x: 5.5,
+      tandem: tandem
+    } );
+
+    this.handleColorProperty = CalculusGrapherColors.referenceLineHandleColorProperty;
+    this.lineColorProperty = CalculusGrapherColors.referenceLineStrokeProperty;
+
+    this.addLinkedElement( this.handleColorProperty, {
+      tandemName: 'handleColorProperty'
+    } );
+
+    this.addLinkedElement( this.lineColorProperty, {
+      tandemName: 'lineColorProperty'
+    } );
+  }
+}
+
+calculusGrapher.register( 'ReferenceLine', ReferenceLine );

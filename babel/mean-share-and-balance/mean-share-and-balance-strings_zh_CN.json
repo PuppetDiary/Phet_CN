@@ -1,0 +1,90 @@
+{
+  "screen.intro": {
+    "value": "介绍",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553813,
+        "oldValue": "",
+        "newValue": "介绍"
+      }
+    ]
+  },
+  "introQuestion": {
+    "value": "每个容器内的水量的平均是多少？",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553813,
+        "oldValue": "",
+        "newValue": "每个容器内的水量的平均是多少？"
+      }
+    ]
+  },
+  "predictMean": {
+    "value": "预测平均",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553813,
+        "oldValue": "",
+        "newValue": "预测平均"
+      }
+    ]
+  },
+  "mean": {
+    "value": "平均",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553813,
+        "oldValue": "",
+        "newValue": "平均"
+      }
+    ]
+  },
+  "tickMarks": {
+    "value": "刻度",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553813,
+        "oldValue": "",
+        "newValue": "刻度"
+      }
+    ]
+  },
+  "cupWaterLevel": {
+    "value": "杯内原水量",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553813,
+        "oldValue": "",
+        "newValue": "杯内原水量"
+      }
+    ]
+  },
+  "numberOfCups": {
+    "value": "杯子数量",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553813,
+        "oldValue": "",
+        "newValue": "杯子数量"
+      }
+    ]
+  },
+  "mean-share-and-balance.title": {
+    "value": "Mean: Share and Balance_平均：分享与平衡",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553813,
+        "oldValue": "",
+        "newValue": "Mean: Share and Balance_平均：分享与平衡"
+      }
+    ]
+  }
+}

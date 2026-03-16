@@ -1,0 +1,37 @@
+{
+  "name": "build-a-nucleus",
+  "version": "1.2.0-dev.1",
+  "license": "GPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/phetsims/build-a-nucleus.git"
+  },
+  "devDependencies": {
+    "grunt": "~1.5.3"
+  },
+  "phet": {
+    "requirejsNamespace": "BUILD_A_NUCLEUS",
+    "phetLibs": [
+      "bamboo",
+      "shred",
+      "twixt"
+    ],
+    "simulation": true,
+    "runnable": true,
+    "simFeatures": {
+      "supportsInteractiveDescription": true,
+      "supportsDynamicLocale": true,
+      "supportsInteractiveHighlights": false
+    },
+    "supportedBrands": [
+      "phet",
+      "adapted-from-phet"
+    ],
+    "supportsOutputJS": true,
+    "screenNameKeys": [
+      "BUILD_A_NUCLEUS/screen.decay",
+      "BUILD_A_NUCLEUS/screen.chartIntro"
+    ],
+    "published": true
+  }
+}

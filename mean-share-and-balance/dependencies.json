@@ -1,0 +1,107 @@
+{
+  "comment": "# mean-share-and-balance 1.1.0-dev.7 Mon Jul 08 2024 15:39:24 GMT-0700 (Pacific Daylight Time)",
+  "assert": {
+    "sha": "4eaabfefb0b88b213e98b9c7f32d6c570c3fc122",
+    "branch": "main"
+  },
+  "axon": {
+    "sha": "950a9a5da2d992d0834df8a984bcb8b5185b8448",
+    "branch": "main"
+  },
+  "brand": {
+    "sha": "0e84d480a4e3e5ce0fc42537467d09e7d3ffb192",
+    "branch": "main"
+  },
+  "chipper": {
+    "sha": "0810d710295be32154eaa7bb9daff90fbb3a4326",
+    "branch": "main"
+  },
+  "dot": {
+    "sha": "cdb6a3a16167a8d4bd8273ea40756c6b2fad7e46",
+    "branch": "main"
+  },
+  "joist": {
+    "sha": "c853a01069a81b659ffa09a3ceb9571536122929",
+    "branch": "main"
+  },
+  "kite": {
+    "sha": "d780083bfeb93b5e110c0554dad80adfe85e81b2",
+    "branch": "main"
+  },
+  "mean-share-and-balance": {
+    "sha": "7a3f77ece7bc70ad4ebe9a6fce24563c5ce4a9cf",
+    "branch": "main"
+  },
+  "perennial-alias": {
+    "sha": "426d009b723d580bc634857e574d3cd87a6a26e7",
+    "branch": "main"
+  },
+  "phet-core": {
+    "sha": "61088067db9a12024a9cd8652bf11b222b9da6a6",
+    "branch": "main"
+  },
+  "phet-io": {
+    "sha": "61bd53be3ef3cff176dda2c5d0dc5c9143f790f2",
+    "branch": "main"
+  },
+  "phet-io-sim-specific": {
+    "sha": "8f79893033fb336b4623efbbc8ac2460d3ad0a58",
+    "branch": "main"
+  },
+  "phet-io-wrappers": {
+    "sha": "b38824944a92a8079c33b2d1297751986071209e",
+    "branch": "main"
+  },
+  "phetcommon": {
+    "sha": "54b41ebbdddd743650d557910ec33b46b2b10317",
+    "branch": "main"
+  },
+  "phetmarks": {
+    "sha": "fee0d0789147c885aeb0b4ace69337e4558813e5",
+    "branch": "main"
+  },
+  "query-string-machine": {
+    "sha": "7e999a7b3f8aa94379f24695deda345c53020e51",
+    "branch": "main"
+  },
+  "scenery": {
+    "sha": "783cf92cdd1697f99da2186b4fc710cf553c4eea",
+    "branch": "main"
+  },
+  "scenery-phet": {
+    "sha": "74f11211b54233e4355a5694ad1a7c331035cf50",
+    "branch": "main"
+  },
+  "sherpa": {
+    "sha": "f50479637dac8a4259005a65bf933815b398601e",
+    "branch": "main"
+  },
+  "soccer-common": {
+    "sha": "9c1a4debd132ca4516fd61e5220cd3b4aaf9a2d8",
+    "branch": "main"
+  },
+  "studio": {
+    "sha": "25d3b0c2f79eabb12af99e10b71701c10c629136",
+    "branch": "main"
+  },
+  "sun": {
+    "sha": "3871e9293ac69e479ad905a145094a0beab695c5",
+    "branch": "main"
+  },
+  "tambo": {
+    "sha": "92b6cd6901f3ed99d89b8dff165aa8002028e31b",
+    "branch": "main"
+  },
+  "tandem": {
+    "sha": "eb8d2f1587c2bb63481ca4cec19c6d27bfc1464b",
+    "branch": "main"
+  },
+  "twixt": {
+    "sha": "bcacbfb0295840eb491e4a03223c2c426ef2ae43",
+    "branch": "main"
+  },
+  "utterance-queue": {
+    "sha": "0070eb725c0e9cef633e3c7b60dd8697d3619545",
+    "branch": "main"
+  }
+}

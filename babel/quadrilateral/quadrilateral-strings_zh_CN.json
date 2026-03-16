@@ -1,0 +1,376 @@
+{
+  "preferencesDialog.shapeSoundOptions": {
+    "value": "形状音效选项",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553819,
+        "oldValue": "",
+        "newValue": "形状音效选项"
+      }
+    ]
+  },
+  "preferencesDialog.shapeSoundOptionsDescription": {
+    "value": "选择您在建立不同形状时要听到的音效。",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553819,
+        "oldValue": "",
+        "newValue": "选择您在建立不同形状时要听到的音效。"
+      }
+    ]
+  },
+  "preferencesDialog.layerSoundDesignDescription": {
+    "value": "音效叠加突显形状的特质",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553819,
+        "oldValue": "",
+        "newValue": "音效叠加突显形状的特质"
+      }
+    ]
+  },
+  "preferencesDialog.uniqueSoundDesignDescription": {
+    "value": "每个形状都有专属音效",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553819,
+        "oldValue": "",
+        "newValue": "每个形状都有专属音效"
+      }
+    ]
+  },
+  "preferencesDialog.playShapeSoundsForever": {
+    "value": "不断播放形状音效",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553819,
+        "oldValue": "",
+        "newValue": "不断播放形状音效"
+      }
+    ]
+  },
+  "keyboardHelpDialog.moveCornerOrSide": {
+    "value": "移动角或边",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553819,
+        "oldValue": "",
+        "newValue": "移动角或边"
+      }
+    ]
+  },
+  "keyboardHelpDialog.moveInSmallerSteps": {
+    "value": "以较小步伐移动",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553819,
+        "oldValue": "",
+        "newValue": "以较小步伐移动"
+      }
+    ]
+  },
+  "keyboardHelpDialog.mouse": {
+    "value": "滑鼠",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553819,
+        "oldValue": "",
+        "newValue": "滑鼠"
+      }
+    ]
+  },
+  "keyboardHelpDialog.moveCornersOrSides": {
+    "value": "移动角或边",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553819,
+        "oldValue": "",
+        "newValue": "移动角或边"
+      }
+    ]
+  },
+  "keyboardHelpDialog.resetShape": {
+    "value": "重置形状",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553819,
+        "oldValue": "",
+        "newValue": "重置形状"
+      }
+    ]
+  },
+  "keyboardHelpDialog.shapeShortcuts": {
+    "value": "形状的快捷键",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553819,
+        "oldValue": "",
+        "newValue": "形状的快捷键"
+      }
+    ]
+  },
+  "vertexA": {
+    "value": "A",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553819,
+        "oldValue": "",
+        "newValue": "A"
+      }
+    ]
+  },
+  "vertexB": {
+    "value": "B",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553819,
+        "oldValue": "",
+        "newValue": "B"
+      }
+    ]
+  },
+  "vertexC": {
+    "value": "C",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553819,
+        "oldValue": "",
+        "newValue": "C"
+      }
+    ]
+  },
+  "vertexD": {
+    "value": "D",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553819,
+        "oldValue": "",
+        "newValue": "D"
+      }
+    ]
+  },
+  "resetShape": {
+    "value": "重置形状",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553819,
+        "oldValue": "",
+        "newValue": "重置形状"
+      }
+    ]
+  },
+  "labels": {
+    "value": "标签",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553819,
+        "oldValue": "",
+        "newValue": "标签"
+      }
+    ]
+  },
+  "markers": {
+    "value": "标记",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553819,
+        "oldValue": "",
+        "newValue": "标记"
+      }
+    ]
+  },
+  "diagonals": {
+    "value": "对角线",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553819,
+        "oldValue": "",
+        "newValue": "对角线"
+      }
+    ]
+  },
+  "grid": {
+    "value": "格线",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553819,
+        "oldValue": "",
+        "newValue": "格线"
+      }
+    ]
+  },
+  "shapeNames.square": {
+    "value": "正方形",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553819,
+        "oldValue": "",
+        "newValue": "正方形"
+      }
+    ]
+  },
+  "shapeNames.rectangle": {
+    "value": "矩形",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553819,
+        "oldValue": "",
+        "newValue": "矩形"
+      }
+    ]
+  },
+  "shapeNames.rhombus": {
+    "value": "菱形",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553819,
+        "oldValue": "",
+        "newValue": "菱形"
+      }
+    ]
+  },
+  "shapeNames.kite": {
+    "value": "鸳形",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553819,
+        "oldValue": "",
+        "newValue": "鸳形"
+      }
+    ]
+  },
+  "shapeNames.isoscelesTrapezoid": {
+    "value": "等腰梯形",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553819,
+        "oldValue": "",
+        "newValue": "等腰梯形"
+      }
+    ]
+  },
+  "shapeNames.trapezoid": {
+    "value": "梯形",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553819,
+        "oldValue": "",
+        "newValue": "梯形"
+      }
+    ]
+  },
+  "shapeNames.concaveQuadrilateral": {
+    "value": "凹四边形",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553819,
+        "oldValue": "",
+        "newValue": "凹四边形"
+      }
+    ]
+  },
+  "shapeNames.convexQuadrilateral": {
+    "value": "凸四边形",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553819,
+        "oldValue": "",
+        "newValue": "凸四边形"
+      }
+    ]
+  },
+  "shapeNames.parallelogram": {
+    "value": "平行四边形",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553819,
+        "oldValue": "",
+        "newValue": "平行四边形"
+      }
+    ]
+  },
+  "shapeNames.dart": {
+    "value": "飞镖形",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553819,
+        "oldValue": "",
+        "newValue": "飞镖形"
+      }
+    ]
+  },
+  "shapeNames.triangle": {
+    "value": "三角形？",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553819,
+        "oldValue": "",
+        "newValue": "三角形？"
+      }
+    ]
+  },
+  "shapeNameHidden": {
+    "value": "已隐藏形状名称",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553819,
+        "oldValue": "",
+        "newValue": "已隐藏形状名称"
+      }
+    ]
+  },
+  "smallSteps": {
+    "value": "小步伐",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553819,
+        "oldValue": "",
+        "newValue": "小步伐"
+      }
+    ]
+  },
+  "quadrilateral.title": {
+    "value": "Quadrilateral_四边形",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553819,
+        "oldValue": "",
+        "newValue": "Quadrilateral_四边形"
+      }
+    ]
+  }
+}

@@ -1,0 +1,75 @@
+// Copyright 2023-2026, University of Colorado Boulder
+
+/**
+ * LabeledLine is the model element for a labeled line tool. This tool consists of a vertical line with a label
+ * positioned at the top of the line.  These elements can only be made visible via PhET-iO, or via the (private)
+ * query parameter 'labeledLinesVisible'.
+ *
+ * @author Chris Malley (PixelZoom, Inc.)
+ */
+
+import optionize, { EmptySelfOptions } from '../../../../phet-core/js/optionize.js';
+import PickRequired from '../../../../phet-core/js/types/PickRequired.js';
+import Color from '../../../../scenery/js/util/Color.js';
+import ColorProperty from '../../../../scenery/js/util/ColorProperty.js';
+import Tandem from '../../../../tandem/js/Tandem.js';
+import calculusGrapher from '../../calculusGrapher.js';
+import CalculusGrapherQueryParameters from '../CalculusGrapherQueryParameters.js';
+import DerivativeCurve from './DerivativeCurve.js';
+import IntegralCurve from './IntegralCurve.js';
+import LabeledAncillaryTool, { LabeledAncillaryToolOptions } from './LabeledAncillaryTool.js';
+import PredictCurve from './PredictCurve.js';
+import PrimaryCurve from './PrimaryCurve.js';
+import SecondDerivativeCurve from './SecondDerivativeCurve.js';
+
+type SelfOptions = EmptySelfOptions;
+
+type LabeledLineOptions = SelfOptions & PickRequired<LabeledAncillaryToolOptions, 'x' | 'label' | 'tandem'>;
+
+export default class LabeledLine extends LabeledAncillaryTool {
+
+  // Color for displaying the vertical line
+  public readonly lineColorProperty: ColorProperty;
+
+  public constructor( integralCurve: IntegralCurve,
+                      primaryCurve: PrimaryCurve,
+                      predictCurve: PredictCurve,
+                      derivativeCurve: DerivativeCurve,
+                      secondDerivativeCurve: SecondDerivativeCurve,
+                      providedOptions: LabeledLineOptions ) {
+
+    const options = optionize<LabeledLineOptions, SelfOptions, LabeledAncillaryToolOptions>()( {
+
+      // LabeledAncillaryToolOptions
+      visible: CalculusGrapherQueryParameters.labeledLinesVisible
+    }, providedOptions );
+
+    super( integralCurve, primaryCurve, predictCurve, derivativeCurve, secondDerivativeCurve, options );
+
+    this.lineColorProperty = new ColorProperty( Color.black, {
+      tandem: options.tandem.createTandem( 'lineColorProperty' )
+    } );
+  }
+
+  /**
+   * Creates a specified number of LabeledLine instances, with evenly spaced initialCoordinates,
+   * and alphabetically-ordered tandem names.
+   */
+  public static createLabeledLines( numberOfTools: number,
+                                    integralCurve: IntegralCurve,
+                                    primaryCurve: PrimaryCurve,
+                                    predictCurve: PredictCurve,
+                                    derivativeCurve: DerivativeCurve,
+                                    secondDerivativeCurve: SecondDerivativeCurve,
+                                    parentTandem: Tandem ): LabeledLine[] {
+    return LabeledAncillaryTool.createLabeledAncillaryTools( numberOfTools,
+      ( x: number, label: string ) =>
+        new LabeledLine( integralCurve, primaryCurve, predictCurve, derivativeCurve, secondDerivativeCurve, {
+          x: x,
+          label: label,
+          tandem: parentTandem.createTandem( `${label}Line` )
+        } ) );
+  }
+}
+
+calculusGrapher.register( 'LabeledLine', LabeledLine );

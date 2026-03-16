@@ -1,0 +1,919 @@
+{
+  "calculus-grapher.title": {
+    "value": "Calculus Grapher"
+  },
+  "screen.derivative": {
+    "value": "Derivative"
+  },
+  "screen.integral": {
+    "value": "Integral"
+  },
+  "screen.advanced": {
+    "value": "Advanced"
+  },
+  "screen.lab": {
+    "value": "Lab"
+  },
+  "smooth": {
+    "value": "Smooth"
+  },
+  "symbol.d": {
+    "value": "d"
+  },
+  "symbol.f": {
+    "value": "f"
+  },
+  "symbol.x": {
+    "value": "x"
+  },
+  "symbol.t": {
+    "value": "t"
+  },
+  "discontinuities": {
+    "value": "Discontinuities"
+  },
+  "values": {
+    "value": "Values"
+  },
+  "notation": {
+    "value": "Notation"
+  },
+  "lagrange": {
+    "value": "Lagrange:"
+  },
+  "leibniz": {
+    "value": "Leibniz:"
+  },
+  "variable": {
+    "value": "Variable"
+  },
+  "checkbox.areaUnderCurve": {
+    "value": "Area Under<br>Curve"
+  },
+  "checkbox.tangent": {
+    "value": "Tangent"
+  },
+  "barometer.netSignedArea": {
+    "value": "Net Signed<br>Area"
+  },
+  "barometer.slopeOfTangent": {
+    "value": "Slope of<br>Tangent"
+  },
+  "predict": {
+    "value": "Predict"
+  },
+  "show": {
+    "value": "Show"
+  },
+  "predictPreference": {
+    "value": "Predict"
+  },
+  "valuesPreferenceDescription": {
+    "value": "Shows values on graph axes, Reference Line, \"Slope of Tangent\", and \"Net Signed Area\"."
+  },
+  "predictPreferenceDescription": {
+    "value": "Adds a mode that allows you to predict f of {{variable}}."
+  },
+  "referenceLine": {
+    "value": "Reference<br>Line"
+  },
+  "curveManipulatorKeyboardCue": {
+    "value": "to <b>Grab</b> or <b>Release</b> curve"
+  },
+  "keyboardHelp": {
+    "curveManipulator": {
+      "value": "Curve Manipulator"
+    },
+    "grabOrReleaseCurve": {
+      "value": "Grab or release curve"
+    },
+    "tangentToolOrReferenceLine": {
+      "value": "Tangent Tool or Reference Line"
+    },
+    "areaUnderCurveToolOrReferenceLine": {
+      "value": "Area Under Curve Tool or Reference Line"
+    },
+    "referenceLine": {
+      "value": "Reference Line"
+    },
+    "readValues": {
+      "value": "With screen reader enabled, read values"
+    }
+  },
+  "a11y": {
+    "screens": {
+      "defaults": {
+        "screenSummary": {
+          "currentDetails": {
+            "leadingParagraph": {
+              "widthPattern": {
+                "value": "Right now, Curve Manipulation Type is {$curveManipulationType}. Shape width is {$width}. {$curveSentence}"
+              },
+              "noWidthPattern": {
+                "value": "Right now, Curve Manipulation Type is {$curveManipulationType}. {$curveSentence}"
+              },
+              "curveSentence": {
+                "curvesShown": {
+                  "value": "Curves shown are:"
+                },
+                "allCurvesHidden": {
+                  "value": "All curves hidden."
+                }
+              }
+            },
+            "accessibleList": {
+              "primary": {
+                "value": "f, in Primary Graph Area"
+              },
+              "predict": {
+                "value": "Predict f, in Primary Graph Area"
+              },
+              "integral": {
+                "value": "Integral, in Integral Graph Area"
+              },
+              "derivative": {
+                "value": "Derivative, in Derivative Graph Area"
+              },
+              "secondDerivative": {
+                "value": "Second Derivative, in Second Derivative Graph Area"
+              }
+            }
+          },
+          "controlArea": {
+            "value": "You can add Exploration Tools to the graph areas to promote making connections between values on each graph.\nReset the sim to start over."
+          }
+        }
+      },
+      "derivative": {
+        "screenButtonsHelpText": {
+          "value": "Manipulate a graph and explore its derivative curve in real time."
+        },
+        "screenSummary": {
+          "playArea": {
+            "value": "There is an interactive curve in the Primary Graph Area representing the graph of f and a \nderived non interactive curve representing the derivative of f. You can choose a Curve Manipulation Type\nto modify the curve in different ways in the Primary Graph Area at any point. There are \nExploration Tools allowing flexible investigation of all curves with {$variable} coordinates aligned."
+          },
+          "interactionHint": {
+            "value": "Get started by finding the Curve Manipulator. Grab manipulator to modify curve in any direction.\nUse Exploration Tools to investigate steepness of f curve at different points."
+          }
+        }
+      },
+      "integral": {
+        "screenButtonsHelpText": {
+          "value": "Manipulate a graph and explore its integral curve in real time."
+        },
+        "screenSummary": {
+          "playArea": {
+            "value": "There is an interactive curve in the Primary Graph Area representing the graph of f and a\nderived non interactive curve representing the integral of f. You can choose a Curve Manipulation Type to\nmodify the curve in different ways in the Primary Graph Area at any point. There are Exploration\nTools allowing flexible investigation of all curves with {$variable} coordinates aligned."
+          },
+          "interactionHint": {
+            "value": "Get started by finding the Curve Manipulator. Grab manipulator to modify curve in any direction.\nUse Exploration Tools to investigate net signed area under f curve bounded by horizontal axis \nand f of {$variable} starting from left."
+          }
+        }
+      },
+      "advanced": {
+        "screenButtonsHelpText": {
+          "value": "Manipulate a graph and explore its derivative and integral curves in real time,\nwith or without discontinuities."
+        },
+        "screenSummary": {
+          "playArea": {
+            "value": "There is an interactive curve in the Primary Graph Area representing the graph of f and\nderived non interactive curves in other Graph Areas. You can choose a Curve Manipulation Type to\nmodify the curve in different ways in the Primary Graph Area at any point. You can change\nwhich set of two Graph Areas are viewable: Integral and Primary or Primary and Derivative.\nThere are Exploration Tools allowing flexible investigation of all viewable curves with\n{$variable} coordinates aligned."
+          },
+          "interactionHint": {
+            "value": "Get started by finding the Curve Manipulator. Grab manipulator to modify curve in any direction.\nUse Exploration Tools to explore relationships between graphs in viewable graph set."
+          }
+        }
+      },
+      "lab": {
+        "screenButtonsHelpText": {
+          "value": "Manipulate a graph and explore its integral, derivative, and second derivative curves in \nreal time, with or without discontinuities."
+        },
+        "screenSummary": {
+          "playArea": {
+            "value": "There is an interactive curve in the Primary Graph Area representing the graph of f and\nderived non interactive curves in other Graphs Areas. You can choose a Curve Manipulation Type\nto modify the curve in different ways in the Primary Graph Area at any point. You can change \nwhich set of three Graph Areas are viewable: Integral, Primary, and Derivative, or Primary,\nDerivative, and Second Derivative. There are Exploration Tools allowing flexible investigation\nof all curves with {$variable} coordinates aligned."
+          },
+          "interactionHint": {
+            "value": "Get started by finding the Curve Manipulator. Grab manipulator to modify curve in any direction.\nUse Exploration Tools to explore relationships between graphs in viewable graph set."
+          }
+        }
+      }
+    },
+    "slopeOfTangentAccordionBox": {
+      "accessibleHelpTextCollapsed": {
+        "value": "Explore slope of line tangent to f curve at {$variable} coordinate of Tangent tool."
+      },
+      "accessibleParagraph": {
+        "zero": {
+          "value": "At {$variable} equals {$x}, slope of line tangent to f is zero."
+        },
+        "positive": {
+          "value": "At {$variable} equals {$x}, slope of line tangent to f is positive {$absoluteSlope}."
+        },
+        "negative": {
+          "value": "At {$variable} equals {$x}, slope of line tangent to f is negative {$absoluteSlope}."
+        }
+      }
+    },
+    "netSignedAreaAccordionBox": {
+      "accessibleHelpTextCollapsed": {
+        "value": "Explore net signed area under f curve between {$variable} equals 0 and current\n{$variable} coordinate of Area Under Curve tool."
+      },
+      "accessibleParagraph": {
+        "zero": {
+          "value": "Net signed area under f curve is zero between {$variable} equals 0 and {$x}."
+        },
+        "positive": {
+          "value": "Net signed area under f curve is positive {$absoluteArea} between {$variable} equals 0 and {$x}."
+        },
+        "negative": {
+          "value": "Net signed area under f curve is negative {$absoluteArea} between {$variable} equals 0 and {$x}."
+        }
+      }
+    },
+    "checkboxGroup": {
+      "accessibleHeading": {
+        "value": "Exploration Tool Controls"
+      }
+    },
+    "tangentCheckbox": {
+      "accessibleHelpText": {
+        "value": "Add or remove Tangent Tool to make connections between graphs."
+      },
+      "accessibleContextResponseChecked": {
+        "value": "Tangent Tool added."
+      },
+      "accessibleContextResponseUnchecked": {
+        "value": "Tangent Tool removed."
+      }
+    },
+    "referenceLineCheckbox": {
+      "accessibleName": {
+        "value": "Reference Line"
+      },
+      "accessibleHelpText": {
+        "value": "Add or remove vertical Reference Line to align {$variable} coordinates on all graphs."
+      },
+      "accessibleContextResponseChecked": {
+        "value": "Reference Line added."
+      },
+      "accessibleContextResponseUnchecked": {
+        "value": "Reference Line removed."
+      }
+    },
+    "areaUnderCurveCheckbox": {
+      "accessibleName": {
+        "value": "Area Under Curve Tool"
+      },
+      "accessibleHelpText": {
+        "value": "Add or remove Area Under Curve Tool and shading under curve bounded by horizontal axis and f."
+      },
+      "accessibleContextResponseChecked": {
+        "value": "Area Under Curve Tool added."
+      },
+      "accessibleContextResponseUnchecked": {
+        "value": "Area Under Curve Tool removed."
+      }
+    },
+    "gridCheckbox": {
+      "accessibleName": {
+        "value": "Coordinate Grid"
+      },
+      "accessibleHelpText": {
+        "value": "Show or hide coordinate grid on all graphs."
+      },
+      "accessibleContextResponseChecked": {
+        "value": "Coordinate grid shown."
+      },
+      "accessibleContextResponseUnchecked": {
+        "value": "Coordinate grid hidden."
+      }
+    },
+    "showPrimaryCurveCheckbox": {
+      "accessibleName": {
+        "value": "Show f of {$variable}"
+      },
+      "accessibleHelpText": {
+        "value": "Show or hide f of {$variable} to compare your predicted shape to shape of f of {$variable}."
+      },
+      "accessibleContextResponseChecked": {
+        "value": "f of {$variable} shown."
+      },
+      "accessibleContextResponseUnchecked": {
+        "value": "f of {$variable} hidden."
+      }
+    },
+    "curveManipulationType": {
+      "hill": {
+        "value": "Smooth Hill"
+      },
+      "triangle": {
+        "value": "Rigid V with Corners on {$variable} Axis"
+      },
+      "pedestal": {
+        "value": "Pedestal with Smooth Corners"
+      },
+      "parabola": {
+        "value": "Parabola with Corners on {$variable} Axis"
+      },
+      "sinusoid": {
+        "value": "Sinusoid"
+      },
+      "freeform": {
+        "value": "Freeform, Discontinuities Likely"
+      },
+      "tilt": {
+        "value": "Diagonal Tilt Pinned at Left Edge"
+      },
+      "shift": {
+        "value": "Vertical Shift Up or Down"
+      }
+    },
+    "graphAreas": {
+      "defaults": {
+        "accessibleList": {
+          "leadingParagraph": {
+            "value": "Right now,"
+          },
+          "coordinateGridShown": {
+            "value": "Coordinate grid shown."
+          },
+          "valuesLabeledOnAxes": {
+            "value": "Values labeled on axes."
+          }
+        }
+      },
+      "primary": {
+        "accessibleHeading": {
+          "value": "Primary Graph Area"
+        },
+        "accessibleList": {
+          "primaryCurve": {
+            "continuousAndDifferentiable": {
+              "value": "f is continuous and differentiable at all points."
+            },
+            "hasDiscontinuities": {
+              "value": "f is not differentiable at one or more discontinuities."
+            },
+            "hasCusps": {
+              "value": "f is continuous but not differentiable at one or more cusps."
+            },
+            "hasDiscontinuitiesAndCusps": {
+              "value": "f is not differentiable at one or more discontinuities and one or more cusps."
+            },
+            "hidden": {
+              "value": "f curve hidden."
+            }
+          },
+          "predictCurve": {
+            "continuousAndDifferentiable": {
+              "value": "Predict f is continuous and differentiable at all points."
+            },
+            "hasDiscontinuities": {
+              "value": "Predict f is not differentiable at one or more discontinuities."
+            },
+            "hasCusps": {
+              "value": "Predict f is continuous but not differentiable at one or more cusps."
+            },
+            "hasDiscontinuitiesAndCusps": {
+              "value": "Predict f is not differentiable at one or more discontinuities and one or more cusps."
+            },
+            "hidden": {
+              "value": "Predict f curve hidden."
+            }
+          }
+        }
+      },
+      "integral": {
+        "accessibleHeading": {
+          "value": "Integral Graph Area"
+        },
+        "accessibleList": {
+          "continuous": {
+            "value": "Integral curve is continuous and represents definite integral from zero to {$variable} for f of {$variable}."
+          },
+          "hidden": {
+            "value": "Integral curve hidden."
+          }
+        }
+      },
+      "derivative": {
+        "accessibleHeading": {
+          "value": "Derivative Graph Area"
+        },
+        "accessibleList": {
+          "continuous": {
+            "value": "Derivative curve is continuous and differentiable at all points."
+          },
+          "discontinuous": {
+            "value": "Derivative curve is not differentiable at one or more discontinuities."
+          },
+          "hidden": {
+            "value": "Derivative curve hidden."
+          }
+        }
+      },
+      "secondDerivative": {
+        "accessibleHeading": {
+          "value": "Second Derivative Graph Area"
+        },
+        "accessibleList": {
+          "continuous": {
+            "value": "Second derivative curve is continuous and differentiable at all points."
+          },
+          "discontinuous": {
+            "value": "Second derivative curve is not differentiable at one or more discontinuities."
+          },
+          "hidden": {
+            "value": "Second derivative curve hidden."
+          }
+        }
+      }
+    },
+    "curveManipulatorAndSettings": {
+      "value": "Curve Manipulator and Settings"
+    },
+    "curveActionsButtonGroup": {
+      "accessibleHeading": {
+        "value": "Curve Actions"
+      },
+      "accessibleHelpText": {
+        "value": "Choose action to take on curve in Primary Graph Area."
+      }
+    },
+    "smoothButton": {
+      "accessibleName": {
+        "value": "Smooth"
+      },
+      "accessibleHelpText": {
+        "value": "Smooth sharp corners and discontinuities on curve in Primary Graph Area."
+      },
+      "accessibleContextResponse": {
+        "allCurves": {
+          "value": "f and derived curves smoothed."
+        },
+        "predictCurve": {
+          "value": "Predict curve only smoothed."
+        }
+      }
+    },
+    "eraserButton": {
+      "accessibleName": {
+        "value": "Erase Curve Manipulations"
+      },
+      "accessibleHelpText": {
+        "value": "Reset curve to y equals zero, maintain curve manipulation settings."
+      },
+      "accessibleContextResponse": {
+        "primaryCurve": {
+          "value": "f and derived curves reset, settings unchanged."
+        },
+        "predictCurve": {
+          "value": "Predict curve reset, other curves and settings unchanged."
+        }
+      }
+    },
+    "undoButton": {
+      "accessibleName": {
+        "value": "Undo"
+      },
+      "accessibleHelpText": {
+        "value": "Undo most recent curve manipulation."
+      },
+      "accessibleContextResponse": {
+        "primaryCurve": {
+          "value": "Last manipulation removed from f and derived curves."
+        },
+        "predictCurve": {
+          "value": "Last manipulation removed from predict curve only."
+        }
+      }
+    },
+    "yZoomButtonGroup": {
+      "zoomInButton": {
+        "accessibleName": {
+          "integral": {
+            "value": "Zoom In Integral y Axis"
+          },
+          "derivative": {
+            "value": "Zoom In Derivative y Axis"
+          },
+          "secondDerivative": {
+            "value": "Zoom In Second Derivative y Axis"
+          }
+        },
+        "accessibleHelpText": {
+          "value": "Zoom in y axis only."
+        },
+        "accessibleContextResponse": {
+          "value": "zoomed in, y range {$min} to {$max}"
+        }
+      },
+      "zoomOutButton": {
+        "accessibleName": {
+          "integral": {
+            "value": "Zoom Out Integral y Axis"
+          },
+          "derivative": {
+            "value": "Zoom Out Derivative y Axis"
+          },
+          "secondDerivative": {
+            "value": "Zoom Out Second Derivative y Axis"
+          }
+        },
+        "accessibleHelpText": {
+          "value": "Zoom out y axis only."
+        },
+        "accessibleContextResponse": {
+          "value": "zoomed out, y range {$min} to {$max}"
+        }
+      }
+    },
+    "predictRadioButtonGroup": {
+      "accessibleName": {
+        "value": "Curve to Manipulate"
+      },
+      "accessibleHelpText": {
+        "value": "Choose which curve is manipulable in Primary Graph Area."
+      },
+      "primaryCurveRadioButton": {
+        "accessibleName": {
+          "value": "f of {$variable}"
+        },
+        "accessibleContextResponse": {
+          "value": "f curve ready to manipulate."
+        }
+      },
+      "predictCurveRadioButton": {
+        "accessibleName": {
+          "value": "Predict"
+        },
+        "accessibleContextResponse": {
+          "value": "Predict curve ready to manipulate."
+        }
+      }
+    },
+    "curveManipulationTypeRadioButtonGroup": {
+      "accessibleName": {
+        "value": "Curve Manipulation Type"
+      },
+      "accessibleHelpText": {
+        "value": "Choose curve modification type for Curve Manipulator, then change curve in Primary Graph Area.\nFind Curve Manipulator under Curve Manipulator and Settings."
+      }
+    },
+    "graphSetRadioButtonGroup": {
+      "accessibleName": {
+        "value": "Viewable Graph Set"
+      },
+      "accessibleHelpText": {
+        "value": "Choose which set of Graph Areas to investigate and find relationships."
+      },
+      "integralPrimaryRadioButton": {
+        "accessibleName": {
+          "value": "Integral and Primary Graph Areas"
+        },
+        "accessibleContextResponse": {
+          "value": "Primary Graph Area below Integral."
+        }
+      },
+      "primaryDerivativeRadioButton": {
+        "accessibleName": {
+          "value": "Primary and Derivative Graph Areas"
+        },
+        "accessibleContextResponse": {
+          "value": "Primary Graph Area above Derivative."
+        }
+      },
+      "integralPrimaryDerivativeRadioButton": {
+        "accessibleName": {
+          "value": "Integral, Primary, and Derivative Graph Areas"
+        },
+        "accessibleContextResponse": {
+          "value": "Primary Graph Area between Integral and Derivative"
+        }
+      },
+      "primaryDerivativeSecondDerivativeRadioButton": {
+        "accessibleName": {
+          "value": "Primary, Derivative, and Second Derivative Graph Areas"
+        },
+        "accessibleContextResponse": {
+          "value": "Primary Graph Area above Derivative and Second Derivative"
+        }
+      }
+    },
+    "variableRadioButtonGroup": {
+      "accessibleHelpText": {
+        "value": "Choose variable for horizontal axis."
+      },
+      "xRadioButton": {
+        "accessibleContextResponse": {
+          "value": "Horizontal axis labeled with x."
+        }
+      },
+      "tRadioButton": {
+        "accessibleContextResponse": {
+          "value": "Horizontal axis labeled with t."
+        }
+      }
+    },
+    "notationRadioButtonGroup": {
+      "accessibleHelpText": {
+        "value": "Choose derivative notation."
+      },
+      "lagrangeRadioButton": {
+        "accessibleName": {
+          "value": "Lagrange, f prime of {$variable}"
+        },
+        "accessibleContextResponse": {
+          "value": "Derivative notation uses f prime and f double prime."
+        }
+      },
+      "leibnizRadioButton": {
+        "accessibleName": {
+          "value": "Leibniz, d f over d {$variable}"
+        },
+        "accessibleContextResponse": {
+          "value": "Derivative notation shows ratio of change in y with respect to {$variable}."
+        }
+      }
+    },
+    "discontinuitiesRadioButtonGroup": {
+      "accessibleHelpText": {
+        "value": "Choose how to display discontinuities in curves."
+      },
+      "noLineRadioButton": {
+        "accessibleName": {
+          "value": "No Line Connecting Discontinuities"
+        }
+      },
+      "dashedLineRadioButton": {
+        "accessibleName": {
+          "value": "Dashed Line Connecting Discontinuities"
+        }
+      }
+    },
+    "shapeWidthSlider": {
+      "accessibleName": {
+        "value": "Shape Width"
+      },
+      "accessibleHelpText": {
+        "value": "Adjust width of curve manipulation shape. Width ranges from {$min} to {$max} {$variable} axis units."
+      }
+    },
+    "predictToggleSwitch": {
+      "accessibleHelpText": {
+        "value": "Adds a mode that allows you to predict f of {$variable}."
+      }
+    },
+    "curveVisibilityToggleButton": {
+      "accessibleNameOn": {
+        "integral": {
+          "value": "Hide Integral Curve"
+        },
+        "primary": {
+          "value": "Hide Primary Curve"
+        },
+        "derivative": {
+          "value": "Hide Derivative Curve"
+        },
+        "secondDerivative": {
+          "value": "Hide Second Derivative Curve"
+        }
+      },
+      "accessibleNameOff": {
+        "integral": {
+          "value": "Show Integral Curve"
+        },
+        "primary": {
+          "value": "Show Primary Curve"
+        },
+        "derivative": {
+          "value": "Show Derivative Curve"
+        },
+        "secondDerivative": {
+          "value": "Show Second Derivative Curve"
+        }
+      },
+      "accessibleHelpText": {
+        "value": "Show or hide curve to support predictions."
+      },
+      "accessibleContextResponseOff": {
+        "value": "Curve hidden."
+      },
+      "accessibleContextResponseOn": {
+        "value": "Curve shown."
+      }
+    },
+    "curveManipulators": {
+      "defaults": {
+        "accessibleObjectResponse": {
+          "focusedReleased": {
+            "value": "at {$x}, {$y}, off curve"
+          },
+          "focusedGrabbed": {
+            "value": "at {$x}, {$y}, grabbed"
+          },
+          "grabbed": {
+            "value": "grabbed at {$x}, {$y}, curve modified"
+          },
+          "released": {
+            "value": "released at {$x}, {$y}, off curve"
+          },
+          "movedReleased": {
+            "value": "{$x}, {$y}"
+          },
+          "movedGrabbed": {
+            "value": "{$x}, {$y}, curve modified"
+          }
+        },
+        "accessibleRoleDescription": {
+          "movable": {
+            "value": "movable"
+          },
+          "movableButton": {
+            "value": "movable button"
+          }
+        }
+      },
+      "primary": {
+        "accessibleName": {
+          "value": "f Curve Manipulator"
+        },
+        "accessibleHelpText": {
+          "value": "Move curve manipulator in any direction to set location, then space to grab and dynamically\nmanipulate curve using chosen Curve Manipulation Type."
+        }
+      },
+      "predict": {
+        "accessibleName": {
+          "value": "Predict Curve Manipulator"
+        },
+        "accessibleHelpText": {
+          "value": "Move predict curve manipulator in any direction to set location, then space to grab and \ndynamically manipulate curve using chosen Curve Manipulation Type."
+        }
+      }
+    },
+    "explorationTools": {
+      "accessibleHeading": {
+        "value": "Exploration Tools"
+      },
+      "accessibleObjectResponse": {
+        "xPhrase": {
+          "min": {
+            "value": "at {$variable} min, {$variable} equals {$value}"
+          },
+          "max": {
+            "value": "at {$variable} max, {$variable} equals {$value}"
+          },
+          "other": {
+            "value": "at {$variable} equals {$value}"
+          }
+        }
+      }
+    },
+    "referenceLine": {
+      "accessibleName": {
+        "value": "Reference Line"
+      },
+      "accessibleHelpText": {
+        "value": "Move vertical line horizontally to change {$variable} value and explore y values on all graphs.\nVertical line passes through all graphs at same {$variable} value."
+      },
+      "accessibleObjectResponse": {
+        "patterns": {
+          "primaryDerivative": {
+            "value": "{$xPhrase}, {$primaryPhrase}, {$derivativePhrase}"
+          },
+          "integralPrimary": {
+            "value": "{$xPhrase}, {$integralPhrase}, {$primaryPhrase}"
+          },
+          "integralPrimaryDerivative": {
+            "value": "{$xPhrase}, {$integralPhrase}, {$primaryPhrase}, {$derivativePhrase}"
+          },
+          "primaryDerivativeSecondDerivative": {
+            "value": "{$xPhrase}, {$primaryPhrase}, {$derivativePhrase}, {$secondDerivativePhrase}"
+          }
+        },
+        "primaryPhrase": {
+          "predictAndPrimary": {
+            "value": "{$predictPhrase}, {$primaryPhrase}"
+          },
+          "predictUndefined": {
+            "value": "predict f of {$variable} is undefined"
+          },
+          "predictValue": {
+            "value": "predict f of {$variable} is {$value}"
+          },
+          "predictHidden": {
+            "value": "predict curve hidden"
+          },
+          "primaryUndefined": {
+            "value": "f of {$variable} is undefined"
+          },
+          "primaryValue": {
+            "value": "f of {$variable} is {$value}"
+          },
+          "primaryHidden": {
+            "value": "f curve hidden"
+          }
+        },
+        "integralPhrase": {
+          "integralValue": {
+            "value": "integral up to {$variable} is {$value}"
+          },
+          "integralHidden": {
+            "value": "integral curve hidden"
+          }
+        },
+        "derivativePhrase": {
+          "derivativeUndefined": {
+            "value": "derivative at {$variable} is undefined"
+          },
+          "derivativeValue": {
+            "value": "derivative at {$variable} is {$value}"
+          },
+          "derivativeHidden": {
+            "value": "derivative curve hidden"
+          }
+        },
+        "secondDerivativePhrase": {
+          "secondDerivativeUndefined": {
+            "value": "second derivative at {$variable} is undefined"
+          },
+          "secondDerivativeValue": {
+            "value": "second derivative at {$variable} is {$value}"
+          },
+          "secondDerivativeHidden": {
+            "value": "second derivative curve hidden"
+          }
+        }
+      }
+    },
+    "tangentTool": {
+      "accessibleName": {
+        "value": "Tangent Tool"
+      },
+      "accessibleHelpText": {
+        "value": "Move vertical line horizontally to change {$variable} value and explore relationship between\nsteepness of visible line tangent to f at {$variable}, and y value on derivative curve at same\n{$variable} coordinate. Information provides current {$variable} value, slope of line tangent\nto f at {$variable}, and value of derivative at {$variable} on derivative curve."
+      },
+      "accessibleObjectResponse": {
+        "pattern": {
+          "value": "{$xPhrase}, {$slopePhrase}, {$derivativePhrase}"
+        },
+        "slopePhrase": {
+          "zero": {
+            "value": "slope is zero"
+          },
+          "positive": {
+            "value": "slope is positive {$absoluteSlope}"
+          },
+          "negative": {
+            "value": "slope is negative {$absoluteSlope}"
+          },
+          "hidden": {
+            "value": "f curve hidden"
+          }
+        },
+        "derivativePhrase": {
+          "derivativeValue": {
+            "value": "derivative at {$variable} is {$value}"
+          },
+          "hidden": {
+            "value": "derivative curve hidden"
+          }
+        }
+      }
+    },
+    "areaUnderCurveTool": {
+      "accessibleName": {
+        "value": "Area Under Curve Tool"
+      },
+      "accessibleHelpText": {
+        "value": "Move vertical line horizontally to change {$variable} value and explore relationship between\ncumulative net signed area under f up to current {$variable} value. Shaded area is bounded by\n{$variable} axis and f curve. Vertical line passes through all graphs at same {$variable} value.\nInformation provides current {$variable} value, value of integral up to {$variable}, and\nnet signed area under f curve."
+      },
+      "accessibleObjectResponse": {
+        "pattern": {
+          "value": "{$xPhrase}, {$integralPhrase}, {$areaPhrase}"
+        },
+        "integralPhrase": {
+          "integralValue": {
+            "value": "integral up to {$variable} is {$value}"
+          },
+          "hidden": {
+            "value": "integral curve hidden"
+          }
+        },
+        "areaPhrase": {
+          "zero": {
+            "value": "net signed area is zero under f"
+          },
+          "positive": {
+            "value": "net signed area is positive {$absoluteArea} under f"
+          },
+          "negative": {
+            "value": "net signed area is negative {$absoluteArea} under f"
+          },
+          "hidden": {
+            "value": "f curve hidden"
+          }
+        }
+      }
+    }
+  }
+}

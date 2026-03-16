@@ -1,0 +1,552 @@
+{
+  "screen.pickupCoil": {
+    "value": "感应线圈",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553807,
+        "oldValue": "",
+        "newValue": "感应线圈"
+      }
+    ]
+  },
+  "screen.barMagnet": {
+    "value": "条状磁铁",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553807,
+        "oldValue": "",
+        "newValue": "条状磁铁"
+      }
+    ]
+  },
+  "screen.electromagnet": {
+    "value": "电磁铁",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553807,
+        "oldValue": "",
+        "newValue": "电磁铁"
+      }
+    ]
+  },
+  "screen.transformer": {
+    "value": "变压器",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553807,
+        "oldValue": "",
+        "newValue": "变压器"
+      }
+    ]
+  },
+  "screen.generator": {
+    "value": "发电机",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553807,
+        "oldValue": "",
+        "newValue": "发电机"
+      }
+    ]
+  },
+  "symbol.N": {
+    "value": "N",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553807,
+        "oldValue": "",
+        "newValue": "N"
+      }
+    ]
+  },
+  "symbol.S": {
+    "value": "S",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553807,
+        "oldValue": "",
+        "newValue": "S"
+      }
+    ]
+  },
+  "pattern.valueUnits": {
+    "value": "{{value}} {{units}}",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553807,
+        "oldValue": "",
+        "newValue": "{{value}} {{units}}"
+      }
+    ]
+  },
+  "units.V": {
+    "value": "V",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553807,
+        "oldValue": "",
+        "newValue": "V"
+      }
+    ]
+  },
+  "batteryVoltage": {
+    "value": "电池电压：",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553807,
+        "oldValue": "",
+        "newValue": "电池电压："
+      }
+    ]
+  },
+  "dcPowerSupply": {
+    "value": "直流电源",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553807,
+        "oldValue": "",
+        "newValue": "直流电源"
+      }
+    ]
+  },
+  "addEarthCheckbox": {
+    "value": "新增“地球”勾选框",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553807,
+        "oldValue": "",
+        "newValue": "新增“地球”勾选框"
+      }
+    ]
+  },
+  "addEarthCheckboxDescription": {
+    "value": "在相关画面上新增“地球”勾选框",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553807,
+        "oldValue": "",
+        "newValue": "在相关画面上新增“地球”勾选框"
+      }
+    ]
+  },
+  "magneticUnits": {
+    "value": "磁性单位",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553807,
+        "oldValue": "",
+        "newValue": "磁性单位"
+      }
+    ]
+  },
+  "gaussPreference": {
+    "value": "G（高斯）",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553807,
+        "oldValue": "",
+        "newValue": "G（高斯）"
+      }
+    ]
+  },
+  "teslaPreference": {
+    "value": "T（特斯拉）",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553807,
+        "oldValue": "",
+        "newValue": "T（特斯拉）"
+      }
+    ]
+  },
+  "earthHemisphere": {
+    "value": "地球半球",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553807,
+        "oldValue": "",
+        "newValue": "地球半球"
+      }
+    ]
+  },
+  "currentFlow": {
+    "value": "目前流动",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553807,
+        "oldValue": "",
+        "newValue": "目前流动"
+      }
+    ]
+  },
+  "electronPreference": {
+    "value": "电子",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553807,
+        "oldValue": "",
+        "newValue": "电子"
+      }
+    ]
+  },
+  "conventionalPreference": {
+    "value": "传统",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553807,
+        "oldValue": "",
+        "newValue": "传统"
+      }
+    ]
+  },
+  "acPowerSupply": {
+    "value": "交流电源",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553807,
+        "oldValue": "",
+        "newValue": "交流电源"
+      }
+    ]
+  },
+  "voltage": {
+    "value": "电压",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553807,
+        "oldValue": "",
+        "newValue": "电压"
+      }
+    ]
+  },
+  "pickupCoil": {
+    "value": "感应线圈",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553807,
+        "oldValue": "",
+        "newValue": "感应线圈"
+      }
+    ]
+  },
+  "barMagnet": {
+    "value": "条状磁铁",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553807,
+        "oldValue": "",
+        "newValue": "条状磁铁"
+      }
+    ]
+  },
+  "magneticField": {
+    "value": "磁场（B）",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553807,
+        "oldValue": "",
+        "newValue": "磁场（B）"
+      }
+    ]
+  },
+  "seeInside": {
+    "value": "查看内部",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553807,
+        "oldValue": "",
+        "newValue": "查看内部"
+      }
+    ]
+  },
+  "earth": {
+    "value": "地球",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553807,
+        "oldValue": "",
+        "newValue": "地球"
+      }
+    ]
+  },
+  "flipPolarity": {
+    "value": "翻转极性",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553807,
+        "oldValue": "",
+        "newValue": "翻转极性"
+      }
+    ]
+  },
+  "flipEarth": {
+    "value": "翻转地球",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553807,
+        "oldValue": "",
+        "newValue": "翻转地球"
+      }
+    ]
+  },
+  "symbol.B": {
+    "value": "B",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553807,
+        "oldValue": "",
+        "newValue": "B"
+      }
+    ]
+  },
+  "symbol.x": {
+    "value": "x",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553807,
+        "oldValue": "",
+        "newValue": "x"
+      }
+    ]
+  },
+  "symbol.y": {
+    "value": "y",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553807,
+        "oldValue": "",
+        "newValue": "y"
+      }
+    ]
+  },
+  "units.G": {
+    "value": "G",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553807,
+        "oldValue": "",
+        "newValue": "G"
+      }
+    ]
+  },
+  "units.T": {
+    "value": "T",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553807,
+        "oldValue": "",
+        "newValue": "T"
+      }
+    ]
+  },
+  "pattern.almostValueUnits": {
+    "value": "~ {{value}} {{units}}",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553807,
+        "oldValue": "",
+        "newValue": "~ {{value}} {{units}}"
+      }
+    ]
+  },
+  "pattern.valueDegrees": {
+    "value": "{{value}}°",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553807,
+        "oldValue": "",
+        "newValue": "{{value}}°"
+      }
+    ]
+  },
+  "electromagnet": {
+    "value": "电磁铁",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553807,
+        "oldValue": "",
+        "newValue": "电磁铁"
+      }
+    ]
+  },
+  "pattern.valuePercent": {
+    "value": "{{value}}%",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553807,
+        "oldValue": "",
+        "newValue": "{{value}}%"
+      }
+    ]
+  },
+  "lockToAxis": {
+    "value": "锁定到轴线",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553807,
+        "oldValue": "",
+        "newValue": "锁定到轴线"
+      }
+    ]
+  },
+  "compass": {
+    "value": "罗盘",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553807,
+        "oldValue": "",
+        "newValue": "罗盘"
+      }
+    ]
+  },
+  "fieldMeter": {
+    "value": "磁场计",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553807,
+        "oldValue": "",
+        "newValue": "磁场计"
+      }
+    ]
+  },
+  "loopArea": {
+    "value": "线圈区域：",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553807,
+        "oldValue": "",
+        "newValue": "线圈区域："
+      }
+    ]
+  },
+  "loops": {
+    "value": "线圈数：",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553807,
+        "oldValue": "",
+        "newValue": "线圈数："
+      }
+    ]
+  },
+  "indicator": {
+    "value": "指示器",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553807,
+        "oldValue": "",
+        "newValue": "指示器"
+      }
+    ]
+  },
+  "electrons": {
+    "value": "电子",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553807,
+        "oldValue": "",
+        "newValue": "电子"
+      }
+    ]
+  },
+  "conventionalCurrent": {
+    "value": "传统电流",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553807,
+        "oldValue": "",
+        "newValue": "传统电流"
+      }
+    ]
+  },
+  "strength": {
+    "value": "强度：",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553807,
+        "oldValue": "",
+        "newValue": "强度："
+      }
+    ]
+  },
+  "currentSource": {
+    "value": "电流来源",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553807,
+        "oldValue": "",
+        "newValue": "电流来源"
+      }
+    ]
+  },
+  "units.RPM": {
+    "value": "RPM",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553807,
+        "oldValue": "",
+        "newValue": "RPM"
+      }
+    ]
+  },
+  "faradays-electromagnetic-lab.title": {
+    "value": "Faraday's Electromagnetic Lab_法拉第电磁实验室",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553807,
+        "oldValue": "",
+        "newValue": "Faraday's Electromagnetic Lab_法拉第电磁实验室"
+      }
+    ]
+  }
+}

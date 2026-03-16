@@ -1,0 +1,673 @@
+{
+  "number-pairs.title": {
+    "value": "数字配对",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "数字配对"
+      }
+    ]
+  },
+  "screen.intro": {
+    "value": "介绍",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "介绍"
+      }
+    ]
+  },
+  "screen.sum": {
+    "value": "求和",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "求和"
+      }
+    ]
+  },
+  "screen.ten": {
+    "value": "十",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "十"
+      }
+    ]
+  },
+  "screen.twenty": {
+    "value": "二十",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "二十"
+      }
+    ]
+  },
+  "aNumber": {
+    "value": "一个数",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "一个数"
+      }
+    ]
+  },
+  "addends": {
+    "value": "加数",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "加数"
+      }
+    ]
+  },
+  "anotherNumber": {
+    "value": "另一个数",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "另一个数"
+      }
+    ]
+  },
+  "automaticallyHearPhrase": {
+    "value": "自动朗读短语",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "自动朗读短语"
+      }
+    ]
+  },
+  "automaticallyHearPhraseDescription": {
+    "value": "使用时自动听到短语更新。",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "使用时自动听到短语更新。"
+      }
+    ]
+  },
+  "barModel": {
+    "value": "条形模型",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "条形模型"
+      }
+    ]
+  },
+  "decompositionPhrasePattern": {
+    "value": "<total>{{total}}</total> 可以分成 <left>{{leftAddend}}</left> 和 <right>{{rightAddend}}</right>",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "<total>{{total}}</total> 可以分成 <left>{{leftAddend}}</left> 和 <right>{{rightAddend}}</right>"
+      }
+    ]
+  },
+  "decompositionPhraseSpeechPattern": {
+    "value": "{{total}} 可以分成 {{leftAddend}} 和 {{rightAddend}}",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "{{total}} 可以分成 {{leftAddend}} 和 {{rightAddend}}"
+      }
+    ]
+  },
+  "equation": {
+    "value": "等式",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "等式"
+      }
+    ]
+  },
+  "keyboardHelpDialog.adjustObjectsTitle": {
+    "value": "调整彩色物体的数量",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "调整彩色物体的数量"
+      }
+    ]
+  },
+  "keyboardHelpDialog.bead": {
+    "value": "珠子",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "珠子"
+      }
+    ]
+  },
+  "keyboardHelpDialog.beadHeading": {
+    "value": "珠子",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "珠子"
+      }
+    ]
+  },
+  "keyboardHelpDialog.changeKittenColor": {
+    "value": "更改小猫的颜色",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "更改小猫的颜色"
+      }
+    ]
+  },
+  "keyboardHelpDialog.countingObjectOrBead": {
+    "value": "苹果、数字或珠子",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "苹果、数字或珠子"
+      }
+    ]
+  },
+  "keyboardHelpDialog.countingObjectOrBeadHeading": {
+    "value": "苹果、数字或珠子",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "苹果、数字或珠子"
+      }
+    ]
+  },
+  "keyboardHelpDialog.introScreen.moveGrabbableItemHeading": {
+    "value": "移动已抓取的物体",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "移动已抓取的物体"
+      }
+    ]
+  },
+  "keyboardHelpDialog.jumpToFirstKitten": {
+    "value": "跳到第一只小猫",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "跳到第一只小猫"
+      }
+    ]
+  },
+  "keyboardHelpDialog.jumpToLastKitten": {
+    "value": "跳到最后一只小猫",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "跳到最后一只小猫"
+      }
+    ]
+  },
+  "keyboardHelpDialog.kittenSectionHeading": {
+    "value": "操作小猫",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "操作小猫"
+      }
+    ]
+  },
+  "keyboardHelpDialog.moveBeadsToOppositeSide": {
+    "value": "将珠子移到对面",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "将珠子移到对面"
+      }
+    ]
+  },
+  "keyboardHelpDialog.moveGrabbedObjectToOppositeSide": {
+    "value": "将已抓取的物体移到对面",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "将已抓取的物体移到对面"
+      }
+    ]
+  },
+  "keyboardHelpDialog.moveToLeftSidePattern": {
+    "value": "将已抓取的 {{items}} 移到左侧",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "将已抓取的 {{items}} 移到左侧"
+      }
+    ]
+  },
+  "keyboardHelpDialog.moveToRightSidePattern": {
+    "value": "将已抓取的 {{items}} 移到右侧",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "将已抓取的 {{items}} 移到右侧"
+      }
+    ]
+  },
+  "keyboardHelpDialog.numberOfObjects": {
+    "value": "物体数量",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "物体数量"
+      }
+    ]
+  },
+  "keyboardHelpDialog.object": {
+    "value": "物体",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "物体"
+      }
+    ]
+  },
+  "keyboardHelpDialog.objectHeading": {
+    "value": "物体",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "物体"
+      }
+    ]
+  },
+  "keyboardHelpDialog.sumScreen.moveGrabbableItemHeading": {
+    "value": "移动小猫或已抓取的珠子",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "移动小猫或已抓取的珠子"
+      }
+    ]
+  },
+  "keyboardHelpDialog.tenScreen.moveGrabbableItemHeading": {
+    "value": "移动小猫或已抓取的珠子",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "移动小猫或已抓取的珠子"
+      }
+    ]
+  },
+  "keyboardHelpDialog.twentyScreen.moveGrabbableItemHeading": {
+    "value": "在计数区域中移动已抓取的物体",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "在计数区域中移动已抓取的物体"
+      }
+    ]
+  },
+  "numberBond": {
+    "value": "数字纽带",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "数字纽带"
+      }
+    ]
+  },
+  "numberModelType": {
+    "value": "数字模型类型",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "数字模型类型"
+      }
+    ]
+  },
+  "numberModelTypeDescription": {
+    "value": "在传统圆形展示和类似的条形模型之间选择。",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "在传统圆形展示和类似的条形模型之间选择。"
+      }
+    ]
+  },
+  "phrase": {
+    "value": "短语",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "短语"
+      }
+    ]
+  },
+  "someNumber": {
+    "value": "一个新数",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "一个新数"
+      }
+    ]
+  },
+  "sumPhrasePattern": {
+    "value": "<left>{{leftAddend}}</left> 加 <right>{{rightAddend}}</right> 等于 <total>{{total}}</total>",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "<left>{{leftAddend}}</left> 加 <right>{{rightAddend}}</right> 等于 <total>{{total}}</total>"
+      }
+    ]
+  },
+  "sumPhraseSpeechPattern": {
+    "value": "{{leftAddend}} 加 {{rightAddend}} 等于 {{total}}",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "{{leftAddend}} 加 {{rightAddend}} 等于 {{total}}"
+      }
+    ]
+  },
+  "sumScreenNumberModelOrientation": {
+    "value": "数值方向",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "数值方向"
+      }
+    ]
+  },
+  "sumScreenNumberModelOrientationDescription": {
+    "value": "仅在数字屏幕上，更改数字分解模型的方向。",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "仅在数字屏幕上，更改数字分解模型的方向。"
+      }
+    ]
+  },
+  "tickNumbers": {
+    "value": "轴刻度数字",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "轴刻度数字"
+      }
+    ]
+  },
+  "total": {
+    "value": "总计",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "总计"
+      }
+    ]
+  },
+  "totalJump": {
+    "value": "总跳跃",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "总跳跃"
+      }
+    ]
+  },
+  "screen.game": {
+    "value": "游戏",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "游戏"
+      }
+    ]
+  },
+  "barModelLowercase": {
+    "value": "条形模型",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "条形模型"
+      }
+    ]
+  },
+  "gameScreen.infoDialog.levelWithDescription": {
+    "value": "第 {{level}} 关：{{description}}",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "第 {{level}} 关：{{description}}"
+      }
+    ]
+  },
+  "gameScreen.levelDescriptions.level1": {
+    "value": "在 {{numberModelType}} 中填写缺失的数字（{{yValueMin}}-{{yValueMax}}）",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "在 {{numberModelType}} 中填写缺失的数字（{{yValueMin}}-{{yValueMax}}）"
+      }
+    ]
+  },
+  "gameScreen.levelDescriptions.level2": {
+    "value": "在 {{numberModelType}} 中填写缺失的数字（仅 {{yValue}}）",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "在 {{numberModelType}} 中填写缺失的数字（仅 {{yValue}}）"
+      }
+    ]
+  },
+  "gameScreen.levelDescriptions.level3": {
+    "value": "在分解等式中填写缺失的数字（仅 {{yValue}}）",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "在分解等式中填写缺失的数字（仅 {{yValue}}）"
+      }
+    ]
+  },
+  "gameScreen.levelDescriptions.level4": {
+    "value": "在求和等式中填写缺失的数字（仅 {{yValue}}）",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "在求和等式中填写缺失的数字（仅 {{yValue}}）"
+      }
+    ]
+  },
+  "gameScreen.levelDescriptions.level5": {
+    "value": "在 {{numberModelType}} 中填写缺失的数字（{{yValueMin}}-{{yValueMax}}）",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "在 {{numberModelType}} 中填写缺失的数字（{{yValueMin}}-{{yValueMax}}）"
+      }
+    ]
+  },
+  "gameScreen.levelDescriptions.level6": {
+    "value": "在分解等式中填写缺失的数字（{{yValueMin}}-{{yValueMax}}）",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "在分解等式中填写缺失的数字（{{yValueMin}}-{{yValueMax}}）"
+      }
+    ]
+  },
+  "gameScreen.levelDescriptions.level7": {
+    "value": "在求和等式中填写缺失的加数或结果（{{yValueMin}}-{{yValueMax}}）",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "在求和等式中填写缺失的加数或结果（{{yValueMin}}-{{yValueMax}}）"
+      }
+    ]
+  },
+  "gameScreen.levelDescriptions.level8": {
+    "value": "数轴上的等式（{{yValueMin}}-{{yValueMax}}）",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "数轴上的等式（{{yValueMin}}-{{yValueMax}}）"
+      }
+    ]
+  },
+  "keyboardHelpDialog.gameScreen.moveKittenItemHeading": {
+    "value": "移动小猫",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "移动小猫"
+      }
+    ]
+  },
+  "levelPattern": {
+    "value": "第 {{level}} 关",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "第 {{level}} 关"
+      }
+    ]
+  },
+  "numberBondLowercase": {
+    "value": "数字纽带",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "数字纽带"
+      }
+    ]
+  },
+  "tryAgain": {
+    "value": "再试一次",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773334429313,
+        "oldValue": "",
+        "newValue": "再试一次"
+      }
+    ]
+  }
+}

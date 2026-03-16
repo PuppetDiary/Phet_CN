@@ -1,0 +1,165 @@
+// Copyright 2023-2026, University of Colorado Boulder
+
+/**
+ * ScrubberNode is the base class for the view of scrubbers. It includes a shaded sphere 'handle' for dragging the
+ * scrubber to modify its x position, and a vertical line that extends through all graphs.
+ *
+ * @author Chris Malley (PixelZoom, Inc.)
+ */
+
+import { TReadOnlyProperty } from '../../../../axon/js/TReadOnlyProperty.js';
+import ChartTransform from '../../../../bamboo/js/ChartTransform.js';
+import optionize from '../../../../phet-core/js/optionize.js';
+import PickOptional from '../../../../phet-core/js/types/PickOptional.js';
+import PickRequired from '../../../../phet-core/js/types/PickRequired.js';
+import ShadedSphereNode from '../../../../scenery-phet/js/ShadedSphereNode.js';
+import VBox from '../../../../scenery/js/layout/nodes/VBox.js';
+import Line from '../../../../scenery/js/nodes/Line.js';
+import Node, { NodeOptions } from '../../../../scenery/js/nodes/Node.js';
+import TColor from '../../../../scenery/js/util/TColor.js';
+import calculusGrapher from '../../calculusGrapher.js';
+import CalculusGrapherConstants from '../CalculusGrapherConstants.js';
+import AncillaryTool from '../model/AncillaryTool.js';
+import ExplorationToolDescriber from './description/ExplorationToolDescriber.js';
+import ScrubberHandleNode from './ScrubberHandleNode.js';
+
+type SelfOptions = {
+  handleColor?: TColor; // color of the scrubber's handle
+  lineStroke?: TColor; // color used to stroke the vertical line
+  lineWidth?: number; // width of the vertical line
+  lineDash?: number[]; // line dash for the vertical line, [] is a solid line
+
+  // The top and bottom y-coordinates of the vertical line, in GraphsNode view coordinate frame.
+  lineTop?: number;
+  lineBottom?: number;
+
+  // Whether to instrument handleNode.visibleProperty
+  // See https://github.com/phetsims/calculus-grapher/issues/281#issuecomment-1472217525
+  phetioHandleNodeVisiblePropertyInstrumented?: boolean;
+
+  // Description for handleNode.
+  handleAccessibleNameProperty: TReadOnlyProperty<string>;
+  handleAccessibleHelpTextProperty: TReadOnlyProperty<string>;
+};
+
+export type ScrubberNodeOptions = SelfOptions &
+  PickOptional<NodeOptions, 'pickable'> &
+  PickRequired<NodeOptions, 'tandem' | 'visibleProperty'>;
+
+// Options for the createIcon method.
+type CreateIconOptions = {
+  handleColor: TColor;
+  lineStroke: TColor;
+};
+
+export default abstract class ScrubberNode extends Node {
+
+  // vertical line displayed by the scrubber
+  protected readonly line: Line;
+
+  // spherical handle for dragging the scrubber
+  protected readonly handleNode: Node;
+
+  private readonly describer: ExplorationToolDescriber;
+
+  protected constructor( scrubber: AncillaryTool,
+                         describer: ExplorationToolDescriber,
+                         chartTransform: ChartTransform,
+                         providedOptions: ScrubberNodeOptions ) {
+
+    const options = optionize<ScrubberNodeOptions, SelfOptions, NodeOptions>()( {
+
+      // SelfOptions
+      handleColor: 'black',
+      lineStroke: 'black',
+      lineWidth: 1,
+      lineDash: [ 6, 6 ],
+      lineTop: 0,
+      lineBottom: 100,
+      phetioHandleNodeVisiblePropertyInstrumented: true,
+
+      // NodeOptions
+      isDisposable: false
+    }, providedOptions );
+
+    super( options );
+
+    this.describer = describer;
+
+    // vertical line
+    const line = new Line( 0, options.lineTop, 0, options.lineBottom, {
+      stroke: options.lineStroke,
+      lineWidth: options.lineWidth,
+      lineDash: options.lineDash,
+      pickable: false // optimization, see https://github.com/phetsims/calculus-grapher/issues/210
+    } );
+
+    // Draggable handle, for translating x
+    const handleNode = new ScrubberHandleNode( scrubber.xProperty, chartTransform, this, {
+      yModel: chartTransform.modelYRange.min,
+      mainColor: options.handleColor,
+      accessibleName: options.handleAccessibleNameProperty,
+      accessibleHelpText: options.handleAccessibleHelpTextProperty,
+      tandem: options.tandem.createTandem( 'handleNode' ),
+      phetioVisiblePropertyInstrumented: options.phetioHandleNodeVisiblePropertyInstrumented
+    } );
+
+    this.children = [ line, handleNode ];
+
+    this.line = line;
+    this.handleNode = handleNode;
+
+    scrubber.xProperty.link( x => {
+      this.line.x = chartTransform.modelToViewX( x );
+    } );
+
+    // Keep the handle centered at the bottom of the line.
+    line.boundsProperty.link( () => {
+      handleNode.centerX = line.centerX;
+      handleNode.centerY = line.bottom;
+    } );
+
+    this.addLinkedElement( scrubber );
+
+    handleNode.focusedProperty.lazyLink( focused => {
+      focused && this.doAccessibleObjectResponse();
+    } );
+  }
+
+  /**
+   * Sets the top and bottom y-coordinates of the line, in GraphsNode view coordinate frame.
+   */
+  public setLineTopAndBottom( yTop: number, yBottom: number ): void {
+    this.line.setY1( yTop );
+    this.line.setY2( yBottom );
+  }
+
+  /**
+   * Adds an object response when the scrubber gets focused or is moved.
+   */
+  public doAccessibleObjectResponse(): void {
+    this.addAccessibleObjectResponse( this.describer.getAccessibleObjectResponse(), {
+      interruptible: true // see https://github.com/phetsims/calculus-grapher/issues/390
+    } );
+  }
+
+  /**
+   * Creates an icon for a scrubber.
+   */
+  public static createIcon( options: CreateIconOptions ): Node {
+
+    const handleIcon = new ShadedSphereNode( 2 * CalculusGrapherConstants.SCRUBBER_RADIUS, {
+      mainColor: options.handleColor
+    } );
+
+    const line = new Line( 0, 0, 0, 11, {
+      stroke: options.lineStroke
+    } );
+
+    return new VBox( {
+      children: [ line, handleIcon ]
+    } );
+  }
+}
+
+calculusGrapher.register( 'ScrubberNode', ScrubberNode );

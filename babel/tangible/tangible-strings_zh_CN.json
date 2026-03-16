@@ -1,0 +1,145 @@
+{
+  "cameraInputRequiresInternet": {
+    "value": "摄影机输入需要网际网路连线。",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553821,
+        "oldValue": "",
+        "newValue": "摄影机输入需要网际网路连线。"
+      }
+    ]
+  },
+  "noMediaDevices": {
+    "value": "没有任何媒体装置",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553821,
+        "oldValue": "",
+        "newValue": "没有任何媒体装置"
+      }
+    ]
+  },
+  "noMediaDevice": {
+    "value": "没有可用的媒体装置。是否被其它程式占用了？",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553821,
+        "oldValue": "",
+        "newValue": "没有可用的媒体装置。是否被其它程式占用了？"
+      }
+    ]
+  },
+  "errorLoadingCameraInputHands": {
+    "value": "载入摄影机输入时发生错误：手势",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553821,
+        "oldValue": "",
+        "newValue": "载入摄影机输入时发生错误：手势"
+      }
+    ]
+  },
+  "inputDevice": {
+    "value": "输入装置：",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553821,
+        "oldValue": "",
+        "newValue": "输入装置："
+      }
+    ]
+  },
+  "cameraInputHands": {
+    "value": "摄影机输入：手势",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553821,
+        "oldValue": "",
+        "newValue": "摄影机输入：手势"
+      }
+    ]
+  },
+  "cameraInputHandsHelpText": {
+    "value": "使用自订手势移动来控制模拟教材。",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553821,
+        "oldValue": "",
+        "newValue": "使用自订手势移动来控制模拟教材。"
+      }
+    ]
+  },
+  "troubleshootingCameraInputHands": {
+    "value": "找出摄影机输入的问题：手势",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553821,
+        "oldValue": "",
+        "newValue": "找出摄影机输入的问题：手势"
+      }
+    ]
+  },
+  "troubleshootingParagraph": {
+    "value": "如果需要，使用下方的选项来变更模拟教材的手势以符合您的需求。",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553821,
+        "oldValue": "",
+        "newValue": "如果需要，使用下方的选项来变更模拟教材的手势以符合您的需求。"
+      }
+    ]
+  },
+  "cameraInputFlipYHeading": {
+    "value": "您的手势是否对映到错误的模拟教材的手势？",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553821,
+        "oldValue": "",
+        "newValue": "您的手势是否对映到错误的模拟教材的手势？"
+      }
+    ]
+  },
+  "cameraInputFlipY": {
+    "value": "翻转摄影机的 Y 轴。",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553821,
+        "oldValue": "",
+        "newValue": "翻转摄影机的 Y 轴。"
+      }
+    ]
+  },
+  "cameraInputFlipXHeading": {
+    "value": "您的手势移动是否移错方向了？",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553821,
+        "oldValue": "",
+        "newValue": "您的手势移动是否移错方向了？"
+      }
+    ]
+  },
+  "cameraInputFlipX": {
+    "value": "翻转摄影机的 X 轴。",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553821,
+        "oldValue": "",
+        "newValue": "翻转摄影机的 X 轴。"
+      }
+    ]
+  }
+}
