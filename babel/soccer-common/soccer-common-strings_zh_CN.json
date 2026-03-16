@@ -42,5 +42,20 @@
         "newValue": "至少要踢一次球吧"
       }
     ]
+  },
+  "kick": {
+    "value": "踢球"
+  },
+  "keyboardHelpDialog.grabOrReleaseItemHeading": {
+    "value": "足球"
+  },
+  "keyboardHelpDialog.grabOrReleaseItem": {
+    "value": "足球"
+  },
+  "keyboardHelpDialog.moveHeading": {
+    "value": "移动足球"
+  },
+  "keyboardHelpDialog.moveDescription": {
+    "value": "移动已抓取的足球"
   }
 }

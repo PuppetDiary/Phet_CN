@@ -652,5 +652,92 @@
         "explanation": null
       }
     ]
+  },
+  "circuit-construction-kit-common.title": {
+    "value": "电路组建实验"
+  },
+  "schematicStandard": {
+    "value": "电路图标准"
+  },
+  "realBulb": {
+    "value": "真实灯泡"
+  },
+  "ieee": {
+    "value": "IEEE"
+  },
+  "iec": {
+    "value": "IEC"
+  },
+  "british": {
+    "value": "英国标准"
+  },
+  "advanced": {
+    "value": "高级"
+  },
+  "inductor": {
+    "value": "电感"
+  },
+  "capacitance": {
+    "value": "电容量"
+  },
+  "inductance": {
+    "value": "电感量"
+  },
+  "currentRating": {
+    "value": "额定电流"
+  },
+  "phaseShift": {
+    "value": "相移"
+  },
+  "thinPencil": {
+    "value": "细铅笔"
+  },
+  "sourceResistance": {
+    "value": "源电阻"
+  },
+  "addRealBulbs": {
+    "value": "添加真实灯泡"
+  },
+  "voltageChart": {
+    "value": "电压图表"
+  },
+  "currentChart": {
+    "value": "电流图表"
+  },
+  "ohms": {
+    "value": "欧姆"
+  },
+  "frequencyHzValuePattern": {
+    "value": "{{frequency}} Hz"
+  },
+  "capacitanceUnits": {
+    "value": "{{capacitance}} F"
+  },
+  "inductanceUnits": {
+    "value": "{{inductance}} H"
+  },
+  "fuseValue": {
+    "value": "{{resistance}} mΩ<br><span style=\"font-size: 16px;\">≤ {{currentRating}} A</span>"
+  },
+  "capacitanceFaradsSymbol": {
+    "value": "{{resistance}} F"
+  },
+  "inductanceHenriesSymbol": {
+    "value": "{{resistance}} H"
+  },
+  "magnitude": {
+    "value": "大小"
+  },
+  "signed": {
+    "value": "有符号"
+  },
+  "extremeBattery": {
+    "value": "极端电池"
+  },
+  "extremeBulb": {
+    "value": "极端灯泡"
+  },
+  "extremeResistor": {
+    "value": "极端电阻"
   }
 }

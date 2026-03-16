@@ -262,5 +262,8 @@
         "explanation": null
       }
     ]
+  },
+  "generator": {
+    "value": "发电机"
   }
 }

@@ -493,5 +493,92 @@
         "newValue": "预设温度单位"
       }
     ]
+  },
+  "ButtonNode.ReturnMolecule": {
+    "value": "返回分子"
+  },
+  "ControlPanel.CarbonDioxide": {
+    "value": "二氧化碳"
+  },
+  "ControlPanel.CarbonMonoxide": {
+    "value": "一氧化碳"
+  },
+  "ControlPanel.Methane": {
+    "value": "甲烷"
+  },
+  "ControlPanel.Nitrogen": {
+    "value": "氮"
+  },
+  "ControlPanel.NitrogenDioxide": {
+    "value": "二氧化氮"
+  },
+  "ControlPanel.Oxygen": {
+    "value": "氧"
+  },
+  "ControlPanel.Ozone": {
+    "value": "臭氧"
+  },
+  "ControlPanel.Water": {
+    "value": "水"
+  },
+  "QuadWavelengthSelector.HigherEnergy": {
+    "value": "较高的能量"
+  },
+  "QuadWavelengthSelector.Infrared": {
+    "value": "红外线"
+  },
+  "QuadWavelengthSelector.Microwave": {
+    "value": "微波"
+  },
+  "QuadWavelengthSelector.Ultraviolet": {
+    "value": "紫外线"
+  },
+  "QuadWavelengthSelector.Visible": {
+    "value": "可见光"
+  },
+  "SpectrumWindow.buttonCaption": {
+    "value": "显示光谱"
+  },
+  "SpectrumWindow.cyclesPerSecondUnits": {
+    "value": "赫兹"
+  },
+  "SpectrumWindow.frequencyArrowLabel": {
+    "value": "增加中的频率和能量"
+  },
+  "SpectrumWindow.gammaRayBandLabel": {
+    "value": "伽马射线"
+  },
+  "SpectrumWindow.infraredBandLabel": {
+    "value": "红外线"
+  },
+  "SpectrumWindow.metersUnits": {
+    "value": "m"
+  },
+  "SpectrumWindow.microwaveBandLabel": {
+    "value": "微波"
+  },
+  "SpectrumWindow.radioBandLabel": {
+    "value": "无线电波"
+  },
+  "SpectrumWindow.title": {
+    "value": "光谱"
+  },
+  "SpectrumWindow.ultravioletBandLabel": {
+    "value": "紫外线"
+  },
+  "SpectrumWindow.visibleBandLabel": {
+    "value": "可见光"
+  },
+  "SpectrumWindow.wavelengthArrowLabel": {
+    "value": "增加中的波长"
+  },
+  "SpectrumWindow.xrayBandLabel": {
+    "value": "X射线"
+  },
+  "molecularNamePattern": {
+    "value": "{0} ({1})"
+  },
+  "openSciEd.energySource": {
+    "value": "来自地球表面的能量"
   }
 }

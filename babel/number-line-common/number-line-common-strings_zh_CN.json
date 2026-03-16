@@ -10,5 +10,8 @@
         "explanation": null
       }
     ]
+  },
+  "pointsOffScale": {
+    "value": "点<br>超出范围！"
   }
 }

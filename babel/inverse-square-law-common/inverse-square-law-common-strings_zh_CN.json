@@ -106,5 +106,14 @@
         "explanation": null
       }
     ]
+  },
+  "scientificNotation": {
+    "value": "科学记数法"
+  },
+  "decimalNotation": {
+    "value": "十进制记数法"
+  },
+  "hidden": {
+    "value": "隐藏"
   }
 }

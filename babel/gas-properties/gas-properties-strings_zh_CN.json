@@ -665,5 +665,14 @@
         "explanation": null
       }
     ]
+  },
+  "wallVelocity": {
+    "value": "壁速"
+  },
+  "pressureNoiseDescription": {
+    "value": "在施加力时播放压力噪音声音。"
+  },
+  "keyboardHelpDialog.changeUnits": {
+    "value": "更改单位"
   }
 }

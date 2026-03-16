@@ -47,6 +47,9 @@
       }
     ]
   },
+  "playTone": {
+    "value": "播放音调"
+  },
   "electricField": {
     "value": "电场",
     "history": [
@@ -94,6 +97,9 @@
         "explanation": null
       }
     ]
+  },
+  "soundEffect": {
+    "value": "声音效果"
   },
   "millisecondConversion": {
     "value": "1 毫秒 = 10<sup>-3</sup> 秒",

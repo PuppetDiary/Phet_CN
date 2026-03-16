@@ -570,5 +570,59 @@
         "newValue": "Build a Nucleus_建立原子核"
       }
     ]
+  },
+  "screen.chartIntro": {
+    "value": "图表介绍"
+  },
+  "energy": {
+    "value": "能量"
+  },
+  "screen.decay": {
+    "value": "衰变"
+  },
+  "unknownSpacePattern": {
+    "value": "未知{{space}}"
+  },
+  "nameMassPattern": {
+    "value": "{{name}} - {{mass}}"
+  },
+  "elementDoesNotFormPattern": {
+    "value": "{{nameMass}} {{doesNotForm}}"
+  },
+  "zeroParticlesDoesNotFormPattern": {
+    "value": "{{mass}} 个{{particleType}} {{doesNotForm}}"
+  },
+  "nuclearShellModel": {
+    "value": "核壳层模型"
+  },
+  "partialNuclideChart": {
+    "value": "部分核素图"
+  },
+  "axis.protonNumber": {
+    "value": "质子数"
+  },
+  "axis.neutronNumber": {
+    "value": "中子数"
+  },
+  "mostLikelyDecayType": {
+    "value": "最可能的衰变类型"
+  },
+  "percentageInParenthesesPattern": {
+    "value": "({{decayLikelihoodPercent}}%)"
+  },
+  "magicNumbers": {
+    "value": "幻数"
+  },
+  "fullChartInfoPanelTextPattern": {
+    "value": "完整的交互式核素图及其衰变信息可在卡尔加里大学的能源教育项目中找到，请参见{{link}}。"
+  },
+  "fullChartLowercase": {
+    "value": "完整图表"
+  },
+  "fullNuclideChart": {
+    "value": "完整核素图"
+  },
+  "fullChartCapitalized": {
+    "value": "完整图表"
   }
 }

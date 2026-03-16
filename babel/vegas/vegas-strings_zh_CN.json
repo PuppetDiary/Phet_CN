@@ -662,6 +662,9 @@
       }
     ]
   },
+  "chooseYourLevel": {
+    "value": "选择你的关卡！"
+  },
   "title.gameOver": {
     "value": "游戏结束",
     "history": [

@@ -166,5 +166,26 @@
         "explanation": null
       }
     ]
+  },
+  "valuePercentPattern": {
+    "value": "{{value}}%"
+  },
+  "red": {
+    "value": "红色"
+  },
+  "green": {
+    "value": "绿色"
+  },
+  "blue": {
+    "value": "蓝色"
+  },
+  "redLight": {
+    "value": "红光"
+  },
+  "greenLight": {
+    "value": "绿光"
+  },
+  "blueLight": {
+    "value": "蓝光"
   }
 }

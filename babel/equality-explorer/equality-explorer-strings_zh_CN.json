@@ -274,5 +274,20 @@
         "explanation": null
       }
     ]
+  },
+  "level1Description": {
+    "value": "级别 1"
+  },
+  "level2Description": {
+    "value": "级别 2"
+  },
+  "level3Description": {
+    "value": "级别 3"
+  },
+  "level4Description": {
+    "value": "级别 4"
+  },
+  "level5Description": {
+    "value": "级别 5"
   }
 }

@@ -305,5 +305,326 @@
         "explanation": null
       }
     ]
+  },
+  "potassium": {
+    "value": "钾"
+  },
+  "calcium": {
+    "value": "钙"
+  },
+  "scandium": {
+    "value": "钪"
+  },
+  "titanium": {
+    "value": "钛"
+  },
+  "vanadium": {
+    "value": "钒"
+  },
+  "chromium": {
+    "value": "铬"
+  },
+  "manganese": {
+    "value": "锰"
+  },
+  "iron": {
+    "value": "铁"
+  },
+  "cobalt": {
+    "value": "钴"
+  },
+  "nickel": {
+    "value": "镍"
+  },
+  "copper": {
+    "value": "铜"
+  },
+  "zinc": {
+    "value": "锌"
+  },
+  "gallium": {
+    "value": "镓"
+  },
+  "germanium": {
+    "value": "锗"
+  },
+  "arsenic": {
+    "value": "砷"
+  },
+  "selenium": {
+    "value": "硒"
+  },
+  "bromine": {
+    "value": "溴"
+  },
+  "krypton": {
+    "value": "氪"
+  },
+  "rubidium": {
+    "value": "铷"
+  },
+  "strontium": {
+    "value": "锶"
+  },
+  "yttrium": {
+    "value": "钇"
+  },
+  "zirconium": {
+    "value": "锆"
+  },
+  "niobium": {
+    "value": "铌"
+  },
+  "molybdenum": {
+    "value": "钼"
+  },
+  "technetium": {
+    "value": "锝"
+  },
+  "ruthenium": {
+    "value": "钌"
+  },
+  "rhodium": {
+    "value": "铑"
+  },
+  "palladium": {
+    "value": "钯"
+  },
+  "silver": {
+    "value": "银"
+  },
+  "cadmium": {
+    "value": "镉"
+  },
+  "indium": {
+    "value": "铟"
+  },
+  "tin": {
+    "value": "锡"
+  },
+  "antimony": {
+    "value": "锑"
+  },
+  "tellurium": {
+    "value": "碲"
+  },
+  "iodine": {
+    "value": "碘"
+  },
+  "xenon": {
+    "value": "氙"
+  },
+  "cesium": {
+    "value": "铯"
+  },
+  "barium": {
+    "value": "钡"
+  },
+  "lanthanum": {
+    "value": "镧"
+  },
+  "cerium": {
+    "value": "铈"
+  },
+  "praseodymium": {
+    "value": "镨"
+  },
+  "neodymium": {
+    "value": "钕"
+  },
+  "promethium": {
+    "value": "钷"
+  },
+  "samarium": {
+    "value": "钐"
+  },
+  "europium": {
+    "value": "铕"
+  },
+  "gadolinium": {
+    "value": "钆"
+  },
+  "terbium": {
+    "value": "铽"
+  },
+  "dysprosium": {
+    "value": "镝"
+  },
+  "holmium": {
+    "value": "钬"
+  },
+  "erbium": {
+    "value": "铒"
+  },
+  "thulium": {
+    "value": "铥"
+  },
+  "ytterbium": {
+    "value": "镱"
+  },
+  "lutetium": {
+    "value": "镥"
+  },
+  "hafnium": {
+    "value": "铪"
+  },
+  "tantalum": {
+    "value": "钽"
+  },
+  "tungsten": {
+    "value": "钨"
+  },
+  "rhenium": {
+    "value": "铼"
+  },
+  "osmium": {
+    "value": "锇"
+  },
+  "iridium": {
+    "value": "铱"
+  },
+  "platinum": {
+    "value": "铂"
+  },
+  "gold": {
+    "value": "金"
+  },
+  "mercury": {
+    "value": "汞"
+  },
+  "thallium": {
+    "value": "铊"
+  },
+  "lead": {
+    "value": "铅"
+  },
+  "bismuth": {
+    "value": "铋"
+  },
+  "polonium": {
+    "value": "钋"
+  },
+  "astatine": {
+    "value": "砹"
+  },
+  "radon": {
+    "value": "氡"
+  },
+  "francium": {
+    "value": "钫"
+  },
+  "radium": {
+    "value": "镭"
+  },
+  "actinium": {
+    "value": "锕"
+  },
+  "thorium": {
+    "value": "钍"
+  },
+  "protactinium": {
+    "value": "镤"
+  },
+  "uranium": {
+    "value": "铀"
+  },
+  "neptunium": {
+    "value": "镎"
+  },
+  "plutonium": {
+    "value": "钚"
+  },
+  "americium": {
+    "value": "镅"
+  },
+  "curium": {
+    "value": "锔"
+  },
+  "berkelium": {
+    "value": "锫"
+  },
+  "californium": {
+    "value": "锎"
+  },
+  "einsteinium": {
+    "value": "锿"
+  },
+  "fermium": {
+    "value": "镄"
+  },
+  "mendelevium": {
+    "value": "钔"
+  },
+  "nobelium": {
+    "value": "锘"
+  },
+  "lawrencium": {
+    "value": "铹"
+  },
+  "rutherfordium": {
+    "value": "𬬻"
+  },
+  "dubnium": {
+    "value": "𬭊"
+  },
+  "seaborgium": {
+    "value": "𬭳"
+  },
+  "bohrium": {
+    "value": "𬭛"
+  },
+  "hassium": {
+    "value": "𬭶"
+  },
+  "meitnerium": {
+    "value": "鿏"
+  },
+  "darmstadtium": {
+    "value": "鿔"
+  },
+  "roentgenium": {
+    "value": "𬬭"
+  },
+  "copernicium": {
+    "value": "鿋"
+  },
+  "nihonium": {
+    "value": "鿖"
+  },
+  "flerovium": {
+    "value": "𬬿"
+  },
+  "moscovium": {
+    "value": "镆"
+  },
+  "livermorium": {
+    "value": "𬬺"
+  },
+  "ununseptium": {
+    "value": "鿬"
+  },
+  "ununoctium": {
+    "value": "鿫"
+  },
+  "ununbium": {
+    "value": "鿋"
+  },
+  "ununtrium": {
+    "value": "鿖"
+  },
+  "ununpentium": {
+    "value": "镆"
+  },
+  "tennessine": {
+    "value": "鿬"
+  },
+  "oganesson": {
+    "value": "鿫"
+  },
+  "minusSignIon": {
+    "value": "负离子"
+  },
+  "positiveSignIon": {
+    "value": "正离子"
   }
 }

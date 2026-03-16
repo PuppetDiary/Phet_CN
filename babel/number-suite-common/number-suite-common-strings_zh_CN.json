@@ -251,5 +251,38 @@
         "newValue": "总共"
       }
     ]
+  },
+  "screen.lab": {
+    "value": "实验室"
+  },
+  "secondLanguage": {
+    "value": "第二语言"
+  },
+  "showOnes": {
+    "value": "显示个位"
+  },
+  "secondLanguageDescription": {
+    "value": "选择第二语言以支持多语言学习。"
+  },
+  "languageTitle": {
+    "value": "语言"
+  },
+  "voice": {
+    "value": "语音"
+  },
+  "toDisplayASecondLanguageDescription": {
+    "value": "若要显示第二语言，请在以下网址运行此模拟的多语言版本："
+  },
+  "showOnesDescription": {
+    "value": "在实验室屏幕上包含纸质数字。"
+  },
+  "noVoiceFoundDescription": {
+    "value": "在此设备上未找到所选语言的语音。"
+  },
+  "yourDeviceMaySupportDescription": {
+    "value": "您的设备可能支持为您的语言下载额外的语音。"
+  },
+  "oneTwoThree": {
+    "value": "1 2 3"
   }
 }

@@ -142,5 +142,17 @@
         "explanation": null
       }
     ]
+  },
+  "units": {
+    "value": "单位"
+  },
+  "currentAmpUnits": {
+    "value": "A"
+  },
+  "milliampsMA": {
+    "value": "毫安 (mA)"
+  },
+  "ampsA": {
+    "value": "安培 (A)"
   }
 }

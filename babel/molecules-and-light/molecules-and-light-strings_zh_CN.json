@@ -360,5 +360,23 @@
         "explanation": null
       }
     ]
+  },
+  "ControlPanel.Methane": {
+    "value": "甲烷"
+  },
+  "keyboardHelpDialog.observationWindow": {
+    "value": "观察窗口"
+  },
+  "keyboardHelpDialog.turnLightSourceOnOrOff": {
+    "value": "开启或关闭光源"
+  },
+  "keyboardHelpDialog.pauseOrPlayShortcut": {
+    "value": "暂停或播放观察窗口中的动作"
+  },
+  "keyboardHelpDialog.stepForwardShortcut": {
+    "value": "当动作暂停时以更大步长向前步进"
+  },
+  "openSciEd.energySource": {
+    "value": "来自地球表面的能量"
   }
 }

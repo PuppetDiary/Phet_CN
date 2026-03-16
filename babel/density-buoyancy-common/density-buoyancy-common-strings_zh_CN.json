@@ -823,5 +823,218 @@
         "newValue": "{{value}} 千克/升(kg/L)"
       }
     ]
+  },
+  "shape.block": {
+    "value": "方块"
+  },
+  "shape.cone": {
+    "value": "圆锥体"
+  },
+  "shape.ellipsoid": {
+    "value": "椭球体"
+  },
+  "shape.horizontalCylinder": {
+    "value": "水平圆柱体"
+  },
+  "shape.invertedCone": {
+    "value": "倒圆锥体"
+  },
+  "shape.verticalCylinder": {
+    "value": "竖直圆柱体"
+  },
+  "shape.duck": {
+    "value": "鸭子"
+  },
+  "decimetersCubedPattern": {
+    "value": "{{decimetersCubed}} dm³"
+  },
+  "forces": {
+    "value": "力"
+  },
+  "buoyancy": {
+    "value": "浮力"
+  },
+  "contact": {
+    "value": "接触力"
+  },
+  "forceValues": {
+    "value": "力的数值"
+  },
+  "kilogramsPerDecimeterCubedPattern": {
+    "value": "{{value}} kg/dm³"
+  },
+  "fluidDensity": {
+    "value": "流体密度"
+  },
+  "whatIsTheFluidDensity": {
+    "value": "流体密度是多少？"
+  },
+  "percentSubmerged": {
+    "value": "浸没百分比"
+  },
+  "fluidDisplaced": {
+    "value": "排开液体"
+  },
+  "material.boatHull": {
+    "value": "船体"
+  },
+  "material.concrete": {
+    "value": "混凝土"
+  },
+  "material.fluidA": {
+    "value": "流体 A"
+  },
+  "material.fluidB": {
+    "value": "流体 B"
+  },
+  "material.fluidC": {
+    "value": "流体 C"
+  },
+  "material.fluidD": {
+    "value": "流体 D"
+  },
+  "material.fluidE": {
+    "value": "流体 E"
+  },
+  "material.fluidF": {
+    "value": "流体 F"
+  },
+  "material.materialR": {
+    "value": "材料 R"
+  },
+  "material.materialS": {
+    "value": "材料 S"
+  },
+  "material.materialT": {
+    "value": "材料 T"
+  },
+  "material.materialU": {
+    "value": "材料 U"
+  },
+  "material.materialV": {
+    "value": "材料 V"
+  },
+  "material.materialW": {
+    "value": "材料 W"
+  },
+  "material.materialX": {
+    "value": "材料 X"
+  },
+  "material.materialY": {
+    "value": "材料 Y"
+  },
+  "material.pvc": {
+    "value": "PVC"
+  },
+  "shapeTagPattern": {
+    "value": "形状 {{tag}}"
+  },
+  "materialInside": {
+    "value": "内部材料"
+  },
+  "airVolume": {
+    "value": "空气体积"
+  },
+  "boatVolume": {
+    "value": "船体体积"
+  },
+  "bottle": {
+    "value": "瓶子"
+  },
+  "boat": {
+    "value": "船"
+  },
+  "N": {
+    "value": "N"
+  },
+  "gravity.name": {
+    "value": "重力"
+  },
+  "massValues": {
+    "value": "质量数值"
+  },
+  "metersPerSecondSquaredPattern": {
+    "value": "{{value}} m/s²"
+  },
+  "fluid": {
+    "value": "流体"
+  },
+  "densityReadoutDecimetersCubed": {
+    "value": "密度 (kg/dm³)"
+  },
+  "densityComparison": {
+    "value": "密度比较"
+  },
+  "objectDensity": {
+    "value": "物体密度"
+  },
+  "blockPattern": {
+    "value": "方块 {{tag}}"
+  },
+  "densityKgdm3": {
+    "value": "密度 (kg/dm³)"
+  },
+  "width": {
+    "value": "宽度"
+  },
+  "height": {
+    "value": "高度"
+  },
+  "radius": {
+    "value": "半径"
+  },
+  "widthAndDepth": {
+    "value": "宽度和深度"
+  },
+  "systemA": {
+    "value": "系统 A"
+  },
+  "nameColonPattern": {
+    "value": "{{name}}："
+  },
+  "nameColonValueUnitsPattern": {
+    "value": "{{name}}：{{valueWithUnits}}"
+  },
+  "whatIsTheValueOfGravity": {
+    "value": "重力值是多少？"
+  },
+  "whatIsTheMaterial": {
+    "value": "这是什么材料？"
+  },
+  "vectorZoom": {
+    "value": "矢量缩放"
+  },
+  "volumeUnits": {
+    "value": "体积单位："
+  },
+  "preferences.percentSubmerged.title": {
+    "value": "浸没百分比"
+  },
+  "preferences.percentSubmerged.description": {
+    "value": "显示物体在流体中的浸没百分比。"
+  },
+  "liters": {
+    "value": "L"
+  },
+  "decimetersCubed": {
+    "value": "dm³"
+  },
+  "questionMark": {
+    "value": "?"
+  },
+  "shapesInfoDialog": {
+    "value": "此模拟仅限于竖直方向的力，不考虑力矩。物体的旋转和其他更复杂的运动不在模型的考虑范围之内。"
+  },
+  "valuePercent": {
+    "value": "{{value}}%"
+  },
+  "depthLines": {
+    "value": "深度线"
+  },
+  "itemLowercase": {
+    "value": "物品"
+  },
+  "itemTitlecase": {
+    "value": "物品"
   }
 }

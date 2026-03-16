@@ -9,5 +9,14 @@
         "newValue": "实验室"
       }
     ]
+  },
+  "circuit-construction-kit-ac.title": {
+    "value": "电路组建实验：交流"
+  },
+  "screen.ac-voltage": {
+    "value": "交流电压"
+  },
+  "screen.rlc": {
+    "value": "RLC"
   }
 }

@@ -58,5 +58,41 @@
         "explanation": null
       }
     ]
+  },
+  "faradays-law.voltmeter": {
+    "value": "电压表"
+  },
+  "keyboardHelpDialog.barMagnet": {
+    "value": "条形磁铁"
+  },
+  "keyboardHelpDialog.magnet": {
+    "value": "磁铁"
+  },
+  "keyboardHelpDialog.moveBarMagnet": {
+    "value": "移动条形磁铁"
+  },
+  "keyboardHelpDialog.moveGrabbedBarMagnet": {
+    "value": "移动已抓取的条形磁铁"
+  },
+  "keyboardHelpDialog.moveGrabbedMagnet": {
+    "value": "移动已抓取的磁铁"
+  },
+  "keyboardHelpDialog.moveGrabbedMagnetWith": {
+    "value": "使用方向键或W、A、S、D键将已抓取的磁铁上、左、下、右移动。"
+  },
+  "keyboardHelpDialog.moveGrabbedMagnetSlower": {
+    "value": "缓慢移动已抓取的<br>磁铁"
+  },
+  "keyboardHelpDialog.moveGrabbedMagnetSlowerWith": {
+    "value": "使用Shift加方向键或Shift加W、A、S、D键缓慢移动已抓取的磁铁。"
+  },
+  "keyboardHelpDialog.autoSlideGrabbedBarMagnet": {
+    "value": "自动滑动已抓取的条形磁铁"
+  },
+  "keyboardHelpDialog.autoSlideGrabbedBarMagnetText": {
+    "value": "自动水平滑动已抓取<br>的磁铁并切换滑动方向"
+  },
+  "keyboardHelpDialog.autoSlideGrabbedBarMagnetWith": {
+    "value": "使用数字键1、2或3自动水平滑动已抓取的磁铁并切换滑动方向。"
   }
 }

@@ -86,5 +86,128 @@
         "newValue": "Mean: Share and Balance_平均：分享与平衡"
       }
     ]
+  },
+  "screen.levelOut": {
+    "value": "均分"
+  },
+  "screen.distribute": {
+    "value": "分配"
+  },
+  "screen.fairShare": {
+    "value": "公平分配"
+  },
+  "screen.balancePoint": {
+    "value": "平衡点"
+  },
+  "sync": {
+    "value": "同步"
+  },
+  "collect": {
+    "value": "收集"
+  },
+  "share": {
+    "value": "分享"
+  },
+  "distributeQuestion": {
+    "value": "每人平均有多少根棒棒糖？"
+  },
+  "fairShareQuestion": {
+    "value": "每人平均有多少个苹果？"
+  },
+  "numberOfPeople": {
+    "value": "人数"
+  },
+  "meanEqualSignPattern": {
+    "value": "平均值 {{equals}} "
+  },
+  "totalCandyBarsPattern": {
+    "value": "总计 = {{total}} 个糖{{measurement}}"
+  },
+  "bar": {
+    "value": "棒"
+  },
+  "bars": {
+    "value": "棒"
+  },
+  "totalApplesPattern": {
+    "value": "总计 = {{total}} {{measurement}}"
+  },
+  "apple": {
+    "value": "苹果"
+  },
+  "apples": {
+    "value": "苹果"
+  },
+  "totalDistancePattern": {
+    "value": "总距离 = {{total}} m"
+  },
+  "balancePointQuestion": {
+    "value": "平均踢球距离是多少？"
+  },
+  "numberOfBalls": {
+    "value": "球的数量"
+  },
+  "check": {
+    "value": "检查"
+  },
+  "reset": {
+    "value": "重置"
+  },
+  "remainderPattern": {
+    "value": "{{wholeNumber}}，余数 {{remainder}}"
+  },
+  "total": {
+    "value": "总计"
+  },
+  "keyboardHelpDialog.balancePointScreen.sliderControlHeading": {
+    "value": "支点平衡点"
+  },
+  "keyboardHelpDialog.balancePointScreen.sliderVerb": {
+    "value": "移动"
+  },
+  "keyboardHelpDialog.balancePointScreen.sliderNoun": {
+    "value": "支点三角形"
+  },
+  "keyboardHelpDialog.balancePointScreen.numberSpinnerHeading": {
+    "value": "人数"
+  },
+  "keyboardHelpDialog.numberSpinnerVerb": {
+    "value": "更改"
+  },
+  "keyboardHelpDialog.numberSpinnerNoun": {
+    "value": "数字"
+  },
+  "keyboardHelpDialog.fairShareScreen.numberSpinnerHeading": {
+    "value": "苹果或人数"
+  },
+  "keyboardHelpDialog.distributeScreen.numberSpinnerHeading": {
+    "value": "糖棒或人数"
+  },
+  "keyboardHelpDialog.distributeScreen.sliderControlHeading": {
+    "value": "预测平均值"
+  },
+  "keyboardHelpDialog.distributeScreen.sliderControlNoun": {
+    "value": "预测标记"
+  },
+  "keyboardHelpDialog.distributeScreen.grabOrReleaseItemHeading": {
+    "value": "记事本糖棒"
+  },
+  "keyboardHelpDialog.distributeScreen.grabOrReleaseItem": {
+    "value": "糖棒"
+  },
+  "keyboardHelpDialog.distributeScreen.moveHeading": {
+    "value": "移动记事本糖棒"
+  },
+  "keyboardHelpDialog.distributeScreen.moveDescription": {
+    "value": "移动抓取的糖棒"
+  },
+  "keyboardHelpDialog.levelOutScreen.numberSpinnerHeading": {
+    "value": "杯子数量"
+  },
+  "keyboardHelpDialog.levelOutScreen.sliderControlHeading": {
+    "value": "水位或平均值预测"
+  },
+  "keyboardHelpDialog.levelOutScreen.sliderControlNoun": {
+    "value": "水或预测标记"
   }
 }

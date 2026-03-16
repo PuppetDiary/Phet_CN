@@ -334,5 +334,26 @@
         "explanation": null
       }
     ]
+  },
+  "stopwatch": {
+    "value": "秒表"
+  },
+  "unknownValueIndicator": {
+    "value": "?"
+  },
+  "netForcePullerColors": {
+    "value": "净力拉力队颜色"
+  },
+  "blueAndRed": {
+    "value": "蓝色和红色"
+  },
+  "purpleAndOrange": {
+    "value": "紫色和橙色"
+  },
+  "purpleWins": {
+    "value": "紫队获胜！"
+  },
+  "orangeWins": {
+    "value": "橙队获胜！"
   }
 }

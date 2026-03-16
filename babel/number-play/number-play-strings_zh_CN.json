@@ -108,5 +108,32 @@
         "newValue": "数字游戏"
       }
     ]
+  },
+  "tenFrames": {
+    "value": "十框"
+  },
+  "countingLevel1Description": {
+    "value": "计数级别 1"
+  },
+  "countingLevel2Description": {
+    "value": "计数级别 2"
+  },
+  "subitizingLevel1Description": {
+    "value": "瞬时辨识级别 1"
+  },
+  "subitizingLevel2Description": {
+    "value": "瞬时辨识级别 2"
+  },
+  "automaticallyHearTotal": {
+    "value": "自动朗读总数"
+  },
+  "automaticallyHearTotalDescription": {
+    "value": "在每次更改时自动朗读总数。"
+  },
+  "subitizeTime": {
+    "value": "瞬时辨识时间"
+  },
+  "subitizeTimeDescription": {
+    "value": "调整瞬时辨识挑战的显示时间。"
   }
 }

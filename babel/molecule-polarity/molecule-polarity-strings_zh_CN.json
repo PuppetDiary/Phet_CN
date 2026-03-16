@@ -838,5 +838,59 @@
         "explanation": null
       }
     ]
+  },
+  "basic": {
+    "value": "基础"
+  },
+  "advanced": {
+    "value": "高级"
+  },
+  "model": {
+    "value": "模型"
+  },
+  "dipoleDirectionDescription": {
+    "value": "偶极方向描述"
+  },
+  "deltaNonNegativeValue": {
+    "value": "δ非负值"
+  },
+  "deltaNegativeValue": {
+    "value": "δ负值"
+  },
+  "surfaceColorDescription": {
+    "value": "表面颜色描述"
+  },
+  "keyboardHelpContent.moveMolecule": {
+    "value": "移动分子"
+  },
+  "keyboardHelpContent.rotateMolecule": {
+    "value": "旋转分子"
+  },
+  "keyboardHelpContent.rotateInSmallerSteps": {
+    "value": "以更小的步长旋转"
+  },
+  "keyboardHelpContent.moveAtomsOrMolecule": {
+    "value": "移动原子或分子"
+  },
+  "keyboardHelpContent.moveAtomAAndC": {
+    "value": "移动原子 A 和 C"
+  },
+  "keyboardHelpContent.rotateOrMoveInSmallerSteps": {
+    "value": "以更小的步长旋转或移动"
+  },
+  "keyboardHelpContent.chooseRealMolecule": {
+    "value": "选择真实分子"
+  },
+  "keyboardHelpContent.molecule": {
+    "value": "分子"
+  },
+  "keyboardHelpContent.molecules": {
+    "value": "分子"
+  },
+  "keyboardHelpContent.rotateMoleculeWASD": {
+    "value": "使用WASD旋转分子"
+  },
+  "keyboardHelpContent.rotateInSmallerStepsWASD": {
+    "value": "使用WASD以更小的步长旋转"
   }
 }

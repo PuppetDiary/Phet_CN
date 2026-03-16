@@ -358,5 +358,26 @@
         "explanation": null
       }
     ]
+  },
+  "periodicTable": {
+    "value": "元素周期表"
+  },
+  "gamesInfoTitle": {
+    "value": "级别"
+  },
+  "chargeNotation": {
+    "value": "电荷表示法"
+  },
+  "level1DescriptionPattern": {
+    "value": "<b>级别 {{levelNumber}}：</b>根据亚原子粒子识别元素<br>"
+  },
+  "level2DescriptionPattern": {
+    "value": "<b>级别 {{levelNumber}}：</b>计算质量数或电荷<br>"
+  },
+  "level3DescriptionPattern": {
+    "value": "<b>级别 {{levelNumber}}：</b>填写缺失的化学符号信息<br>"
+  },
+  "level4DescriptionPattern": {
+    "value": "<b>级别 {{levelNumber}}：</b>综合复习"
   }
 }

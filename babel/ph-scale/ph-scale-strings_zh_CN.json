@@ -600,5 +600,47 @@
         "explanation": null
       }
     ]
+  },
+  "pattern.H3O.OH.ratio": {
+    "value": "H₃O⁺/OH⁻ 比值"
+  },
+  "particleCounts": {
+    "value": "粒子计数"
+  },
+  "keyboardHelpDialog.chooseASolute": {
+    "value": "选择溶质"
+  },
+  "keyboardHelpDialog.solute": {
+    "value": "溶质"
+  },
+  "keyboardHelpDialog.solutes": {
+    "value": "溶质"
+  },
+  "keyboardHelpDialog.moveThePHProbe": {
+    "value": "移动pH探针"
+  },
+  "keyboardHelpDialog.jumpPHProbe": {
+    "value": "跳转pH探针"
+  },
+  "keyboardHelpDialog.moveTheGraphIndicators": {
+    "value": "移动图表指示器"
+  },
+  "keyboardHelpDialog.move": {
+    "value": "移动"
+  },
+  "keyboardHelpDialog.moveSlower": {
+    "value": "缓慢移动"
+  },
+  "keyboardHelpDialog.adjustSpinner": {
+    "value": "调节旋转器"
+  },
+  "keyboardHelpDialog.spinnerHeading": {
+    "value": "旋转器标题"
+  },
+  "autoFill": {
+    "value": "自动填充"
+  },
+  "autoFillDescription": {
+    "value": "自动将溶质填充到目标量。"
   }
 }

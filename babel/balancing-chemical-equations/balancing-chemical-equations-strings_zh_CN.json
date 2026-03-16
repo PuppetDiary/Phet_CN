@@ -372,5 +372,32 @@
         "explanation": null
       }
     ]
+  },
+  "screen.intro": {
+    "value": "介绍"
+  },
+  "screen.equations": {
+    "value": "方程式"
+  },
+  "simplified": {
+    "value": "简化"
+  },
+  "view": {
+    "value": "视图"
+  },
+  "synthesis": {
+    "value": "合成"
+  },
+  "decomposition": {
+    "value": "分解"
+  },
+  "combustion": {
+    "value": "燃烧"
+  },
+  "initialCoefficient": {
+    "value": "初始系数"
+  },
+  "initialCoefficientDescription": {
+    "value": "设置化学方程式中的初始系数。"
   }
 }

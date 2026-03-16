@@ -1018,5 +1018,23 @@
         "newValue": "增强颜色对比度，使得在教室环境下有更好的视觉效果。"
       }
     ]
+  },
+  "joist.title": {
+    "value": "joist demo"
+  },
+  "done": {
+    "value": "完成"
+  },
+  "menuItem.outputLog": {
+    "value": "输出日志"
+  },
+  "privacyPolicy": {
+    "value": "隐私政策"
+  },
+  "donateToPhet": {
+    "value": "向PhET捐赠"
+  },
+  "license.title": {
+    "value": "许可证"
   }
 }

@@ -209,5 +209,8 @@
         "explanation": null
       }
     ]
+  },
+  "snapToGrid": {
+    "value": "对齐到网格"
   }
 }
