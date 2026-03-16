@@ -155,6 +155,18 @@
       }
     ]
   },
+  "particles": {
+    "value": "粒子"
+  },
+  "patternSolutionNameFormula": {
+    "value": "{{solutionName}} ({{formula}})"
+  },
+  "showSolvent": {
+    "value": "显示溶剂"
+  },
+  "showTheSolventMoleculesInParticlesView": {
+    "value": "在粒子视图中显示溶剂分子。"
+  },
   "molecules": {
     "value": "分子",
     "history": [

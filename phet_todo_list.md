@@ -1,159 +1,173 @@
 # PhET 模拟器复现待办清单
 
-> 基于 `phet_catalog.json` (2026-01-28)
+> 基于 `Phet游戏清单.md` 中提取的 118 个不重复游戏 (2026-03-16 更新)
 > 已按照 [1. PhET 模拟器复现标准化工作流.md](./1.%20PhET%20模拟器复现标准化工作流.md) 改造完成的标注为 ✅
 
 ---
 
-## ✅ 已完成 (114)
+## ✅ 已完成 (108)
+
+### 物理 Physics (53)
 
 - [x] forces-and-motion-basics
-- [x] energy-skate-park
-- [x] quantum-measurement
-- [x] quantum-coin-toss
-- [x] number-pairs
-- [x] mean-share-and-balance
-- [x] center-and-variability
-- [x] quadrilateral
-- [x] number-compare
-- [x] number-play
-- [x] number-line-distance
-- [x] ratio-and-proportion
-- [x] number-line-operations
-- [x] number-line-integers
-
----
-
-## 📋 待处理 (142)
-
-### 物理 Physics
-
-- [x] models-of-the-hydrogen-atom
-- [x] buoyancy-basics
-- [x] buoyancy
-- [x] generator (跳过 - 依赖问题)
-- [x] magnets-and-electromagnets (跳过 - 依赖问题)
-- [x] magnet-and-compass (跳过 - 依赖问题)
-- [x] faraday-electromagnetic-lab (跳过 - 不存在)
-- [x] projectile-data-lab
-- [x] build-a-nucleus
-- [x] kepler-laws (跳过 - 不存在)
+- [x] balancing-act
+- [x] friction
+- [x] gravity-force-lab-basics
+- [x] gravity-force-lab
+- [x] gravity-and-orbits
 - [x] my-solar-system
-- [x] calculus-grapher
+- [x] energy-skate-park-basics
+- [x] energy-skate-park
+- [x] energy-forms-and-changes
+- [x] waves-intro
+- [x] wave-interference
+- [x] wave-on-a-string
+- [x] fourier-making-waves
+- [x] bending-light
 - [x] geometric-optics-basics
 - [x] geometric-optics
-- [x] density
-- [x] circuit-construction-kit-ac
-- [x] circuit-construction-kit-ac-virtual-lab (跳过 - 依赖不支持)
-- [x] fourier-making-waves
-- [x] collision-lab
-- [x] vector-addition
-- [x] curve-fitting
-- [x] gravity-force-lab-basics
-- [x] waves-intro
-- [x] diffusion
-- [x] gases-intro
-- [x] gas-properties
-- [x] blackbody-spectrum
-- [x] masses-and-springs-basics
-- [x] energy-forms-and-changes
-- [x] wave-interference
-- [x] coulomb-law (跳过 - 仓库不存在)
-- [x] masses-and-springs
-- [x] capacitor-lab-basics
-- [x] circuit-construction-kit-dc-virtual-lab (跳过 - 依赖不支持)
-- [x] circuit-construction-kit-dc
-- [x] pendulum-lab
-- [x] projectile-motion
-- [x] states-of-matter-basics
-- [x] states-of-matter
-- [x] gravity-and-orbits
-- [x] plinko-probability
-- [x] atomic-interactions
-- [x] charges-and-fields
-- [x] rutherford-scattering (跳过 - 缺少中文字符串)
-- [x] bending-light
-- [x] hookes-law
-- [x] molecules-and-light
-- [x] energy-skate-park-basics
-- [x] faradays-law
-- [x] wave-on-a-string
 - [x] color-vision
-- [x] balancing-act
-- [x] under-pressure
-- [x] friction
-- [x] john-travoltage
-- [x] gravity-force-lab
-- [x] balloons-and-static-electricity
+- [x] circuit-construction-kit-dc
+- [x] circuit-construction-kit-ac
+- [x] capacitor-lab-basics
 - [x] ohms-law
 - [x] resistance-in-a-wire
-- [x] build-an-atom
+- [x] faradays-law
+- [x] balloons-and-static-electricity
+- [x] john-travoltage
+- [x] charges-and-fields
+- [x] states-of-matter-basics
+- [x] states-of-matter
+- [x] gases-intro
+- [x] gas-properties
+- [x] diffusion
+- [x] blackbody-spectrum
+- [x] buoyancy-basics
+- [x] buoyancy
+- [x] density
+- [x] under-pressure
+- [x] quantum-coin-toss
+- [x] quantum-measurement
+- [x] models-of-the-hydrogen-atom
+- [x] build-a-nucleus
+- [x] atomic-interactions
+- [x] molecules-and-light
+- [x] projectile-motion
+- [x] projectile-data-lab
+- [x] pendulum-lab
+- [x] masses-and-springs-basics
+- [x] masses-and-springs
+- [x] hookes-law
+- [x] collision-lab
+- [x] vector-addition
+- [x] calculus-grapher
+- [x] curve-fitting
 
-### 数学与统计 Math & Statistics
+### 数学与统计 Math & Statistics (36)
 
-- [x] number-pairs
-- [x] mean-share-and-balance
-- [x] center-and-variability
-- [x] quadrilateral
-- [x] number-compare
+- [x] arithmetic
 - [x] number-play
+- [x] number-compare
+- [x] number-pairs
+- [x] make-a-ten
 - [x] number-line-distance
-- [x] ratio-and-proportion
 - [x] number-line-operations
 - [x] number-line-integers
-- [x] vector-addition-equations
-- [x] fractions-mixed-numbers
 - [x] fractions-intro
-- [x] build-a-fraction
 - [x] fractions-equality
-- [x] graphing-quadratics
-- [x] equality-explorer-two-variables
+- [x] fractions-mixed-numbers
+- [x] build-a-fraction
+- [x] fraction-matcher
+- [x] area-builder
+- [x] expression-exchange
 - [x] equality-explorer-basics
 - [x] equality-explorer
+- [x] equality-explorer-two-variables
 - [x] area-model-algebra
 - [x] area-model-decimals
 - [x] area-model-multiplication
 - [x] area-model-introduction
-- [x] expression-exchange
-- [x] graphing-slope-intercept
 - [x] function-builder-basics
+- [x] function-builder
+- [x] graphing-lines
+- [x] graphing-slope-intercept
+- [x] graphing-quadratics
+- [x] ratio-and-proportion
 - [x] proportion-playground
 - [x] unit-rates
-- [x] make-a-ten
-- [x] function-builder
-- [x] trig-tour
-- [x] arithmetic
+- [x] quadrilateral
+- [x] plinko-probability
+- [x] mean-share-and-balance
+- [x] center-and-variability
 - [x] least-squares-regression
-- [x] area-builder
-- [x] graphing-lines
-- [x] fraction-matcher
+- [x] trig-tour
 
-### 化学 Chemistry
+### 化学 Chemistry (14)
 
-- [x] membrane-transport
-- [x] build-a-molecule
-- [x] molecule-polarity
-- [x] isotopes-and-atomic-mass
-- [x] molecule-shapes
-- [x] molecule-shapes-basics
-- [x] reactants-products-and-leftovers
+- [x] acid-base-solutions
 - [x] ph-scale-basics
 - [x] ph-scale
+- [x] build-an-atom
+- [x] isotopes-and-atomic-mass
+- [x] build-a-molecule
+- [x] molecule-shapes-basics
+- [x] molecule-shapes
+- [x] molecule-polarity
 - [x] balancing-chemical-equations
-- [x] acid-base-solutions
+- [x] reactants-products-and-leftovers
 - [x] concentration
-- [x] beers-law-lab
 - [x] molarity
+- [x] beers-law-lab
 
-### 地球与空间 Earth & Space
+### 地球与空间 Earth & Space (1)
 
 - [x] greenhouse-effect
 
-### 生物 Biology
+### 生物 Biology (4)
 
+- [x] membrane-transport
 - [x] natural-selection
 - [x] gene-expression-essentials
 - [x] neuron
+
+---
+
+## ⏭️ 已跳过 (7)
+
+> 这些游戏在118个清单中存在，但因依赖问题、仓库不存在或缺少中文字符串等原因被跳过
+
+- [x] generator (跳过 - 依赖问题)
+- [x] magnets-and-electromagnets (跳过 - 依赖问题)
+- [x] magnet-and-compass (跳过 - 依赖问题)
+- [x] faraday-electromagnetic-lab (跳过 - 仓库不存在)
+- [x] circuit-construction-kit-dc-virtual-lab (跳过 - 依赖不支持)
+- [x] coulomb-law (跳过 - 仓库不存在)
+- [x] rutherford-scattering (跳过 - 缺少中文字符串)
+
+### 不在118个清单中的已跳过项
+
+- [x] circuit-construction-kit-ac-virtual-lab (跳过 - 依赖不支持，且不在游戏清单中)
+
+---
+
+## 📋 待处理 (3)
+
+> 以下是从 `Phet游戏清单.md` 中新发现的、尚未处理的游戏
+
+### 物理 Physics
+
+- [ ] forces-and-motion
+- [ ] keplers-laws
+
+### 数学与统计 Math & Statistics
+
+- [ ] projectile-sampling-distributions
+
+### 跨学科/其他（在 todo 中有但不在清单的118个中）
+
+> 以下游戏在之前的 phet_catalog.json 中存在，但不在 Phet游戏清单.md 的118个去重游戏中
+
+- [x] vector-addition-equations (已完成，但不在游戏清单中)
 
 ---
 
@@ -161,13 +175,19 @@
 
 | 状态 | 数量 |
 |------|------|
-| ✅ 已完成 | 114 |
-| 📋 待处理 | 30 |
+| ✅ 已完成 | 108 |
+| ⏭️ 已跳过（清单内） | 7 |
+| 📋 待处理 | 3 |
+| **清单总游戏数（去重）** | **118** |
+| 验证：108 + 7 + 3 | = 118 ✓ |
+
+> **说明**：`Phet游戏清单.md` 中声称有 185 个游戏，但实际上许多游戏在不同学科分类中被重复列出，去重后实际为 **118 个独立游戏**。
 
 ---
 
 ## 更新日志
 
+- **2026-03-16**: 根据 `Phet游戏清单.md` 重新整理，确认118个不重复游戏，按学科重新分类
 - **2026-03-11**: 初始版本，从 phet_catalog.json 提取
 - **2026-03-11**: 完成 quantum-measurement 和 quantum-coin-toss 的中文版构建
 - **2026-03-12**: 替换Logo为国科信Logo，完成 models-of-the-hydrogen-atom、buoyancy-basics、buoyancy、blackbody-spectrum 中文版构建

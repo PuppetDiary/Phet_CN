@@ -281,5 +281,11 @@
         "explanation": null
       }
     ]
+  },
+  "screen.decimals": {
+    "value": "小数"
+  },
+  "scorePrefix": {
+    "value": "分数:"
   }
 }

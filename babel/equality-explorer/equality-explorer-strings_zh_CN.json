@@ -216,7 +216,7 @@
     ]
   },
   "solveFor": {
-    "value": "Solve for {{variable}}",
+    "value": "求解 {{variable}}",
     "history": [
       {
         "userId": 293040,
@@ -276,18 +276,18 @@
     ]
   },
   "level1Description": {
-    "value": "级别 1"
+    "value": "<b>1级</b>  一步等式"
   },
   "level2Description": {
-    "value": "级别 2"
+    "value": "<b>2级</b>  含负系数的一步等式"
   },
   "level3Description": {
-    "value": "级别 3"
+    "value": "<b>3级</b>  两步等式"
   },
   "level4Description": {
-    "value": "级别 4"
+    "value": "<b>4级</b>  含分数的多步等式"
   },
   "level5Description": {
-    "value": "级别 5"
+    "value": "<b>5级</b>  两端有变量的多步等式"
   }
 }

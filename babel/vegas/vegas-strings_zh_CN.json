@@ -665,6 +665,15 @@
   "chooseYourLevel": {
     "value": "选择你的关卡！"
   },
+  "levels": {
+    "value": "关卡"
+  },
+  "keyboardHelpDialog.gameShortcuts": {
+    "value": "游戏快捷键"
+  },
+  "keyboardHelpDialog.checkAnswer": {
+    "value": "检查答案"
+  },
   "title.gameOver": {
     "value": "游戏结束",
     "history": [

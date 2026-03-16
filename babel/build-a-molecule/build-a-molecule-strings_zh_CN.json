@@ -1,4 +1,82 @@
 {
+  "acetylene": {
+    "value": "乙炔"
+  },
+  "ammonia": {
+    "value": "氨"
+  },
+  "borane": {
+    "value": "硼烷"
+  },
+  "carbonDioxide": {
+    "value": "二氧化碳"
+  },
+  "carbonMonoxide": {
+    "value": "一氧化碳"
+  },
+  "chloromethane": {
+    "value": "氯甲烷"
+  },
+  "ethylene": {
+    "value": "乙烯"
+  },
+  "fluoromethane": {
+    "value": "氟甲烷"
+  },
+  "formaldehyde": {
+    "value": "甲醛"
+  },
+  "hydrogenCyanide": {
+    "value": "氰化氢"
+  },
+  "hydrogenPeroxide": {
+    "value": "过氧化氢"
+  },
+  "hydrogenSulfide": {
+    "value": "硫化氢"
+  },
+  "methane": {
+    "value": "甲烷"
+  },
+  "molecularChlorine": {
+    "value": "氯气"
+  },
+  "molecularFluorine": {
+    "value": "氟气"
+  },
+  "molecularHydrogen": {
+    "value": "氢气"
+  },
+  "molecularNitrogen": {
+    "value": "氮气"
+  },
+  "molecularOxygen": {
+    "value": "氧气"
+  },
+  "nitricOxide": {
+    "value": "一氧化氮"
+  },
+  "nitrousOxide": {
+    "value": "一氧化二氮"
+  },
+  "ozone": {
+    "value": "臭氧"
+  },
+  "phosphine": {
+    "value": "磷化氢"
+  },
+  "silane": {
+    "value": "硅烷"
+  },
+  "sulfurDioxide": {
+    "value": "二氧化硫"
+  },
+  "trifluoroborane": {
+    "value": "三氟化硼"
+  },
+  "water": {
+    "value": "水"
+  },
   "build-a-molecule.title": {
     "value": "创造一个分子",
     "history": [
