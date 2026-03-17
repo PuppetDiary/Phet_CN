@@ -1,0 +1,55 @@
+{
+  "filterSlider.label": {
+    "value": "Filter Color"
+  },
+  "RgbBulbsModule.title": {
+    "value": "RGB Bulbs"
+  },
+  "color-vision.title": {
+    "value": "Color Vision"
+  },
+  "bulbSlider.label": {
+    "value": "Bulb Color"
+  },
+  "SingleBulbModule.title": {
+    "value": "Single Bulb"
+  },
+  "valuePercentPattern": {
+    "value": "{{value}}%"
+  },
+  "red": {
+    "value": "Red"
+  },
+  "green": {
+    "value": "Green"
+  },
+  "blue": {
+    "value": "Blue"
+  },
+  "redLight": {
+    "value": "Red Light"
+  },
+  "greenLight": {
+    "value": "Green Light"
+  },
+  "blueLight": {
+    "value": "Blue Light"
+  },
+  "a11y": {
+    "flashlight": {
+      "value": "Flashlight"
+    },
+    "filter": {
+      "value": "Filter"
+    },
+    "viewerRepresentation": {
+      "value": "Viewer representation"
+    },
+    "lightOutputTypes": {
+      "value": "Light output types"
+    },
+    "lightRepresentationModes": {
+      "value": "Light representation modes"
+    }
+  }
+}

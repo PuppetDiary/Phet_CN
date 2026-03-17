@@ -1,0 +1,41 @@
+{
+  "name": "function-builder",
+  "version": "1.3.0-dev.3",
+  "license": "GPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/phetsims/function-builder.git"
+  },
+  "devDependencies": {
+    "grunt": "~1.5.3"
+  },
+  "phet": {
+    "requirejsNamespace": "FUNCTION_BUILDER",
+    "preload": [
+      "../sherpa/lib/BigInteger-cda5bcc.js",
+      "../sherpa/lib/BigRational-8f8c2fa.js"
+    ],
+    "phetLibs": [
+      "twixt"
+    ],
+    "runnable": true,
+    "supportedBrands": [
+      "phet",
+      "adapted-from-phet"
+    ],
+    "simFeatures": {
+      "colorProfiles": [
+        "default"
+      ]
+    },
+    "simulation": true,
+    "supportsOutputJS": true,
+    "published": true,
+    "screenNameKeys": [
+      "FUNCTION_BUILDER/screen.patterns",
+      "FUNCTION_BUILDER/screen.numbers",
+      "FUNCTION_BUILDER/screen.equations",
+      "FUNCTION_BUILDER/screen.mystery"
+    ]
+  }
+}

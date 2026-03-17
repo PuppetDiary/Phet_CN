@@ -1,0 +1,133 @@
+// Copyright 2014-2026, University of Colorado Boulder
+
+/**
+ * The 'Three Atoms' screen.
+ *
+ * @author Chris Malley (PixelZoom, Inc.)
+ */
+
+import Screen, { ScreenOptions } from '../../../joist/js/Screen.js';
+import ScreenIcon from '../../../joist/js/ScreenIcon.js';
+import PhetFont from '../../../scenery-phet/js/PhetFont.js';
+import ShadedSphereNode from '../../../scenery-phet/js/ShadedSphereNode.js';
+import Line from '../../../scenery/js/nodes/Line.js';
+import Node from '../../../scenery/js/nodes/Node.js';
+import Rectangle from '../../../scenery/js/nodes/Rectangle.js';
+import Text from '../../../scenery/js/nodes/Text.js';
+import Tandem from '../../../tandem/js/Tandem.js';
+import MPColors from '../common/MPColors.js';
+import moleculePolarity from '../moleculePolarity.js';
+import MoleculePolarityFluent from '../MoleculePolarityFluent.js';
+import MoleculePolarityStrings from '../MoleculePolarityStrings.js';
+import ThreeAtomsModel from './model/ThreeAtomsModel.js';
+import ThreeAtomsScreenView from './view/ThreeAtomsScreenView.js';
+import ThreeAtomsKeyboardHelpContent from './view/description/ThreeAtomsKeyboardHelpContent.js';
+
+export default class ThreeAtomsScreen extends Screen<ThreeAtomsModel, ThreeAtomsScreenView> {
+
+  public constructor( tandem: Tandem ) {
+
+    const options: ScreenOptions = {
+      name: MoleculePolarityFluent.screen.threeAtomsStringProperty,
+      backgroundColorProperty: MPColors.screenBackgroundColorProperty,
+      homeScreenIcon: createScreenIcon(),
+      screenButtonsHelpText: MoleculePolarityFluent.a11y.common.screenIcons.threeAtomsStringProperty,
+      createKeyboardHelpNode: () => new ThreeAtomsKeyboardHelpContent(),
+      tandem: tandem
+    };
+
+    super(
+      () => new ThreeAtomsModel( options.tandem.createTandem( 'model' ) ),
+      model => new ThreeAtomsScreenView( model, options.tandem.createTandem( 'view' ) ),
+      options
+    );
+  }
+}
+
+/**
+ * Creates the icon for this screen, a triatomic molecule with atoms 'A', 'B' and 'C'.
+ */
+function createScreenIcon(): ScreenIcon {
+
+  const atomDiameter = 175;
+  const bondLength = 1.05 * atomDiameter;
+  const bondWidth = 0.15 * atomDiameter;
+  const font = new PhetFont( { size: 80, weight: 'bold' } );
+
+  const xOffset = Math.cos( Math.PI / 4 ) * bondLength;
+  const yOffset = Math.sin( Math.PI / 4 ) * bondLength;
+
+  const background = new Rectangle( 0, 0,
+    Screen.MINIMUM_HOME_SCREEN_ICON_SIZE.width, Screen.MINIMUM_HOME_SCREEN_ICON_SIZE.height,
+    { fill: MPColors.screenBackgroundColorProperty } );
+
+  const bondAB = new Line( 0, 0, -xOffset, yOffset, {
+    stroke: MPColors.BOND,
+    lineWidth: bondWidth,
+    right: background.centerX,
+    centerY: background.centerY
+  } );
+
+  const bondBC = new Line( 0, 0, xOffset, yOffset, {
+    stroke: MPColors.BOND,
+    lineWidth: bondWidth,
+    left: background.centerX,
+    centerY: background.centerY
+  } );
+
+  const atomA = new ShadedSphereNode( atomDiameter, {
+    mainColor: MPColors.ATOM_A,
+    centerX: bondAB.left,
+    centerY: bondAB.bottom
+  } );
+
+  const atomB = new ShadedSphereNode( atomDiameter, {
+    mainColor: MPColors.ATOM_B,
+    centerX: bondAB.right,
+    centerY: bondAB.top
+  } );
+
+  const atomC = new ShadedSphereNode( atomDiameter, {
+    mainColor: MPColors.ATOM_C,
+    centerX: bondBC.right,
+    centerY: bondBC.bottom
+  } );
+
+  const textMaxWidth = 0.65 * atomDiameter;
+
+  const textA = new Text( MoleculePolarityStrings.AStringProperty, {
+    font: font,
+    maxWidth: textMaxWidth
+  } );
+
+  const textB = new Text( MoleculePolarityStrings.BStringProperty, {
+    font: font,
+    maxWidth: textMaxWidth
+  } );
+
+  const textC = new Text( MoleculePolarityStrings.CStringProperty, {
+    font: font,
+    maxWidth: textMaxWidth
+  } );
+
+  const iconNode = new Node( { children: [ background, bondAB, bondBC, atomA, atomB, atomC, textA, textB, textC ] } );
+
+  textA.boundsProperty.link( bounds => {
+    textA.center = atomA.center;
+  } );
+
+  textB.boundsProperty.link( bounds => {
+    textB.center = atomB.center;
+  } );
+
+  textC.boundsProperty.link( bounds => {
+    textC.center = atomC.center;
+  } );
+
+  return new ScreenIcon( iconNode, {
+    maxIconWidthProportion: 1,
+    maxIconHeightProportion: 1
+  } );
+}
+
+moleculePolarity.register( 'ThreeAtomsScreen', ThreeAtomsScreen );

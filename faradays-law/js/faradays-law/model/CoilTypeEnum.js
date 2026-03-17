@@ -1,0 +1,16 @@
+// Copyright 2014-2025, University of Colorado Boulder
+
+/**
+ * Possible Coil types in 'Faraday's Law' simulation.
+ *
+ * @author Vasily Shakhov (MLearner)
+ * @author Sam Reid (PhET Interactive Simulations)
+ */
+
+import EnumerationDeprecated from '../../../../phet-core/js/EnumerationDeprecated.js';
+import faradaysLaw from '../../faradaysLaw.js';
+
+const CoilTypeEnum = EnumerationDeprecated.byKeys( [ 'TWO_COIL', 'FOUR_COIL', 'NO_COIL' ] );
+
+faradaysLaw.register( 'CoilTypeEnum', CoilTypeEnum );
+export default CoilTypeEnum;

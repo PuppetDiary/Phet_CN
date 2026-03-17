@@ -1,0 +1,50 @@
+{
+  "usa": {
+    "level1": "images/usa/usaLevel1_svg.ts",
+    "level2": "images/usa/usaLevel2_svg.ts",
+    "level3": "images/usa/usaLevel3_svg.ts",
+    "level4": "images/usa/usaLevel4_svg.ts",
+    "level5": "images/usa/usaLevel5_svg.ts",
+    "level6": "images/usa/usaLevel6_svg.ts"
+  },
+  "africa": {
+    "level1": "images/africa/africaLevel1_svg.ts",
+    "level2": "images/africa/africaLevel2_svg.ts",
+    "level3": "images/africa/africaLevel3_svg.ts",
+    "level4": "images/africa/africaLevel4_svg.ts",
+    "level5": "images/africa/africaLevel5_svg.ts",
+    "level6": "images/africa/africaLevel6_svg.ts"
+  },
+  "africaModest": {
+    "level1": "images/africa/africaLevel1_svg.ts",
+    "level2": "images/africa/africaLevel2_svg.ts",
+    "level3": "images/africa/africaLevel3_svg.ts",
+    "level4": "images/africaModest/africaModestLevel4_svg.ts",
+    "level5": "images/africa/africaLevel5_svg.ts",
+    "level6": "images/africaModest/africaModestLevel6_svg.ts"
+  },
+  "asia": {
+    "level1": "images/asia/asiaLevel1_svg.ts",
+    "level2": "images/asia/asiaLevel2_svg.ts",
+    "level3": "images/asia/asiaLevel3_svg.ts",
+    "level4": "images/asia/asiaLevel4_svg.ts",
+    "level5": "images/asia/asiaLevel5_svg.ts",
+    "level6": "images/asia/asiaLevel6_svg.ts"
+  },
+  "latinAmerica": {
+    "level1": "images/latinAmerica/latinAmericaLevel1_svg.ts",
+    "level2": "images/latinAmerica/latinAmericaLevel2_svg.ts",
+    "level3": "images/latinAmerica/latinAmericaLevel3_svg.ts",
+    "level4": "images/latinAmerica/latinAmericaLevel4_svg.ts",
+    "level5": "images/latinAmerica/latinAmericaLevel5_svg.ts",
+    "level6": "images/latinAmerica/latinAmericaLevel6_svg.ts"
+  },
+  "oceania": {
+    "level1": "images/asia/asiaLevel1_svg.ts",
+    "level2": "images/asia/asiaLevel2_svg.ts",
+    "level3": "images/oceania/oceaniaLevel3_svg.ts",
+    "level4": "images/asia/asiaLevel4_svg.ts",
+    "level5": "images/oceania/oceaniaLevel5_svg.ts",
+    "level6": "images/asia/asiaLevel6_svg.ts"
+  }
+}

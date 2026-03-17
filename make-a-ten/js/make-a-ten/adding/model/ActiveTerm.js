@@ -1,0 +1,19 @@
+// Copyright 2016-2026, University of Colorado Boulder
+
+/**
+ * Enumeration for which term is actively being edited in the Adding screen.
+ *
+ * @author Jonathan Olson (PhET Interactive Simulations)
+ */
+
+import makeATen from '../../../makeATen.js';
+
+const ActiveTerm = Object.freeze( {
+  LEFT: 'LEFT',
+  RIGHT: 'RIGHT',
+  NONE: 'NONE'
+} );
+
+makeATen.register( 'ActiveTerm', ActiveTerm );
+
+export default ActiveTerm;

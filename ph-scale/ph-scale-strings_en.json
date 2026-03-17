@@ -1,0 +1,537 @@
+{
+  "ph-scale.title": {
+    "value": "pH Scale"
+  },
+  "screen.macro": {
+    "value": "Macro"
+  },
+  "screen.micro": {
+    "value": "Micro"
+  },
+  "screen.mySolution": {
+    "value": "My Solution"
+  },
+  "choice.milk": {
+    "value": "Milk"
+  },
+  "choice.chickenSoup": {
+    "value": "Chicken Soup"
+  },
+  "choice.batteryAcid": {
+    "value": "Battery Acid"
+  },
+  "choice.vomit": {
+    "value": "Vomit"
+  },
+  "choice.soda": {
+    "value": "Soda Pop"
+  },
+  "choice.orangeJuice": {
+    "value": "Orange Juice"
+  },
+  "choice.coffee": {
+    "value": "Coffee"
+  },
+  "choice.spit": {
+    "value": "Spit"
+  },
+  "choice.blood": {
+    "value": "Blood"
+  },
+  "choice.handSoap": {
+    "value": "Hand Soap"
+  },
+  "choice.water": {
+    "value": "Water"
+  },
+  "choice.drainCleaner": {
+    "value": "Drain Cleaner"
+  },
+  "units.liters": {
+    "value": "L"
+  },
+  "units.moles": {
+    "value": "mol"
+  },
+  "units.molesPerLiter": {
+    "value": "mol/L"
+  },
+  "pattern.0value.1units": {
+    "value": "{0} {1}"
+  },
+  "pattern.H3O.OH.ratio": {
+    "value": "{{H3O}} / {{OH}} {{ratio}}"
+  },
+  "pH": {
+    "value": "pH"
+  },
+  "acidic": {
+    "value": "Acidic"
+  },
+  "basic": {
+    "value": "Basic"
+  },
+  "neutral": {
+    "value": "Neutral"
+  },
+  "concentration": {
+    "value": "Concentration"
+  },
+  "quantity": {
+    "value": "Quantity"
+  },
+  "particleCounts": {
+    "value": "Particle Counts"
+  },
+  "ratio": {
+    "value": "Ratio"
+  },
+  "linear": {
+    "value": "Linear"
+  },
+  "logarithmic": {
+    "value": "Logarithmic"
+  },
+  "offScale": {
+    "value": "off scale"
+  },
+  "keyboardHelpDialog.chooseASolute": {
+    "value": "Choose a Solution"
+  },
+  "keyboardHelpDialog.solute": {
+    "value": "solution"
+  },
+  "keyboardHelpDialog.solutes": {
+    "value": "solutions"
+  },
+  "keyboardHelpDialog.moveThePHProbe": {
+    "value": "Move pH Probe"
+  },
+  "keyboardHelpDialog.jumpPHProbe": {
+    "value": "Jump to areas in and around beaker"
+  },
+  "keyboardHelpDialog.moveTheGraphIndicators": {
+    "value": "Move Graph Indicators"
+  },
+  "keyboardHelpDialog.move": {
+    "value": "Move"
+  },
+  "keyboardHelpDialog.moveSlower": {
+    "value": "Move slower"
+  },
+  "keyboardHelpDialog.adjustSpinner": {
+    "value": "Change value"
+  },
+  "keyboardHelpDialog.spinnerHeading": {
+    "value": "Adjust pH"
+  },
+  "autoFill": {
+    "value": "Autofill"
+  },
+  "autoFillDescription": {
+    "value": "Automatically dispenses some liquid from the dropper."
+  },
+  "a11y": {
+    "keyboardHelpDialog": {
+      "movePHProbe": {
+        "move": {
+          "value": "Move with arrow keys or W, A, S, or D keys."
+        },
+        "moveSlower": {
+          "value": "Move slower with shift plus arrow keys or shift plus W, A, S, or D keys."
+        },
+        "jump": {
+          "value": "Jump to areas in and around beaker with J key."
+        }
+      },
+      "moveGraphIndicators": {
+        "move": {
+          "value": "Move with Up and Down arrow keys or W and S keys."
+        },
+        "moveSlower": {
+          "value": "Move slower with shift plus Up and Down arrow keys or shift plus W and S keys."
+        }
+      }
+    },
+    "commonScreenSummary": {
+      "currentDetails": {
+        "emptyBeaker": {
+          "value": "Currently, beaker is empty."
+        },
+        "beakerWithSolution": {
+          "value": "Currently, beaker contains liquid."
+        }
+      }
+    },
+    "macroScreenButton": {
+      "accessibleHelpText": {
+        "value": "Test the pH of common solutions."
+      }
+    },
+    "microScreenButton": {
+      "accessibleHelpText": {
+        "value": "Explore ion amounts in common solutions."
+      }
+    },
+    "mySolutionScreenButton": {
+      "accessibleHelpText": {
+        "value": "Create your own solution by manipulating pH or ion concentration."
+      }
+    },
+    "qualitativePHValuePattern": {
+      "value": "pH is {{pHValue}}, {{pHDescription}}."
+    },
+    "pHValueUnknown": {
+      "value": "pH is unknown."
+    },
+    "pHValuePattern": {
+      "value": "pH is {{pHValue}}."
+    },
+    "unknown": {
+      "value": "unknown"
+    },
+    "scientificNotationPattern": {
+      "value": "{{mantissa}} times 10 to the {{exponent}}"
+    },
+    "qualitativePHDescription": {
+      "extremelyBasic": {
+        "value": "Extremely Basic"
+      },
+      "highlyBasic": {
+        "value": "Highly Basic"
+      },
+      "moderatelyBasic": {
+        "value": "Moderately Basic"
+      },
+      "slightlyBasic": {
+        "value": "Slightly Basic"
+      },
+      "neutral": {
+        "value": "Neutral"
+      },
+      "slightlyAcidic": {
+        "value": "Slightly Acidic"
+      },
+      "moderatelyAcidic": {
+        "value": "Moderately Acidic"
+      },
+      "highlyAcidic": {
+        "value": "Highly Acidic"
+      },
+      "extremelyAcidic": {
+        "value": "Extremely Acidic"
+      }
+    },
+    "microScreenSummary": {
+      "playArea": {
+        "value": "A solution dropper, water faucet, and pH meter with collapsible probe sit above a drainable beaker. The dropper dispenses a number of everyday solutions one at a time. On the left, a graph displays the amounts of O H minus, H 3 O plus, and water in solution."
+      },
+      "controlArea": {
+        "value": "Switch graph scale between logarithmic and linear. Reset sim to start over."
+      },
+      "interactionHint": {
+        "value": "Add solution to beaker and play."
+      }
+    },
+    "macroScreenSummary": {
+      "playArea": {
+        "value": "A solution dropper and water faucet sit above a drainable beaker. The dropper dispenses a number of everyday solutions one at a time. On the left, is a movable pH probe connected to a scaled pH meter. "
+      },
+      "controlArea": {
+        "value": "Reset sim to start over."
+      },
+      "interactionHint": {
+        "emptyBeaker": {
+          "value": "Add a solution to beaker and play."
+        },
+        "beakerWithSolution": {
+          "value": "Move pH probe to start exploring."
+        }
+      }
+    },
+    "mySolutionScreenSummary": {
+      "playArea": {
+        "value": "An adjustable pH meter has a collapsible probe submerged in a beaker containing customizable solution. On the left, is a logarithmic graph with moveable indicators for amount of H 3 O plus and O H minus."
+      },
+      "controlArea": {
+        "value": "Reset sim to start over."
+      },
+      "interactionHint": {
+        "value": "Change pH value or ion amounts to create a solution."
+      }
+    },
+    "pHMeter": {
+      "heading": {
+        "value": "pH Meter"
+      },
+      "description": {
+        "value": "pH meter vertical scale starts at zero and climbs to 14. The bottom half is labeled acidic and top half is labeled basic."
+      }
+    },
+    "macroProbe": {
+      "accessibleName": {
+        "value": "pH Probe"
+      },
+      "accessibleHelpText": {
+        "value": "Move probe or hop to special location with keyboard shortcuts."
+      },
+      "accessibleObjectResponses": {
+        "insideBeaker": {
+          "value": "Inside beaker"
+        },
+        "underWaterFaucet": {
+          "value": "Under water faucet"
+        },
+        "underDropper": {
+          "value": "Under dropper"
+        },
+        "underDrainFaucet": {
+          "value": "Under drain faucet"
+        },
+        "outsideBeaker": {
+          "value": "Outside beaker"
+        }
+      }
+    },
+    "mySolutionProbe": {
+      "accessibleHelpText": {
+        "value": "Increase or decrease pH value."
+      }
+    },
+    "beaker": {
+      "accessibleHeading": {
+        "value": "Beaker"
+      },
+      "empty": {
+        "value": "Beaker is empty."
+      },
+      "solutionPattern": {
+        "value": "Beaker contains {{volume}} liters of {{solute}} solution."
+      },
+      "waterPattern": {
+        "value": "Beaker contains {{volume}} liters of Water."
+      },
+      "ionComparisonPattern": {
+        "value": "Amount of H 3 O plus is {{comparison}} amount of O H minus in solution."
+      },
+      "lessThan": {
+        "value": "less than"
+      },
+      "greaterThan": {
+        "value": "greater than"
+      },
+      "equalTo": {
+        "value": "equal to"
+      },
+      "unknownSolution": {
+        "value": "a"
+      },
+      "neutralIndicatorAccessibleParagraph": {
+        "value": "Beaker contents are neutral."
+      }
+    },
+    "beakerControls": {
+      "accessibleHeading": {
+        "value": "Beaker Controls"
+      },
+      "soluteComboBox": {
+        "accessibleName": {
+          "value": "Solution"
+        },
+        "accessibleHelpText": {
+          "value": "Choose everyday liquid for dropper."
+        },
+        "batteryAcidAccessibleName": {
+          "value": "Battery Acid, bright yellow"
+        },
+        "bloodAccessibleName": {
+          "value": "Blood, red"
+        },
+        "chickenSoupAccessibleName": {
+          "value": "Chicken Soup, dark yellow"
+        },
+        "coffeeAccessibleName": {
+          "value": "Coffee, brown"
+        },
+        "drainCleanerAccessibleName": {
+          "value": "Drain Cleaner, bright yellow"
+        },
+        "handSoapAccessibleName": {
+          "value": "Hand Soap, lavender"
+        },
+        "milkAccessibleName": {
+          "value": "Milk, white"
+        },
+        "orangeJuiceAccessibleName": {
+          "value": "Orange Juice, orange"
+        },
+        "sodaPopAccessibleName": {
+          "value": "Soda Pop, lime green"
+        },
+        "spitAccessibleName": {
+          "value": "Spit, colorless"
+        },
+        "vomitAccessibleName": {
+          "value": "Vomit, salmon"
+        },
+        "waterAccessibleName": {
+          "value": "Water, colorless"
+        }
+      },
+      "dropper": {
+        "accessibleName": {
+          "value": "{{solute}} Dropper"
+        },
+        "accessibleHelpText": {
+          "value": "Add solution to beaker."
+        },
+        "accessibleContextResponseOn": {
+          "value": "dispensing"
+        },
+        "accessibleContextResponseOff": {
+          "value": "dispensing ended"
+        }
+      },
+      "faucetCommon": {
+        "accessibleObjectResponse": {
+          "value": "{{value}} liters per second"
+        }
+      },
+      "waterFaucet": {
+        "accessibleName": {
+          "value": "Water Faucet"
+        },
+        "accessibleHelpText": {
+          "value": "Add water to solution in beaker."
+        }
+      },
+      "drainFaucet": {
+        "accessibleName": {
+          "value": "Drain Faucet"
+        },
+        "accessibleHelpText": {
+          "value": "Open to drain solution from beaker."
+        }
+      },
+      "ratioCheckbox": {
+        "accessibleName": {
+          "value": "H 3 O Plus To O H Minus Ratio"
+        },
+        "accessibleHelpText": {
+          "value": "Show or hide dots representing ratio of H 3 O plus to O H minus in solution."
+        }
+      },
+      "particleCountsCheckbox": {
+        "accessibleHelpText": {
+          "value": "Show or hide number of each type of particle in solution."
+        }
+      },
+      "particleCountValues": {
+        "h3OPattern": {
+          "value": "{{value}} H 3 O plus ions"
+        },
+        "oHPattern": {
+          "value": "{{value}} O H minus ions"
+        },
+        "waterPattern": {
+          "value": "{{value}} water molecules"
+        }
+      }
+    },
+    "graph": {
+      "units": {
+        "molesPerLiter": {
+          "value": "moles per liter"
+        },
+        "moles": {
+          "value": "moles"
+        }
+      },
+      "accessibleHeading": {
+        "value": "Vertical Graph of Particle Amounts"
+      },
+      "accessibleName": {
+        "value": "Graph"
+      },
+      "unitsSwitch": {
+        "molesPerLiterAccessibleName": {
+          "value": "Concentration (moles per liter)"
+        },
+        "molesAccessibleName": {
+          "value": "Quantity (moles)"
+        }
+      },
+      "scaleListItem": {
+        "pattern": {
+          "value": "{{type}} scale"
+        },
+        "logarithmic": {
+          "value": "logarithmic"
+        },
+        "linear": {
+          "value": "linear"
+        }
+      },
+      "rangeListItem": {
+        "pattern": {
+          "value": "range is {{min}} to {{max}}"
+        },
+        "baseToExponentPattern": {
+          "value": "10 to the {{exponent}}"
+        }
+      },
+      "h3OListItemPattern": {
+        "value": "H 3 O plus indicator reads {{value}} {{units}}"
+      },
+      "oHMinusListItemPattern": {
+        "value": "O H minus indicator reads {{value}} {{units}}"
+      },
+      "waterListItemPattern": {
+        "value": "Water indicator reads {{value}} {{units}}"
+      },
+      "scaleSwitch": {
+        "accessibleHelpText": {
+          "value": "Choose graph scale."
+        }
+      },
+      "zoomInButton": {
+        "accessibleName": {
+          "value": "Linear Graph Zoom In"
+        },
+        "accessibleHelpText": {
+          "value": "Adjust graph range."
+        }
+      },
+      "zoomOutButton": {
+        "accessibleName": {
+          "value": "Linear Graph Zoom Out"
+        },
+        "accessibleHelpText": {
+          "value": "Adjust graph range."
+        }
+      },
+      "indicatorH3O": {
+        "accessibleName": {
+          "value": "H 3 O Plus Indicator"
+        },
+        "accessibleHelpText": {
+          "value": "Adjust amount of H 3 O plus in solution."
+        },
+        "accessibleObjectResponse": {
+          "value": "H 3 O plus indicator now {{valueH3O}}, O H minus indicator now {{valueOH}}"
+        }
+      },
+      "indicatorOH": {
+        "accessibleName": {
+          "value": "O H Minus Indicator"
+        },
+        "accessibleHelpText": {
+          "value": "Adjust amount of O H minus in solution."
+        },
+        "accessibleObjectResponse": {
+          "value": "O H minus indicator now {{valueOH}}, H 3 O plus indicator now {{valueH3O}}"
+        }
+      }
+    }
+  }
+}

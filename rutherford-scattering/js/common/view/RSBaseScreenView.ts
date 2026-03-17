@@ -1,0 +1,236 @@
+// Copyright 2016-2026, University of Colorado Boulder
+
+/**
+ * Base type for ScreenViews
+ *
+ * @author Chris Malley (PixelZoom, Inc.)
+ */
+
+import Property from '../../../../axon/js/Property.js';
+import { TReadOnlyProperty } from '../../../../axon/js/TReadOnlyProperty.js';
+import Bounds2 from '../../../../dot/js/Bounds2.js';
+import Dimension2 from '../../../../dot/js/Dimension2.js';
+import ScreenView, { ScreenViewOptions } from '../../../../joist/js/ScreenView.js';
+import Shape from '../../../../kite/js/Shape.js';
+import optionize from '../../../../phet-core/js/optionize.js';
+import ModelViewTransform2 from '../../../../phetcommon/js/view/ModelViewTransform2.js';
+import ResetAllButton from '../../../../scenery-phet/js/buttons/ResetAllButton.js';
+import LaserPointerNode from '../../../../scenery-phet/js/LaserPointerNode.js';
+import PhetFont from '../../../../scenery-phet/js/PhetFont.js';
+import TimeControlNode from '../../../../scenery-phet/js/TimeControlNode.js';
+import Node from '../../../../scenery/js/nodes/Node.js';
+import Path from '../../../../scenery/js/nodes/Path.js';
+import Text from '../../../../scenery/js/nodes/Text.js';
+import Panel from '../../../../sun/js/Panel.js';
+import rutherfordScattering from '../../rutherfordScattering.js';
+import RutherfordScatteringFluent from '../../RutherfordScatteringFluent.js';
+import RSBaseModel from '../model/RSBaseModel.js';
+import RSColors from '../RSColors.js';
+import RSConstants from '../RSConstants.js';
+import BeamNode from './BeamNode.js';
+import RSControlPanelVBox from './RSControlPanelVBox.js';
+import ScaleInfoNode from './ScaleInfoNode.js';
+import TargetMaterialNode from './TargetMaterialNode.js';
+import TinyBox from './TinyBox.js';
+
+// constants
+const alphaParticlesStringProperty = RutherfordScatteringFluent.alphaParticlesStringProperty;
+const toggleAlphaParticleStringProperty = RutherfordScatteringFluent.a11y.toggleAlphaParticleStringProperty;
+const alphaParticlesHelpTextStringProperty = RutherfordScatteringFluent.a11y.alphaParticlesHelpTextStringProperty;
+
+const GUN_ROTATION = -Math.PI / 2; // so the laser pointer points straight up
+
+type SelfOptions = {
+  includeElectronLegend?: boolean;
+  includePlumPuddingLegend?: boolean;
+  additionalControlPanels?: Panel[] | null;
+};
+
+type RSBaseScreenViewOptions = SelfOptions & ScreenViewOptions;
+
+abstract class RSBaseScreenView extends ScreenView {
+
+  public readonly showAlphaTraceProperty: Property<boolean>;
+
+  // Alpha particle gun for layout in subtypes
+  protected readonly gunNode: LaserPointerNode;
+
+  // Alpha particle beam
+  protected readonly beamNode: BeamNode;
+
+  // Alpha particle source target for layout in subtypes
+  protected readonly targetMaterialNode: TargetMaterialNode;
+
+  // Space node for layout in subtypes
+  protected readonly spaceNode: Node;
+
+  // Scale info, visibility can be manipulated by subtypes
+  protected readonly scaleInfoNode: ScaleInfoNode;
+
+  // These elements are expose for pdom ordering.
+  private readonly timeControlButtons: TimeControlNode;
+  private readonly resetAllButton: ResetAllButton;
+
+  /**
+   * @param model
+   * @param scaleString
+   */
+  public constructor( model: RSBaseModel, scaleString: TReadOnlyProperty<string>, providedOptions?: RSBaseScreenViewOptions ) {
+
+    const options = optionize<RSBaseScreenViewOptions, SelfOptions, ScreenViewOptions>()( {
+      includeElectronLegend: true, // should the particle legend include an entry for the electron?
+      includePlumPuddingLegend: false, // should the particle legend include an entry for the plum pudding cloud?
+      additionalControlPanels: null // {Panel[]|null} additional control panels, added below the common panels
+    }, providedOptions );
+
+    super( options );
+
+    this.showAlphaTraceProperty = new Property( RSConstants.DEFAULT_SHOW_TRACES );
+
+    this.gunNode = new LaserPointerNode( model.gun.onProperty, {
+      left: this.layoutBounds.left + 75,
+      top: this.layoutBounds.centerY + 50,
+      bodySize: new Dimension2( 75, 68 ),
+      nozzleSize: new Dimension2( 20, 60 ),
+      topColor: RSColors.laserPointerTopColorProperty,
+      highlightColor: RSColors.laserPointerHighlightColorProperty,
+      bottomColor: RSColors.laserPointerBottomColorProperty,
+      buttonOptions: {
+        baseColor: RSColors.laserPointerButtonColorProperty,
+        rotation: -GUN_ROTATION // so button lighting is correct
+      },
+      rotation: GUN_ROTATION, // pointing up
+      accessibleName: toggleAlphaParticleStringProperty,
+      accessibleHelpText: alphaParticlesHelpTextStringProperty
+    } );
+    this.addChild( this.gunNode );
+
+    const alphaParticlesText = new Text( alphaParticlesStringProperty, {
+      centerX: this.gunNode.centerX,
+      top: this.gunNode.bottom + 15,
+      font: new PhetFont( 15 ),
+      fill: RSColors.panelLabelColorProperty,
+      maxWidth: RSConstants.TEXT_MAX_WIDTH
+    } );
+    this.addChild( alphaParticlesText );
+
+    alphaParticlesText.boundsProperty.link( () => {
+      alphaParticlesText.centerX = this.gunNode.centerX;
+    } );
+
+    this.beamNode = new BeamNode( model.gun.onProperty, {
+      centerX: this.gunNode.centerX,
+      bottom: this.gunNode.top,
+      fill: RSColors.atomBeamColorProperty
+    } );
+    this.addChild( this.beamNode );
+
+    this.targetMaterialNode = new TargetMaterialNode( {
+      centerX: this.beamNode.centerX,
+      bottom: this.beamNode.top
+    } );
+    this.addChild( this.targetMaterialNode );
+
+    // tiny box that indicates what will be zoomed
+    const tinyBoxNode = new TinyBox( {
+      centerX: this.targetMaterialNode.centerX,
+      centerY: this.targetMaterialNode.centerY
+    } );
+    this.addChild( tinyBoxNode );
+
+    // atom animation space
+    const spaceNodeX = this.targetMaterialNode.right + RSConstants.TARGET_SPACE_MARGIN - RSConstants.SPACE_BUFFER;
+    const spaceNodeY = RSConstants.PANEL_TOP_MARGIN - RSConstants.SPACE_BUFFER;
+    const spaceNodeBounds = new Bounds2( spaceNodeX, spaceNodeY,
+      spaceNodeX + RSConstants.SPACE_NODE_WIDTH,
+      spaceNodeY + RSConstants.SPACE_NODE_HEIGHT );
+    const modelViewTransform = ModelViewTransform2.createRectangleInvertedYMapping( model.bounds, spaceNodeBounds );
+
+    this.spaceNode = this.createSpaceNode( model, this.showAlphaTraceProperty, modelViewTransform, spaceNodeBounds );
+    this.addChild( this.spaceNode );
+
+    // dashed lines that connect the tiny box and space
+    const dashedLines = new Path( new Shape()
+      .moveTo( tinyBoxNode.centerX, tinyBoxNode.top )
+      .lineTo( this.spaceNode.left, this.spaceNode.top )
+      .moveTo( tinyBoxNode.centerX, tinyBoxNode.bottom )
+      .lineTo( this.spaceNode.left, this.spaceNode.bottom ), {
+      stroke: 'grey',
+      lineDash: [ 5, 5 ]
+    } );
+    this.addChild( dashedLines );
+
+    this.scaleInfoNode = new ScaleInfoNode( scaleString, this.spaceNode.getWidth(), {
+      centerX: this.spaceNode.centerX,
+      top: this.spaceNode.bottom + 10
+    } );
+    this.addChild( this.scaleInfoNode );
+
+    // time control buttons
+    this.timeControlButtons = new TimeControlNode(
+      model.runningProperty, {
+        bottom: this.scaleInfoNode.bottom + 60,
+        centerX: this.scaleInfoNode.centerX - 5,
+        playPauseStepButtonOptions: {
+          playPauseStepXSpacing: 12,
+          playPauseButtonOptions: {
+            radius: 23
+          },
+          stepForwardButtonOptions: {
+            radius: 15,
+            listener: () => { model.manualStep(); }
+          }
+        }
+      }
+    );
+    this.addChild( this.timeControlButtons );
+
+    // reset all button
+    this.resetAllButton = new ResetAllButton( {
+      listener: () => {
+        this.showAlphaTraceProperty.reset();
+        model.reset();
+      },
+      right: this.layoutBounds.maxX - 48,
+      bottom: this.layoutBounds.bottom - 20
+    } );
+    this.addChild( this.resetAllButton );
+  }
+
+  protected setPlayAreaPDOMOrder( controlPanels: Node[] ): void {
+    this.pdomPlayAreaNode.setPDOMOrder( [
+      this.spaceNode,
+      this.gunNode,
+      ...controlPanels
+    ] );
+  }
+
+  protected setControlAreaPDOMOrder( sceneRadioButtons?: Node | undefined ): void {
+    this.pdomControlAreaNode.setPDOMOrder( [
+      ...( sceneRadioButtons ? [ sceneRadioButtons ] : [] ),
+      this.timeControlButtons,
+      this.resetAllButton
+    ] );
+  }
+
+  /**
+   * Create a control panel - used by subtypes to generate a control panel from a set
+   * of panels.
+   */
+  protected createControlPanelVBox( panels: Array<Panel> ): RSControlPanelVBox {
+    return new RSControlPanelVBox( panels, {
+      top: this.spaceNode.top,
+      left: this.spaceNode.right + RSConstants.PANEL_SPACE_MARGIN
+    } );
+  }
+
+  protected abstract createSpaceNode(
+    model: RSBaseModel,
+    showAlphaTraceProperty: Property<boolean>,
+    modelViewTransform: ModelViewTransform2,
+    canvasBounds: Bounds2
+  ): Node;
+}
+
+rutherfordScattering.register( 'RSBaseScreenView', RSBaseScreenView );
+export default RSBaseScreenView;

@@ -1,0 +1,107 @@
+{
+  "comment": "# vector-addition-equations 1.1.0-dev.5 Mon Nov 04 2024 16:46:15 GMT-0700 (Mountain Standard Time)",
+  "assert": {
+    "sha": "e518fe8db0a776a67e60e9c2110cd8411a21a007",
+    "branch": "main"
+  },
+  "axon": {
+    "sha": "f3cc74476cf1cf023a4b566839cb37382a911edd",
+    "branch": "main"
+  },
+  "brand": {
+    "sha": "ae6113e264048e83a8087154fbac78b38bdeb763",
+    "branch": "main"
+  },
+  "chipper": {
+    "sha": "8804c8f7f9ea1ab164e83e064b65d5616a274031",
+    "branch": "main"
+  },
+  "dot": {
+    "sha": "a9015a829dd2bea5959c0629330e8cf7ca441b28",
+    "branch": "main"
+  },
+  "joist": {
+    "sha": "fbf196e199e0e02bdd617dce0f93833666c30ae5",
+    "branch": "main"
+  },
+  "kite": {
+    "sha": "87b6a55dc55aee166c4670e51970c10637728bce",
+    "branch": "main"
+  },
+  "perennial-alias": {
+    "sha": "4892575778ce7afc8bbaf6058f5b37662767b398",
+    "branch": "main"
+  },
+  "phet-core": {
+    "sha": "123826a127646fb8520ad2e4458aa1fe831ede33",
+    "branch": "main"
+  },
+  "phet-io": {
+    "sha": "fabcbce5a33ae33ac68754d72cf03737d00ddba5",
+    "branch": "main"
+  },
+  "phet-io-sim-specific": {
+    "sha": "54d95c9243489e01fad4ffdc74888be392e43a39",
+    "branch": "main"
+  },
+  "phet-io-wrappers": {
+    "sha": "8d14783e561b7c9a6d0fe42e26b1835206ee84b7",
+    "branch": "main"
+  },
+  "phetcommon": {
+    "sha": "b641169e493760258b1a3511a09a727f0a7a3a03",
+    "branch": "main"
+  },
+  "phetmarks": {
+    "sha": "3f9d9acd89e21dba2b4c2534822858b6906bad44",
+    "branch": "main"
+  },
+  "query-string-machine": {
+    "sha": "a78d000ec5a3cfe8a0b77de2f0b2fa8aef5108ea",
+    "branch": "main"
+  },
+  "scenery": {
+    "sha": "9c8421400dd4cc264b2069c80c6ba1fc51e9a89a",
+    "branch": "main"
+  },
+  "scenery-phet": {
+    "sha": "10ea3db8801c8ca50ec1c9de7866fedcb9a35214",
+    "branch": "main"
+  },
+  "sherpa": {
+    "sha": "8a93a51cdbea08e53df69a0df8e53de9f7797e08",
+    "branch": "main"
+  },
+  "studio": {
+    "sha": "69958d94b8193d83b854387a6189167c98625888",
+    "branch": "main"
+  },
+  "sun": {
+    "sha": "6aa1017447957ea39e2b3c2f046cefc297854887",
+    "branch": "main"
+  },
+  "tambo": {
+    "sha": "d1eb357492a487d88e6afcd2ab7c25b273420b21",
+    "branch": "main"
+  },
+  "tandem": {
+    "sha": "ca3997d40a19a65ea668b0e4fc9d7c36dc55c1df",
+    "branch": "main"
+  },
+  "twixt": {
+    "sha": "a2b4bf5d14186073a2fb797ee41467d3e680dc4a",
+    "branch": "main"
+  },
+  "utterance-queue": {
+    "sha": "5c053e699219daf407678137df71a3ba8c4ffd79",
+    "branch": "main"
+  },
+  "vector-addition": {
+    "sha": "c5b61394773123ebf04a9fac5065f196cad0174d",
+    "branch": "main"
+  },
+  "vector-addition-equations": {
+    "sha": "a688a7f2571a676ede87cec26e27eead4ab0ef75",
+    "branch": "main"
+  }
+}

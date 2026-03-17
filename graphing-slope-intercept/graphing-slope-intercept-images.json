@@ -1,0 +1,38 @@
+{
+  "usa": {
+    "level1": "../graphing-lines/images/usa/usaLevel1_svg.ts",
+    "level2": "../graphing-lines/images/usa/usaLevel3_svg.ts",
+    "level3": "../graphing-lines/images/usa/usaLevel5_svg.ts",
+    "level4": "../graphing-lines/images/usa/usaLevel6_svg.ts"
+  },
+  "africa": {
+    "level1": "images/africa/africaLevel1_svg.ts",
+    "level2": "images/africa/africaLevel2_svg.ts",
+    "level3": "images/africa/africaLevel3_svg.ts",
+    "level4": "images/africa/africaLevel4_svg.ts"
+  },
+  "africaModest": {
+    "level1": "images/africaModest/africaModestLevel1_svg.ts",
+    "level2": "images/africaModest/africaModestLevel2_svg.ts",
+    "level3": "images/africaModest/africaModestLevel3_svg.ts",
+    "level4": "images/africaModest/africaModestLevel4_svg.ts"
+  },
+  "asia": {
+    "level1": "images/asia/asiaLevel1_svg.ts",
+    "level2": "images/asia/asiaLevel2_svg.ts",
+    "level3": "images/asia/asiaLevel3_svg.ts",
+    "level4": "images/asia/asiaLevel4_svg.ts"
+  },
+  "latinAmerica": {
+    "level1": "images/latinAmerica/latinAmericaLevel1_svg.ts",
+    "level2": "images/latinAmerica/latinAmericaLevel2_svg.ts",
+    "level3": "images/latinAmerica/latinAmericaLevel3_svg.ts",
+    "level4": "images/latinAmerica/latinAmericaLevel4_svg.ts"
+  },
+  "oceania": {
+    "level1": "images/oceania/oceaniaLevel1_svg.ts",
+    "level2": "images/oceania/oceaniaLevel2_svg.ts",
+    "level3": "images/oceania/oceaniaLevel3_svg.ts",
+    "level4": "images/asia/asiaLevel4_svg.ts"
+  }
+}

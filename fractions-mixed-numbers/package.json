@@ -1,0 +1,36 @@
+{
+  "name": "fractions-mixed-numbers",
+  "version": "1.1.0-dev.1",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/phetsims/fractions-mixed-numbers.git"
+  },
+  "devDependencies": {
+    "grunt": "~1.5.3"
+  },
+  "phet": {
+    "requirejsNamespace": "FRACTIONS_MIXED_NUMBERS",
+    "phetLibs": [
+      "fractions-common",
+      "twixt",
+      "vegas"
+    ],
+    "runnable": true,
+    "supportedBrands": [
+      "phet",
+      "adapted-from-phet"
+    ],
+    "simFeatures": {
+      "supportsSound": true
+    },
+    "simulation": true,
+    "supportsOutputJS": true,
+    "published": true,
+    "screenNameKeys": [
+      "FRACTIONS_MIXED_NUMBERS/screen.intro",
+      "FRACTIONS_MIXED_NUMBERS/screen.game",
+      "FRACTIONS_MIXED_NUMBERS/screen.lab"
+    ]
+  }
+}

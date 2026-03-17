@@ -1,0 +1,33 @@
+{
+  "name": "color-vision",
+  "version": "1.4.0-dev.0",
+  "license": "GPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/phetsims/color-vision.git"
+  },
+  "devDependencies": {
+    "grunt": "~1.5.3"
+  },
+  "phet": {
+    "requirejsNamespace": "COLOR_VISION",
+    "runnable": true,
+    "supportedBrands": [
+      "phet",
+      "phet-io",
+      "adapted-from-phet"
+    ],
+    "simFeatures": {
+      "supportsInteractiveDescription": true,
+      "supportsSound": true,
+      "supportsDynamicLocale": true
+    },
+    "simulation": true,
+    "supportsOutputJS": true,
+    "published": true,
+    "screenNameKeys": [
+      "COLOR_VISION/SingleBulbModule.title",
+      "COLOR_VISION/RgbBulbsModule.title"
+    ]
+  }
+}

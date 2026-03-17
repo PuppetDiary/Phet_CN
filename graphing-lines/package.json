@@ -1,0 +1,49 @@
+{
+  "name": "graphing-lines",
+  "version": "1.5.0-dev.0",
+  "license": "GPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/phetsims/graphing-lines.git"
+  },
+  "devDependencies": {
+    "grunt": "~1.5.3"
+  },
+  "phet": {
+    "requirejsNamespace": "GRAPHING_LINES",
+    "phetLibs": [
+      "vegas"
+    ],
+    "runnable": true,
+    "supportedBrands": [
+      "phet",
+      "adapted-from-phet"
+    ],
+    "simFeatures": {
+      "supportsSound": true,
+      "supportedRegionsAndCultures": [
+        "africa",
+        "africaModest",
+        "asia",
+        "latinAmerica",
+        "oceania",
+        "random",
+        "usa"
+      ],
+      "defaultRegionAndCulture": "random",
+      "supportsDynamicLocale": true,
+      "colorProfiles": [
+        "default"
+      ]
+    },
+    "simulation": true,
+    "supportsOutputJS": true,
+    "published": true,
+    "screenNameKeys": [
+      "GRAPHING_LINES/screen.slope",
+      "GRAPHING_LINES/screen.slopeIntercept",
+      "GRAPHING_LINES/screen.pointSlope",
+      "GRAPHING_LINES/screen.lineGame"
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+// Copyright 2025, University of Colorado Boulder
+
+/**
+ * An accordion box with accessible features designed for Build An Atom.
+ *
+ * Normally this should be named BAAAccordionBox, but that's too many A's to be readable.
+ *
+ * @author Agustín Vallejo (PhET Interactive Simulations)
+ */
+
+import optionize, { EmptySelfOptions } from '../../../../phet-core/js/optionize.js';
+import Node from '../../../../scenery/js/nodes/Node.js';
+import AccordionBox, { AccordionBoxOptions } from '../../../../sun/js/AccordionBox.js';
+import buildAnAtom from '../../buildAnAtom.js';
+
+type SelfOptions = EmptySelfOptions;
+export type BuildAnAtomAccordionBoxOptions = SelfOptions & AccordionBoxOptions;
+
+class BuildAnAtomAccordionBox extends AccordionBox {
+
+  public constructor( contentNode: Node, providedOptions?: BuildAnAtomAccordionBoxOptions ) {
+
+    const options = optionize<BuildAnAtomAccordionBoxOptions, SelfOptions, AccordionBoxOptions>()( {}, providedOptions );
+
+    super( contentNode, options );
+  }
+}
+
+buildAnAtom.register( 'BuildAnAtomAccordionBox', BuildAnAtomAccordionBox );
+
+export default BuildAnAtomAccordionBox;

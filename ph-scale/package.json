@@ -1,0 +1,40 @@
+{
+  "name": "ph-scale",
+  "version": "1.8.0-dev.0",
+  "license": "GPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/phetsims/ph-scale.git"
+  },
+  "devDependencies": {
+    "grunt": "~1.5.3"
+  },
+  "phet": {
+    "requirejsNamespace": "PH_SCALE",
+    "runnable": true,
+    "supportedBrands": [
+      "phet",
+      "phet-io",
+      "adapted-from-phet"
+    ],
+    "simFeatures": {
+      "supportsSound": true,
+      "supportsDynamicLocale": true,
+      "supportsInteractiveDescription": true,
+      "colorProfiles": [
+        "default"
+      ]
+    },
+    "simulation": true,
+    "phet-io": {
+      "compareDesignedAPIChanges": true
+    },
+    "supportsOutputJS": true,
+    "published": true,
+    "screenNameKeys": [
+      "PH_SCALE/screen.macro",
+      "PH_SCALE/screen.micro",
+      "PH_SCALE/screen.mySolution"
+    ]
+  }
+}

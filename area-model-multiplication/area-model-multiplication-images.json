@@ -1,0 +1,56 @@
+{
+  "usa": {
+    "genericGameScreenIcon" : "images/usa/usaGenericGameScreenIcon_svg.ts",
+    "level1": "images/usa/usaLevel1Icon_svg.ts",
+    "level2": "images/usa/usaLevel2Icon_svg.ts",
+    "level3": "images/usa/usaLevel3Icon_svg.ts",
+    "level4": "images/usa/usaLevel4Icon_svg.ts",
+    "level5": "images/usa/usaLevel5Icon_svg.ts",
+    "level6": "images/usa/usaLevel6Icon_svg.ts"
+  },
+  "africa": {
+    "genericGameScreenIcon" : "images/africa/africaGenericGameScreenIcon_svg.ts",
+    "level1": "images/africa/africaLevel1Icon_svg.ts",
+    "level2": "images/africa/africaLevel2Icon_svg.ts",
+    "level3": "images/africa/africaLevel3Icon_svg.ts",
+    "level4": "images/africa/africaLevel4Icon_svg.ts",
+    "level5": "images/africa/africaLevel5Icon_svg.ts",
+    "level6": "images/africa/africaLevel6Icon_svg.ts"
+  },
+  "africaModest": {
+    "genericGameScreenIcon" : "images/africaModest/africaModestGenericGameScreenIcon_svg.ts",
+    "level1": "images/africaModest/africaModestLevel1Icon_svg.ts",
+    "level2": "images/africa/africaLevel2Icon_svg.ts",
+    "level3": "images/africaModest/africaModestLevel3Icon_svg.ts",
+    "level4": "images/africa/africaLevel4Icon_svg.ts",
+    "level5": "images/africa/africaLevel5Icon_svg.ts",
+    "level6": "images/africaModest/africaModestLevel6Icon_svg.ts"
+  },
+  "asia": {
+    "genericGameScreenIcon" : "images/asia/asiaGenericGameScreenIcon_svg.ts",
+    "level1": "images/usa/usaLevel1Icon_svg.ts",
+    "level2": "images/asia/asiaLevel2Icon_svg.ts",
+    "level3": "images/usa/usaLevel3Icon_svg.ts",
+    "level4": "images/asia/asiaLevel4Icon_svg.ts",
+    "level5": "images/asia/asiaLevel5Icon_svg.ts",
+    "level6": "images/asia/asiaLevel6Icon_svg.ts"
+  },
+  "latinAmerica": {
+    "genericGameScreenIcon" : "images/latinAmerica/latinAmericaGenericGameScreenIcon_svg.ts",
+    "level1": "images/latinAmerica/latinAmericaLevel1Icon_svg.ts",
+    "level2": "images/latinAmerica/latinAmericaLevel2Icon_svg.ts",
+    "level3": "images/latinAmerica/latinAmericaLevel3Icon_svg.ts",
+    "level4": "images/latinAmerica/latinAmericaLevel4Icon_svg.ts",
+    "level5": "images/latinAmerica/latinAmericaLevel5Icon_svg.ts",
+    "level6": "images/latinAmerica/latinAmericaLevel6Icon_svg.ts"
+  },
+  "oceania": {
+    "genericGameScreenIcon" : "images/oceania/oceaniaGenericGameScreenIcon_svg.ts",
+    "level1": "images/usa/usaLevel1Icon_svg.ts",
+    "level2": "images/oceania/oceaniaLevel2Icon_svg.ts",
+    "level3": "images/usa/usaLevel3Icon_svg.ts",
+    "level4": "images/oceania/oceaniaLevel4Icon_svg.ts",
+    "level5": "images/oceania/oceaniaLevel5Icon_svg.ts",
+    "level6": "images/usa/usaLevel6Icon_svg.ts"
+  }
+}

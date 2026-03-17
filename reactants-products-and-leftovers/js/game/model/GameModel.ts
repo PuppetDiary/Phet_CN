@@ -1,0 +1,326 @@
+// Copyright 2014-2025, University of Colorado Boulder
+
+/**
+ * Model for the 'Game' screen.
+ *
+ * @author Chris Malley (PixelZoom, Inc.)
+ */
+
+import BooleanProperty from '../../../../axon/js/BooleanProperty.js';
+import EnumerationProperty from '../../../../axon/js/EnumerationProperty.js';
+import NumberProperty from '../../../../axon/js/NumberProperty.js';
+import Property from '../../../../axon/js/Property.js';
+import ReadOnlyProperty from '../../../../axon/js/ReadOnlyProperty.js';
+import Range from '../../../../dot/js/Range.js';
+import TModel from '../../../../joist/js/TModel.js';
+import optionize from '../../../../phet-core/js/optionize.js';
+import Tandem from '../../../../tandem/js/Tandem.js';
+import NullableIO from '../../../../tandem/js/types/NullableIO.js';
+import NumberIO from '../../../../tandem/js/types/NumberIO.js';
+import GameTimer from '../../../../vegas/js/GameTimer.js';
+import GameUtils from '../../../../vegas/js/GameUtils.js';
+import RPALConstants from '../../common/RPALConstants.js';
+import reactantsProductsAndLeftovers from '../../reactantsProductsAndLeftovers.js';
+import Challenge from './Challenge.js';
+import ChallengeFactory from './ChallengeFactory.js';
+import GamePhase from './GamePhase.js';
+import GameVisibility from './GameVisibility.js';
+import PlayState from './PlayState.js';
+
+const POINTS_FIRST_CHECK = 2;
+const POINTS_SECOND_CHECK = 1;
+
+type SelfOptions = {
+  level?: number; // the current level in the game, numbered starting with zero
+  numberOfLevels?: number; // number of levels in the game
+  maxQuantity?: number; // maximum quantity of any substance in a reaction
+};
+
+type GameModelOptions = SelfOptions;
+
+export default class GameModel implements TModel {
+
+  public readonly numberOfLevels: number;
+  public readonly maxQuantity: number;
+
+  public readonly timerEnabledProperty: Property<boolean>; // is the timer turned on?
+  public readonly gameVisibilityProperty: EnumerationProperty<GameVisibility>;
+
+  // the current level, starts at 0 in the model, presented as starting from 1 in the view
+  public readonly levelProperty: Property<number>;
+
+  // how many points the user has earned for the current game
+  public readonly scoreProperty: Property<number>;
+
+  // the number of challenges in the current game being played
+  public readonly numberOfChallengesProperty: Property<number>;
+
+  // the current challenge being played, null if there's no challenge
+  public readonly challengeProperty: Property<Challenge | null>;
+
+  // The current challenge in this.challenges, using 1-based index, as shown in the Game status bar.
+  // 0 indicates no challenge.
+  public readonly challengeNumberProperty: ReadOnlyProperty<number>;
+  private readonly _challengeNumberProperty: Property<number>;
+
+  // the current 'phase' of the game
+  public readonly gamePhaseProperty: EnumerationProperty<GamePhase>;
+
+  // the current 'play state' of the game
+  public readonly playStateProperty: EnumerationProperty<PlayState>;
+
+  // These fields should be treated as read-only. They are changed by GameModel as game-play progresses.
+  public challenges: Challenge[]; // the set of challenges for the current game being played
+  public readonly bestScoreProperties: Property<number>[]; // best scores for each level
+  public readonly bestTimeProperties: Property<number | null>[]; // best times for each level, null if a level has no best time yet
+  public isNewBestTime: boolean; // is the time for the most-recently-completed game a new best time?
+
+  public readonly timer: GameTimer;
+
+  public constructor( tandem: Tandem, providedOptions?: GameModelOptions ) {
+
+    const options = optionize<GameModelOptions, SelfOptions>()( {
+
+      // SelfOptions
+      level: 0,
+      numberOfLevels: 3,
+      maxQuantity: RPALConstants.QUANTITY_RANGE.max
+    }, providedOptions );
+
+    this.numberOfLevels = options.numberOfLevels;
+    this.maxQuantity = options.maxQuantity;
+
+    this.timerEnabledProperty = new BooleanProperty( false, {
+      tandem: tandem.createTandem( 'timerEnabledProperty' )
+    } );
+
+    this.gameVisibilityProperty = new EnumerationProperty( GameVisibility.SHOW_ALL, {
+      tandem: tandem.createTandem( 'gameVisibilityProperty' )
+    } );
+
+    // read-only
+    this.levelProperty = new NumberProperty( 0, {
+      numberType: 'Integer',
+      hasListenerOrderDependencies: true, // TODO: https://github.com/phetsims/reactants-products-and-leftovers/issues/85
+      range: new Range( 0, this.numberOfLevels - 1 ),
+      tandem: tandem.createTandem( 'levelProperty' )
+    } );
+
+    this.scoreProperty = new NumberProperty( 0, {
+      numberType: 'Integer',
+      isValidValue: value => ( value >= 0 ),
+      tandem: tandem.createTandem( 'scoreProperty' )
+    } );
+
+    this.numberOfChallengesProperty = new NumberProperty( 0, {
+      numberType: 'Integer',
+      //TODO https://github.com/phetsims/reactants-products-and-leftovers/issues/78 range
+      isValidValue: value => ( value >= 0 ),
+      tandem: tandem.createTandem( 'numberOfChallengesProperty' )
+    } );
+
+    this.challengeProperty = new Property<Challenge | null>( null, {
+      //TODO https://github.com/phetsims/reactants-products-and-leftovers/issues/78 NullableIO( ChallengeIO )
+    } );
+
+    // Uses 1-based numbering. Zero means 'no challenge'.
+    this._challengeNumberProperty = new NumberProperty( 0, {
+      numberType: 'Integer',
+      //TODO https://github.com/phetsims/reactants-products-and-leftovers/issues/78 range
+      isValidValue: value => ( value >= 0 ),
+      tandem: tandem.createTandem( 'challengeNumberProperty' ),
+      phetioDocumentation: 'The challenge number shown in the status bar. Indicates how far the user has progressed through a level.',
+      phetioReadOnly: true
+    } );
+    this.challengeNumberProperty = this._challengeNumberProperty;
+
+    this.gamePhaseProperty = new EnumerationProperty( GamePhase.SETTINGS, {
+      tandem: tandem.createTandem( 'gamePhaseProperty' ),
+      phetioReadOnly: true
+      //TODO https://github.com/phetsims/reactants-products-and-leftovers/issues/78 phetioDocumentation
+    } );
+
+    this.playStateProperty = new EnumerationProperty( PlayState.NONE, {
+      tandem: tandem.createTandem( 'playStateProperty' ),
+      phetioReadOnly: true
+      //TODO https://github.com/phetsims/reactants-products-and-leftovers/issues/78 phetioDocumentation
+    } );
+
+    // read-only
+    this.challenges = [];
+    this.bestScoreProperties = [];
+    this.bestTimeProperties = [];
+    this.isNewBestTime = false;
+    const bestScoresTandem = tandem.createTandem( 'bestScores' );
+    const bestTimesTandem = tandem.createTandem( 'bestTimes' );
+    for ( let level = 0; level < this.numberOfLevels; level++ ) {
+
+      this.bestScoreProperties.push( new NumberProperty( 0, {
+        numberType: 'Integer',
+        tandem: bestScoresTandem.createTandem( `bestScore${level}Property` )
+      } ) );
+
+      this.bestTimeProperties.push( new Property<number | null>( null, {
+        tandem: bestTimesTandem.createTandem( `bestTime${level}Property` ),
+        phetioValueType: NullableIO( NumberIO )
+        //TODO https://github.com/phetsims/reactants-products-and-leftovers/issues/78 phetioDocumentation
+      } ) );
+    }
+
+    this.timer = new GameTimer();
+  }
+
+  public reset(): void {
+
+    // reset Properties
+    this.timerEnabledProperty.reset();
+    this.gameVisibilityProperty.reset();
+    this.levelProperty.reset();
+    this.scoreProperty.reset();
+    this.numberOfChallengesProperty.reset();
+    this.challengeProperty.reset();
+    this._challengeNumberProperty.reset();
+    this.gamePhaseProperty.reset();
+    this.playStateProperty.reset();
+
+    // reset scores and times for each level
+    this.bestScoreProperties.forEach( property => {
+      property.value = 0;
+    } );
+    this.bestTimeProperties.forEach( property => {
+      property.value = null;
+    } );
+  }
+
+  // Advances to GamePhase.SETTINGS, shows the user-interface for selecting game settings.
+  public settings(): void {
+    this.timer.stop();
+    this.playStateProperty.value = PlayState.NONE;
+    this.gamePhaseProperty.value = GamePhase.SETTINGS; // do this last, so that other stuff is set up before observers are notified
+  }
+
+  // Advances to GamePhase.PLAY, to play a game for the specified level.
+  public play( level: number ): void {
+    assert && assert( this.gamePhaseProperty.value === GamePhase.SETTINGS );
+    this.levelProperty.value = level;
+    this.scoreProperty.value = 0;
+    this.initChallenges();
+    this.timer.start();
+    this.playStateProperty.value = PlayState.FIRST_CHECK;
+    this.gamePhaseProperty.value = GamePhase.PLAY; // do this last, so that other stuff is set up before observers are notified
+  }
+
+  // Advances to GamePhase.RESULTS, ends the current game and displays results.
+  private results(): void {
+    assert && assert( this.gamePhaseProperty.value === GamePhase.PLAY );
+    this.timer.stop();
+    const level = this.levelProperty.value;
+    const score = this.scoreProperty.value;
+    const time = this.timer.elapsedTimeProperty.value;
+    this.isNewBestTime = GameUtils.updateScoreAndBestTime( score, time,
+      this.bestScoreProperties[ level ], this.bestTimeProperties[ level ] );
+    this.playStateProperty.value = PlayState.NONE;
+    this.gamePhaseProperty.value = GamePhase.RESULTS; // do this last, so that other stuff is set up before observers are notified
+  }
+
+  // Checks the current guess.
+  public check(): void {
+    const playState = this.playStateProperty.value;
+    assert && assert( playState === PlayState.FIRST_CHECK || playState === PlayState.SECOND_CHECK );
+
+    const challenge = this.challengeProperty.value!;
+    assert && assert( challenge );
+
+    if ( challenge.isCorrect() ) {
+      // stop the timer as soon as we successfully complete the last challenge
+      if ( this.challengeNumberProperty.value === this.challenges.length ) {
+        this.timer.stop();
+      }
+      const points = ( playState === PlayState.FIRST_CHECK ) ? POINTS_FIRST_CHECK : POINTS_SECOND_CHECK;
+      challenge.points = points;
+      this.scoreProperty.value = this.scoreProperty.value + points;
+      this.playStateProperty.value = PlayState.NEXT;
+    }
+    else {
+      this.playStateProperty.value = ( playState === PlayState.FIRST_CHECK ) ? PlayState.TRY_AGAIN : PlayState.SHOW_ANSWER;
+    }
+  }
+
+  // Makes another attempt at solving the challenge.
+  public tryAgain(): void {
+    assert && assert( this.playStateProperty.value === PlayState.TRY_AGAIN );
+    this.playStateProperty.value = PlayState.SECOND_CHECK;
+  }
+
+  // Shows the correct answer.
+  public showAnswer(): void {
+    assert && assert( this.playStateProperty.value === PlayState.SHOW_ANSWER );
+    const challenge = this.challengeProperty.value!;
+    assert && assert( challenge );
+    challenge.showAnswer();
+    this.playStateProperty.value = PlayState.NEXT;
+  }
+
+  // Advances to the next challenge.
+  public next(): void {
+    if ( this.challengeNumberProperty.value === this.challenges.length ) {
+      // game has been completed, advance to GamePhase.RESULTS
+      this.results();
+    }
+    else {
+      // advance to next challenge
+      this._challengeNumberProperty.value = this._challengeNumberProperty.value + 1;
+      this.challengeProperty.value = this.challenges[ this._challengeNumberProperty.value - 1 ];
+      this.playStateProperty.value = PlayState.FIRST_CHECK;
+    }
+  }
+
+  /**
+   * Gets the number of challenges for the specified level.
+   */
+  public getNumberOfChallenges( level: number ): number {
+    return ChallengeFactory.getNumberOfChallenges( level );
+  }
+
+  /**
+   * Gets the perfect score for the specified level.
+   */
+  public getPerfectScore( level: number ): number {
+    return ChallengeFactory.getNumberOfChallenges( level ) * POINTS_FIRST_CHECK;
+  }
+
+  /**
+   * Is the current score perfect?
+   */
+  public isPerfectScore(): boolean {
+    return ( this.scoreProperty.value === this.getPerfectScore( this.levelProperty.value ) );
+  }
+
+  // Initializes a new set of challenges for the current level.
+  private initChallenges(): void {
+    this.challenges = ChallengeFactory.createChallenges( this.levelProperty.value, this.maxQuantity, {
+      moleculesVisible: ( this.gameVisibilityProperty.value !== GameVisibility.HIDE_MOLECULES ),
+      numbersVisible: ( this.gameVisibilityProperty.value !== GameVisibility.HIDE_NUMBERS )
+    } );
+    this.numberOfChallengesProperty.value = this.challenges.length;
+    this._challengeNumberProperty.value = 1;
+    this.challengeProperty.value = this.challenges[ this._challengeNumberProperty.value - 1 ];
+  }
+
+  /**
+   * DEBUG: Skips the current challenge. Score and best times are meaningless after using this. This is a developer feature.
+   */
+  public skipCurrentChallenge(): void {
+    this.next();
+  }
+
+  /**
+   * DEBUG: Replays the current challenge. Score and best times are meaningless after using this. This is a developer feature.
+   */
+  public replayCurrentChallenge(): void {
+    this.challengeProperty.value && this.challengeProperty.value.reset();
+    this.playStateProperty.value = PlayState.FIRST_CHECK;
+  }
+}
+
+reactantsProductsAndLeftovers.register( 'GameModel', GameModel );

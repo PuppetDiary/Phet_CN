@@ -1,0 +1,29 @@
+{
+  "name": "trig-tour",
+  "version": "1.2.0-dev.0",
+  "license": "GPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/phetsims/trig-tour.git"
+  },
+  "devDependencies": {
+    "grunt": "~1.5.3"
+  },
+  "phet": {
+    "requirejsNamespace": "TRIG_TOUR",
+    "runnable": true,
+    "supportedBrands": [
+      "phet",
+      "adapted-from-phet"
+    ],
+    "simFeatures": {
+      "supportsInteractiveDescription": true,
+      "supportsVoicing": true,
+      "supportsSound": true,
+      "supportsDynamicLocale": true
+    },
+    "simulation": true,
+    "supportsOutputJS": true,
+    "published": true
+  }
+}

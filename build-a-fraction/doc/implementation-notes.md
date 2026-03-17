@@ -1,0 +1,1 @@
+See https://github.com/phetsims/fractions-common/blob/main/doc/implementation-notes.md
