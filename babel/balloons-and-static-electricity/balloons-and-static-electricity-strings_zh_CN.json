@@ -230,5 +230,113 @@
         "explanation": null
       }
     ]
+  },
+  "grabOrReleaseBalloonHeading": {
+    "value": "抓取或释放气球",
+    "history": [
+      {
+        "userId": 293040,
+        "timestamp": 1742371200000,
+        "oldValue": "",
+        "newValue": "抓取或释放气球",
+        "explanation": null
+      }
+    ]
+  },
+  "grabOrReleaseBalloonLabel": {
+    "value": "抓取或释放气球",
+    "history": [
+      {
+        "userId": 293040,
+        "timestamp": 1742371200000,
+        "oldValue": "",
+        "newValue": "抓取或释放气球",
+        "explanation": null
+      }
+    ]
+  },
+  "moveOrJumpGrabbedBalloonHeading": {
+    "value": "移动或跳转已抓取的气球",
+    "history": [
+      {
+        "userId": 293040,
+        "timestamp": 1742371200000,
+        "oldValue": "",
+        "newValue": "移动或跳转已抓取的气球",
+        "explanation": null
+      }
+    ]
+  },
+  "moveGrabbedBalloonLabel": {
+    "value": "移动已抓取的气球",
+    "history": [
+      {
+        "userId": 293040,
+        "timestamp": 1742371200000,
+        "oldValue": "",
+        "newValue": "移动已抓取的气球",
+        "explanation": null
+      }
+    ]
+  },
+  "moveSlowerLabel": {
+    "value": "放慢速度",
+    "history": [
+      {
+        "userId": 293040,
+        "timestamp": 1742371200000,
+        "oldValue": "",
+        "newValue": "放慢速度",
+        "explanation": null
+      }
+    ]
+  },
+  "jumpCloseToSweaterLabel": {
+    "value": "跳到毛衣附近",
+    "history": [
+      {
+        "userId": 293040,
+        "timestamp": 1742371200000,
+        "oldValue": "",
+        "newValue": "跳到毛衣附近",
+        "explanation": null
+      }
+    ]
+  },
+  "jumpCloseToWallLabel": {
+    "value": "跳到墙壁",
+    "history": [
+      {
+        "userId": 293040,
+        "timestamp": 1742371200000,
+        "oldValue": "",
+        "newValue": "跳到墙壁",
+        "explanation": null
+      }
+    ]
+  },
+  "jumpNearWallLabel": {
+    "value": "跳到墙壁附近",
+    "history": [
+      {
+        "userId": 293040,
+        "timestamp": 1742371200000,
+        "oldValue": "",
+        "newValue": "跳到墙壁附近",
+        "explanation": null
+      }
+    ]
+  },
+  "jumpToCenterLabel": {
+    "value": "跳到中心",
+    "history": [
+      {
+        "userId": 293040,
+        "timestamp": 1742371200000,
+        "oldValue": "",
+        "newValue": "跳到中心",
+        "explanation": null
+      }
+    ]
   }
 }
