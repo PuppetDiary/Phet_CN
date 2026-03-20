@@ -1,10 +1,516 @@
 {
+  "faradays-law": {
+    "n": {
+      "value": "N",
+      "history": []
+    },
+    "s": {
+      "value": "S",
+      "history": []
+    },
+    "showFieldLines": {
+      "value": "磁场线",
+      "history": []
+    },
+    "title": {
+      "value": "法拉第定律",
+      "history": []
+    },
+    "voltage": {
+      "value": "电压",
+      "history": []
+    },
+    "voltmeter": {
+      "value": "电压表",
+      "history": []
+    }
+  },
+  "a11y": {
+    "a": {
+      "value": "一个",
+      "history": []
+    },
+    "aCoilPattern": {
+      "value": "一个 {{coil}}",
+      "history": []
+    },
+    "aLightbulb": {
+      "value": "一个灯泡",
+      "history": []
+    },
+    "aVoltMeter": {
+      "value": "一个电压表",
+      "history": []
+    },
+    "and": {
+      "value": "和",
+      "history": []
+    },
+    "barMagnet": {
+      "value": "条形磁铁",
+      "history": []
+    },
+    "barMagnetHelpText": {
+      "value": "使用 W A S D 键向四个方向移动磁铁。使用 1 2 3 键左右滑动磁铁。",
+      "history": []
+    },
+    "barMagnetIs": {
+      "value": "条形磁铁在：",
+      "history": []
+    },
+    "barMagnetPositionPattern": {
+      "value": "条形磁铁在 {{areaPosition}}",
+      "history": []
+    },
+    "bottomCenter": {
+      "value": "下中",
+      "history": []
+    },
+    "bottomLeft": {
+      "value": "左下",
+      "history": []
+    },
+    "bottomRight": {
+      "value": "右下",
+      "history": []
+    },
+    "bumpingCoilPattern": {
+      "value": "碰撞 {{coil}} 线圈",
+      "history": []
+    },
+    "center": {
+      "value": "中心",
+      "history": []
+    },
+    "circuitDescriptionPattern": {
+      "value": "{{circuitContents}} {{coilDescription}}",
+      "history": []
+    },
+    "circuitFourCoilAndVoltmeter": {
+      "value": "电路中有灯泡、4匝线圈和电压表。",
+      "history": []
+    },
+    "circuitFourCoilOnly": {
+      "value": "电路中有灯泡和4匝线圈。",
+      "history": []
+    },
+    "circuitMode": {
+      "value": "电路模式",
+      "history": []
+    },
+    "circuitNowHasPattern": {
+      "value": "电路现在有 {{coil}}。",
+      "history": []
+    },
+    "closeTo": {
+      "value": "接近",
+      "history": []
+    },
+    "coilToDirectionPattern": {
+      "value": "{{coil}} 在 {{direction}}",
+      "history": []
+    },
+    "connected": {
+      "value": "已连接",
+      "history": []
+    },
+    "doubleCoilDescription": {
+      "value": "线圈侧放，开口在左侧和右侧。",
+      "history": []
+    },
+    "edge": {
+      "value": "边缘",
+      "history": []
+    },
+    "exitingCoilPattern": {
+      "value": "离开 {{coil}}",
+      "history": []
+    },
+    "farFrom": {
+      "value": "远离",
+      "history": []
+    },
+    "fieldLines": {
+      "value": "磁场线",
+      "history": []
+    },
+    "fieldLinesDescription": {
+      "value": "添加或移除磁场线。",
+      "history": []
+    },
+    "fieldLinesDescriptionPattern": {
+      "value": "磁场线从磁铁北端的 {{northSide}} 侧绕到南端的 {{southSide}} 侧。",
+      "history": []
+    },
+    "fieldLinesDescriptionUpdated": {
+      "value": "磁场线描述已更新。",
+      "history": []
+    },
+    "fieldLinesVisibilityPattern": {
+      "value": "磁场线{{visibility}}。",
+      "history": []
+    },
+    "fieldStrengthIs": {
+      "value": "磁铁磁场强度为：",
+      "history": []
+    },
+    "fieldStrengthPassingBothCoilsPattern": {
+      "value": "{{strength}} 磁场穿过4匝和2匝线圈。",
+      "history": []
+    },
+    "fieldStrengthPassingCoilPattern": {
+      "value": "{{strength}} 磁场穿过 {{coil}}。",
+      "history": []
+    },
+    "fieldStrengthPassingPattern": {
+      "value": " {{fieldStrength}} 磁场穿过。",
+      "history": []
+    },
+    "fieldStrengthPattern": {
+      "value": "{{fieldStrength}} 于 {{coil}}",
+      "history": []
+    },
+    "flipMagnet": {
+      "value": "翻转磁铁",
+      "history": []
+    },
+    "flipPoles": {
+      "value": "翻转北极和南极。",
+      "history": []
+    },
+    "flippingMagnetPattern": {
+      "value": "磁铁已翻转。北极在 {{northSide}}。南极在 {{southSide}}。",
+      "history": []
+    },
+    "fourCoilTwoCoilFieldLinesPattern": {
+      "value": "{{fourCoil}} {{twoCoilFieldLines}}",
+      "history": []
+    },
+    "fourItemPattern": {
+      "value": "{{first}}、{{second}}、{{third}} 和 {{fourth}}",
+      "history": []
+    },
+    "fourLoopCoil": {
+      "value": "4匝线圈",
+      "history": []
+    },
+    "fourLoopOnlyFieldStrengthPattern": {
+      "value": "根据磁铁的位置，{{fieldStrength}} 磁场正在穿过4匝线圈。",
+      "history": []
+    },
+    "hidden": {
+      "value": "已隐藏",
+      "history": []
+    },
+    "in": {
+      "value": "在",
+      "history": []
+    },
+    "inTheCircuit": {
+      "value": "电路中有：",
+      "history": []
+    },
+    "left": {
+      "value": "左侧",
+      "history": []
+    },
+    "lightBulb": {
+      "value": "灯泡",
+      "history": []
+    },
+    "lightBulbCircuitLabel": {
+      "value": "灯泡电路",
+      "history": []
+    },
+    "magnetAtPositionPattern": {
+      "value": "磁铁在 {{position}}。",
+      "history": []
+    },
+    "magnetPositionAlertPattern": {
+      "value": "磁铁在游戏区的 {{position}}。",
+      "history": []
+    },
+    "magnetPositionExtraAlertPattern": {
+      "value": "磁铁在游戏区的 {{position}}。W A S D 和 1 2 3 键移动磁铁。",
+      "history": []
+    },
+    "magnetPositionProximityPattern": {
+      "value": "{{magnetPosition}} {{coilProximity}}",
+      "history": []
+    },
+    "magnetSlidingAlertPattern": {
+      "value": "磁铁正在 {{direction}} 滑动。按空格键停止。",
+      "history": []
+    },
+    "middleLeft": {
+      "value": "左中",
+      "history": []
+    },
+    "middleRight": {
+      "value": "右中",
+      "history": []
+    },
+    "minimal": {
+      "value": "最小",
+      "history": []
+    },
+    "moveMagnetToPlay": {
+      "value": "使用方向键、W A S D键或1 2 3键移动磁铁进行体验。",
+      "history": []
+    },
+    "noCoilPattern": {
+      "value": "线圈不再在 {{direction}}",
+      "history": []
+    },
+    "normally": {
+      "value": "正常地",
+      "history": []
+    },
+    "north": {
+      "value": "北",
+      "history": []
+    },
+    "numberOneCoil": {
+      "value": "1个线圈",
+      "history": []
+    },
+    "numberTwoCoil": {
+      "value": "2个线圈",
+      "history": []
+    },
+    "oneCoil": {
+      "value": "一个线圈",
+      "history": []
+    },
+    "poleOnThePattern": {
+      "value": "{{pole}} 极在磁铁的 {{side}}",
+      "history": []
+    },
+    "positionOfPlayAreaPattern": {
+      "value": "在游戏区的 {{position}}。",
+      "history": []
+    },
+    "proximityToFourCoilPattern": {
+      "value": "{{proximity}} 4匝线圈",
+      "history": []
+    },
+    "proximityToTwoCoilPattern": {
+      "value": "{{proximity}} 2匝线圈",
+      "history": []
+    },
+    "quickly": {
+      "value": "快速地",
+      "history": []
+    },
+    "removed": {
+      "value": "已断开",
+      "history": []
+    },
+    "right": {
+      "value": "右侧",
+      "history": []
+    },
+    "singleCoilDescription": {
+      "value": "线圈侧放，开口在左侧和右侧。",
+      "history": []
+    },
+    "slidingAndPositionFourCoilPattern": {
+      "value": "{{slidingAndPositionPhrase}} {{fourCoil}}",
+      "history": []
+    },
+    "slidingStopped": {
+      "value": "滑动已停止。",
+      "history": []
+    },
+    "slidingStoppedLinesInvisibleMagnetPositionPattern": {
+      "value": "滑动已停止。{{magnetPosition}} {{coilProximity}}",
+      "history": []
+    },
+    "slidingStoppedLinesVisibleMagnetPositionPattern": {
+      "value": "滑动已停止。{{magnetPosition}} {{coilProximity}} 磁场线描述已更新。",
+      "history": []
+    },
+    "slidingStoppedPositionFourCoilTwoCoilFieldLinesPattern": {
+      "value": "{{slidingAndPositionPhrase}} {{fourCoil}} {{twoCoilFieldLines}}",
+      "history": []
+    },
+    "slidingStoppedPositionPattern": {
+      "value": "{{slidingStopped}} {{magnetPosition}}",
+      "history": []
+    },
+    "slowly": {
+      "value": "缓慢地",
+      "history": []
+    },
+    "south": {
+      "value": "南",
+      "history": []
+    },
+    "strong": {
+      "value": "强",
+      "history": []
+    },
+    "summaryDescription": {
+      "value": "游戏区有一个灯泡电路和一个可移动的条形磁铁。有控制按钮可以改变连接到电路的元件、翻转条形磁铁，以及重置模拟器。",
+      "history": []
+    },
+    "theCoilPattern": {
+      "value": "{{coil}}",
+      "history": []
+    },
+    "theFourLoopCoil": {
+      "value": "4匝线圈",
+      "history": []
+    },
+    "theTwoLoopCoil": {
+      "value": "2匝线圈",
+      "history": []
+    },
+    "threeItemPattern": {
+      "value": "{{first}}、{{second}} 和 {{third}}",
+      "history": []
+    },
+    "threeWordsPattern": {
+      "value": "{{first}} {{second}} {{third}}",
+      "history": []
+    },
+    "topCenter": {
+      "value": "上中",
+      "history": []
+    },
+    "topLeft": {
+      "value": "左上",
+      "history": []
+    },
+    "topRight": {
+      "value": "右上",
+      "history": []
+    },
+    "touchingSideOfCoilPattern": {
+      "value": "接触 {{coil}} 的 {{side}}。",
+      "history": []
+    },
+    "twoCoilFieldLinesPattern": {
+      "value": "{{twoCoil}} {{fieldLines}}",
+      "history": []
+    },
+    "twoCoils": {
+      "value": "两个不同的线圈",
+      "history": []
+    },
+    "twoItemPattern": {
+      "value": "{{first}} 和 {{second}}",
+      "history": []
+    },
+    "twoLoopCoil": {
+      "value": "2匝线圈",
+      "history": []
+    },
+    "twoWordsCommaPattern": {
+      "value": "{{first}}、{{second}}",
+      "history": []
+    },
+    "twoWordsPattern": {
+      "value": "{{first}} {{second}}",
+      "history": []
+    },
+    "veryCloseTo": {
+      "value": "非常接近",
+      "history": []
+    },
+    "veryStrong": {
+      "value": "非常强",
+      "history": []
+    },
+    "veryWeak": {
+      "value": "非常弱",
+      "history": []
+    },
+    "visible": {
+      "value": "可见",
+      "history": []
+    },
+    "voltmeter": {
+      "value": "电压表",
+      "history": []
+    },
+    "voltmeterAlertPattern": {
+      "value": "电压表{{attachmentState}}电路。",
+      "history": []
+    },
+    "voltmeterDescription": {
+      "value": "使用或不连接电压表到灯泡电路进行体验",
+      "history": []
+    },
+    "weak": {
+      "value": "弱",
+      "history": []
+    }
+  },
+  "keyboardHelpDialog": {
+    "autoSlideGrabbedBarMagnet": {
+      "value": "Auto-Slide Grabbed Bar Magnet",
+      "history": []
+    },
+    "autoSlideGrabbedBarMagnetText": {
+      "value": "Auto-slide grabbed<br>magnet horizontally and<br>toggle slide direction",
+      "history": []
+    },
+    "autoSlideGrabbedBarMagnetWith": {
+      "value": "Auto-slide grabbed magnet horizontally and toggle slide direction with number keys 1, 2, or 3.",
+      "history": []
+    },
+    "barMagnet": {
+      "value": "条形磁铁",
+      "history": []
+    },
+    "magnet": {
+      "value": "磁铁",
+      "history": []
+    },
+    "moveBarMagnet": {
+      "value": "移动条形磁铁",
+      "history": []
+    },
+    "moveGrabbedBarMagnet": {
+      "value": "移动抓住的条形磁铁",
+      "history": []
+    },
+    "moveGrabbedMagnet": {
+      "value": "移动抓住的磁铁",
+      "history": []
+    },
+    "moveGrabbedMagnetSlower": {
+      "value": "移动抓住的<br>磁铁更慢",
+      "history": []
+    },
+    "moveGrabbedMagnetSlowerWith": {
+      "value": "使用Shift加方向键，或Shift加W、A、S、D键更慢地移动抓住的磁铁。",
+      "history": []
+    },
+    "moveGrabbedMagnetWith": {
+      "value": "使用方向键或W、A、S、D键向上、左、下、右移动抓住的磁铁。",
+      "history": []
+    }
+  },
+  "faradays-law.title": {
+    "value": "法拉第定律",
+    "history": [
+      {
+        "userId": 293040,
+        "timestamp": 1458182268971,
+        "oldValue": "",
+        "newValue": "法拉第定律",
+        "explanation": null
+      }
+    ]
+  },
   "faradays-law.n": {
     "value": "N",
     "history": [
       {
         "userId": 293040,
-        "timestamp": 1459334324848,
+        "timestamp": 1458182268971,
         "oldValue": "",
         "newValue": "N",
         "explanation": null
@@ -16,33 +522,9 @@
     "history": [
       {
         "userId": 293040,
-        "timestamp": 1459334324848,
+        "timestamp": 1458182268971,
         "oldValue": "",
         "newValue": "S",
-        "explanation": null
-      }
-    ]
-  },
-  "faradays-law.showFieldLines": {
-    "value": "磁感线",
-    "history": [
-      {
-        "userId": 293040,
-        "timestamp": 1459334324848,
-        "oldValue": "",
-        "newValue": "磁感线",
-        "explanation": null
-      }
-    ]
-  },
-  "faradays-law.title": {
-    "value": "法拉第定律",
-    "history": [
-      {
-        "userId": 293040,
-        "timestamp": 1459334324848,
-        "oldValue": "",
-        "newValue": "法拉第定律",
         "explanation": null
       }
     ]
@@ -52,47 +534,167 @@
     "history": [
       {
         "userId": 293040,
-        "timestamp": 1459334324848,
+        "timestamp": 1458182268971,
         "oldValue": "",
         "newValue": "电压",
         "explanation": null
       }
     ]
   },
+  "faradays-law.showFieldLines": {
+    "value": "显示磁场线",
+    "history": [
+      {
+        "userId": 293040,
+        "timestamp": 1458182268971,
+        "oldValue": "",
+        "newValue": "显示磁场线",
+        "explanation": null
+      }
+    ]
+  },
   "faradays-law.voltmeter": {
-    "value": "电压表"
+    "value": "伏特计",
+    "history": [
+      {
+        "userId": 293040,
+        "timestamp": 1458182268971,
+        "oldValue": "",
+        "newValue": "伏特计",
+        "explanation": null
+      }
+    ]
   },
   "keyboardHelpDialog.barMagnet": {
-    "value": "条形磁铁"
+    "value": "条形磁铁",
+    "history": [
+      {
+        "userId": 293040,
+        "timestamp": 1458182268971,
+        "oldValue": "",
+        "newValue": "条形磁铁",
+        "explanation": null
+      }
+    ]
   },
   "keyboardHelpDialog.magnet": {
-    "value": "磁铁"
+    "value": "磁铁",
+    "history": [
+      {
+        "userId": 293040,
+        "timestamp": 1458182268971,
+        "oldValue": "",
+        "newValue": "磁铁",
+        "explanation": null
+      }
+    ]
   },
   "keyboardHelpDialog.moveBarMagnet": {
-    "value": "移动条形磁铁"
+    "value": "移动条形磁铁",
+    "history": [
+      {
+        "userId": 293040,
+        "timestamp": 1458182268971,
+        "oldValue": "",
+        "newValue": "移动条形磁铁",
+        "explanation": null
+      }
+    ]
   },
   "keyboardHelpDialog.moveGrabbedBarMagnet": {
-    "value": "移动已抓取的条形磁铁"
+    "value": "移动抓取的条形磁铁",
+    "history": [
+      {
+        "userId": 293040,
+        "timestamp": 1458182268971,
+        "oldValue": "",
+        "newValue": "移动抓取的条形磁铁",
+        "explanation": null
+      }
+    ]
   },
   "keyboardHelpDialog.moveGrabbedMagnet": {
-    "value": "移动已抓取的磁铁"
+    "value": "移动抓取的磁铁",
+    "history": [
+      {
+        "userId": 293040,
+        "timestamp": 1458182268971,
+        "oldValue": "",
+        "newValue": "移动抓取的磁铁",
+        "explanation": null
+      }
+    ]
   },
   "keyboardHelpDialog.moveGrabbedMagnetWith": {
-    "value": "使用方向键或W、A、S、D键将已抓取的磁铁上、左、下、右移动。"
+    "value": "使用方向键或 W、A、S、D 键移动抓取的磁铁上、下、左、右。",
+    "history": [
+      {
+        "userId": 293040,
+        "timestamp": 1458182268971,
+        "oldValue": "",
+        "newValue": "使用方向键或 W、A、S、D 键移动抓取的磁铁上、下、左、右。",
+        "explanation": null
+      }
+    ]
   },
   "keyboardHelpDialog.moveGrabbedMagnetSlower": {
-    "value": "缓慢移动已抓取的<br>磁铁"
+    "value": "更慢地移动抓取的<br>磁铁",
+    "history": [
+      {
+        "userId": 293040,
+        "timestamp": 1458182268971,
+        "oldValue": "",
+        "newValue": "更慢地移动抓取的<br>磁铁",
+        "explanation": null
+      }
+    ]
   },
   "keyboardHelpDialog.moveGrabbedMagnetSlowerWith": {
-    "value": "使用Shift加方向键或Shift加W、A、S、D键缓慢移动已抓取的磁铁。"
+    "value": "使用 Shift 加方向键，或 Shift 加 W、A、S、D 键更慢地移动抓取的磁铁。",
+    "history": [
+      {
+        "userId": 293040,
+        "timestamp": 1458182268971,
+        "oldValue": "",
+        "newValue": "使用 Shift 加方向键，或 Shift 加 W、A、S、D 键更慢地移动抓取的磁铁。",
+        "explanation": null
+      }
+    ]
   },
   "keyboardHelpDialog.autoSlideGrabbedBarMagnet": {
-    "value": "自动滑动已抓取的条形磁铁"
+    "value": "自动滑动抓取的条形磁铁",
+    "history": [
+      {
+        "userId": 293040,
+        "timestamp": 1458182268971,
+        "oldValue": "",
+        "newValue": "自动滑动抓取的条形磁铁",
+        "explanation": null
+      }
+    ]
   },
   "keyboardHelpDialog.autoSlideGrabbedBarMagnetText": {
-    "value": "自动水平滑动已抓取<br>的磁铁并切换滑动方向"
+    "value": "自动水平滑动抓取的<br>磁铁并切换<br>滑动方向",
+    "history": [
+      {
+        "userId": 293040,
+        "timestamp": 1458182268971,
+        "oldValue": "",
+        "newValue": "自动水平滑动抓取的<br>磁铁并切换<br>滑动方向",
+        "explanation": null
+      }
+    ]
   },
   "keyboardHelpDialog.autoSlideGrabbedBarMagnetWith": {
-    "value": "使用数字键1、2或3自动水平滑动已抓取的磁铁并切换滑动方向。"
+    "value": "使用数字键 1、2 或 3 自动水平滑动抓取的磁铁并切换滑动方向。",
+    "history": [
+      {
+        "userId": 293040,
+        "timestamp": 1458182268971,
+        "oldValue": "",
+        "newValue": "使用数字键 1、2 或 3 自动水平滑动抓取的磁铁并切换滑动方向。",
+        "explanation": null
+      }
+    ]
   }
 }

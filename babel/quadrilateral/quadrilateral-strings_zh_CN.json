@@ -1,4 +1,249 @@
 {
+  "quadrilateral.title": {
+    "value": "四边形",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553819,
+        "oldValue": "Quadrilateral_四边形",
+        "newValue": "四边形"
+      }
+    ]
+  },
+  "shapeName": {
+    "value": "形状名称"
+  },
+  "labels": {
+    "value": "标签",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553819,
+        "oldValue": "",
+        "newValue": "标签"
+      }
+    ]
+  },
+  "markers": {
+    "value": "标记",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553819,
+        "oldValue": "",
+        "newValue": "标记"
+      }
+    ]
+  },
+  "diagonals": {
+    "value": "对角线",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553819,
+        "oldValue": "",
+        "newValue": "对角线"
+      }
+    ]
+  },
+  "grid": {
+    "value": "格线",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553819,
+        "oldValue": "",
+        "newValue": "格线"
+      }
+    ]
+  },
+  "vertexA": {
+    "value": "A",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553819,
+        "oldValue": "",
+        "newValue": "A"
+      }
+    ]
+  },
+  "vertexB": {
+    "value": "B",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553819,
+        "oldValue": "",
+        "newValue": "B"
+      }
+    ]
+  },
+  "vertexC": {
+    "value": "C",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553819,
+        "oldValue": "",
+        "newValue": "C"
+      }
+    ]
+  },
+  "vertexD": {
+    "value": "D",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553819,
+        "oldValue": "",
+        "newValue": "D"
+      }
+    ]
+  },
+  "resetShape": {
+    "value": "重置形状",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553819,
+        "oldValue": "",
+        "newValue": "重置形状"
+      }
+    ]
+  },
+  "smallSteps": {
+    "value": "小步伐",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553819,
+        "oldValue": "",
+        "newValue": "小步伐"
+      }
+    ]
+  },
+  "shapeNames.square": {
+    "value": "正方形",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553819,
+        "oldValue": "",
+        "newValue": "正方形"
+      }
+    ]
+  },
+  "shapeNames.rectangle": {
+    "value": "矩形",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553819,
+        "oldValue": "",
+        "newValue": "矩形"
+      }
+    ]
+  },
+  "shapeNames.rhombus": {
+    "value": "菱形",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553819,
+        "oldValue": "",
+        "newValue": "菱形"
+      }
+    ]
+  },
+  "shapeNames.kite": {
+    "value": "鸢形",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553819,
+        "oldValue": "鸳形",
+        "newValue": "鸢形"
+      }
+    ]
+  },
+  "shapeNames.isoscelesTrapezoid": {
+    "value": "等腰梯形",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553819,
+        "oldValue": "",
+        "newValue": "等腰梯形"
+      }
+    ]
+  },
+  "shapeNames.trapezoid": {
+    "value": "梯形",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553819,
+        "oldValue": "",
+        "newValue": "梯形"
+      }
+    ]
+  },
+  "shapeNames.concaveQuadrilateral": {
+    "value": "凹四边形",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553819,
+        "oldValue": "",
+        "newValue": "凹四边形"
+      }
+    ]
+  },
+  "shapeNames.convexQuadrilateral": {
+    "value": "凸四边形",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553819,
+        "oldValue": "",
+        "newValue": "凸四边形"
+      }
+    ]
+  },
+  "shapeNames.parallelogram": {
+    "value": "平行四边形",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553819,
+        "oldValue": "",
+        "newValue": "平行四边形"
+      }
+    ]
+  },
+  "shapeNames.dart": {
+    "value": "飞镖形",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553819,
+        "oldValue": "",
+        "newValue": "飞镖形"
+      }
+    ]
+  },
+  "shapeNames.triangle": {
+    "value": "三角形？",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553819,
+        "oldValue": "三角形？",
+        "newValue": "三角形？"
+      }
+    ]
+  },
   "preferencesDialog.shapeSoundOptions": {
     "value": "形状音效选项",
     "history": [
@@ -120,256 +365,729 @@
       }
     ]
   },
-  "vertexA": {
-    "value": "A",
-    "history": [
-      {
-        "userId": 0,
-        "timestamp": 1773333553819,
-        "oldValue": "",
-        "newValue": "A"
+  "a11y": {
+    "cornerLabelsAddedResponse": {
+      "value": "已添加字母 A 到 D 到各角。"
+    },
+    "cornerLabelsRemovedResponse": {
+      "value": "角标签已隐藏。"
+    },
+    "cornerLabelsHintResponse": {
+      "value": "在有或无视觉角标签辅助的情况下创建形状。"
+    },
+    "markersAddedResponse": {
+      "value": "已添加 30 度角楔形和均匀分布的边长单位。"
+    },
+    "markersRemovedResponse": {
+      "value": "角楔形和边长单位已隐藏。"
+    },
+    "markersHintResponse": {
+      "value": "在有或无 30 度角楔形和均匀分布的边长单位辅助的情况下创建形状。"
+    },
+    "gridLinesAddedResponse": {
+      "value": "已添加格线。"
+    },
+    "gridLinesRemovedResponse": {
+      "value": "格线已隐藏。"
+    },
+    "diagonalGuidesAddedResponse": {
+      "value": "引导线穿过对角的顶点。"
+    },
+    "diagonalGuidesRemovedResponse": {
+      "value": "对角引导线已隐藏。"
+    },
+    "diagonalGuidesHintResponse": {
+      "value": "在有或无对角对称引导线辅助的情况下创建形状。"
+    },
+    "gridLinesHintResponse": {
+      "value": "在有或无背景网格辅助的情况下创建形状。"
+    },
+    "cornerA": {
+      "value": "角 A"
+    },
+    "cornerB": {
+      "value": "角 B"
+    },
+    "cornerC": {
+      "value": "角 C"
+    },
+    "cornerD": {
+      "value": "角 D"
+    },
+    "sideAB": {
+      "value": "边 AB"
+    },
+    "sideBC": {
+      "value": "边 BC"
+    },
+    "sideCD": {
+      "value": "边 CD"
+    },
+    "sideDA": {
+      "value": "边 DA"
+    },
+    "aB": {
+      "value": "AB"
+    },
+    "bC": {
+      "value": "BC"
+    },
+    "cD": {
+      "value": "CD"
+    },
+    "dA": {
+      "value": "DA"
+    },
+    "voicing": {
+      "overviewContent": {
+        "value": "四边形是具有四条边的形状。当你操作其相连的角和边时，它会发生变化。移动角或边会同时以不同方式改变你的形状。你不能破坏形状，也不能让边或角交叉。根据需要使用形状标记、背景网格和对角引导线来创建四边形家族中的不同形状。你可以显示形状名称、静音形状音效、快速重置形状或重置所有。"
+      },
+      "hintContent": {
+        "value": "以大步伐或小步伐移动角和边。玩得开心！"
+      },
+      "youHaveAShapeHintPattern": {
+        "value": "你有一个{{shapeDescription}}。"
+      },
+      "youHaveASizedNamedShapePattern": {
+        "value": "你的{{shapeName}}的面积为{{size}}。"
+      },
+      "youHaveASizedShapePattern": {
+        "value": "你的形状的面积为{{size}}。"
+      },
+      "firstDetailsStatementPattern": {
+        "value": "当前，{{cornerType}}角为{{angleEquality}}，且{{sideType}}边相等。"
+      },
+      "vertexHintResponse": {
+        "value": "移动角并改变其两条相连的边和最多 3 个角。"
+      },
+      "sideHintResponse": {
+        "value": "移动边并改变其两条相连的边和最多 4 个角。"
+      },
+      "details": {
+        "all": {
+          "value": "全部"
+        },
+        "opposite": {
+          "value": "对"
+        },
+        "rightAngles": {
+          "value": "直角"
+        },
+        "equal": {
+          "value": "相等"
+        },
+        "pairsOfAdjacent": {
+          "value": "相邻对"
+        },
+        "onePairOfAdjacent": {
+          "value": "一对相邻"
+        },
+        "onePairOfOpposite": {
+          "value": "一对对边"
+        },
+        "noString": {
+          "value": "无"
+        }
+      },
+      "sidesDescriptionPattern": {
+        "value": "边{{description}}。"
+      },
+      "longestSidesDescriptionPattern": {
+        "value": "最长边{{description}}"
+      },
+      "longestSideDescriptionPattern": {
+        "value": "最长边{{description}}"
+      },
+      "shortestSidesDescriptionPattern": {
+        "value": "最短边{{description}}"
+      },
+      "shortestSideDescriptionPattern": {
+        "value": "最短边{{description}}"
+      },
+      "sideLengthDescriptionPattern": {
+        "value": "{{longest}}，{{shortest}}"
+      },
+      "cornersRightDescription": {
+        "value": "角为 90 度。"
+      },
+      "widestCornersDescriptionPattern": {
+        "value": "最大角{{description}}"
+      },
+      "widestCornerDescriptionPattern": {
+        "value": "最大角{{description}}"
+      },
+      "smallestCornersDescriptionPattern": {
+        "value": "最小角{{description}}"
+      },
+      "smallestCornerDescriptionPattern": {
+        "value": "最小角{{description}}"
+      },
+      "cornersDescriptionPattern": {
+        "value": "{{longest}}，{{shortest}}"
+      },
+      "oppositeSidesTiltPattern": {
+        "value": "当对角等量变化时，对边{{tiltChange}}平行。"
+      },
+      "oppositeSidesInParallelPattern": {
+        "value": "当形状变得{{areaChange}}时，对边平行。"
+      },
+      "oppositeSidesInParallelAsCornersChangeEquallyPattern": {
+        "value": "当角不等量变化时，对边{{firstSide}}和{{secondSide}}平行倾斜。"
+      },
+      "oppositeSidesTiltAsShapeChangesPattern": {
+        "value": "当形状变得{{areaChange}}时，对边{{firstSide}}和{{secondSide}}平行倾斜。"
+      },
+      "maintainingATrapezoidAsShapeChangesPattern": {
+        "value": "当形状变得{{areaChange}}时，对边{{firstSide}}和{{secondSide}}平行。"
+      },
+      "adjacentSidesChangeEquallyAsShapeChangesPattern": {
+        "value": "当形状变得{{areaChange}}时，邻边等量变化。"
+      },
+      "oppositeSidesEqualAsShapeChangesPattern": {
+        "value": "当形状变得{{areaChange}}时，对边{{firstSide}}和{{secondSide}}相等。"
+      },
+      "maintainingAParallelogramAngleResponse": {
+        "value": "当对角等量变化时，对边平行。"
+      },
+      "maintainingAParallelogramLengthResponsePattern": {
+        "value": "当形状变得{{areaChange}}时，对边平行。"
+      },
+      "allRightAnglesAsShapeChangesPattern": {
+        "value": "当形状变得{{areaChange}}时，所有角为直角。"
+      },
+      "maintainingARhombus": {
+        "value": "对角等量变化，对边等长平行。"
+      },
+      "allSidesEqualAsShapeChangesPattern": {
+        "value": "当形状变得{{areaChange}}时，所有边相等。"
+      },
+      "cornerFlatAsShapeChangesPattern": {
+        "value": "当邻边长度变化时，{{cornerLabel}}变平。"
+      },
+      "adjacentSidesInLinePattern": {
+        "value": "当形状变得{{areaChange}}时，邻边{{firstSide}}和{{secondSide}}成一直线。"
+      },
+      "allSidesTiltAwayFromParallel": {
+        "value": "当对角不等量变化时，所有边倾斜离开平行。"
+      },
+      "allSidesTiltAwayFromParallelAsShapeChangesPattern": {
+        "value": "当形状变得{{areaChange}}时，所有边倾斜离开平行。"
+      },
+      "tilt": {
+        "value": "倾斜"
+      },
+      "straighten": {
+        "value": "拉直"
+      },
+      "bigger": {
+        "value": "更大"
+      },
+      "smaller": {
+        "value": "更小"
+      },
+      "sizes": {
+        "tiny": {
+          "value": "极小"
+        },
+        "verySmall": {
+          "value": "很小"
+        },
+        "small": {
+          "value": "小"
+        },
+        "mediumSized": {
+          "value": "中等"
+        },
+        "large": {
+          "value": "大"
+        }
+      },
+      "shapeNames": {
+        "withoutArticles": {
+          "square": {
+            "value": "正方形"
+          },
+          "rectangle": {
+            "value": "矩形"
+          },
+          "rhombus": {
+            "value": "菱形"
+          },
+          "kite": {
+            "value": "鸢形"
+          },
+          "isoscelesTrapezoid": {
+            "value": "等腰梯形"
+          },
+          "trapezoid": {
+            "value": "梯形"
+          },
+          "concaveQuadrilateral": {
+            "value": "凹四边形"
+          },
+          "convexQuadrilateral": {
+            "value": "凸四边形"
+          },
+          "parallelogram": {
+            "value": "平行四边形"
+          },
+          "dart": {
+            "value": "飞镖形"
+          },
+          "triangle": {
+            "value": "三角形，是这样吗？"
+          }
+        },
+        "withArticles": {
+          "square": {
+            "value": "一个正方形"
+          },
+          "rectangle": {
+            "value": "一个矩形"
+          },
+          "rhombus": {
+            "value": "一个菱形"
+          },
+          "kite": {
+            "value": "一个鸢形"
+          },
+          "isoscelesTrapezoid": {
+            "value": "一个等腰梯形"
+          },
+          "trapezoid": {
+            "value": "一个梯形"
+          },
+          "concaveQuadrilateral": {
+            "value": "一个凹四边形"
+          },
+          "convexQuadrilateral": {
+            "value": "一个凸四边形"
+          },
+          "parallelogram": {
+            "value": "一个平行四边形"
+          },
+          "dart": {
+            "value": "一个飞镖形"
+          },
+          "triangle": {
+            "value": "一个三角形，是这样吗？"
+          }
+        }
+      },
+      "allRightAnglesAllSidesEqual": {
+        "value": "所有角为直角，所有边相等。"
+      },
+      "allSidesEqual": {
+        "value": "所有边相等。"
+      },
+      "allRightAngles": {
+        "value": "所有角为直角。"
+      },
+      "oppositeSidesInParallel": {
+        "value": "对边平行。"
+      },
+      "trapezoidDetailsPattern": {
+        "value": "对边{{firstSide}}和{{secondSide}}平行。"
+      },
+      "isoscelesTrapezoidDetailsPattern": {
+        "value": "对边{{equalFirstSide}}和{{equalSecondSide}}相等，对边{{parallelFirstSide}}和{{parallelSecondSide}}平行。"
+      },
+      "kiteDetailsPattern": {
+        "value": "角{{firstCorner}}和{{secondCorner}}相等，且相邻边对相等。"
+      },
+      "kiteDetailsShortPattern": {
+        "value": "角{{firstCorner}}和{{secondCorner}}相等。"
+      },
+      "dartDetailsPattern": {
+        "value": "角{{inwardCorner}}向内凹，角{{firstCorner}}和{{secondCorner}}相等，且相邻边对相等。"
+      },
+      "dartDetailsShortPattern": {
+        "value": "角{{inwardCorner}}向内凹，角{{firstCorner}}和{{secondCorner}}相等。"
+      },
+      "triangleDetailsPattern": {
+        "value": "角{{flatCorner}}变平，邻边看起来像一条边。"
+      },
+      "convexQuadrilateralDetails": {
+        "value": "无边平行。"
+      },
+      "concaveQuadrilateralDetailsPattern": {
+        "value": "角{{inwardCorner}}向内凹，无边平行。"
+      },
+      "vertexObjectResponsePattern": {
+        "value": "{{oppositeComparison}}对角，{{adjacentVertexDescription}}。"
+      },
+      "vertexObjectResponseWithWedgesPattern": {
+        "value": "{{wedgeDescription}}，{{oppositeComparison}}对角，{{adjacentVertexDescription}}。"
+      },
+      "rightAngle": {
+        "value": "直角"
+      },
+      "angleFlat": {
+        "value": "6 个楔形"
+      },
+      "oneWedge": {
+        "value": "一个楔形"
+      },
+      "halfOneWedge": {
+        "value": "半个楔形"
+      },
+      "lessThanHalfOneWedge": {
+        "value": "小于半个 1 楔形"
+      },
+      "justUnderOneWedge": {
+        "value": "略小于 1 楔形"
+      },
+      "justOverOneWedge": {
+        "value": "略大于 1 楔形"
+      },
+      "numberOfWedgesPattern": {
+        "value": "{{numberOfWedges}} 个楔形"
+      },
+      "numberOfWedgesAndAHalfPattern": {
+        "value": "{{numberOfWedges}}个半楔形"
+      },
+      "justOverNumberOfWedgesPattern": {
+        "value": "略大于 {{numberOfWedges}} 个楔形"
+      },
+      "justUnderNumberOfWedgesPattern": {
+        "value": "略小于 {{numberOfWedges}} 个楔形"
+      },
+      "oneUnit": {
+        "value": "1 个单位"
+      },
+      "numberOfUnitsPattern": {
+        "value": "{{numberOfUnits}} 个单位"
+      },
+      "numberOfUnitsAndAHalfPattern": {
+        "value": "{{numberOfUnits}}个半单位"
+      },
+      "oneQuarterUnit": {
+        "value": "四分之一个单位"
+      },
+      "numberAndOneQuarterUnitsPattern": {
+        "value": "{{fullNumber}}个又四分之一单位"
+      },
+      "threeQuarterUnits": {
+        "value": "四分之三个单位"
+      },
+      "numberAndThreeQuarterUnitsPattern": {
+        "value": "{{fullNumber}}个又四分之三单位"
+      },
+      "aboutOneUnit": {
+        "value": "约 1 个单位"
+      },
+      "aboutNumberUnitsPattern": {
+        "value": "约 {{number}} 个单位"
+      },
+      "aboutOneHalfUnits": {
+        "value": "约二分之一个单位"
+      },
+      "oneHalfUnits": {
+        "value": "二分之一个单位"
+      },
+      "aboutNumberAndAHalfUnitsPattern": {
+        "value": "约 {{number}}个又二分之一个单位"
+      },
+      "aboutNumberQuarterUnitsPattern": {
+        "value": "约 {{number}}-四分之一个单位"
+      },
+      "aboutFullNumberAndNumberQuarterUnitsPattern": {
+        "value": "约 {{fullNumber}}个又 {{number}}-四分之一个单位"
+      },
+      "vertexDragObjectResponse": {
+        "wider": {
+          "value": "更宽"
+        },
+        "smaller": {
+          "value": "更小"
+        },
+        "vertexDragObjectResponsePattern": {
+          "value": "角{{angleChange}}"
+        }
+      },
+      "sideDragObjectResponse": {
+        "shorter": {
+          "value": "更短"
+        },
+        "longer": {
+          "value": "更长"
+        },
+        "adjacentSidesChangePattern": {
+          "value": "邻边{{lengthChange}}"
+        },
+        "adjacentSidesChangeInLength": {
+          "value": "邻边长度变化"
+        },
+        "parallelAdjacentSidesChangePattern": {
+          "value": "平行的邻边{{lengthChange}}"
+        },
+        "equalAdjacentSidesChangePattern": {
+          "value": "相等的邻边{{lengthChange}}"
+        },
+        "adjacentSidesEqual": {
+          "value": "邻边相等"
+        },
+        "equalToAdjacentSides": {
+          "value": "等于邻边"
+        },
+        "adjacentSidesParallel": {
+          "value": "邻边平行"
+        },
+        "equalToOneAdjacentSide": {
+          "value": "等于一条邻边"
+        },
+        "threeSidesEqual": {
+          "value": "三条边相等"
+        },
+        "twoSidesEqual": {
+          "value": "两条边相等"
+        }
+      },
+      "farSmallerThan": {
+        "value": "远小于"
+      },
+      "aboutHalfAsWideAs": {
+        "value": "约一半宽"
+      },
+      "halfAsWideAs": {
+        "value": "一半宽"
+      },
+      "aLittleSmallerThan": {
+        "value": "略小于"
+      },
+      "muchSmallerThan": {
+        "value": "小很多"
+      },
+      "similarButSmallerThan": {
+        "value": "相似但更小"
+      },
+      "equalTo": {
+        "value": "等于"
+      },
+      "similarButWiderThan": {
+        "value": "相似但更宽"
+      },
+      "aLittleWiderThan": {
+        "value": "略大于"
+      },
+      "muchWiderThan": {
+        "value": "大很多"
+      },
+      "aboutTwiceAsWideAs": {
+        "value": "约两倍宽"
+      },
+      "twiceAsWideAs": {
+        "value": "两倍宽"
+      },
+      "farWiderThan": {
+        "value": "远大于"
+      },
+      "equalToAdjacentCorners": {
+        "value": "等于邻角"
+      },
+      "equalToOneAdjacentCorner": {
+        "value": "等于一个邻角"
+      },
+      "equalAdjacentCornersPattern": {
+        "value": "{{comparison}}个相等邻角"
+      },
+      "smallerThanAdjacentCorners": {
+        "value": "小于邻角"
+      },
+      "widerThanAdjacentCorners": {
+        "value": "大于邻角"
+      },
+      "notEqualToAdjacentCorners": {
+        "value": "不等于邻角"
+      },
+      "farShorterThan": {
+        "value": "远短于"
+      },
+      "aboutHalfAsLongAs": {
+        "value": "约一半长"
+      },
+      "halfAsLongAs": {
+        "value": "一半长"
+      },
+      "aLittleShorterThan": {
+        "value": "略短于"
+      },
+      "muchShorterThan": {
+        "value": "短很多"
+      },
+      "similarButShorterThan": {
+        "value": "相似但更短"
+      },
+      "similarButLongerThan": {
+        "value": "相似但更长"
+      },
+      "aLittleLongerThan": {
+        "value": "略长于"
+      },
+      "muchLongerThan": {
+        "value": "长很多"
+      },
+      "aboutTwiceAsLongAs": {
+        "value": "约两倍长"
+      },
+      "twiceAsLongAs": {
+        "value": "两倍长"
+      },
+      "farLongerThan": {
+        "value": "远长于"
+      },
+      "parallelEqualSideObjectResponsePattern": {
+        "value": "平行且{{oppositeComparison}}对边，{{adjacentSideDescription}}"
+      },
+      "parallelSideObjectResponsePattern": {
+        "value": "平行于且{{oppositeComparison}}对边，{{adjacentSideDescription}}"
+      },
+      "sideObjectResponsePattern": {
+        "value": "{{oppositeComparison}}对边，{{adjacentSideDescription}}"
+      },
+      "sideUnitsObjectResponsePattern": {
+        "value": "{{unitsDescription}}，{{objectResponse}}"
+      },
+      "equalToAdjacentSides": {
+        "value": "等于邻边"
+      },
+      "equalToOneAdjacentSide": {
+        "value": "等于一条邻边"
+      },
+      "equalAdjacentSidesPattern": {
+        "value": "{{comparison}}条相等邻边"
+      },
+      "equalAdjacentParallelSidesPattern": {
+        "value": "{{comparison}}条平行且相等的邻边"
+      },
+      "shorterThanAdjacentSides": {
+        "value": "短于邻边"
+      },
+      "shorterThanParallelAdjacentSides": {
+        "value": "短于平行的邻边"
+      },
+      "longerThanAdjacentSides": {
+        "value": "长于邻边"
+      },
+      "longerThanParallelAdjacentSides": {
+        "value": "长于平行的邻边"
+      },
+      "notEqualToAdjacentSides": {
+        "value": "不等于邻边"
+      },
+      "notEqualToParallelAdjacentSides": {
+        "value": "不等于平行的邻边"
+      },
+      "back": {
+        "value": "回来"
+      },
+      "gone": {
+        "value": "消失"
+      },
+      "cornersBack": {
+        "value": "角回来了。"
+      },
+      "cornersGone": {
+        "value": "角消失了。"
+      },
+      "cornerDetectedPattern": {
+        "value": "角{{label}}{{state}}"
+      },
+      "shapeSoundControl": {
+        "nameResponse": {
+          "value": "形状音效"
+        },
+        "enabledContextResponse": {
+          "value": "形状变化时开启"
+        },
+        "disabledContextResponse": {
+          "value": "形状变化时关闭"
+        },
+        "hintResponse": {
+          "value": "探索形状变化时是否有音乐音效辅助。"
+        }
+      },
+      "resetShape": {
+        "contextResponse": {
+          "value": "所有角为直角，所有边为两个单位。"
+        }
+      },
+      "foundShapePattern": {
+        "value": "找到了{{shapeName}}"
+      },
+      "shapeNameHiddenContextResponse": {
+        "value": "聆听变化的形状属性。"
+      },
+      "shapeNameShownContextResponse": {
+        "value": "聆听变化的形状名称。"
+      },
+      "angleComparisonPattern": {
+        "value": "{{comparison}}{{cornerLabel}}"
+      },
+      "equalToOppositeCornerEqualToAdjacentCorners": {
+        "value": "等于对角，等于邻角"
+      },
+      "oppositeCorner": {
+        "value": "对角"
+      },
+      "adjacentCornersEqual": {
+        "value": "邻角相等"
+      },
+      "adjacentCornersRightAngles": {
+        "value": "邻角为直角"
+      },
+      "progressStatePattern": {
+        "value": "{{progress}}，{{state}}"
+      },
+      "blockedByEdge": {
+        "value": "被边缘阻挡。"
+      },
+      "blockedByInnerShape": {
+        "value": "被内部形状阻挡。"
+      },
+      "minorIntervalsToggle": {
+        "hintResponse": {
+          "value": "锁定后，角和边以小步伐移动。"
+        },
+        "lockedNameResponse": {
+          "value": "小步伐已锁定"
+        },
+        "unlockedNameResponse": {
+          "value": "小步伐已解锁"
+        },
+        "lockedContextResponse": {
+          "value": "角和边的移动锁定为小步伐。"
+        },
+        "unlockedContextResponse": {
+          "value": "需要按 Shift 键才能进行小步伐移动。"
+        }
       }
-    ]
-  },
-  "vertexB": {
-    "value": "B",
-    "history": [
-      {
-        "userId": 0,
-        "timestamp": 1773333553819,
-        "oldValue": "",
-        "newValue": "B"
+    },
+    "keyboardHelpDialog": {
+      "smallerStepsDescription": {
+        "value": "使用 Shift 加方向键，或 Shift 加 W、A、S、D 键，或 Shift 加鼠标以较小步伐移动。"
       }
-    ]
-  },
-  "vertexC": {
-    "value": "C",
-    "history": [
-      {
-        "userId": 0,
-        "timestamp": 1773333553819,
-        "oldValue": "",
-        "newValue": "C"
+    },
+    "preferencesDialog": {
+      "tracksPlayForeverToggle": {
+        "checkedContextResponse": {
+          "value": "形状音效永久播放。"
+        },
+        "uncheckedContextResponse": {
+          "value": "形状音效渐弱停止。"
+        }
       }
-    ]
-  },
-  "vertexD": {
-    "value": "D",
-    "history": [
-      {
-        "userId": 0,
-        "timestamp": 1773333553819,
-        "oldValue": "",
-        "newValue": "D"
-      }
-    ]
-  },
-  "resetShape": {
-    "value": "重置形状",
-    "history": [
-      {
-        "userId": 0,
-        "timestamp": 1773333553819,
-        "oldValue": "",
-        "newValue": "重置形状"
-      }
-    ]
-  },
-  "labels": {
-    "value": "标签",
-    "history": [
-      {
-        "userId": 0,
-        "timestamp": 1773333553819,
-        "oldValue": "",
-        "newValue": "标签"
-      }
-    ]
-  },
-  "markers": {
-    "value": "标记",
-    "history": [
-      {
-        "userId": 0,
-        "timestamp": 1773333553819,
-        "oldValue": "",
-        "newValue": "标记"
-      }
-    ]
-  },
-  "diagonals": {
-    "value": "对角线",
-    "history": [
-      {
-        "userId": 0,
-        "timestamp": 1773333553819,
-        "oldValue": "",
-        "newValue": "对角线"
-      }
-    ]
-  },
-  "grid": {
-    "value": "格线",
-    "history": [
-      {
-        "userId": 0,
-        "timestamp": 1773333553819,
-        "oldValue": "",
-        "newValue": "格线"
-      }
-    ]
-  },
-  "shapeNames.square": {
-    "value": "正方形",
-    "history": [
-      {
-        "userId": 0,
-        "timestamp": 1773333553819,
-        "oldValue": "",
-        "newValue": "正方形"
-      }
-    ]
-  },
-  "shapeNames.rectangle": {
-    "value": "矩形",
-    "history": [
-      {
-        "userId": 0,
-        "timestamp": 1773333553819,
-        "oldValue": "",
-        "newValue": "矩形"
-      }
-    ]
-  },
-  "shapeNames.rhombus": {
-    "value": "菱形",
-    "history": [
-      {
-        "userId": 0,
-        "timestamp": 1773333553819,
-        "oldValue": "",
-        "newValue": "菱形"
-      }
-    ]
-  },
-  "shapeNames.kite": {
-    "value": "鸳形",
-    "history": [
-      {
-        "userId": 0,
-        "timestamp": 1773333553819,
-        "oldValue": "",
-        "newValue": "鸳形"
-      }
-    ]
-  },
-  "shapeNames.isoscelesTrapezoid": {
-    "value": "等腰梯形",
-    "history": [
-      {
-        "userId": 0,
-        "timestamp": 1773333553819,
-        "oldValue": "",
-        "newValue": "等腰梯形"
-      }
-    ]
-  },
-  "shapeNames.trapezoid": {
-    "value": "梯形",
-    "history": [
-      {
-        "userId": 0,
-        "timestamp": 1773333553819,
-        "oldValue": "",
-        "newValue": "梯形"
-      }
-    ]
-  },
-  "shapeNames.concaveQuadrilateral": {
-    "value": "凹四边形",
-    "history": [
-      {
-        "userId": 0,
-        "timestamp": 1773333553819,
-        "oldValue": "",
-        "newValue": "凹四边形"
-      }
-    ]
-  },
-  "shapeNames.convexQuadrilateral": {
-    "value": "凸四边形",
-    "history": [
-      {
-        "userId": 0,
-        "timestamp": 1773333553819,
-        "oldValue": "",
-        "newValue": "凸四边形"
-      }
-    ]
-  },
-  "shapeNames.parallelogram": {
-    "value": "平行四边形",
-    "history": [
-      {
-        "userId": 0,
-        "timestamp": 1773333553819,
-        "oldValue": "",
-        "newValue": "平行四边形"
-      }
-    ]
-  },
-  "shapeNames.dart": {
-    "value": "飞镖形",
-    "history": [
-      {
-        "userId": 0,
-        "timestamp": 1773333553819,
-        "oldValue": "",
-        "newValue": "飞镖形"
-      }
-    ]
-  },
-  "shapeNames.triangle": {
-    "value": "三角形？",
-    "history": [
-      {
-        "userId": 0,
-        "timestamp": 1773333553819,
-        "oldValue": "",
-        "newValue": "三角形？"
-      }
-    ]
+    }
   },
   "shapeNameHidden": {
-    "value": "已隐藏形状名称",
+    "value": "隐藏形状名称",
     "history": [
       {
-        "userId": 0,
-        "timestamp": 1773333553819,
+        "userId": 293040,
+        "timestamp": 1458182268971,
         "oldValue": "",
-        "newValue": "已隐藏形状名称"
-      }
-    ]
-  },
-  "smallSteps": {
-    "value": "小步伐",
-    "history": [
-      {
-        "userId": 0,
-        "timestamp": 1773333553819,
-        "oldValue": "",
-        "newValue": "小步伐"
-      }
-    ]
-  },
-  "quadrilateral.title": {
-    "value": "Quadrilateral_四边形",
-    "history": [
-      {
-        "userId": 0,
-        "timestamp": 1773333553819,
-        "oldValue": "",
-        "newValue": "Quadrilateral_四边形"
+        "newValue": "隐藏形状名称",
+        "explanation": null
       }
     ]
   }

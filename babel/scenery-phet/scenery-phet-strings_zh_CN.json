@@ -1098,6 +1098,27 @@
       }
     ]
   },
+  "keyboardHelpDialog.faucetControls.faucetControls": {
+    "value": "水龙头控件"
+  },
+  "keyboardHelpDialog.faucetControls.adjustFaucetFlow": {
+    "value": "调整水龙头流量"
+  },
+  "keyboardHelpDialog.faucetControls.adjustInLargerSteps": {
+    "value": "大跨度调整"
+  },
+  "keyboardHelpDialog.faucetControls.adjustInSmallerSteps": {
+    "value": "小跨度调整"
+  },
+  "keyboardHelpDialog.faucetControls.closeFaucet": {
+    "value": "关闭水龙头"
+  },
+  "keyboardHelpDialog.faucetControls.openFaucetBriefly": {
+    "value": "短暂打开水龙头"
+  },
+  "keyboardHelpDialog.faucetControls.openFaucetFully": {
+    "value": "完全打开水龙头"
+  },
   "keyboardHelpDialog.timingControls.timingControls": {
     "value": "时间控件",
     "history": [

@@ -48,5 +48,17 @@
         "explanation": null
       }
     ]
+  },
+  "a11y": {
+    "introScreen": {
+      "screenButtonsHelpText": {
+        "value": "构建电路并测量电压和电流。"
+      }
+    },
+    "labScreen": {
+      "screenButtonsHelpText": {
+        "value": "使用更多种类的元件构建电路，并尝试高级选项。"
+      }
+    }
   }
 }

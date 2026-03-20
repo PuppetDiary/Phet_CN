@@ -131,17 +131,23 @@
       }
     ]
   },
-  "screen.explore": {
-    "value": "探索",
-    "history": [
-      {
-        "userId": 685789,
-        "timestamp": 1563854439001,
-        "oldValue": "",
-        "newValue": "探索",
-        "explanation": null
-      }
-    ]
+  "screen": {
+    "explore": {
+      "value": "Explore",
+      "history": []
+    },
+    "focusAndDirectrix": {
+      "value": "Focus & Directrix",
+      "history": []
+    },
+    "standardForm": {
+      "value": "Standard Form",
+      "history": []
+    },
+    "vertexForm": {
+      "value": "Vertex Form",
+      "history": []
+    }
   },
   "coordinates": {
     "value": "坐标",
@@ -203,18 +209,6 @@
       }
     ]
   },
-  "screen.focusAndDirectrix": {
-    "value": "焦点和准线",
-    "history": [
-      {
-        "userId": 685789,
-        "timestamp": 1563854439001,
-        "oldValue": "",
-        "newValue": "焦点和准线",
-        "explanation": null
-      }
-    ]
-  },
   "axisOfSymmetry": {
     "value": "对称轴",
     "history": [
@@ -251,38 +245,788 @@
       }
     ]
   },
-  "screen.standardForm": {
-    "value": "标准式",
-    "history": [
-      {
-        "userId": 685789,
-        "timestamp": 1563854439001,
-        "oldValue": "",
-        "newValue": "标准式",
-        "explanation": null
-      }
-    ]
+  "graphing-quadratics": {
+    "title": {
+      "value": "二次函数图像",
+      "history": []
+    }
   },
-  "screen.vertexForm": {
-    "value": "顶点式",
-    "history": [
-      {
-        "userId": 685789,
-        "timestamp": 1563854439001,
-        "oldValue": "",
-        "newValue": "顶点式",
-        "explanation": null
+  "a11y": {
+    "aPicker": {
+      "accessibleHelpText": {
+        "value": "调整方程中二次项的系数。",
+        "history": []
+      },
+      "accessibleName": {
+        "value": "a，x平方的系数",
+        "history": []
       }
-    ]
+    },
+    "aSlider": {
+      "accessibleHelpText": {
+        "value": "调整方程中二次项的系数。",
+        "history": []
+      },
+      "accessibleName": {
+        "value": "a，x平方的系数",
+        "history": []
+      }
+    },
+    "accessibleHeadings": {
+      "graphAreaHeading": {
+        "value": "图形区域",
+        "history": []
+      },
+      "parabolaFeaturesHeading": {
+        "value": "抛物线特征",
+        "history": []
+      }
+    },
+    "allScreens": {
+      "screenSummary": {
+        "controlArea": {
+          "value": "此外，可以访问可移动的坐标点工具，并重置模拟器以重新开始。\n",
+          "history": []
+        },
+        "currentDetails": {
+          "value": "当前，坐标网格中有一条抛物线，绘制了方程控制中的函数。",
+          "history": []
+        },
+        "currentDetailsEmpty": {
+          "value": "当前，坐标网格内容为空。",
+          "history": []
+        },
+        "interactionHint": {
+          "value": "调整方程系数和常数以开始改变抛物线的形状或位置，或继续阅读了解更多详情。",
+          "history": []
+        }
+      }
+    },
+    "axisOfSymmetryAtEquation": {
+      "value": "对称轴在 {{equation}}",
+      "history": []
+    },
+    "axisOfSymmetryCheckbox": {
+      "accessibleContextResponseChecked": {
+        "value": "对称轴已显示。",
+        "history": []
+      },
+      "accessibleContextResponseUnchecked": {
+        "value": "对称轴已隐藏。",
+        "history": []
+      },
+      "accessibleHelpText": {
+        "value": "显示或隐藏抛物线的对称轴。",
+        "history": []
+      }
+    },
+    "bPicker": {
+      "accessibleHelpText": {
+        "value": "调整方程中一次项的系数。",
+        "history": []
+      },
+      "accessibleName": {
+        "value": "b，x的系数",
+        "history": []
+      }
+    },
+    "bSlider": {
+      "accessibleHelpText": {
+        "value": "调整方程中一次项的系数。",
+        "history": []
+      },
+      "accessibleName": {
+        "value": "b，x的系数",
+        "history": []
+      }
+    },
+    "cPicker": {
+      "accessibleHelpText": {
+        "value": "调整方程中的常数项。",
+        "history": []
+      },
+      "accessibleName": {
+        "value": "c，常数项",
+        "history": []
+      }
+    },
+    "cSlider": {
+      "accessibleHelpText": {
+        "value": "调整方程中的常数项。",
+        "history": []
+      },
+      "accessibleName": {
+        "value": "c，常数项",
+        "history": []
+      }
+    },
+    "closeParen": {
+      "value": "右括号",
+      "history": []
+    },
+    "constantTerm": {
+      "value": "常数项",
+      "history": []
+    },
+    "constantTermAtEquation": {
+      "value": "常数项在 {{equation}}",
+      "history": []
+    },
+    "constantTermCheckbox": {
+      "accessibleContextResponseChecked": {
+        "value": "常数项已绘图。",
+        "history": []
+      },
+      "accessibleContextResponseUnchecked": {
+        "value": "常数项未绘图。",
+        "history": []
+      },
+      "accessibleHelpText": {
+        "value": "显示或隐藏常数项的图形。",
+        "history": []
+      },
+      "accessibleName": {
+        "value": "y等于c",
+        "history": []
+      }
+    },
+    "contentsOfGraphAreaAreHidden": {
+      "value": "图形区域内容已隐藏。",
+      "history": []
+    },
+    "coordinatesCheckbox": {
+      "accessibleContextResponseChecked": {
+        "value": "坐标已显示。",
+        "history": []
+      },
+      "accessibleContextResponseUnchecked": {
+        "value": "坐标已隐藏。",
+        "history": []
+      },
+      "accessibleHelpText": {
+        "value": "显示或隐藏抛物线特征的坐标。",
+        "history": []
+      }
+    },
+    "directrixAtEquation": {
+      "value": "准线在 {{equation}}",
+      "history": []
+    },
+    "directrixCheckbox": {
+      "accessibleContextResponseChecked": {
+        "value": "准线已显示。",
+        "history": []
+      },
+      "accessibleContextResponseUnchecked": {
+        "value": "准线已隐藏。",
+        "history": []
+      },
+      "accessibleHelpText": {
+        "value": "显示或隐藏抛物线的准线。",
+        "history": []
+      }
+    },
+    "equals": {
+      "value": "等于",
+      "history": []
+    },
+    "equationAccordionBox": {
+      "accessibleName": {
+        "value": "方程控制",
+        "history": []
+      }
+    },
+    "equationsCheckbox": {
+      "accessibleContextResponseChecked": {
+        "value": "曲线已用方程标注。",
+        "history": []
+      },
+      "accessibleContextResponseUnchecked": {
+        "value": "曲线未用方程标注。",
+        "history": []
+      },
+      "accessibleHelpText": {
+        "value": "显示或隐藏标注曲线的方程。",
+        "history": []
+      }
+    },
+    "eraseButton": {
+      "accessibleContextResponse": {
+        "value": "已保存的抛物线已擦除。",
+        "history": []
+      },
+      "accessibleName": {
+        "value": "擦除已保存的抛物线",
+        "history": []
+      }
+    },
+    "exploreScreen": {
+      "equationAccordionBox": {
+        "accessibleHelpText": {
+          "value": "调整方程 {{equation}} 中a、b和c的值。",
+          "history": []
+        }
+      },
+      "screenButtonsHelpText": {
+        "value": "通过操作标准式中二次函数系数创建自定义抛物线。",
+        "history": []
+      },
+      "screenSummary": {
+        "playArea": {
+          "value": "有一个方程控制面板用于调整方程 {{equation}} 中的系数值，一个单独的二次项面板，以及一个坐标网格。方程控制允许你操作二次函数。图形区域显示活跃曲线。",
+          "history": []
+        }
+      }
+    },
+    "focusAndDirectrixFormEquation": {
+      "value": "y等于1除以4p乘以括号x减h括号的平方加k",
+      "history": []
+    },
+    "focusAndDirectrixFormEquationNode": {
+      "accessibleParagraph": {
+        "value": "y等于分子为1分母为4乘以{{p}}的分数乘以括号x减{{h}}括号的平方加{{k}}",
+        "history": []
+      }
+    },
+    "focusAndDirectrixScreen": {
+      "equationAccordionBox": {
+        "accessibleHelpText": {
+          "value": "调整方程 {{equation}} 中p、h和k的值。",
+          "history": []
+        }
+      },
+      "screenButtonsHelpText": {
+        "value": "探索抛物线与其焦点和准线之间的关系。",
+        "history": []
+      },
+      "screenSummary": {
+        "playArea": {
+          "value": "有一个方程控制面板用于调整方程 {{equation}} 中的系数值，用于关键抛物线特征的可见性复选框，以及一个坐标网格。方程控制允许你操作二次函数。图形区域显示活跃的抛物线和抛物线特征。",
+          "history": []
+        }
+      }
+    },
+    "focusCheckbox": {
+      "accessibleContextResponseChecked": {
+        "value": "焦点已显示。",
+        "history": []
+      },
+      "accessibleContextResponseUnchecked": {
+        "value": "焦点已隐藏。",
+        "history": []
+      },
+      "accessibleHelpText": {
+        "value": "显示或隐藏抛物线的可移动焦点。",
+        "history": []
+      }
+    },
+    "focusManipulator": {
+      "accessibleHelpText": {
+        "value": "调整抛物线的焦点和准线。",
+        "history": []
+      },
+      "accessibleName": {
+        "value": "焦点",
+        "history": []
+      },
+      "accessibleObjectResponse": {
+        "value": "{{x}} {{y}}",
+        "history": []
+      }
+    },
+    "graphAreaCurrentlyContains": {
+      "value": "图形区域当前包含：",
+      "history": []
+    },
+    "graphContentsToggleButton": {
+      "accessibleContextResponseHidden": {
+        "value": "图形内容已隐藏。",
+        "history": []
+      },
+      "accessibleContextResponseShown": {
+        "value": "图形内容已显示。",
+        "history": []
+      },
+      "accessibleHelpText": {
+        "value": "显示或隐藏图形区域中的抛物线和抛物线特征。",
+        "history": []
+      },
+      "accessibleNameOff": {
+        "value": "显示图形内容",
+        "history": []
+      },
+      "accessibleNameOn": {
+        "value": "隐藏图形内容",
+        "history": []
+      }
+    },
+    "hPicker": {
+      "accessibleName": {
+        "value": "h，顶点的x坐标",
+        "history": []
+      }
+    },
+    "hSlider": {
+      "accessibleName": {
+        "value": "h，顶点的x坐标",
+        "history": []
+      }
+    },
+    "kPicker": {
+      "accessibleName": {
+        "value": "k，顶点的y坐标",
+        "history": []
+      }
+    },
+    "kSlider": {
+      "accessibleName": {
+        "value": "k，顶点的y坐标",
+        "history": []
+      }
+    },
+    "leftPointToolNode": {
+      "accessibleHelpText": {
+        "value": "放置在网格中获取xy坐标。工具左侧有手柄，右侧有探头。{{keyboardHelp}}",
+        "history": []
+      },
+      "accessibleName": {
+        "value": "左手点工具",
+        "history": []
+      }
+    },
+    "linearTerm": {
+      "value": "一次项",
+      "history": []
+    },
+    "linearTermAtEquation": {
+      "value": "一次项在 {{equation}}",
+      "history": []
+    },
+    "linearTermCheckbox": {
+      "accessibleContextResponseChecked": {
+        "value": "一次项已绘图。",
+        "history": []
+      },
+      "accessibleContextResponseUnchecked": {
+        "value": "一次项未绘图。",
+        "history": []
+      },
+      "accessibleHelpText": {
+        "value": "显示或隐藏一次项的图形。",
+        "history": []
+      },
+      "accessibleName": {
+        "value": "y等于bx",
+        "history": []
+      }
+    },
+    "minus": {
+      "value": "减",
+      "history": []
+    },
+    "movableFocus": {
+      "value": "可移动焦点",
+      "history": []
+    },
+    "movableFocusAtCoordinates": {
+      "value": "可移动焦点在 {{x}} {{y}}",
+      "history": []
+    },
+    "movablePointOnParabola": {
+      "value": "抛物线上的可移动点",
+      "history": []
+    },
+    "movablePointOnParabolaAtCoordinates": {
+      "value": "抛物线上的可移动点在 {{x}} {{y}}",
+      "history": []
+    },
+    "movableVertex": {
+      "value": "可移动顶点",
+      "history": []
+    },
+    "movableVertexAtCoordinates": {
+      "value": "可移动顶点在 {{x}} {{y}}",
+      "history": []
+    },
+    "negative": {
+      "value": "负",
+      "history": []
+    },
+    "openParen": {
+      "value": "左括号",
+      "history": []
+    },
+    "pSlider": {
+      "accessibleHelpText": {
+        "value": "调整顶点与焦点之间的距离。",
+        "history": []
+      },
+      "accessibleName": {
+        "value": "p，距离值",
+        "history": []
+      }
+    },
+    "plus": {
+      "value": "加",
+      "history": []
+    },
+    "pointOnParabolaCheckbox": {
+      "accessibleContextResponseChecked": {
+        "value": "抛物线上的点已显示。",
+        "history": []
+      },
+      "accessibleContextResponseUnchecked": {
+        "value": "抛物线上的点已隐藏。",
+        "history": []
+      },
+      "accessibleHelpText": {
+        "value": "显示或隐藏抛物线上的可移动点。",
+        "history": []
+      }
+    },
+    "pointOnParabolaManipulator": {
+      "accessibleHelpText": {
+        "value": "探索抛物线上的xy有序对。",
+        "history": []
+      },
+      "accessibleName": {
+        "value": "抛物线上的点",
+        "history": []
+      },
+      "accessibleObjectResponse": {
+        "value": "{{x}} {{y}}",
+        "history": []
+      }
+    },
+    "pointToolNode": {
+      "accessibleObjectResponseOffGrid": {
+        "value": "网格外",
+        "history": []
+      },
+      "accessibleObjectResponseXY": {
+        "value": "{{x}} {{y}}",
+        "history": []
+      },
+      "accessibleObjectResponseXYCurveName": {
+        "value": "{{x}} {{y}} 在 {{curveName}} 上",
+        "history": []
+      },
+      "keyboardHelp": {
+        "value": "使用J跳转到下一条曲线，K移出网格。",
+        "history": []
+      }
+    },
+    "primaryParabola": {
+      "value": "主抛物线",
+      "history": []
+    },
+    "primaryParabolaAtEquation": {
+      "value": "主抛物线在 {{equation}}",
+      "history": []
+    },
+    "quadraticTerm": {
+      "value": "二次项",
+      "history": []
+    },
+    "quadraticTermAtEquation": {
+      "value": "二次项在 {{equation}}",
+      "history": []
+    },
+    "quadraticTermCheckbox": {
+      "accessibleContextResponseChecked": {
+        "value": "二次项已绘图。",
+        "history": []
+      },
+      "accessibleContextResponseUnchecked": {
+        "value": "二次项未绘图。",
+        "history": []
+      },
+      "accessibleHelpText": {
+        "value": "显示或隐藏二次项的图形。",
+        "history": []
+      },
+      "accessibleName": {
+        "value": "y等于ax平方",
+        "history": []
+      }
+    },
+    "quadraticTermsAccordionBox": {
+      "accessibleHelpTextCollapsed": {
+        "value": "分别绘制二次函数的每一项。",
+        "history": []
+      }
+    },
+    "rightPointToolNode": {
+      "accessibleHelpText": {
+        "value": "放置在网格中获取xy坐标。工具右侧有手柄，左侧有探头。{{keyboardHelp}}",
+        "history": []
+      },
+      "accessibleName": {
+        "value": "右手点工具",
+        "history": []
+      }
+    },
+    "rootsAtCoordinates1": {
+      "value": "根在 {{x}} {{y}}",
+      "history": []
+    },
+    "rootsAtCoordinates2": {
+      "value": "根在 {{x1}} {{y1}} 和 {{x2}} {{y2}}",
+      "history": []
+    },
+    "rootsCheckbox": {
+      "accessibleContextResponseChecked": {
+        "value": "根已显示（如为实数）。",
+        "history": []
+      },
+      "accessibleContextResponseUnchecked": {
+        "value": "根已隐藏。",
+        "history": []
+      },
+      "accessibleHelpText": {
+        "value": "显示或隐藏抛物线的根（如果有实根的话）。",
+        "history": []
+      }
+    },
+    "saveButton": {
+      "accessibleContextResponse": {
+        "value": "当前抛物线已保存到网格。",
+        "history": []
+      },
+      "accessibleHelpText": {
+        "value": "将当前抛物线保存到网格并继续探索主抛物线。已保存的抛物线不可交互。",
+        "history": []
+      },
+      "accessibleName": {
+        "value": "保存抛物线",
+        "history": []
+      }
+    },
+    "savedParabola": {
+      "value": "已保存的抛物线",
+      "history": []
+    },
+    "savedParabolaAtEquation": {
+      "value": "已保存的抛物线在 {{equation}}",
+      "history": []
+    },
+    "squared": {
+      "value": "平方",
+      "history": []
+    },
+    "standardFormEquation": {
+      "value": "y等于ax平方加bx加c",
+      "history": []
+    },
+    "standardFormEquationNode": {
+      "accessibleParagraph": {
+        "value": "y等于{{a}}x平方加{{b}}x加{{c}}",
+        "history": []
+      }
+    },
+    "standardFormScreen": {
+      "equationAccordionBox": {
+        "accessibleHelpText": {
+          "value": "调整方程 {{equation}} 中a、b和c的值。",
+          "history": []
+        }
+      },
+      "screenButtonsHelpText": {
+        "value": "探索抛物线特征及其与标准式中二次函数的关系。",
+        "history": []
+      },
+      "screenSummary": {
+        "playArea": {
+          "value": "有一个方程控制面板用于调整方程 {{equation}} 中的系数值，用于关键抛物线特征的可见性复选框，以及一个坐标网格。方程控制允许你操作二次函数。图形区域显示活跃的抛物线和抛物线特征。",
+          "history": []
+        }
+      }
+    },
+    "times": {
+      "value": "乘",
+      "history": []
+    },
+    "vertexAtCoordinates": {
+      "value": "顶点在 {{x}} {{y}}",
+      "history": []
+    },
+    "vertexFormEquation": {
+      "value": "y等于a乘以括号x减h括号的平方加k",
+      "history": []
+    },
+    "vertexFormEquationNode": {
+      "accessibleParagraph": {
+        "value": "y等于{{a}}乘以括号x减{{h}}括号的平方加{{k}}",
+        "history": []
+      }
+    },
+    "vertexFormScreen": {
+      "equationAccordionBox": {
+        "accessibleHelpText": {
+          "value": "调整方程 {{equation}} 中a、h和k的值。",
+          "history": []
+        }
+      },
+      "screenButtonsHelpText": {
+        "value": "探索抛物线特征及其与顶点式中二次函数的关系。",
+        "history": []
+      },
+      "screenSummary": {
+        "playArea": {
+          "value": "有一个方程控制面板用于调整方程 {{equation}} 中的系数值，用于关键抛物线特征的可见性复选框，以及一个坐标网格。方程控制允许你操作二次函数。图形区域显示活跃的抛物线和抛物线特征。",
+          "history": []
+        }
+      }
+    },
+    "vertexManipulator": {
+      "accessibleHelpText": {
+        "value": "调整抛物线的顶点。",
+        "history": []
+      },
+      "accessibleName": {
+        "value": "顶点",
+        "history": []
+      },
+      "accessibleObjectResponse": {
+        "value": "{{x}} {{y}}",
+        "history": []
+      }
+    },
+    "vertexManipulatorCheckbox": {
+      "accessibleContextResponseChecked": {
+        "value": "顶点已显示。",
+        "history": []
+      },
+      "accessibleContextResponseUnchecked": {
+        "value": "顶点已隐藏。",
+        "history": []
+      },
+      "accessibleHelpText": {
+        "value": "显示或隐藏抛物线上的可移动顶点。",
+        "history": []
+      }
+    },
+    "vertexPointCheckbox": {
+      "accessibleContextResponseChecked": {
+        "value": "顶点已显示。",
+        "history": []
+      },
+      "accessibleContextResponseUnchecked": {
+        "value": "顶点已隐藏。",
+        "history": []
+      },
+      "accessibleHelpText": {
+        "value": "显示或隐藏抛物线上的顶点。",
+        "history": []
+      }
+    }
+  },
+  "keyboardHelpDialog": {
+    "jumpToNextCurve": {
+      "value": "跳转到下一条曲线",
+      "history": []
+    },
+    "moveOffGrid": {
+      "value": "移出网格",
+      "history": []
+    },
+    "pointToolShortcuts": {
+      "value": "点工具快捷键",
+      "history": []
+    }
   },
   "graphing-quadratics.title": {
     "value": "二次函数图像",
     "history": [
       {
-        "userId": 685789,
-        "timestamp": 1563854439001,
+        "userId": 293040,
+        "timestamp": 1458182268971,
         "oldValue": "",
         "newValue": "二次函数图像",
+        "explanation": null
+      }
+    ]
+  },
+  "screen.explore": {
+    "value": "探索",
+    "history": [
+      {
+        "userId": 293040,
+        "timestamp": 1458182268971,
+        "oldValue": "",
+        "newValue": "探索",
+        "explanation": null
+      }
+    ]
+  },
+  "screen.standardForm": {
+    "value": "标准形式",
+    "history": [
+      {
+        "userId": 293040,
+        "timestamp": 1458182268971,
+        "oldValue": "",
+        "newValue": "标准形式",
+        "explanation": null
+      }
+    ]
+  },
+  "screen.vertexForm": {
+    "value": "顶点形式",
+    "history": [
+      {
+        "userId": 293040,
+        "timestamp": 1458182268971,
+        "oldValue": "",
+        "newValue": "顶点形式",
+        "explanation": null
+      }
+    ]
+  },
+  "screen.focusAndDirectrix": {
+    "value": "焦点和准线",
+    "history": [
+      {
+        "userId": 293040,
+        "timestamp": 1458182268971,
+        "oldValue": "",
+        "newValue": "焦点和准线",
+        "explanation": null
+      }
+    ]
+  },
+  "keyboardHelpDialog.pointToolShortcuts": {
+    "value": "点工具快捷键",
+    "history": [
+      {
+        "userId": 293040,
+        "timestamp": 1458182268971,
+        "oldValue": "",
+        "newValue": "点工具快捷键",
+        "explanation": null
+      }
+    ]
+  },
+  "keyboardHelpDialog.moveOffGrid": {
+    "value": "移出网格",
+    "history": [
+      {
+        "userId": 293040,
+        "timestamp": 1458182268971,
+        "oldValue": "",
+        "newValue": "移出网格",
+        "explanation": null
+      }
+    ]
+  },
+  "keyboardHelpDialog.jumpToNextCurve": {
+    "value": "跳转到下一条曲线",
+    "history": [
+      {
+        "userId": 293040,
+        "timestamp": 1458182268971,
+        "oldValue": "",
+        "newValue": "跳转到下一条曲线",
         "explanation": null
       }
     ]

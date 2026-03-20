@@ -12,7 +12,7 @@
     ]
   },
   "choice.drainCleaner": {
-    "value": "清洁剂",
+    "value": "管道疏通剂",
     "history": [
       {
         "userId": 162142,
@@ -127,7 +127,7 @@
     ]
   },
   "choice.vomit": {
-    "value": "催吐剂",
+    "value": "呕吐物",
     "history": [
       {
         "userId": 162142,
@@ -139,7 +139,7 @@
     ]
   },
   "choice.batteryAcid": {
-    "value": "电瓶水",
+    "value": "电池酸液",
     "history": [
       {
         "userId": 162142,
@@ -421,6 +421,30 @@
       }
     ]
   },
+  "choice.beer": {
+    "value": "啤酒",
+    "history": [
+      {
+        "userId": 162142,
+        "timestamp": 1458177143937,
+        "oldValue": "",
+        "newValue": "啤酒",
+        "explanation": null
+      }
+    ]
+  },
+  "confirm.changeLiquid": {
+    "value": ""
+  },
+  "label.H2O": {
+    "value": ""
+  },
+  "label.H3O": {
+    "value": ""
+  },
+  "label.OH": {
+    "value": ""
+  },
   "checkBox.H3O_OH_ratio": {
     "value": "{0}/{1} 比",
     "history": [
@@ -642,5 +666,408 @@
   },
   "autoFillDescription": {
     "value": "自动将溶质填充到目标量。"
+  },
+  "a11y": {
+    "keyboardHelpDialog": {
+      "movePHProbe": {
+        "move": {
+          "value": "使用方向键或 W、A、S、D 键移动。"
+        },
+        "moveSlower": {
+          "value": "使用 Shift 加方向键或 Shift 加 W、A、S、D 键缓慢移动。"
+        },
+        "jump": {
+          "value": "使用 J 键跳转到烧杯内部和周围区域。"
+        }
+      },
+      "moveGraphIndicators": {
+        "move": {
+          "value": "使用上或下方向键或 W 和 S 键移动。"
+        },
+        "moveSlower": {
+          "value": "使用 Shift 加上或下方向键或 Shift 加 W 和 S 键缓慢移动。"
+        }
+      }
+    },
+    "commonScreenSummary": {
+      "currentDetails": {
+        "emptyBeaker": {
+          "value": "当前，烧杯为空。"
+        },
+        "beakerWithSolution": {
+          "value": "当前，烧杯中含有液体。"
+        }
+      }
+    },
+    "macroScreenButton": {
+      "accessibleHelpText": {
+        "value": "测试常见溶液的 pH 值。"
+      }
+    },
+    "microScreenButton": {
+      "accessibleHelpText": {
+        "value": "探索常见溶液中的离子数量。"
+      }
+    },
+    "mySolutionScreenButton": {
+      "accessibleHelpText": {
+        "value": "通过调节 pH 值或离子浓度来创建你自己的溶液。"
+      }
+    },
+    "qualitativePHValuePattern": {
+      "value": "pH 值为 {{pHValue}}，{{pHDescription}}。"
+    },
+    "pHValueUnknown": {
+      "value": "pH 值未知。"
+    },
+    "pHValuePattern": {
+      "value": "pH 值为 {{pHValue}}。"
+    },
+    "unknown": {
+      "value": "未知"
+    },
+    "scientificNotationPattern": {
+      "value": "{{mantissa}} 乘以 10 的 {{exponent}} 次方"
+    },
+    "qualitativePHDescription": {
+      "extremelyBasic": {
+        "value": "极强碱性"
+      },
+      "highlyBasic": {
+        "value": "强碱性"
+      },
+      "moderatelyBasic": {
+        "value": "中等碱性"
+      },
+      "slightlyBasic": {
+        "value": "弱碱性"
+      },
+      "neutral": {
+        "value": "中性"
+      },
+      "slightlyAcidic": {
+        "value": "弱酸性"
+      },
+      "moderatelyAcidic": {
+        "value": "中等酸性"
+      },
+      "highlyAcidic": {
+        "value": "强酸性"
+      },
+      "extremelyAcidic": {
+        "value": "极强酸性"
+      }
+    },
+    "microScreenSummary": {
+      "playArea": {
+        "value": "溶液滴管、水龙头和带可伸缩探针的 pH 计位于可排水的烧杯上方。滴管一次一种地分配日常溶液。左侧的图表显示溶液中 OH 减、H3O 加和水的数量。"
+      },
+      "controlArea": {
+        "value": "在对数和线性之间切换图表刻度。重置模拟以重新开始。"
+      },
+      "interactionHint": {
+        "value": "向烧杯中添加溶液并操作。"
+      }
+    },
+    "macroScreenSummary": {
+      "playArea": {
+        "value": "溶液滴管和水龙头位于可排水的烧杯上方。滴管一次一种地分配日常溶液。左侧是一个可移动的 pH 探针，连接着一个带刻度的 pH 计。"
+      },
+      "controlArea": {
+        "value": "重置模拟以重新开始。"
+      },
+      "interactionHint": {
+        "emptyBeaker": {
+          "value": "向烧杯中添加溶液并操作。"
+        },
+        "beakerWithSolution": {
+          "value": "移动 pH 探针开始探索。"
+        }
+      }
+    },
+    "mySolutionScreenSummary": {
+      "playArea": {
+        "value": "一个可调节的 pH 计，其可伸缩探针浸入含有可定制溶液的烧杯中。左侧是一个带 H3O 加和 OH 减数量可移动指示器的对数图表。"
+      },
+      "controlArea": {
+        "value": "重置模拟以重新开始。"
+      },
+      "interactionHint": {
+        "value": "更改 pH 值或离子数量以创建溶液。"
+      }
+    },
+    "pHMeter": {
+      "heading": {
+        "value": "pH 计"
+      },
+      "description": {
+        "value": "pH 计垂直刻度从零到十四。下一半标记为酸性，上一半标记为碱性。"
+      }
+    },
+    "macroProbe": {
+      "accessibleName": {
+        "value": "pH 探针"
+      },
+      "accessibleHelpText": {
+        "value": "移动探针或使用键盘快捷键跳转到特殊位置。"
+      },
+      "accessibleObjectResponses": {
+        "insideBeaker": {
+          "value": "在烧杯内"
+        },
+        "underWaterFaucet": {
+          "value": "在水龙头下方"
+        },
+        "underDropper": {
+          "value": "在滴管下方"
+        },
+        "underDrainFaucet": {
+          "value": "在排水龙头下方"
+        },
+        "outsideBeaker": {
+          "value": "在烧杯外"
+        }
+      }
+    },
+    "mySolutionProbe": {
+      "accessibleHelpText": {
+        "value": "增加或减少 pH 值。"
+      }
+    },
+    "beaker": {
+      "accessibleHeading": {
+        "value": "烧杯"
+      },
+      "empty": {
+        "value": "烧杯为空。"
+      },
+      "solutionPattern": {
+        "value": "烧杯含有 {{volume}} 升的 {{solute}} 溶液。"
+      },
+      "waterPattern": {
+        "value": "烧杯含有 {{volume}} 升的水。"
+      },
+      "ionComparisonPattern": {
+        "value": "溶液中 H3O 加的量为 OH 减量的{{comparison}}。"
+      },
+      "lessThan": {
+        "value": "小于"
+      },
+      "greaterThan": {
+        "value": "大于"
+      },
+      "equalTo": {
+        "value": "等于"
+      },
+      "unknownSolution": {
+        "value": "一个"
+      },
+      "neutralIndicatorAccessibleParagraph": {
+        "value": "烧杯内容物为中性。"
+      }
+    },
+    "beakerControls": {
+      "accessibleHeading": {
+        "value": "烧杯控制"
+      },
+      "soluteComboBox": {
+        "accessibleName": {
+          "value": "溶液"
+        },
+        "accessibleHelpText": {
+          "value": "为滴管选择日常液体。"
+        },
+        "batteryAcidAccessibleName": {
+          "value": "电池酸液，明黄色"
+        },
+        "bloodAccessibleName": {
+          "value": "血液，红色"
+        },
+        "chickenSoupAccessibleName": {
+          "value": "鸡汤，深黄色"
+        },
+        "coffeeAccessibleName": {
+          "value": "咖啡，棕色"
+        },
+        "drainCleanerAccessibleName": {
+          "value": "管道疏通剂，明黄色"
+        },
+        "handSoapAccessibleName": {
+          "value": "洗手液，薰衣草色"
+        },
+        "milkAccessibleName": {
+          "value": "牛奶，白色"
+        },
+        "orangeJuiceAccessibleName": {
+          "value": "橙汁，橙色"
+        },
+        "sodaPopAccessibleName": {
+          "value": "汽水，酸橙色"
+        },
+        "spitAccessibleName": {
+          "value": "唾液，无色"
+        },
+        "vomitAccessibleName": {
+          "value": "呕吐物，橙肉色"
+        },
+        "waterAccessibleName": {
+          "value": "水，无色"
+        }
+      },
+      "dropper": {
+        "accessibleName": {
+          "value": "{{solute}} 滴管"
+        },
+        "accessibleHelpText": {
+          "value": "向烧杯中添加溶液。"
+        },
+        "accessibleContextResponseOn": {
+          "value": "正在分配"
+        },
+        "accessibleContextResponseOff": {
+          "value": "分配结束"
+        }
+      },
+      "faucetCommon": {
+        "accessibleObjectResponse": {
+          "value": "{{value}} 升每秒"
+        }
+      },
+      "waterFaucet": {
+        "accessibleName": {
+          "value": "水龙头"
+        },
+        "accessibleHelpText": {
+          "value": "向烧杯中的溶液加水。"
+        }
+      },
+      "drainFaucet": {
+        "accessibleName": {
+          "value": "排水龙头"
+        },
+        "accessibleHelpText": {
+          "value": "打开以排出烧杯中的溶液。"
+        }
+      },
+      "ratioCheckbox": {
+        "accessibleName": {
+          "value": "H3O 加到 OH 减比率"
+        },
+        "accessibleHelpText": {
+          "value": "显示或隐藏溶液中 H3O 加与 OH 减比率的点。"
+        }
+      },
+      "particleCountsCheckbox": {
+        "accessibleHelpText": {
+          "value": "显示或隐藏溶液中每种粒子的数量。"
+        }
+      },
+      "particleCountValues": {
+        "h3OPattern": {
+          "value": "{{value}} 个 H3O 加离子"
+        },
+        "oHPattern": {
+          "value": "{{value}} 个 OH 减离子"
+        },
+        "waterPattern": {
+          "value": "{{value}} 个水分子"
+        }
+      }
+    },
+    "graph": {
+      "units": {
+        "molesPerLiter": {
+          "value": "摩尔每升"
+        },
+        "moles": {
+          "value": "摩尔"
+        }
+      },
+      "accessibleHeading": {
+        "value": "粒子数量垂直图表"
+      },
+      "accessibleName": {
+        "value": "图表"
+      },
+      "unitsSwitch": {
+        "molesPerLiterAccessibleName": {
+          "value": "浓度（摩尔每升）"
+        },
+        "molesAccessibleName": {
+          "value": "摩尔数（摩尔）"
+        }
+      },
+      "scaleListItem": {
+        "pattern": {
+          "value": "{{type}} 刻度"
+        },
+        "logarithmic": {
+          "value": "对数"
+        },
+        "linear": {
+          "value": "线性"
+        }
+      },
+      "rangeListItem": {
+        "pattern": {
+          "value": "范围为 {{min}} 到 {{max}}"
+        },
+        "baseToExponentPattern": {
+          "value": "10 的 {{exponent}} 次方"
+        }
+      },
+      "h3OListItemPattern": {
+        "value": "H3O 加指示器读数为 {{value}} {{units}}"
+      },
+      "oHMinusListItemPattern": {
+        "value": "OH 减指示器读数为 {{value}} {{units}}"
+      },
+      "waterListItemPattern": {
+        "value": "水指示器读数为 {{value}} {{units}}"
+      },
+      "scaleSwitch": {
+        "accessibleHelpText": {
+          "value": "选择图表刻度。"
+        }
+      },
+      "zoomInButton": {
+        "accessibleName": {
+          "value": "线性图表放大"
+        },
+        "accessibleHelpText": {
+          "value": "调节图表范围。"
+        }
+      },
+      "zoomOutButton": {
+        "accessibleName": {
+          "value": "线性图表缩小"
+        },
+        "accessibleHelpText": {
+          "value": "调节图表范围。"
+        }
+      },
+      "indicatorH3O": {
+        "accessibleName": {
+          "value": "H3O 加指示器"
+        },
+        "accessibleHelpText": {
+          "value": "调节溶液中 H3O 加的数量。"
+        },
+        "accessibleObjectResponse": {
+          "value": "H3O 加指示器现在为 {{valueH3O}}，OH 减指示器现在为 {{valueOH}}"
+        }
+      },
+      "indicatorOH": {
+        "accessibleName": {
+          "value": "OH 减指示器"
+        },
+        "accessibleHelpText": {
+          "value": "调节溶液中 OH 减的数量。"
+        },
+        "accessibleObjectResponse": {
+          "value": "OH 减指示器现在为 {{valueOH}}，H3O 加指示器现在为 {{valueH3O}}"
+        }
+      }
+    }
   }
 }

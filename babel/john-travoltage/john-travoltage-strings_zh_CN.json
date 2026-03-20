@@ -13,5 +13,173 @@
   },
   "translation.credits": {
     "value": ""
+  },
+  "or": {
+    "value": "或"
+  },
+  "shiftKey": {
+    "value": "Shift 键"
+  },
+  "escKey": {
+    "value": "Esc 键"
+  },
+  "tabKey": {
+    "value": "Tab 键"
+  },
+  "handOrFoot": {
+    "value": "手或脚"
+  },
+  "moveHandOrFoot": {
+    "value": "移动手或脚"
+  },
+  "moveFoot": {
+    "value": "移动脚"
+  },
+  "moveHand": {
+    "value": "移动手"
+  },
+  "hotKeysAndHelp": {
+    "value": "键盘快捷键"
+  },
+  "arrowKeysMoveFoot": {
+    "value": "<strong>左或右箭头键</strong> 移动手或脚。"
+  },
+  "tabKeyDescription": {
+    "value": "<strong>Tab 键</strong> 移动到下一个项目。"
+  },
+  "shiftTabKeyDescription": {
+    "value": "<strong>Shift 加 Tab</strong> 移动到上一个项目。"
+  },
+  "escapeKeyDescription": {
+    "value": "<strong>Escape 键</strong> 关闭对话框，比如这个。"
+  },
+  "a11y": {
+    "screenSummary": {
+      "bodyDescriptionPattern": {
+        "value": "约翰处于 {{position}}，他正准备摆动腿在毯子上摩擦脚。"
+      },
+      "descriptionWithChargePattern": {
+        "value": "{{charge}} {{johnDescription}}"
+      }
+    },
+    "electrons": {
+      "singleDescription": {
+        "value": "约翰身上有 1 个电荷。"
+      },
+      "multipleDescriptionPattern": {
+        "value": "约翰身上有 {{value}} 个电荷。"
+      },
+      "totalDescriptionPattern": {
+        "value": "身体上的电子数：{{value}}"
+      },
+      "totalAfterDischargePattern": {
+        "value": "放电发生。身体上的电子从 {{oldValue}} 减少到 {{newValue}}，通过 {{region}}。"
+      }
+    },
+    "appendages": {
+      "arm": {
+        "label": {
+          "value": "手臂摆动"
+        },
+        "positions": {
+          "farthestFromDoorknob": {
+            "value": "手离门把手最远"
+          },
+          "veryFarFromDoorknob": {
+            "value": "手离门把手非常远"
+          },
+          "farFromDoorknob": {
+            "value": "手离门把手远"
+          },
+          "notSoCloseToDoorknob": {
+            "value": "手离门把手不太近"
+          },
+          "closeToDoorknob": {
+            "value": "手离门把手近"
+          },
+          "veryCloseToDoorknob": {
+            "value": "手离门把手非常近"
+          },
+          "justAboveDoorknob": {
+            "value": "手刚好在门把手上方"
+          },
+          "atDoorknob": {
+            "value": "手在门把手上"
+          },
+          "justBelowDoorknob": {
+            "value": "手刚好在门把手下方"
+          },
+          "handPointingAway": {
+            "value": "手指向远离门方向，离门把手非常远"
+          },
+          "handPointingStraightUp": {
+            "value": "手垂直向上指"
+          },
+          "handPointingAtUpperDoor": {
+            "value": "手指向上门，离门把手近"
+          },
+          "handPointingAtLowerDoor": {
+            "value": "手指向下门，离门把手近"
+          },
+          "handPointingStraightDown": {
+            "value": "手垂直向下指"
+          },
+          "farthestFromDoorknobLast": {
+            "value": "手离门把手最远。"
+          }
+        }
+      },
+      "leg": {
+        "label": {
+          "value": "腿部摆动"
+        },
+        "positions": {
+          "footOffRugPointingBackwards": {
+            "value": "脚离开毯子，向后指"
+          },
+          "footOffRug": {
+            "value": "脚离开毯子"
+          },
+          "footRubbingOnRug": {
+            "value": "脚在毯子上"
+          },
+          "footOffRugPointingForward": {
+            "value": "脚离开毯子，向前指"
+          }
+        }
+      }
+    },
+    "voicing": {
+      "contentHint": {
+        "value": "摆动约翰的腿在毯子上摩擦脚。"
+      },
+      "detailedContentHint": {
+        "value": "继续摩擦约翰的脚。"
+      },
+      "chargedContentHint": {
+        "value": "移动约翰的手来看看他何时被电到。"
+      },
+      "overviewPattern": {
+        "value": "{{overview}} 看起来约翰正要离开房间。面对门，他站在毯子上摆了个姿势。"
+      },
+      "previousDischargePattern": {
+        "value": "上一次电击，{{quantity}} 个电子通过 {{position}} 放电。"
+      },
+      "johnFullyCharged": {
+        "value": "约翰已完全带电。"
+      },
+      "multipleElectronsOnBodyPattern": {
+        "value": "约翰身上有 {{quantity}} 个电子。"
+      },
+      "screenSummaryWithPreviousDischargePattern": {
+        "value": "{{screenSummary}} {{previousDischarge}}"
+      },
+      "handInteractionHint": {
+        "value": "移动约翰的手。"
+      },
+      "footInteractionHint": {
+        "value": "摩擦约翰的脚。"
+      }
+    }
   }
 }

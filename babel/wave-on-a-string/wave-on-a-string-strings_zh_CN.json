@@ -156,13 +156,13 @@
     ]
   },
   "patternValueUnitCm": {
-    "value": "{0} 厘米",
+    "value": "{0} 厘米",
     "history": [
       {
         "userId": 162142,
         "timestamp": 1458178572929,
         "oldValue": "",
-        "newValue": "{0} 厘米",
+        "newValue": "{0} 厘米",
         "explanation": null
       }
     ]
@@ -180,13 +180,13 @@
     ]
   },
   "patternValueUnitS": {
-    "value": "{0} 秒",
+    "value": "{0} 秒",
     "history": [
       {
         "userId": 162142,
         "timestamp": 1458178572929,
         "oldValue": "",
-        "newValue": "{0} 秒",
+        "newValue": "{0} 秒",
         "explanation": null
       }
     ]
@@ -508,5 +508,220 @@
         "newValue": "控制字符串"
       }
     ]
+  },
+  "patternValueUnitPercentage": {
+    "value": "{0}%"
+  },
+  "a11y": {
+    "screenSummary": {
+      "playArea": {
+        "value": "通过操作一条紧绑在游戏区域上的绳子来探索波的物理性质。用扳手自己移动绳子，使用连续振荡器，或脉冲绳子来产生波。每种波模式都提供不同的选项来调整绳子的属性和运动，这会影响你创建和观察到的波。绳子的末端可以固定在游戏区域的末端，松开放置，或完全移除以无限延伸。"
+      },
+      "controlArea": {
+        "value": "提供多种工具来支持对产生的波的属性的测量。"
+      },
+      "interactionHint": {
+        "value": "{ $mode ->\n  [manual] 移动扳手或选择另一种方式开始产生波。\n  [oscillate] 启动振荡器或选择另一种方式开始产生波。\n *[pulse] 启动脉冲或选择另一种方式开始产生波。\n}"
+      }
+    },
+    "headings": {
+      "playArea": {
+        "waveGeneration": {
+          "value": "波的产生"
+        },
+        "activeMeasurementTools": {
+          "value": "活动的测量工具"
+        },
+        "activeMeasurementToolsDescription": {
+          "value": "用于可视化测量波属性的工具。暂停模拟以帮助进行精确测量。"
+        },
+        "waveAndStringProperties": {
+          "value": "波和绳子属性"
+        },
+        "waveAndStringPropertiesDescription": {
+          "value": "控制生成的波和绳子的属性。"
+        }
+      },
+      "controlArea": {
+        "measurementTools": {
+          "value": "测量工具"
+        },
+        "measurementToolsDescription": {
+          "value": "用于可视化测量波属性的工具。暂停模拟以帮助进行精确测量。"
+        }
+      }
+    },
+    "valuePatterns": {
+      "centimeters": {
+        "value": "{ $value } 厘米"
+      },
+      "hertz": {
+        "value": "{ $value } 赫兹"
+      },
+      "seconds": {
+        "value": "{ $value } 秒"
+      },
+      "percentage": {
+        "value": "{ $value } 百分比"
+      }
+    },
+    "waveGeneration": {
+      "start": {
+        "value": "当前，{ $mode ->\n  [manual] 夹在绳子上的扳手靠近游戏区域的 { $wrenchPosition ->\n      [bottom] 底部\n      *[middle] 中部\n      [top] 顶部\n    }\n  *[other] { $mode ->\n    [oscillate] 振荡器\n    *[pulse] 脉冲发生器\n  } { $active ->\n    [true] 正在产生一个 { $mode ->\n      [oscillate] 正弦波\n      *[pulse] 三角脉冲\n    }，其振幅以 { $amplitude ->\n      [zero] 零\n      [low] 低\n      [medium] 中\n      *[high] 高\n    } 振幅开始，\n    { $mode ->\n      [oscillate] { $frequency ->\n        [zero] 零\n        [low] 低\n        [medium] 中\n        *[high] 高\n      } 频率\n      *[pulse] { $pulseWidth ->\n        [low] 窄\n        [medium] 中\n        *[high] 宽\n      } 脉冲宽度\n    }\n    *[false] 静止 \n  } 在游戏区域\n}，绳子 { $isStill ->\n  *[true] 静止且平坦\n  [false] 处于运动中\n}。"
+      },
+      "end": {
+        "value": "绳子的末端 { $endPosition ->\n  *[fixed] 固定在夹子上。\n  [loose] 连接到一个沿杆移动的环上。\n  [no] 通过外部的窗口无限延伸出去。\n}"
+      }
+    },
+    "waveMode": {
+      "accessibleName": {
+        "value": "波模式"
+      },
+      "accessibleHelpText": {
+        "value": "手动创建波、连续创建波或使用单独脉冲创建波。"
+      },
+      "manual": {
+        "accessibleName": {
+          "value": "手动"
+        }
+      },
+      "oscillate": {
+        "accessibleName": {
+          "value": "振荡"
+        }
+      },
+      "pulse": {
+        "accessibleName": {
+          "value": "脉冲"
+        }
+      }
+    },
+    "endMode": {
+      "accessibleName": {
+        "value": "绳子末端类型"
+      },
+      "accessibleHelpText": {
+        "value": "设置绳子末端的连接方式。"
+      },
+      "fixedEnd": {
+        "accessibleName": {
+          "value": "固定端"
+        }
+      },
+      "looseEnd": {
+        "accessibleName": {
+          "value": "松动端"
+        }
+      },
+      "noEnd": {
+        "accessibleName": {
+          "value": "无边界"
+        }
+      }
+    },
+    "string": {
+      "stillContextResponse": {
+        "value": "绳子静止。"
+      }
+    },
+    "wrench": {
+      "accessibleName": {
+        "value": "扳手"
+      },
+      "accessibleHelpText": {
+        "value": "上下移动扳手来拖动绳子并产生波。"
+      }
+    },
+    "pulseGenerator": {
+      "accessibleName": {
+        "value": "产生三角脉冲"
+      },
+      "accessibleHelpText": {
+        "value": "在绳子上产生一个单独的三角波脉冲。"
+      }
+    },
+    "restartButton": {
+      "accessibleHelpText": {
+        "value": "将绳子位置重置为静止且平坦。"
+      },
+      "accessibleContextResponse": {
+        "value": "绳子已重置。"
+      }
+    },
+    "horizontalRuler": {
+      "accessibleName": {
+        "value": "水平尺"
+      },
+      "accessibleHelpText": {
+        "value": "拖动尺子对齐并可视化测量波长。"
+      }
+    },
+    "verticalRuler": {
+      "accessibleName": {
+        "value": "垂直尺"
+      },
+      "accessibleHelpText": {
+        "value": "拖动尺子对齐并可视化测量波振幅。"
+      }
+    },
+    "referenceLine": {
+      "accessibleName": {
+        "value": "参考线"
+      },
+      "accessibleHelpText": {
+        "value": "移动手柄并与波可视化对齐以比较振幅变化。"
+      }
+    },
+    "amplitudeControl": {
+      "accessibleHelpText": {
+        "value": "从波峰到波谷的波高。"
+      }
+    },
+    "frequencyControl": {
+      "accessibleHelpText": {
+        "value": "每秒波周期数。"
+      }
+    },
+    "pulseWidthControl": {
+      "accessibleHelpText": {
+        "value": "产生的脉冲宽度，以秒为单位。"
+      }
+    },
+    "dampingControl": {
+      "accessibleHelpText": {
+        "value": "损失到环境的能量。"
+      }
+    },
+    "tensionControl": {
+      "accessibleHelpText": {
+        "value": "绳子被拉伸的程度。"
+      }
+    },
+    "visibilityControls": {
+      "rulers": {
+        "accessibleHelpText": {
+          "value": "用于测量距离的垂直和水平尺。"
+        },
+        "accessibleContextResponse": {
+          "value": "尺子 { $isVisible ->\n  [true] 已添加。\n  *[false] 已移除。\n}"
+        }
+      },
+      "stopwatch": {
+        "accessibleHelpText": {
+          "value": "用于测量经过时间的秒表。"
+        },
+        "accessibleContextResponse": {
+          "value": "秒表 { $isVisible ->\n  [true] 已添加。\n  *[false] 已移除。\n}"
+        }
+      },
+      "referenceLine": {
+        "accessibleHelpText": {
+          "value": "可移动的虚线激光线，与波对齐以比较振幅变化。"
+        },
+        "accessibleContextResponse": {
+          "value": "参考线 { $isVisible ->\n  [true] 已添加。\n  *[false] 已移除。\n}"
+        }
+      }
+    }
   }
 }

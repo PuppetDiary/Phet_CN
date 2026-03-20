@@ -580,5 +580,134 @@
         "explanation": null
       }
     ]
+  },
+  "screen.diffraction": {
+    "value": "衍射"
+  },
+  "diameter": {
+    "value": "直径"
+  },
+  "eccentricity": {
+    "value": "离心率"
+  },
+  "mmValue": {
+    "value": "{{value}} 毫米"
+  },
+  "degreesValue": {
+    "value": "{{value}} 度"
+  },
+  "width": {
+    "value": "宽度"
+  },
+  "height": {
+    "value": "高度"
+  },
+  "circleDiameter": {
+    "value": "圆直径"
+  },
+  "rotation": {
+    "value": "旋转"
+  },
+  "squareWidth": {
+    "value": "方块宽度"
+  },
+  "latticeSpacing": {
+    "value": "晶格间距"
+  },
+  "disorder": {
+    "value": "无序度"
+  },
+  "a11y": {
+    "playArea": {
+      "screenSummary": {
+        "playArea": {
+          "value": "一个交互式场景，用于探索水波、声波和光波的干涉和衍射。"
+        },
+        "controlArea": {
+          "value": "控制波源和障碍物的参数。切换视图方向。"
+        }
+      }
+    },
+    "screens": {
+      "waves": {
+        "screenSummary": {
+          "playArea": {
+            "value": "一个交互式场景，用于探索水波、声波和光波的传播和干涉。"
+          }
+        }
+      },
+      "interference": {
+        "screenSummary": {
+          "playArea": {
+            "value": "一个交互式场景，用于探索来自两个波源的波的干涉图案。"
+          }
+        }
+      },
+      "slits": {
+        "screenSummary": {
+          "playArea": {
+            "value": "一个交互式场景，用于探索单缝和双缝的干涉和衍射图案。"
+          }
+        }
+      },
+      "diffraction": {
+        "screenSummary": {
+          "playArea": {
+            "value": "一个交互式场景，用于探索圆形障碍物和其他形状引起的衍射。"
+          }
+        }
+      }
+    },
+    "headings": {
+      "playArea": {
+        "waveGenerator": {
+          "value": "波发生器"
+        },
+        "activeMeasurementTools": {
+          "value": "活动的测量工具"
+        },
+        "activeMeasurementToolsDescription": {
+          "value": "用于可视化测量波属性的工具。暂停模拟以帮助进行精确测量。"
+        },
+        "waveAndBarrierProperties": {
+          "value": "波和障碍物属性"
+        },
+        "waveAndBarrierPropertiesDescription": {
+          "value": "控制生成波的属性和障碍物的属性。"
+        }
+      },
+      "controlArea": {
+        "measurementTools": {
+          "value": "测量工具"
+        },
+        "measurementToolsDescription": {
+          "value": "用于可视化测量波属性的工具。暂停模拟以帮助进行精确测量。"
+        }
+      }
+    }
+  },
+  "none": {
+    "value": "无",
+    "history": [
+      {
+        "userId": 293040,
+        "timestamp": 1458182268971,
+        "oldValue": "",
+        "newValue": "无",
+        "explanation": null
+      }
+    ]
+  },
+  "lots": {
+    "value": "很多",
+    "history": [
+      {
+        "userId": 293040,
+        "timestamp": 1458182268971,
+        "oldValue": "",
+        "newValue": "很多",
+        "explanation": null
+      }
+    ]
   }
 }

@@ -251,19 +251,80 @@
       }
     ]
   },
+  "energy-forms-and-changes": {
+    "title": {
+      "value": "Energy Forms and Changes",
+      "history": []
+    }
+  },
+  "a11y": {
+    "beakerOfWater": {
+      "value": "加热元件上的水杯",
+      "history": []
+    },
+    "cyclist": {
+      "value": "骑行者",
+      "history": []
+    },
+    "electricalGenerator": {
+      "value": "轮式发电机",
+      "history": []
+    },
+    "energySystem": {
+      "value": "能量系统",
+      "history": []
+    },
+    "energySystemHelpText": {
+      "value": "能量系统包含一个{{producer}}、一个转换器和一个{{user}}。",
+      "history": []
+    },
+    "fluorescentLightBulb": {
+      "value": "荧光灯",
+      "history": []
+    },
+    "incandescentLightBulb": {
+      "value": "白炽灯泡",
+      "history": []
+    },
+    "solarPanel": {
+      "value": "太阳能电池板",
+      "history": []
+    },
+    "sun": {
+      "value": "太阳",
+      "history": []
+    },
+    "systemsScreenInteractionHint": {
+      "value": "调整能量生产者以开始观察。",
+      "history": []
+    },
+    "systemsScreenSummaryDescription": {
+      "value": "这是一个互动模拟器。它会随着你的操作而变化。它有一个游戏区和一个控制区。在游戏区，构建一个包含能量生产者、转换器和消费者的能量系统。调整能量产生并观察系统中的能量流动。用能量符号检查能量的形式和转换。在控制面板中，使用播放、暂停和步进按钮或重置模拟器。",
+      "history": []
+    },
+    "teaKettle": {
+      "value": "茶壶",
+      "history": []
+    },
+    "waterFaucet": {
+      "value": "水龙头",
+      "history": []
+    }
+  },
+  "generator": {
+    "value": "Generator",
+    "history": []
+  },
   "energy-forms-and-changes.title": {
-    "value": "能量的形式和转换",
+    "value": "能的形式与变化",
     "history": [
       {
-        "userId": 685789,
-        "timestamp": 1563898098457,
+        "userId": 293040,
+        "timestamp": 1458182268971,
         "oldValue": "",
-        "newValue": "能量的形式和转换",
+        "newValue": "能的形式与变化",
         "explanation": null
       }
     ]
-  },
-  "generator": {
-    "value": "发电机"
   }
 }

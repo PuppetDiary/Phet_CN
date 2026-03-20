@@ -11,6 +11,9 @@
       }
     ]
   },
+  "beakerUnits": {
+    "value": "烧杯单位"
+  },
   "beers-law-lab.title": {
     "value": "比尔定律实验",
     "history": [
@@ -46,6 +49,9 @@
         "explanation": null
       }
     ]
+  },
+  "concentrationMeterUnits": {
+    "value": "浓度计量单位"
   },
   "concentration": {
     "value": "浓度",
@@ -337,6 +343,12 @@
       }
     ]
   },
+  "showSoluteAmount": {
+    "value": "显示溶质的量"
+  },
+  "showSolutionVolume": {
+    "value": "显示溶液体积"
+  },
   "solid": {
     "value": "固体",
     "history": [
@@ -517,6 +529,33 @@
       }
     ]
   },
+  "keyboardHelpDialog.chooseASolute": {
+    "value": "选择一种溶质"
+  },
+  "keyboardHelpDialog.solutes": {
+    "value": "溶质"
+  },
+  "keyboardHelpDialog.solute": {
+    "value": "溶质"
+  },
+  "keyboardHelpDialog.concentrationProbeControls": {
+    "value": "浓度探针控件"
+  },
+  "keyboardHelpDialog.detectorProbeAndRulerControls": {
+    "value": "探测器探针和标尺控件"
+  },
+  "keyboardHelpDialog.jumpToPosition": {
+    "value": "循环到有用的位置"
+  },
+  "keyboardHelpDialog.chooseASolution": {
+    "value": "选择一种溶液"
+  },
+  "keyboardHelpDialog.solution": {
+    "value": "溶液"
+  },
+  "keyboardHelpDialog.solutions": {
+    "value": "溶液"
+  },
   "wavelength": {
     "value": "波长",
     "history": [
@@ -528,5 +567,433 @@
         "explanation": null
       }
     ]
+  },
+  "units.percent": {
+    "value": "%"
+  },
+  "valuePercentPattern": {
+    "value": "{{value}}%"
+  },
+  "a11y": {
+    "concentrationScreen": {
+      "screenButtonsHelpText": {
+        "value": "探索溶质在水中的溶液浓度。"
+      },
+      "screenSummary": {
+        "playArea": {
+          "value": "一个溶质分配器和一个水龙头位于一个可排空的烧杯上方。从各种溶质中选择一种，以固体或溶液形式一次分配一个。右边是一个带有可移动探针的浓度计。底部有一个控制蒸发的滑块，以及一个从溶液中移除溶质的按钮。"
+        },
+        "controlArea": {
+          "value": "有一个重置屏幕的按钮。"
+        },
+        "currentDetails": {
+          "beakerEmpty": {
+            "value": "目前，烧杯是空的。"
+          },
+          "onlyParticles": {
+            "value": "目前，烧杯中含有 {{soluteName}} 粒子。"
+          },
+          "onlyWaterConcentrationMeasured": {
+            "value": "目前，烧杯中含有水。浓度为 0 {{units}}。"
+          },
+          "onlyWaterConcentrationNotMeasured": {
+            "value": "目前，烧杯中含有水。浓度未知。"
+          },
+          "solutionConcentrationMeasured": {
+            "value": "目前，烧杯中含有 {{soluteName}} 溶液。浓度为 {{concentration}} {{units}}。{{saturationSentence}}"
+          },
+          "solutionConcentrationNotMeasured": {
+            "value": "目前，烧杯中含有 {{soluteName}} 溶液。浓度未知。{{saturationSentence}}"
+          }
+        },
+        "interactionHint": {
+          "value": "将溶质加入水中以开始探索。"
+        }
+      }
+    },
+    "beersLawScreen": {
+      "screenButtonsHelpText": {
+        "value": "探索溶液对光的吸收或透射。"
+      },
+      "screenSummary": {
+        "playArea": {
+          "value": "包含一个光源，照射在一个装满溶液的比色皿上，溶液的类型和浓度可调。光波长和比色皿大小可调。使用带有可移动探针的探测器测量透射率或吸光度。"
+        },
+        "controlArea": {
+          "value": "有一把标尺和一个重置屏幕的按钮。"
+        },
+        "currentDetails": {
+          "noMeasurement": {
+            "value": "目前，光源是 {{onOff}}，波长是 {{wavelength}} {{wavelengthUnits}}，比色皿中含有浓度为 {{concentration}} {{concentrationUnits}} 的 {{solutionName}} 溶液。"
+          },
+          "measuredTransmittance": {
+            "value": "目前，光源是 {{onOff}}，波长是 {{wavelength}} {{wavelengthUnits}}，比色皿中含有浓度为 {{concentration}} {{concentrationUnits}} 的 {{solutionName}} 溶液。测得的透射率为 {{transmittance}} {{transmittanceUnits}}。"
+          },
+          "measuredAbsorbance": {
+            "value": "目前，光源是 {{onOff}}，波长是 {{wavelength}} {{wavelengthUnits}}，比色皿中含有浓度为 {{concentration}} {{concentrationUnits}} 的 {{solutionName}} 溶液。测得的吸光度为 {{absorbance}}。"
+          }
+        },
+        "interactionHint": {
+          "value": "打开光源以开始探索。"
+        }
+      }
+    },
+    "soluteFormRadioButtonGroup": {
+      "accessibleName": {
+        "value": "溶质形态"
+      }
+    },
+    "solidRadioButton": {
+      "accessibleName": {
+        "value": "固体形态，振动器"
+      }
+    },
+    "solutionRadioButton": {
+      "accessibleName": {
+        "value": "溶液形态，滴管"
+      }
+    },
+    "lightModeRadioButtonGroup": {
+      "accessibleName": {
+        "value": "光源波长"
+      }
+    },
+    "detectorModeRadioButtonGroup": {
+      "accessibleName": {
+        "value": "探测器模式"
+      },
+      "accessibleHelpText": {
+        "value": "为探测器选择测量类型。"
+      }
+    },
+    "wavelengthNumberControl": {
+      "accessibleName": {
+        "value": "波长"
+      },
+      "accessibleHelpText": {
+        "value": "调整波长以改变光的颜色。"
+      },
+      "ariaValueText": {
+        "value": "{{wavelength}} {{units}}，{{colorName}} 范围"
+      }
+    },
+    "concentrationProbeNode": {
+      "accessibleName": {
+        "value": "浓度探针"
+      },
+      "accessibleHelpText": {
+        "value": "拖动探针，或使用键盘快捷键移动到有用的位置。"
+      },
+      "jumpResponses": {
+        "inBeaker": {
+          "value": "在烧杯中，浓度为 {{concentration}} {{units}}"
+        },
+        "insideEmptyBeaker": {
+          "value": "在空烧杯内"
+        },
+        "outsideBeaker": {
+          "value": "在烧杯外"
+        },
+        "belowWaterFaucet": {
+          "value": "在水龙头下方"
+        },
+        "belowDrainFaucet": {
+          "value": "在排水龙头下方"
+        },
+        "belowDropper": {
+          "value": "在滴管下方"
+        }
+      }
+    },
+    "detectorProbeNode": {
+      "accessibleName": {
+        "value": "探测器探针"
+      },
+      "accessibleHelpText": {
+        "value": "拖动探针，或使用键盘快捷键移动到有用的位置。"
+      },
+      "accessibleObjectResponseTransmittance": {
+        "value": "{{mode}} 为 {{transmittance}} {{units}}"
+      },
+      "accessibleObjectResponseAbsorbance": {
+        "value": "{{mode}} 为 {{absorbance}}"
+      },
+      "accessibleObjectResponseUnknown": {
+        "value": "{{mode}} 未知"
+      },
+      "jumpResponses": {
+        "betweenLightSourceAndCuvette": {
+          "value": "在光路中，光源和比色皿之间。{{valueSentence}}"
+        },
+        "centeredInCuvette": {
+          "value": "在光路中，比色皿中心。{{valueSentence}}"
+        },
+        "rightOfCuvette": {
+          "value": "在光路中，比色皿右侧。{{valueSentence}}"
+        },
+        "outsideLightSourcePath": {
+          "value": "在光路外。{{valueSentence}}"
+        }
+      }
+    },
+    "transmittanceValueUnits": {
+      "value": "透射率为 {{transmittance}} {{units}}。"
+    },
+    "transmittanceUnknown": {
+      "value": "透射率未知。"
+    },
+    "absorbanceValue": {
+      "value": "吸光度为 {{absorbance}}。"
+    },
+    "absorbanceUnknown": {
+      "value": "吸光度未知。"
+    },
+    "shakerNode": {
+      "accessibleName": {
+        "value": "{{soluteName}} 振动器"
+      },
+      "accessibleHelpText": {
+        "value": "移动振动器以向烧杯中添加溶质。"
+      },
+      "accessibleContextResponseDispensing": {
+        "value": "正在分配。"
+      },
+      "accessibleContextResponseEmpty": {
+        "value": "振动器空了。"
+      }
+    },
+    "dropperButton": {
+      "accessibleName": {
+        "value": "{{soluteName}} 滴管"
+      },
+      "accessibleHelpText": {
+        "value": "向烧杯中添加溶液。"
+      },
+      "accessibleContextResponseDispensing": {
+        "value": "正在分配。"
+      },
+      "accessibleContextResponseBeakerFull": {
+        "value": "烧杯已满。"
+      },
+      "accessibleContextResponseDropperEmpty": {
+        "value": "滴管空了。"
+      }
+    },
+    "concentrationMeterBodyNode": {
+      "concentrationIsValueUnits": {
+        "value": "浓度为 {{concentration}} {{units}}。"
+      },
+      "concentrationIsUnknown": {
+        "value": "浓度未知。"
+      }
+    },
+    "soluteComboBox": {
+      "accessibleName": {
+        "value": "溶质"
+      },
+      "accessibleHelpText": {
+        "value": "选择要添加到烧杯的溶质。"
+      }
+    },
+    "removeSoluteButton": {
+      "accessibleContextResponse": {
+        "value": "溶质已移除。"
+      }
+    },
+    "solventFaucetNode": {
+      "accessibleName": {
+        "value": "水龙头"
+      },
+      "accessibleHelpText": {
+        "value": "控制水添加到烧杯的速率。"
+      }
+    },
+    "drainFaucetNode": {
+      "accessibleName": {
+        "value": "排水龙头"
+      },
+      "accessibleHelpText": {
+        "value": "控制从烧杯中排液的速率。"
+      }
+    },
+    "evaporationSlider": {
+      "accessibleName": {
+        "value": "蒸发"
+      },
+      "accessibleHelpText": {
+        "value": "控制从烧杯中蒸发的速率。"
+      }
+    },
+    "rulerNode": {
+      "accessibleName": {
+        "value": "标尺"
+      },
+      "accessibleHelpText": {
+        "value": "拖动标尺，或使用键盘快捷键移动到有用的位置。"
+      },
+      "jumpResponses": {
+        "measuringCuvetteWidth": {
+          "value": "正在测量比色皿宽度，{{width}} {{units}}。"
+        },
+        "measuringOpticalPathLength": {
+          "value": "正在测量光程长度，{{width}} {{units}}。"
+        },
+        "measuringOpticalPathLengthLightOff": {
+          "value": "正在测量光程长度。光源已关闭。"
+        },
+        "notMeasuring": {
+          "value": "未在测量。"
+        }
+      }
+    },
+    "cuvetteArrowNode": {
+      "accessibleName": {
+        "value": "比色皿宽度手柄"
+      }
+    },
+    "lightToggleButton": {
+      "accessibleName": {
+        "value": "光源"
+      }
+    },
+    "soluteAmountText": {
+      "accessibleParagraph": {
+        "value": "溶质量为 {{value}} {{units}}。"
+      }
+    },
+    "solutionVolumeNode": {
+      "accessibleParagraph": {
+        "value": "溶液体积为 {{value}} {{units}}。"
+      }
+    },
+    "showSolutionVolumeCheckbox": {
+      "accessibleHelpText": {
+        "value": "在浓度屏幕中显示或隐藏烧杯中的溶液体积。"
+      }
+    },
+    "showSoluteAmountCheckbox": {
+      "accessibleHelpText": {
+        "value": "在浓度屏幕中显示或隐藏烧杯中的溶质量。"
+      }
+    },
+    "beakerUnitsRadioButtonGroup": {
+      "accessibleName": {
+        "value": "烧杯单位"
+      },
+      "accessibleHelpText": {
+        "value": "设置浓度屏幕的烧杯单位。"
+      }
+    },
+    "concentrationMeterUnitsRadioButtonGroup": {
+      "accessibleName": {
+        "value": "浓度计量单位"
+      },
+      "accessibleHelpText": {
+        "value": "设置浓度屏幕的浓度计量单位。"
+      }
+    },
+    "solutionConcentrationControl": {
+      "accessibleName": {
+        "value": "浓度"
+      },
+      "accessibleHelpText": {
+        "value": "调整溶液浓度以使其变浅或变深。"
+      }
+    },
+    "sharedAccessibleContextResponses": {
+      "presetWavelengthSet": {
+        "value": "光源波长设置为 {{wavelength}} {{units}}，{{colorName}} 范围。"
+      }
+    },
+    "colorNames": {
+      "red": {
+        "value": "红色"
+      },
+      "orange": {
+        "value": "橙色"
+      },
+      "yellow": {
+        "value": "黄色"
+      },
+      "green": {
+        "value": "绿色"
+      },
+      "blue": {
+        "value": "蓝色"
+      },
+      "violet": {
+        "value": "紫色"
+      }
+    },
+    "on": {
+      "value": "开启"
+    },
+    "off": {
+      "value": "关闭"
+    },
+    "solutionIsSaturated": {
+      "value": "溶液已饱和。"
+    },
+    "solutionIsNotSaturated": {
+      "value": "溶液未饱和。"
+    },
+    "accessibleHeadings": {
+      "soluteControlsHeading": {
+        "value": "溶质控件"
+      },
+      "concentrationMeterHeading": {
+        "value": "浓度计"
+      },
+      "beakerControlsHeading": {
+        "value": "烧杯控件"
+      },
+      "lightSourceControlsHeading": {
+        "value": "光源控件"
+      },
+      "detectorControlsHeading": {
+        "value": "探测器控件"
+      },
+      "solutionControlsHeading": {
+        "value": "溶液控件"
+      }
+    },
+    "valueUnitsPattern": {
+      "value": "{{value}} {{units}}"
+    },
+    "unitsDescription": {
+      "centimeters": {
+        "value": "厘米"
+      },
+      "grams": {
+        "value": "克"
+      },
+      "liters": {
+        "value": "升"
+      },
+      "litersPerSecond": {
+        "value": "升每秒"
+      },
+      "micromolar": {
+        "value": "微摩尔"
+      },
+      "milliliters": {
+        "value": "毫升"
+      },
+      "millilitersPerSecond": {
+        "value": "毫升每秒"
+      },
+      "millimolar": {
+        "value": "毫摩尔"
+      },
+      "molesPerLiter": {
+        "value": "摩尔每升"
+      },
+      "nanometers": {
+        "value": "纳米"
+      },
+      "percent": {
+        "value": "百分比"
+      }
+    }
   }
 }

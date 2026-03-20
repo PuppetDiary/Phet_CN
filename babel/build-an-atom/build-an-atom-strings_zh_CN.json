@@ -368,6 +368,9 @@
   "chargeNotation": {
     "value": "电荷表示法"
   },
+  "preferences.chargeNotationSelectorLabel": {
+    "value": "选择化学符号中电荷的正负号约定"
+  },
   "level1DescriptionPattern": {
     "value": "<b>级别 {{levelNumber}}：</b>根据亚原子粒子识别元素<br>"
   },
@@ -379,5 +382,528 @@
   },
   "level4DescriptionPattern": {
     "value": "<b>级别 {{levelNumber}}：</b>综合复习"
+  },
+  "keyboardHelpContent": {
+    "particleNavigationHeading": {
+      "value": "粒子导航"
+    },
+    "grabOrRelease": {
+      "value": "抓取或释放"
+    },
+    "selectParticleInAtom": {
+      "value": "选择原子中的粒子"
+    },
+    "moveGrabbedParticle": {
+      "value": "移动已抓取的粒子"
+    },
+    "returnToBucket": {
+      "value": "将已抓取的粒子放回桶中"
+    },
+    "cancelMovement": {
+      "value": "取消移动"
+    }
+  },
+  "a11y": {
+    "common": {
+      "particles": {
+        "particleAddedTo": {
+          "value": "{ $particle } 已添加到 { $location }。现在共有 { $count ->\n [one]{ $count } 个 { $particle }\n *[other] { $count } 个 { $particles }\n}。"
+        },
+        "particleReturnedToBucket": {
+          "value": "{ $particle } 已放回桶中。"
+        }
+      },
+      "buckets": {
+        "bucketEmpty": {
+          "value": "桶已空。"
+        },
+        "emptyHelpText": {
+          "value": "桶为空时禁用。"
+        },
+        "accessibleHeading": {
+          "value": "粒子桶"
+        },
+        "accessibleHelpText": {
+          "value": "查找质子、中子和电子按钮以抓取粒子。\n  抓取后，使用 W 或 S 键将粒子移动到所构建原子的特定位置。\n  按空格键释放。"
+        }
+      },
+      "atomAccessibleList": {
+        "atomStateLeadingParagraph": {
+          "value": "在 { $model } 视图中："
+        },
+        "checkboxesListLeadingParagraph": {
+          "value": "您已创建："
+        },
+        "accessibleHeading": {
+          "value": "您构建的原子"
+        },
+        "builtAtom": {
+          "value": "构建的原子"
+        },
+        "nucleusInfoFull": {
+          "value": "原子核包含\n{ $protons ->\n[one]{ $protons } 个质子\n*[other] { $protons } 个质子\n} 和\n{ $neutrons ->\n[one]{ $neutrons } 个中子\n*[other] { $neutrons } 个中子\n}。"
+        },
+        "nucleusInfoProtons": {
+          "value": "原子核包含\n{ $protons ->\n[one]{ $protons } 个质子\n*[other] { $protons } 个质子\n}。"
+        },
+        "nucleusInfoNeutrons": {
+          "value": "原子核包含\n{ $neutrons ->\n[one]{ $neutrons } 个中子\n*[other] { $neutrons } 个中子\n}。"
+        },
+        "nucleusInfoEmpty": {
+          "value": "原子核为空。"
+        },
+        "shellInfoFull": {
+          "value": "内层包含\n{ $inner ->\n[one]{ $inner } 个电子\n*[other] { $inner } 个电子\n}\n，外层包含\n{ $outer ->\n[one]{ $outer } 个电子\n*[other] { $outer } 个电子\n}。"
+        },
+        "cloudInfoFull": {
+          "value": "电子云包含 { $value ->\n[one]{ $value } 个电子\n*[other] { $value } 个电子\n}。"
+        },
+        "shellInfoEmpty": {
+          "value": "电子层为空。"
+        },
+        "cloudInfoEmpty": {
+          "value": "电子云为空。"
+        },
+        "accessibleParagraph": {
+          "value": "在您构建的原子中查找质子、中子和电子以抓取。\n  抓取后使用 W 或 S 键更改位置，或按删除键放回桶中。"
+        },
+        "nucleusContains": {
+          "value": "{ $nucleonState ->\n  [full] { a11y_common_atomAccessibleList_nucleusInfoFull }\n  [protons] { a11y_common_atomAccessibleList_nucleusInfoProtons }\n  [neutrons] { a11y_common_atomAccessibleList_nucleusInfoNeutrons }\n  *[empty] { a11y_common_atomAccessibleList_nucleusInfoEmpty }\n}"
+        }
+      },
+      "noElementContextResponse": {
+        "value": "您构建的原子还不是元素。"
+      },
+      "elementNameCheckbox": {
+        "accessibleName": {
+          "value": "元素名称"
+        },
+        "accessibleHelpText": {
+          "value": "构建原子时显示或隐藏元素名称。"
+        },
+        "accessibleContextResponseChecked": {
+          "value": "{ $name }。"
+        },
+        "accessibleContextResponseUnchecked": {
+          "value": "元素名称已隐藏。"
+        },
+        "contextResponseSelector": {
+          "value": "{ $hasName ->\n  [true] { a11y_common_elementNameCheckbox_accessibleContextResponseChecked }\n  *[false] { a11y_common_noElementContextResponse }\n}"
+        }
+      },
+      "neutralAtomIonCheckbox": {
+        "accessibleName": {
+          "value": "中性原子或离子"
+        },
+        "accessibleHelpText": {
+          "value": "构建原子时显示或隐藏电荷状态。"
+        },
+        "accessibleContextResponseUnchecked": {
+          "value": "电荷状态已隐藏。"
+        },
+        "neutralAtom": {
+          "value": "中性原子。"
+        },
+        "positiveIon": {
+          "value": "正离子。"
+        },
+        "negativeIon": {
+          "value": "负离子。"
+        }
+      },
+      "nuclearStabilityCheckbox": {
+        "accessibleName": {
+          "value": "核稳定性"
+        },
+        "accessibleHelpText": {
+          "value": "构建原子时显示或隐藏核稳定性。"
+        },
+        "accessibleContextResponseChecked": {
+          "value": "{ $isStable ->\n  [true] 稳定的原子核。\n  *[false] 不稳定的原子核。\n}"
+        },
+        "accessibleContextResponseUnchecked": {
+          "value": "核稳定性已隐藏。"
+        },
+        "hasNucleusSelector": {
+          "value": "{ $hasNucleus ->\n  [true] { a11y_common_nuclearStabilityCheckbox_accessibleContextResponseChecked }\n  *[false] { a11y_common_noElementContextResponse }\n}"
+        }
+      },
+      "modelToggle": {
+        "accessibleName": {
+          "value": "模型选项"
+        },
+        "accessibleNameShells": {
+          "value": "电子层"
+        },
+        "accessibleNameCloud": {
+          "value": "电子云"
+        },
+        "accessibleHelpText": {
+          "value": "选择原子核外区域的表示方式。"
+        }
+      },
+      "periodicTable": {
+        "accessibleName": {
+          "value": "元素周期表"
+        },
+        "accessibleParagraphHighlighted": {
+          "value": "您构建的原子是 { $symbol }，位于第 { $row } 行，第 { $column } 列。"
+        },
+        "accessibleParagraphHighlightedWithName": {
+          "value": "您构建的原子是 { $symbol }，{ $name }，位于第 { $row } 行，第 { $column } 列。"
+        },
+        "accessibleParagraphNoSymbol": {
+          "value": "您构建的原子还不是元素。"
+        },
+        "accessibleParagraphPattern": {
+          "value": "{ $pattern ->\n  [withName] { a11y_common_periodicTable_accessibleParagraphHighlightedWithName }\n  [withoutName] { a11y_common_periodicTable_accessibleParagraphHighlighted }\n  *[noSymbol] { a11y_common_periodicTable_accessibleParagraphNoSymbol }\n}"
+        }
+      },
+      "screenSummary": {
+        "controlArea": {
+          "value": "您可以开启元素名称、电荷状态或核稳定性的标签，并选择原子模型类型。重置模拟器以重新开始。"
+        },
+        "currentDetails": {
+          "value": "目前，您构建的原子有 { $value ->\n  [one] { $value } 个粒子\n  *[other] { $value } 个粒子\n}。"
+        },
+        "interactionHint": {
+          "value": "添加粒子以构建您的原子。"
+        }
+      }
+    },
+    "atomScreen": {
+      "screenSummary": {
+        "playArea": {
+          "value": "有一个交互式原子，您可以通过从各自的桶中抓取质子、中子和电子来构建它。\n  在构建过程中，您可以跟踪添加的粒子数量，并探索它们如何影响元素身份、电荷和质量。"
+        }
+      },
+      "screenIcon": {
+        "accessibleHelpText": {
+          "value": "构建原子以观察粒子如何决定质量、电荷和元素身份。"
+        }
+      },
+      "netCharge": {
+        "accessibleName": {
+          "value": "净电荷"
+        },
+        "accessibleParagraph": {
+          "value": "您构建的原子净电荷为 {$charge}。有 { $protons -> \n                  [one] { $protons } 个正电荷\n                  *[other] { $protons } 个正电荷\n                  } 和 { $electrons ->\n                  [one] { $electrons } 个负电荷\n                  *[other] { $electrons } 个负电荷\n                  }。"
+        }
+      },
+      "massNumber": {
+        "accessibleName": {
+          "value": "质量数"
+        },
+        "accessibleParagraph": {
+          "value": "您构建的原子的质量数为 { $value }。"
+        }
+      }
+    },
+    "symbolScreen": {
+      "screenSummary": {
+        "playArea": {
+          "value": "有一个交互式原子，您可以通过从各自的桶中抓取质子、中子和电子来构建它。\n  在构建过程中，您可以跟踪添加的粒子数量，并探索它们如何影响元素身份和化学符号信息。"
+        }
+      },
+      "screenIcon": {
+        "accessibleHelpText": {
+          "value": "将元素符号与粒子数量联系起来。"
+        }
+      },
+      "symbol": {
+        "leadingParagraph": {
+          "value": "您构建的原子表示为："
+        },
+        "accessibleName": {
+          "value": "化学符号"
+        },
+        "noSymbol": {
+          "value": "无符号"
+        },
+        "accessibleList": {
+          "symbol": {
+            "value": "{ $symbol } 在中心。"
+          },
+          "atomicNumber": {
+            "value": "原子序数 { $value } 在左下角。"
+          },
+          "massNumber": {
+            "value": "质量数 { $value } 在左上角。"
+          },
+          "charge": {
+            "value": "电荷 { $value } 在右上角。"
+          }
+        },
+        "symbolSelector": {
+          "value": "{ $hasSymbol ->\n  [true] { a11y_symbolScreen_symbol_accessibleList_symbol }\n  *[false] { a11y_symbolScreen_symbol_noSymbol }\n}"
+        }
+      }
+    },
+    "gameScreen": {
+      "screenIcon": {
+        "accessibleHelpText": {
+          "value": "测试您对原子结构的知识。"
+        }
+      },
+      "gameButtons": {
+        "level1AccessibleHelpText": {
+          "value": "根据亚原子粒子识别元素。"
+        },
+        "level2AccessibleHelpText": {
+          "value": "计算质量或电荷。"
+        },
+        "level3AccessibleHelpText": {
+          "value": "填写缺失的化学符号信息。"
+        },
+        "level4AccessibleHelpText": {
+          "value": "综合复习。"
+        }
+      },
+      "components": {
+        "periodicTable": {
+          "accessibleHelpText": {
+            "value": "查找按钮以激活元素周期表。激活后，使用 WASD 键在元素周期表上选择元素。"
+          },
+          "cellAriaDescription": {
+            "value": "已选元素"
+          }
+        },
+        "neutralOrIonRadioButtons": {
+          "accessibleName": {
+            "value": "它是中性原子还是离子？"
+          },
+          "accessibleHelpText": {
+            "value": "选择所选元素是中性原子还是离子。然后检查答案。"
+          }
+        },
+        "chemicalSymbol": {
+          "accessibleName": {
+            "value": "化学符号"
+          },
+          "accessibleHelpText": {
+            "value": "设置化学符号每个区域的值。然后检查答案。"
+          },
+          "upperLeft": {
+            "accessibleName": {
+              "value": "左上角"
+            },
+            "accessibleHelpText": {
+              "value": "设置化学符号左上角显示的值。然后检查答案。"
+            }
+          },
+          "upperRight": {
+            "accessibleName": {
+              "value": "右上角"
+            },
+            "accessibleHelpText": {
+              "value": "设置化学符号右上角显示的值。然后检查答案。"
+            }
+          },
+          "lowerLeft": {
+            "accessibleName": {
+              "value": "左下角"
+            },
+            "accessibleHelpText": {
+              "value": "设置化学符号左下角显示的值。然后检查答案。"
+            }
+          },
+          "accessibleList": {
+            "leadingParagraph": {
+              "value": "粒子表示为："
+            },
+            "name": {
+              "value": "{ $name }。"
+            },
+            "symbol": {
+              "value": "{ $symbol } 在中心。"
+            },
+            "atomicNumber": {
+              "value": "{ $protons } 在左下角。"
+            },
+            "massNumber": {
+              "value": "{ $mass } 在左上角。"
+            },
+            "charge": {
+              "value": "{ $charge } 在右上角。"
+            }
+          }
+        },
+        "checkButton": {
+          "accessibleContextResponses": {
+            "correctFirstTry": {
+              "value": "太棒了！您获得了 2 分。"
+            },
+            "correctSecondTry": {
+              "value": "好！您获得了 1 分。"
+            },
+            "incorrectFirstTry": {
+              "value": "哎呀！不太对。"
+            },
+            "incorrectSecondTry": {
+              "value": "哎呀！让我们回顾一下。"
+            }
+          }
+        }
+      },
+      "challenges": {
+        "countsToElement": {
+          "accessibleHeading": {
+            "value": "粒子计数"
+          },
+          "accessibleParagraph": {
+            "value": "使用粒子计数在元素周期表上找到元素。确定它是中性原子还是离子。"
+          },
+          "correctAnswerParagraph": {
+            "value": "正确答案：元素是 { $symbol }，{ $neutralOrIon }。"
+          }
+        },
+        "countsToCharge": {
+          "accessibleParagraph": {
+            "value": "根据给定的粒子数量，总电荷是多少？"
+          },
+          "correctAnswerParagraph": {
+            "value": "正确答案：总电荷为 { $charge }。"
+          },
+          "accessibleName": {
+            "value": "总电荷"
+          },
+          "accessibleHelpText": {
+            "value": "设置总电荷值。然后检查答案。"
+          }
+        },
+        "countsToMassNumber": {
+          "accessibleParagraph": {
+            "value": "根据给定的粒子数量，质量数是多少？"
+          },
+          "correctAnswerParagraph": {
+            "value": "正确答案：质量数为 { $mass }。"
+          },
+          "accessibleName": {
+            "value": "质量数"
+          },
+          "accessibleHelpText": {
+            "value": "设置质量数值。然后检查答案。"
+          }
+        },
+        "countsToSymbolAll": {
+          "correctAnswerParagraph": {
+            "value": "正确答案：元素是 { $name }，符号为 { $symbol }。左下角 { $protons }，左上角 { $mass }，右上角 { $charge }。"
+          }
+        },
+        "countsToSymbolCharge": {
+          "correctAnswerParagraph": {
+            "value": "正确答案：化学符号右上角 { $charge }。"
+          }
+        },
+        "countsToSymbolMassNumber": {
+          "correctAnswerParagraph": {
+            "value": "正确答案：化学符号左上角 { $mass }。"
+          }
+        },
+        "schematicToElement": {
+          "accessibleParagraph": {
+            "value": "使用构建的原子在元素周期表上找到元素。确定它是中性原子还是离子。"
+          },
+          "correctAnswerParagraph": {
+            "value": "正确答案：元素是 { $symbol }，{ $neutralOrIon }。"
+          }
+        },
+        "schematicToCharge": {
+          "accessibleParagraph": {
+            "value": "构建的原子的总电荷是多少？"
+          },
+          "correctAnswerParagraph": {
+            "value": "正确答案：总电荷为 { $charge }。"
+          }
+        },
+        "schematicToMassNumber": {
+          "accessibleParagraph": {
+            "value": "构建的原子的质量数是多少？"
+          },
+          "correctAnswerParagraph": {
+            "value": "正确答案：质量数为 { $mass }。"
+          }
+        },
+        "schematicToSymbolAll": {
+          "correctAnswerParagraph": {
+            "value": "正确答案：元素是 { $name }，符号为 { $symbol }。左下角 { $protons }，左上角 { $mass }，右上角 { $charge }。"
+          }
+        },
+        "schematicToSymbolCharge": {
+          "correctAnswerParagraph": {
+            "value": "正确答案：化学符号右上角 { $charge }。"
+          }
+        },
+        "schematicToSymbolMassNumber": {
+          "correctAnswerParagraph": {
+            "value": "正确答案：化学符号左上角 { $mass }。"
+          }
+        },
+        "schematicToSymbolProtonCount": {
+          "correctAnswerParagraph": {
+            "value": "正确答案：化学符号左下角 { $protons }。"
+          }
+        },
+        "schematicToSymbol": {
+          "accessibleParagraph": {
+            "value": "{ $config ->\n  [all] 使用构建的原子来创建化学符号。\n  [protonCount] 使用构建的原子来确定化学符号左下角的值。\n  [charge] 使用构建的原子来确定化学符号右上角的值。\n  *[massNumber] 使用构建的原子来确定化学符号左上角的值。\n}"
+          }
+        },
+        "countsToSymbol": {
+          "accessibleParagraph": {
+            "value": "{ $config ->\n  [all] 使用构建的原子来创建化学符号。\n  [charge] 使用粒子计数来确定化学符号右上角的值。\n  *[massNumber] 使用粒子计数来确定化学符号左上角的值。\n}"
+          }
+        },
+        "symbolToCounts": {
+          "accessibleParagraph": {
+            "value": "使用化学符号来确定质子、中子和电子的数量。"
+          },
+          "correctAnswerParagraph": {
+            "value": "正确答案：有\n{ $protons ->\n[one]{ $protons } 个质子\n*[other] { $protons } 个质子\n}, \n{ $neutrons ->\n[one]{ $neutrons } 个中子\n*[other] { $neutrons } 个中子\n}, 和\n{ $electrons ->\n[one]{ $electrons } 个电子\n*[other] { $electrons } 个电子\n}。"
+          },
+          "accessibleHelpText": {
+            "value": "设置化学符号中表示的粒子的值。然后检查答案。"
+          }
+        },
+        "symbolToSchematic": {
+          "accessibleParagraph": {
+            "value": "构建一个与给定化学符号匹配的原子或离子。"
+          },
+          "correctAnswerParagraph": {
+            "value": "正确答案：原子核包含\n{ $protons ->\n[one]{ $protons } 个质子\n*[other] { $protons } 个质子\n} 和 \n{ $neutrons ->\n[one]{ $neutrons } 个中子\n*[other] { $neutrons } 个中子\n}。内层包含\n{ $inner ->\n[one]{ $inner } 个电子\n*[other] { $inner } 个电子\n}，外层包含\n{ $outer ->\n[one]{ $outer } 个电子\n*[other] { $outer } 个电子\n}。"
+          },
+          "accessibleHelpText": {
+            "value": "查找质子、中子和电子按钮以抓取粒子。\n 抓取后，使用 W 或 S 键将粒子移动到您构建原子的特定位置。\n 按空格键释放。构建完成后，检查答案。"
+          },
+          "builtAtomHelpText": {
+            "value": "在您构建的原子中查找质子、中子和电子以抓取。\n 抓取后使用 W 或 S 键更改位置，或按删除键放回桶中。"
+          }
+        }
+      }
+    },
+    "preferences": {
+      "signFirst": {
+        "accessibleName": {
+          "value": "符号在前"
+        }
+      },
+      "signLast": {
+        "accessibleName": {
+          "value": "符号在后"
+        }
+      }
+    }
+  },
+  "preferences": {
+    "value": "偏好设置",
+    "history": [
+      {
+        "userId": 293040,
+        "timestamp": 1458182268971,
+        "oldValue": "",
+        "newValue": "偏好设置",
+        "explanation": null
+      }
+    ]
   }
 }

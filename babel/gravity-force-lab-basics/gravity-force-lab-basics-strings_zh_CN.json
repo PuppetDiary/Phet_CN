@@ -83,14 +83,172 @@
       }
     ]
   },
+  "gravity-force-lab-basics": {
+    "title": {
+      "value": "重力实验室：基础",
+      "history": []
+    }
+  },
+  "a11y": {
+    "arrows": {
+      "value": "箭头",
+      "history": []
+    },
+    "distanceArrowRemoved": {
+      "value": "距离测量已隐藏。",
+      "history": []
+    },
+    "distanceArrowVisible": {
+      "value": "以千米为单位测量距离。",
+      "history": []
+    },
+    "distanceCheckboxHelpText": {
+      "value": "以千米为单位测量球之间的距离。",
+      "history": []
+    },
+    "forceArrowCapitalized": {
+      "value": "力箭头",
+      "history": []
+    },
+    "forceArrows": {
+      "value": "力箭头",
+      "history": []
+    },
+    "forceArrowsCapitalized": {
+      "value": "力箭头",
+      "history": []
+    },
+    "kilometer": {
+      "value": "千米",
+      "history": []
+    },
+    "kilometers": {
+      "value": "千米",
+      "history": []
+    },
+    "massBillionsPattern": {
+      "value": "{{mass}} 十亿",
+      "history": []
+    },
+    "massControlsHelpTextBillions": {
+      "value": "以十亿千克为单位改变球的质量。",
+      "history": []
+    },
+    "massControlsHelpTextDensityBillions": {
+      "value": "以十亿千克每单位体积为单位改变球的密度。",
+      "history": []
+    },
+    "screenSummary": {
+      "basicsSimStateLabel": {
+        "value": "当前，物体1受到物体2的力与物体2受到物体1的力大小相等、方向相反。",
+        "history": []
+      },
+      "inTheControlArea": {
+        "value": "控制区中",
+        "history": []
+      },
+      "playAreaControls": {
+        "value": "球可以沿一条测量过的轨道相互靠近或远离移动。每个球的质量可以增加或减少。每个球被一个机器人固定在位置上。可选地，可以使用可移动的标尺来测量球心之间的距离。",
+        "history": []
+      },
+      "playAreaOverviewPattern": {
+        "value": "{{playArea}}两个质量球，一个标记为物体1的蓝色球和一个标记为物体2的红色球。一个力箭头从每个球的中心开始，指向另一个球。",
+        "history": []
+      },
+      "secondaryDescriptionPattern": {
+        "value": "{{controlArea}}，复选框改变显示的内容和它们的行为，还有一个按钮重置模拟器。",
+        "history": []
+      },
+      "thePlayAreaHas": {
+        "value": "游戏区有",
+        "history": []
+      }
+    },
+    "sizeOfForce": {
+      "value": "力的大小",
+      "history": []
+    },
+    "voicing": {
+      "changeMassHintResponse": {
+        "value": "以十亿千克为单位改变质量。",
+        "history": []
+      },
+      "constantSizeHintResponse": {
+        "value": "探索有或无球大小变化时的质量变化",
+        "history": []
+      },
+      "constantSizeNotSetResponse": {
+        "value": "不再设置",
+        "history": []
+      },
+      "constantSizeSetResponse": {
+        "value": "设置在球上",
+        "history": []
+      },
+      "distanceArrowReadingBlockNameResponse": {
+        "value": "将球相互靠近或远离移动。",
+        "history": []
+      },
+      "distanceHiddenResponse": {
+        "value": "测量已隐藏",
+        "history": []
+      },
+      "distanceHintResponse": {
+        "value": "探索有或无精确距离时的球位置",
+        "history": []
+      },
+      "distanceKilometersPattern": {
+        "value": "{{distance}} 千米",
+        "history": []
+      },
+      "distanceShownResponse": {
+        "value": "以千米测量",
+        "history": []
+      },
+      "forceValuesHiddenResponse": {
+        "value": "已隐藏",
+        "history": []
+      },
+      "forceValuesHintResponse": {
+        "value": "探索有或无数值时的力变化",
+        "history": []
+      },
+      "forceValuesShownResponse": {
+        "value": "以牛顿显示",
+        "history": []
+      },
+      "massControlReadingBlockPattern": {
+        "value": "{{label}}，{{value}}",
+        "history": []
+      },
+      "voicingToolbar": {
+        "detailsPattern": {
+          "value": "{{simState}} {{force}} {{distance}} {{mass}} {{robot}}",
+          "history": []
+        },
+        "inAddition": {
+          "value": "此外",
+          "history": []
+        },
+        "overviewPattern": {
+          "value": "{{simDescription}} {{playArea}} {{spheres}} {{controls}}",
+          "history": []
+        },
+        "thereAre": {
+          "value": "有",
+          "history": []
+        }
+      }
+    }
+  },
   "gravity-force-lab-basics.title": {
-    "value": "引力实验室：基础",
+    "value": "重力实验室：基础",
     "history": [
       {
-        "userId": 685789,
-        "timestamp": 1573111198401,
+        "userId": 293040,
+        "timestamp": 1458182268971,
         "oldValue": "",
-        "newValue": "引力实验室：基础",
+        "newValue": "重力实验室：基础",
         "explanation": null
       }
     ]

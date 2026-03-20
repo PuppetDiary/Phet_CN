@@ -300,16 +300,7 @@
     ]
   },
   "screen.mySolution": {
-    "value": "我的溶液",
-    "history": [
-      {
-        "userId": 293040,
-        "timestamp": 1458182268971,
-        "oldValue": "",
-        "newValue": "我的溶液",
-        "explanation": null
-      }
-    ]
+    "value": "我的溶液"
   },
   "showWater": {
     "value": "显示溶剂",
@@ -360,13 +351,20 @@
     ]
   },
   "strength": {
-    "value": "酸碱的强度",
+    "value": "强度",
     "history": [
       {
         "userId": 293040,
         "timestamp": 1458182268971,
         "oldValue": "",
         "newValue": "酸碱的强度",
+        "explanation": null
+      },
+      {
+        "userId": 0,
+        "timestamp": 1742500000000,
+        "oldValue": "酸碱的强度",
+        "newValue": "强度",
         "explanation": null
       }
     ]
@@ -408,13 +406,20 @@
     ]
   },
   "stronger": {
-    "value": "比较强的",
+    "value": "较强",
     "history": [
       {
         "userId": 293040,
         "timestamp": 1458182268971,
         "oldValue": "",
         "newValue": "比较强的",
+        "explanation": null
+      },
+      {
+        "userId": 0,
+        "timestamp": 1742500000000,
+        "oldValue": "比较强的",
+        "newValue": "较强",
         "explanation": null
       }
     ]
@@ -468,13 +473,20 @@
     ]
   },
   "views": {
-    "value": "显示",
+    "value": "视图",
     "history": [
       {
         "userId": 293040,
         "timestamp": 1458182268971,
         "oldValue": "",
         "newValue": "显示",
+        "explanation": null
+      },
+      {
+        "userId": 0,
+        "timestamp": 1742500000000,
+        "oldValue": "显示",
+        "newValue": "视图",
         "explanation": null
       }
     ]
@@ -528,13 +540,20 @@
     ]
   },
   "weaker": {
-    "value": "比较弱的",
+    "value": "较弱",
     "history": [
       {
         "userId": 293040,
         "timestamp": 1458182268971,
         "oldValue": "",
         "newValue": "比较弱的",
+        "explanation": null
+      },
+      {
+        "userId": 0,
+        "timestamp": 1742500000000,
+        "oldValue": "比较弱的",
+        "newValue": "较弱",
         "explanation": null
       }
     ]

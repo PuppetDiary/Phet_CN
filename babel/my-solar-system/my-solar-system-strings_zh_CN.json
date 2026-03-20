@@ -383,5 +383,60 @@
         "newValue": "速率"
       }
     ]
+  },
+  "mode.orbitalSystem1": {
+    "value": "轨道系统 1"
+  },
+  "mode.orbitalSystem2": {
+    "value": "轨道系统 2"
+  },
+  "mode.orbitalSystem3": {
+    "value": "轨道系统 3"
+  },
+  "mode.orbitalSystem4": {
+    "value": "轨道系统 4"
+  },
+  "keyboardHelpDialog.chooseAnOrbitalSystem": {
+    "value": "选择轨道系统"
+  },
+  "keyboardHelpDialog.orbitalSystem": {
+    "value": "轨道系统"
+  },
+  "keyboardHelpDialog.orbitalSystems": {
+    "value": "轨道系统"
+  },
+  "a11y": {
+    "moreData": {
+      "value": "更多资料"
+    },
+    "info": {
+      "value": "信息"
+    },
+    "numberOfBodies": {
+      "value": "星体数量"
+    },
+    "introScreen": {
+      "screenSummary": {
+        "playAreaDescription": {
+          "value": "操作区域是一个观察窗口，显示两个天体的场景。可以尝试调整两个天体的质量、速度、位置和方向。"
+        },
+        "controlAreaDescription": {
+          "value": "在控制区域中，有添加网格和测量带的选项。也可以切换开启或关闭天体的轨迹和数值，以及检查它们的质量中心。控制区域有用于调整观察窗口中动作速度的选项，包括暂停和向前步进的按钮。"
+        }
+      }
+    },
+    "labScreen": {
+      "screenSummary": {
+        "playAreaDescription": {
+          "value": "操作区域是一个观察窗口，显示可以设置自己实验的多种选项的场景。可以重现我们自己的太阳和地球，或者创造自己的太阳系。"
+        },
+        "controlAreaDescription": {
+          "value": "在控制区域中，有查看和更改轨道区域的选项，以及调整和查看轨道信息的选项。可以选择预设的天体排列或自己选择，以及放大和缩小选项。控制区域有用于调整观察窗口中动作速度的选项，包括暂停和向前步进的按钮。"
+        }
+      },
+      "orbitalSystemSelector": {
+        "value": "轨道系统选择器"
+      }
+    }
   }
 }

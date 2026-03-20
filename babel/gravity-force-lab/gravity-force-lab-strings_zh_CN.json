@@ -251,17 +251,21 @@
       }
     ]
   },
-  "body.name.earth": {
-    "value": "地球",
-    "history": [
-      {
-        "userId": 293040,
-        "timestamp": 1458830591033,
-        "oldValue": "",
-        "newValue": "地球",
-        "explanation": null
+  "body": {
+    "name": {
+      "earth": {
+        "value": "地球",
+        "history": [
+          {
+            "userId": 293040,
+            "timestamp": 1458830591033,
+            "oldValue": "",
+            "newValue": "地球",
+            "explanation": null
+          }
+        ]
       }
-    ]
+    }
   },
   "constantRadius": {
     "value": "固定半径",
@@ -311,17 +315,11 @@
       }
     ]
   },
-  "gravity-force-lab.title": {
-    "value": "万有引力实验",
-    "history": [
-      {
-        "userId": 293040,
-        "timestamp": 1458830591033,
-        "oldValue": "",
-        "newValue": "万有引力实验",
-        "explanation": null
-      }
-    ]
+  "gravity-force-lab": {
+    "title": {
+      "value": "重力实验室",
+      "history": []
+    }
   },
   "mass-1": {
     "value": "m1",
@@ -347,77 +345,79 @@
       }
     ]
   },
-  "module.force-laws.name": {
-    "value": "万有引力定律",
-    "history": [
-      {
-        "userId": 293040,
-        "timestamp": 1458830591033,
-        "oldValue": "",
-        "newValue": "万有引力定律",
-        "explanation": null
+  "module": {
+    "force-laws": {
+      "name": {
+        "value": "万有引力定律",
+        "history": [
+          {
+            "userId": 293040,
+            "timestamp": 1458830591033,
+            "oldValue": "",
+            "newValue": "万有引力定律",
+            "explanation": null
+          }
+        ]
       }
-    ]
+    },
+    "sun-planet-system": {
+      "name": {
+        "value": "太阳地球系统",
+        "history": [
+          {
+            "userId": 293040,
+            "timestamp": 1458830591033,
+            "oldValue": "",
+            "newValue": "太阳地球系统",
+            "explanation": null
+          }
+        ]
+      }
+    }
   },
-  "module.sun-planet-system.name": {
-    "value": "太阳地球系统",
-    "history": [
-      {
-        "userId": 293040,
-        "timestamp": 1458830591033,
-        "oldValue": "",
-        "newValue": "太阳地球系统",
-        "explanation": null
+  "my": {
+    "solar": {
+      "system": {
+        "value": "太阳系",
+        "history": [
+          {
+            "userId": 293040,
+            "timestamp": 1458830591033,
+            "oldValue": "",
+            "newValue": "太阳系",
+            "explanation": null
+          }
+        ]
       }
-    ]
+    }
   },
-  "my.solar.system": {
-    "value": "太阳系",
-    "history": [
-      {
-        "userId": 293040,
-        "timestamp": 1458830591033,
-        "oldValue": "",
-        "newValue": "太阳系",
-        "explanation": null
+  "object": {
+    "size": {
+      "actual-size": {
+        "value": "实物图",
+        "history": [
+          {
+            "userId": 293040,
+            "timestamp": 1458830591033,
+            "oldValue": "",
+            "newValue": "实物图",
+            "explanation": null
+          }
+        ]
+      },
+      "cartoon": {
+        "value": "简图",
+        "history": [
+          {
+            "userId": 293040,
+            "timestamp": 1458830591033,
+            "oldValue": "",
+            "newValue": "简图",
+            "explanation": null
+          }
+        ]
       }
-    ]
-  },
-  "object.size": {
-    "value": "物体大小",
-    "history": [
-      {
-        "userId": 293040,
-        "timestamp": 1458830591033,
-        "oldValue": "",
-        "newValue": "物体大小",
-        "explanation": null
-      }
-    ]
-  },
-  "object.size.actual-size": {
-    "value": "实物图",
-    "history": [
-      {
-        "userId": 293040,
-        "timestamp": 1458830591033,
-        "oldValue": "",
-        "newValue": "实物图",
-        "explanation": null
-      }
-    ]
-  },
-  "object.size.cartoon": {
-    "value": "简图",
-    "history": [
-      {
-        "userId": 293040,
-        "timestamp": 1458830591033,
-        "oldValue": "",
-        "newValue": "简图",
-        "explanation": null
-      }
-    ]
+    }
   },
   "pattern_0value_1units": {
     "value": "{0} {1}",
@@ -432,52 +432,48 @@
     ]
   },
   "planet": {
-    "value": "行星",
-    "history": [
-      {
-        "userId": 293040,
-        "timestamp": 1458830591033,
-        "oldValue": "",
-        "newValue": "行星",
-        "explanation": null
+    "control": {
+      "title": {
+        "value": "行星",
+        "history": [
+          {
+            "userId": 293040,
+            "timestamp": 1458830591033,
+            "oldValue": "",
+            "newValue": "行星",
+            "explanation": null
+          }
+        ]
       }
-    ]
+    }
   },
-  "planet.control.title": {
-    "value": "行星",
-    "history": [
-      {
-        "userId": 293040,
-        "timestamp": 1458830591033,
-        "oldValue": "",
-        "newValue": "行星",
-        "explanation": null
-      }
-    ]
+  "readout": {
+    "pattern-bodyname": {
+      "value": "{0}质量",
+      "history": [
+        {
+          "userId": 293040,
+          "timestamp": 1458830591033,
+          "oldValue": "",
+          "newValue": "{0}质量",
+          "explanation": null
+        }
+      ]
+    }
   },
-  "readout.pattern-bodyname": {
-    "value": "{0}质量",
-    "history": [
-      {
-        "userId": 293040,
-        "timestamp": 1458830591033,
-        "oldValue": "",
-        "newValue": "{0}质量",
-        "explanation": null
-      }
-    ]
-  },
-  "related.sims": {
-    "value": "相关模拟",
-    "history": [
-      {
-        "userId": 293040,
-        "timestamp": 1458830591033,
-        "oldValue": "",
-        "newValue": "相关模拟",
-        "explanation": null
-      }
-    ]
+  "related": {
+    "sims": {
+      "value": "相关模拟",
+      "history": [
+        {
+          "userId": 293040,
+          "timestamp": 1458830591033,
+          "oldValue": "",
+          "newValue": "相关模拟",
+          "explanation": null
+        }
+      ]
+    }
   },
   "showValues": {
     "value": "显示力的大小",
@@ -492,88 +488,557 @@
     ]
   },
   "sun": {
-    "value": "太阳",
-    "history": [
-      {
-        "userId": 293040,
-        "timestamp": 1458830591033,
-        "oldValue": "",
-        "newValue": "太阳",
-        "explanation": null
+    "planet": {
+      "controls": {
+        "value": "设置",
+        "history": [
+          {
+            "userId": 293040,
+            "timestamp": 1458830591033,
+            "oldValue": "",
+            "newValue": "设置",
+            "explanation": null
+          }
+        ]
       }
-    ]
-  },
-  "sun.planet.controls": {
-    "value": "设置",
-    "history": [
-      {
-        "userId": 293040,
-        "timestamp": 1458830591033,
-        "oldValue": "",
-        "newValue": "设置",
-        "explanation": null
-      }
-    ]
-  },
-  "translation.credits": {
-    "value": ""
+    }
   },
   "units": {
-    "value": "单位",
-    "history": [
-      {
-        "userId": 293040,
-        "timestamp": 1458830591033,
-        "oldValue": "",
-        "newValue": "单位",
-        "explanation": null
+    "kg": {
+      "value": "kg",
+      "history": [
+        {
+          "userId": 293040,
+          "timestamp": 1458830591033,
+          "oldValue": "",
+          "newValue": "kg",
+          "explanation": null
+        }
+      ]
+    },
+    "earth": {
+      "masses": {
+        "value": "地球质量",
+        "history": [
+          {
+            "userId": 293040,
+            "timestamp": 1458830591033,
+            "oldValue": "",
+            "newValue": "地球质量",
+            "explanation": null
+          }
+        ]
       }
-    ]
+    },
+    "kilometers": {
+      "value": "千米",
+      "history": [
+        {
+          "userId": 293040,
+          "timestamp": 1458830591033,
+          "oldValue": "",
+          "newValue": "千米",
+          "explanation": null
+        }
+      ]
+    },
+    "meters": {
+      "value": "米",
+      "history": [
+        {
+          "userId": 293040,
+          "timestamp": 1458830591033,
+          "oldValue": "",
+          "newValue": "米",
+          "explanation": null
+        }
+      ]
+    }
   },
-  "units.earth.masses": {
-    "value": "地球质量",
+  "a11y": {
+    "blueSpherePattern": {
+      "value": "{{objectLabel}}，蓝色球",
+      "history": []
+    },
+    "controls": {
+      "constantRadiusThinkDensityPattern": {
+        "value": "{{mass1}} 和 {{mass2}} 设置为相同大小。",
+        "history": []
+      },
+      "constantSizeCheckboxHelpText": {
+        "value": "改变质量时保持球的大小不变。",
+        "history": []
+      },
+      "massControlsHelpText": {
+        "value": "以千克为单位改变球的质量。",
+        "history": []
+      },
+      "massControlsHelpTextDensity": {
+        "value": "以千克每单位体积为单位改变球的密度。",
+        "history": []
+      },
+      "massControlsLabel": {
+        "value": "质量控制",
+        "history": []
+      },
+      "massMaxMinBorderTextWithForce": {
+        "value": "{{relativeSize}} {{otherObjectLabel}}，{{forceVectorSize}}，力 {{force}} {{unit}}。",
+        "history": []
+      },
+      "massMaxMinBorderTextWithoutForce": {
+        "value": "{{relativeSize}} {{otherObjectLabel}}，{{forceVectorSize}}。",
+        "history": []
+      }
+    },
+    "keyboardHelp": {
+      "changeMassBasicsPDOM": {
+        "value": "使用上和下方向键改变质量。",
+        "history": []
+      },
+      "changeMassInLargerStepsDescription": {
+        "value": "使用Page Up和Page Down键以更大步幅改变质量。",
+        "history": []
+      },
+      "changeMassInSmallerStepsDescription": {
+        "value": "使用Shift加左和右方向键以更小步幅改变质量。",
+        "history": []
+      },
+      "changeMassPDOM": {
+        "value": "使用左和右方向键改变质量。",
+        "history": []
+      },
+      "jumpHomePDOM": {
+        "value": "使用J加H键将标尺释放到初始位置。",
+        "history": []
+      },
+      "jumpStartOfSpherePDOM": {
+        "value": "使用J加C键将标尺起点跳转到m1球中心。",
+        "history": []
+      },
+      "jumpToLeftDescription": {
+        "value": "使用Home键跳转到左侧。",
+        "history": []
+      },
+      "jumpToMaximumMassDescription": {
+        "value": "使用End键跳转到最大质量。",
+        "history": []
+      },
+      "jumpToMinimumMassDescription": {
+        "value": "使用Home键跳转到最小质量。",
+        "history": []
+      },
+      "jumpToRightDescription": {
+        "value": "使用End键跳转到右侧。",
+        "history": []
+      },
+      "moveGrabbedRulerPDOM": {
+        "value": "使用方向键或W、A、S、D键向上、左、下、右移动已抓取的标尺。",
+        "history": []
+      },
+      "moveInLargerStepsDescription": {
+        "value": "使用Page Up和Page Down键以更大步幅移动。",
+        "history": []
+      },
+      "moveInSmallerStepsDescription": {
+        "value": "使用Shift加左和右方向键以更小步幅移动。",
+        "history": []
+      },
+      "moveInSmallerStepsPDOM": {
+        "value": "使用Shift加方向键或Shift加W、A、S、D键以更小步幅移动。",
+        "history": []
+      },
+      "moveSphereDescription": {
+        "value": "使用左和右方向键左右移动球。",
+        "history": []
+      }
+    },
+    "mass": {
+      "value": "质量",
+      "history": []
+    },
+    "micronewtons": {
+      "value": "微牛顿",
+      "history": []
+    },
+    "propertyChange": {
+      "densityDecreases": {
+        "value": "密度减少",
+        "history": []
+      },
+      "densityIncreases": {
+        "value": "密度增加",
+        "history": []
+      },
+      "massGetsBigger": {
+        "value": "质量变大",
+        "history": []
+      },
+      "massGetsSmaller": {
+        "value": "质量变小",
+        "history": []
+      }
+    },
+    "qualitative": {
+      "massAndForceClausesPattern": {
+        "value": "{{massClause}}，{{forceClause}}。",
+        "history": []
+      },
+      "massAndUnitPattern": {
+        "value": "{{massValue}} 千克",
+        "history": []
+      },
+      "massChangeClausePattern": {
+        "value": "随着 {{changeDirectionPhrase}}",
+        "history": []
+      },
+      "massChangesAndMovesClausePattern": {
+        "value": "随着 {{changeDirectionPhrase}} 并向 {{leftOrRight}} 移动",
+        "history": []
+      },
+      "massChangesMovesOtherClausePattern": {
+        "value": "随着 {{changeDirectionPhrase}} 并使 {{otherObjectLabel}} 向 {{leftOrRight }} 移动",
+        "history": []
+      },
+      "objectsRelativeSizePattern": {
+        "value": "{{firstObjectLabel}} {{relativeSize}} {{secondObjectLabel}}。",
+        "history": []
+      }
+    },
+    "redSpherePattern": {
+      "value": "{{objectLabel}}，红色球",
+      "history": []
+    },
+    "relativeMassDensity": {
+      "asDenseAs": {
+        "value": "密度与...相同",
+        "history": []
+      },
+      "denseButComparableTo": {
+        "value": "密度大但与...相当",
+        "history": []
+      },
+      "extremelyDenseComparedTo": {
+        "value": "密度远大于",
+        "history": []
+      },
+      "halfAsDenseAs": {
+        "value": "密度是...的一半",
+        "history": []
+      },
+      "lessDenseButComparableTo": {
+        "value": "密度小但与...相当",
+        "history": []
+      },
+      "muchDenseThan": {
+        "value": "密度大很多",
+        "history": []
+      },
+      "muchLessDenseThan": {
+        "value": "密度小很多",
+        "history": []
+      },
+      "notDenseComparedTo": {
+        "value": "密度不如",
+        "history": []
+      },
+      "twiceAsDenseAs": {
+        "value": "密度是...的两倍",
+        "history": []
+      }
+    },
+    "relativeMassDensityCapitalized": {
+      "asDenseAs": {
+        "value": "密度与...相同",
+        "history": []
+      },
+      "denseButComparableTo": {
+        "value": "密度大但与...相当",
+        "history": []
+      },
+      "extremelyDenseComparedTo": {
+        "value": "密度远大于",
+        "history": []
+      },
+      "halfAsDenseAs": {
+        "value": "密度是...的一半",
+        "history": []
+      },
+      "lessDenseButComparableTo": {
+        "value": "密度小但与...相当",
+        "history": []
+      },
+      "muchDenseThan": {
+        "value": "密度大很多",
+        "history": []
+      },
+      "muchLessDenseThan": {
+        "value": "密度小很多",
+        "history": []
+      },
+      "notDenseComparedTo": {
+        "value": "密度不如",
+        "history": []
+      },
+      "twiceAsDenseAs": {
+        "value": "密度是...的两倍",
+        "history": []
+      }
+    },
+    "relativeMassSize": {
+      "halfTheSizeOf": {
+        "value": "大小是...的一半",
+        "history": []
+      },
+      "largerButComparableTo": {
+        "value": "大但与...相当",
+        "history": []
+      },
+      "muchLargerThan": {
+        "value": "大很多",
+        "history": []
+      },
+      "muchMuchLargerThan": {
+        "value": "大很多很多",
+        "history": []
+      },
+      "muchMuchSmallerThan": {
+        "value": "小很多很多",
+        "history": []
+      },
+      "muchSmallerThan": {
+        "value": "小很多",
+        "history": []
+      },
+      "sameSizeAs": {
+        "value": "与...大小相同",
+        "history": []
+      },
+      "smallerButComparableTo": {
+        "value": "小但与...相当",
+        "history": []
+      },
+      "twiceTheSizeOf": {
+        "value": "大小是...的两倍",
+        "history": []
+      }
+    },
+    "relativeMassSizeCapitalized": {
+      "halfTheSizeOf": {
+        "value": "大小是...的一半",
+        "history": []
+      },
+      "largerButComparableTo": {
+        "value": "大但与...相当",
+        "history": []
+      },
+      "muchLargerThan": {
+        "value": "大很多",
+        "history": []
+      },
+      "muchMuchLargerThan": {
+        "value": "大很多很多",
+        "history": []
+      },
+      "muchMuchSmallerThan": {
+        "value": "小很多很多",
+        "history": []
+      },
+      "muchSmallerThan": {
+        "value": "小很多",
+        "history": []
+      },
+      "sameSizeAs": {
+        "value": "与...大小相同",
+        "history": []
+      },
+      "smallerButComparableTo": {
+        "value": "小但与...相当",
+        "history": []
+      },
+      "twiceTheSizeOf": {
+        "value": "大小是...的两倍",
+        "history": []
+      }
+    },
+    "ruler": {
+      "gestureHint": {
+        "value": "拖动手指移动标尺。抬起手指释放。",
+        "history": []
+      },
+      "grabbedAlertPattern": {
+        "value": "已抓住。{{regionAndDistance}} {{supplementalHint}}",
+        "history": []
+      },
+      "grabbedJumpKeyboardHint": {
+        "value": "按住J加C键将标尺跳转到m1中心。",
+        "history": []
+      },
+      "hintPattern": {
+        "value": "{{playHint}} {{releaseHint}}",
+        "history": []
+      },
+      "jumpCenterKeyboardHint": {
+        "value": "按住J加H键将标尺释放到初始位置。",
+        "history": []
+      },
+      "jumpCenterMassAlert": {
+        "value": "标尺零点位于 {{object1}} 中心。{{centersApart}} {{supplementalHint}}",
+        "history": []
+      },
+      "keyboardReleaseHint": {
+        "value": "按空格键释放。",
+        "history": []
+      },
+      "positions": {
+        "behindMassControls": {
+          "value": "在质量控制后方。",
+          "history": []
+        },
+        "coveringCenters": {
+          "value": "覆盖中心。",
+          "history": []
+        },
+        "coveringM1": {
+          "value": "覆盖m1的力向量。",
+          "history": []
+        },
+        "coveringM2": {
+          "value": "覆盖m2的力向量。",
+          "history": []
+        },
+        "inHomePosition": {
+          "value": "在质量球下方的初始位置。",
+          "history": []
+        },
+        "justAboveCenters": {
+          "value": "刚好在中心上方。",
+          "history": []
+        },
+        "justBelowCenters": {
+          "value": "刚好在中心下方。",
+          "history": []
+        }
+      },
+      "regionAndDistancePattern": {
+        "value": "{{verticalRegion}} {{centersApart}}",
+        "history": []
+      },
+      "releaseAndExploreHint": {
+        "value": "释放标尺以探索球的位置和质量。",
+        "history": []
+      }
+    },
+    "screenSummary": {
+      "massValuesAndComparisonSummaryPattern": {
+        "value": "{{mass1Label}} 的质量为 {{m1Mass}} 千克，{{comparativeValue}} {{mass2Label}} 的 {{m2Mass}} 千克。",
+        "history": []
+      },
+      "playAreaControls": {
+        "value": "球可以沿一条测量过的轨道相互靠近或远离移动。每个球的质量可以增加或减少。每个球被一个机器人固定在位置上。可选地，可以使用可移动的标尺来测量球心之间的距离。",
+        "history": []
+      },
+      "playAreaOverview": {
+        "value": "游戏区有两个质量球，一个标记为m1的蓝色球和一个标记为m2的红色球。一个力向量箭头从每个球的中心开始，指向另一个球。",
+        "history": []
+      },
+      "secondaryDescription": {
+        "value": "在控制区，有改变力的表示和质量表示的选项，还有一个按钮重置模拟器。",
+        "history": []
+      },
+      "simStateListLabel": {
+        "value": "当前，m1受到m2的力与m2受到m1的力大小相等、方向相反。",
+        "history": []
+      }
+    },
+    "sentencePattern": {
+      "value": "{{sentence}}。",
+      "history": []
+    },
+    "sizeAndDistancePattern": {
+      "value": "{{size}}，{{relativeSize}} {{otherObjectLabel}}，以及 {{distance}}。",
+      "history": []
+    },
+    "sizePattern": {
+      "value": "{{thisObjectLabel}} 为 {{massValue}} 千克",
+      "history": []
+    },
+    "voicing": {
+      "biggerCapitalized": {
+        "value": "更大",
+        "history": []
+      },
+      "briefDensityChangeForceAlertPattern": {
+        "value": "{{densityChange}}密度，{{forceChange}}力。",
+        "history": []
+      },
+      "briefMassChangeAlertPattern": {
+        "value": "{{propertyChange}} {{forceChange}}",
+        "history": []
+      },
+      "briefMassChangeForceAlertPattern": {
+        "value": "力{{forceChange}}。",
+        "history": []
+      },
+      "briefMassChangeForceAlertWithValuePattern": {
+        "value": "力{{forceChange}}，现在{{value}}牛顿。",
+        "history": []
+      },
+      "briefMassChangeWithPushAlertPattern": {
+        "value": "{{pushAlert}} {{forceAlert}}",
+        "history": []
+      },
+      "briefMassPushAlertPattern": {
+        "value": "{{object1}} 使 {{object2}} 向 {{direction}} 移动。{{forceAlert}}",
+        "history": []
+      },
+      "briefNewForcePattern": {
+        "value": "力现在为{{value}}牛顿。",
+        "history": []
+      },
+      "briefPositionChangeInteractionPattern": {
+        "value": "{{valueText}}。{{forceAlert}}",
+        "history": []
+      },
+      "less": {
+        "value": "更少",
+        "history": []
+      },
+      "levels": {
+        "distanceArrowPattern": {
+          "value": "{{distance}} 千米",
+          "history": []
+        }
+      },
+      "more": {
+        "value": "更多",
+        "history": []
+      },
+      "smallerCapitalized": {
+        "value": "更小",
+        "history": []
+      }
+    }
+  },
+  "gravity-force-lab.title": {
+    "value": "重力实验室",
     "history": [
       {
         "userId": 293040,
-        "timestamp": 1458830591033,
+        "timestamp": 1458182268971,
         "oldValue": "",
-        "newValue": "地球质量",
+        "newValue": "重力实验室",
         "explanation": null
       }
     ]
   },
   "units.kg": {
-    "value": "kg",
+    "value": "千克",
     "history": [
       {
         "userId": 293040,
-        "timestamp": 1458830591033,
+        "timestamp": 1458182268971,
         "oldValue": "",
-        "newValue": "kg",
-        "explanation": null
-      }
-    ]
-  },
-  "units.kilometers": {
-    "value": "千米",
-    "history": [
-      {
-        "userId": 293040,
-        "timestamp": 1458830591033,
-        "oldValue": "",
-        "newValue": "千米",
-        "explanation": null
-      }
-    ]
-  },
-  "units.meters": {
-    "value": "米",
-    "history": [
-      {
-        "userId": 293040,
-        "timestamp": 1458830591033,
-        "oldValue": "",
-        "newValue": "米",
+        "newValue": "千克",
         "explanation": null
       }
     ]

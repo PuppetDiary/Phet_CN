@@ -310,5 +310,37 @@
         "explanation": null
       }
     ]
+  },
+  "a11y": {
+    "moveChargesDescription": {
+      "value": "使用左和右箭头键移动电荷。"
+    },
+    "smallStepsMoveChargesDescription": {
+      "value": "按住 Shift 键的同时使用左和右箭头键以更小步长移动。"
+    },
+    "largeStepsMoveChargesDescription": {
+      "value": "使用 Page Up 和 Page Down 键以更大步长移动。"
+    },
+    "jumpHomeDescription": {
+      "value": "使用 Home 键跳到左侧。"
+    },
+    "jumpEndDescription": {
+      "value": "使用 End 键跳到右侧。"
+    },
+    "moveRulerDescription": {
+      "value": "使用箭头键或 W、A、S、D 键移动标尺。"
+    },
+    "adjustChargeAmountDescription": {
+      "value": "使用箭头键调整电荷量。"
+    },
+    "largeStepsAdjustAmountDescription": {
+      "value": "使用 Page Up 或 Page Down 以更大步长调整电荷。"
+    },
+    "jumpToMinimumDescription": {
+      "value": "使用 Home 键跳到最小数量。"
+    },
+    "jumpToMaximumDescription": {
+      "value": "使用 End 键跳到最大数量。"
+    }
   }
 }

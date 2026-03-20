@@ -1036,5 +1036,315 @@
   },
   "license.title": {
     "value": "许可证"
+  },
+  "a11y": {
+    "keyboardHelp": {
+      "keyboardShortcuts": {
+        "value": "键盘快捷键"
+      },
+      "tabToGetStarted": {
+        "accessibleHelpText": {
+          "value": "使用Tab键查找模拟操作，使用光标键阅读详细信息。"
+        },
+        "readingBlockNameResponse": {
+          "value": "按Tab键开始。"
+        }
+      }
+    },
+    "inPlayArea": {
+      "value": "在游戏区域："
+    },
+    "inControlArea": {
+      "value": "在控制区域："
+    },
+    "simScreens": {
+      "value": "模拟屏幕"
+    },
+    "simScreen": {
+      "value": "模拟屏幕"
+    },
+    "screenNamePattern": {
+      "value": "{{name}}屏幕"
+    },
+    "goToScreenPattern": {
+      "value": "转到{{name}}屏幕。"
+    },
+    "screenSimPattern": {
+      "value": "{{screenName}}，{{simName}}"
+    },
+    "home": {
+      "value": "主页"
+    },
+    "homeScreenDescriptionPattern": {
+      "value": "欢迎来到{{name}}。它有{{screens}}个交互式屏幕供您探索。"
+    },
+    "homeScreenHint": {
+      "value": "选择一个屏幕开始探索。"
+    },
+    "homeScreenIntroPattern": {
+      "value": "{{description}} {{hint}}"
+    },
+    "homeScreenButtonDetailsPattern": {
+      "value": "在{{name}}上，{{screenHint}}"
+    },
+    "simResources": {
+      "value": "模拟资源"
+    },
+    "soundToggle": {
+      "alert": {
+        "simSoundOn": {
+          "value": "音频功能已开启。"
+        },
+        "simSoundOff": {
+          "value": "音频功能已关闭。"
+        }
+      },
+      "label": {
+        "value": "所有音频"
+      }
+    },
+    "checkOutShortcuts": {
+      "value": "如需要，请在模拟资源下查看键盘快捷键。"
+    },
+    "phetMenu": {
+      "value": "PhET菜单"
+    },
+    "preferences": {
+      "tabs": {
+        "labelledDescriptionPattern": {
+          "value": "{{label}}，{{description}}"
+        },
+        "tabResponsePattern": {
+          "value": "偏好设置，{{title}}选项卡"
+        },
+        "visual": {
+          "interactiveHighlights": {
+            "enabledAlert": {
+              "value": "所有输入的高亮显示已开启。"
+            },
+            "disabledAlert": {
+              "value": "鼠标和触摸的高亮显示已关闭。"
+            }
+          }
+        },
+        "audio": {
+          "sounds": {
+            "soundsOn": {
+              "value": "声音已开启。"
+            },
+            "soundsOff": {
+              "value": "声音已关闭。"
+            },
+            "extraSounds": {
+              "extraSoundsOn": {
+                "value": "额外声音已开启。"
+              },
+              "extraSoundsOff": {
+                "value": "额外声音已关闭。"
+              }
+            }
+          },
+          "voicing": {
+            "title": {
+              "value": "语音"
+            },
+            "voicingOn": {
+              "value": "语音已开启。"
+            },
+            "voicingOff": {
+              "value": "语音已关闭。"
+            },
+            "voicingOffOnlyAvailableInEnglish": {
+              "value": "语音已关闭。仅支持英语。"
+            },
+            "voicingToolbar": {
+              "title": {
+                "value": "工具栏"
+              },
+              "toolbarAdded": {
+                "value": "工具栏已添加到模拟器。"
+              },
+              "toolbarRemoved": {
+                "value": "工具栏已移除。"
+              }
+            },
+            "simVoicingOptions": {
+              "title": {
+                "value": "模拟语音选项"
+              },
+              "description": {
+                "value": "选择您在互动时想要听到的详细信息。"
+              },
+              "objectDetails": {
+                "label": {
+                  "value": "语音对象详细信息和更改"
+                },
+                "enabledAlert": {
+                  "value": "正在语音播报对象详细信息和更改。"
+                },
+                "disabledAlert": {
+                  "value": "对象详细信息和更改已静音。"
+                }
+              },
+              "contextChanges": {
+                "label": {
+                  "value": "语音周围环境更改"
+                },
+                "enabledAlert": {
+                  "value": "正在语音播报周围环境更改。"
+                },
+                "disabledAlert": {
+                  "value": "周围环境更改已静音。"
+                }
+              },
+              "helpfulHints": {
+                "label": {
+                  "value": "语音有用提示"
+                },
+                "enabledAlert": {
+                  "value": "正在语音播报额外帮助。"
+                },
+                "disabledAlert": {
+                  "value": "额外帮助已静音。"
+                }
+              }
+            },
+            "customizeVoice": {
+              "title": {
+                "value": "自定义语音"
+              },
+              "expandedAlert": {
+                "value": "已展开"
+              },
+              "collapsedAlert": {
+                "value": "已折叠"
+              },
+              "variablesPattern": {
+                "value": "{{value}}倍"
+              },
+              "writtenVariablesPattern": {
+                "value": "{{value}}倍"
+              },
+              "voice": {
+                "title": {
+                  "value": "语音"
+                },
+                "titlePattern": {
+                  "value": "语音：{{value}}"
+                },
+                "noVoicesAvailable": {
+                  "value": "没有可用的语音"
+                }
+              },
+              "rate": {
+                "title": {
+                  "value": "速率"
+                },
+                "labelString": {
+                  "value": "语音速率"
+                },
+                "rangeDescriptions": {
+                  "low": {
+                    "value": "在低范围内"
+                  },
+                  "normal": {
+                    "value": "在正常范围内"
+                  },
+                  "aboveNormal": {
+                    "value": "高于正常范围"
+                  },
+                  "high": {
+                    "value": "在高范围内"
+                  },
+                  "voiceRateNormal": {
+                    "value": "正常"
+                  }
+                }
+              },
+              "pitch": {
+                "title": {
+                  "value": "音调"
+                }
+              }
+            }
+          }
+        },
+        "input": {
+          "gestureControl": {
+            "enabledAlert": {
+              "value": "自定义点击和滑动已开启。"
+            },
+            "disabledAlert": {
+              "value": "自定义点击和滑动已关闭。"
+            }
+          }
+        },
+        "localization": {
+          "languageSelection": {
+            "title": {
+              "value": "语言"
+            },
+            "languageChangeResponsePattern": {
+              "value": "屏幕文本现在使用{{language}}。"
+            }
+          }
+        }
+      }
+    },
+    "voicingToolbar": {
+      "title": {
+        "value": "工具栏"
+      },
+      "openToolbar": {
+        "value": "打开工具栏"
+      },
+      "closeToolbar": {
+        "value": "关闭工具栏"
+      },
+      "hideToolbar": {
+        "value": "隐藏工具栏"
+      },
+      "showToolbar": {
+        "value": "显示工具栏"
+      },
+      "toolbarShown": {
+        "value": "工具栏已显示。"
+      },
+      "toolbarHidden": {
+        "value": "工具栏已隐藏。"
+      },
+      "voicing": {
+        "title": {
+          "value": "模拟语音"
+        },
+        "quickInfo": {
+          "value": "快速信息"
+        },
+        "playOverviewLabel": {
+          "value": "播放概述"
+        },
+        "playDetailsLabel": {
+          "value": "播放详细信息"
+        },
+        "playHintLabel": {
+          "value": "播放提示"
+        },
+        "overviewLabel": {
+          "value": "概述"
+        },
+        "detailsLabel": {
+          "value": "详细信息"
+        },
+        "hintLabel": {
+          "value": "提示"
+        },
+        "simVoicingOnAlert": {
+          "value": "模拟语音已开启。"
+        },
+        "simVoicingOffAlert": {
+          "value": "模拟语音已关闭。"
+        }
+      }
+    }
   }
 }

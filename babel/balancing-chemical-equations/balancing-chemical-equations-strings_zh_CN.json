@@ -399,5 +399,39 @@
   },
   "initialCoefficientDescription": {
     "value": "设置化学方程式中的初始系数。"
+  },
+  "a11y": {
+    "particles": {
+      "value": "粒子"
+    },
+    "balanceScales": {
+      "value": "天平"
+    },
+    "barCharts": {
+      "value": "条形图"
+    },
+    "equation": {
+      "value": "方程式"
+    },
+    "reactionType": {
+      "value": "反应类型"
+    },
+    "keyboardHelpDialog": {
+      "coefficientControls": {
+        "value": "系数控制"
+      },
+      "coefficient": {
+        "value": "系数"
+      },
+      "chooseAView": {
+        "value": "选择视图"
+      },
+      "view": {
+        "value": "视图"
+      },
+      "views": {
+        "value": "视图"
+      }
+    }
   }
 }

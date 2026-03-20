@@ -59,17 +59,11 @@
       }
     ]
   },
-  "forces-and-motion-basics.title": {
-    "value": "力和运动：基础",
-    "history": [
-      {
-        "userId": 293040,
-        "timestamp": 1470537682109,
-        "oldValue": "",
-        "newValue": "力和运动：基础",
-        "explanation": null
-      }
-    ]
+  "forces-and-motion-basics": {
+    "title": {
+      "value": "力和运动：基础",
+      "history": []
+    }
   },
   "friction": {
     "value": "摩擦力",
@@ -179,65 +173,29 @@
       }
     ]
   },
-  "pattern.0massUnitsKilograms": {
-    "value": "{0}千克",
-    "history": [
-      {
-        "userId": 293040,
-        "timestamp": 1470537682108,
-        "oldValue": "",
-        "newValue": "{0}千克",
-        "explanation": null
+  "pattern": {
+    "0massUnitsKilograms": {
+      "value": "{0} kg",
+      "history": []
+    },
+    "0name": {
+      "1valueUnitsAcceleration": {
+        "value": "{0}: {1} m/s<sup>2</sup>",
+        "history": []
+      },
+      "1valueUnitsVelocity": {
+        "value": "{0} m/s",
+        "history": []
       }
-    ]
-  },
-  "pattern.0name.1valueUnitsAcceleration": {
-    "value": "{0}: {1} m/s<sup>2</sup>",
-    "history": [
-      {
-        "userId": 293040,
-        "timestamp": 1470537682109,
-        "oldValue": "",
-        "newValue": "{0}: {1} m/s<sup>2</sup>",
-        "explanation": null
-      }
-    ]
-  },
-  "pattern.0name.1valueUnitsVelocity": {
-    "value": "{0} m/s",
-    "history": [
-      {
-        "userId": 293040,
-        "timestamp": 1470537682109,
-        "oldValue": "",
-        "newValue": "{0} m/s",
-        "explanation": null
-      }
-    ]
-  },
-  "pattern.0valueUnitsN": {
-    "value": "{0}N",
-    "history": [
-      {
-        "userId": 293040,
-        "timestamp": 1470537682108,
-        "oldValue": "",
-        "newValue": "{0}N",
-        "explanation": null
-      }
-    ]
-  },
-  "pattern.0valueUnitsNewtons": {
-    "value": "{0} Newtons",
-    "history": [
-      {
-        "userId": 293040,
-        "timestamp": 1470537682109,
-        "oldValue": "",
-        "newValue": "{0} Newtons",
-        "explanation": null
-      }
-    ]
+    },
+    "0valueUnitsN": {
+      "value": "{0}N",
+      "history": []
+    },
+    "0valueUnitsNewtons": {
+      "value": "{0} newtons",
+      "history": []
+    }
   },
   "pause": {
     "value": "暂停",
@@ -335,25 +293,984 @@
       }
     ]
   },
-  "stopwatch": {
-    "value": "秒表"
+  "a11y": {
+    "acceleration": {
+      "accelerationDescriptions": {
+        "slowingDown": {
+          "value": "减速",
+          "history": []
+        },
+        "speedingUp": {
+          "value": "加速",
+          "history": []
+        }
+      },
+      "accelerationOnly": {
+        "value": "加速度 { $accelerationDescription }。",
+        "history": []
+      },
+      "accelerationWithDirection": {
+        "value": "加速度 { $accelerationDescription }，向 { $direction }。",
+        "history": []
+      },
+      "accelerationWithDirectionAndValue": {
+        "value": "加速度 { $accelerationDescription }，向 { $direction }，为 { $accelerationMetersPerSecondSquared -> [one] { $accelerationMetersPerSecondSquared } 米每二次方秒 *[other] { $accelerationMetersPerSecondSquared } 米每二次方秒 }。",
+        "history": []
+      },
+      "accelerationWithValue": {
+        "value": "加速度 { $accelerationDescription }，为 { $accelerationMetersPerSecondSquared -> [one] { $accelerationMetersPerSecondSquared } 米每二次方秒 *[other] { $accelerationMetersPerSecondSquared } 米每二次方秒 }。",
+        "history": []
+      },
+      "heading": {
+        "value": "加速度",
+        "history": []
+      },
+      "qualitativeDescriptions": {
+        "extremelyLarge": {
+          "value": "极其大",
+          "history": []
+        },
+        "large": {
+          "value": "大",
+          "history": []
+        },
+        "left": {
+          "value": "向左",
+          "history": []
+        },
+        "moderate": {
+          "value": "中等",
+          "history": []
+        },
+        "right": {
+          "value": "向右",
+          "history": []
+        },
+        "small": {
+          "value": "小",
+          "history": []
+        },
+        "veryLarge": {
+          "value": "非常大",
+          "history": []
+        },
+        "verySmall": {
+          "value": "非常小",
+          "history": []
+        },
+        "zero": {
+          "value": "零",
+          "history": []
+        }
+      }
+    },
+    "forces": {
+      "appliedForceArrow": {
+        "value": "推力箭头 { $description }，指向 { $direction }",
+        "history": []
+      },
+      "frictionForceArrow": {
+        "value": "摩擦力箭头 { $description }，指向 { $direction }",
+        "history": []
+      },
+      "leftForceArrow": {
+        "value": "向左的力箭头 { $description }",
+        "history": []
+      },
+      "motionScreensHeading": {
+        "value": "堆上的力",
+        "history": []
+      },
+      "netForceScreenHeading": {
+        "value": "手推车上的力",
+        "history": []
+      },
+      "noForcesDisplayed": {
+        "value": "未显示任何力。",
+        "history": []
+      },
+      "qualitativeDescriptions": {
+        "extremelyLarge": {
+          "value": "极其大",
+          "history": []
+        },
+        "large": {
+          "value": "大",
+          "history": []
+        },
+        "left": {
+          "value": "向左",
+          "history": []
+        },
+        "medium": {
+          "value": "中等",
+          "history": []
+        },
+        "right": {
+          "value": "向右",
+          "history": []
+        },
+        "small": {
+          "value": "小",
+          "history": []
+        },
+        "somewhatLarge": {
+          "value": "有些大",
+          "history": []
+        },
+        "veryLarge": {
+          "value": "非常大",
+          "history": []
+        },
+        "verySmall": {
+          "value": "非常小",
+          "history": []
+        }
+      },
+      "quantitativeDescription": {
+        "value": "{ $forceMagnitude -> [one] { $forceMagnitude } 牛顿 *[other] { $forceMagnitude } 牛顿 }",
+        "history": []
+      },
+      "rightForceArrow": {
+        "value": "向右的力箭头 { $description }",
+        "history": []
+      },
+      "sumOfForcesArrow": {
+        "value": "合力箭头 { $description }，指向 { $direction }",
+        "history": []
+      },
+      "sumOfForcesZero": {
+        "value": "合力为0",
+        "history": []
+      }
+    },
+    "motionScreen": {
+      "accelerationScreenButtonsHelpText": {
+        "value": "测量推动一堆物体时的加速度。",
+        "history": []
+      },
+      "frictionScreenButtonsHelpText": {
+        "value": "推动一堆物体时尝试摩擦力实验。",
+        "history": []
+      },
+      "frictionSlider": {
+        "accessibleHelpText": {
+          "value": "设置静摩擦系数，范围从无到最大。",
+          "history": []
+        },
+        "contextResponse": {
+          "icy": {
+            "value": "地面结冰。",
+            "history": []
+          },
+          "rougher": {
+            "value": "地面更粗糙。",
+            "history": []
+          },
+          "smoother": {
+            "value": "地面更光滑。",
+            "history": []
+          }
+        }
+      },
+      "motionControlPanel": {
+        "accelerationCheckbox": {
+          "accessibleContextResponseUnchecked": {
+            "value": "加速度计已隐藏。",
+            "history": []
+          },
+          "accessibleHelpText": {
+            "value": "显示或隐藏加速度计。",
+            "history": []
+          }
+        },
+        "forceCheckbox": {
+          "accessibleContextResponseChecked": {
+            "value": "推力箭头已显示。",
+            "history": []
+          },
+          "accessibleContextResponseUnchecked": {
+            "value": "推力箭头已隐藏。",
+            "history": []
+          },
+          "accessibleHelpText": {
+            "value": "显示或隐藏推力箭头。",
+            "history": []
+          }
+        },
+        "forcesCheckbox": {
+          "accessibleContextResponseChecked": {
+            "value": "力箭头已显示。",
+            "history": []
+          },
+          "accessibleContextResponseUnchecked": {
+            "value": "力箭头已隐藏。",
+            "history": []
+          },
+          "accessibleHelpText": {
+            "value": "显示或隐藏推力和摩擦力箭头。",
+            "history": []
+          }
+        },
+        "massesCheckbox": {
+          "accessibleContextResponseChecked": {
+            "value": "质量值已显示。",
+            "history": []
+          },
+          "accessibleContextResponseUnchecked": {
+            "value": "质量值已隐藏。",
+            "history": []
+          },
+          "accessibleHelpText": {
+            "value": "显示或隐藏物体的质量。",
+            "history": []
+          }
+        },
+        "stopwatchCheckbox": {
+          "accessibleContextResponseChecked": {
+            "value": "秒表已添加到游戏区。",
+            "history": []
+          },
+          "accessibleContextResponseUnchecked": {
+            "value": "秒表已从游戏区移除。",
+            "history": []
+          },
+          "accessibleHelpText": {
+            "value": "显示或隐藏秒表。",
+            "history": []
+          }
+        },
+        "sumOfForcesCheckbox": {
+          "accessibleContextResponseUnchecked": {
+            "value": "合力箭头已隐藏。",
+            "history": []
+          },
+          "accessibleHelpText": {
+            "value": "勾选以显示代表所有力的合力的箭头。",
+            "history": []
+          }
+        }
+      },
+      "motionScreenButtonsHelpText": {
+        "value": "创建一堆物体并推动它们以探索运动。",
+        "history": []
+      },
+      "objectResponses": {
+        "droppedOnGround": {
+          "value": "放到地面上",
+          "history": []
+        },
+        "droppedOnSkateboard": {
+          "value": "放到滑板车上",
+          "history": []
+        },
+        "droppedOnStack": {
+          "value": "放到堆上",
+          "history": []
+        },
+        "droppedOnStackBottomObjectReturned": {
+          "value": "放到堆上。底部物体已返回工具箱。",
+          "history": []
+        },
+        "overGround": {
+          "value": "在地面上",
+          "history": []
+        },
+        "overSkateboard": {
+          "value": "在滑板车上方",
+          "history": []
+        },
+        "overStack": {
+          "value": "在堆上方",
+          "history": []
+        },
+        "overToolbox": {
+          "value": "在工具箱上方",
+          "history": []
+        },
+        "returnedToStack": {
+          "value": "已返回堆",
+          "history": []
+        },
+        "returnedToToolbox": {
+          "value": "已返回工具箱",
+          "history": []
+        }
+      },
+      "objectStackGroup": {
+        "accessibleRoleDescription": {
+          "value": "组",
+          "history": []
+        },
+        "descriptionContent": {
+          "value": "抓住物体。抓住后，使用键盘快捷键移动物体。",
+          "history": []
+        },
+        "onGround": {
+          "accessibleName": {
+            "value": "地面上的物体",
+            "history": []
+          }
+        },
+        "onSkateboard": {
+          "accessibleName": {
+            "value": "滑板车上的物体",
+            "history": []
+          }
+        }
+      },
+      "objectToolbox": {
+        "accessibleName": {
+          "value": "物体工具箱",
+          "history": []
+        },
+        "accessibleRoleDescription": {
+          "value": "组",
+          "history": []
+        },
+        "descriptionContent": {
+          "value": "抓住物体。抓住后，使用键盘快捷键移动物体。",
+          "history": []
+        }
+      },
+      "objects": {
+        "massUnknown": {
+          "value": "质量未知",
+          "history": []
+        },
+        "names": {
+          "bucket": {
+            "value": "水桶",
+            "history": []
+          },
+          "crate1": {
+            "value": "箱子 1",
+            "history": []
+          },
+          "crate2": {
+            "value": "箱子 2",
+            "history": []
+          },
+          "fridge": {
+            "value": "冰箱",
+            "history": []
+          },
+          "girl": {
+            "value": "女孩",
+            "history": []
+          },
+          "man": {
+            "value": "男人",
+            "history": []
+          },
+          "mystery": {
+            "value": "神秘物体",
+            "history": []
+          },
+          "trash": {
+            "value": "垃圾桶",
+            "history": []
+          }
+        },
+        "objectAccessibleNameWithMass": {
+          "value": "{ $objectName }，{ $mass }",
+          "history": []
+        }
+      },
+      "playAreaControls": {
+        "appliedForceControl": {
+          "accessibleHeading": {
+            "value": "推力控制",
+            "history": []
+          },
+          "description": {
+            "value": "设置推车者对堆施加的力。",
+            "history": []
+          }
+        }
+      },
+      "pusherResponses": {
+        "fellDownAppliedForceZero": {
+          "value": "推车者倒下，推力现在为0牛顿。",
+          "history": []
+        }
+      },
+      "screenSummary": {
+        "controlArea": {
+          "accelerationDescription": {
+            "value": "{ a11y_motionScreen_screenSummary_controlArea_frictionDescription }",
+            "history": []
+          },
+          "frictionDescription": {
+            "value": "你可以开启力、数值或测量工具。摩擦力滑块设置地面的粗糙度。重置模拟器以重新开始。",
+            "history": []
+          },
+          "motionDescription": {
+            "value": "你可以开启力、数值或测量工具。重置模拟器以重新开始。",
+            "history": []
+          }
+        },
+        "currentDetails": {
+          "summary": {
+            "value": "{ $count -> [0] 当前，{ $surface } 上没有物体。 [1] 当前，{ $surface } 上有1个物体。堆 { $motionState }。 *[other] 当前，{ $surface } 上有 { $count } 个物体。堆 { $motionState }。 }",
+            "history": []
+          }
+        },
+        "interactionHint": {
+          "value": "创建一堆物体并推动它们。",
+          "history": []
+        },
+        "playArea": {
+          "accelerationDescription": {
+            "value": "推车者站在平地上，准备向一堆物体施加力。物体可以从工具箱移到堆中。",
+            "history": []
+          },
+          "frictionDescription": {
+            "value": "推车者站在平地上，准备向一堆物体施加力。物体可以从工具箱移到堆中。",
+            "history": []
+          },
+          "motionDescription": {
+            "value": "推车者站在平地上，准备向滑板车上的一堆物体施加力。物体可以从工具箱移到堆中。",
+            "history": []
+          }
+        }
+      },
+      "stackList": {
+        "noObjectsOnSurface": {
+          "value": "{ $surface } 上没有物体。",
+          "history": []
+        },
+        "stackedOnSurface": {
+          "value": "{ $surface } 上的物体：",
+          "history": []
+        }
+      },
+      "stackMovement": {
+        "stackMovingLeft": {
+          "value": "堆向左移动。",
+          "history": []
+        },
+        "stackMovingRight": {
+          "value": "堆向右移动。",
+          "history": []
+        },
+        "stackStationary": {
+          "value": "堆静止。",
+          "history": []
+        }
+      },
+      "stackState": {
+        "movingLeft": {
+          "value": "向左移动",
+          "history": []
+        },
+        "movingRight": {
+          "value": "向右移动",
+          "history": []
+        },
+        "stationary": {
+          "value": "静止",
+          "history": []
+        }
+      },
+      "surface": {
+        "ground": {
+          "value": "地面",
+          "history": []
+        },
+        "skateboard": {
+          "value": "滑板车",
+          "history": []
+        }
+      }
+    },
+    "navigable": {
+      "value": "可导航",
+      "history": []
+    },
+    "netForceScreen": {
+      "colorName": {
+        "value": "{ $color -> [blue] 蓝色 [red] 红色 [purple] 紫色 *[orange] 橙色 }",
+        "history": []
+      },
+      "goPauseButton": {
+        "accessibleHelpTextGo": {
+          "value": "开始拔河游戏。",
+          "history": []
+        },
+        "accessibleHelpTextPause": {
+          "value": "暂停拔河游戏。",
+          "history": []
+        },
+        "cartMovingLeft": {
+          "value": "小车向左移动。",
+          "history": []
+        },
+        "cartMovingRight": {
+          "value": "小车向右移动。",
+          "history": []
+        },
+        "cartPaused": {
+          "value": "小车已暂停。",
+          "history": []
+        },
+        "cartStationary": {
+          "value": "小车静止。",
+          "history": []
+        }
+      },
+      "netForceControlPanel": {
+        "sumOfForces": {
+          "accessibleContextResponseUnchecked": {
+            "value": "合力箭头已隐藏。",
+            "history": []
+          },
+          "accessibleHelpText": {
+            "value": "显示或隐藏合力箭头。",
+            "history": []
+          }
+        }
+      },
+      "playAreaControls": {
+        "accessibleHeading": {
+          "value": "拔河控制",
+          "history": []
+        }
+      },
+      "puller": {
+        "accessibleName": {
+          "value": "{ a11y_netForceScreen_puller_size } { a11y_netForceScreen_colorName } 拉力者 { $index }",
+          "history": []
+        },
+        "accessibleRoleDescription": {
+          "value": "可导航",
+          "history": []
+        },
+        "size": {
+          "value": "{ $size -> [small] 小 [medium] 中 *[large] 大 }",
+          "history": []
+        }
+      },
+      "pullerGroup": {
+        "accessibleRoleDescription": {
+          "value": "组",
+          "history": []
+        }
+      },
+      "pullerResponses": {
+        "pullerAttachedToKnot": {
+          "value": "{ a11y_netForceScreen_puller_accessibleName } 连接到 { $knotDescription }。",
+          "history": []
+        },
+        "pullerInteractionCancelled": {
+          "value": "{ a11y_netForceScreen_puller_accessibleName } 交互已取消。",
+          "history": []
+        },
+        "pullerReturnedToToolbox": {
+          "value": "{ a11y_netForceScreen_puller_accessibleName } 已返回工具箱。",
+          "history": []
+        }
+      },
+      "returnButton": {
+        "accessibleHelpText": {
+          "value": "将小车返回中心。",
+          "history": []
+        },
+        "accessibleName": {
+          "value": "返回小车",
+          "history": []
+        },
+        "cartReturnedToCenter": {
+          "value": "小车已返回中心。",
+          "history": []
+        }
+      },
+      "screenButtonsHelpText": {
+        "value": "探索拔河游戏中的净力。",
+        "history": []
+      },
+      "screenSummary": {
+        "controlArea": {
+          "description": {
+            "value": "你可以开启合力、数值或速度显示。重置模拟器以重新开始。",
+            "history": []
+          }
+        },
+        "currentDetails": {
+          "accessibleNameCompleted": {
+            "value": "当前，拔河游戏已完成。",
+            "history": []
+          },
+          "accessibleNameInProgress": {
+            "value": "当前，拔河游戏进行中。",
+            "history": []
+          },
+          "accessibleNameNotStarted": {
+            "value": "当前，拔河游戏尚未开始。",
+            "history": []
+          },
+          "noPullersAttached": {
+            "value": "没有拉力者连接到绳子上。",
+            "history": []
+          },
+          "teamAttached": {
+            "value": "{ $count -> [0] 没有 { a11y_netForceScreen_colorName } 拉力者在绳子上。 [one] 有 { $count } 个 { a11y_netForceScreen_colorName } 拉力者在绳子上。 *[other] 有 { $count } 个 { a11y_netForceScreen_colorName } 拉力者在绳子上。 }",
+            "history": []
+          }
+        },
+        "interactionHint": {
+          "value": "将拉力者放到绳结上以开始拔河游戏。",
+          "history": []
+        },
+        "playArea": {
+          "description": {
+            "value": "有一个 {{leftColor}} 队和 {{rightColor}} 队之间的拔河游戏，争夺一辆装满糖果的手推车。{{leftTeamName}} 拉力者在左侧，{{rightTeamName}} 拉力者在右侧。手推车放在平面上，两侧系有绳子。绳子上有结，拉力者可以抓住。有按钮可以开始或暂停拔河或将小车返回中心。",
+            "history": []
+          }
+        }
+      },
+      "teamName": {
+        "value": "{ $color -> [blue] 蓝队 [red] 红队 [purple] 紫队 *[orange] 橙队 }",
+        "history": []
+      }
+    },
+    "objectToolboxes": {
+      "objectToolbox": {
+        "value": "物体工具箱",
+        "history": []
+      },
+      "skateboard": {
+        "value": "滑板车上的堆",
+        "history": []
+      },
+      "stack": {
+        "value": "堆",
+        "history": []
+      }
+    },
+    "preferences": {
+      "netForcePullerColorControl": {
+        "accessibleHelpText": {
+          "value": "为拔河游戏选择队伍颜色。",
+          "history": []
+        }
+      }
+    },
+    "pullers": {
+      "knotDescription": {
+        "value": "{ $side } 侧绳结 { $number }",
+        "history": []
+      },
+      "leftSide": {
+        "value": "左侧",
+        "history": []
+      },
+      "overKnotDescription": {
+        "value": "{ $side -> [left] 在左侧绳结 { $number -> [1] 1，距小车最远 [4] 4，距小车最近 *[other] { $number } } *[right] 在右侧绳结 { $number -> [1] 1，距小车最近 [4] 4，距小车最远 *[other] { $number } }",
+        "history": []
+      },
+      "overReturnToToolbox": {
+        "value": "在工具箱上方",
+        "history": []
+      },
+      "pullerInstruction": {
+        "value": "抓住拉力者。抓住后，使用键盘快捷键改变位置。绳结从左到右编号。",
+        "history": []
+      },
+      "rightSide": {
+        "value": "右侧",
+        "history": []
+      }
+    },
+    "sortable": {
+      "value": "可排序",
+      "history": []
+    },
+    "speed": {
+      "cartSpeed": {
+        "value": "小车速度 { $speedDescription }。",
+        "history": []
+      },
+      "cartSpeedWithAcceleration": {
+        "value": "小车速度 { $speedDescription }，{ $accelerationDescription }。",
+        "history": []
+      },
+      "heading": {
+        "value": "速度",
+        "history": []
+      },
+      "qualitativeDescriptions": {
+        "extremelyFast": {
+          "value": "极快",
+          "history": []
+        },
+        "fast": {
+          "value": "快",
+          "history": []
+        },
+        "moderate": {
+          "value": "中等",
+          "history": []
+        },
+        "slow": {
+          "value": "慢",
+          "history": []
+        },
+        "stationary": {
+          "value": "零",
+          "history": []
+        },
+        "veryFast": {
+          "value": "非常快",
+          "history": []
+        },
+        "verySlow": {
+          "value": "非常慢",
+          "history": []
+        }
+      },
+      "speedOnly": {
+        "value": "速度 { $speedDescription }。",
+        "history": []
+      },
+      "speedOnlyWithAcceleration": {
+        "value": "速度 { $speedDescription }，{ $accelerationDescription }。",
+        "history": []
+      },
+      "speedWithValue": {
+        "value": "速度 { $speedDescription }，为 { $speedMetersPerSecond -> [one] { $speedMetersPerSecond } 米每秒 *[other] { $speedMetersPerSecond } 米每秒 }。",
+        "history": []
+      },
+      "speedWithValueAndAcceleration": {
+        "value": "速度 { $speedDescription }，{ $accelerationDescription }，为 { $speedMetersPerSecond -> [one] { $speedMetersPerSecond } 米每秒 *[other] { $speedMetersPerSecond } 米每秒 }。",
+        "history": []
+      }
+    },
+    "speedCheckbox": {
+      "accessibleContextResponseUnchecked": {
+        "value": "速度计已隐藏。",
+        "history": []
+      },
+      "accessibleHelpText": {
+        "value": "显示或隐藏速度计。",
+        "history": []
+      }
+    },
+    "tugOfWar": {
+      "heading": {
+        "value": "糖果手推车拔河",
+        "history": []
+      },
+      "knotOccupied": {
+        "value": "{ $side } 侧绳结 { $number }：{ $pullerName }",
+        "history": []
+      },
+      "list": {
+        "leadingParagraph": {
+          "value": "连接到绳子上的拉力者，从左到右：",
+          "history": []
+        }
+      },
+      "noPullersOnRope": {
+        "value": "绳子上没有拉力者",
+        "history": []
+      }
+    },
+    "valuesCheckbox": {
+      "accessibleHelpTextForce": {
+        "value": "显示或隐藏力值。",
+        "history": []
+      },
+      "accessibleHelpTextForceSpeed": {
+        "value": "显示或隐藏力和速度值。",
+        "history": []
+      },
+      "accessibleHelpTextForceSpeedAcceleration": {
+        "value": "显示或隐藏力、速度和加速度值。",
+        "history": []
+      },
+      "checkedResponse": {
+        "value": "数值已显示。",
+        "history": []
+      },
+      "uncheckedResponse": {
+        "value": "数值已隐藏。",
+        "history": []
+      }
+    }
   },
-  "unknownValueIndicator": {
-    "value": "?"
-  },
-  "netForcePullerColors": {
-    "value": "净力拉力队颜色"
+  "keyboardHelpDialog": {
+    "adjustAppliedForce": {
+      "value": "调整推力",
+      "history": []
+    },
+    "cancelMovement": {
+      "value": "取消移动",
+      "history": []
+    },
+    "dropObject": {
+      "value": "放下物体",
+      "history": []
+    },
+    "dropPuller": {
+      "value": "放下拉力者",
+      "history": []
+    },
+    "fromAnywhereInScreen": {
+      "value": "在屏幕的任何位置",
+      "history": []
+    },
+    "grabObject": {
+      "value": "抓住选定的物体",
+      "history": []
+    },
+    "grabPuller": {
+      "value": "抓住选定的拉力者",
+      "history": []
+    },
+    "moveGrabbedObject": {
+      "value": "移动已抓取的物体",
+      "history": []
+    },
+    "moveGrabbedPuller": {
+      "value": "移动已抓取的拉力者",
+      "history": []
+    },
+    "objectNavigation": {
+      "value": "物体导航",
+      "history": []
+    },
+    "pauseGame": {
+      "value": "暂停拔河游戏",
+      "history": []
+    },
+    "pullerNavigation": {
+      "value": "拉力者导航",
+      "history": []
+    },
+    "returnCartToCenter": {
+      "value": "将小车返回中心",
+      "history": []
+    },
+    "returnToToolbox": {
+      "value": "返回工具箱",
+      "history": []
+    },
+    "selectObject": {
+      "value": "选择物体",
+      "history": []
+    },
+    "selectPuller": {
+      "value": "选择拉力者",
+      "history": []
+    },
+    "startGame": {
+      "value": "开始拔河游戏",
+      "history": []
+    },
+    "zeroAppliedForce": {
+      "value": "将推力设为零",
+      "history": []
+    }
   },
   "blueAndRed": {
-    "value": "蓝色和红色"
+    "value": "蓝色和红色",
+    "history": []
   },
-  "purpleAndOrange": {
-    "value": "紫色和橙色"
-  },
-  "purpleWins": {
-    "value": "紫队获胜！"
+  "netForcePullerColors": {
+    "value": "净引力牵引器颜色",
+    "history": []
   },
   "orangeWins": {
-    "value": "橙队获胜！"
+    "value": "橙色获胜！",
+    "history": []
+  },
+  "purpleAndOrange": {
+    "value": "紫色和橙色",
+    "history": []
+  },
+  "purpleWins": {
+    "value": "紫色获胜！",
+    "history": []
+  },
+  "stopwatch": {
+    "value": "秒表",
+    "history": []
+  },
+  "unknownValueIndicator": {
+    "value": "?",
+    "history": []
+  },
+  "forces-and-motion-basics.title": {
+    "value": "力和运动：基础",
+    "history": [
+      {
+        "userId": 293040,
+        "timestamp": 1458182268971,
+        "oldValue": "",
+        "newValue": "力和运动：基础",
+        "explanation": null
+      }
+    ]
+  },
+  "pattern.0massUnitsKilograms": {
+    "value": "{0} 千克",
+    "history": [
+      {
+        "userId": 293040,
+        "timestamp": 1458182268971,
+        "oldValue": "",
+        "newValue": "{0} 千克",
+        "explanation": null
+      }
+    ]
+  },
+  "pattern.0valueUnitsNewtons": {
+    "value": "{0} 牛顿",
+    "history": [
+      {
+        "userId": 293040,
+        "timestamp": 1458182268971,
+        "oldValue": "",
+        "newValue": "{0} 牛顿",
+        "explanation": null
+      }
+    ]
+  },
+  "pattern.0name.1valueUnitsAcceleration": {
+    "value": "{0}: {1} 加速度",
+    "history": [
+      {
+        "userId": 293040,
+        "timestamp": 1458182268971,
+        "oldValue": "",
+        "newValue": "{0}: {1} 加速度",
+        "explanation": null
+      }
+    ]
+  },
+  "pattern.0name.1valueUnitsVelocity": {
+    "value": "{0}: {1} 速度",
+    "history": [
+      {
+        "userId": 293040,
+        "timestamp": 1458182268971,
+        "oldValue": "",
+        "newValue": "{0}: {1} 速度",
+        "explanation": null
+      }
+    ]
+  },
+  "pattern.0valueUnitsN": {
+    "value": "{0} N",
+    "history": [
+      {
+        "userId": 293040,
+        "timestamp": 1458182268971,
+        "oldValue": "",
+        "newValue": "{0} N",
+        "explanation": null
+      }
+    ]
   }
 }

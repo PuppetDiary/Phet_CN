@@ -166,5 +166,454 @@
         "explanation": null
       }
     ]
+  },
+  "angleConvention": {
+    "value": "角度约定"
+  },
+  "angleConventionDescription": {
+    "value": "用于显示角度值的约定。"
+  },
+  "signedRange": {
+    "value": "有符号：-180° 到 180°"
+  },
+  "unsignedRange": {
+    "value": "无符号：0° 到 360°"
+  },
+  "keyboardHelpDialog.graphAreaOrigin": {
+    "value": "图形区域原点"
+  },
+  "keyboardHelpDialog.vectors": {
+    "value": "向量"
+  },
+  "keyboardHelpDialog.removeFromGraphArea": {
+    "value": "从图形区域移除"
+  },
+  "keyboardHelpDialog.selectOrDeselect": {
+    "value": "选择或取消选择"
+  },
+  "keyboardHelpDialog.moveVector": {
+    "value": "移动"
+  },
+  "keyboardHelpDialog.scaleRotateVector": {
+    "value": "通过箭头缩放和旋转"
+  },
+  "keyboardHelpDialog.checkVectorValues": {
+    "value": "检查向量值"
+  },
+  "a11y": {
+    "explore1DScreen": {
+      "screenButtonsHelpText": {
+        "value": "在一维中探索向量相加。"
+      },
+      "screenSummary": {
+        "playArea": {
+          "value": "这里有一个开放的图形区域，您可以在其中添加向量并修改它们的位置、大小和方向，还可以探索向量的和。"
+        },
+        "controlArea": {
+          "value": "开启向量和、数值和网格。修改图形区域原点的位置。在水平和垂直场景之间切换，或重置屏幕。"
+        },
+        "currentDetails": {
+          "value": "当前，图形区域中有 {{numberOfVectors}} 个向量。已选择 {{sceneName}} 场景。"
+        },
+        "interactionHint": {
+          "value": "添加向量到图形区域以开始探索。"
+        }
+      }
+    },
+    "explore2DScreen": {
+      "screenButtonsHelpText": {
+        "value": "在二维中探索向量相加。"
+      },
+      "screenSummary": {
+        "playArea": {
+          "value": "这里有一个开放的图形区域，您可以在其中添加向量并修改它们的位置、大小和方向，还可以探索向量的和。"
+        },
+        "controlArea": {
+          "value": "开启向量和、数值、角度和网格。显示向量分量。修改图形区域原点的位置。在笛卡尔坐标和极坐标场景之间切换，或重置屏幕。"
+        },
+        "currentDetails": {
+          "value": "当前，图形区域中有 {{numberOfVectors}} 个向量。已选择 {{sceneName}} 场景。"
+        },
+        "interactionHint": {
+          "value": "添加向量到图形区域以开始探索。"
+        }
+      }
+    },
+    "labScreen": {
+      "screenButtonsHelpText": {
+        "value": "实验两组独立的向量。"
+      },
+      "screenSummary": {
+        "playArea": {
+          "value": "这里有一个开放的图形区域，您可以添加两组向量并修改它们的位置、大小和方向。您还可以探索和比较每组向量的和。"
+        },
+        "controlArea": {
+          "value": "开启向量和、数值、角度和网格。显示向量分量。修改图形区域原点的位置。在笛卡尔坐标和极坐标场景之间切换，或重置屏幕。"
+        },
+        "currentDetails": {
+          "value": "当前，图形区域中有集合 {{vectorSet1Symbol}} 的 {{vectorSet1Size}} 个向量和集合 {{vectorSet2Symbol}} 的 {{vectorSet2Size}} 个向量。已选择 {{sceneName}} 场景。"
+        },
+        "interactionHint": {
+          "value": "添加向量到图形区域以开始探索。"
+        }
+      }
+    },
+    "equationsScreen": {
+      "screenButtonsHelpText": {
+        "value": "探索和操作向量方程。"
+      },
+      "screenSummary": {
+        "playArea": {
+          "value": "这里有一个开放的图形区域，显示所选方程中的向量。修改这些向量的位置、大小、方向和比例，并探索方程和系数的变化如何影响图形区域中的向量。"
+        },
+        "controlArea": {
+          "value": "选择决定三个向量相互关系的方程。为缩放向量 {{symbol1}} 和 {{symbol2}} 选择系数。开启向量 {{symbol3}}、数值、角度、网格和分量。设置基向量的分量，并选择将它们添加到图形区域。修改图形区域原点的位置。在笛卡尔坐标和极坐标场景之间切换，或重置整个屏幕。"
+        },
+        "currentDetailsAddition": {
+          "value": "当前，方程是 {{coefficient1}} 倍的基向量 {{symbol1}} 加上 {{coefficient2}} 倍的基向量 {{symbol2}} 等于向量 {{symbol3}}。"
+        },
+        "currentDetailsSubtraction": {
+          "value": "当前，方程是 {{coefficient1}} 倍的基向量 {{symbol1}} 减去 {{coefficient2}} 倍的基向量 {{symbol2}} 等于向量 {{symbol3}}。"
+        },
+        "currentDetailsNegation": {
+          "value": "当前，方程是 {{coefficient1}} 倍的基向量 {{symbol1}} 加上 {{coefficient2}} 倍的基向量 {{symbol2}} 加上向量 {{symbol3}} 等于零。"
+        },
+        "interactionHint": {
+          "value": "修改方程类型及其系数，以探索方程的变化如何影响图形区域中的向量。"
+        }
+      }
+    },
+    "accessibleHeadings": {
+      "availableVectors": {
+        "value": "可用向量"
+      },
+      "graphAreaHeading": {
+        "value": "图形区域"
+      }
+    },
+    "graphArea": {
+      "accessibleParagraphExplore": {
+        "value": "图形区域中有 {{numberOfVectors}} 个向量。"
+      },
+      "accessibleParagraphLab": {
+        "value": "图形区域中有集合 {{vectorSet1Symbol}} 的 {{vectorSet1Size}} 个向量和集合 {{vectorSet2Symbol}} 的 {{vectorSet2Size}} 个向量。"
+      },
+      "accessibleParagraphEquations": {
+        "value": "图形区域中有 {{numberOfVectors}} 个向量。"
+      }
+    },
+    "horizontalSceneName": {
+      "value": "水平"
+    },
+    "verticalSceneName": {
+      "value": "垂直"
+    },
+    "cartesianSceneName": {
+      "value": "笛卡尔"
+    },
+    "polarSceneName": {
+      "value": "极坐标"
+    },
+    "anglesCheckbox": {
+      "accessibleName": {
+        "value": "角度"
+      },
+      "accessibleHelpText": {
+        "value": "在图形区域中显示向量角度。"
+      }
+    },
+    "gridCheckbox": {
+      "accessibleName": {
+        "value": "网格"
+      },
+      "accessibleHelpText": {
+        "value": "使用或不适用视觉网格进行探索。"
+      }
+    },
+    "sumCheckbox": {
+      "accessibleName": {
+        "value": "向量和，{{symbol}}"
+      },
+      "accessibleHelpText": {
+        "value": "如果已定义，显示或隐藏向量 {{symbol}}。"
+      },
+      "accessibleContextResponseChecked": {
+        "value": "向量 {{symbol}} 可见性已启用。"
+      },
+      "accessibleContextResponseUnchecked": {
+        "value": "向量 {{symbol}} 可见性已禁用。"
+      }
+    },
+    "labSumCheckbox": {
+      "accessibleName": {
+        "value": "集合 {{vectorSetSymbol}} 的向量和，{{sumSymbol}}"
+      }
+    },
+    "equationsSumCheckbox": {
+      "accessibleName": {
+        "value": "向量 {{symbol}}"
+      }
+    },
+    "valuesCheckbox": {
+      "accessibleHelpText": {
+        "value": "在图形区域中显示向量和分量的大小。"
+      }
+    },
+    "componentsRadioButtonGroup": {
+      "accessibleName": {
+        "value": "分量显示样式"
+      },
+      "accessibleHelpText": {
+        "value": "选择是否以及在何处显示向量的 x y 分量。"
+      }
+    },
+    "invisibleRadioButton": {
+      "accessibleName": {
+        "value": "隐藏"
+      }
+    },
+    "triangleRadioButton": {
+      "accessibleName": {
+        "value": "直角三角形"
+      }
+    },
+    "parallelogramRadioButton": {
+      "accessibleName": {
+        "value": "从向量尾部"
+      }
+    },
+    "projectionRadioButton": {
+      "accessibleName": {
+        "value": "投影到 x y 轴"
+      }
+    },
+    "cartesianPolarSceneRadioButtonGroup": {
+      "accessibleName": {
+        "value": "场景"
+      },
+      "accessibleHelpText": {
+        "value": "在具有各自向量和图形区域的独立场景之间切换。笛卡尔场景的向量对齐到整数 x 和 y 分量。极坐标场景的向量对齐到整数大小和 {{polarAngleInterval}} 度的整数倍角度。"
+      }
+    },
+    "cartesianRadioButton": {
+      "accessibleName": {
+        "value": "笛卡尔场景"
+      }
+    },
+    "polarRadioButton": {
+      "accessibleName": {
+        "value": "极坐标场景"
+      }
+    },
+    "horizontalVerticalSceneRadioButtonGroup": {
+      "accessibleName": {
+        "value": "场景"
+      },
+      "accessibleHelpText": {
+        "value": "在具有各自向量和图形区域的独立场景之间切换。"
+      }
+    },
+    "horizontalRadioButton": {
+      "accessibleName": {
+        "value": "水平场景"
+      }
+    },
+    "verticalRadioButton": {
+      "accessibleName": {
+        "value": "垂直场景"
+      }
+    },
+    "equationTypeRadioButtonGroup": {
+      "accessibleName": {
+        "value": "方程类型"
+      },
+      "accessibleHelpText": {
+        "value": "选择决定向量 {{symbol1}}、{{symbol2}} 和 {{symbol3}} 相互关系的方程。"
+      }
+    },
+    "additionRadioButton": {
+      "accessibleName": {
+        "value": "{{symbol1}} 加上 {{symbol2}} 等于 {{symbol3}}"
+      }
+    },
+    "subtractionRadioButton": {
+      "accessibleName": {
+        "value": "{{symbol1}} 减去 {{symbol2}} 等于 {{symbol3}}"
+      }
+    },
+    "negationRadioButton": {
+      "accessibleName": {
+        "value": "{{symbol1}} 加上 {{symbol2}} 加上 {{symbol3}} 等于零"
+      }
+    },
+    "baseVectorsCheckbox": {
+      "accessibleName": {
+        "value": "基向量"
+      },
+      "accessibleHelpText": {
+        "value": "在图形区域中显示或隐藏基向量。"
+      }
+    },
+    "originManipulator": {
+      "accessibleName": {
+        "value": "图形区域原点"
+      },
+      "accessibleHelpText": {
+        "value": "移动以重新定位图形区域原点，这会改变 x 轴和 y 轴的范围。"
+      },
+      "accessibleObjectResponse": {
+        "value": "x 轴范围从 {{minX}} 到 {{maxX}}，y 轴范围从 {{minY}} 到 {{maxY}}"
+      }
+    },
+    "eraserButton": {
+      "accessibleName": {
+        "value": "清除所有向量"
+      },
+      "accessibleHelpText": {
+        "value": "从图形区域中移除所有向量。"
+      },
+      "accessibleContextResponse": {
+        "value": "图形区域已清除"
+      }
+    },
+    "vectorValuesAccordionBox": {
+      "accessibleParagraph": {
+        "value": "对于向量 {{symbol}}：大小为 {{magnitude}}；方向为从 x 轴正方向 {{direction}} 度；x 分量为 {{xComponent}}；y 分量为 {{yComponent}}。"
+      },
+      "accessibleHelpTextCollapsed": {
+        "value": "显示所选向量的大小、方向和分量。"
+      },
+      "accessibleParagraphBaseVector": {
+        "value": "对于基向量 {{symbol}}：大小为 {{magnitude}}；方向为从 x 轴正方向 {{direction}} 度；x 分量为 {{xComponent}}；y 分量为 {{yComponent}}。"
+      },
+      "accessibleParagraphCoefficientVector": {
+        "value": "对于向量 {{coefficient}} {{symbol}}：大小为 {{magnitude}}；方向为从 x 轴正方向 {{direction}} 度；x 分量为 {{xComponent}}；y 分量为 {{yComponent}}。"
+      }
+    },
+    "equationAccordionBox": {
+      "accessibleHelpTextCollapsed": {
+        "value": "选择决定三个向量相互关系的方程，并调整缩放向量的系数。"
+      }
+    },
+    "symbolSubSubscript": {
+      "value": "{{symbol}} 下标 {{subscript}}"
+    },
+    "signedRadioButton": {
+      "value": "有符号，负 180 度到正 180 度"
+    },
+    "unsignedRadioButton": {
+      "value": "无符号，0 到 360 度"
+    },
+    "baseVectorXComponentPicker": {
+      "accessibleName": {
+        "value": "基向量 {{symbol}}，x 分量"
+      },
+      "accessibleHelpText": {
+        "value": "选择基向量 {{symbol}} 的水平分量。"
+      }
+    },
+    "baseVectorYComponentPicker": {
+      "accessibleName": {
+        "value": "基向量 {{symbol}}，y 分量"
+      },
+      "accessibleHelpText": {
+        "value": "选择基向量 {{symbol}} 的垂直分量。"
+      }
+    },
+    "baseVectorMagnitudePicker": {
+      "accessibleName": {
+        "value": "基向量 {{symbol}}，大小"
+      },
+      "accessibleHelpText": {
+        "value": "选择基向量 {{symbol}} 的大小。"
+      }
+    },
+    "baseVectorAnglePicker": {
+      "accessibleName": {
+        "value": "基向量 {{symbol}}，方向"
+      },
+      "accessibleHelpText": {
+        "value": "选择基向量 {{symbol}} 的方向，从 x 轴正方向起以度为单位。"
+      }
+    },
+    "coefficientPicker": {
+      "accessibleName": {
+        "value": "向量 {{symbol}} 系数"
+      },
+      "accessibleHelpText": {
+        "value": "选择用于乘以方程中基向量的系数。"
+      }
+    },
+    "vectorButton": {
+      "accessibleName": {
+        "value": "向量 {{symbol}}"
+      },
+      "accessibleHelpText": {
+        "value": "将向量 {{symbol}} 添加到图形区域。"
+      }
+    },
+    "vectorSetButton": {
+      "accessibleName": {
+        "value": "向量集合 {{symbol}}"
+      },
+      "accessibleHelpText": {
+        "value": "将集合 {{symbol}} 中的向量添加到图形区域。"
+      },
+      "accessibleHelpTextEmpty": {
+        "value": "集合为空时禁用。"
+      }
+    },
+    "vectorNode": {
+      "body": {
+        "accessibleName": {
+          "value": "向量 {{symbol}}"
+        },
+        "accessibleHelpText": {
+          "value": "移动以更改向量的位置。"
+        },
+        "accessibleObjectResponse": {
+          "value": "尾部在 {{tailX}} {{tailY}}，箭头在 {{tipX}} {{tipY}}"
+        },
+        "accessibleObjectResponseTipOutsideGraphArea": {
+          "value": "尾部在 {{tailX}} {{tailY}}，箭头在 {{tipX}} {{tipY}}，箭头在图形区域外"
+        }
+      },
+      "tip": {
+        "accessibleName": {
+          "value": "向量 {{symbol}} 箭头"
+        },
+        "accessibleHelpText": {
+          "value": "移动以更改向量箭头的位置。"
+        },
+        "accessibleObjectResponseCartesian": {
+          "value": "箭头在 {{tipX}} {{tipY}}"
+        },
+        "accessibleObjectResponseCartesianTipReturnedToGraphArea": {
+          "value": "箭头在 {{tipX}} {{tipY}}，箭头已返回图形区域"
+        },
+        "accessibleObjectResponsePolar": {
+          "value": "大小 {{magnitude}}，方向 {{angle}} 度"
+        },
+        "accessibleObjectResponsePolarTipReturnedToGraphArea": {
+          "value": "大小 {{magnitude}}，方向 {{angle}} 度，箭头已返回图形区域"
+        }
+      }
+    },
+    "equationsVectorNode": {
+      "accessibleName": {
+        "value": "{{coefficient}} {{symbol}}"
+      }
+    },
+    "baseVectorNode": {
+      "accessibleName": {
+        "value": "基向量 {{symbol}}"
+      }
+    },
+    "vectorAddedToGraphArea": {
+      "value": "向量 {{symbol}} 已添加到图形区域。"
+    },
+    "vectorRemovedFromGraphArea": {
+      "value": "向量 {{symbol}} 已从图形区域移除。"
+    }
   }
 }

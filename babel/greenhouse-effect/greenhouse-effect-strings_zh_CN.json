@@ -580,5 +580,54 @@
   },
   "openSciEd.energySource": {
     "value": "来自地球表面的能量"
+  },
+  "screen.micro": {
+    "value": "微观",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553810,
+        "oldValue": "",
+        "newValue": "微观"
+      }
+    ]
+  },
+  "a11y": {
+    "observationWindowLabel": {
+      "value": "观察窗口"
+    },
+    "playArea": {
+      "sunnyPlanet": {
+        "value": "太阳照射的行星场景，太阳光射向地面。"
+      },
+      "energyFlow": {
+        "value": "能量流动箭头显示进出的能量。"
+      },
+      "surfaceThermometerDescription": {
+        "value": "表面温度计显示地面温度。"
+      },
+      "cloudDescription": {
+        "value": "云层位于行星上方。"
+      }
+    },
+    "controlArea": {
+      "fluxMeterDescription": {
+        "value": "能量通量计显示进出的能量值。"
+      },
+      "concentrationPanelDescription": {
+        "value": "温室气体浓度面板显示大气中各种气体的浓度。"
+      },
+      "greenhouseLayerDescription": {
+        "value": "温室效应层模型控制面板用于调节吸光层数量。"
+      }
+    },
+    "layerModel": {
+      "layerControls": {
+        "value": "吸光层控制滑块调节红外线吸收程度。"
+      }
+    },
+    "wavelengthSlider": {
+      "value": "波长滑块控制光子能量。"
+    }
   }
 }

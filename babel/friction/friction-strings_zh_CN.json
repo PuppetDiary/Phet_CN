@@ -11,17 +11,11 @@
       }
     ]
   },
-  "friction.title": {
-    "value": "摩擦力",
-    "history": [
-      {
-        "userId": 293040,
-        "timestamp": 1470537745471,
-        "oldValue": "",
-        "newValue": "摩擦力",
-        "explanation": null
-      }
-    ]
+  "friction": {
+    "title": {
+      "value": "摩擦力",
+      "history": []
+    }
   },
   "physics": {
     "value": "物理",
@@ -47,7 +41,290 @@
       }
     ]
   },
-  "translation.credits": {
-    "value": ""
+  "a11y": {
+    "amountOfAtoms": {
+      "farFewer": {
+        "value": "少很多",
+        "history": []
+      },
+      "fewer": {
+        "value": "更少",
+        "history": []
+      },
+      "many": {
+        "value": "很多",
+        "history": []
+      },
+      "sentence": {
+        "value": "化学书有 {{comparisonAmount}} 个抖动原子，{{breakAwayAmount}} 已脱离。{{space}}",
+        "history": []
+      },
+      "some": {
+        "value": "一些",
+        "history": []
+      }
+    },
+    "atomsJiggleTinyBitTempCool": {
+      "value": "原子微微抖动，温度凉爽。",
+      "history": []
+    },
+    "breakAwayNoneLeft": {
+      "value": "{{temp}}。原子剧烈抖动。",
+      "history": []
+    },
+    "breakAwaySentenceAgain": {
+      "value": "{{temp}}。更多原子脱离。",
+      "history": []
+    },
+    "breakAwaySentenceFirst": {
+      "value": "{{temp}}。原子从化学书上脱离。",
+      "history": []
+    },
+    "chemistryBook": {
+      "value": "化学书",
+      "history": []
+    },
+    "frictionIncreasingAtomsJigglingTemperatureFirstPattern": {
+      "value": "原子 {{jigglingAmount}}，温度 {{temperature}}。",
+      "history": []
+    },
+    "frictionIncreasingAtomsJigglingTemperaturePattern": {
+      "value": "抖动 {{jigglingAmount}}，{{temperature}}。",
+      "history": []
+    },
+    "grabButtonHelpText": {
+      "value": "寻找抓取按钮。抓住后，使用键盘快捷键移动书或放大视图的书。",
+      "history": []
+    },
+    "grabbedNotTouchingPattern": {
+      "value": "{{grabbedOnBook}} {{moveDownToRubHarder}}",
+      "history": []
+    },
+    "grabbedPattern": {
+      "value": "已抓住。{{alert}}",
+      "history": []
+    },
+    "initialKeyboardGrabbedNotTouching": {
+      "value": "已抓住。轻触物理书。使用W、A、S或D键移动书。按空格键释放。",
+      "history": []
+    },
+    "initialKeyboardGrabbedTouching": {
+      "value": "已抓住。使用A或D键快或慢摩擦。按空格键释放。",
+      "history": []
+    },
+    "initialTouchGrabbedNotTouching": {
+      "value": "已抓住。轻触物理书。拖动手指移动书。抬起手指释放。",
+      "history": []
+    },
+    "initialTouchGrabbedTouching": {
+      "value": "已抓住。左右拖动快或慢摩擦。抬起手指释放。",
+      "history": []
+    },
+    "jiggle": {
+      "evenLess": {
+        "value": "更少",
+        "history": []
+      },
+      "jiggleABit": {
+        "value": "微微抖动",
+        "history": []
+      },
+      "jiggleALittle": {
+        "value": "轻微抖动",
+        "history": []
+      },
+      "jiggleALot": {
+        "value": "剧烈抖动",
+        "history": []
+      },
+      "jigglingLess": {
+        "value": "抖动减少",
+        "history": []
+      },
+      "less": {
+        "value": "更少",
+        "history": []
+      }
+    },
+    "lightlyOnPhysicsBook": {
+      "value": "轻触物理书。",
+      "history": []
+    },
+    "moveBookWith": {
+      "value": "使用方向键或W、A、S、D键向上、左、下、右移动已抓取的书或放大视图的书。",
+      "history": []
+    },
+    "moveDownToRubHarder": {
+      "value": "向下移动以用力摩擦。",
+      "history": []
+    },
+    "moveDownToRubHarderSentence": {
+      "value": "向下移动以用力摩擦。",
+      "history": []
+    },
+    "moveInSmallerStepsWith": {
+      "value": "使用Shift加方向键或Shift加W、A、S、D键缓慢移动。",
+      "history": []
+    },
+    "readMeOverview": {
+      "value": "摩擦力是一个互动模拟器。它会随着你的操作而变化。准备好体验摩擦力了吗？有一摞大教科书准备就绪。在书本接触处的放大视图中，你可以观察到原子抖动和温度的变化。",
+      "history": []
+    },
+    "resetSimMoreObservationSentence": {
+      "value": "重置模拟器以进行更多观察。",
+      "history": []
+    },
+    "rubFastOrSlow": {
+      "value": "快或慢摩擦。",
+      "history": []
+    },
+    "screenSummary": {
+      "atomsJigglePattern": {
+        "value": "原子 {{jiggleAmount}}",
+        "history": []
+      },
+      "continueRubbing": {
+        "value": "抓住化学书用力或轻摩擦。",
+        "history": []
+      },
+      "droppingAsAtomsJiggleLess": {
+        "value": "随着原子抖动减少而下降",
+        "history": []
+      },
+      "grabChemistryBookPlay": {
+        "value": "抓住化学书开始体验。",
+        "history": []
+      },
+      "jiggleClausePattern": {
+        "value": "且 {{jiggleAmount}}",
+        "history": []
+      },
+      "jiggleTemperatureScaleSentence": {
+        "value": "在书本接触处的放大视图中，{{temperatureClause}}，{{jigglingClause}}。",
+        "history": []
+      },
+      "startingChemistryBookLightlyPattern": {
+        "value": "{{relativeChemistryBookSentence}}化学书轻放在物理书上，准备与其摩擦。",
+        "history": []
+      },
+      "startingChemistryBookPattern": {
+        "value": "{{relativeChemistryBookSentence}}化学书静止在物理书上，准备与其摩擦。",
+        "history": []
+      },
+      "summarySentencePattern": {
+        "value": "{{chemistryBookString}} {{jiggleTemperatureScaleSentence}}",
+        "history": []
+      }
+    },
+    "temperature": {
+      "atCool": {
+        "value": "凉爽",
+        "history": []
+      },
+      "atWarm": {
+        "value": "温暖",
+        "history": []
+      },
+      "capitalizedVeryHot": {
+        "value": "非常热",
+        "history": []
+      },
+      "cooler": {
+        "value": "更凉爽",
+        "history": []
+      },
+      "evenCooler": {
+        "value": "更凉爽",
+        "history": []
+      },
+      "evenFaster": {
+        "value": "更快",
+        "history": []
+      },
+      "evenHotter": {
+        "value": "更热",
+        "history": []
+      },
+      "faster": {
+        "value": "更快",
+        "history": []
+      },
+      "hot": {
+        "value": "热",
+        "history": []
+      },
+      "more": {
+        "value": "更多",
+        "history": []
+      },
+      "nowCooler": {
+        "value": "现在更凉爽",
+        "history": []
+      },
+      "nowHotter": {
+        "value": "现在更热",
+        "history": []
+      },
+      "pattern": {
+        "value": "表面温度温度计为 {{temp}}",
+        "history": []
+      },
+      "superFast": {
+        "value": "极快",
+        "history": []
+      },
+      "superHot": {
+        "value": "极热",
+        "history": []
+      },
+      "thermometerPattern": {
+        "value": "表面温度为 {{temp}}",
+        "history": []
+      },
+      "veryHot": {
+        "value": "非常热",
+        "history": []
+      },
+      "warmer": {
+        "value": "更温暖",
+        "history": []
+      }
+    },
+    "zoomedInChemistryBook": {
+      "value": "放大视图的化学书",
+      "history": []
+    }
+  },
+  "bookLabel": {
+    "value": "书或<br>放大视图中的书",
+    "history": []
+  },
+  "bookTitle": {
+    "value": "书",
+    "history": []
+  },
+  "moveBook": {
+    "value": "移动已抓住的书或<br>放大视图中的书",
+    "history": []
+  },
+  "moveBookHeader": {
+    "value": "移动书本",
+    "history": []
+  },
+  "moveInSmallerSteps": {
+    "value": "移动更慢",
+    "history": []
+  },
+  "friction.title": {
+    "value": "摩擦力",
+    "history": [
+      {
+        "userId": 293040,
+        "timestamp": 1458182268971,
+        "oldValue": "",
+        "newValue": "摩擦力",
+        "explanation": null
+      }
+    ]
   }
 }

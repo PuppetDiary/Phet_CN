@@ -120,7 +120,7 @@
     ]
   },
   "diameter": {
-    "value": "距离",
+    "value": "直径",
     "history": [
       {
         "userId": 293040,
@@ -144,7 +144,7 @@
     ]
   },
   "enter": {
-    "value": "进入",
+    "value": "输入",
     "history": [
       {
         "userId": 293040,
@@ -288,7 +288,7 @@
     ]
   },
   "meters": {
-    "value": "meters",
+    "value": "米",
     "history": [
       {
         "userId": 293040,
@@ -396,7 +396,7 @@
     ]
   },
   "range": {
-    "value": "长度",
+    "value": "射程",
     "history": [
       {
         "userId": 293040,
@@ -408,7 +408,7 @@
     ]
   },
   "rangeMessage": {
-    "value": "{{min}} to {{max}} {{units}}",
+    "value": "{{min}} 到 {{max}} {{units}}",
     "history": [
       {
         "userId": 293040,
@@ -550,5 +550,17 @@
         "explanation": null
       }
     ]
+  },
+  "screen.stats": {
+    "value": "统计"
+  },
+  "angleStandardDeviation": {
+    "value": "角度标准差"
+  },
+  "speedStandardDeviation": {
+    "value": "速度标准差"
+  },
+  "projectileGroupSize": {
+    "value": "发射物组大小"
   }
 }

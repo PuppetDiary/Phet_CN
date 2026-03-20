@@ -155,17 +155,11 @@
       }
     ]
   },
-  "gravity-and-orbits.title": {
-    "value": "重力和轨道",
-    "history": [
-      {
-        "userId": 293040,
-        "timestamp": 1492504855645,
-        "oldValue": "",
-        "newValue": "重力和轨道",
-        "explanation": null
-      }
-    ]
+  "gravity-and-orbits": {
+    "title": {
+      "value": "重力和轨道",
+      "history": []
+    }
   },
   "gravityForce": {
     "value": "重力",
@@ -335,29 +329,25 @@
       }
     ]
   },
-  "pattern.0label": {
-    "value": "{0}:",
-    "history": [
-      {
-        "userId": 293040,
-        "timestamp": 1492504855645,
-        "oldValue": "",
-        "newValue": "{0}:",
-        "explanation": null
+  "pattern": {
+    "0label": {
+      "value": "{0}:",
+      "history": [
+        {
+          "userId": 293040,
+          "timestamp": 1492504855645,
+          "oldValue": "",
+          "newValue": "{0}:",
+          "explanation": null
+        }
+      ]
+    },
+    "0value": {
+      "1units": {
+        "value": "{0} {1}",
+        "history": []
       }
-    ]
-  },
-  "pattern.0value.1units": {
-    "value": "{0} {1}",
-    "history": [
-      {
-        "userId": 293040,
-        "timestamp": 1492504855645,
-        "oldValue": "",
-        "newValue": "{0} {1}",
-        "explanation": null
-      }
-    ]
+    }
   },
   "physics": {
     "value": "物理性质",
@@ -647,17 +637,19 @@
       }
     ]
   },
-  "translation.credits": {
-    "value": "张大红",
-    "history": [
-      {
-        "userId": 293040,
-        "timestamp": 1492504855645,
-        "oldValue": "",
-        "newValue": "张大红",
-        "explanation": null
-      }
-    ]
+  "translation": {
+    "credits": {
+      "value": "张大红",
+      "history": [
+        {
+          "userId": 293040,
+          "timestamp": 1492504855645,
+          "oldValue": "",
+          "newValue": "张大红",
+          "explanation": null
+        }
+      ]
+    }
   },
   "v": {
     "value": "V",
@@ -703,6 +695,34 @@
         "timestamp": 1492504855645,
         "oldValue": "",
         "newValue": "缩小",
+        "explanation": null
+      }
+    ]
+  },
+  "kilometers": {
+    "value": "千米",
+    "history": []
+  },
+  "gravity-and-orbits.title": {
+    "value": "重力和轨道",
+    "history": [
+      {
+        "userId": 293040,
+        "timestamp": 1458182268971,
+        "oldValue": "",
+        "newValue": "重力和轨道",
+        "explanation": null
+      }
+    ]
+  },
+  "pattern.0value.1units": {
+    "value": "{0} {1}",
+    "history": [
+      {
+        "userId": 293040,
+        "timestamp": 1458182268971,
+        "oldValue": "",
+        "newValue": "{0} {1}",
         "explanation": null
       }
     ]

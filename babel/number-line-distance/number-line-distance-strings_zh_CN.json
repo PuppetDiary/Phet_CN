@@ -438,5 +438,20 @@
         "newValue": "数轴：距离"
       }
     ]
+  },
+  "displacement": {
+    "value": "位移"
+  },
+  "terminology": {
+    "value": "术语"
+  },
+  "terminologyControlDescription": {
+    "value": "选择用于描述两个整数之间差异的术语"
+  },
+  "variableSubscriptPattern": {
+    "value": "{{variable}}<sub style='font-style:normal'>{{subscript}}</sub>"
+  },
+  "mathSymbolPattern": {
+    "value": "<span style='font-family: \"Times New Roman\", Times, serif;font-style: italic'>{{symbol}}</span>"
   }
 }

@@ -389,5 +389,507 @@
         "explanation": null
       }
     ]
+  },
+  "solutes": {
+    "value": "溶质",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553810,
+        "oldValue": "",
+        "newValue": "溶质"
+      }
+    ]
+  },
+  "soluteLowercase": {
+    "value": "溶质",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553810,
+        "oldValue": "",
+        "newValue": "溶质"
+      }
+    ]
+  },
+  "keyboard.sliderHelpHeading": {
+    "value": "溶质量与溶液体积",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553810,
+        "oldValue": "",
+        "newValue": "溶质量与溶液体积"
+      }
+    ]
+  },
+  "keyboard.changeSoluteHelpHeading": {
+    "value": "更换溶质的步骤",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553810,
+        "oldValue": "",
+        "newValue": "更换溶质的步骤"
+      }
+    ]
+  },
+  "a11y": {
+    "of": {
+      "value": "的"
+    },
+    "more": {
+      "capitalized": {
+        "value": "更多"
+      },
+      "lowercase": {
+        "value": "更多"
+      }
+    },
+    "less": {
+      "capitalized": {
+        "value": "更少"
+      },
+      "lowercase": {
+        "value": "更少"
+      }
+    },
+    "soluteAmountNoNewline": {
+      "value": "溶质量"
+    },
+    "soluteValuePattern": {
+      "value": "溶质：{{value}}"
+    },
+    "beakerSolutionControls": {
+      "value": "烧杯溶液控制"
+    },
+    "solutionValuesHelpText": {
+      "value": "探索显示的数值。"
+    },
+    "sliderHelpText": {
+      "value": "溶质量和溶液体积允许更改所选溶液。"
+    },
+    "soluteComboBoxHelpText": {
+      "value": "为烧杯选择不同的溶质。"
+    },
+    "screenSummary": {
+      "playAreaPattern": {
+        "value": "在操作区域中，你找到一个装有溶液的烧杯和一个浓度读数。你可以改变溶质量、溶液体积，并从九种不同的溶质中选择一种来探索烧杯中的溶液。"
+      },
+      "controlAreaPattern": {
+        "value": "控制区域有一个复选框用于显示溶质量（摩尔）、溶液体积（升）和浓度（摩尔）的精确数值，以及一个重置模拟的按钮。"
+      },
+      "currentStateOfSimPattern": {
+        "value": "当前，烧杯 {{volume}} 含 {{soluteAmount}} {{of}} {{solute}} 溶质的 {{color}} 溶液。{{concentrationClause}}。"
+      },
+      "currentStateOfSimNoSolutePattern": {
+        "value": "当前，烧杯 {{volume}} 是纯水，不含 {{solute}} 溶质。"
+      },
+      "simInteractionHint": {
+        "value": "操作烧杯中的溶液并观察浓度的变化。"
+      },
+      "quantitativeConcentrationPattern": {
+        "value": "溶液{{isSaturated}}，浓度为 {{concentration}}"
+      },
+      "qualitativeConcentrationPattern": {
+        "value": "溶液{{isSaturated}}，{{concentration}}"
+      }
+    },
+    "beaker": {
+      "pureWater": {
+        "value": "纯水"
+      },
+      "waterFormulaDescription": {
+        "value": "纯水的化学式是 H2O"
+      },
+      "header": {
+        "value": "烧杯"
+      },
+      "descriptionPattern": {
+        "value": "烧杯 {{volume}} 含 {{solute}} 溶液。{{color}} 溶液："
+      },
+      "descriptionPureWaterPattern": {
+        "value": "烧杯 {{volume}} 是纯水。{{color}} 溶液："
+      },
+      "hasZeroConcentration": {
+        "value": "浓度为零"
+      },
+      "soluteAmountPattern": {
+        "value": "含 {{soluteAmount}} {{solute}}"
+      },
+      "saturationPattern": {
+        "value": "被 {{solids}} 固体饱和"
+      },
+      "chemicalFormulaPattern": {
+        "value": "{{solute}} 的化学式是 {{chemicalFormula}}"
+      },
+      "concentrationRangePattern": {
+        "value": "此溶液的浓度读数范围为 0 到 {{maxConcentration}} 摩尔"
+      }
+    },
+    "saturated": {
+      "value": "饱和"
+    },
+    "notSaturated": {
+      "value": "未饱和"
+    },
+    "quantitative": {
+      "_comment": "用于 aria-valuetext 和警报",
+      "solutionVolumeAndUnitPattern": {
+        "value": "{{volume}} 升"
+      },
+      "hasVolumePattern": {
+        "value": "有 {{volume}} 升"
+      },
+      "soluteAmountAndUnitPattern": {
+        "value": "{{soluteAmount}} 摩尔"
+      },
+      "saturatedValueTextPattern": {
+        "value": "{{solidsChange}}。{{stillSaturatedClause}}"
+      },
+      "concentrationStatePattern": {
+        "value": "浓度 {{concentration}}"
+      },
+      "concentrationAndUnit": {
+        "value": "{{concentration}} 摩尔"
+      },
+      "sliderAlertPattern": {
+        "value": "{{concentrationChange}}，浓度 {{concentration}}。{{colorChange}}。"
+      }
+    },
+    "qualitative": {
+      "_comment": "用于 aria-valuetext 和警报",
+      "saturatedValueTextPattern": {
+        "value": "{{propertyAmountChange}}，{{solidsChange}}。{{stillSaturatedClause}}"
+      },
+      "volumeStatePattern": {
+        "value": "烧杯 {{volume}}"
+      },
+      "soluteAmountStatePattern": {
+        "value": "{{soluteAmount}} {{solute}}"
+      },
+      "concentrationStateClausePattern": {
+        "value": "，{{concentration}}"
+      },
+      "sliderAlertPattern": {
+        "value": "{{quantityChange}}。{{colorChange}}{{stateInfo}}。"
+      }
+    },
+    "noSoluteAlert": {
+      "value": "零浓度。溶液为纯水。"
+    },
+    "quantityChange": {
+      "volumeChangePattern": {
+        "value": "{{moreLess}} 溶液"
+      },
+      "soluteAmountChangedPattern": {
+        "value": "{{moreLess}} 溶质"
+      },
+      "concentrationChangePattern": {
+        "value": "{{moreLess}} 浓"
+      },
+      "colorChangePattern": {
+        "value": "溶液 {{lighterDarker}}"
+      },
+      "lighter": {
+        "value": "更浅"
+      },
+      "darker": {
+        "value": "更深"
+      }
+    },
+    "soluteChangedUnsaturatedAlertPattern": {
+      "value": "{{color}} 溶液，{{concentrationClause}}。"
+    },
+    "soluteChangedSaturatedAlertPattern": {
+      "value": "{{color}} 溶液，被 {{solids}} {{concentrationClause}} 饱和。"
+    },
+    "soluteChangedQualitativeConcentrationPattern": {
+      "value": "固体"
+    },
+    "soluteChangedQuantitativeConcentrationPattern": {
+      "value": "{{concentration}} 的固体"
+    },
+    "noSoluteAlertQuantitative": {
+      "value": "透明溶液，零摩尔的纯水。"
+    },
+    "noSoluteAlertQualitative": {
+      "value": "透明溶液，不含溶质的纯水。"
+    },
+    "atMaxConcentrationPattern": {
+      "value": "浓度 {{concentration}}"
+    },
+    "atMaxConcentrationAlertPattern": {
+      "value": "浓度 {{concentration}}。溶液最深。"
+    },
+    "saturationReachedAlertPattern": {
+      "value": "被 {{solids}} 固体饱和，浓度 {{concentration}}。"
+    },
+    "saturationLostQualitativeAlertPattern": {
+      "value": "不再饱和。溶液变浅，{{concentration}}。"
+    },
+    "saturationLostQuantitativeAlertPattern": {
+      "value": "浓度 {{concentration}} 时不再饱和。溶液变浅。"
+    },
+    "saturationLostNoSoluteAlert": {
+      "value": "不再饱和。零浓度。溶液为纯水。"
+    },
+    "stillSaturatedAlertPattern": {
+      "value": "{{withSolids}} 饱和 {{maxConcentration}}。"
+    },
+    "withSolidsAlertPattern": {
+      "value": "{{solidAmount}} 固体"
+    },
+    "solidsChangePattern": {
+      "value": "{{moreLess}} 固体"
+    },
+    "solutionValuesCheckedAlert": {
+      "value": "显示摩尔、升和浓度数值。"
+    },
+    "solutionValuesUncheckedAlert": {
+      "value": "数值已隐藏。"
+    },
+    "volumeRegions": {
+      "active": {
+        "isFull": {
+          "value": "已满"
+        },
+        "isNearlyFull": {
+          "value": "几乎已满"
+        },
+        "isOverHalfFull": {
+          "value": "超过一半"
+        },
+        "isHalfFull": {
+          "value": "一半"
+        },
+        "isUnderHalfFull": {
+          "value": "不到一半"
+        },
+        "isAtLowestAmount": {
+          "value": "处于最低量"
+        },
+        "isNearlyEmpty": {
+          "value": "几乎空了"
+        }
+      },
+      "passive": {
+        "full": {
+          "value": "满"
+        },
+        "nearlyFull": {
+          "value": "几乎满"
+        },
+        "overHalfFull": {
+          "value": "超过一半"
+        },
+        "halfFull": {
+          "value": "一半"
+        },
+        "underHalfFull": {
+          "value": "不到一半"
+        },
+        "nearlyEmpty": {
+          "value": "几乎空"
+        },
+        "atLowestAmount": {
+          "value": "处于最低量"
+        }
+      }
+    },
+    "soluteAmountRegions": {
+      "maxAmountOf": {
+        "value": "最大量"
+      },
+      "aLotOf": {
+        "value": "大量"
+      },
+      "aBunchOf": {
+        "value": "很多"
+      },
+      "some": {
+        "value": "一些"
+      },
+      "aTinyBitOf": {
+        "value": "一点点"
+      },
+      "aLittle": {
+        "value": "少量"
+      },
+      "no": {
+        "value": "无"
+      }
+    },
+    "precipitateAmountRegions": {
+      "lowercase": {
+        "aCoupleOf": {
+          "value": "几个"
+        },
+        "aFew": {
+          "value": "少量"
+        },
+        "some": {
+          "value": "一些"
+        },
+        "aBunchOf": {
+          "value": "很多"
+        },
+        "aLotOf": {
+          "value": "大量"
+        }
+      },
+      "capitalized": {
+        "aCoupleOf": {
+          "value": "几个"
+        },
+        "aFew": {
+          "value": "少量"
+        },
+        "some": {
+          "value": "一些"
+        },
+        "aBunchOf": {
+          "value": "很多"
+        },
+        "aLotOf": {
+          "value": "大量"
+        }
+      }
+    },
+    "concentrationRegions": {
+      "active": {
+        "hasZeroConcentration": {
+          "value": "浓度为零"
+        },
+        "hasLowConcentration": {
+          "value": "浓度低"
+        },
+        "isSlightlyConcentrated": {
+          "value": "浓度略高"
+        },
+        "isNotVeryConcentrated": {
+          "value": "浓度不太高"
+        },
+        "isVeryConcentrated": {
+          "value": "浓度很高"
+        },
+        "isHighlyConcentrated": {
+          "value": "浓度极高"
+        },
+        "hasMaxConcentration": {
+          "value": "浓度最大"
+        }
+      },
+      "passive": {
+        "zeroConcentration": {
+          "value": "零浓度"
+        },
+        "lowConcentration": {
+          "value": "低浓度"
+        },
+        "slightlyConcentrated": {
+          "value": "略高浓度"
+        },
+        "notVeryConcentrated": {
+          "value": "不太高浓度"
+        },
+        "veryConcentrated": {
+          "value": "很高浓度"
+        },
+        "highlyConcentrated": {
+          "value": "极高浓度"
+        },
+        "maxConcentration": {
+          "value": "最大浓度"
+        }
+      }
+    },
+    "soluteColors": {
+      "capitalized": {
+        "red": {
+          "value": "红色"
+        },
+        "pink": {
+          "value": "粉色"
+        },
+        "orange": {
+          "value": "橙色"
+        },
+        "gold": {
+          "value": "金色"
+        },
+        "yellow": {
+          "value": "黄色"
+        },
+        "green": {
+          "value": "绿色"
+        },
+        "blue": {
+          "value": "蓝色"
+        },
+        "purple": {
+          "value": "紫色"
+        },
+        "clear": {
+          "value": "透明"
+        }
+      },
+      "lowercase": {
+        "red": {
+          "value": "红色"
+        },
+        "pink": {
+          "value": "粉色"
+        },
+        "orange": {
+          "value": "橙色"
+        },
+        "gold": {
+          "value": "金色"
+        },
+        "yellow": {
+          "value": "黄色"
+        },
+        "green": {
+          "value": "绿色"
+        },
+        "blue": {
+          "value": "蓝色"
+        },
+        "purple": {
+          "value": "紫色"
+        },
+        "clear": {
+          "value": "透明"
+        }
+      }
+    },
+    "cobaltIINitrateLowercase": {
+      "value": "硝酸钴"
+    },
+    "cobaltChlorideLowercase": {
+      "value": "氯化钴"
+    },
+    "copperSulfateLowercase": {
+      "value": "硫酸铜"
+    },
+    "drinkMixLowercase": {
+      "value": "混合饮料"
+    },
+    "goldIIIChlorideLowercase": {
+      "value": "氯化铜"
+    },
+    "nickelIIChlorideLowercase": {
+      "value": "氯化镍"
+    },
+    "potassiumChromateLowercase": {
+      "value": "铬酸钾"
+    },
+    "potassiumDichromateLowercase": {
+      "value": "重铬酸钾"
+    },
+    "potassiumPermanganateLowercase": {
+      "value": "高锰酸钾"
+    }
   }
 }

@@ -42,5 +42,14 @@
         "newValue": "{{equalNumberLeft}} 等于 {{equalNumberRight}}"
       }
     ]
+  },
+  "number-compare.title": {
+    "value": "数字比较"
+  },
+  "automaticallyHearNumberSentence": {
+    "value": "自动听取数字语句"
+  },
+  "automaticallyHearNumberSentenceDescription": {
+    "value": "在您互动时自动听取数字语句的更新"
   }
 }

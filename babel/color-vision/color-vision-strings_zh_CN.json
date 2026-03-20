@@ -120,16 +120,7 @@
     ]
   },
   "filterSlider.label": {
-    "value": "滤光片颜色",
-    "history": [
-      {
-        "userId": 293040,
-        "timestamp": 1470537402301,
-        "oldValue": "",
-        "newValue": "滤光片颜色",
-        "explanation": null
-      }
-    ]
+    "value": "滤光片颜色"
   },
   "filterSlider.wiggleMe.text": {
     "value": "移动滑块",
@@ -187,5 +178,22 @@
   },
   "blueLight": {
     "value": "蓝光"
+  },
+  "a11y": {
+    "flashlight": {
+      "value": "手电筒"
+    },
+    "filter": {
+      "value": "滤光片"
+    },
+    "viewerRepresentation": {
+      "value": "观察者表现"
+    },
+    "lightOutputTypes": {
+      "value": "光输出类型"
+    },
+    "lightRepresentationModes": {
+      "value": "光线表示模式"
+    }
   }
 }

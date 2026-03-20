@@ -892,5 +892,125 @@
   },
   "keyboardHelpContent.rotateInSmallerStepsWASD": {
     "value": "使用WASD以更小的步长旋转"
+  },
+  "a11y": {
+    "common": {
+      "upper": {
+        "value": "上"
+      },
+      "elements": {
+        "hydrogen": {
+          "value": "氢"
+        },
+        "carbon": {
+          "value": "碳"
+        },
+        "nitrogen": {
+          "value": "氮"
+        },
+        "oxygen": {
+          "value": "氧"
+        },
+        "fluorine": {
+          "value": "氟"
+        },
+        "chlorine": {
+          "value": "氯"
+        },
+        "bromine": {
+          "value": "溴"
+        }
+      }
+    },
+    "view": {
+      "realMoleculesScreen": {
+        "screenButtonsHelpText": {
+          "value": "使用真实分子探索分子极性。"
+        },
+        "screenSummary": {
+          "playArea": {
+            "value": "操作区域中有一个观察窗口，显示被静电势或电子密度着色的分子。可以使用鼠标或触摸移动和旋转分子。有一个可选的电场可以打开或关闭。"
+          },
+          "controlArea": {
+            "value": "控制区域有用于选择分子的下拉菜单，以及用于控制显示内容的复选框，如原子标签、电子密度、键偶极和分子偶极。可以打开或关闭电场。可以暂停动作或放慢速度。"
+          }
+        }
+      },
+      "twoAtomsScreen": {
+        "screenButtonsHelpText": {
+          "value": "探索双原子分子的极性如何受原子间电负性差异的影响。"
+        },
+        "screenSummary": {
+          "playArea": {
+            "value": "操作区域中有一个观察窗口，显示两个相互结合的原子。可以使用鼠标或触摸移动和旋转原子。电负性标尺显示每个原子的电负性值。有一个可选的电场可以打开或关闭。"
+          },
+          "controlArea": {
+            "value": "控制区域有用于调整原子间电负性差异的滑块，以及用于控制显示内容的复选框，如原子标签、部分电荷、键偶极和分子偶极。可以打开或关闭电场。可以暂停动作或放慢速度。"
+          }
+        }
+      },
+      "threeAtomsScreen": {
+        "screenButtonsHelpText": {
+          "value": "探索三原子分子的极性如何受原子排列和电负性差异的影响。"
+        },
+        "screenSummary": {
+          "playArea": {
+            "value": "操作区域中有一个观察窗口，显示三个相互结合的原子。可以使用鼠标或触摸移动和旋转原子。有一个可选的电场可以打开或关闭。"
+          },
+          "controlArea": {
+            "value": "控制区域有用于选择分子的下拉菜单，用于调整键角和电负性的滑块，以及用于控制显示内容的复选框，如原子标签、部分电荷、键偶极和分子偶极。可以打开或关闭电场。可以暂停动作或放慢速度。"
+          }
+        }
+      }
+    },
+    "interactionHint": {
+      "value": "拖动原子来移动分子。"
+    },
+    "realMolecules": {
+      "selectMolecule": {
+        "value": "选择分子"
+      },
+      "playArea": {
+        "moleculeDescription": {
+          "value": "分子 {{moleculeName}}，{{moleculeType}}。"
+        },
+        "moleculeTypeNonPolar": {
+          "value": "非极性"
+        },
+        "moleculeTypePolar": {
+          "value": "极性"
+        }
+      }
+    },
+    "twoAtoms": {
+      "electronegativityDifference": {
+        "value": "电负性差"
+      },
+      "lessElectronegative": {
+        "value": "较低电负性"
+      },
+      "moreElectronegative": {
+        "value": "较高电负性"
+      }
+    },
+    "threeAtoms": {
+      "bondAngle": {
+        "value": "键角"
+      },
+      "atomElectronegativity": {
+        "value": "原子电负性"
+      }
+    },
+    "dipoleArrow": {
+      "positiveEnd": {
+        "value": "正端"
+      },
+      "negativeEnd": {
+        "value": "负端"
+      }
+    },
+    "showElectricField": {
+      "value": "显示电场"
+    }
   }
 }

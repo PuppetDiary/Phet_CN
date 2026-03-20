@@ -165,26 +165,10 @@
     ]
   },
   "keyboardHelpDialog.bead": {
-    "value": "珠子",
-    "history": [
-      {
-        "userId": 0,
-        "timestamp": 1773334429313,
-        "oldValue": "",
-        "newValue": "珠子"
-      }
-    ]
+    "value": "珠子"
   },
   "keyboardHelpDialog.beadHeading": {
-    "value": "珠子",
-    "history": [
-      {
-        "userId": 0,
-        "timestamp": 1773334429313,
-        "oldValue": "",
-        "newValue": "珠子"
-      }
-    ]
+    "value": "珠子"
   },
   "keyboardHelpDialog.changeKittenColor": {
     "value": "更改小猫的颜色",
@@ -209,15 +193,7 @@
     ]
   },
   "keyboardHelpDialog.countingObjectOrBeadHeading": {
-    "value": "苹果、数字或珠子",
-    "history": [
-      {
-        "userId": 0,
-        "timestamp": 1773334429313,
-        "oldValue": "",
-        "newValue": "苹果、数字或珠子"
-      }
-    ]
+    "value": "苹果、数字或珠子"
   },
   "keyboardHelpDialog.introScreen.moveGrabbableItemHeading": {
     "value": "移动已抓取的物体",
@@ -319,26 +295,10 @@
     ]
   },
   "keyboardHelpDialog.object": {
-    "value": "物体",
-    "history": [
-      {
-        "userId": 0,
-        "timestamp": 1773334429313,
-        "oldValue": "",
-        "newValue": "物体"
-      }
-    ]
+    "value": "物体"
   },
   "keyboardHelpDialog.objectHeading": {
-    "value": "物体",
-    "history": [
-      {
-        "userId": 0,
-        "timestamp": 1773334429313,
-        "oldValue": "",
-        "newValue": "物体"
-      }
-    ]
+    "value": "物体"
   },
   "keyboardHelpDialog.sumScreen.moveGrabbableItemHeading": {
     "value": "移动小猫或已抓取的珠子",
@@ -667,6 +627,720 @@
         "timestamp": 1773334429313,
         "oldValue": "",
         "newValue": "再试一次"
+      }
+    ]
+  },
+  "a11y": {
+    "numberBondOrBarModel": {
+      "value": "{ $numberModelType ->\n  [numberBond] { numberBond }\n  *[barModel] { barModel }\n}"
+    },
+    "numberBondOrBarModelLowercase": {
+      "value": "{ $numberModelType ->\n  [numberBond] { numberBondLowercase }\n  *[barModel] { barModelLowercase }\n}"
+    },
+    "playAreaIntroSentence": {
+      "value": "左右两侧各有计数区域和有趣的物体。你可以在计数区域内组织物体，或在计数区域之间移动物体，以不同方式将总数分解。"
+    },
+    "screenButtonsHelpText": {
+      "intro": {
+        "value": "通过在计数区域之间移动有趣的物体来分解 { $min } 到 { $max } 之间的数字。"
+      },
+      "ten": {
+        "value": "通过滑动神奇珠子、分组和改变小猫颜色，或与数轴互动来分解 { $min } 到 { $max } 之间的数字。"
+      },
+      "twenty": {
+        "value": "通过在计数区域中移动和互动有趣和神奇的物体来分解 { $min } 到 { $max } 之间的数字。"
+      },
+      "sum": {
+        "value": "通过添加或移除神奇珠子或小猫，或在互动数轴上添加加数来创建 { $min } 到 { $max } 之间的总数。"
+      },
+      "game": {
+        "value": "挑战自己，使用两个数字找出缺失的加数或创建 { $min } 到 { $max } 之间的和。"
+      }
+    },
+    "introScreen": {
+      "screenSummary": {
+        "playArea": {
+          "value": "{ a11y_playAreaIntroSentence } 一个分解短语和一个 { a11y_numberBondOrBarModelLowercase } 表示将总数分解为两个加数。此外，选择任意总数从 { $min } 到 { $max }，自动将物体排成行，或交换加数。"
+        },
+        "controlArea": {
+          "value": "重置模拟以重新开始。"
+        },
+        "currentDetails": {
+          "objectsPattern": {
+            "value": "{ $total ->\n  [one] 当前，计数区域中有 1 个物体。\n *[other] 当前，计数区域中有 { $total } 个物体。\n}"
+          },
+          "hiddenAreaPattern": {
+            "value": "当前，总数为 { $total }，{ $hiddenAddend } 计数区域已隐藏。"
+          },
+          "bothHidden": {
+            "value": "当前，总数为 { $total }，两个计数区域都已隐藏。"
+          }
+        },
+        "interactionHint": {
+          "value": "计数或抓取物体。在计数区域中组织或移动物体来操作。"
+        }
+      }
+    },
+    "tenOrTwentyScreen": {
+      "screenSummary": {
+        "playArea": {
+          "value": "{ $representationType ->\n  [numberLine] 有一个数轴，显示总数为绿线，分为两段，左边黄色右边蓝色。可移动旋钮通过改变黄色和蓝色段的长度来改变总数的分解方式。一个分解短语、{ a11y_numberBondOrBarModelLowercase } 和等式表示如何将总数分解为两个加数。此外，选择任意总数从 { $min } 到 { $max } 或交换加数。\n  [beads] 有可移动的黄色和蓝色珠子，你可以沿导线滑动以组织或改变颜色来改变总数的分解方式。一个分解短语、{ a11y_numberBondOrBarModelLowercase } 和等式表示如何将总数分解为两个加数。此外，选择任意总数从 { $min } 到 { $max }，自动将物体排成行，或交换加数。\n  [kittens] 有可自由移动的黄色和蓝色小猫，你可以组织或改变颜色来改变总数的分解方式。一个分解短语、{ a11y_numberBondOrBarModelLowercase } 和等式表示如何将总数分解为两个加数。此外，选择任意总数从 { $min } 到 { $max }，自动将物体排成行，或交换加数。\n  *[location] { a11y_playAreaIntroSentence } 此外，选择任意总数从 { $min } 到 { $max }，自动将物体排成行，或交换加数。\n}"
+        },
+        "controlArea": {
+          "value": "{ a11y_introScreen_screenSummary_controlArea }"
+        },
+        "currentDetails": {
+          "value": "{ $shownSides ->\n  [none] 计数区域当前已隐藏。\n  [right] 当前，总数为 { $total }，左侧计数区域已隐藏。\n  [left] 当前，总数为 { $total }，右侧计数区域已隐藏。\n  *[both] { $representationType ->\n            [numberLine] 当前，总数为 { $total }，用计数区域中的加数分隔旋钮分割彩色段。\n            [beads] 当前，总数为 { $total } { $itemType } 用颜色在计数区域中分割。\n            [kittens] 当前，总数为 { $total } { $itemType } 用颜色在计数区域中分割。\n            *[location] { a11y_introScreen_screenSummary_currentDetails_objectsPattern }\n          }\n}"
+        },
+        "interactionHint": {
+          "value": "{ $representationType ->\n  [beads] 导航到并抓取珠子以创建组，或跨过分隔线改变颜色。\n  [kittens] 选择小猫以移动、组织或改变其颜色。\n  [numberLine] 移动加数分隔旋钮以改变黄色和蓝色段的长度。\n  *[location] { a11y_introScreen_screenSummary_interactionHint }\n}"
+        }
+      }
+    },
+    "sumScreen": {
+      "screenSummary": {
+        "playArea": {
+          "value": "{ $representationType ->\n  [numberLine] 总数显示在数轴上，为一条绿线，分为两段，左边黄色右边蓝色。可移动旋钮通过改变黄色和蓝色段的长度来改变总数的分解方式。数字旋转器从黄色或蓝色段添加一个或移除一个。等式短语、{ a11y_numberBondOrBarModelLowercase } 和等式表示两个数字如何相加到总数。此外，创建 { $min } 到 { $max } 之间的总数或交换加数。\n  *[other] 有黄色和蓝色 { $representation }，你可以组织或改变颜色以找到创建总数 { $representation } 的不同方式。等式短语、{ a11y_numberBondOrBarModelLowercase } 和等式表示两个数字如何相加到总数。此外，创建 { $min } 到 { $max } 之间的总数，自动将物体排成行，或交换加数。\n}"
+        },
+        "controlArea": {
+          "value": "{ a11y_introScreen_screenSummary_controlArea }"
+        },
+        "currentDetails": {
+          "value": "{ $shown ->\n  [none] 当前，总数已隐藏，计数区域已隐藏。\n  [total] 当前，总数为 { $total }，计数区域已隐藏。\n  [countingArea] { $representationType ->\n                   [numberLine] 当前，总数已隐藏，由黄色和蓝色段的长度相加创建。\n                   *[other] 当前，总数已隐藏，由所有 { $itemType } 相加创建。\n                 }\n  *[all] { $representationType ->\n           [numberLine] 当前，总数为 { $total }，由黄色和蓝色段的长度相加创建。\n           *[other] 当前，总数为 { $total } { $itemType }，由所有 { $itemType } 相加创建。\n         }\n}"
+        },
+        "interactionHint": {
+          "value": "{ $representationType ->\n  [beads] 导航到并抓取珠子以创建组，或跨过分隔线改变颜色。使用数字旋转器添加或移除珠子以改变总数。\n  [kittens] 选择小猫以移动、组织或改变颜色。使用数字旋转器添加或移除小猫以改变总数。\n  *[numberLine] 移动加数分隔旋钮以改变创建总数的黄色和蓝色段的长度。从黄色或蓝色段添加一个或移除一个以改变总数。\n}"
+        }
+      }
+    },
+    "left": {
+      "value": "左"
+    },
+    "leftCapitalized": {
+      "value": "左"
+    },
+    "right": {
+      "value": "右"
+    },
+    "rightCapitalized": {
+      "value": "右"
+    },
+    "leftAddendColor": {
+      "value": "黄色"
+    },
+    "rightAddendColor": {
+      "value": "蓝色"
+    },
+    "movableRoleDescription": {
+      "value": "可移动"
+    },
+    "countingAreaEmpty": {
+      "value": "计数区域为空"
+    },
+    "unknownNumber": {
+      "value": "未知数"
+    },
+    "grabOrReleaseInteraction": {
+      "releasedHelpText": {
+        "value": "{ $representationType ->\n  [beads] 寻找珠子以导航和移动。使用键盘快捷键导航和计数，或抓取并沿导线滑动。\n  *[other] 寻找 { $representation } 以导航和移动。使用键盘快捷键导航和计数，或抓取并移动到计数区域的不同侧。\n}"
+      },
+      "grabbedHelpTextPattern": {
+        "value": "{ $representationType ->\n  [beads] 移动一个或多个珠子以创建组。\n  *[other] 在左右计数区域之间移动 { $item }。\n}"
+      },
+      "grabbedAccessibleResponse": {
+        "value": "已抓取，在 { $addend } 计数区域"
+      },
+      "releasedAccessibleResponse": {
+        "value": "已释放，在 { $addend } 计数区域"
+      },
+      "movedAccessibleResponse": {
+        "value": "现在在 { $addend } 计数区域"
+      },
+      "leftSide": {
+        "firstItemPattern": {
+          "value": "第一个左侧的 { $item }"
+        },
+        "itemPattern": {
+          "value": "左侧的 { $item }"
+        },
+        "lastItemPattern": {
+          "value": "最后一个左侧的 { $item }"
+        },
+        "onlyItemPattern": {
+          "value": "左侧唯一的 { $item }"
+        }
+      },
+      "rightSide": {
+        "firstItemPattern": {
+          "value": "第一个右侧的 { $item }"
+        },
+        "itemPattern": {
+          "value": "右侧的 { $item }"
+        },
+        "lastItemPattern": {
+          "value": "最后一个右侧的 { $item }"
+        },
+        "onlyItemPattern": {
+          "value": "右侧唯一的 { $item }"
+        }
+      },
+      "noItemSelected": {
+        "value": "未选择物体"
+      }
+    },
+    "countingArea": {
+      "accessibleHeading": {
+        "value": "计数区域"
+      },
+      "leadingParagraph": {
+        "value": "{ $totalVisible ->\n  [hidden] 总数已隐藏\n  *[shown] { $total ->\n               [1] 此刻，计数区域中有 1 个 { $item }。\n               *[other] 此刻，计数区域中有 { $total } 个 { $items }。\n           }\n}"
+      },
+      "leftSideListItemPattern": {
+        "value": "左侧 { $value }"
+      },
+      "rightSideListItemPattern": {
+        "value": "右侧 { $value }"
+      },
+      "leftSideBeadsPattern": {
+        "value": "左侧 { $value } 黄色"
+      },
+      "rightSideBeadsPattern": {
+        "value": "右侧 { $value } 蓝色"
+      },
+      "yellowListItemPattern": {
+        "value": "{ $value } 黄色"
+      },
+      "blueListItemPattern": {
+        "value": "{ $value } 蓝色"
+      },
+      "addendValueHidden": {
+        "value": "一些"
+      }
+    },
+    "equationAccordionBox": {
+      "accessibleHelpTextCollapsed": {
+        "value": "{ $screenType ->\n  [other] 查看分解等式。\n  *[sumScreen] 查看求和等式。\n}"
+      },
+      "addendsOnRightAccessibleParagraph": {
+        "value": "此刻，等式显示 { $total } = { $leftAddend } + { $rightAddend }"
+      },
+      "addendsOnLeftAccessibleParagraph": {
+        "value": "此刻，等式显示 { $leftAddend } + { $rightAddend } = { $total }"
+      }
+    },
+    "representationType": {
+      "accessibleName": {
+        "value": "表示类型"
+      },
+      "accessibleHelpText": {
+        "value": "为计数区域选择表示类型。"
+      }
+    },
+    "apples": {
+      "accessibleName": {
+        "value": "苹果"
+      },
+      "singularAccessibleName": {
+        "value": "苹果"
+      }
+    },
+    "soccerBalls": {
+      "accessibleName": {
+        "value": "足球"
+      },
+      "singularAccessibleName": {
+        "value": "足球"
+      }
+    },
+    "butterflies": {
+      "accessibleName": {
+        "value": "蝴蝶"
+      },
+      "singularAccessibleName": {
+        "value": "蝴蝶"
+      }
+    },
+    "ones": {
+      "accessibleName": {
+        "value": "一卡片"
+      },
+      "singularAccessibleName": {
+        "value": "一卡片"
+      }
+    },
+    "kittens": {
+      "accessibleName": {
+        "value": "小猫"
+      },
+      "singularAccessibleName": {
+        "value": "小猫"
+      },
+      "accessibleHelpText": {
+        "value": "寻找可移动的小猫。聚焦后，使用键盘快捷键改变颜色或移动位置。"
+      },
+      "changeColorAccessibleName": {
+        "value": "改变颜色"
+      },
+      "kittenPattern": {
+        "value": "{ $descriptor ->\n  [first] 第一只 { $color} 小猫\n  [last] 最后一只 { $color } 小猫\n  [only] 唯一一只 { $color } 小猫\n  *[other] { $color } 小猫\n}"
+      }
+    },
+    "beads": {
+      "accessibleName": {
+        "value": "珠子"
+      },
+      "singularAccessibleName": {
+        "value": "珠子"
+      },
+      "leftAddendBead": {
+        "value": "黄色珠子"
+      },
+      "rightAddendBead": {
+        "value": "蓝色珠子"
+      },
+      "objectResponse": {
+        "value": "{ $grabbedOrReleased ->\n  [grabbed] { $side ->\n              [left] 已抓取，在分隔线左侧\n              *[right] 已抓取，在分隔线右侧\n            }\n  *[released] { $side ->\n                [left] 已释放，在分隔线左侧\n                *[right] 已释放，在分隔线右侧\n              }\n}"
+      },
+      "crossedDividerContextResponse": {
+        "value": "{ $side ->\n  [left] 珠子现在在左侧为黄色\n  *[right] 珠子现在在右侧为蓝色\n}"
+      }
+    },
+    "numberLine": {
+      "accessibleName": {
+        "value": "数轴"
+      },
+      "addendSplitterKnob": {
+        "accessibleName": {
+          "value": "加数分隔旋钮"
+        },
+        "accessibleHelpText": {
+          "value": "移动旋钮以改变加数的分割方式。"
+        }
+      },
+      "contextResponse": {
+        "value": "{ $addendsShowing ->\n  [addendsVisible] { $total } 分为 { $left } 和 { $right }。\n  *[addendsHidden] { $sections ->\n                     [smallerAndLarger] { $total } 分为较小和较大段。\n                     [equal] { $total } 分为相等段。\n                     *[largerAndSmaller] { $total } 分为较大和较小段。\n                   }\n}"
+      }
+    },
+    "numberLineDescription": {
+      "leadingCountOn": {
+        "value": "数轴显示一条代表总数的绿线和一条从旋钮到总长的蓝色跳线："
+      },
+      "leadingCountFromZero": {
+        "value": "数轴显示一条代表总数的绿线，一条从左边缘到旋钮的黄色跳线，和一条从旋钮到总数的蓝色跳线："
+      },
+      "leadingHidden": {
+        "value": "数轴已隐藏。"
+      },
+      "totalStartsPattern": {
+        "value": "总数从 { $start } 开始，到 { $end } 结束"
+      },
+      "totalSpansPattern": {
+        "value": "总数从 { $start } 到 { $end }"
+      },
+      "knobIsAtPattern": {
+        "value": "旋钮在 { $value }"
+      },
+      "knobSplits": {
+        "value": "旋钮将总数分成 2 段"
+      },
+      "leftEdgeLabel": {
+        "value": "左边缘"
+      },
+      "totalLabel": {
+        "value": "总数"
+      },
+      "knobLabel": {
+        "value": "旋钮"
+      },
+      "countOnLeftAddendPattern": {
+        "value": "左加数，{ $left }，标记在数轴上"
+      },
+      "countOnJumpPattern": {
+        "value": "长度为 { $right } 的跳线从 { $start } 开始到总数"
+      },
+      "countFromZeroLeftAddendPattern": {
+        "value": "左加数，{ $left }，显示在从左边缘到旋钮的跳线上方"
+      },
+      "countFromZeroRightAddendPattern": {
+        "value": "右加数，{ $right }，显示在从 { $start } 到总数的跳线上方"
+      },
+      "countOnTotalJumpPattern": {
+        "value": "长度为 { $total } 的跳线已标记"
+      },
+      "countFromZeroTotalJumpPattern": {
+        "value": "跳线跨越总长度，{ $total }"
+      }
+    },
+    "totalSceneSelection": {
+      "totalNumberPattern": {
+        "value": "总数"
+      },
+      "accessibleHelpText": {
+        "value": "为计数区域选择总数。"
+      }
+    },
+    "controls": {
+      "countingAreaSupports": {
+        "accessibleHeading": {
+          "value": "计数区域支持"
+        }
+      },
+      "phrase": {
+        "accessibleHelpTextCollapsed": {
+          "value": "{ $screenType ->\n  [sumScreen] 短语描述求和等式。\n  *[other] 短语说明总数如何分解。\n}"
+        }
+      },
+      "speechSynthesis": {
+        "accessibleName": {
+          "value": "朗读短语"
+        },
+        "noVoiceAccessibleName": {
+          "value": "未找到语音"
+        },
+        "noVoiceAccessibleParagraph": {
+          "value": "此设备上未找到所选语言的语音。您的设备可能支持下载此语言的其他语音。"
+        },
+        "accessibleHelpText": {
+          "value": "朗读书面短语。"
+        }
+      },
+      "localeSwitch": {
+        "accessibleHelpText": {
+          "value": "在两种语言之间切换以听和读短语。"
+        }
+      },
+      "numberModel": {
+        "numberBond": {
+          "value": "数字纽带"
+        },
+        "barModel": {
+          "value": "比例条形模型"
+        },
+        "accessibleHelpText": {
+          "value": "将分解表示为 { a11y_numberBondOrBarModelLowercase }。"
+        },
+        "totalHidden": {
+          "value": "总数已隐藏"
+        },
+        "totalMissing": {
+          "value": "一个神秘总数"
+        },
+        "leftAddendMissing": {
+          "value": "一个未知数"
+        },
+        "rightAddendMissing": {
+          "value": "另一个未知数"
+        },
+        "numberBondAccessibleParagraph": {
+          "value": "{ $orientation ->\n  [totalOnBottom] 数字纽带有三个圆圈，像三角形一样排列，两个在上一个在下。上面的圆圈表示加数。左圆圈是左加数，右圆圈是右加数。下面的圆圈是总数。\n  *[totalOnTop] 数字纽带有三个圆圈，像三角形一样排列，一个在上两个在下。下面圆圈表示加数。上圆圈表示物体总数，左圆圈是左加数，右圆圈是右加数。\n}"
+        },
+        "numberBondStateAccessibleParagraph": {
+          "value": "{ $orientation ->\n  [totalOnTop] 此刻，上圆圈为 { $total }，左圆圈为 { $left }，右圆圈为 { $right }。\n  *[totalOnBottom] 此刻，左圆圈为 { $left }，右圆圈为 { $right }，下圆圈为 { $total }。\n}"
+        },
+        "barModelStateAccessibleParagraph": {
+          "value": "{ $orientation ->\n  [totalOnTop] 上矩形为 { $total }，下矩形为 { $left } 和 { $right }，分为 { $proportions } 段。\n  *[totalOnBottom] 上矩形为 { $left } 和 { $right }，分为 { $proportions } 段，下矩形为 { $total }。\n}"
+        },
+        "sumEquation": {
+          "value": "此刻，等式显示 { $left } + { $right } = { $total }。"
+        },
+        "decompositionEquation": {
+          "value": "此刻，等式显示 { $total } = { $left } + { $right }。"
+        },
+        "barModelAccessibleParagraph": {
+          "value": "{ $orientation ->\n  [totalOnTop] 两个匹配的矩形上下堆叠。上矩形未分割，表示物体总数。下矩形按加数分割，显示根据加数值调整的两段。\n  *[totalOnBottom] 两个匹配的矩形上下堆叠。上矩形按加数分割，显示根据加数值调整的两段。下矩形未分割，表示两个加数之和，也称为总数。\n}"
+        },
+        "largerAndSmaller": {
+          "value": "较大和较小"
+        },
+        "smallerAndLarger": {
+          "value": "较小和较大"
+        },
+        "equal": {
+          "value": "相等"
+        }
+      },
+      "tenFrameButton": {
+        "accessibleName": {
+          "value": "组织 { $representation }"
+        },
+        "accessibleHelpText": {
+          "value": "将 { $representation } 每 5 个一组。"
+        },
+        "sumDistribution": {
+          "value": "一个数组组合颜色"
+        },
+        "decompositionDistribution": {
+          "value": "两个数组按颜色分开"
+        },
+        "accessibleContextResponse": {
+          "value": "{ $representationType ->\n  [kittens] { $distribution }，小猫排成行。\n  [beads] 分隔线按颜色分隔组。\n  *[other] 左右计数区域排成行。\n}"
+        },
+        "accessibleContextResponseGameCombined": {
+          "value": "一个数组组合颜色，小猫排成行。"
+        },
+        "accessibleContextResponseGameSeparate": {
+          "value": "两个数组按颜色分开，小猫排成行。"
+        }
+      },
+      "commutativeButton": {
+        "accessibleName": {
+          "value": "交换加数"
+        },
+        "accessibleHelpText": {
+          "value": "切换左右加数。"
+        },
+        "accessibleContextResponse": {
+          "value": "{ $representationType ->\n  [attribute] { $leftAddend } 黄色，{ $rightAddend } 蓝色。\n  [numberLine] { $leftAddend } 在左侧黄色段，{ $rightAddend } 在右侧蓝色段。\n  *[other] { $leftAddend } 在左，{ $rightAddend } 在右。\n}"
+        }
+      },
+      "bothAddendsVisibleButton": {
+        "accessibleNameOn": {
+          "value": "隐藏计数区域"
+        },
+        "accessibleNameOff": {
+          "value": "显示计数区域"
+        },
+        "accessibleHelpTextPattern": {
+          "value": "显示或隐藏 { a11y_numberBondOrBarModelLowercase } 中的计数区域和两个加数。"
+        }
+      },
+      "addendVisibleButton": {
+        "accessibleNameOnPattern": {
+          "value": "隐藏 { $addend } 计数区域"
+        },
+        "accessibleNameOffPattern": {
+          "value": "显示 { $addend } 计数区域"
+        },
+        "accessibleHelpTextPattern": {
+          "value": "显示或隐藏 { $addend } 计数区域和 { a11y_numberBondOrBarModelLowercase } 中的 { $addend } 加数。"
+        },
+        "accessibleContextResponseOn": {
+          "value": "内容可见"
+        },
+        "accessibleContextResponseOff": {
+          "value": "内容已隐藏"
+        }
+      },
+      "countingObjectControl": {
+        "accessibleHeading": {
+          "value": "加数控制"
+        },
+        "accessibleName": {
+          "value": "{ $representationType ->\n  [kittens] { $color } 小猫\n  [beads] { $color } 珠子\n  *[other] { $color } 段\n}"
+        },
+        "accessibleHelpText": {
+          "value": "{ $representationType ->\n  [kittens] 添加或移除一只 { $color } 小猫。\n  [beads] 添加或移除一个 { $color } 珠子。\n  *[other] 从 { $addend } { $color } 段添加或移除一个。\n}"
+        },
+        "incrementContextResponse": {
+          "value": "{ $representationType ->\n  [kittens] 一只 { $color } 小猫已添加到计数区域。\n  [beads] 一个 { $color } 珠子已添加到计数区域。\n  *[other] 已向 { $addend } { $color } 段添加一个。\n}"
+        },
+        "decrementContextResponse": {
+          "value": "{ $representationType ->\n  [kittens] 一只 { $color } 小猫已从计数区域移除。\n  [beads] 一个 { $color } 珠子已从计数区域移除。\n  *[other] 已从 { $addend } { $color } 段移除一个。\n}"
+        }
+      },
+      "countFromZeroSwitch": {
+        "valueAAccessibleName": {
+          "value": "计数开启"
+        },
+        "valueBAccessibleName": {
+          "value": "从零计数"
+        },
+        "accessibleHelpText": {
+          "value": "选择开始计数的位置。从第一个加数开始计数得到总数，或从零开始计数到第一个加数。"
+        }
+      },
+      "totalCheckbox": {
+        "accessibleHelpText": {
+          "value": "显示或隐藏加数之和。"
+        },
+        "accessibleContextResponseChecked": {
+          "value": "总数已显示。"
+        },
+        "accessibleContextResponseUnchecked": {
+          "value": "总数已隐藏。"
+        }
+      },
+      "addendsCheckbox": {
+        "accessibleHelpText": {
+          "value": "显示或隐藏加数值。"
+        },
+        "accessibleContextResponseChecked": {
+          "value": "加数为 { $leftAddend } 和 { $rightAddend }，标记在数轴上。"
+        },
+        "accessibleContextResponseUnchecked": {
+          "value": "加数已隐藏。"
+        }
+      },
+      "tickNumbersCheckbox": {
+        "accessibleHelpText": {
+          "value": "显示或隐藏数轴上的刻度数字。"
+        },
+        "accessibleContextResponseChecked": {
+          "value": "刻度已标记。"
+        },
+        "accessibleContextResponseUnchecked": {
+          "value": "刻度未标记。"
+        }
+      },
+      "totalJumpCheckbox": {
+        "accessibleHelpText": {
+          "value": "显示或隐藏数轴上的总跳线。"
+        },
+        "accessibleContextResponseChecked": {
+          "value": "总跳线 { $total } 已显示并标记。"
+        },
+        "accessibleContextResponseUnchecked": {
+          "value": "总跳线未显示。"
+        }
+      }
+    },
+    "gameScreen": {
+      "whatNumber": {
+        "value": "什么数字"
+      },
+      "questionMark": {
+        "value": "问号"
+      },
+      "missingValue": {
+        "value": "一个未知数"
+      },
+      "challengePrompt": {
+        "value": "{ $decompositionOrSum ->\n  [decomposition] { $total } 可以分成 { $leftAddend } 和 { $rightAddend }？\n  *[sum] { $leftAddend } 加 { $rightAddend } 等于 { $total }？\n}"
+      },
+      "countingArea": {
+        "accessibleHeading": {
+          "value": "计数区域"
+        },
+        "numberLineLeftAddendColor": {
+          "value": "{ $leftAddendMissing ->\n  [missing] 虚线\n  *[notMissing] 黄色\n}"
+        },
+        "numberLineRightAddendColor": {
+          "value": "{ $rightAddendMissing ->\n  [missing] 虚线\n  *[notMissing] 蓝色\n}"
+        },
+        "numberLineSentence": {
+          "value": "此刻，数轴显示一条代表总数的绿线和两条连续的跳线：从左边缘开始的 { a11y_gameScreen_countingArea_numberLineLeftAddendColor } 跳线，然后是到总数的 { a11y_gameScreen_countingArea_numberLineRightAddendColor } 跳线。"
+        },
+        "numberLineAddends": {
+          "value": "{ $leftAddend } 显示在 { a11y_gameScreen_countingArea_numberLineLeftAddendColor } 跳线上方，代表左加数。{ $rightAddend } 显示在 { a11y_gameScreen_countingArea_numberLineRightAddendColor } 跳线上方，代表右加数。"
+        },
+        "numberLineTickMarks": {
+          "value": "{ $total } 处的点。"
+        },
+        "hiddenAccessibleParagraph": {
+          "value": "此刻，计数区域已隐藏。"
+        },
+        "accessibleParagraph": {
+          "value": "{ $type ->\n  [kittens] 此刻，计数区域中有 { $leftAddend } 只黄色小猫，{ $rightAddend } 只蓝色小猫。\n  *[numberLine] { $visible ->\n                  [none] { a11y_gameScreen_countingArea_numberLineSentence }\n                  [addends] { a11y_gameScreen_countingArea_numberLineSentence } { a11y_gameScreen_countingArea_numberLineAddends }\n                  [tickMarks] { a11y_gameScreen_countingArea_numberLineSentence } { a11y_gameScreen_countingArea_numberLineTickMarks }\n                  *[both] { a11y_gameScreen_countingArea_numberLineSentence } { a11y_gameScreen_countingArea_numberLineAddends } { a11y_gameScreen_countingArea_numberLineTickMarks }\n                }\n}"
+        }
+      },
+      "testCurrentAnswerSection": {
+        "accessibleHeading": {
+          "value": "测试当前答案"
+        },
+        "accessibleParagraph": {
+          "value": "{ $levelType ->\n  [bondBar] { $total } 可以分解为 { $theirGuess } 和 { $right } 吗？如准备好请按检查或选择另一个数字。\n  [decomposition] { $total } 等于 { $left } 加 { $theirGuess } 吗？如准备好请按检查或选择另一个数字。\n  *[sumEquation] { $theirGuess } 加 { $right } 等于 { $total } 吗？如准备好请按检查或选择另一个数字。\n}"
+        }
+      },
+      "answerChoices": {
+        "value": "{ $challengeType ->\n  [leftAddend] 左加数选项\n  [rightAddend] 右加数选项\n  *[total] 和选项\n}"
+      },
+      "challengeType": {
+        "value": "{ $challengeType ->\n  [leftAddend] 左加数\n  [rightAddend] 右加数\n  *[total] 总和\n}"
+      },
+      "challengeSupports": {
+        "accessibleHeading": {
+          "value": "计数区域支持"
+        }
+      },
+      "bothAddendsEyeToggleButton": {
+        "accessibleHelpText": {
+          "value": "显示或隐藏计数区域。"
+        },
+        "accessibleContextResponseOff": {
+          "value": "{ $levelType ->\n  [kittens] 小猫可见。\n  *[numberLine] 数轴可见。\n}"
+        },
+        "accessibleContextResponseOn": {
+          "value": "{ $levelType ->\n  [kittens] 小猫已隐藏。\n  *[numberLine] 数轴已隐藏。\n}"
+        }
+      },
+      "level": {
+        "accessibleHelpText": {
+          "value": "{ $levelNumber ->\n  [1] 在总数为 2 到 10 之间的 { a11y_numberBondOrBarModelLowercase } 中找出缺失的加数。\n  [2] 在总数始终为 10 的 { a11y_numberBondOrBarModelLowercase } 中找出缺失的加数。\n  [3] 在总数始终为 10 的分解等式中找出缺失的加数。\n  [4] 在总数始终为 10 的求和等式中找出缺失的加数。\n  [5] 在总数为 11 到 20 之间的 { a11y_numberBondOrBarModelLowercase } 中找出缺失的加数。\n  [6] 在总数为 11 到 20 之间的分解等式中找出缺失的加数。\n  [7] 在总数为 11 到 20 之间的求和等式中找出缺失的加数或总数。\n  *[8] 在使用数轴的求和等式中找出缺失的加数，总数在 0 到 20 之间。\n}"
+        },
+        "accessibleHeading": {
+          "value": "{ $levelType ->\n  [decompositionEquation] 分解等式挑战\n  [sumEquation] 求和等式挑战\n  *[bondOrBarModel] { a11y_numberBondOrBarModel } 挑战\n}"
+        }
+      },
+      "answerButton": {
+        "wrongAccessibleName": {
+          "value": "{ $value }，错误答案"
+        }
+      },
+      "answerButtonGroup": {
+        "accessibleHeading": {
+          "value": "{ a11y_gameScreen_answerChoices }"
+        },
+        "accessibleHelpText": {
+          "value": "{ $levelType ->\n  [kittens] { $addendOrSum ->\n              [addend] 为 { a11y_gameScreen_challengeType } 选择数字以将 { $color } 小猫添加到计数区域。如需要，计数、组织或隐藏小猫以帮助解决挑战。按检查答案提交。\n              *[sum] 为总和选择数字。如需要，计数、组织或隐藏计数区域中的小猫以帮助解决挑战。按检查答案提交。\n            }\n  *[numberLine] 为 { a11y_gameScreen_challengeType } 选择数字以使虚线跳线具有该长度。按检查答案提交，如果正确则虚线跳线变为 { $color }。\n}"
+        }
+      },
+      "tenFrameButton": {
+        "accessibleHelpText": {
+          "value": "将小猫每 5 个一组"
+        }
+      },
+      "responses": {
+        "answerSelected": {
+          "value": "{ $representationType ->\n  [kittens] 已选择 { $value } 作为 { a11y_gameScreen_challengeType }。{ $value } 只 { $color } 小猫现在在计数区域。\n  [numberLine] 已选择 { $value } 作为 { a11y_gameScreen_challengeType }。未知跳线现在为数轴上的 { $value }。\n  *[sum] 已选择 { $value } 作为总和。计数区域未添加或移除新的小猫。\n}"
+        },
+        "answerCleared": {
+          "value": "答案已清除。"
+        },
+        "correctAnswer": {
+          "value": "{ $levelType ->\n  [decomposition] 你正确！{ $total } 可以分成 { $leftAddend } 和 { $rightAddend }。\n  *[sum] 你正确！{ $leftAddend } 加 { $rightAddend } 等于 { $total }。做得很好。\n}"
+        },
+        "incorrectAnswer": {
+          "value": "{ $levelType ->\n  [decomposition] 不对。{ $total } 不能分成 { $leftAddend } 和 { $rightAddend }。再试一次。\n  *[sum] 不对。{ $leftAddend } 加 { $rightAddend } 不等于 { $total }。再试一次。\n}"
+        },
+        "correctAnswerOnFirstTry": {
+          "value": "{ $levelType ->\n  [sum] 你正确！{ $leftAddend } 加 { $rightAddend } 等于 { $total }。{ a11y_gameScreen_responses__correctAnswerScore }\n  *[decomposition] 你正确！{ $total } 可以分成 { $leftAddend } 和 { $rightAddend }。{ a11y_gameScreen_responses__correctAnswerScore }\n}"
+        },
+        "_correctAnswerScore": {
+          "value": "{ $totalScore ->\n  [ 1 ] 1 星！\n  *[ other ] { $totalScore } 星！\n}"
+        }
+      },
+      "resetChallengeButton": {
+        "accessibleName": {
+          "value": "重置挑战"
+        },
+        "accessibleHelpText": {
+          "value": "将挑战重置回开始状态。"
+        },
+        "accessibleContextResponse": {
+          "value": "挑战已重置。"
+        }
+      }
+    },
+    "preferences": {
+      "sumScreenModelOrientation": {
+        "totalOnTop": {
+          "value": "总数在上"
+        },
+        "totalOnBottom": {
+          "value": "总数在下"
+        }
+      }
+    }
+  },
+  "gameScreen": {
+    "value": "游戏",
+    "history": [
+      {
+        "userId": 293040,
+        "timestamp": 1458182268971,
+        "oldValue": "",
+        "newValue": "游戏",
+        "explanation": null
       }
     ]
   }

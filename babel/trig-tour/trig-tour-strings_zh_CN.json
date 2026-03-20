@@ -192,13 +192,13 @@
     ]
   },
   "valueUnitPattern": {
-    "value": "{0} {1}",
+    "value": "{0} {1}",
     "history": [
       {
         "userId": 162142,
         "timestamp": 1458178963851,
         "oldValue": "",
-        "newValue": "{0} {1}",
+        "newValue": "{0} {1}",
         "explanation": null
       }
     ]
@@ -250,5 +250,189 @@
         "explanation": null
       }
     ]
+  },
+  "pointOffScreen": {
+    "value": "点超出屏幕！"
+  },
+  "movePointOnCircleOrGraph": {
+    "value": "在圆或图像上移动点"
+  },
+  "a11y": {
+    "graphViewAccordionBox": {
+      "tanAccessibleName": {
+        "value": "正切 θ 对比 θ 图像"
+      },
+      "sinAccessibleName": {
+        "value": "正弦 θ 对比 θ 图像"
+      },
+      "cosAccessibleName": {
+        "value": "余弦 θ 对比 θ 图像"
+      },
+      "accessibleHelpText": {
+        "value": "展开以探索函数相对于角度的图像。"
+      }
+    },
+    "valuesAccordionBox": {
+      "accessibleHelpText": {
+        "value": "展开以显示角度测量值、坐标和三角函数值。"
+      }
+    },
+    "unitsRadioButtons": {
+      "accessibleName": {
+        "value": "角度单位"
+      },
+      "accessibleHelpText": {
+        "value": "选择角度的单位。"
+      }
+    },
+    "graphRadioButtons": {
+      "accessibleName": {
+        "value": "三角函数"
+      },
+      "accessibleHelpText": {
+        "value": "比较不同三角函数的值和图像。"
+      },
+      "cosButton": {
+        "accessibleName": {
+          "value": "余弦"
+        }
+      },
+      "sinButton": {
+        "accessibleName": {
+          "value": "正弦"
+        }
+      },
+      "tanButton": {
+        "accessibleName": {
+          "value": "正切"
+        }
+      }
+    },
+    "unitCirclePoint": {
+      "accessibleName": {
+        "value": "圆上的点"
+      },
+      "accessibleHelpText": {
+        "value": "顺时针或逆时针移动点以改变 θ。"
+      }
+    },
+    "graphPoint": {
+      "accessibleName": {
+        "value": "图像上的点"
+      },
+      "accessibleHelpText": {
+        "value": "在图像上移动点以改变 θ。"
+      }
+    },
+    "offScreenIndicator": {
+      "left": {
+        "value": "点在屏幕左侧！"
+      },
+      "right": {
+        "value": "点在屏幕右侧！"
+      }
+    },
+    "specialAnglesCheckbox": {
+      "accessibleHelpText": {
+        "value": "使用或不使用约束角度进行探索。"
+      }
+    },
+    "labelsCheckbox": {
+      "accessibleHelpText": {
+        "value": "使用或不使用单位圆和图像上的视觉标签来探索角度。"
+      }
+    },
+    "gridCheckbox": {
+      "accessibleHelpText": {
+        "value": "使用或不使用单位圆上的坐标网格来创建角度。"
+      }
+    },
+    "screenSummary": {
+      "playArea": {
+        "value": "半径为1的交互式圆位于坐标平面的中心。当点从x轴逆时针或顺时针旋转时，圆上的可移动点形成一个角度 θ。在半径、x轴和从点到x轴的垂直线之间形成一个直角三角形。所选的三角函数在圆内高亮显示被探索的三角形的相应边或各边。圆的下方是一个可折叠的图像，绘制所选函数相对于 θ 的图像。该图像有一个相应的可移动点，可以移出屏幕。"
+      },
+      "controlArea": {
+        "value": "根据需要使用特殊角度、标签和背景网格来引导三角函数的学习。点击重置以重新开始。"
+      },
+      "details": {
+        "cosSelected": {
+          "value": "当前已选择余弦。"
+        },
+        "sinSelected": {
+          "value": "当前已选择正弦。"
+        },
+        "tanSelected": {
+          "value": "当前已选择正切。"
+        },
+        "quadrantInfoPattern": {
+          "value": "圆上的点在第 {{n}} 象限。"
+        },
+        "pointOnXAxis": {
+          "value": "圆上的点在 x 轴上。"
+        },
+        "pointOnYAxis": {
+          "value": "圆上的点在 y 轴上。"
+        },
+        "clockwiseAngle": {
+          "value": "圆上的点顺时针旋转形成角度 θ。"
+        },
+        "counterClockwiseAngle": {
+          "value": "圆上的点逆时针旋转形成角度 θ。"
+        },
+        "valuesDescriptionPattern": {
+          "value": "角度为 {{angle}}。对于此角度，x 等于 {{xValue}}；y 等于 {{yValue}}；{{trigFunction}} 等于 {{trigValue}}。"
+        }
+      },
+      "interactionHint": {
+        "value": "在圆上或图像上移动点以探索不同的角度。"
+      }
+    },
+    "math": {
+      "pi": {
+        "value": "π"
+      },
+      "infinity": {
+        "value": "正无穷或负无穷"
+      },
+      "coordinatesPattern": {
+        "value": "x 等于 {{xValue}}，y 等于 {{yValue}}。"
+      },
+      "valueMinusValuePattern": {
+        "value": "{{value1}} 减去 {{value2}}"
+      },
+      "valuePlusValuePattern": {
+        "value": "{{value1}} 加上 {{value2}}"
+      },
+      "squareRootPattern": {
+        "value": "{{value}} 的平方根"
+      },
+      "negativePattern": {
+        "value": "{{value}} 的相反数"
+      },
+      "fractionPattern": {
+        "value": "{{numerator}} 除以 {{denominator}}"
+      },
+      "angleEqualsSpecialAnglePattern": {
+        "value": "角度等于 {{value}}。"
+      },
+      "angleRadiansPattern": {
+        "value": "角度等于 {{value}} 弧度。"
+      },
+      "angleDegreesPattern": {
+        "value": "角度等于 {{value}} 度。"
+      },
+      "trigReadoutPattern": {
+        "value": "{{trigFunction}} θ 等于 {{trigFraction}} 或 {{value}}。"
+      },
+      "sinFunction": {
+        "value": "正弦"
+      },
+      "cosFunction": {
+        "value": "余弦"
+      },
+      "tanFunction": {
+        "value": "正切"
+      }
+    }
   }
 }

@@ -295,5 +295,569 @@
         "newValue": "比率和比例"
       }
     ]
+  },
+  "chooseAChallengeRatio": {
+    "value": "选择一个挑战比率"
+  },
+  "a11y": {
+    "keyboardHelp": {
+      "leftHandDescription": {
+        "value": "使用 W 或 S 字母键上下移动左手。"
+      },
+      "rightHandDescription": {
+        "value": "使用上或下方向键上下移动右手。"
+      },
+      "handsInSmallerStepsDescription": {
+        "value": "按 Shift 键以较小步伐移动手。"
+      },
+      "jumpBothHandsDescription": {
+        "value": "使用数字键 0 到 9 将双手跳到相同的刻度线。"
+      },
+      "setHandRatioValueDescription": {
+        "value": "使用上或下方向键设置左或右值。"
+      },
+      "jumpToMinimumDescription": {
+        "value": "使用 Home 键跳到最小设置。"
+      },
+      "jumpToMaximumDescription": {
+        "value": "使用 End 键跳到最大设置。"
+      }
+    },
+    "leftHand": {
+      "value": "左手"
+    },
+    "rightHand": {
+      "value": "右手"
+    },
+    "leftHandLower": {
+      "value": "左手"
+    },
+    "rightHandLower": {
+      "value": "右手"
+    },
+    "handLockedPattern": {
+      "value": "{{hand}}，已锁定"
+    },
+    "leftValue": {
+      "value": "左手值"
+    },
+    "rightValue": {
+      "value": "右手值"
+    },
+    "individualHandsHelpText": {
+      "value": "上下单独移动双手，在不同位置寻找挑战比率。"
+    },
+    "individualHandsVoicingHelpText": {
+      "value": "移动手。"
+    },
+    "bothHands": {
+      "bothHands": {
+        "value": "双手"
+      },
+      "bothHandsHelpText": {
+        "value": "启用双手后，使用 W 和 S 键移动左手，使用上或下方向键移动右手。同时移动双手以寻找并保持挑战比率。"
+      },
+      "handsDistancePattern": {
+        "value": "双手相距 {{distance}}"
+      },
+      "handsDistancePatternCapitalized": {
+        "value": "双手相距 {{distance}}"
+      },
+      "handsDistanceProgressPattern": {
+        "value": "双手{{distanceProgress}}"
+      },
+      "equalObjectResponseAlert": {
+        "value": "双手{{inPosition}}"
+      },
+      "eachObjectResponseAlert": {
+        "value": "左手 {{leftPosition}}，右手 {{rightPosition}}"
+      },
+      "cannotJumpToZeroWhenLocked": {
+        "value": "比率锁定时无法将双手跳到零。"
+      }
+    },
+    "tickMark": {
+      "heading": {
+        "value": "刻度线选项"
+      },
+      "showNo": {
+        "value": "无刻度线"
+      },
+      "show": {
+        "value": "刻度线"
+      },
+      "showNumbered": {
+        "value": "带数字的刻度线"
+      },
+      "tickMarksHidden": {
+        "value": "刻度线已隐藏。"
+      },
+      "tickMarksShown": {
+        "value": "已添加均匀分布的水平线。"
+      },
+      "numberedTickMarksShown": {
+        "value": "已添加均匀分布的带数字线。"
+      },
+      "relative": {
+        "around": {
+          "value": "大约在"
+        },
+        "aroundHalfwayPast": {
+          "value": "大约过了一半"
+        },
+        "almostHalfwayPast": {
+          "value": "几乎过半"
+        },
+        "halfwayPast": {
+          "value": "刚好过半"
+        },
+        "halfwayTo": {
+          "value": "到一半"
+        },
+        "aroundHalfwayTo": {
+          "value": "大约到一半"
+        },
+        "almostHalfwayTo": {
+          "value": "几乎到一半"
+        },
+        "almostOn": {
+          "value": "几乎在"
+        },
+        "on": {
+          "value": "在"
+        },
+        "at": {
+          "value": "在"
+        },
+        "near": {
+          "value": "靠近"
+        },
+        "zero": {
+          "value": "零"
+        }
+      },
+      "semiQuantitativeHandPositionPattern": {
+        "value": "{{relativePosition}}{{ordinal}}刻度线"
+      },
+      "quantitativeHandPositionPattern": {
+        "value": "{{relativePosition}}刻度线{{tickMarkPosition}}"
+      },
+      "ordinal": {
+        "first": {
+          "value": "第一"
+        },
+        "second": {
+          "value": "第二"
+        },
+        "third": {
+          "value": "第三"
+        },
+        "fourth": {
+          "value": "第四"
+        },
+        "fifth": {
+          "value": "第五"
+        },
+        "sixth": {
+          "value": "第六"
+        },
+        "seventh": {
+          "value": "第七"
+        },
+        "eighth": {
+          "value": "第八"
+        },
+        "ninth": {
+          "value": "第九"
+        },
+        "tenth": {
+          "value": "第十"
+        },
+        "eleventh": {
+          "value": "第十一"
+        },
+        "twelfth": {
+          "value": "第十二"
+        },
+        "thirteenth": {
+          "value": "第十三"
+        },
+        "fourteenth": {
+          "value": "第十四"
+        },
+        "fifteenth": {
+          "value": "第十五"
+        },
+        "sixteenth": {
+          "value": "第十六"
+        },
+        "seventeenth": {
+          "value": "第十七"
+        },
+        "eighteenth": {
+          "value": "第十八"
+        },
+        "nineteenth": {
+          "value": "第十九"
+        },
+        "twentieth": {
+          "value": "第二十"
+        },
+        "twentyFirst": {
+          "value": "第二十一"
+        },
+        "twentySecond": {
+          "value": "第二十二"
+        },
+        "twentyThird": {
+          "value": "第二十三"
+        },
+        "twentyFourth": {
+          "value": "第二十四"
+        },
+        "twentyFifth": {
+          "value": "第二十五"
+        },
+        "twentySixth": {
+          "value": "第二十六"
+        },
+        "twentySeventh": {
+          "value": "第二十七"
+        },
+        "twentyEighth": {
+          "value": "第二十八"
+        },
+        "twentyNinth": {
+          "value": "第二十九"
+        }
+      }
+    },
+    "leftHandBullet": {
+      "value": "左手 {{position}}，"
+    },
+    "rightHandBullet": {
+      "value": "右手 {{position}}。"
+    },
+    "ratioLockEnabledHelpText": {
+      "value": "锁定比率后，将双手作为单一单元移动。"
+    },
+    "ratioLockDisabledHelpText": {
+      "value": "双手处于挑战比率时启用。"
+    },
+    "ratioLockToggleContextResponse": {
+      "value": "双手锁定在挑战比率。移动双手并观察。"
+    },
+    "ratioNoLongerLocked": {
+      "value": "双手不再锁定。"
+    },
+    "ratioNoLongerLockedPattern": {
+      "value": "{{noLongerLocked}} {{originalContextResponse}}"
+    },
+    "screenSummaryControlAreaParagraph": {
+      "value": "控制区域有一个重置模拟的按钮。"
+    },
+    "screenSummaryQualitativeStateOfSim": {
+      "value": "当前，屏幕为{{color}}，双手{{ratioFitness}}{{currentChallenge}}比率，且相距{{distance}}："
+    },
+    "detailsButtonPattern": {
+      "value": "{{stateOfSim}} {{leftHand}} {{rightHand}}"
+    },
+    "detailsButtonWithCurrentChallengePattern": {
+      "value": "{{stateOfSim}} {{leftHand}} {{rightHand}} {{currentChallenge}}"
+    },
+    "discover": {
+      "screenButtonsHelpText": {
+        "value": "探索并发现设置的挑战比率。"
+      },
+      "screenSummary": {
+        "paragraph1": {
+          "value": "交互区域是一个狭高的空间。它包含两个交互式手，左手和右手。你可以单独上下移动左手和右手，或启用双手同时移动双手。当上下移动手时，你会接近或远离挑战比率，并接近或远离深绿色屏幕。"
+        },
+        "paragraph2": {
+          "value": "刻度线选项允许你用均匀分布的水平线探索垂直空间。"
+        },
+        "paragraph3": {
+          "value": "有多种挑战可以探索，控制区域有一个重置模拟的按钮。"
+        },
+        "interactionHint": {
+          "value": "上下移动手以探索和发现不同的挑战。"
+        }
+      },
+      "overviewSentence": {
+        "value": "探索屏幕会随着你的操作而变化。\n一个狭高的空间包含两个交互式手，左手和右手。你可以单独上下移动左手和右手，或启用双手同时移动双手。当上下移动手时，你会接近或远离挑战比率，并接近或远离深绿色屏幕。\n刻度线选项允许你用均匀分布的水平线探索垂直空间。\n有多种挑战可以探索，还有一个重置模拟的按钮。"
+      },
+      "challengesHelpText": {
+        "value": "选择一个挑战，然后移动手来探索它。"
+      },
+      "challenge1Lowercase": {
+        "value": "挑战 1"
+      },
+      "challenge2Lowercase": {
+        "value": "挑战 2"
+      },
+      "challenge3Lowercase": {
+        "value": "挑战 3"
+      },
+      "bothHandsGestureDescriptionHelpText": {
+        "value": "用左手和右手单独探索挑战比率。在移动设备上，屏幕阅读器软件尚不支持双手自定义交互方式。"
+      }
+    },
+    "create": {
+      "screenButtonsHelpText": {
+        "value": "设置你自己的挑战比率来探索。"
+      },
+      "screenSummary": {
+        "paragraph1": {
+          "value": "在这里，你可以创建你自己的挑战比率。交互区域是一个狭高的空间。它包含两个交互式手，左手和右手。你可以单独上下移动左手和右手，或启用双手同时移动双手。当上下移动手时，你会接近或远离挑战比率，除非在屏幕为最深绿色时锁定比率。"
+        },
+        "paragraph2": {
+          "value": "刻度线选项允许你用均匀分布的水平线探索垂直空间，你可以增加刻度线范围来探索更大的数字。"
+        },
+        "interactionHint": {
+          "value": "探索当前挑战，或寻找我的挑战来创建你自己的。"
+        }
+      },
+      "overviewSentence": {
+        "value": "创建屏幕会随着你的操作而变化。\n在这里，你可以创建你自己的挑战比率。一个狭高的空间包含两个交互式手，左手和右手。你可以单独上下移动左手和右手，或启用双手同时移动双手。当上下移动手时，你会接近或远离挑战比率，除非在屏幕为最深绿色时锁定比率。\n刻度线选项允许你用均匀分布的水平线探索垂直空间，你可以增加刻度线范围来探索更大的数字。\n最后，有一个重置模拟的按钮。"
+      },
+      "challenge": {
+        "value": "挑战"
+      },
+      "tickMarkRangeHelpText": {
+        "value": "当显示刻度线时，选择刻度线的范围。"
+      },
+      "tickMarkRangeContextResponse": {
+        "value": "刻度线范围现在为 {{range}}。"
+      },
+      "myChallengeHelpText": {
+        "value": "设置左右值来创建你的挑战，然后移动手来探索它。"
+      },
+      "myChallengeHintText": {
+        "value": "展开以设置你的挑战。"
+      },
+      "myChallengeReadingBlockHintText": {
+        "value": "改变挑战，然后移动手。"
+      },
+      "bothHandsGestureDescriptionHelpText": {
+        "value": "用左手和右手单独探索挑战比率，或尝试锁定比率。在移动设备上，屏幕阅读器软件尚不支持双手自定义交互方式。"
+      },
+      "rangeLabelPattern": {
+        "value": "范围：{{value}}"
+      }
+    },
+    "handPosition": {
+      "atTop": {
+        "value": "在顶部"
+      },
+      "nearTop": {
+        "value": "靠近顶部"
+      },
+      "inUpperRegion": {
+        "value": "在上部区域"
+      },
+      "inUpperMiddleRegion": {
+        "value": "在中上部区域"
+      },
+      "atMiddle": {
+        "value": "在中间"
+      },
+      "aroundMiddle": {
+        "value": "在中间附近"
+      },
+      "inLowerMiddleRegion": {
+        "value": "在中下部区域"
+      },
+      "inLowerRegion": {
+        "value": "在下部区域"
+      },
+      "nearBottom": {
+        "value": "靠近底部"
+      },
+      "atBottom": {
+        "value": "在底部"
+      },
+      "distance": {
+        "capitalized": {
+          "farthestFrom": {
+            "value": "最远离"
+          },
+          "extremelyFarFrom": {
+            "value": "极远离"
+          },
+          "veryFarFrom": {
+            "value": "很远离"
+          },
+          "farFrom": {
+            "value": "远离"
+          },
+          "notSoCloseTo": {
+            "value": "不太靠近"
+          },
+          "somewhatCloseTo": {
+            "value": "有些靠近"
+          },
+          "veryCloseTo": {
+            "value": "很靠近"
+          },
+          "extremelyCloseTo": {
+            "value": "极靠近"
+          },
+          "almostEvenWith": {
+            "value": "几乎平齐"
+          },
+          "evenWith": {
+            "value": "平齐"
+          }
+        },
+        "lowercase": {
+          "farthestFrom": {
+            "value": "最远离"
+          },
+          "extremelyFarFrom": {
+            "value": "极远离"
+          },
+          "veryFarFrom": {
+            "value": "很远离"
+          },
+          "farFrom": {
+            "value": "远离"
+          },
+          "notSoCloseTo": {
+            "value": "不太靠近"
+          },
+          "somewhatCloseTo": {
+            "value": "有些靠近"
+          },
+          "veryCloseTo": {
+            "value": "很靠近"
+          },
+          "extremelyCloseTo": {
+            "value": "极靠近"
+          },
+          "almostEvenWith": {
+            "value": "几乎平齐"
+          },
+          "evenWith": {
+            "value": "平齐"
+          }
+        }
+      },
+      "closerTogether": {
+        "value": "更靠近"
+      },
+      "fartherApart": {
+        "value": "更远离"
+      },
+      "closerTo": {
+        "value": "更靠近"
+      },
+      "fartherFrom": {
+        "value": "更远离"
+      },
+      "distanceOrDistanceProgressClause": {
+        "value": "{{distanceOrDistanceProgress}} {{otherHand}}"
+      }
+    },
+    "ratio": {
+      "distancePositionContextResponse": {
+        "value": "{{distance}}，{{position}}。"
+      },
+      "bothHandsGoBeyondEdgeContextResponse": {
+        "value": "{{hand}}，{{position}}。向{{direction}}移动手以探索更多。"
+      },
+      "singleHandGoBeyondEdgeContextResponse": {
+        "value": "{{hand}}，{{position}}。向{{direction}}移动手以探索更多。"
+      },
+      "proximityToNewRatioPattern": {
+        "value": "双手，{{proximity}}新挑战比率。"
+      },
+      "proximityToRatioObjectResponse": {
+        "value": "双手，{{proximityToRatio}}挑战比率"
+      },
+      "targetRatioChangedContextResponse": {
+        "value": "{{currentChallenge}} {{proximityToRatio}}"
+      },
+      "currentChallenge": {
+        "value": "当前挑战：{{targetAntecedent}} 比 {{targetConsequent}}。"
+      },
+      "currentChallengeHidden": {
+        "value": "当前挑战已隐藏。"
+      },
+      "capitalized": {
+        "at": {
+          "value": "在"
+        },
+        "extremelyCloseTo": {
+          "value": "极靠近"
+        },
+        "veryCloseTo": {
+          "value": "很靠近"
+        },
+        "somewhatCloseTo": {
+          "value": "有些靠近"
+        },
+        "notSoCloseTo": {
+          "value": "不太靠近"
+        },
+        "farFrom": {
+          "value": "远离"
+        },
+        "veryFarFrom": {
+          "value": "很远离"
+        },
+        "extremelyFarFrom": {
+          "value": "极远离"
+        }
+      },
+      "lowercase": {
+        "at": {
+          "value": "在"
+        },
+        "extremelyCloseTo": {
+          "value": "极靠近"
+        },
+        "veryCloseTo": {
+          "value": "很靠近"
+        },
+        "somewhatCloseTo": {
+          "value": "有些靠近"
+        },
+        "notSoCloseTo": {
+          "value": "不太靠近"
+        },
+        "farFrom": {
+          "value": "远离"
+        },
+        "veryFarFrom": {
+          "value": "很远离"
+        },
+        "extremelyFarFrom": {
+          "value": "极远离"
+        }
+      }
+    },
+    "backgroundColor": {
+      "notGreen": {
+        "value": "不是绿色"
+      },
+      "lightestGreen": {
+        "value": "最浅绿"
+      },
+      "veryLightGreen": {
+        "value": "很浅绿"
+      },
+      "lightGreen": {
+        "value": "浅绿"
+      },
+      "darkestGreen": {
+        "value": "最深绿"
+      }
+    },
+    "down": {
+      "value": "下"
+    },
+    "up": {
+      "value": "上"
+    }
   }
 }

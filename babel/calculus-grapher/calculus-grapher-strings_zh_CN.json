@@ -284,5 +284,844 @@
         "newValue": "Calculus Grapher_微积分图形"
       }
     ]
+  },
+  "curveManipulatorKeyboardCue": {
+    "value": "to <b>Grab</b> or <b>Release</b> curve"
+  },
+  "keyboardHelp": {
+    "curveManipulator": {
+      "value": "曲线操纵器"
+    },
+    "grabOrReleaseCurve": {
+      "value": "抓取或释放曲线"
+    },
+    "tangentToolOrReferenceLine": {
+      "value": "切线工具或参考线"
+    },
+    "areaUnderCurveToolOrReferenceLine": {
+      "value": "曲线下面积工具或参考线"
+    },
+    "referenceLine": {
+      "value": "参考线"
+    },
+    "readValues": {
+      "value": "开启屏幕阅读器后读取数值"
+    }
+  },
+  "a11y": {
+    "screens": {
+      "defaults": {
+        "screenSummary": {
+          "currentDetails": {
+            "leadingParagraph": {
+              "widthPattern": {
+                "value": "当前，曲线操纵类型为 {$curveManipulationType}。形状宽度为 {$width}。{$curveSentence}"
+              },
+              "noWidthPattern": {
+                "value": "当前，曲线操纵类型为 {$curveManipulationType}。{$curveSentence}"
+              },
+              "curveSentence": {
+                "curvesShown": {
+                  "value": "显示的曲线："
+                },
+                "allCurvesHidden": {
+                  "value": "所有曲线已隐藏。"
+                }
+              }
+            },
+            "accessibleList": {
+              "primary": {
+                "value": "f，位于主图形区域"
+              },
+              "predict": {
+                "value": "预测 f，位于主图形区域"
+              },
+              "integral": {
+                "value": "积分，位于积分图形区域"
+              },
+              "derivative": {
+                "value": "导数，位于导数图形区域"
+              },
+              "secondDerivative": {
+                "value": "二阶导数，位于二阶导数图形区域"
+              }
+            }
+          },
+          "controlArea": {
+            "value": "您可以将探索工具添加到图形区域，以促进建立每个图形上数值之间的联系。\n重置模拟器以重新开始。"
+          }
+        }
+      },
+      "derivative": {
+        "screenButtonsHelpText": {
+          "value": "操纵图形并实时探索其导数曲线。"
+        },
+        "screenSummary": {
+          "playArea": {
+            "value": "主图形区域中有一个交互式曲线表示 f 的图形，以及一个表示 f 导数的非交互式导出曲线。您可以选择曲线操纵类型，在主图形区域中以不同方式修改曲线。有探索工具，允许灵活研究所有曲线的 {$variable} 坐标对齐。"
+          },
+          "interactionHint": {
+            "value": "首先找到曲线操纵器。抓取操纵器以任意方向修改曲线。\n使用探索工具研究 f 曲线在不同点的陡峭程度。"
+          }
+        }
+      },
+      "integral": {
+        "screenButtonsHelpText": {
+          "value": "操纵图形并实时探索其积分曲线。"
+        },
+        "screenSummary": {
+          "playArea": {
+            "value": "主图形区域中有一个交互式曲线表示 f 的图形，以及一个表示 f 积分的非交互式导出曲线。您可以选择曲线操纵类型，在主图形区域中以不同方式修改曲线。有探索工具，允许灵活研究所有曲线的 {$variable} 坐标对齐。"
+          },
+          "interactionHint": {
+            "value": "首先找到曲线操纵器。抓取操纵器以任意方向修改曲线。\n使用探索工具研究从左侧开始的 f 曲线下，由水平轴和 f({$variable}) 限定的净符号面积。"
+          }
+        }
+      },
+      "advanced": {
+        "screenButtonsHelpText": {
+          "value": "操纵图形并实时探索其导数和积分曲线，可带有或不带有不连续点。"
+        },
+        "screenSummary": {
+          "playArea": {
+            "value": "主图形区域中有一个交互式曲线表示 f 的图形，以及其他图形区域中的非交互式导出曲线。您可以选择曲线操纵类型，在主图形区域中以不同方式修改曲线。您可以更改可见的两组图形区域：积分和主，或主和导数。有探索工具，允许灵活研究所有可见曲线的 {$variable} 坐标对齐。"
+          },
+          "interactionHint": {
+            "value": "首先找到曲线操纵器。抓取操纵器以任意方向修改曲线。\n使用探索工具探索可见图形集中图形之间的关系。"
+          }
+        }
+      },
+      "lab": {
+        "screenButtonsHelpText": {
+          "value": "操纵图形并实时探索其积分、导数和二阶导数曲线，可带有或不带有不连续点。"
+        },
+        "screenSummary": {
+          "playArea": {
+            "value": "主图形区域中有一个交互式曲线表示 f 的图形，以及其他图形区域中的非交互式导出曲线。您可以选择曲线操纵类型，在主图形区域中以不同方式修改曲线。您可以更改可见的三组图形区域：积分、主和导数，或主、导数和二阶导数。有探索工具，允许灵活研究所有曲线的 {$variable} 坐标对齐。"
+          },
+          "interactionHint": {
+            "value": "首先找到曲线操纵器。抓取操纵器以任意方向修改曲线。\n使用探索工具探索可见图形集中图形之间的关系。"
+          }
+        }
+      }
+    },
+    "slopeOfTangentAccordionBox": {
+      "accessibleHelpTextCollapsed": {
+        "value": "探索在切线工具 {$variable} 坐标处，f 曲线上切线斜率。"
+      },
+      "accessibleParagraph": {
+        "zero": {
+          "value": "当 {$variable} 等于 {$x} 时，f 上切线斜率为零。"
+        },
+        "positive": {
+          "value": "当 {$variable} 等于 {$x} 时，f 上切线斜率为正 {$absoluteSlope}。"
+        },
+        "negative": {
+          "value": "当 {$variable} 等于 {$x} 时，f 上切线斜率为负 {$absoluteSlope}。"
+        }
+      }
+    },
+    "netSignedAreaAccordionBox": {
+      "accessibleHelpTextCollapsed": {
+        "value": "探索在 {$variable} 等于 0 和曲线下面积工具的当前 {$variable} 坐标之间，f 曲线下的净符号面积。"
+      },
+      "accessibleParagraph": {
+        "zero": {
+          "value": "在 {$variable} 等于 0 和 {$x} 之间，f 曲线下的净符号面积为零。"
+        },
+        "positive": {
+          "value": "在 {$variable} 等于 0 和 {$x} 之间，f 曲线下的净符号面积为正 {$absoluteArea}。"
+        },
+        "negative": {
+          "value": "在 {$variable} 等于 0 和 {$x} 之间，f 曲线下的净符号面积为负 {$absoluteArea}。"
+        }
+      }
+    },
+    "checkboxGroup": {
+      "accessibleHeading": {
+        "value": "探索工具控件"
+      }
+    },
+    "tangentCheckbox": {
+      "accessibleHelpText": {
+        "value": "添加或移除切线工具以在图形之间建立联系。"
+      },
+      "accessibleContextResponseChecked": {
+        "value": "切线工具已添加。"
+      },
+      "accessibleContextResponseUnchecked": {
+        "value": "切线工具已移除。"
+      }
+    },
+    "referenceLineCheckbox": {
+      "accessibleName": {
+        "value": "参考线"
+      },
+      "accessibleHelpText": {
+        "value": "添加或移除垂直参考线以对齐所有图形上的 {$variable} 坐标。"
+      },
+      "accessibleContextResponseChecked": {
+        "value": "参考线已添加。"
+      },
+      "accessibleContextResponseUnchecked": {
+        "value": "参考线已移除。"
+      }
+    },
+    "areaUnderCurveCheckbox": {
+      "accessibleName": {
+        "value": "曲线下面积工具"
+      },
+      "accessibleHelpText": {
+        "value": "添加或移除曲线下面积工具，并在由水平轴和 f 限定的曲线下添加阴影。"
+      },
+      "accessibleContextResponseChecked": {
+        "value": "曲线下面积工具已添加。"
+      },
+      "accessibleContextResponseUnchecked": {
+        "value": "曲线下面积工具已移除。"
+      }
+    },
+    "gridCheckbox": {
+      "accessibleName": {
+        "value": "坐标网格"
+      },
+      "accessibleHelpText": {
+        "value": "在所有图形上显示或隐藏坐标网格。"
+      },
+      "accessibleContextResponseChecked": {
+        "value": "坐标网格已显示。"
+      },
+      "accessibleContextResponseUnchecked": {
+        "value": "坐标网格已隐藏。"
+      }
+    },
+    "showPrimaryCurveCheckbox": {
+      "accessibleName": {
+        "value": "显示 f({$variable})"
+      },
+      "accessibleHelpText": {
+        "value": "显示或隐藏 f({$variable}) 以将您的预测形状与 f({$variable}) 的形状进行比较。"
+      },
+      "accessibleContextResponseChecked": {
+        "value": "f({$variable}) 已显示。"
+      },
+      "accessibleContextResponseUnchecked": {
+        "value": "f({$variable}) 已隐藏。"
+      }
+    },
+    "curveManipulationType": {
+      "hill": {
+        "value": "平滑峰"
+      },
+      "triangle": {
+        "value": "刚性V形，角在{$variable}轴上"
+      },
+      "pedestal": {
+        "value": "平滑角底座"
+      },
+      "parabola": {
+        "value": "抛物线，角在{$variable}轴上"
+      },
+      "sinusoid": {
+        "value": "正弦曲线"
+      },
+      "freeform": {
+        "value": "自由形式，可能有不连续点"
+      },
+      "tilt": {
+        "value": "对角倾斜，固定在左边缘"
+      },
+      "shift": {
+        "value": "垂直上下平移"
+      }
+    },
+    "graphAreas": {
+      "defaults": {
+        "accessibleList": {
+          "leadingParagraph": {
+            "value": "当前，"
+          },
+          "coordinateGridShown": {
+            "value": "坐标网格已显示。"
+          },
+          "valuesLabeledOnAxes": {
+            "value": "轴上标有数值。"
+          }
+        }
+      },
+      "primary": {
+        "accessibleHeading": {
+          "value": "主图形区域"
+        },
+        "accessibleList": {
+          "primaryCurve": {
+            "continuousAndDifferentiable": {
+              "value": "f 在所有点连续且可微。"
+            },
+            "hasDiscontinuities": {
+              "value": "f 在一个或多个不连续点不可微。"
+            },
+            "hasCusps": {
+              "value": "f 连续但在一个或多个尖点不可微。"
+            },
+            "hasDiscontinuitiesAndCusps": {
+              "value": "f 在一个或多个不连续点和尖点不可微。"
+            },
+            "hidden": {
+              "value": "f 曲线已隐藏。"
+            }
+          },
+          "predictCurve": {
+            "continuousAndDifferentiable": {
+              "value": "预测 f 在所有点连续且可微。"
+            },
+            "hasDiscontinuities": {
+              "value": "预测 f 在一个或多个不连续点不可微。"
+            },
+            "hasCusps": {
+              "value": "预测 f 连续但在一个或多个尖点不可微。"
+            },
+            "hasDiscontinuitiesAndCusps": {
+              "value": "预测 f 在一个或多个不连续点和尖点不可微。"
+            },
+            "hidden": {
+              "value": "预测 f 曲线已隐藏。"
+            }
+          }
+        }
+      },
+      "integral": {
+        "accessibleHeading": {
+          "value": "积分图形区域"
+        },
+        "accessibleList": {
+          "continuous": {
+            "value": "积分曲线连续，表示 f 对 {$variable} 从零到 {$variable} 的定积分。"
+          },
+          "hidden": {
+            "value": "积分曲线已隐藏。"
+          }
+        }
+      },
+      "derivative": {
+        "accessibleHeading": {
+          "value": "导数图形区域"
+        },
+        "accessibleList": {
+          "continuous": {
+            "value": "导数曲线在所有点连续且可微。"
+          },
+          "discontinuous": {
+            "value": "导数曲线在一个或多个不连续点不可微。"
+          },
+          "hidden": {
+            "value": "导数曲线已隐藏。"
+          }
+        }
+      },
+      "secondDerivative": {
+        "accessibleHeading": {
+          "value": "二阶导数图形区域"
+        },
+        "accessibleList": {
+          "continuous": {
+            "value": "二阶导数曲线在所有点连续且可微。"
+          },
+          "discontinuous": {
+            "value": "二阶导数曲线在一个或多个不连续点不可微。"
+          },
+          "hidden": {
+            "value": "二阶导数曲线已隐藏。"
+          }
+        }
+      }
+    },
+    "curveManipulatorAndSettings": {
+      "value": "曲线操纵器和设置"
+    },
+    "curveActionsButtonGroup": {
+      "accessibleHeading": {
+        "value": "曲线操作"
+      },
+      "accessibleHelpText": {
+        "value": "选择对主图形区域中曲线执行的操作。"
+      }
+    },
+    "smoothButton": {
+      "accessibleName": {
+        "value": "平滑化"
+      },
+      "accessibleHelpText": {
+        "value": "平滑主图形区域曲线的尖角和不连续点。"
+      },
+      "accessibleContextResponse": {
+        "allCurves": {
+          "value": "f 和导出曲线已平滑化。"
+        },
+        "predictCurve": {
+          "value": "仅预测曲线已平滑化。"
+        }
+      }
+    },
+    "eraserButton": {
+      "accessibleName": {
+        "value": "擦除曲线操纵"
+      },
+      "accessibleHelpText": {
+        "value": "重置曲线到 y 等于零，保持曲线操纵设置。"
+      },
+      "accessibleContextResponse": {
+        "primaryCurve": {
+          "value": "f 和导出曲线已重置，设置不变。"
+        },
+        "predictCurve": {
+          "value": "预测曲线已重置，其他曲线和设置不变。"
+        }
+      }
+    },
+    "undoButton": {
+      "accessibleName": {
+        "value": "撤销"
+      },
+      "accessibleHelpText": {
+        "value": "撤销最近的曲线操纵。"
+      },
+      "accessibleContextResponse": {
+        "primaryCurve": {
+          "value": "f 和导出曲线的最近一次操纵已移除。"
+        },
+        "predictCurve": {
+          "value": "仅预测曲线的最近一次操纵已移除。"
+        }
+      }
+    },
+    "yZoomButtonGroup": {
+      "zoomInButton": {
+        "accessibleName": {
+          "integral": {
+            "value": "放大积分 y 轴"
+          },
+          "derivative": {
+            "value": "放大导数 y 轴"
+          },
+          "secondDerivative": {
+            "value": "放大二阶导数 y 轴"
+          }
+        },
+        "accessibleHelpText": {
+          "value": "仅放大 y 轴。"
+        },
+        "accessibleContextResponse": {
+          "value": "已放大，y 范围 {$min} 到 {$max}"
+        }
+      },
+      "zoomOutButton": {
+        "accessibleName": {
+          "integral": {
+            "value": "缩小积分 y 轴"
+          },
+          "derivative": {
+            "value": "缩小导数 y 轴"
+          },
+          "secondDerivative": {
+            "value": "缩小二阶导数 y 轴"
+          }
+        },
+        "accessibleHelpText": {
+          "value": "仅缩小 y 轴。"
+        },
+        "accessibleContextResponse": {
+          "value": "已缩小，y 范围 {$min} 到 {$max}"
+        }
+      }
+    },
+    "predictRadioButtonGroup": {
+      "accessibleName": {
+        "value": "要操纵的曲线"
+      },
+      "accessibleHelpText": {
+        "value": "选择主图形区域中哪条曲线可操纵。"
+      },
+      "primaryCurveRadioButton": {
+        "accessibleName": {
+          "value": "f({$variable})"
+        },
+        "accessibleContextResponse": {
+          "value": "f 曲线已准备好操纵。"
+        }
+      },
+      "predictCurveRadioButton": {
+        "accessibleName": {
+          "value": "预测"
+        },
+        "accessibleContextResponse": {
+          "value": "预测曲线已准备好操纵。"
+        }
+      }
+    },
+    "curveManipulationTypeRadioButtonGroup": {
+      "accessibleName": {
+        "value": "曲线操纵类型"
+      },
+      "accessibleHelpText": {
+        "value": "为曲线操纵器选择曲线修改类型，然后更改主图形区域中的曲线。\n在曲线操纵器和设置下找到曲线操纵器。"
+      }
+    },
+    "graphSetRadioButtonGroup": {
+      "accessibleName": {
+        "value": "可见图形集"
+      },
+      "accessibleHelpText": {
+        "value": "选择要研究其关系的一组图形区域。"
+      },
+      "integralPrimaryRadioButton": {
+        "accessibleName": {
+          "value": "积分和主图形区域"
+        },
+        "accessibleContextResponse": {
+          "value": "主图形区域在积分下方。"
+        }
+      },
+      "primaryDerivativeRadioButton": {
+        "accessibleName": {
+          "value": "主和导数图形区域"
+        },
+        "accessibleContextResponse": {
+          "value": "主图形区域在导数上方。"
+        }
+      },
+      "integralPrimaryDerivativeRadioButton": {
+        "accessibleName": {
+          "value": "积分、主和导数图形区域"
+        },
+        "accessibleContextResponse": {
+          "value": "主图形区域在积分和导数之间"
+        }
+      },
+      "primaryDerivativeSecondDerivativeRadioButton": {
+        "accessibleName": {
+          "value": "主、导数和二阶导数图形区域"
+        },
+        "accessibleContextResponse": {
+          "value": "主图形区域在导数和二阶导数上方"
+        }
+      }
+    },
+    "variableRadioButtonGroup": {
+      "accessibleHelpText": {
+        "value": "选择水平轴的变量。"
+      },
+      "xRadioButton": {
+        "accessibleContextResponse": {
+          "value": "水平轴标有 x。"
+        }
+      },
+      "tRadioButton": {
+        "accessibleContextResponse": {
+          "value": "水平轴标有 t。"
+        }
+      }
+    },
+    "notationRadioButtonGroup": {
+      "accessibleHelpText": {
+        "value": "选择导数符号。"
+      },
+      "lagrangeRadioButton": {
+        "accessibleName": {
+          "value": "拉格朗日，f'({$variable})"
+        },
+        "accessibleContextResponse": {
+          "value": "导数符号使用 f' 和 f''。"
+        }
+      },
+      "leibnizRadioButton": {
+        "accessibleName": {
+          "value": "莱布尼兹，df/d{$variable}"
+        },
+        "accessibleContextResponse": {
+          "value": "导数符号显示 y 相对于 {$variable} 的变化率。"
+        }
+      }
+    },
+    "discontinuitiesRadioButtonGroup": {
+      "accessibleHelpText": {
+        "value": "选择如何在曲线中显示不连续点。"
+      },
+      "noLineRadioButton": {
+        "accessibleName": {
+          "value": "不连接不连续点"
+        }
+      },
+      "dashedLineRadioButton": {
+        "accessibleName": {
+          "value": "虚线连接不连续点"
+        }
+      }
+    },
+    "shapeWidthSlider": {
+      "accessibleName": {
+        "value": "形状宽度"
+      },
+      "accessibleHelpText": {
+        "value": "调整曲线操纵形状的宽度。宽度范围从 {$min} 到 {$max} {$variable} 轴单位。"
+      }
+    },
+    "predictToggleSwitch": {
+      "accessibleHelpText": {
+        "value": "添加一个模式，允许您预测 f({$variable})。"
+      }
+    },
+    "curveVisibilityToggleButton": {
+      "accessibleNameOn": {
+        "integral": {
+          "value": "隐藏积分曲线"
+        },
+        "primary": {
+          "value": "隐藏主曲线"
+        },
+        "derivative": {
+          "value": "隐藏导数曲线"
+        },
+        "secondDerivative": {
+          "value": "隐藏二阶导数曲线"
+        }
+      },
+      "accessibleNameOff": {
+        "integral": {
+          "value": "显示积分曲线"
+        },
+        "primary": {
+          "value": "显示主曲线"
+        },
+        "derivative": {
+          "value": "显示导数曲线"
+        },
+        "secondDerivative": {
+          "value": "显示二阶导数曲线"
+        }
+      },
+      "accessibleHelpText": {
+        "value": "显示或隐藏曲线以支持预测。"
+      },
+      "accessibleContextResponseOff": {
+        "value": "曲线已隐藏。"
+      },
+      "accessibleContextResponseOn": {
+        "value": "曲线已显示。"
+      }
+    },
+    "curveManipulators": {
+      "defaults": {
+        "accessibleObjectResponse": {
+          "focusedReleased": {
+            "value": "在 {$x}, {$y}，离开曲线"
+          },
+          "focusedGrabbed": {
+            "value": "在 {$x}, {$y}，已抓取"
+          },
+          "grabbed": {
+            "value": "在 {$x}, {$y} 已抓取，曲线已修改"
+          },
+          "released": {
+            "value": "在 {$x}, {$y} 已释放，离开曲线"
+          },
+          "movedReleased": {
+            "value": "{$x}, {$y}"
+          },
+          "movedGrabbed": {
+            "value": "{$x}, {$y}，曲线已修改"
+          }
+        },
+        "accessibleRoleDescription": {
+          "movable": {
+            "value": "可移动"
+          },
+          "movableButton": {
+            "value": "可移动按钮"
+          }
+        }
+      },
+      "primary": {
+        "accessibleName": {
+          "value": "f 曲线操纵器"
+        },
+        "accessibleHelpText": {
+          "value": "向任意方向移动曲线操纵器以设置位置，然后按空格键抓取，并使用所选曲线操纵类型动态操纵曲线。"
+        }
+      },
+      "predict": {
+        "accessibleName": {
+          "value": "预测曲线操纵器"
+        },
+        "accessibleHelpText": {
+          "value": "向任意方向移动预测曲线操纵器以设置位置，然后按空格键抓取，并使用所选曲线操纵类型动态操纵曲线。"
+        }
+      }
+    },
+    "explorationTools": {
+      "accessibleHeading": {
+        "value": "探索工具"
+      },
+      "accessibleObjectResponse": {
+        "xPhrase": {
+          "min": {
+            "value": "在 {$variable} 最小处，{$variable} 等于 {$value}"
+          },
+          "max": {
+            "value": "在 {$variable} 最大处，{$variable} 等于 {$value}"
+          },
+          "other": {
+            "value": "在 {$variable} 等于 {$value} 处"
+          }
+        }
+      }
+    },
+    "referenceLine": {
+      "accessibleName": {
+        "value": "参考线"
+      },
+      "accessibleHelpText": {
+        "value": "水平移动垂直线以更改 {$variable} 值并探索所有图形上的 y 值。\n垂直线穿过所有图形在相同的 {$variable} 值处。"
+      },
+      "accessibleObjectResponse": {
+        "patterns": {
+          "primaryDerivative": {
+            "value": "{$xPhrase}, {$primaryPhrase}, {$derivativePhrase}"
+          },
+          "integralPrimary": {
+            "value": "{$xPhrase}, {$integralPhrase}, {$primaryPhrase}"
+          },
+          "integralPrimaryDerivative": {
+            "value": "{$xPhrase}, {$integralPhrase}, {$primaryPhrase}, {$derivativePhrase}"
+          },
+          "primaryDerivativeSecondDerivative": {
+            "value": "{$xPhrase}, {$primaryPhrase}, {$derivativePhrase}, {$secondDerivativePhrase}"
+          }
+        },
+        "primaryPhrase": {
+          "predictAndPrimary": {
+            "value": "{$predictPhrase}, {$primaryPhrase}"
+          },
+          "predictUndefined": {
+            "value": "预测 f({$variable}) 未定义"
+          },
+          "predictValue": {
+            "value": "预测 f({$variable}) 为 {$value}"
+          },
+          "predictHidden": {
+            "value": "预测曲线已隐藏"
+          },
+          "primaryUndefined": {
+            "value": "f({$variable}) 未定义"
+          },
+          "primaryValue": {
+            "value": "f({$variable}) 为 {$value}"
+          },
+          "primaryHidden": {
+            "value": "f 曲线已隐藏"
+          }
+        },
+        "integralPhrase": {
+          "integralValue": {
+            "value": "到 {$variable} 的积分为 {$value}"
+          },
+          "integralHidden": {
+            "value": "积分曲线已隐藏"
+          }
+        },
+        "derivativePhrase": {
+          "derivativeUndefined": {
+            "value": "在 {$variable} 处导数未定义"
+          },
+          "derivativeValue": {
+            "value": "在 {$variable} 处导数为 {$value}"
+          },
+          "derivativeHidden": {
+            "value": "导数曲线已隐藏"
+          }
+        },
+        "secondDerivativePhrase": {
+          "secondDerivativeUndefined": {
+            "value": "在 {$variable} 处二阶导数未定义"
+          },
+          "secondDerivativeValue": {
+            "value": "在 {$variable} 处二阶导数为 {$value}"
+          },
+          "secondDerivativeHidden": {
+            "value": "二阶导数曲线已隐藏"
+          }
+        }
+      }
+    },
+    "tangentTool": {
+      "accessibleName": {
+        "value": "切线工具"
+      },
+      "accessibleHelpText": {
+        "value": "水平移动垂直线以更改 {$variable} 值，并探索在 {$variable} 处 f 上可见切线的陡峭程度与相同 {$variable} 坐标处导数曲线上 y 值之间的关系。\n信息提供当前 {$variable} 值，在 {$variable} 处 f 上切线斜率，以及导数曲线上 {$variable} 处导数值。"
+      },
+      "accessibleObjectResponse": {
+        "pattern": {
+          "value": "{$xPhrase}, {$slopePhrase}, {$derivativePhrase}"
+        },
+        "slopePhrase": {
+          "zero": {
+            "value": "斜率为零"
+          },
+          "positive": {
+            "value": "斜率为正 {$absoluteSlope}"
+          },
+          "negative": {
+            "value": "斜率为负 {$absoluteSlope}"
+          },
+          "hidden": {
+            "value": "f 曲线已隐藏"
+          }
+        },
+        "derivativePhrase": {
+          "derivativeValue": {
+            "value": "在 {$variable} 处导数为 {$value}"
+          },
+          "hidden": {
+            "value": "导数曲线已隐藏"
+          }
+        }
+      }
+    },
+    "areaUnderCurveTool": {
+      "accessibleName": {
+        "value": "曲线下面积工具"
+      },
+      "accessibleHelpText": {
+        "value": "水平移动垂直线以更改 {$variable} 值，并探索到当前 {$variable} 值为止 f 下的累积净符号面积。阴影区域由 {$variable} 轴和 f 曲线限定。垂直线穿过所有图形在相同的 {$variable} 值处。\n信息提供当前 {$variable} 值，到 {$variable} 的积分值，以及 f 曲线下的净符号面积。"
+      },
+      "accessibleObjectResponse": {
+        "pattern": {
+          "value": "{$xPhrase}, {$integralPhrase}, {$areaPhrase}"
+        },
+        "integralPhrase": {
+          "integralValue": {
+            "value": "到 {$variable} 的积分为 {$value}"
+          },
+          "hidden": {
+            "value": "积分曲线已隐藏"
+          }
+        },
+        "areaPhrase": {
+          "zero": {
+            "value": "f 下的净符号面积为零"
+          },
+          "positive": {
+            "value": "f 下的净符号面积为正 {$absoluteArea}"
+          },
+          "negative": {
+            "value": "f 下的净符号面积为负 {$absoluteArea}"
+          },
+          "hidden": {
+            "value": "f 曲线已隐藏"
+          }
+        }
+      }
+    }
   }
 }

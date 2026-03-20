@@ -190,5 +190,190 @@
         "explanation": null
       }
     ]
+  },
+  "a11y": {
+    "summary": {
+      "sim": {
+        "value": "在交互区域，你可以找到电阻方程，<b>R</b>等于<b>rho</b>乘以<b>L</b>除以<b>A</b>，以及一段导线。电阻率、长度和面积的滑块可以更改方程和导线的参数。控制区域有一个重置模拟的按钮。"
+      },
+      "currently": {
+        "value": "当前，"
+      },
+      "resistancePattern": {
+        "value": "电阻，<b>R</b>，为 {{value}} 欧姆"
+      },
+      "resistivityPattern": {
+        "value": "电阻率，<b>rho</b>，为 {{value}} 欧姆厘米"
+      },
+      "lengthPattern": {
+        "value": "长度，<b>L</b>，为 {{value}} 厘米"
+      },
+      "areaPattern": {
+        "value": "面积，<b>A</b>，为 {{value}} 平方厘米"
+      },
+      "interactionHint": {
+        "value": "使用电阻率、长度和面积滑块来操作，或阅读下方了解方程和导线的详情。"
+      }
+    },
+    "equation": {
+      "resistanceEquation": {
+        "value": "电阻方程"
+      },
+      "resistanceEquationDescription": {
+        "value": "电阻，<b>R</b>，等于电阻率，<b>rho</b>，乘以长度，<b>L</b>，除以面积，<b>A</b>。"
+      },
+      "rhoLAndAComparablePattern": {
+        "value": "字母 R 的大小是字母 rho、字母 L 和字母 A 大小的 {{rToAll}}。"
+      },
+      "lAndAComparablePattern": {
+        "value": "字母 R 的大小是字母 rho 的 {{rToRho}}，是字母 L 和字母 A 的 {{rToLAndA}}。"
+      },
+      "noneComparablePattern": {
+        "value": "字母 R 的大小是字母 rho 的 {{rToRho}}，是字母 L 的 {{rToL}}，是字母 A 的 {{rToA}}。"
+      },
+      "sizes": {
+        "muchMuchSmallerThan": {
+          "value": "远远小于"
+        },
+        "muchSmallerThan": {
+          "value": "小很多"
+        },
+        "slightlySmallerThan": {
+          "value": "略小于"
+        },
+        "comparableTo": {
+          "value": "约等于"
+        },
+        "slightlyLargerThan": {
+          "value": "略大于"
+        },
+        "muchLargerThan": {
+          "value": "大很多"
+        },
+        "muchMuchLargerThan": {
+          "value": "远远大于"
+        }
+      },
+      "alerts": {
+        "grows": {
+          "value": "增大"
+        },
+        "shrinks": {
+          "value": "减小"
+        },
+        "growsALot": {
+          "value": "大幅增大"
+        },
+        "shrinksALot": {
+          "value": "大幅减小"
+        }
+      }
+    },
+    "wire": {
+      "wireDescriptionPattern": {
+        "value": "当前，导线为 {{length}}、{{thickness}}，且导线中杂质含量为 {{impurities}}。电阻为 {{resistance}} 欧姆。"
+      },
+      "resistivityUnitsPattern": {
+        "value": "{{value}} 欧姆厘米"
+      },
+      "extremelyShort": {
+        "value": "极短"
+      },
+      "veryShort": {
+        "value": "很短"
+      },
+      "short": {
+        "value": "短"
+      },
+      "ofMediumLength": {
+        "value": "中等长度"
+      },
+      "long": {
+        "value": "长"
+      },
+      "veryLong": {
+        "value": "很长"
+      },
+      "extremelyLong": {
+        "value": "极长"
+      },
+      "extremelyThin": {
+        "value": "极细"
+      },
+      "veryThin": {
+        "value": "很细"
+      },
+      "thin": {
+        "value": "细"
+      },
+      "ofMediumThickness": {
+        "value": "中等粗细"
+      },
+      "thick": {
+        "value": "粗"
+      },
+      "veryThick": {
+        "value": "很粗"
+      },
+      "extremelyThick": {
+        "value": "极粗"
+      },
+      "aTinyAmountOfImpurities": {
+        "value": "极少量"
+      },
+      "aVerySmallAmountOfImpurities": {
+        "value": "非常少量"
+      },
+      "aSmallAmountOfImpurities": {
+        "value": "少量"
+      },
+      "aMediumAmountOfImpurities": {
+        "value": "中等数量"
+      },
+      "aLargeAmountOfImpurities": {
+        "value": "大量"
+      },
+      "aVeryLargeAmountOfImpurities": {
+        "value": "非常多量"
+      },
+      "aHugeAmountOfImpurities": {
+        "value": "极大数量"
+      }
+    },
+    "controls": {
+      "lengthUnitsPattern": {
+        "value": "{{value}} 厘米"
+      },
+      "areaUnitsPattern": {
+        "value": "{{value}} 平方厘米"
+      },
+      "resistivitySliderLabel": {
+        "value": "rho，电阻率"
+      },
+      "lengthSliderLabel": {
+        "value": "L，长度"
+      },
+      "areaSliderLabel": {
+        "value": "A，面积"
+      },
+      "sliderControls": {
+        "value": "滑块控制"
+      },
+      "slidersDescription": {
+        "value": "电阻率、长度和面积滑块可以更改方程和导线的参数。"
+      },
+      "sizeChangeAlertPattern": {
+        "value": "当字母 {{letter}} {{letterChange}}，字母 R {{rChange}}。电阻现在为 {{resistance}} 欧姆。"
+      },
+      "letterRho": {
+        "value": "rho"
+      },
+      "letterL": {
+        "value": "L"
+      },
+      "letterA": {
+        "value": "A"
+      }
+    }
   }
 }

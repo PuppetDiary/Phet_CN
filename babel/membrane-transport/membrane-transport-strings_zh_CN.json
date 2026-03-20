@@ -790,5 +790,792 @@
         "newValue": "穿越音效"
       }
     ]
+  },
+  "cellRegions": {
+    "outside": {
+      "value": "细胞外"
+    },
+    "inside": {
+      "value": "细胞内"
+    }
+  },
+  "soluteNames": {
+    "oxygen": {
+      "value": "O<sub>2</sub>"
+    },
+    "carbonDioxide": {
+      "value": "CO<sub>2</sub>"
+    },
+    "sodiumIon": {
+      "value": "Na<sup>+</sup>"
+    },
+    "potassiumIon": {
+      "value": "K<sup>+</sup>"
+    },
+    "glucose": {
+      "value": "葡萄糖"
+    },
+    "atp": {
+      "value": "ATP"
+    }
+  },
+  "soluteConcentrationsAccordionBox": {
+    "title": {
+      "value": "溶质浓度"
+    }
+  },
+  "transportProteinToolbox": {
+    "voltageGatedChannels": {
+      "value": "电压门控通道"
+    },
+    "ligandGatedChannels": {
+      "value": "配体门控通道"
+    },
+    "activeTransporters": {
+      "value": "主动转运体"
+    },
+    "leakageChannels": {
+      "value": "泄漏通道"
+    },
+    "naPlusKPlusPump": {
+      "value": "Na<sup>+</sup>/K<sup>+</sup><br>泵"
+    },
+    "sodiumGlucoseCotransporter": {
+      "value": "Na<sup>+</sup>/葡萄糖<br>协同转运体"
+    },
+    "membranePotentialMV": {
+      "value": "膜电位 (mV)"
+    },
+    "charges": {
+      "value": "电荷"
+    },
+    "addLigands": {
+      "value": "添加配体"
+    },
+    "removeLigands": {
+      "value": "移除配体"
+    }
+  },
+  "settings": {
+    "crossingHighlights": {
+      "value": "穿越事件"
+    },
+    "crossingSounds": {
+      "value": "穿越音效"
+    }
+  },
+  "preferencesDialog": {
+    "simulation": {
+      "animateLipids": {
+        "label": {
+          "value": "脂质动画"
+        },
+        "description": {
+          "value": "构成细胞膜的磷脂双分子层的摆动动画。"
+        }
+      },
+      "glucoseMetabolism": {
+        "label": {
+          "value": "葡萄糖代谢"
+        },
+        "description": {
+          "value": "葡萄糖分子在细胞内逐渐消失，以模拟转化为细胞代谢。"
+        }
+      }
+    },
+    "audio": {
+      "sounds": {
+        "stereoCrossingSounds": {
+          "label": {
+            "value": "立体声穿越音效"
+          },
+          "description": {
+            "value": "通过将声音映射到右声道（从外到内）和左声道（从内到外）来突出溶质的转运方向。"
+          }
+        }
+      }
+    }
+  },
+  "keyboardHelp": {
+    "soluteAdjusters": {
+      "title": {
+        "value": "溶质调节"
+      },
+      "addOrRemoveALot": {
+        "value": "大幅调节所选溶质量"
+      },
+      "addOrRemoveALittle": {
+        "value": "小幅调节"
+      }
+    },
+    "transportProteinsAndLigands": {
+      "title": {
+        "value": "转运蛋白或配体"
+      },
+      "navigate": {
+        "value": "浏览工具箱中的蛋白质或已添加的配体"
+      },
+      "grabOrRelease": {
+        "value": "抓取或释放"
+      },
+      "moveGrabbedItem": {
+        "value": "在可用的放置位置之间移动已抓取的蛋白质或配体"
+      },
+      "cancelGrab": {
+        "value": "取消抓取或移动操作"
+      }
+    },
+    "sortOrDeleteProteins": {
+      "title": {
+        "value": "排列或删除膜中的蛋白质"
+      },
+      "navigateProteins": {
+        "value": "浏览膜中的蛋白质"
+      },
+      "grabProtein": {
+        "value": "抓取膜中的蛋白质"
+      },
+      "moveGrabbedProtein": {
+        "value": "在插槽之间移动当前蛋白质"
+      },
+      "releaseProtein": {
+        "value": "将已选蛋白质释放到空插槽中，或交换位置"
+      },
+      "deleteProtein": {
+        "value": "删除已选蛋白质"
+      }
+    }
+  },
+  "a11y": {
+    "simpleDiffusionScreen": {
+      "screenButtonsHelpText": {
+        "value": "探索哪些溶质可以在细胞环境中自由扩散。"
+      }
+    },
+    "facilitatedDiffusionScreen": {
+      "screenButtonsHelpText": {
+        "value": "探索使用转运蛋白促进溶质扩散的条件。"
+      }
+    },
+    "activeTransportScreen": {
+      "screenButtonsHelpText": {
+        "value": "探索使用转运蛋白主动转运溶质的条件。"
+      }
+    },
+    "playgroundScreen": {
+      "screenButtonsHelpText": {
+        "value": "尝试所有溶质和所有转运蛋白。"
+      }
+    },
+    "screenSummary": {
+      "playArea": {
+        "intro": {
+          "value": "观察窗口放大显示细胞膜的一个非常小的横截面。\n  膜由一个摆动的磷脂双分子层组成，即分隔细胞内外液体的双层结构。\n  当添加到外部或内部时，溶质颗粒悬浮在液体中并随机布朗运动。"
+        },
+        "proteins": {
+          "value": "不同类型的转运蛋白可以直接添加到膜上。"
+        },
+        "potential": {
+          "value": "有选项可以改变细胞环境并影响所添加的蛋白质。"
+        },
+        "barCharts": {
+          "value": "溶质浓度柱状图动态比较细胞内外各溶质的数量。"
+        },
+        "screen1": {
+          "value": "{ a11y_screenSummary_playArea_intro } { a11y_screenSummary_playArea_barCharts }"
+        },
+        "screen2and4": {
+          "value": "{ a11y_screenSummary_playArea_intro } { a11y_screenSummary_playArea_proteins } { a11y_screenSummary_playArea_potential } { a11y_screenSummary_playArea_barCharts }"
+        },
+        "screen3": {
+          "value": "{ a11y_screenSummary_playArea_intro } { a11y_screenSummary_playArea_proteins } { a11y_screenSummary_playArea_barCharts }"
+        }
+      },
+      "controlArea": {
+        "value": "可以暂停动作或放慢速度以听到更多细节，添加或移除增强溶质穿越的声音和高亮显示，并且可以重置一切从头开始。"
+      },
+      "currentDetails": {
+        "leadingParagraph": {
+          "value": "现在，放大的细胞横截面中有："
+        },
+        "noAddedSolutes": {
+          "value": "没有添加溶质"
+        },
+        "noAddedProteins": {
+          "value": "没有添加蛋白质"
+        },
+        "soluteTypesOnOutside": {
+          "value": "{ $count ->\n  [one] { $count } 种溶质在外部\n *[other] { $count } 种溶质在外部\n}"
+        },
+        "soluteTypesOnInside": {
+          "value": "{ $count ->\n  [one] { $count } 种溶质在内部\n *[other] { $count } 种溶质在内部\n}"
+        },
+        "transportProteins": {
+          "value": "膜中有 { $proteinCount ->\n  [one] { $proteinCount} 个蛋白质\n *[other] { $proteinCount} 个蛋白质\n}，共 { $proteinTypeCount ->\n  [one] { $proteinTypeCount } 种类型\n *[other] { $proteinTypeCount} 种类型\n}"
+        },
+        "ligands": {
+          "value": "外部仅添加了 2 种配体类型"
+        },
+        "atpReacting": {
+          "value": "ATP 反应形成 ADP 和磷酸盐，它们在内部定期消失"
+        },
+        "membranePotential": {
+          "value": "膜电位为 { a11y_membranePotentialValue }"
+        },
+        "glucoseMetabolism": {
+          "value": "葡萄糖在细胞代谢过程中从内部消失"
+        }
+      },
+      "interactionHint": {
+        "value": "向细胞外部或内部添加或移除溶质，观察溶质浓度变化。"
+      },
+      "interactionHintWithTransportProteins": {
+        "value": "向细胞外部或内部添加或移除溶质，将转运蛋白移动到膜上，观察溶质浓度变化。"
+      }
+    },
+    "soluteControls": {
+      "accessibleHeading": {
+        "value": "溶质调节器"
+      },
+      "accessibleHelpText": {
+        "value": "向细胞外部或内部添加或移除所选溶质。"
+      }
+    },
+    "eraseSolutesButton": {
+      "accessibleName": {
+        "value": "清除所有溶质"
+      },
+      "accessibleContextResponse": {
+        "value": "溶质已清除。添加溶质以观察变化。"
+      },
+      "accessibleHelpText": {
+        "value": "当未添加溶质时禁用。"
+      }
+    },
+    "settings": {
+      "crossingHighlightsCheckbox": {
+        "accessibleHelpText": {
+          "value": "探索有或无溶质穿越视觉高亮显示。"
+        },
+        "accessibleContextResponseChecked": {
+          "value": "溶质穿越视觉高亮显示，已开启。"
+        },
+        "accessibleContextResponseUnchecked": {
+          "value": "溶质穿越视觉高亮显示，已关闭。"
+        }
+      },
+      "crossingSoundsCheckbox": {
+        "accessibleHelpText": {
+          "value": "探索有或无溶质穿越的独特声音。"
+        },
+        "accessibleContextResponseChecked": {
+          "value": "溶质穿越声音，已开启。"
+        },
+        "accessibleContextResponseUnchecked": {
+          "value": "溶质穿越声音，已关闭。"
+        }
+      }
+    },
+    "transportProteinToolbox": {
+      "accessibleHeading": {
+        "value": "转运蛋白工具箱"
+      },
+      "accessibleHelpText": {
+        "value": "寻找要抓取的蛋白质。抓取后，使用键盘快捷键释放到膜插槽中。从膜上再次抓取以排序或删除。"
+      },
+      "ligandGatedChannelPanel": {
+        "sodiumIonNaPlusLigandGated": {
+          "value": "抓取钠选择性配体门控通道"
+        },
+        "potassiumIonKPlusLigandGated": {
+          "value": "抓取钾选择性配体门控通道"
+        },
+        "accessibleHelpText": {
+          "value": "跨膜单通道蛋白，可以打开或关闭。关闭时有三角形或星形配体结合位点。"
+        }
+      },
+      "leakageChannelPanel": {
+        "sodiumIonNaPlusLeakage": {
+          "value": "抓取钠选择性泄漏通道"
+        },
+        "potassiumIonKPlusLeakage": {
+          "value": "抓取钾选择性泄漏通道"
+        },
+        "accessibleHelpText": {
+          "value": "跨膜单通道蛋白，始终开放。"
+        }
+      },
+      "voltageGatedChannelPanel": {
+        "sodiumIonNaPlusVoltageGated": {
+          "value": "抓取钠选择性电压门控通道"
+        },
+        "potassiumIonKPlusVoltageGated": {
+          "value": "抓取钾选择性电压门控通道"
+        },
+        "accessibleHelpText": {
+          "value": "跨膜单通道蛋白，可以打开或关闭。"
+        },
+        "membranePotential": {
+          "radioButtonGroup": {
+            "accessibleName": {
+              "value": "膜电位"
+            },
+            "accessibleHelpText": {
+              "value": "调节毫伏并观察蛋白质。"
+            },
+            "negative70RadioButton": {
+              "accessibleName": {
+                "value": "负 70 毫伏"
+              }
+            },
+            "negative50RadioButton": {
+              "accessibleName": {
+                "value": "负 50 毫伏"
+              }
+            },
+            "positive30RadioButton": {
+              "accessibleName": {
+                "value": "正 30 毫伏"
+              }
+            }
+          }
+        },
+        "chargesCheckbox": {
+          "accessibleHelpText": {
+            "value": "探索有或无沿膜内外显示的电荷符号。"
+          },
+          "voicingHelpText": {
+            "value": "探索有或无沿膜的电荷符号。"
+          },
+          "accessibleContextResponseCheckedNegative70": {
+            "value": "外部为正，内部为负；电荷符号沿膜密集排列。"
+          },
+          "accessibleContextResponseCheckedNegative50": {
+            "value": "外部为正，内部为负；电荷符号沿膜稀疏排列。"
+          },
+          "accessibleContextResponseCheckedPositive30": {
+            "value": "外部为负，内部为正；沿膜电荷符号稀疏。"
+          },
+          "accessibleContextResponseUnchecked": {
+            "value": "膜电位电荷符号，已隐藏。"
+          }
+        }
+      },
+      "activeTransportProteinPanel": {
+        "sodiumPotassiumPump": {
+          "value": "抓取钠钾泵"
+        },
+        "sodiumGlucoseCotransporter": {
+          "value": "抓取钠葡萄糖协同转运体"
+        },
+        "accessibleHelpText": {
+          "value": "一次只能向一侧开放的蛋白质。钠钾泵，当向内开放时，有 3 个钠和 1 个磷酸盐的结合位点。当向外开放时，有 2 个钾的结合位点。钠葡萄糖协同转运体，只向外开放，有 2 个钠和 1 个葡萄糖的结合位点。需要较高的外部钠浓度才能转运。"
+        }
+      }
+    },
+    "ligandNode": {
+      "accessibleName": {
+        "value": "{ $ligandType ->\n[starLigand]     星形配体\n*[triangleLigand] 三角形配体\n}"
+      },
+      "accessibleHelpText": {
+        "value": "抓取配体。抓取后，使用键盘快捷键将配体移动到结合位点。释放以结合或让配体自然结合。"
+      },
+      "voicingHintResponse": {
+        "value": "移动到配体门控蛋白。"
+      },
+      "releasedResponse": {
+        "value": "已释放。"
+      },
+      "releasedOffMembraneResponse": {
+        "value": "已释放。{ a11y_ligandNode_accessibleName } 漂走。"
+      },
+      "releasedOnProteinResponse": {
+        "value": "已释放。结合成功。蛋白质打开。"
+      },
+      "releasedOnBusyOrIncompatibleProteinResponse": {
+        "value": "已释放。结合不成功。配体漂走。"
+      },
+      "unboundResponse": {
+        "value": "配体漂走。蛋白质关闭。"
+      },
+      "movedOffMembraneResponse": {
+        "value": "膜外。"
+      },
+      "movedAboveLigandGatedChannelResponse": {
+        "value": "在 { $openOrClosed ->\n[open]   开放的\n*[closed] 关闭的\n} { a11y_transportProtein_briefName } { $proteinType ->\n[sodiumIonLigandGatedChannel] 三角形位点\n*[potassiumIonLigandGatedChannel]     星形位点\n} 上方，第 { $index } 个，共 { $transportProteinCount } 个蛋白质。"
+      },
+      "movedAboveLeakageChannelResponse": {
+        "value": "在 { a11y_transportProtein_briefName } 上方，第 { $index } 个，共 { $transportProteinCount } 个蛋白质。"
+      },
+      "movedAboveOtherChannelResponse": {
+        "value": "在 { $openOrClosed ->\n[open]   开放的\n*[closed] 关闭的\n} { a11y_transportProtein_briefName } 上方，第 { $index } 个，共 { $transportProteinCount } 个蛋白质。"
+      },
+      "grabbedResponse": {
+        "value": "已抓取。膜外。膜中有 { $proteinCount } 个蛋白质。"
+      },
+      "grabbedResponseWithHint": {
+        "value": "{ a11y_ligandNode_grabbedResponse } 使用 A 或 D 键移动配体。空格释放。"
+      },
+      "grabbedResponseWithEmptyMembraneHint": {
+        "value": "{ a11y_ligandNode_grabbedResponse } 空格释放。添加转运蛋白。"
+      }
+    },
+    "sortable": {
+      "value": "可排序"
+    },
+    "navigable": {
+      "value": "可导航"
+    },
+    "membranePotentialValue": {
+      "value": "{ $membranePotential ->\n  [-70] 负 70\n  [-50] 负 50\n *[30] 正 30\n} 毫伏"
+    },
+    "solutes": {
+      "lowercaseName": {
+        "value": "{ $soluteType ->\n  [oxygen]        氧分子\n  [carbonDioxide] 二氧化碳分子\n  [sodiumIon]     钠离子\n  [potassiumIon]  钾离子\n  [glucose]       葡萄糖分子\n *[atp]           ATP 分子\n}"
+      },
+      "uppercaseName": {
+        "value": "{ $soluteType ->\n  [oxygen]        氧分子\n  [carbonDioxide] 二氧化碳分子\n  [sodiumIon]     钠离子\n  [potassiumIon]  钾离子\n  [glucose]       葡萄糖分子\n *[atp]           ATP 分子\n}"
+      },
+      "briefName": {
+        "value": "{ $soluteType ->\n  [oxygen]        氧\n  [carbonDioxide] 二氧化碳\n  [sodiumIon]     钠\n  [potassiumIon]  钾\n  [glucose]       葡萄糖\n *[atp]           ATP\n}"
+      },
+      "amountComparison": {
+        "value": "{ $amount ->\n  *[none]  无\n  [equal] 内外数量相等\n  [allOutside] 全部在外部，内部无\n  [allInside] 全部在内部，外部无\n  [manyManyMoreOutside] 外部远多于内部\n  [manyMoreOutside] 外部明显多于内部\n  [aboutTwiceAsManyOutside] 外部约为内部的两倍\n  [aLotMoreOutside] 外部多很多\n  [someMoreOutside] 外部略多\n  [littleBitMoreOutside] 外部稍微多一点\n  [roughlyEqualOutside] 内外数量大致相等\n  [manyManyMoreInside] 内部远多于外部\n  [manyMoreInside] 内部明显多于外部\n  [aboutTwiceAsManyInside] 内部约为外部的两倍\n  [aLotMoreInside] 内部多很多\n  [someMoreInside] 内部略多\n  [littleBitMoreInside] 内部稍微多一点\n  [roughlyEqualInside] 内外数量大致相等\n}"
+      },
+      "averageCrossingDirection": {
+        "value": "{ $direction ->\n  [toOutside] 向外\n  [mostlyToOutside] 主要向外\n  [inBothDirections] 双向\n  [mostlyToInside] 主要向内\n  [toInside] 向内\n *[none] 最近无穿越\n}"
+      }
+    },
+    "solutesPanel": {
+      "oxygenRadioButton": {
+        "value": "氧，O2，非极性，小"
+      },
+      "carbonDioxideRadioButton": {
+        "value": "二氧化碳，CO2，非极性，小"
+      },
+      "sodiumIonRadioButton": {
+        "value": "钠离子，Na，正电，小"
+      },
+      "potassiumIonRadioButton": {
+        "value": "钾离子，K，正电，小"
+      },
+      "glucoseRadioButton": {
+        "value": "葡萄糖，六角环形，大"
+      },
+      "atpRadioButton": {
+        "value": "三磷酸腺苷，ATP，复杂，大"
+      },
+      "accessibleHelpText": {
+        "value": "为溶质调节器选择一种溶质。"
+      }
+    },
+    "soluteControl": {
+      "outside": {
+        "accessibleName": {
+          "value": "{ a11y_solutes_uppercaseName } 细胞外"
+        },
+        "accessibleHelpText": {
+          "value": "使用方向键或备用键盘快捷键调节外部所选溶质量。"
+        },
+        "readingBlockNameResponse": {
+          "value": "{ a11y_soluteControl_accessibleObjectResponse }，外部"
+        }
+      },
+      "inside": {
+        "accessibleName": {
+          "value": "{ a11y_solutes_uppercaseName } 细胞内"
+        },
+        "accessibleHelpText": {
+          "value": "使用方向键或备用键盘快捷键调节内部所选溶质量。"
+        },
+        "readingBlockNameResponse": {
+          "value": "{ a11y_soluteControl_accessibleObjectResponse }，内部"
+        }
+      },
+      "voicingHintResponse": {
+        "value": "使用方向键或方向按钮调节所选溶质。"
+      },
+      "accessibleRoleDescription": {
+        "value": "溶质调节器"
+      },
+      "accessibleHelpTextAllDisabled": {
+        "value": "已禁用，所选溶质已达最大量。"
+      },
+      "accessibleObjectResponse": {
+        "value": "{ $amount ->\n  [none] 无\n  [few] 少量\n  [some] 一些\n  [smallAmount] 少量\n  [several] 若干\n  [many] 很多\n  [largeAmount] 大量\n  [hugeAmount] 巨量\n *[maxAmount] 最大量\n} { a11y_solutes_lowercaseName }"
+      },
+      "accessibleContextResponse": {
+        "value": "{ $addedOrRemoved ->\n  [addedToMax] 添加了 {$delta}，溶质已达最大\n  [removedToMin] 已移除\n  [added]  添加了 {$delta}\n *[removed] 移除了 {$delta}\n}。现在，{ a11y_solutes_amountComparison }。"
+      },
+      "accessibleObjectResponseAtMax": {
+        "value": "溶质已达最大量"
+      }
+    },
+    "soluteConcentrationsAccordionBox": {
+      "descriptionContent": {
+        "value": "动态柱状图显示各溶质的浓度比较和最近的穿越情况。如有需要，暂停模拟以阅读详情。"
+      },
+      "accessibleContextResponseExpanded": {
+        "value": "动态柱状图显示溶质详情。"
+      },
+      "accessibleContextResponseCollapsed": {
+        "value": "动态柱状图已隐藏。"
+      },
+      "voicingHintResponseCollapsed": {
+        "value": "展开以显示带有溶质详情的动态柱状图。"
+      },
+      "barChart": {
+        "accessibleNameWithNoParticles": {
+          "value": "{ a11y_solutes_uppercaseName }：外部无，内部无。"
+        },
+        "accessibleNameWithParticles": {
+          "value": "{ a11y_solutes_uppercaseName }：{ a11y_solutes_amountComparison }；穿越方向 { a11y_solutes_averageCrossingDirection }；外部 { $outsideAmount ->\n  [none] 无\n  [few] 少量\n  [some] 一些\n  [smallAmount] 少量\n  [several] 若干\n  [many] 很多\n  [largeAmount] 大量\n  [hugeAmount] 巨量\n *[maxAmount] 最大量\n}，内部 { $insideAmount ->\n  [none] 无\n  [few] 少量\n  [some] 一些\n  [smallAmount] 少量\n  [several] 若干\n  [many] 很多\n  [largeAmount] 大量\n  [hugeAmount] 巨量\n *[maxAmount] 最大量\n}。"
+        },
+        "glucoseMetabolism": {
+          "value": "葡萄糖在细胞代谢过程中从内部消失。"
+        },
+        "accessibleNameWithParticlesAndGlucoseMetabolism": {
+          "value": "{ a11y_soluteConcentrationsAccordionBox_barChart_accessibleNameWithParticles } { a11y_soluteConcentrationsAccordionBox_barChart_glucoseMetabolism }"
+        },
+        "accessibleNameWithNoParticlesAndGlucoseMetabolism": {
+          "value": "{ a11y_soluteConcentrationsAccordionBox_barChart_accessibleNameWithNoParticles } { a11y_soluteConcentrationsAccordionBox_barChart_glucoseMetabolism }"
+        }
+      }
+    },
+    "ligandToggleButton": {
+      "accessibleHelpText": {
+        "value": "向细胞外部添加或移除三角形和星形配体。"
+      },
+      "addedAccessibleContextResponse": {
+        "value": "外部充满配体。"
+      },
+      "removedAccessibleContextResponse": {
+        "value": "配体已移除。"
+      }
+    },
+    "observationWindow": {
+      "accessibleHeading": {
+        "value": "观察窗口"
+      }
+    },
+    "cellMembrane": {
+      "accessibleHeading": {
+        "value": "细胞膜"
+      },
+      "leadingParagraph": {
+        "value": "放大显示的细胞横截面中有："
+      },
+      "accessibleHelpText": {
+        "proteinsHidden": {
+          "noSolutes": {
+            "value": "请调节溶质类型和数量。"
+          },
+          "withSolutes": {
+            "value": "观察穿越的溶质。请调节溶质类型和数量。"
+          }
+        },
+        "proteinsShown": {
+          "noProteins": {
+            "noSolutes": {
+              "value": "请添加溶质和蛋白质。"
+            },
+            "withSolutes": {
+              "value": "观察穿越的溶质。请调节溶质和蛋白质。"
+            }
+          },
+          "withProteins": {
+            "noSolutes": {
+              "value": "请调节溶质和蛋白质。"
+            },
+            "withSolutes": {
+              "value": "观察穿越的溶质和蛋白质变化。请调节溶质和蛋白质。"
+            }
+          }
+        }
+      }
+    },
+    "transportProtein": {
+      "grabbedResponse": {
+        "value": "已抓取。"
+      },
+      "initialGrabbedHintResponse": {
+        "value": "使用 A 或 D 键选择插槽。空格释放。Delete 删除。"
+      },
+      "offMembraneResponse": {
+        "value": "工具箱上方，膜外。"
+      },
+      "releasedReplacedResponse": {
+        "value": "已释放到膜中。蛋白质已替换。"
+      },
+      "deletedResponse": {
+        "value": "已抓取的蛋白质已删除。"
+      },
+      "cancelledBackToSlotResponse": {
+        "value": "已取消。回到膜中。"
+      },
+      "cancelledBackToToolboxResponse": {
+        "value": "回到工具箱中。"
+      },
+      "reorderedResponse": {
+        "value": "已重新排序。"
+      },
+      "proteinLocation": {
+        "value": "膜中，第 { $proteinIndex } 个，共 { $proteinCount } 个蛋白质 "
+      },
+      "accessibleName": {
+        "value": "{ $nameResponse }，{ a11y_transportProtein_proteinLocation }"
+      },
+      "voicingHintResponse": {
+        "general": {
+          "value": "空格抓取或释放。"
+        },
+        "mouseInputFromToolbox": {
+          "value": "移动到膜上。"
+        },
+        "mouseInputFromMembrane": {
+          "value": "重新排序或从膜上移除。"
+        }
+      },
+      "accessibleObjectResponse": {
+        "value": "{ $state ->\n   [openToInsideEmpty] 向内开放\n   [openToInsideSodiumBound] 向内开放\n   [openToInsideSodiumAndATPBound] 向内开放\n   [openToInsideSodiumAndPhosphateBound] 向内开放\n   [openToOutsideAwaitingPotassium] 向外开放\n   [openToOutsidePotassiumBound] 向外开放\n\n   [openToOutsideAwaitingParticles] 向外开放\n   [openToOutsideAllParticlesBound] 向外开放\n   [openToInside] 向内开放\n\n   [closedNegative70mV] 关闭\n   [openNegative50mV] 开放\n   [closed30mV] 关闭\n\n   [closedNegative50mV] 关闭\n   [open30mV] 开放\n\n   [ligandBoundClosed] 关闭\n   [ligandBoundOpen] 开放\n   [ligandUnboundOpen] 开放\n   [closed] 关闭\n\n *[open] 开放\n}"
+      },
+      "accessibleParagraph": {
+        "value": "{ $state ->\n   [openToInsideEmpty] 等待钠，向内开放\n   [openToInsideSodiumBound] 3 个钠已结合，等待磷酸盐，向内开放\n   [openToInsideSodiumAndATPBound] ATP 反应，磷酸盐结合，将 3 个钠泵出，向内开放\n   [openToInsideSodiumAndPhosphateBound] 磷酸盐结合，将 3 个钠泵出，向内开放\n   [openToOutsideAwaitingPotassium] 磷酸盐结合，等待钾，向外开放\n   [openToOutsidePotassiumBound] 磷酸盐漂走，将 2 个钾泵入，向外开放\n\n   [openToOutsideAwaitingParticles] { $warning ->\n     [shown] 警告，外部钠浓度过低无法结合，向外开放\n     *[hidden] 等待钠和葡萄糖，向外开放\n   }\n   [openToOutsideAllParticlesBound] 钠和葡萄糖已结合，向外开放\n   [openToInside] 将 2 个钠和 1 个葡萄糖泵入，向内开放\n\n   [ligandBoundClosed] { $proteinType ->\n     [sodiumIonLigandGatedChannel] 三角形配体结合，通道打开\n     *[potassiumIonLigandGatedChannel] 星形配体结合，通道打开\n   }\n   [ligandBoundOpen] { $proteinType ->\n     [sodiumIonLigandGatedChannel] 通道打开，绑定了三角形配体\n     *[potassiumIonLigandGatedChannel] 通道打开，绑定了星形配体\n   }\n   [ligandUnboundOpen] { $proteinType ->\n     [sodiumIonLigandGatedChannel] 三角形配体漂走，通道关闭\n     *[potassiumIonLigandGatedChannel] 星形配体漂走，通道关闭\n   }\n   [closed] { $proteinType ->\n     [sodiumIonLigandGatedChannel] 通道关闭，无三角形配体结合\n     *[potassiumIonLigandGatedChannel] 通道关闭，无星形配体结合\n   }\n\n   [closedNegative70mV] -70 mV 时通道关闭\n   [openNegative50mV] -50 mV 时通道开放\n   [closed30mV] 30 mV 时通道关闭\n\n   [closedNegative50mV] -50 mV 时通道关闭\n   [open30mV] 30 mV 时通道开放\n\n *[open] 通道开放\n}."
+      },
+      "accessibleContextResponse": {
+        "value": "{ $state ->\n   [openToInsideEmpty] 磷酸盐漂走，将 2 个钾泵入\n   [openToInsideSodiumAndATPBound] ATP 反应，磷酸盐结合，将 3 个钠泵出\n\n *[openToInside] { $glucoseBehavior ->\n     [metabolized] 将 2 个钠和 1 个葡萄糖泵入，葡萄糖被代谢\n     *[persistent] 将 2 个钠和 1 个葡萄糖泵入\n   }\n\n   [ligandBoundOpen] { $proteinType ->\n     [sodiumIonLigandGatedChannel] 三角形配体结合，开放\n     *[potassiumIonLigandGatedChannel] 星形配体结合，开放\n   }\n   [closed] { $proteinType ->\n     [sodiumIonLigandGatedChannel] 三角形配体漂走，关闭\n     *[potassiumIonLigandGatedChannel] 星形配体漂走，关闭\n   }\n}."
+      },
+      "accessibleNameMoving": {
+        "value": "插槽 { $slotIndex } / { $slotCount }"
+      },
+      "accessibleObjectResponseMoving": {
+        "value": "在 { $slotContents } 上方"
+      },
+      "accessibleNameAndObjectResponse": {
+        "value": "{ $nameResponse }，{ $objectResponse }"
+      },
+      "empty": {
+        "value": "空插槽"
+      },
+      "briefName": {
+        "value": "{ $type ->\n  [sodiumIonLeakageChannel]         钠选择性泄漏通道\n  [potassiumIonLeakageChannel]      钾选择性泄漏通道\n  [sodiumIonVoltageGatedChannel]    钠选择性电压门控通道\n  [potassiumIonVoltageGatedChannel] 钾选择性电压门控通道\n  [sodiumIonLigandGatedChannel]     钠选择性配体门控通道\n  [potassiumIonLigandGatedChannel]  钾选择性配体门控通道\n  [sodiumPotassiumPump]             钠钾泵\n *[sodiumGlucoseCotransporter]      钠葡萄糖协同转运体\n}"
+      }
+    },
+    "membranePotential": {
+      "sodiumVoltageGatedOpenedResponse": {
+        "value": "钠选择性电压门控，开放。"
+      },
+      "sodiumVoltageGatedClosedResponse": {
+        "value": "钠选择性电压门控，关闭。"
+      },
+      "potassiumVoltageGatedOpenedResponse": {
+        "value": "钾选择性电压门控，开放。"
+      },
+      "potassiumVoltageGatedClosedResponse": {
+        "value": "钾选择性电压门控，关闭。"
+      },
+      "sodiumOpenedPotassiumOpenedResponse": {
+        "value": "{ a11y_membranePotential_sodiumVoltageGatedOpenedResponse } { a11y_membranePotential_potassiumVoltageGatedOpenedResponse }"
+      },
+      "sodiumOpenedPotassiumClosedResponse": {
+        "value": "{ a11y_membranePotential_sodiumVoltageGatedOpenedResponse } { a11y_membranePotential_potassiumVoltageGatedClosedResponse }"
+      },
+      "sodiumClosedPotassiumOpenedResponse": {
+        "value": "{ a11y_membranePotential_potassiumVoltageGatedOpenedResponse } { a11y_membranePotential_sodiumVoltageGatedClosedResponse } "
+      },
+      "sodiumClosedPotassiumClosedResponse": {
+        "value": "电压门控通道关闭。"
+      },
+      "noChangeResponse": {
+        "value": "转运蛋白无变化。"
+      }
+    },
+    "membraneTransportDescriber": {
+      "particleCrossing": {
+        "value": "{ a11y_solutes_briefName }} 穿越 { $direction ->\n  [inward] 进入\n *[outward] 出\n}"
+      },
+      "hints": {
+        "ligandGatedChannelWithoutLigands": {
+          "value": "配体门控蛋白关闭。寻找配体"
+        },
+        "voltageGatedChannelAtRestingPotential": {
+          "value": "电压门控蛋白关闭。检查膜电位"
+        },
+        "pumpAwaitingPhosphateWithoutATP": {
+          "value": "泵需要磷酸盐来源"
+        },
+        "sodiumGlucoseCotransporterWithLowOutsideSodium": {
+          "value": "协同转运体未结合钠。外部钠浓度过低"
+        }
+      },
+      "commaSeparator": {
+        "value": "，"
+      },
+      "andSeparator": {
+        "value": "和"
+      },
+      "sentencePattern": {
+        "value": "{ $content }。"
+      },
+      "crossingSteadilyInBothDirections": {
+        "value": "{ a11y_solutes_briefName } 持续双向穿越，内外大致相等"
+      },
+      "crossingChannelsWithDirection": {
+        "value": "{ a11y_solutes_briefName }} 穿越通道，{ a11y_solutes_averageCrossingDirection }"
+      },
+      "crossingMembraneWithDirection": {
+        "value": "{ a11y_solutes_briefName }} 穿越膜，{ a11y_solutes_averageCrossingDirection }"
+      },
+      "multipleSolutesCrossing": {
+        "value": "{ $soluteNames }}，穿越中"
+      },
+      "soluteComparisonWithName": {
+        "value": "{ a11y_solutes_briefName }}，{ a11y_solutes_amountComparison }"
+      },
+      "sodiumPumpedOutside": {
+        "value": "钠被泵出外部"
+      },
+      "potassiumPumpedInside": {
+        "value": "钾被泵入内部"
+      },
+      "sodiumPumpedOutsideAndPotassiumPumpedInside": {
+        "value": "钠被泵出外部，钾被泵入内部"
+      },
+      "sodiumAndGlucoseShuttledInside": {
+        "value": "钠和葡萄糖被运入内部"
+      }
+    },
+    "preferencesDialog": {
+      "simulation": {
+        "animateLipids": {
+          "accessibleContextResponseLeftValue": {
+            "value": "脂质动画已关闭。"
+          },
+          "accessibleContextResponseRightValue": {
+            "value": "脂质动画已开启。"
+          }
+        },
+        "glucoseMetabolism": {
+          "accessibleContextResponseLeftValue": {
+            "value": "葡萄糖代谢已关闭。"
+          },
+          "accessibleContextResponseRightValue": {
+            "value": "葡萄糖代谢已开启。"
+          }
+        }
+      },
+      "audio": {
+        "sounds": {
+          "stereoCrossingSounds": {
+            "accessibleContextResponseLeftValue": {
+              "value": "立体声穿越音效已关闭。"
+            },
+            "accessibleContextResponseRightValue": {
+              "value": "立体声穿越音效已开启。"
+            }
+          }
+        }
+      }
+    }
   }
 }

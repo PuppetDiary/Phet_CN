@@ -1032,5 +1032,413 @@
         "newValue": "Q3"
       }
     ]
+  },
+  "a11y": {
+    "screenSummary": {
+      "playArea": {
+        "guidingQuestion": {
+          "value": "引导问题：\"{$question}\""
+        }
+      },
+      "currentDetails": {
+        "countAtMeter": {
+          "value": "{$number} 在 {$distance} 公尺处"
+        }
+      },
+      "interactionHint": {
+        "noBalls": {
+          "value": "踢球来创建一个数据集。"
+        }
+      }
+    },
+    "soccerField": {
+      "accessibleHeading": {
+        "value": "足球场"
+      }
+    },
+    "eraseButton": {
+      "accessibleName": {
+        "value": "清除当前资料"
+      },
+      "accessibleHelpText": {
+        "value": "从球场移除足球。"
+      },
+      "contextResponse": {
+        "value": "球场已清除。"
+      }
+    },
+    "medianPredictionSlider": {
+      "accessibleName": {
+        "value": "中位数预测"
+      }
+    },
+    "meanPredictionSlider": {
+      "accessibleName": {
+        "value": "平均预测"
+      }
+    },
+    "medianCheckbox": {
+      "accessibleName": {
+        "value": "球场上的中位数"
+      },
+      "accessibleHelpText": {
+        "value": "显示或隐藏标记中位数足球或多个足球的红色高亮，以及指向中位数踢球距离的箭头。"
+      }
+    },
+    "meanCheckbox": {
+      "accessibleName": {
+        "value": "球场上的平均数"
+      },
+      "accessibleHelpText": {
+        "value": "显示或隐藏指示平均踢球距离的紫色三角形。"
+      }
+    },
+    "predictMedianCheckbox": {
+      "accessibleName": {
+        "value": "预测中位数指标"
+      },
+      "accessibleHelpText": {
+        "value": "显示或隐藏球场上可移动的预测指标。"
+      }
+    },
+    "predictMeanCheckbox": {
+      "accessibleName": {
+        "value": "预测平均指标"
+      },
+      "accessibleHelpText": {
+        "value": "显示或隐藏球场上可移动的预测指标。"
+      }
+    },
+    "infoDialog": {
+      "dataValues": {
+        "value": "资料值（公尺）：{$values}"
+      }
+    },
+    "noKicksLeftResponse": {
+      "value": "没有剩余踢球次数"
+    },
+    "meanReadout": {
+      "accessibleParagraph": {
+        "value": "{$value ->\n[null] 平均 = ?\n[1] 平均 = 1 公尺\n*[other] 平均 = {$value} 公尺\n}"
+      }
+    },
+    "medianReadout": {
+      "accessibleParagraph": {
+        "value": "{$value ->\n[null] 中位数 = ?\n[1] 中位数 = 1 公尺\n*[other] 中位数 = {$value} 公尺\n}"
+      }
+    },
+    "medianScreen": {
+      "screenButtonsHelpText": {
+        "value": "踢球并探索数据集以找到中位数的值。"
+      },
+      "screenSummary": {
+        "playArea": {
+          "value": "在球场边缘，多达 {$maxBalls} 个踢球者准备将足球踢到 1 到 15 公尺之间的随机距离。当球落在相同距离时会堆叠起来。每踢一次球，会出现一张记录踢球距离的排序数据卡。每个球都可以移动以调整其踢球距离。有复选框可以自动排序数据卡，以及高亮或预测中位数。"
+        },
+        "controlArea": {
+          "value": "此外，还可以访问详细的中位数信息、清除数据集，以及重置模拟器以重新开始。"
+        },
+        "currentDetails": {
+          "soccerBalls": {
+            "value": "目前，{ NUMBER($number, type: \"cardinal\") ->\n[0] 球场上没有足球。\n[1] 球场上有一足球：\n*[other] 球场上 {$number} 个足球：\n}"
+          },
+          "cards": {
+            "value": "{ NUMBER($number, type: \"cardinal\") ->\n[0] 没有列出数据卡。\n[1] 1 张数据卡记录踢球距离为 {$distances}。\n*[other] {$number} 张数据卡记录踢球距离为 {$distances}。\n}"
+          }
+        },
+        "interactionHint": {
+          "someBalls": {
+            "value": "移动足球或排序距离数据卡以探索数据。"
+          }
+        }
+      },
+      "dataCardsGroup": {
+        "noCardsAccessibleName": {
+          "value": "没有可抓取的卡片"
+        },
+        "selectAccessibleName": {
+          "value": "踢球距离 {$value}，第 {$index} 张卡片，共 {$total} 张"
+        },
+        "sortAccessibleName": {
+          "value": "踢球距离 {$value}，第 {$index} 位置，共 {$total} 个"
+        },
+        "selectAccessibleHelpText": {
+          "value": "选择卡片以抓取或释放来排序数据"
+        },
+        "sortAccessibleHelpText": {
+          "value": "移动卡片来排序数据"
+        }
+      },
+      "sortDataCheckbox": {
+        "accessibleName": {
+          "value": "排序数据卡"
+        },
+        "accessibleHelpText": {
+          "value": "探索是否启用数据自动数值排序。"
+        }
+      },
+      "medianCheckbox": {
+        "accessibleName": {
+          "value": "数据卡上的中位数"
+        },
+        "accessibleHelpText": {
+          "value": "分析数据卡时是否显示中位数值，并在数据排序后定位。"
+        }
+      },
+      "infoButton": {
+        "accessibleName": {
+          "value": "中位数详情"
+        }
+      }
+    },
+    "meanAndMedianScreen": {
+      "screenButtonsHelpText": {
+        "value": "踢球并探索数据集以比较平均数和中位数。"
+      },
+      "screenSummary": {
+        "playArea": {
+          "value": "在球场边缘，多达 {$maxBalls} 个踢球者准备将足球踢到 1 到 15 公尺之间的随机距离。当球落在相同距离时会堆叠起来。每踢一次球，图表上会出现一个记录踢球距离的标记。每个球都可以移动以调整其踢球距离。有复选框可以高亮或预测中位数和平均数。"
+        },
+        "currentDetails": {
+          "soccerBalls": {
+            "value": "目前，{ NUMBER($number, type: \"cardinal\") ->\n[0] 球场上没有足球。\n[1] 球场上有一足球：\n*[other] 球场上 {$number} 个足球：\n}"
+          },
+          "plot": {
+            "value": "{ NUMBER($number, type: \"cardinal\") ->\n[0] 图表上没有标记。\n[1] 1 个标记与球场上的踢球距离匹配。\n*[other] {$number} 个标记与球场上的踢球距离匹配。\n}"
+          }
+        },
+        "controlArea": {
+          "value": "此外，还可以访问详细的平均数和中位数信息、清除数据集，以及重置模拟器以重新开始。"
+        },
+        "interactionHint": {
+          "someBalls": {
+            "value": "移动足球或探索图表来分析数据。"
+          }
+        }
+      },
+      "meanAndMedianAccordionBox": {
+        "accessibleParagraph": {
+          "value": "踢球距离（公尺）图表。"
+        }
+      },
+      "plotMedianCheckbox": {
+        "accessibleName": {
+          "value": "图表上的中位数"
+        },
+        "accessibleHelpText": {
+          "value": "分析数据时是否在图表上显示中位数值并定位。"
+        }
+      },
+      "meanCheckbox": {
+        "accessibleName": {
+          "value": "图表上的平均数"
+        },
+        "accessibleHelpText": {
+          "value": "分析数据时是否在图表上显示平均数值并定位。"
+        }
+      },
+      "infoButton": {
+        "accessibleName": {
+          "value": "中位数和平均数详情"
+        }
+      },
+      "infoDialog": {
+        "meanEquationDescription": {
+          "value": "平均 = {$values} 总和除以 {$total}，等于 {$sum} 除以 {$total}"
+        }
+      }
+    },
+    "variabilityScreen": {
+      "screenButtonsHelpText": {
+        "value": "踢球并探索数据集以比较变异性度量。"
+      },
+      "screenSummary": {
+        "playArea": {
+          "value": "在球场边缘，四个踢球者中的一个准备踢多达 {$maxBalls} 个足球，踢到 1 到 15 公尺之间的随机距离。当球落在相同距离时会堆叠起来。每踢一次球，图表上会出现一个记录踢球距离的标记。每个球都可以移动以调整其踢球距离。探索每个踢球者的踢球分布的范围、四分位距（IQR）和平均绝对离差（MAD）。"
+        },
+        "currentDetails": {
+          "soccerBalls": {
+            "value": "已选择 {$kicker} 踢球者。目前，{ NUMBER($number, type: \"cardinal\") ->\n[0] 球场上没有足球。\n[1] 球场上有一足球：\n*[other] 球场上 {$number} 个足球：\n}"
+          },
+          "plot": {
+            "value": "{ NUMBER($number, type: \"cardinal\") ->\n[0] 图表上没有标记\n[1] 1 个标记与球场上的踢球距离匹配\n*[other] {$number} 个标记与球场上的踢球距离匹配\n}，正在探索 {$measure}。"
+          }
+        },
+        "controlArea": {
+          "value": "此外，还可以访问详细的变异性信息、清除数据集，以及重置模拟器以重新开始。"
+        },
+        "interactionHint": {
+          "someBalls": {
+            "value": "移动足球或探索图表来分析数据。"
+          }
+        }
+      },
+      "sceneKickerRadioButtonGroup": {
+        "accessibleName": {
+          "value": "选择踢球者"
+        },
+        "accessibleHelpText": {
+          "value": "比较四个不同踢球者的踢球距离分布。"
+        },
+        "kicker1RadioButton": {
+          "accessibleName": {
+            "value": "绿色球衣 1"
+          }
+        },
+        "kicker2RadioButton": {
+          "accessibleName": {
+            "value": "蓝色球衣 2"
+          }
+        },
+        "kicker3RadioButton": {
+          "accessibleName": {
+            "value": "红色球衣 3"
+          }
+        },
+        "kicker4RadioButton": {
+          "accessibleName": {
+            "value": "黄色球衣 4"
+          }
+        }
+      },
+      "pointerCheckbox": {
+        "accessibleHelpText": {
+          "value": "显示或隐藏球场上可移动的预测指标。"
+        }
+      },
+      "pointerNode": {
+        "accessibleName": {
+          "value": "预测指标"
+        }
+      },
+      "measuresRadioButtonGroup": {
+        "accessibleName": {
+          "value": "变异性度量"
+        },
+        "accessibleHelpText": {
+          "value": "探索变异性度量。"
+        }
+      },
+      "measureAccordionBox": {
+        "rangeAccessibleHelpText": {
+          "value": "预测并查看踢球分布的范围。"
+        },
+        "rangeAccessibleParagraph": {
+          "value": "{ $value ->\n[null] 范围 = ?\n[1] 范围 = 1 公尺\n*[other] 范围 = { $value } 公尺\n}"
+        },
+        "iqrAccessibleHelpText": {
+          "value": "预测并查看踢球分布的 IQR。"
+        },
+        "iqrAccessibleParagraph": {
+          "value": "{ $value ->\n[null] IQR = ?\n[1] IQR = 1 公尺\n*[other] IQR = { $value } 公尺\n}"
+        },
+        "madAccessibleHelpText": {
+          "value": "预测并查看踢球分布的 MAD。"
+        },
+        "madAccessibleParagraph": {
+          "value": "{ $value ->\n[null] MAD = ?\n[1] MAD = 1 公尺\n*[other] MAD = { $value } 公尺\n}"
+        }
+      },
+      "rangeCheckbox": {
+        "accessibleHelpText": {
+          "value": "探索是否在图表上高亮范围。"
+        }
+      },
+      "iqrCheckbox": {
+        "accessibleHelpText": {
+          "value": "探索是否在图表上高亮 IQR。"
+        }
+      },
+      "madCheckbox": {
+        "accessibleHelpText": {
+          "value": "探索是否在图表上高亮 MAD。"
+        }
+      },
+      "infoButton": {
+        "accessibleName": {
+          "value": "{$measure} 详情"
+        }
+      },
+      "infoDialog": {
+        "rangeMinusPattern": {
+          "value": "范围 = {$max} − {$min}"
+        },
+        "iqrMinusPattern": {
+          "value": "IQR = {$q3} − {$q1}"
+        },
+        "boxPlot": {
+          "accessibleParagraph": {
+            "value": "有一个箱形图，箭头指向最小值、Q1、中位数、Q3 和最大值。IQR = Q3 − Q1。"
+          }
+        },
+        "madEquationDescription": {
+          "value": "MAD = {$madValues} 的总和除以 {$total}，等于 {$numerator} 除以 {$total}。"
+        },
+        "madPlot": {
+          "accessibleParagraph": {
+            "value": "有一个图表显示从每个踢球点到平均数左右两侧的距离。MAD = 这些距离的平均值。"
+          }
+        }
+      },
+      "intervalTool": {
+        "accessibleHeading": {
+          "value": "间隔工具控件"
+        },
+        "accessibleHelpText": {
+          "value": "定义间隔区域的边界。移动间隔区域以估计分布变异性或未来踢球位置。"
+        },
+        "handle1": {
+          "accessibleName": {
+            "value": "边界 A"
+          }
+        },
+        "handle2": {
+          "accessibleName": {
+            "value": "边界 B"
+          }
+        },
+        "rectangle": {
+          "accessibleName": {
+            "value": "间隔区域"
+          }
+        },
+        "rectangleObjectResponsePattern": {
+          "value": "边界为 {$valueA} 和 {$valueB}，宽度 {$width}"
+        }
+      }
+    },
+    "preferences": {
+      "plotTypeRadioButtonGroup": {
+        "accessibleHelpText": {
+          "value": "确定是在图表上用 x 还是点标记踢球距离。"
+        }
+      }
+    },
+    "keyboardHelp": {
+      "moveGrabbedBallOrCardDescription": {
+        "value": "使用左和右箭头键、A 和 D 键，或上和下箭头键或 W 和 S 键移动已抓取的球或卡片。"
+      },
+      "moveGrabbedBallDescription": {
+        "value": "使用左和右箭头键、A 和 D 键，或上和下箭头键或 W 和 S 键移动已抓取的球。"
+      },
+      "moveInLargerStepsDescription": {
+        "value": "使用 Page Up 或 Page Down 键以较大步伐移动。"
+      },
+      "jumpToStartOfNumberLineDescription": {
+        "value": "使用 Home 键跳到数线起始点。"
+      },
+      "jumpToEndOfNumberLineDescription": {
+        "value": "使用 End 键跳到数线结束点。"
+      },
+      "jumpToStartOfCardsOrNumberLineDescription": {
+        "value": "使用 Home 键跳到卡片或数线起始点。"
+      },
+      "jumpToEndOfCardsOrNumberLineDescription": {
+        "value": "使用 End 键跳到卡片或数线结束点。"
+      },
+      "jumpBallToTickMarkDescription": {
+        "value": "使用 0 到 9 数字键将球跳到刻度上。"
+      }
+    }
   }
 }

@@ -216,5 +216,16 @@
         "explanation": null
       }
     ]
+  },
+  "trace": {
+    "value": "痕迹量",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1773333553810,
+        "oldValue": "",
+        "newValue": "痕迹量"
+      }
+    ]
   }
 }

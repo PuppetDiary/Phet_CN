@@ -209,5 +209,70 @@
   },
   "keyboardHelpDialog.levelOutScreen.sliderControlNoun": {
     "value": "水或预测标记"
+  },
+  "a11y": {
+    "predictBalancePoint": {
+      "value": "预测平衡点"
+    },
+    "observeBalancePoint": {
+      "value": "观察平衡点"
+    },
+    "totalDistance": {
+      "value": "总距离"
+    },
+    "findBalancePoint": {
+      "value": "找到平衡点"
+    },
+    "predictionMark": {
+      "value": "预测标记"
+    },
+    "info": {
+      "value": "信息"
+    },
+    "totalNumberPattern": {
+      "value": "{{snack}} 总数"
+    },
+    "apples": {
+      "value": "苹果"
+    },
+    "candyBars": {
+      "value": "棒棒糖"
+    },
+    "personSnackPattern": {
+      "value": "人 {{index}} {{snack}}"
+    },
+    "pipeFlow": {
+      "value": "管道流量"
+    },
+    "cupWaterLevelPattern": {
+      "value": "杯子 {{index}} 水位"
+    },
+    "checkBalance": {
+      "value": "检查平衡"
+    },
+    "resetPillars": {
+      "value": "重置柱子"
+    },
+    "noCandyBarsToGrab": {
+      "value": "没有棒棒糖可抓取"
+    },
+    "sortingCandyBarPattern": {
+      "value": "堆 {{currentStack}} / {{totalStacks}}，移动顶部 {{stackHeight}} 根棒棒糖"
+    },
+    "selectingCandyBarPattern": {
+      "value": "堆 {{currentStack}} / {{totalStacks}}，顶部 {{stackHeight}} 根棒棒糖"
+    },
+    "closePipe": {
+      "value": "关闭管道"
+    },
+    "openPipe": {
+      "value": "打开管道"
+    },
+    "fulcrumOptions": {
+      "value": "支点选项"
+    },
+    "appleActions": {
+      "value": "苹果操作"
+    }
   }
 }

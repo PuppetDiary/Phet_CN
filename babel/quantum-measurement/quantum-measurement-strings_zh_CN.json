@@ -999,5 +999,135 @@
         "newValue": "垂直"
       }
     ]
+  },
+  "a11y": {
+    "equationAccessibleParagraphPattern": {
+      "value": "{{alpha}} 乘以向上态加 {{beta}} 乘以向下态。"
+    },
+    "singleCoinStatePattern": {
+      "value": "单硬币：{{state}}"
+    },
+    "quantumCoinsAccessibleParagraph": {
+      "value": "待准备的自旋态（alpha 乘以向上态加 beta 乘以向下态）"
+    },
+    "preparationAreaHeader": {
+      "classicalCoinToPrepare": {
+        "value": "待准备的经典硬币"
+      },
+      "classicalCoin": {
+        "value": "经典硬币"
+      },
+      "quantumCoinToPrepare": {
+        "value": "待准备的量子\"硬币\""
+      },
+      "preparedState": {
+        "value": "已准备状态"
+      },
+      "classicalAccessibleParagraphPattern": {
+        "value": "初始方向：{{initialCoinFaceState}}。正面概率：{{upProbability}}。背面概率：{{downProbability}}"
+      },
+      "quantumAccessibleParagraphPattern": {
+        "value": "初始方向：{{initialCoinFaceState}}。向上态概率：{{upProbability}}。向下态概率：{{downProbability}}"
+      }
+    },
+    "coinsScreen": {
+      "screenButtonsHelpText": {
+        "value": "玩转硬币屏幕"
+      },
+      "coinStates": {
+        "heads": {
+          "value": "正面"
+        },
+        "tails": {
+          "value": "背面"
+        },
+        "superposition": {
+          "value": "叠加态"
+        },
+        "up": {
+          "value": "向上"
+        },
+        "down": {
+          "value": "向下"
+        }
+      },
+      "probabilityNumberControls": {
+        "probabilityOfHeads": {
+          "value": "正面概率"
+        },
+        "probabilityOfHeadsHelpText": {
+          "value": "抛硬币正面朝上的概率"
+        },
+        "probabilityOfTails": {
+          "value": "背面概率"
+        },
+        "probabilityOfTailsHelpText": {
+          "value": "抛硬币背面朝上的概率"
+        },
+        "probabilityOfUp": {
+          "value": "向上概率，Alpha 平方"
+        },
+        "probabilityOfUpHelpText": {
+          "value": "硬币处于向上态的概率"
+        },
+        "probabilityOfDown": {
+          "value": "向下概率，Beta 平方"
+        },
+        "probabilityOfDownHelpText": {
+          "value": "硬币处于向下态的概率"
+        }
+      },
+      "initialOrientationHelpText": {
+        "value": "抛掷前硬币的方向"
+      },
+      "startMeasurement": {
+        "value": "开始测量"
+      },
+      "startMeasurementHelpText": {
+        "value": "准备待测量的硬币"
+      },
+      "prepareNewCoinHelpText": {
+        "value": "准备新硬币的按钮"
+      },
+      "identicalCoins": {
+        "value": "相同硬币"
+      },
+      "identicalCoinsHelpText": {
+        "value": "待准备的相同硬币数量"
+      }
+    },
+    "photonsScreen": {
+      "screenButtonsHelpText": {
+        "value": "玩转光子屏幕"
+      },
+      "photonBehaviorMode": {
+        "value": "光子行为"
+      },
+      "emitPhotonButton": {
+        "value": "光子源"
+      }
+    },
+    "spinScreen": {
+      "screenButtonsHelpText": {
+        "value": "玩转自旋屏幕"
+      }
+    },
+    "blochSphereScreen": {
+      "screenButtonsHelpText": {
+        "value": "玩转布洛赫球屏幕"
+      }
+    }
+  },
+  "averagePolarizationRepresentation": {
+    "value": "平均极化表示",
+    "history": [
+      {
+        "userId": 293040,
+        "timestamp": 1458182268971,
+        "oldValue": "",
+        "newValue": "平均极化表示",
+        "explanation": null
+      }
+    ]
   }
 }

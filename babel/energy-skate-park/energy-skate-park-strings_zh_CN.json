@@ -1,584 +1,1285 @@
 {
-  "energies.energy": {
-    "value": "能量",
-    "history": [
-      {
-        "userId": 271405,
-        "timestamp": 1665009880516,
-        "oldValue": "",
-        "newValue": "能量"
-      }
-    ]
+  "energies": {
+    "energy": {
+      "value": "Energy",
+      "history": []
+    },
+    "kinetic": {
+      "value": "Kinetic",
+      "history": []
+    },
+    "potential": {
+      "value": "Potential",
+      "history": []
+    },
+    "thermal": {
+      "value": "Thermal",
+      "history": []
+    },
+    "total": {
+      "value": "Total",
+      "history": []
+    }
   },
-  "energies.kinetic": {
-    "value": "动能",
-    "history": [
-      {
-        "userId": 271405,
-        "timestamp": 1665009880516,
-        "oldValue": "",
-        "newValue": "动能"
-      }
-    ]
+  "speedometer": {
+    "label": {
+      "value": "Speed",
+      "history": []
+    },
+    "metersPerSecondPattern": {
+      "value": "{{value}} m/s",
+      "history": []
+    }
   },
-  "energies.potential": {
-    "value": "势能",
-    "history": [
-      {
-        "userId": 271405,
-        "timestamp": 1665009880516,
-        "oldValue": "",
-        "newValue": "势能"
-      }
-    ]
+  "heightLabels": {
+    "zeroM": {
+      "value": "0 m",
+      "history": []
+    },
+    "heightEqualsZero": {
+      "value": "Height = 0",
+      "history": []
+    }
   },
-  "energies.thermal": {
-    "value": "热能",
-    "history": [
-      {
-        "userId": 271405,
-        "timestamp": 1665009880516,
-        "oldValue": "",
-        "newValue": "热能"
-      }
-    ]
+  "skaterControls": {
+    "restartSkater": {
+      "value": "重新开始滑板者",
+      "history": []
+    },
+    "label": {
+      "value": "滑板者",
+      "history": [
+        {
+          "userId": 271405,
+          "timestamp": 1665009880516,
+          "oldValue": "",
+          "newValue": "滑板者"
+        }
+      ]
+    },
+    "skater1MassPattern": {
+      "value": "滑板者1({{value}}千克)",
+      "history": [
+        {
+          "userId": 271405,
+          "timestamp": 1665009880516,
+          "oldValue": "",
+          "newValue": "滑板者1({{value}}千克)"
+        }
+      ]
+    },
+    "skater2MassPattern": {
+      "value": "滑板者2({{value}}千克)",
+      "history": [
+        {
+          "userId": 271405,
+          "timestamp": 1665009880516,
+          "oldValue": "",
+          "newValue": "滑板者2({{value}}千克)"
+        }
+      ]
+    },
+    "skater3MassPattern": {
+      "value": "滑板者3({{value}}千克)",
+      "history": [
+        {
+          "userId": 271405,
+          "timestamp": 1665009880516,
+          "oldValue": "",
+          "newValue": "滑板者3({{value}}千克)"
+        }
+      ]
+    },
+    "skater4MassPattern": {
+      "value": "滑板者4({{value}}千克)",
+      "history": [
+        {
+          "userId": 271405,
+          "timestamp": 1665009880516,
+          "oldValue": "",
+          "newValue": "滑板者4({{value}}千克)"
+        }
+      ]
+    },
+    "skater5MassPattern": {
+      "value": "滑板者5({{value}}千克)",
+      "history": [
+        {
+          "userId": 271405,
+          "timestamp": 1665009880516,
+          "oldValue": "",
+          "newValue": "滑板者5({{value}}千克)"
+        }
+      ]
+    },
+    "dogMassPattern": {
+      "value": "狗({{value}}千克)",
+      "history": [
+        {
+          "userId": 271405,
+          "timestamp": 1665009880516,
+          "oldValue": "",
+          "newValue": "狗({{value}}千克)"
+        }
+      ]
+    }
   },
-  "energies.total": {
-    "value": "总能量",
-    "history": [
-      {
-        "userId": 271405,
-        "timestamp": 1665009880516,
-        "oldValue": "",
-        "newValue": "总能量"
-      }
-    ]
+  "measuringTape": {
+    "units": {
+      "value": "m",
+      "history": []
+    }
   },
-  "speedometer.label": {
-    "value": "速度",
-    "history": [
-      {
-        "userId": 271405,
-        "timestamp": 1665009880516,
-        "oldValue": "",
-        "newValue": "速度"
-      }
-    ]
+  "visibilityControls": {
+    "path": {
+      "value": "路径",
+      "history": []
+    },
+    "referenceHeight": {
+      "value": "参考高度",
+      "history": []
+    },
+    "grid": {
+      "value": "网格",
+      "history": []
+    },
+    "speed": {
+      "value": "速度",
+      "history": []
+    }
   },
-  "heightLabels.zeroM": {
-    "value": "0 米",
-    "history": [
-      {
-        "userId": 271405,
-        "timestamp": 1665009880516,
-        "oldValue": "",
-        "newValue": "0 米"
-      }
-    ]
+  "trackControls": {
+    "stickToTrack": {
+      "value": "粘在轨道上",
+      "history": []
+    }
   },
-  "skaterControls.restartSkater": {
-    "value": "重新开始滑",
-    "history": [
-      {
-        "userId": 271405,
-        "timestamp": 1665009880516,
-        "oldValue": "",
-        "newValue": "重新开始滑"
+  "plots": {
+    "pieChart": {
+      "label": {
+        "value": "饼图",
+        "history": []
       }
-    ]
+    },
+    "barGraph": {
+      "label": {
+        "value": "柱状图",
+        "history": [
+          {
+            "userId": 271405,
+            "timestamp": 1665009880516,
+            "oldValue": "",
+            "newValue": "柱状图"
+          }
+        ]
+      }
+    },
+    "timeSwitchLabel": {
+      "value": "时间",
+      "history": []
+    },
+    "positionSwitchLabel": {
+      "value": "位置",
+      "history": []
+    },
+    "energyGraph": {
+      "label": {
+        "value": "能量图",
+        "history": []
+      }
+    },
+    "positionLabel": {
+      "value": "Position (m)",
+      "history": []
+    },
+    "energyLabel": {
+      "value": "Energy (J)",
+      "history": []
+    },
+    "timeLabel": {
+      "value": "Time (s)",
+      "history": []
+    }
   },
-  "speedometer.metersPerSecondPattern": {
-    "value": "{{value}}米/秒(m/s)",
-    "history": [
-      {
-        "userId": 271405,
-        "timestamp": 1665009880516,
-        "oldValue": "",
-        "newValue": "{{value}}米/秒(m/s)"
+  "physicalControls": {
+    "friction": {
+      "value": "Friction",
+      "history": []
+    },
+    "gravityControls": {
+      "moon": {
+        "value": "Moon",
+        "history": []
+      },
+      "earth": {
+        "value": "Earth",
+        "history": []
+      },
+      "jupiter": {
+        "value": "Jupiter",
+        "history": []
+      },
+      "gravity": {
+        "value": "Gravity",
+        "history": []
+      },
+      "gravityMetersPerSecondSquaredPattern": {
+        "value": "{{value}} m/s<sup>2</sup>",
+        "history": []
+      },
+      "gravityNewtonsPerKilogramPattern": {
+        "value": "{{value}} N/kg",
+        "history": []
       }
-    ]
+    },
+    "tiny": {
+      "value": "Tiny",
+      "history": []
+    },
+    "massControls": {
+      "mass": {
+        "value": "Mass",
+        "history": []
+      },
+      "massKilogramsPattern": {
+        "value": "{{value}} kg",
+        "history": []
+      }
+    },
+    "small": {
+      "value": "Small",
+      "history": []
+    },
+    "large": {
+      "value": "Large",
+      "history": []
+    },
+    "custom": {
+      "value": "Custom",
+      "history": []
+    },
+    "lots": {
+      "value": "Lots",
+      "history": []
+    },
+    "none": {
+      "value": "None",
+      "history": []
+    }
   },
-  "measuringTape.units": {
-    "value": " 米(m)",
-    "history": [
-      {
-        "userId": 271405,
-        "timestamp": 1665009880516,
-        "oldValue": "",
-        "newValue": " 米(m)"
-      }
-    ]
+  "energy-skate-park": {
+    "title": {
+      "value": "Energy Skate Park",
+      "history": []
+    }
   },
-  "visibilityControls.path": {
-    "value": "路径",
-    "history": [
-      {
-        "userId": 271405,
-        "timestamp": 1665009880516,
-        "oldValue": "",
-        "newValue": "路径"
-      }
-    ]
+  "screens": {
+    "graphs": {
+      "value": "Graphs",
+      "history": []
+    },
+    "intro": {
+      "value": "Intro",
+      "history": []
+    },
+    "measure": {
+      "value": "Measure",
+      "history": []
+    },
+    "playground": {
+      "value": "Playground",
+      "history": []
+    }
   },
-  "visibilityControls.referenceHeight": {
-    "value": "参考高度",
-    "history": [
-      {
-        "userId": 271405,
-        "timestamp": 1665009880516,
-        "oldValue": "",
-        "newValue": "参考高度"
-      }
-    ]
+  "pathSensor": {
+    "energyJoulesPattern": {
+      "value": "{{value}} J",
+      "history": []
+    },
+    "heightMetersPattern": {
+      "value": "Height = {{value}} m",
+      "history": []
+    },
+    "speedMetersPerSecondPattern": {
+      "value": "Speed = {{value}} m/s",
+      "history": []
+    }
   },
-  "visibilityControls.grid": {
-    "value": "栅格",
-    "history": [
-      {
-        "userId": 271405,
-        "timestamp": 1665009880516,
-        "oldValue": "",
-        "newValue": "栅格"
+  "a11y": {
+    "controlPanel": {
+      "experimentSettingsHeading": {
+        "value": "实验设置",
+        "history": []
       }
-    ]
+    },
+    "controlPointNode": {
+      "accessibleName": {
+        "value": "控制点 { $index }",
+        "history": []
+      },
+      "accessibleObjectResponse": {
+        "value": "位于 { $xCoordinate } { $yCoordinate } 米",
+        "history": []
+      }
+    },
+    "energyBarGraphAccordionBox": {
+      "accessibleHelpTextExpanded": {
+        "value": "柱状图实时显示滑板者的能量。暂停以分析数值。",
+        "history": []
+      },
+      "accessibleName": {
+        "value": "能量柱状图",
+        "history": []
+      },
+      "clearThermalButton": {
+        "accessibleContextResponse": {
+          "value": "热能已设置为零。",
+          "history": []
+        },
+        "accessibleHelpText": {
+          "value": "清除系统中积累的热能。",
+          "history": []
+        },
+        "accessibleName": {
+          "value": "清除热能",
+          "history": []
+        }
+      },
+      "zoomButtonGroup": {
+        "zoomIn": {
+          "accessibleHelpText": {
+            "value": "调整柱状图的视觉比例。",
+            "history": []
+          },
+          "accessibleName": {
+            "value": "放大",
+            "history": []
+          }
+        },
+        "zoomLevelResponse": {
+          "value": "缩放级别 { $level } / { $max }。",
+          "history": []
+        },
+        "zoomOut": {
+          "accessibleHelpText": {
+            "value": "调整柱状图的视觉比例。",
+            "history": []
+          },
+          "accessibleName": {
+            "value": "缩小",
+            "history": []
+          }
+        }
+      }
+    },
+    "energyGraph": {
+      "accessibleHelpTextCollapsed": {
+        "value": "探索滑板者能量作为位置或时间函数的图像。",
+        "history": []
+      },
+      "checkboxGroupParagraph": {
+        "value": "选择在能量图中显示的能量类型。",
+        "history": []
+      },
+      "energyKinetic": {
+        "value": "动能",
+        "history": []
+      },
+      "energyNone": {
+        "value": "无",
+        "history": []
+      },
+      "energyPotential": {
+        "value": "势能",
+        "history": []
+      },
+      "energyThermal": {
+        "value": "热能",
+        "history": []
+      },
+      "energyTotal": {
+        "value": "总能量",
+        "history": []
+      },
+      "eraserButton": {
+        "accessibleName": {
+          "value": "清除能量图数据",
+          "history": []
+        },
+        "positionResponse": {
+          "value": "能量图中的数据已清除。",
+          "history": []
+        },
+        "timeResponse": {
+          "value": "能量图中的数据已清除。时间重置为0秒。",
+          "history": []
+        }
+      },
+      "graphCursor": {
+        "accessibleHelpText": {
+          "value": "拖动时间并回顾滑板者数据。按空格键暂停或播放。",
+          "history": []
+        },
+        "accessibleName": {
+          "value": "图形光标",
+          "history": []
+        },
+        "movementResponse": {
+          "value": "当前时间 {$sampleTime} 秒。",
+          "history": []
+        }
+      },
+      "graphDescriptionParagraph": {
+        "value": "能量图将能量绘制为 {$variable} 的函数。能量以焦耳为单位，{$variable} 以 {$units} 为单位。当前，图中显示 {$checkedEnergiesList} 能量。",
+        "history": []
+      },
+      "kineticCheckbox": {
+        "accessibleContextResponseChecked": {
+          "value": "动能数据已显示在能量图中。",
+          "history": []
+        },
+        "accessibleContextResponseUnchecked": {
+          "value": "动能数据已从能量图中移除。",
+          "history": []
+        }
+      },
+      "potentialCheckbox": {
+        "accessibleContextResponseChecked": {
+          "value": "势能已显示在能量图中。",
+          "history": []
+        },
+        "accessibleContextResponseUnchecked": {
+          "value": "势能数据已从能量图中移除。",
+          "history": []
+        }
+      },
+      "thermalCheckbox": {
+        "accessibleContextResponseChecked": {
+          "value": "热能已显示在能量图中。",
+          "history": []
+        },
+        "accessibleContextResponseUnchecked": {
+          "value": "热能数据已从能量图中移除。",
+          "history": []
+        }
+      },
+      "totalCheckbox": {
+        "accessibleContextResponseChecked": {
+          "value": "总能量已显示在能量图中。",
+          "history": []
+        },
+        "accessibleContextResponseUnchecked": {
+          "value": "总能量数据已从能量图中移除。",
+          "history": []
+        }
+      },
+      "unitsMeters": {
+        "value": "米",
+        "history": []
+      },
+      "unitsSeconds": {
+        "value": "秒",
+        "history": []
+      },
+      "variablePosition": {
+        "value": "位置",
+        "history": []
+      },
+      "variableSwitch": {
+        "accessibleHelpText": {
+          "value": "将滑板者能量绘制为位置或时间的函数。",
+          "history": []
+        }
+      },
+      "variableTime": {
+        "value": "时间",
+        "history": []
+      },
+      "zoomButtonGroup": {
+        "zoomIn": {
+          "accessibleHelpText": {
+            "value": "仅调整能量轴的视觉比例。",
+            "history": []
+          },
+          "accessibleName": {
+            "value": "放大能量轴",
+            "history": []
+          }
+        },
+        "zoomLevelResponse": {
+          "value": "能量范围现在是 {$min} 到 {$max} 焦耳。",
+          "history": []
+        },
+        "zoomOut": {
+          "accessibleHelpText": {
+            "value": "仅调整能量轴的视觉比例。",
+            "history": []
+          },
+          "accessibleName": {
+            "value": "缩小能量轴",
+            "history": []
+          }
+        }
+      }
+    },
+    "energyReadoutPattern": {
+      "value": "能量（焦耳）：动能 {$kinetic}，势能 {$potential}，热能 {$thermal}，总能量 {$total}。",
+      "history": []
+    },
+    "energySensorNode": {
+      "accessibleHeading": {
+        "value": "能量传感器",
+        "history": []
+      },
+      "accessibleHelpText": {
+        "value": "沿滑板者的路径移动探头以测量速度、高度和能量。当滑板者转身时路径会消失。暂停以分析数值。",
+        "history": []
+      },
+      "accessibleName": {
+        "value": "能量传感器探头",
+        "history": []
+      },
+      "movedOffSamples": {
+        "value": "传感器已移出采样点。",
+        "history": []
+      },
+      "nothingToMeasure": {
+        "value": "暂无可测量内容。",
+        "history": []
+      },
+      "sampleReadoutPattern": {
+        "value": "高度 {$height} 米。速度 {$speed} 米每秒。",
+        "history": []
+      }
+    },
+    "eraseTracksButton": {
+      "accessibleContextResponse": {
+        "value": "所有轨道已从你的滑板场中移除。",
+        "history": []
+      },
+      "accessibleName": {
+        "value": "清除轨道",
+        "history": []
+      }
+    },
+    "frictionSlider": {
+      "accessibleHelpText": {
+        "value": "设置摩擦系数，范围从无到最大。",
+        "history": []
+      }
+    },
+    "grabSkaterButton": {
+      "accessibleHelpText": {
+        "value": "寻找滑板者并抓住它。抓住后，使用键盘快捷键附着到轨道或沿轨道移动。",
+        "history": []
+      }
+    },
+    "gravityComboBox": {
+      "accessibleContextResponse": {
+        "value": "重力现在为 {$gravityValue}。",
+        "history": []
+      },
+      "accessibleHelpText": {
+        "value": "将重力加速度设置为匹配所选参考值。",
+        "history": []
+      },
+      "accessibleName": {
+        "value": "重力参考",
+        "history": []
+      }
+    },
+    "gravityControl": {
+      "accessibleHelpText": {
+        "value": "设置重力加速度。",
+        "history": []
+      },
+      "accessibleValuePattern": {
+        "value": "{$value} { $units -> [metersPerSecondSquared] 米每二次方秒 *[newtonsPerKilogram] 牛顿每千克 }",
+        "history": []
+      }
+    },
+    "gravitySlider": {
+      "accessibleHelpText": {
+        "value": "设置重力加速度，范围从小到大。",
+        "history": []
+      }
+    },
+    "gridCheckbox": {
+      "accessibleContextResponseChecked": {
+        "value": "网格线已显示。",
+        "history": []
+      },
+      "accessibleContextResponseUnchecked": {
+        "value": "网格线已隐藏。",
+        "history": []
+      },
+      "accessibleHelpText": {
+        "value": "显示或隐藏滑板轨道后面的网格线以测量高度。",
+        "history": []
+      }
+    },
+    "keyboardHelpDialog": {
+      "connectTrackEndpoints": {
+        "cancel": {
+          "value": "取消",
+          "history": []
+        },
+        "moveThroughOptions": {
+          "value": "切换选项",
+          "history": []
+        },
+        "selectOption": {
+          "value": "选择选项",
+          "history": []
+        },
+        "showOptions": {
+          "value": "显示选项",
+          "history": []
+        }
+      }
+    },
+    "massControl": {
+      "accessibleHelpText": {
+        "value": "设置滑板者质量。",
+        "history": []
+      },
+      "accessibleValuePattern": {
+        "value": "{$value} 千克",
+        "history": []
+      }
+    },
+    "massSlider": {
+      "accessibleHelpText": {
+        "value": "设置滑板者质量，范围从小到大。",
+        "history": []
+      }
+    },
+    "measuringTapeNode": {
+      "accessibleHeading": {
+        "value": "卷尺",
+        "history": []
+      }
+    },
+    "noDataParagraph": {
+      "value": "暂无数据可显示。抓住滑板者开始体验。",
+      "history": []
+    },
+    "pathCheckbox": {
+      "accessibleContextResponseChecked": {
+        "value": "路径点已按等时间间隔绘制。",
+        "history": []
+      },
+      "accessibleContextResponseUnchecked": {
+        "value": "路径点已隐藏。",
+        "history": []
+      },
+      "accessibleHelpText": {
+        "value": "探索是否沿滑板者的路径在等时间间隔绘制点。",
+        "history": []
+      }
+    },
+    "pieChart": {
+      "accessibleHeading": {
+        "value": "饼图",
+        "history": []
+      },
+      "accessibleHelpText": {
+        "value": "饼图实时显示滑板者的能量。暂停以分析数值。",
+        "history": []
+      },
+      "kineticPercentPattern": {
+        "value": "动能 {$percent}%",
+        "history": []
+      },
+      "legendHeading": {
+        "value": "能量图例",
+        "history": []
+      },
+      "legendKinetic": {
+        "value": "动能：绿色",
+        "history": []
+      },
+      "legendPotential": {
+        "value": "势能：蓝色",
+        "history": []
+      },
+      "legendThermal": {
+        "value": "热能：红色",
+        "history": []
+      },
+      "legendTotal": {
+        "value": "总能量：金色",
+        "history": []
+      },
+      "negativeEnergyParagraph": {
+        "value": "饼图：总能量100%。",
+        "history": []
+      },
+      "positiveEnergyParagraph": {
+        "value": "饼图中：{$energiesList}。",
+        "history": []
+      },
+      "potentialPercentPattern": {
+        "value": "势能 {$percent}%",
+        "history": []
+      },
+      "thermalPercentPattern": {
+        "value": "热能 {$percent}%",
+        "history": []
+      }
+    },
+    "pieChartCheckbox": {
+      "accessibleContextResponseChecked": {
+        "value": "饼图已添加到游戏区。",
+        "history": []
+      },
+      "accessibleContextResponseUnchecked": {
+        "value": "饼图已隐藏。",
+        "history": []
+      },
+      "accessibleHelpText": {
+        "value": "显示或隐藏滑板者能量的饼图表示。",
+        "history": []
+      }
+    },
+    "preferences": {
+      "metersPerSecondSquaredRadioButton": {
+        "value": "米每二次方秒",
+        "history": []
+      },
+      "newtonsPerKilogramRadioButton": {
+        "value": "牛顿每千克",
+        "history": []
+      }
+    },
+    "referenceHeightCheckbox": {
+      "accessibleContextResponseChecked": {
+        "value": "参考高度已添加到游戏区。",
+        "history": []
+      },
+      "accessibleContextResponseUnchecked": {
+        "value": "参考高度已隐藏。",
+        "history": []
+      },
+      "accessibleHelpText": {
+        "value": "探索是否使用可调节的参考高度。",
+        "history": []
+      }
+    },
+    "referenceHeightLine": {
+      "aboveGroundPattern": {
+        "value": "离地面 { $distance } 米",
+        "history": []
+      },
+      "accessibleHeading": {
+        "value": "参考高度",
+        "history": []
+      },
+      "accessibleHelpText": {
+        "value": "设置高度为零的垂直位置。",
+        "history": []
+      },
+      "accessibleName": {
+        "value": "参考高度线",
+        "history": []
+      },
+      "atGroundLevel": {
+        "value": "在地面高度",
+        "history": []
+      }
+    },
+    "restartSkaterButton": {
+      "accessibleHelpText": {
+        "value": "将滑板者返回到最近的起始位置并重复实验。",
+        "history": []
+      }
+    },
+    "returnSkaterToGroundButton": {
+      "accessibleContextResponse": {
+        "value": "滑板者在地面上。",
+        "history": []
+      },
+      "accessibleName": {
+        "value": "将滑板者返回地面",
+        "history": []
+      }
+    },
+    "returnSkaterToPreviousStartingPositionButton": {
+      "accessibleContextResponse": {
+        "value": "滑板者已返回起始位置。",
+        "history": []
+      },
+      "accessibleHelpText": {
+        "value": "将滑板者返回到最近的起始位置并重复实验。",
+        "history": []
+      },
+      "accessibleName": {
+        "value": "将滑板者返回起始位置",
+        "history": []
+      }
+    },
+    "sceneSelectionRadioButtonGroup": {
+      "accessibleName": {
+        "value": "轨道选择",
+        "history": []
+      },
+      "doubleWellRadioButton": {
+        "accessibleName": {
+          "value": "双凹",
+          "history": []
+        }
+      },
+      "loopRadioButton": {
+        "accessibleName": {
+          "value": "环形",
+          "history": []
+        }
+      },
+      "parabolaRadioButton": {
+        "accessibleName": {
+          "value": "抛物线",
+          "history": []
+        }
+      },
+      "rampRadioButton": {
+        "accessibleName": {
+          "value": "斜坡",
+          "history": []
+        }
+      }
+    },
+    "screenButtons": {
+      "graphs": {
+        "accessibleHelpText": {
+          "value": "分析滑板者能量作为位置或时间函数的图像。",
+          "history": []
+        }
+      },
+      "intro": {
+        "accessibleHelpText": {
+          "value": "探索不同的轨道和滑板者，观察能量的变化。",
+          "history": []
+        }
+      },
+      "measure": {
+        "accessibleHelpText": {
+          "value": "测量并比较滑板者在轨道不同位置的能量。",
+          "history": []
+        }
+      },
+      "playground": {
+        "accessibleHelpText": {
+          "value": "为滑板者建造你自己的自定义轨道、斜坡和跳跃台。",
+          "history": []
+        }
+      }
+    },
+    "screenSummary": {
+      "controlArea": {
+        "withTrackSelection": {
+          "value": "你可以选择轨道形状、调整实验设置并启用测量工具。有一个按钮可以暂停模拟器以便更仔细地分析能量和速度。重置模拟器以重新开始。",
+          "history": []
+        },
+        "withoutTrackSelection": {
+          "value": "你可以调整实验设置并启用测量工具。有一个按钮可以暂停模拟器以便更仔细地分析能量和速度。重置模拟器以重新开始。",
+          "history": []
+        }
+      },
+      "currentDetails": {
+        "frictionPhrase": {
+          "value": "轨道表面{ $hasFriction -> [true] 有摩擦力 *[false] 无摩擦 }。",
+          "history": []
+        },
+        "noTrackBuilt": {
+          "value": "当前，尚未建造轨道。",
+          "history": []
+        },
+        "skaterPhrase": {
+          "value": "当前，滑板者{ $onTrack -> [on] 在 *[off] 不在 }轨道上，{ $motion -> [inMotion] 在运动中 *[atRest] 静止 }。",
+          "history": []
+        }
+      },
+      "interactionHint": {
+        "hasTrack": {
+          "value": "将滑板者放到轨道上以开始探索。",
+          "history": []
+        },
+        "noTrack": {
+          "value": "添加轨道以开始构建你自己的滑板场。",
+          "history": []
+        }
+      },
+      "playArea": {
+        "friction": {
+          "value": "在你的滑板场，滑板者可以沿着具有可调节摩擦力的轨道移动。你可以探索能量的图形表示并测量速度。",
+          "history": []
+        },
+        "graphs": {
+          "value": "在你的滑板场，滑板者可以沿着可调节的轨道移动。你可以探索能量的图形表示并测量速度。此外，能量图可以将能量绘制为位置或时间的函数。",
+          "history": []
+        },
+        "intro": {
+          "value": "在你的滑板场，滑板者可以沿着轨道移动。你可以探索能量的图形表示并测量速度。",
+          "history": []
+        },
+        "measure": {
+          "value": "在你的滑板场，滑板者可以沿着可调节的轨道移动。你可以探索能量的图形表示并测量速度。此外，能量传感器可以沿滑板者的路径测量能量、速度和高度。",
+          "history": []
+        },
+        "playground": {
+          "value": "在你的滑板场，滑板者可以沿着自定义建造的轨道移动。你可以探索能量的图形表示并测量速度。",
+          "history": []
+        }
+      }
+    },
+    "skaterNode": {
+      "accessibleName": {
+        "value": "滑板者",
+        "history": []
+      },
+      "detachFromTrackContextResponse": {
+        "value": "滑板者离开轨道。",
+        "history": []
+      },
+      "firstGrabContextResponse": {
+        "value": "按J键加T键将滑板者附着到最近的轨道。按空格键释放。",
+        "history": []
+      },
+      "offScreenContextResponse": {
+        "value": "滑板者离开屏幕。请返回滑板者。",
+        "history": []
+      },
+      "snapToTrackContextResponse": {
+        "value": "滑板者在轨道上。",
+        "history": []
+      }
+    },
+    "skaterSetOneControls": {
+      "accessibleHelpText": {
+        "value": "选择滑板者形象。",
+        "history": []
+      },
+      "accessibleName": {
+        "value": "滑板者选择",
+        "history": []
+      },
+      "animal1RadioButton": {
+        "accessibleName": {
+          "value": "动物 1",
+          "history": []
+        }
+      },
+      "animal2RadioButton": {
+        "accessibleName": {
+          "value": "动物 2",
+          "history": []
+        }
+      },
+      "skater1RadioButton": {
+        "accessibleName": {
+          "value": "滑板者 1",
+          "history": []
+        }
+      },
+      "skater2RadioButton": {
+        "accessibleName": {
+          "value": "滑板者 2",
+          "history": []
+        }
+      },
+      "skater3RadioButton": {
+        "accessibleName": {
+          "value": "滑板者 3",
+          "history": []
+        }
+      },
+      "skater4RadioButton": {
+        "accessibleName": {
+          "value": "滑板者 4",
+          "history": []
+        }
+      },
+      "skater5RadioButton": {
+        "accessibleName": {
+          "value": "滑板者 5",
+          "history": []
+        }
+      },
+      "skater6RadioButton": {
+        "accessibleName": {
+          "value": "滑板者 6",
+          "history": []
+        }
+      }
+    },
+    "speedCheckbox": {
+      "accessibleContextResponseChecked": {
+        "value": "速度计已添加到游戏区。",
+        "history": []
+      },
+      "accessibleContextResponseUnchecked": {
+        "value": "速度计已隐藏。",
+        "history": []
+      },
+      "accessibleHelpText": {
+        "value": "显示或隐藏速度计。",
+        "history": []
+      }
+    },
+    "speedometer": {
+      "accessibleHeading": {
+        "value": "速度计",
+        "history": []
+      },
+      "accessibleParagraph": {
+        "value": "滑板者的速度为 { $speed } 米每秒。",
+        "history": []
+      }
+    },
+    "stickToTrackCheckbox": {
+      "accessibleContextResponseChecked": {
+        "value": "粘附轨道模式已启用。",
+        "history": []
+      },
+      "accessibleContextResponseUnchecked": {
+        "value": "粘附轨道模式已关闭。",
+        "history": []
+      }
+    },
+    "stopwatchNode": {
+      "accessibleHeading": {
+        "value": "秒表",
+        "history": []
+      }
+    },
+    "toolboxPanel": {
+      "accessibleHeading": {
+        "value": "工具箱",
+        "history": []
+      },
+      "measuringTape": {
+        "accessibleName": {
+          "value": "添加卷尺",
+          "history": []
+        }
+      },
+      "stopwatch": {
+        "accessibleName": {
+          "value": "添加秒表",
+          "history": []
+        }
+      }
+    },
+    "trackNode": {
+      "accessibleHeading": {
+        "value": "轨道",
+        "history": []
+      },
+      "accessibleHeadingWithIndex": {
+        "value": "轨道 { $index }",
+        "history": []
+      },
+      "accessibleHelpText": {
+        "value": "移动控制点以改变轨道形状。",
+        "history": []
+      }
+    },
+    "trackToolboxPanel": {
+      "accessibleName": {
+        "value": "添加轨道",
+        "history": []
+      }
+    },
+    "yourSkatePark": {
+      "accessibleHeading": {
+        "value": "你的滑板场",
+        "history": []
+      },
+      "accessibleHelpText": {
+        "value": "根据需要添加轨道片段。然后使用连接选项连接轨道。所有物体都可以用方向键移动。查看键盘快捷键了解更多快捷方式。",
+        "history": []
+      },
+      "playgroundTrackPhraseMultiple": {
+        "value": "你的自定义轨道有 { $numberTracks } 条轨道，{ $numberControlPoints -> [one] { $numberControlPoints } 个可调控制点 *[other] { $numberControlPoints } 个可调控制点 }。",
+        "history": []
+      },
+      "playgroundTrackPhraseNone": {
+        "value": "暂无轨道。",
+        "history": []
+      },
+      "playgroundTrackPhraseSingle": {
+        "value": "你的自定义轨道有1条轨道，{ $numberControlPoints -> [one] { $numberControlPoints } 个可调控制点 *[other] { $numberControlPoints } 个可调控制点 }。",
+        "history": []
+      },
+      "skaterOffTrack": {
+        "value": "滑板者不在轨道上。",
+        "history": []
+      },
+      "skaterOnTrack": {
+        "value": "滑板者在轨道上。",
+        "history": []
+      },
+      "skaterOnTrackWithIndex": {
+        "value": "滑板者在轨道 { $index } 上。",
+        "history": []
+      },
+      "trackAndSkaterParagraph": {
+        "value": "{ $trackPhrase } { $skaterPhrase }",
+        "history": []
+      },
+      "trackPhraseAdjustable": {
+        "value": "轨道形状为 { $trackShape }，有 { $numberControlPoints -> [one] { $numberControlPoints } 个可调控制点 *[other] { $numberControlPoints } 个可调控制点 }。",
+        "history": []
+      },
+      "trackPhraseFixed": {
+        "value": "轨道形状为 { $trackShape }。",
+        "history": []
+      }
+    }
   },
-  "trackControls.stickToTrack": {
-    "value": "粘附在轨道上",
-    "history": [
-      {
-        "userId": 271405,
-        "timestamp": 1665009880516,
-        "oldValue": "",
-        "newValue": "粘附在轨道上"
+  "keyboardHelpDialog": {
+    "attachToTrack": {
+      "value": "Attach to nearest track",
+      "history": []
+    },
+    "connectTrackEndpoints": {
+      "cancel": {
+        "value": "4. Cancel",
+        "history": []
+      },
+      "label": {
+        "value": "Connect Track Endpoints",
+        "history": []
+      },
+      "moveThroughOptions": {
+        "value": "2. Move through options",
+        "history": []
+      },
+      "selectOption": {
+        "value": "3. Select option",
+        "history": []
+      },
+      "showOptions": {
+        "value": "1. Show options",
+        "history": []
       }
-    ]
+    },
+    "cutTrackAtControlPoint": {
+      "value": "Cut track at control point",
+      "history": []
+    },
+    "deleteControlPoint": {
+      "value": "Delete control point",
+      "history": []
+    },
+    "fromAnywhereInScreen": {
+      "value": "在屏幕的任何位置",
+      "history": []
+    },
+    "grabOrRelease": {
+      "value": "Grab or release",
+      "history": []
+    },
+    "graphCursorControls": {
+      "value": "Graph Cursor Controls",
+      "history": []
+    },
+    "moveAlongTrack": {
+      "value": "Move along track",
+      "history": []
+    },
+    "moveToEndOfTrack": {
+      "value": "Jump to track end",
+      "history": []
+    },
+    "moveToStartOfTrack": {
+      "value": "Jump to track start",
+      "history": []
+    },
+    "removeFromToolbox": {
+      "value": "Remove from toolbox",
+      "history": []
+    },
+    "restartSkater": {
+      "value": "Restart skater",
+      "history": []
+    },
+    "returnToToolbox": {
+      "value": "返回工具箱",
+      "history": []
+    },
+    "scrubThroughData": {
+      "value": "Scrub through data",
+      "history": []
+    },
+    "skaterControls": {
+      "value": "Move or Jump Grabbed Skater",
+      "history": []
+    },
+    "stopwatchAndMeasuringTapeControls": {
+      "value": "Stopwatch and Measuring Tape Controls",
+      "history": []
+    },
+    "togglePause": {
+      "value": "Pause or play",
+      "history": []
+    },
+    "trackControls": {
+      "value": "Track Controls",
+      "history": []
+    }
   },
-  "plots.pieChart.label": {
-    "value": "饼图",
-    "history": [
-      {
-        "userId": 271405,
-        "timestamp": 1665009880516,
-        "oldValue": "",
-        "newValue": "饼图"
-      }
-    ]
-  },
-  "plots.barGraph.label": {
-    "value": "柱状图",
-    "history": [
-      {
-        "userId": 271405,
-        "timestamp": 1665009880516,
-        "oldValue": "",
-        "newValue": "柱状图"
-      }
-    ]
-  },
-  "visibilityControls.speed": {
-    "value": "速度",
-    "history": [
-      {
-        "userId": 271405,
-        "timestamp": 1665009880516,
-        "oldValue": "",
-        "newValue": "速度"
-      }
-    ]
-  },
-  "physicalControls.friction": {
-    "value": "摩擦力",
-    "history": [
-      {
-        "userId": 271405,
-        "timestamp": 1665009880516,
-        "oldValue": "",
-        "newValue": "摩擦力"
-      }
-    ]
-  },
-  "physicalControls.gravityControls.moon": {
-    "value": "月亮",
-    "history": [
-      {
-        "userId": 271405,
-        "timestamp": 1665009880516,
-        "oldValue": "",
-        "newValue": "月亮"
-      }
-    ]
-  },
-  "physicalControls.gravityControls.earth": {
-    "value": "地球",
-    "history": [
-      {
-        "userId": 271405,
-        "timestamp": 1665009880516,
-        "oldValue": "",
-        "newValue": "地球"
-      }
-    ]
-  },
-  "physicalControls.gravityControls.jupiter": {
-    "value": "木星",
-    "history": [
-      {
-        "userId": 271405,
-        "timestamp": 1665009880516,
-        "oldValue": "",
-        "newValue": "木星"
-      }
-    ]
-  },
-  "physicalControls.gravityControls.gravity": {
-    "value": "重力",
-    "history": [
-      {
-        "userId": 271405,
-        "timestamp": 1665009880516,
-        "oldValue": "",
-        "newValue": "重力"
-      }
-    ]
-  },
-  "physicalControls.gravityControls.gravityMetersPerSecondSquaredPattern": {
-    "value": "{{value}}米/秒<sup>2</sup>(m/s<sup>2</sup>)",
-    "history": [
-      {
-        "userId": 271405,
-        "timestamp": 1665009880516,
-        "oldValue": "",
-        "newValue": "{{value}}米/秒<sup>2</sup>(m/s<sup>2</sup>)"
-      }
-    ]
-  },
-  "physicalControls.gravityControls.gravityNewtonsPerKilogramPattern": {
-    "value": "{{value}}牛顿/千克(N/kg)",
-    "history": [
-      {
-        "userId": 271405,
-        "timestamp": 1665009880516,
-        "oldValue": "",
-        "newValue": "{{value}}牛顿/千克(N/kg)"
-      }
-    ]
-  },
-  "physicalControls.tiny": {
-    "value": "小",
-    "history": [
-      {
-        "userId": 271405,
-        "timestamp": 1665009880516,
-        "oldValue": "",
-        "newValue": "小"
-      }
-    ]
-  },
-  "skaterControls.label": {
-    "value": "滑板者",
-    "history": [
-      {
-        "userId": 271405,
-        "timestamp": 1665009880516,
-        "oldValue": "",
-        "newValue": "滑板者"
-      }
-    ]
-  },
-  "skaterControls.skater1MassPattern": {
-    "value": "滑板者1({{value}}千克)",
-    "history": [
-      {
-        "userId": 271405,
-        "timestamp": 1665009880516,
-        "oldValue": "",
-        "newValue": "滑板者1({{value}}千克)"
-      }
-    ]
-  },
-  "skaterControls.skater2MassPattern": {
-    "value": "滑板者2({{value}}千克)",
-    "history": [
-      {
-        "userId": 271405,
-        "timestamp": 1665009880516,
-        "oldValue": "",
-        "newValue": "滑板者2({{value}}千克)"
-      }
-    ]
-  },
-  "skaterControls.skater3MassPattern": {
-    "value": "滑板者3({{value}}千克)",
-    "history": [
-      {
-        "userId": 271405,
-        "timestamp": 1665009880516,
-        "oldValue": "",
-        "newValue": "滑板者3({{value}}千克)"
-      }
-    ]
-  },
-  "skaterControls.skater4MassPattern": {
-    "value": "滑板者4({{value}}千克)",
-    "history": [
-      {
-        "userId": 271405,
-        "timestamp": 1665009880516,
-        "oldValue": "",
-        "newValue": "滑板者4({{value}}千克)"
-      }
-    ]
-  },
-  "skaterControls.skater5MassPattern": {
-    "value": "滑板者5({{value}}千克)",
-    "history": [
-      {
-        "userId": 271405,
-        "timestamp": 1665009880516,
-        "oldValue": "",
-        "newValue": "滑板者5({{value}}千克)"
-      }
-    ]
-  },
-  "skaterControls.dogMassPattern": {
-    "value": "狗({{value}}千克)",
-    "history": [
-      {
-        "userId": 271405,
-        "timestamp": 1665009880516,
-        "oldValue": "",
-        "newValue": "狗({{value}}千克)"
-      }
-    ]
-  },
-  "physicalControls.massControls.mass": {
-    "value": "质量",
-    "history": [
-      {
-        "userId": 271405,
-        "timestamp": 1665009880516,
-        "oldValue": "",
-        "newValue": "质量"
-      }
-    ]
-  },
-  "physicalControls.massControls.massKilogramsPattern": {
-    "value": "{{value}}千克(kg)",
-    "history": [
-      {
-        "userId": 271405,
-        "timestamp": 1665009880516,
-        "oldValue": "",
-        "newValue": "{{value}}千克(kg)"
-      }
-    ]
-  },
-  "physicalControls.small": {
-    "value": "轻",
-    "history": [
-      {
-        "userId": 271405,
-        "timestamp": 1665009880516,
-        "oldValue": "",
-        "newValue": "轻"
-      }
-    ]
-  },
-  "physicalControls.large": {
-    "value": "重",
-    "history": [
-      {
-        "userId": 271405,
-        "timestamp": 1665009880516,
-        "oldValue": "",
-        "newValue": "重"
-      }
-    ]
-  },
-  "physicalControls.custom": {
-    "value": "自定义",
-    "history": [
-      {
-        "userId": 271405,
-        "timestamp": 1665009880516,
-        "oldValue": "",
-        "newValue": "自定义"
-      }
-    ]
-  },
-  "physicalControls.lots": {
-    "value": "大",
-    "history": [
-      {
-        "userId": 271405,
-        "timestamp": 1665009880516,
-        "oldValue": "",
-        "newValue": "大"
-      }
-    ]
-  },
-  "physicalControls.none": {
-    "value": "零",
-    "history": [
-      {
-        "userId": 271405,
-        "timestamp": 1665009880516,
-        "oldValue": "",
-        "newValue": "零"
-      }
-    ]
-  },
-  "heightLabels.heightEqualsZero": {
-    "value": "高度 = 0",
-    "history": [
-      {
-        "userId": 271405,
-        "timestamp": 1665009880516,
-        "oldValue": "",
-        "newValue": "高度 = 0"
-      }
-    ]
+  "preferences": {
+    "accelerationUnits": {
+      "value": "Acceleration Units",
+      "history": []
+    },
+    "accelerationUnitsDescription": {
+      "value": "Choose the units displayed in the Gravity Control.",
+      "history": []
+    },
+    "metersPerSecondSquared": {
+      "value": "m/s<sup>2</sup>",
+      "history": []
+    },
+    "newtonsPerKilogram": {
+      "value": "N/kg",
+      "history": []
+    }
   },
   "energy-skate-park.title": {
     "value": "能量滑板竞技场",
     "history": [
       {
-        "userId": 271405,
-        "timestamp": 1665009880516,
+        "userId": 293040,
+        "timestamp": 1458182268971,
         "oldValue": "",
-        "newValue": "能量滑板竞技场"
-      }
-    ]
-  },
-  "screens.graphs": {
-    "value": "图形",
-    "history": [
-      {
-        "userId": 271405,
-        "timestamp": 1665009880516,
-        "oldValue": "",
-        "newValue": "图形"
-      }
-    ]
-  },
-  "plots.timeSwitchLabel": {
-    "value": "时间",
-    "history": [
-      {
-        "userId": 271405,
-        "timestamp": 1665009880516,
-        "oldValue": "",
-        "newValue": "时间"
-      }
-    ]
-  },
-  "plots.positionSwitchLabel": {
-    "value": "位置",
-    "history": [
-      {
-        "userId": 271405,
-        "timestamp": 1665009880516,
-        "oldValue": "",
-        "newValue": "位置"
-      }
-    ]
-  },
-  "plots.energyGraph.label": {
-    "value": "能量图",
-    "history": [
-      {
-        "userId": 271405,
-        "timestamp": 1665009880516,
-        "oldValue": "",
-        "newValue": "能量图"
-      }
-    ]
-  },
-  "plots.positionLabel": {
-    "value": "位置(米, m)",
-    "history": [
-      {
-        "userId": 271405,
-        "timestamp": 1665009880516,
-        "oldValue": "",
-        "newValue": "位置(米, m)"
-      }
-    ]
-  },
-  "plots.energyLabel": {
-    "value": "能量(焦耳, J)",
-    "history": [
-      {
-        "userId": 271405,
-        "timestamp": 1665009880516,
-        "oldValue": "",
-        "newValue": "能量(焦耳, J)"
-      }
-    ]
-  },
-  "plots.timeLabel": {
-    "value": "时间(秒, s)",
-    "history": [
-      {
-        "userId": 271405,
-        "timestamp": 1665009880516,
-        "oldValue": "",
-        "newValue": "时间(秒, s)"
+        "newValue": "能量滑板竞技场",
+        "explanation": null
       }
     ]
   },
   "screens.intro": {
-    "value": "入门",
+    "value": "介绍",
     "history": [
       {
-        "userId": 271405,
-        "timestamp": 1665009880516,
+        "userId": 293040,
+        "timestamp": 1458182268971,
         "oldValue": "",
-        "newValue": "入门"
+        "newValue": "介绍",
+        "explanation": null
       }
     ]
   },
-  "screens.measure": {
-    "value": "测量",
+  "screens.graphs": {
+    "value": "图表",
     "history": [
       {
-        "userId": 271405,
-        "timestamp": 1665009880516,
+        "userId": 293040,
+        "timestamp": 1458182268971,
         "oldValue": "",
-        "newValue": "测量"
-      }
-    ]
-  },
-  "pathSensor.energyJoulesPattern": {
-    "value": "{{value}}焦耳(J)",
-    "history": [
-      {
-        "userId": 271405,
-        "timestamp": 1665009880516,
-        "oldValue": "",
-        "newValue": "{{value}}焦耳(J)"
-      }
-    ]
-  },
-  "pathSensor.heightMetersPattern": {
-    "value": "高度 = {{value}}米(m)",
-    "history": [
-      {
-        "userId": 271405,
-        "timestamp": 1665009880516,
-        "oldValue": "",
-        "newValue": "高度 = {{value}}米(m)"
-      }
-    ]
-  },
-  "pathSensor.speedMetersPerSecondPattern": {
-    "value": "速度 = {{value}}米/秒(m/s)",
-    "history": [
-      {
-        "userId": 271405,
-        "timestamp": 1665009880516,
-        "oldValue": "",
-        "newValue": "速度 = {{value}}米/秒(m/s)"
+        "newValue": "图表",
+        "explanation": null
       }
     ]
   },
@@ -586,10 +1287,47 @@
     "value": "游乐场",
     "history": [
       {
-        "userId": 271405,
-        "timestamp": 1665009880516,
+        "userId": 293040,
+        "timestamp": 1458182268971,
         "oldValue": "",
-        "newValue": "游乐场"
+        "newValue": "游乐场",
+        "explanation": null
+      }
+    ]
+  },
+  "screens.measure": {
+    "value": "测量",
+    "history": [
+      {
+        "userId": 293040,
+        "timestamp": 1458182268971,
+        "oldValue": "",
+        "newValue": "测量",
+        "explanation": null
+      }
+    ]
+  },
+  "trackControls.stickToTrack": {
+    "value": "保持在轨道上",
+    "history": [
+      {
+        "userId": 293040,
+        "timestamp": 1458182268971,
+        "oldValue": "",
+        "newValue": "保持在轨道上",
+        "explanation": null
+      }
+    ]
+  },
+  "measuringTape.units": {
+    "value": "单位",
+    "history": [
+      {
+        "userId": 293040,
+        "timestamp": 1458182268971,
+        "oldValue": "",
+        "newValue": "单位",
+        "explanation": null
       }
     ]
   }

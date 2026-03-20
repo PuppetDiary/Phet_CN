@@ -570,5 +570,142 @@
         "newValue": "{{m}}，<b>磁量子数</b>，描述轨道在空间中的取向。"
       }
     ]
+  },
+  "a11y": {
+    "transitionsButton": {
+      "accessibleHelpText": {
+        "value": "显示电子态跃迁及其相关波长的表格。"
+      }
+    },
+    "transitionsDialog": {
+      "accessibleName": {
+        "value": "跃迁"
+      },
+      "accessibleHelpText": {
+        "value": "使用按钮将光源设置为特定波长。"
+      }
+    },
+    "deBroglieRepresentationComboBox": {
+      "accessibleName": {
+        "value": "德布罗意表示法"
+      },
+      "accessibleHelpText": {
+        "value": "为德布罗意模型选择波表示法。"
+      }
+    },
+    "deleteSnapshotButton": {
+      "accessibleName": {
+        "value": "删除快照 {{number}}：{{name}}"
+      }
+    },
+    "electronEnergyLevelAccordionBox": {
+      "accessibleParagraph": {
+        "value": "观察电子态在能级图中的变化。"
+      }
+    },
+    "energyLevelsScreen": {
+      "screenButtonsHelpText": {
+        "value": "探索电子跃迁，并将观察结果与氢原子的量子模型联系起来。"
+      },
+      "screenSummary": {
+        "playArea": {
+          "value": "有一个指向氢原子样品的光源。观察窗口显示单个原子的放大视图，随探索模式而变化。在模型模式下，有各种氢原子的量子模型可供探索。在实验模式下，原子的结构是未知的，被遮蔽。通过将白光或单色光照射到样品上来确定氢原子的结构。在电子能级图中观察电子态的变化。"
+        },
+        "controlArea": {
+          "value": "有一个光谱仪，显示氢原子发射光子的直方图。拍摄光谱仪快照以比较数据。使用时间控制调整观察窗口中动作发生的速度，包括暂停和向前步进的按钮。重置模拟以重新开始。"
+        },
+        "interactionHint": {
+          "value": "打开光源开始探索。"
+        }
+      }
+    },
+    "eraseSnapshotsButton": {
+      "accessibleName": {
+        "value": "清除光谱仪数据"
+      }
+    },
+    "modelOrExperimentHelpTextSwitch": {
+      "accessibleHelpText": {
+        "value": "探索原子模型或收集实验数据。"
+      }
+    },
+    "quantumNumbersInfoButton": {
+      "accessibleHelpText": {
+        "value": "显示量子数定义。"
+      }
+    },
+    "lightSource": {
+      "accessibleName": {
+        "value": "光源"
+      }
+    },
+    "lightSourceModeRadioButtonGroup": {
+      "accessibleName": {
+        "value": "光源模式"
+      },
+      "accessibleHelpText": {
+        "value": "选择光源发出的光类型。"
+      }
+    },
+    "modelRadioButtonGroup": {
+      "accessibleName": {
+        "value": "原子模型"
+      },
+      "accessibleHelpText": {
+        "value": "选择要探索的原子模型。"
+      }
+    },
+    "mySnapshotsDialog": {
+      "accessibleName": {
+        "value": "我的快照"
+      }
+    },
+    "resetAtomButton": {
+      "accessibleName": {
+        "value": "重置原子"
+      }
+    },
+    "spectraScreen": {
+      "screenButtonsHelpText": {
+        "value": "将实验光谱数据与氢原子的历史模型进行比较。"
+      },
+      "screenSummary": {
+        "playArea": {
+          "value": "有一个指向氢原子样品的光源。观察窗口显示单个原子的放大视图，随探索模式而变化。在模型模式下，有各种氢原子模型可供探索，从经典到量子。在实验模式下，原子的结构是未知的，被遮蔽。通过将白光或单色光照射到样品上来确定氢原子的结构。"
+        },
+        "controlArea": {
+          "value": "有一个光谱仪，显示氢原子发射光子的直方图。拍摄光谱仪快照以比较数据。使用时间控制调整观察窗口中动作发生的速度，包括暂停和向前步进的按钮。重置模拟以重新开始。"
+        },
+        "interactionHint": {
+          "value": "打开光源开始探索。"
+        }
+      }
+    },
+    "snapshotButton": {
+      "accessibleName": {
+        "value": "拍摄快照"
+      },
+      "accessibleHelpText": {
+        "value": "拍摄最多 {{max}} 张光谱仪数据快照。"
+      }
+    },
+    "viewSnapshotsButton": {
+      "accessibleName": {
+        "value": "查看快照"
+      }
+    },
+    "wavelengthButton": {
+      "accessibleName": {
+        "value": "{{wavelength}} 纳米"
+      }
+    },
+    "wavelengthNumberControl": {
+      "accessibleName": {
+        "value": "波长"
+      },
+      "accessibleHelpText": {
+        "value": "调节单色光源的波长。"
+      }
+    }
   }
 }
