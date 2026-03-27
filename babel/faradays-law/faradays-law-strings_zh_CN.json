@@ -449,15 +449,15 @@
   },
   "keyboardHelpDialog": {
     "autoSlideGrabbedBarMagnet": {
-      "value": "Auto-Slide Grabbed Bar Magnet",
+      "value": "自动滑动抓取的条形磁铁",
       "history": []
     },
     "autoSlideGrabbedBarMagnetText": {
-      "value": "Auto-slide grabbed<br>magnet horizontally and<br>toggle slide direction",
+      "value": "自动水平滑动抓取的<br>磁铁并切换<br>滑动方向",
       "history": []
     },
     "autoSlideGrabbedBarMagnetWith": {
-      "value": "Auto-slide grabbed magnet horizontally and toggle slide direction with number keys 1, 2, or 3.",
+      "value": "使用数字键 1、2 或 3 自动水平滑动抓取的磁铁并切换滑动方向。",
       "history": []
     },
     "barMagnet": {

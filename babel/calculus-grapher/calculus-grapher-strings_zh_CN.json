@@ -286,7 +286,7 @@
     ]
   },
   "curveManipulatorKeyboardCue": {
-    "value": "to <b>Grab</b> or <b>Release</b> curve"
+    "value": "按住以<b>抓取</b>或<b>释放</b>曲线"
   },
   "keyboardHelp": {
     "curveManipulator": {

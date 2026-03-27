@@ -1,29 +1,29 @@
 {
   "energies": {
     "energy": {
-      "value": "Energy",
+      "value": "能量",
       "history": []
     },
     "kinetic": {
-      "value": "Kinetic",
+      "value": "动能",
       "history": []
     },
     "potential": {
-      "value": "Potential",
+      "value": "势能",
       "history": []
     },
     "thermal": {
-      "value": "Thermal",
+      "value": "热能",
       "history": []
     },
     "total": {
-      "value": "Total",
+      "value": "总计",
       "history": []
     }
   },
   "speedometer": {
     "label": {
-      "value": "Speed",
+      "value": "速度",
       "history": []
     },
     "metersPerSecondPattern": {
@@ -37,7 +37,7 @@
       "history": []
     },
     "heightEqualsZero": {
-      "value": "Height = 0",
+      "value": "高度 = 0",
       "history": []
     }
   },
@@ -189,42 +189,42 @@
       }
     },
     "positionLabel": {
-      "value": "Position (m)",
+      "value": "位置 (m)",
       "history": []
     },
     "energyLabel": {
-      "value": "Energy (J)",
+      "value": "能量 (J)",
       "history": []
     },
     "timeLabel": {
-      "value": "Time (s)",
+      "value": "时间 (s)",
       "history": []
     }
   },
   "physicalControls": {
     "friction": {
-      "value": "Friction",
+      "value": "摩擦力",
       "history": []
     },
     "gravityControls": {
       "moon": {
-        "value": "Moon",
+        "value": "月球",
         "history": []
       },
       "earth": {
-        "value": "Earth",
+        "value": "地球",
         "history": []
       },
       "jupiter": {
-        "value": "Jupiter",
+        "value": "木星",
         "history": []
       },
       "gravity": {
-        "value": "Gravity",
+        "value": "重力",
         "history": []
       },
       "gravityMetersPerSecondSquaredPattern": {
-        "value": "{{value}} m/s<sup>2</sup>",
+        "value": "{{value}} m/s²",
         "history": []
       },
       "gravityNewtonsPerKilogramPattern": {
@@ -233,12 +233,12 @@
       }
     },
     "tiny": {
-      "value": "Tiny",
+      "value": "极小",
       "history": []
     },
     "massControls": {
       "mass": {
-        "value": "Mass",
+        "value": "质量",
         "history": []
       },
       "massKilogramsPattern": {
@@ -247,47 +247,47 @@
       }
     },
     "small": {
-      "value": "Small",
+      "value": "小",
       "history": []
     },
     "large": {
-      "value": "Large",
+      "value": "大",
       "history": []
     },
     "custom": {
-      "value": "Custom",
+      "value": "自定义",
       "history": []
     },
     "lots": {
-      "value": "Lots",
+      "value": "很多",
       "history": []
     },
     "none": {
-      "value": "None",
+      "value": "无",
       "history": []
     }
   },
   "energy-skate-park": {
     "title": {
-      "value": "Energy Skate Park",
+      "value": "能量滑板竞技场",
       "history": []
     }
   },
   "screens": {
     "graphs": {
-      "value": "Graphs",
+      "value": "图表",
       "history": []
     },
     "intro": {
-      "value": "Intro",
+      "value": "介绍",
       "history": []
     },
     "measure": {
-      "value": "Measure",
+      "value": "测量",
       "history": []
     },
     "playground": {
-      "value": "Playground",
+      "value": "游乐场",
       "history": []
     }
   },
@@ -297,11 +297,11 @@
       "history": []
     },
     "heightMetersPattern": {
-      "value": "Height = {{value}} m",
+      "value": "高度 = {{value}} m",
       "history": []
     },
     "speedMetersPerSecondPattern": {
-      "value": "Speed = {{value}} m/s",
+      "value": "速度 = {{value}} m/s",
       "history": []
     }
   },
@@ -1139,37 +1139,37 @@
   },
   "keyboardHelpDialog": {
     "attachToTrack": {
-      "value": "Attach to nearest track",
+      "value": "附着到最近的轨道",
       "history": []
     },
     "connectTrackEndpoints": {
       "cancel": {
-        "value": "4. Cancel",
+        "value": "4. 取消",
         "history": []
       },
       "label": {
-        "value": "Connect Track Endpoints",
+        "value": "连接轨道端点",
         "history": []
       },
       "moveThroughOptions": {
-        "value": "2. Move through options",
+        "value": "2. 切换选项",
         "history": []
       },
       "selectOption": {
-        "value": "3. Select option",
+        "value": "3. 选择选项",
         "history": []
       },
       "showOptions": {
-        "value": "1. Show options",
+        "value": "1. 显示选项",
         "history": []
       }
     },
     "cutTrackAtControlPoint": {
-      "value": "Cut track at control point",
+      "value": "在控制点处切断轨道",
       "history": []
     },
     "deleteControlPoint": {
-      "value": "Delete control point",
+      "value": "删除控制点",
       "history": []
     },
     "fromAnywhereInScreen": {
@@ -1177,31 +1177,31 @@
       "history": []
     },
     "grabOrRelease": {
-      "value": "Grab or release",
+      "value": "抓取或释放",
       "history": []
     },
     "graphCursorControls": {
-      "value": "Graph Cursor Controls",
+      "value": "图形光标控件",
       "history": []
     },
     "moveAlongTrack": {
-      "value": "Move along track",
+      "value": "沿轨道移动",
       "history": []
     },
     "moveToEndOfTrack": {
-      "value": "Jump to track end",
+      "value": "跳到轨道末端",
       "history": []
     },
     "moveToStartOfTrack": {
-      "value": "Jump to track start",
+      "value": "跳到轨道起点",
       "history": []
     },
     "removeFromToolbox": {
-      "value": "Remove from toolbox",
+      "value": "从工具箱中取出",
       "history": []
     },
     "restartSkater": {
-      "value": "Restart skater",
+      "value": "重新开始滑板者",
       "history": []
     },
     "returnToToolbox": {
@@ -1209,37 +1209,37 @@
       "history": []
     },
     "scrubThroughData": {
-      "value": "Scrub through data",
+      "value": "浏览数据",
       "history": []
     },
     "skaterControls": {
-      "value": "Move or Jump Grabbed Skater",
+      "value": "移动或跳跃已抓取的滑板者",
       "history": []
     },
     "stopwatchAndMeasuringTapeControls": {
-      "value": "Stopwatch and Measuring Tape Controls",
+      "value": "秒表和卷尺控件",
       "history": []
     },
     "togglePause": {
-      "value": "Pause or play",
+      "value": "暂停或播放",
       "history": []
     },
     "trackControls": {
-      "value": "Track Controls",
+      "value": "轨道控件",
       "history": []
     }
   },
   "preferences": {
     "accelerationUnits": {
-      "value": "Acceleration Units",
+      "value": "加速度单位",
       "history": []
     },
     "accelerationUnitsDescription": {
-      "value": "Choose the units displayed in the Gravity Control.",
+      "value": "选择重力控件中显示的单位。",
       "history": []
     },
     "metersPerSecondSquared": {
-      "value": "m/s<sup>2</sup>",
+      "value": "m/s²",
       "history": []
     },
     "newtonsPerKilogram": {

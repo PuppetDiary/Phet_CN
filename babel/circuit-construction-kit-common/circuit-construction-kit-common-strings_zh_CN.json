@@ -582,7 +582,7 @@
     ]
   },
   "resistanceOhmsValuePattern": {
-    "value": "{{resistance}} ohms",
+    "value": "{{resistance}} 欧姆",
     "history": [
       {
         "userId": 293040,
@@ -618,7 +618,7 @@
     ]
   },
   "voltageVoltsValuePattern": {
-    "value": "{{voltage}} volts",
+    "value": "{{voltage}} 伏特",
     "history": [
       {
         "userId": 293040,
@@ -642,7 +642,7 @@
     ]
   },
   "resistanceOhms": {
-    "value": "{{resistance}} ohms",
+    "value": "{{resistance}} 欧姆",
     "history": [
       {
         "userId": 293040,

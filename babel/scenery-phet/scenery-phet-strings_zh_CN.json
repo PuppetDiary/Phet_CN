@@ -243,7 +243,7 @@
     ]
   },
   "key.pageDown": {
-    "value": "Page Down",
+    "value": "Pg Dn",
     "history": [
       {
         "userId": 293040,
@@ -283,7 +283,7 @@
     ]
   },
   "key.pageUp": {
-    "value": "Page Up",
+    "value": "Pg Up",
     "history": [
       {
         "userId": 293040,
@@ -846,7 +846,7 @@
     ]
   },
   "key.c": {
-    "value": "C\nC",
+    "value": "C",
     "history": [
       {
         "userId": 293040,
