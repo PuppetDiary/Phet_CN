@@ -294,7 +294,7 @@
     ]
   },
   "ourMoon": {
-    "value": "我们的月亮",
+    "value": "月亮",
     "history": [
       {
         "userId": 293040,
@@ -302,17 +302,31 @@
         "oldValue": "",
         "newValue": "我们的月亮",
         "explanation": null
+      },
+      {
+        "userId": 0,
+        "timestamp": 1743014400000,
+        "oldValue": "我们的月亮",
+        "newValue": "月亮",
+        "explanation": null
       }
     ]
   },
   "ourSun": {
-    "value": "我们的太阳",
+    "value": "太阳",
     "history": [
       {
         "userId": 293040,
         "timestamp": 1492504855645,
         "oldValue": "",
         "newValue": "我们的太阳",
+        "explanation": null
+      },
+      {
+        "userId": 0,
+        "timestamp": 1743014400000,
+        "oldValue": "我们的太阳",
+        "newValue": "太阳",
         "explanation": null
       }
     ]
@@ -518,13 +532,20 @@
     ]
   },
   "spaceStation": {
-    "value": "倍太空站",
+    "value": "太空站",
     "history": [
       {
         "userId": 293040,
         "timestamp": 1492504855645,
         "oldValue": "",
         "newValue": "倍太空站",
+        "explanation": null
+      },
+      {
+        "userId": 0,
+        "timestamp": 1743014400000,
+        "oldValue": "倍太空站",
+        "newValue": "太空站",
         "explanation": null
       }
     ]

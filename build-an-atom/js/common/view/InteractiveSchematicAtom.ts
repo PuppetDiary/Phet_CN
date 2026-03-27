@@ -382,19 +382,18 @@ class InteractiveSchematicAtom extends Node {
         }
       );
 
-      // Add the keyboard listener that will allow this particle to be controlled via keyboard when it has alt-input
-      // focus.
-      particleView.addInputListener( new BAAParticleKeyboardListener(
-        particle,
-        this.getHomeBucket( particle ),
-        model.atom,
-        electronModelProperty,
-        particleView,
-        this.getHomeBucketFront( particle ),
-        atomNode.electronCloud,
-        atomNode.shiftParticleFocus.bind( atomNode ),
-        options.tandem.createTandem( 'particleViewKeyboardListener' )
-      ) );
+      // Keyboard listener removed for adapted-from-phet version
+      // particleView.addInputListener( new BAAParticleKeyboardListener(
+      //   particle,
+      //   this.getHomeBucket( particle ),
+      //   model.atom,
+      //   electronModelProperty,
+      //   particleView,
+      //   this.getHomeBucketFront( particle ),
+      //   atomNode.electronCloud,
+      //   atomNode.shiftParticleFocus.bind( atomNode ),
+      //   options.tandem.createTandem( 'particleViewKeyboardListener' )
+      // ) );
 
       // Watch for when particles enter or leave the atom and update the focusability of the particle views owned by the
       // for the atom as needed. The goal is to have one focusable particle in the atom when there are particles there
