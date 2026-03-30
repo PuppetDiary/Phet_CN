@@ -1,4 +1,4 @@
-// Copyright 2018-2026, University of Colorado Boulder
+// Copyright 2018-2025, University of Colorado Boulder
 
 /**
  * Model for the "Measure" screen of this sim. The measure screen allows the user to inspect physical values
@@ -26,10 +26,7 @@ export default class MeasureModel extends EnergySkateParkFullTrackSetModel {
 
   public constructor( preferencesModel: EnergySkateParkPreferencesModel, tandem: Tandem ) {
     super( preferencesModel, tandem, {
-      tracksConfigurable: true,
-      showBarGraph: false,
-      isShowPathSupported: true,
-      instrumentDataSamples: true
+      tracksConfigurable: true
     } );
 
     this.sensorProbePositionProperty = new Vector2Property( new Vector2( -4, 1.5 ), {
@@ -37,8 +34,7 @@ export default class MeasureModel extends EnergySkateParkFullTrackSetModel {
     } );
 
     this.sensorBodyPositionProperty = new Vector2Property( new Vector2( 0, 0 ), {
-      tandem: tandem.createTandem( 'sensorBodyPositionProperty' ),
-      phetioReadOnly: true
+      tandem: tandem.createTandem( 'sensorBodyPositionProperty' )
     } );
 
     // the speed value is visible on the speedometer for the MeasureModel

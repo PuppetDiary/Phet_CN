@@ -45,6 +45,9 @@ import PullerNode from './PullerNode.js';
 import PullerToolboxNode from './PullerToolboxNode.js';
 import ReturnButton from './ReturnButton.js';
 import TugOfWarDescriptionNode from './TugOfWarDescriptionNode.js';
+import FeedbackManager from '../../common/model/FeedbackManager.js';
+import { netForceFeedbackRules } from './NetForceFeedbackRules.js';
+import TutorialOverlayNode, { type TutorialStep } from '../../common/view/TutorialOverlayNode.js';
 
 const leftForceStringProperty = ForcesAndMotionBasicsFluent.leftForceStringProperty;
 const rightForceStringProperty = ForcesAndMotionBasicsFluent.rightForceStringProperty;
@@ -72,6 +75,11 @@ export default class NetForceScreenView extends ScreenView {
   private readonly rightPullerGroup: PullerGroupNode;
   private readonly returnButton: ReturnButton;
   private readonly grabReleaseCueNode: NetForceGrabReleaseCueNode;
+  private readonly feedbackManager: FeedbackManager;
+  private readonly leftToolbox: PullerToolboxNode;
+  private readonly rightToolbox: PullerToolboxNode;
+  private readonly goPauseButton: GoPauseButton;
+  private readonly tutorialOverlay: TutorialOverlayNode;
 
   public constructor( private readonly model: NetForceModel, tandem: Tandem ) {
 
@@ -201,13 +209,13 @@ export default class NetForceScreenView extends ScreenView {
     this.addChild( this.cartNode );
 
     // Create the toolboxes with dynamic accessibility properties
-    const leftToolbox = new PullerToolboxNode( this, 25, {
+    this.leftToolbox = new PullerToolboxNode( this, 25, {
       tagName: 'div',
       accessibleHeading: ForcesAndMotionBasicsFluent.a11y.netForceScreen.teamName.createProperty( {
         color: model.leftTeamColorProperty
       } )
     } );
-    const rightToolbox = new PullerToolboxNode( this, 630, {
+    this.rightToolbox = new PullerToolboxNode( this, 630, {
       tagName: 'div',
       accessibleHeading: ForcesAndMotionBasicsFluent.a11y.netForceScreen.teamName.createProperty( {
         color: model.rightTeamColorProperty
@@ -225,16 +233,16 @@ export default class NetForceScreenView extends ScreenView {
     } );
 
     // Add instructions to toolboxes first (so they're read before puller groups)
-    leftToolbox.addChild( leftInstructions );
-    rightToolbox.addChild( rightInstructions );
+    this.leftToolbox.addChild( leftInstructions );
+    this.rightToolbox.addChild( rightInstructions );
 
-    this.addChild( leftToolbox );
-    this.addChild( rightToolbox );
+    this.addChild( this.leftToolbox );
+    this.addChild( this.rightToolbox );
 
     const pullersTandem = tandem.createTandem( 'pullers' );
 
-    this.leftPullerGroup = new PullerGroupNode( leftToolbox.bounds );
-    this.rightPullerGroup = new PullerGroupNode( rightToolbox.bounds );
+    this.leftPullerGroup = new PullerGroupNode( this.leftToolbox.bounds );
+    this.rightPullerGroup = new PullerGroupNode( this.rightToolbox.bounds );
     this.model.pullers.forEach( puller => {
 
       const accessibleNameProperty = ForcesAndMotionBasicsFluent.a11y.netForceScreen.puller.accessibleName.createProperty( {
@@ -249,8 +257,8 @@ export default class NetForceScreenView extends ScreenView {
       this.pullerNodes.push( pullerNode );
     } );
 
-    leftToolbox.addChild( this.leftPullerGroup );
-    rightToolbox.addChild( this.rightPullerGroup );
+    this.leftToolbox.addChild( this.leftPullerGroup );
+    this.rightToolbox.addChild( this.rightPullerGroup );
 
     const playAreaControlNode = new Node( {
       tagName: 'div',
@@ -261,18 +269,18 @@ export default class NetForceScreenView extends ScreenView {
     this.addChild( playAreaControlNode );
 
     // i18n - ensure that the go, pause, and return buttons will fit in between the puller toolboxes
-    const maxWidth = ( rightToolbox.left - leftToolbox.right ) / 2;
-    const goPauseButton = new GoPauseButton( this.model, this.layoutBounds.width, {
+    const maxWidth = ( this.rightToolbox.left - this.leftToolbox.right ) / 2;
+    this.goPauseButton = new GoPauseButton( this.model, this.layoutBounds.width, {
       maxWidth: maxWidth,
       tandem: tandem.createTandem( 'goPauseButton' )
     } );
-    playAreaControlNode.addChild( goPauseButton );
+    playAreaControlNode.addChild( this.goPauseButton );
 
     // Return button
     this.returnButton = new ReturnButton( model, {
       tandem: tandem.createTandem( 'returnButton' ),
       centerX: this.layoutBounds.centerX,
-      top: goPauseButton.bottom + MARGIN_FROM_LAYOUT_BOUNDS,
+      top: this.goPauseButton.bottom + MARGIN_FROM_LAYOUT_BOUNDS,
       maxWidth: maxWidth
     } );
     playAreaControlNode.addChild( this.returnButton );
@@ -358,10 +366,14 @@ export default class NetForceScreenView extends ScreenView {
     model.stateProperty.link( state => {
       if ( state === 'completed' ) {
         golfClap.play();
+        // Move feedback toast to bottom to avoid overlap with flag
+        this.feedbackManager?.setToastPosition( 'bottom' );
       }
       // Reset the win announcement flag when starting a new game
       if ( state === 'experimenting' ) {
         hasAnnouncedWinner = false;
+        // Move feedback toast back to top
+        this.feedbackManager?.setToastPosition( 'top' );
       }
     } );
 
@@ -394,8 +406,8 @@ export default class NetForceScreenView extends ScreenView {
       tugOfWarOverviewNode,
       forcesListDescription,
       netForceSpeedDescriptionNode,
-      leftToolbox,
-      rightToolbox,
+      this.leftToolbox,
+      this.rightToolbox,
       playAreaControlNode,
       this.cartNode,
       this.leftArrow,
@@ -430,6 +442,107 @@ export default class NetForceScreenView extends ScreenView {
 
     // Set initial PDOM order
     this.updatePullerPDOMOrder();
+
+    // Initialize FeedbackManager for positive feedback
+    this.feedbackManager = new FeedbackManager( {
+      tandem: tandem.createTandem( 'feedbackManager' ),
+      layoutBounds: this.layoutBounds
+    } );
+
+    // Register Net Force feedback rules
+    netForceFeedbackRules.forEach( rule => {
+      this.feedbackManager.registerRule( rule );
+    } );
+
+    // Set FeedbackManager parent node
+    this.feedbackManager.setParentNode( this );
+
+    // Link model properties to check for feedback triggers
+    // NetForceModel doesn't have stepEmitter, so monitor key properties instead
+    Multilink.multilink( [
+      this.model.netForceProperty,
+      this.model.speedProperty,
+      this.model.numberPullersAttachedProperty,
+      this.model.stateProperty
+    ], () => {
+      this.feedbackManager.update( this.model );
+    } );
+
+    // Reset feedback when reset all is triggered
+    this.model.resetAllEmitter.addListener( () => {
+      this.feedbackManager.reset();
+    } );
+
+    // Initialize Tutorial Overlay
+    this.tutorialOverlay = new TutorialOverlayNode( {
+      layoutBounds: this.layoutBounds,
+      steps: this.getTutorialSteps(),
+      onComplete: () => {
+        // Enable feedback manager after tutorial completes
+        this.feedbackManager.setEnabled( true );
+        // Small delay to ensure tutorial is fully hidden before showing feedback
+        setTimeout( () => {
+          // Show the first feedback immediately, bypassing cooldown checks
+          this.feedbackManager.showFirstFeedback( this.model );
+        }, 400 );
+      }
+    } );
+    this.addChild( this.tutorialOverlay );
+
+    // Show tutorial after a short delay to allow UI to fully render
+    setTimeout( () => {
+      // Disable feedback manager before showing tutorial
+      this.feedbackManager.setEnabled( false );
+      this.tutorialOverlay.restart();
+    }, 1500 );
+  }
+
+  /**
+   * Get tutorial steps for Net Force screen
+   */
+  private getTutorialSteps(): TutorialStep[] {
+    return [
+      {
+        target: this.leftToolbox,
+        title: '欢迎使用拔河游戏！',
+        content: '将蓝色或红色的小人从工具箱拖到绳子的打结处，开始拔河吧。左边是蓝队，右边是红队。',
+        position: 'bottom'
+      },
+      {
+        target: () => this.pullerNodes.find( n => n.puller.modeProperty.value.isAttached() ) || this.leftToolbox,
+        title: '添加拔河队员',
+        content: '从工具箱拖动小人到绳子上的结点，添加你的第一个拔河队员。',
+        position: 'bottom'
+      },
+      {
+        target: this.goPauseButton,
+        title: '开始游戏',
+        content: '选好队员后，点击 "开始" 按钮开始拔河比赛。',
+        position: 'top'
+      },
+      {
+        target: this.cartNode,
+        title: '观察力的合成',
+        content: '绿色虚线箭头显示所有力的总和。当两边的力相等时，合力为 0，小车不会移动。',
+        position: 'bottom',
+        onShow: () => {
+          this.model.showSumOfForcesProperty.value = true;
+        },
+        onHide: () => {
+          this.model.showSumOfForcesProperty.value = false;
+        }
+      },
+      {
+        target: this.controlPanel,
+        title: '显示数值',
+        content: '勾选 "数值" 可以看到每个力的具体数值，方便你精确计算。',
+        position: 'left',
+        onShow: () => {
+          this.model.showValuesProperty.value = true;
+        }
+        // Keep values visible after tutorial completes
+      }
+    ];
   }
 
   /**

@@ -46,7 +46,6 @@ import Stopwatch from '../../../../scenery-phet/js/Stopwatch.js';
 import TimeSpeed from '../../../../scenery-phet/js/TimeSpeed.js';
 import PhetioGroup from '../../../../tandem/js/PhetioGroup.js';
 import { PhetioObjectOptions } from '../../../../tandem/js/PhetioObject.js';
-import phetioStateSetEmitter from '../../../../tandem/js/phetioStateSetEmitter.js';
 import Tandem from '../../../../tandem/js/Tandem.js';
 import ReferenceIO from '../../../../tandem/js/types/ReferenceIO.js';
 import energySkatePark from '../../energySkatePark.js';
@@ -96,9 +95,6 @@ type SelfOptions = {
   // default for the speedValueVisibleProperty, whether the value of speed is displayed
   // on the speedometer
   defaultSpeedValueVisible?: boolean;
-
-  // whether this screen has a bar graph - if false, barGraphScaleProperty is uninstrumented
-  showBarGraph?: boolean;
 
   // options passed to Skater
   skaterOptions?: SkaterOptions | null;
@@ -153,7 +149,7 @@ export default class EnergySkateParkModel {
   public readonly clearButtonEnabledProperty: BooleanProperty;
 
   // Whether the sim is paused or running
-  public readonly isPlayingProperty: BooleanProperty;
+  public readonly pausedProperty: BooleanProperty;
 
   // model element for the stop watch in this sim
   public readonly stopwatch: Stopwatch;
@@ -170,7 +166,7 @@ export default class EnergySkateParkModel {
   public readonly measuringTapeTipPositionProperty: Vector2Property;
 
   // Whether the skater should stick to the track like a roller coaster, or be able to fly off like a street
-  public readonly isStickingToTrackProperty: BooleanProperty;
+  public readonly stickingToTrackProperty: BooleanProperty;
 
   // collection of Properties that indicate that a user is
   // modifying some variable that will change physical system and modify all saved energy data
@@ -193,12 +189,6 @@ export default class EnergySkateParkModel {
   // Required for PhET-iO state wrapper
   public readonly updateEmitter: Emitter;
 
-  // Emits when the skater attaches to a track during a physics step (not user interaction).
-  public readonly skaterAttachedToTrackEmitter: Emitter;
-
-  // Emits when the skater detaches from a track during a physics step (not user interaction).
-  public readonly skaterDetachedFromTrackEmitter: Emitter;
-
   // Updates the model with constant event intervals even if there is a drop in the framerate
   // so that simulation performance has no impact on physical behavior.
   private readonly eventTimer: EventTimer;
@@ -210,7 +200,6 @@ export default class EnergySkateParkModel {
       tracksDraggable: false,
       tracksConfigurable: false,
       defaultSpeedValueVisible: true,
-      showBarGraph: true,
       skaterOptions: null
     }, providedOptions );
 
@@ -222,15 +211,14 @@ export default class EnergySkateParkModel {
 
     this.availableModelBoundsProperty = new Property( new Bounds2( 0, 0, 0, 0 ), {
       tandem: tandem.createTandem( 'availableModelBoundsProperty' ),
-      phetioValueType: Bounds2.Bounds2IO,
-      phetioReadOnly: true
+      phetioValueType: Bounds2.Bounds2IO
     } );
 
     this.controlPointGroup = new PhetioGroup<ControlPoint, [ number, number, ControlPointOptions ]>( ( tandem, x, y, options ) => {
       assert && options && assert( !options.hasOwnProperty( 'tandem' ), 'tandem is managed by the PhetioGroup' );
       return new ControlPoint( x, y, merge( {}, options, { tandem: tandem, phetioDynamicElement: true } ) );
     }, [ 0, 0, {} ], {
-      tandem: options.tracksDraggable ? tandem.createTandem( 'controlPointGroup' ) : Tandem.OPT_OUT,
+      tandem: tandem.createTandem( 'controlPointGroup' ),
       phetioType: PhetioGroup.PhetioGroupIO( ControlPoint.ControlPointIO ),
       phetioDynamicElementName: 'controlPoint'
     } );
@@ -245,7 +233,7 @@ export default class EnergySkateParkModel {
       draggable: true,
       configurable: true
     } ], {
-      tandem: options.tracksDraggable ? tandem.createTandem( 'trackGroup' ) : Tandem.OPT_OUT,
+      tandem: tandem.createTandem( 'trackGroup' ),
       phetioType: PhetioGroup.PhetioGroupIO( Track.TrackIO ),
       phetioDynamicElementName: 'track'
     } );
@@ -265,6 +253,7 @@ export default class EnergySkateParkModel {
 
     this.preferencesModel = preferencesModel;
 
+
     // whether the speed value is visible on the speedometer
     this.speedValueVisibleProperty = new BooleanProperty( options.defaultSpeedValueVisible, {
       tandem: tandem.createTandem( 'visibleProperties' ).createTandem( 'speedValueVisibleProperty' )
@@ -276,14 +265,19 @@ export default class EnergySkateParkModel {
       tandem: tandem.createTandem( 'visibleProperties' ).createTandem( 'measuringTapeVisibleProperty' )
     } );
 
-    this.barGraphScaleProperty = new NumberProperty( 1 / 30 );
+    this.barGraphScaleProperty = new NumberProperty( 1 / 30, {
+      tandem: tandem.createTandem( 'barGraphScaleProperty' )
+    } );
 
-    this.editButtonEnabledProperty = new BooleanProperty( false );
-    this.clearButtonEnabledProperty = new BooleanProperty( false );
+    this.editButtonEnabledProperty = new BooleanProperty( false, {
+      tandem: tandem.createTandem( 'editButtonEnabledProperty' )
+    } );
+    this.clearButtonEnabledProperty = new BooleanProperty( false, {
+      tandem: tandem.createTandem( 'clearButtonEnabledProperty' )
+    } );
 
-    this.isPlayingProperty = new BooleanProperty( true, {
-      tandem: tandem.createTandem( 'isPlayingProperty' ),
-      phetioFeatured: true
+    this.pausedProperty = new BooleanProperty( false, {
+      tandem: tandem.createTandem( 'pausedProperty' )
     } );
 
     this.stopwatch = new Stopwatch( {
@@ -295,14 +289,12 @@ export default class EnergySkateParkModel {
 
     this.timeSpeedProperty = new EnumerationProperty( TimeSpeed.NORMAL, {
       validValues: [ TimeSpeed.NORMAL, TimeSpeed.SLOW ],
-      tandem: tandem.createTandem( 'timeSpeedProperty' ),
-      phetioFeatured: true
+      tandem: tandem.createTandem( 'timeSpeedProperty' )
     } );
 
     this.frictionProperty = new NumberProperty( this.defaultFriction, {
       range: new Range( EnergySkateParkConstants.MIN_FRICTION, EnergySkateParkConstants.MAX_FRICTION ),
-      tandem: tandem.createTandem( 'frictionProperty' ),
-      phetioFeatured: true
+      tandem: tandem.createTandem( 'frictionProperty' )
     } );
 
     this.measuringTapeBasePositionProperty = new Vector2Property( new Vector2( 0, 0 ), {
@@ -315,9 +307,8 @@ export default class EnergySkateParkModel {
       units: 'm'
     } );
 
-    this.isStickingToTrackProperty = new BooleanProperty( true, {
-      tandem: tandem.createTandem( 'isStickingToTrackProperty' ),
-      phetioFeatured: true
+    this.stickingToTrackProperty = new BooleanProperty( true, {
+      tandem: tandem.createTandem( 'stickingToTrackProperty' )
     } );
 
     this.userControlledPropertySet = new UserControlledPropertySet();
@@ -337,21 +328,17 @@ export default class EnergySkateParkModel {
     } );
 
     this.resetEmitter = new Emitter();
-    this.skaterAttachedToTrackEmitter = new Emitter();
-    this.skaterDetachedFromTrackEmitter = new Emitter();
 
     // If the mass changes while the sim is paused, trigger an update so the skater image size will update, see #115
     this.skater.massProperty.link( () => {
-      if ( !this.isPlayingProperty.value ) {
+      if ( this.pausedProperty.value ) {
         this.skater.updatedEmitter.emit();
       }
     } );
 
     this.tracks = createObservableArray( {
       phetioType: createObservableArray.ObservableArrayIO( ReferenceIO( Track.TrackIO ) ),
-      tandem: tandem.createTandem( 'tracks' ),
-      phetioFeatured: true,
-      lengthPropertyOptions: { phetioFeatured: true }
+      tandem: tandem.createTandem( 'tracks' )
     } );
 
     // Determine when to show/hide the track edit buttons (cut track or delete control point)
@@ -371,7 +358,6 @@ export default class EnergySkateParkModel {
     };
     this.tracks.addItemAddedListener( updateTrackEditingButtonProperties );
     this.tracks.addItemRemovedListener( updateTrackEditingButtonProperties );
-    phetioStateSetEmitter.addListener( updateTrackEditingButtonProperties );
 
     this.updateEmitter = new Emitter();
     this.trackChangedEmitter.addListener( updateTrackEditingButtonProperties );
@@ -399,9 +385,9 @@ export default class EnergySkateParkModel {
     this.editButtonEnabledProperty.reset();
     this.clearButtonEnabledProperty.reset();
     this.barGraphScaleProperty.reset();
-    this.isPlayingProperty.reset();
+    this.pausedProperty.reset();
     this.frictionProperty.reset();
-    this.isStickingToTrackProperty.reset();
+    this.stickingToTrackProperty.reset();
     this.availableModelBoundsProperty.reset();
     this.stopwatch.reset();
     this.availableModelBoundsProperty.value = availableModelBounds;
@@ -415,19 +401,11 @@ export default class EnergySkateParkModel {
    * Step one frame, assuming 60 fps.
    */
   public manualStep(): void {
-    const oldTrack = this.skater.trackProperty.value;
     const skaterState = new SkaterState( this.skater );
     const dt = 1.0 / FRAME_RATE;
     const result = this.stepModel( dt, skaterState );
     result.setToSkater( this.skater );
     this.skater.updatedEmitter.emit();
-
-    if ( oldTrack === null && this.skater.trackProperty.value !== null ) {
-      this.skaterAttachedToTrackEmitter.emit();
-    }
-    else if ( oldTrack !== null && this.skater.trackProperty.value === null ) {
-      this.skaterDetachedFromTrackEmitter.emit();
-    }
   }
 
   /**
@@ -443,10 +421,9 @@ export default class EnergySkateParkModel {
 
     // If the delay makes dt too high, then truncate it.  This helps e.g. when clicking in the address bar on iPad,
     // which gives a huge dt and problems for integration
-    if ( this.isPlayingProperty.value && !this.skater.userControlledProperty.value ) {
+    if ( !this.pausedProperty.value && !this.skater.draggingProperty.value ) {
 
       const initialThermalEnergy = this.skater.thermalEnergyProperty.value;
-      const oldTrack = this.skater.trackProperty.value;
 
       const skaterState = new SkaterState( this.skater );
       if ( debug ) {
@@ -466,14 +443,6 @@ export default class EnergySkateParkModel {
       if ( updatedState ) {
         updatedState.setToSkater( this.skater );
         this.skater.updatedEmitter.emit();
-
-        // Detect if the skater attached to or detached from a track during this physics step.
-        if ( oldTrack === null && this.skater.trackProperty.value !== null ) {
-          this.skaterAttachedToTrackEmitter.emit();
-        }
-        else if ( oldTrack !== null && this.skater.trackProperty.value === null ) {
-          this.skaterDetachedFromTrackEmitter.emit();
-        }
 
         if ( debug ) {
           if ( Math.abs( updatedState.getTotalEnergy() - initialEnergy! ) > 1E-6 ) {
@@ -864,11 +833,11 @@ export default class EnergySkateParkModel {
       affirm( newThermalEnergy >= 0 );
 
       let parametricSpeed = ( dot > 0 ? +1 : -1 ) * newSpeed;
-      const isOnTopSideOfTrack = beforeVector.dot( normal ) > 0;
+      const onTopSideOfTrack = beforeVector.dot( normal ) > 0;
 
       debug && debug( `attach to track, ${parametricPosition}, ${track.maxPoint}` );
 
-      // Double-check the velocities and invert parametricSpeed if incorrect, see #172
+      // Double check the velocities and invert parametricSpeed if incorrect, see #172
       // Compute the new velocities same as in stepTrack
       const unitParallelVector = track.getUnitParallelVector( parametricPosition );
       const newVelocityX = unitParallelVector.x * parametricSpeed;
@@ -881,7 +850,7 @@ export default class EnergySkateParkModel {
         parametricSpeed = parametricSpeed * -1;
       }
 
-      const attachedSkater = skaterState.attachToTrack( newThermalEnergy, track, isOnTopSideOfTrack, parametricPosition, parametricSpeed, newVelocity.x, newVelocity.y, newPosition.x, newPosition.y );
+      const attachedSkater = skaterState.attachToTrack( newThermalEnergy, track, onTopSideOfTrack, parametricPosition, parametricSpeed, newVelocity.x, newVelocity.y, newPosition.x, newPosition.y );
       affirm( equalsEpsilon( attachedSkater.getTotalEnergy(), skaterState.getTotalEnergy(), 1E-8 ), 'large energy change after attaching to track' );
       return attachedSkater;
     }
@@ -1106,8 +1075,8 @@ export default class EnergySkateParkModel {
     const track = skaterState.track!;
 
     const unitNormalVector = track.getUnitNormalVector( skaterState.parametricPosition );
-    const sideVectorX = skaterState.isOnTopSideOfTrack ? unitNormalVector.x : unitNormalVector.x * -1;
-    const sideVectorY = skaterState.isOnTopSideOfTrack ? unitNormalVector.y : unitNormalVector.y * -1;
+    const sideVectorX = skaterState.onTopSideOfTrack ? unitNormalVector.x : unitNormalVector.x * -1;
+    const sideVectorY = skaterState.onTopSideOfTrack ? unitNormalVector.y : unitNormalVector.y * -1;
 
     // Dot product written out component-wise to avoid allocations, see #50
     const outsideCircle = sideVectorX * curvatureDirectionX + sideVectorY * curvatureDirectionY < 0;
@@ -1124,7 +1093,7 @@ export default class EnergySkateParkModel {
 
     const leaveTrack = ( netForceRadial < centripetalForce && outsideCircle ) || ( netForceRadial > centripetalForce && !outsideCircle );
 
-    if ( leaveTrack && !this.isStickingToTrackProperty.value ) {
+    if ( leaveTrack && !this.stickingToTrackProperty.value ) {
 
       // Leave the track.  Make sure the velocity is pointing away from the track or keep track of frames away from the
       // track so it doesn't immediately recollide.  Or project a ray and see if a collision is imminent?
@@ -1760,7 +1729,7 @@ export default class EnergySkateParkModel {
       const x2 = newTrack.getX( p.parametricPosition );
       const y2 = newTrack.getY( p.parametricPosition );
       this.skater.positionProperty.value = new Vector2( x2, y2 );
-      this.skater.angleProperty.value = newTrack.getViewAngleAt( p.parametricPosition ) + ( this.skater.isOnTopSideOfTrackProperty.value ? 0 : Math.PI );
+      this.skater.angleProperty.value = newTrack.getViewAngleAt( p.parametricPosition ) + ( this.skater.onTopSideOfTrackProperty.value ? 0 : Math.PI );
 
       // Trigger an initial update now so we can get the right up vector, see #150
       this.skater.updatedEmitter.emit();
@@ -1768,8 +1737,8 @@ export default class EnergySkateParkModel {
 
       // If the skater flipped upside down because the track directionality is different, toggle his 'up' flag
       if ( originalNormal.dot( newNormal ) < 0 ) {
-        this.skater.isOnTopSideOfTrackProperty.value = !this.skater.isOnTopSideOfTrackProperty.value;
-        this.skater.angleProperty.value = newTrack.getViewAngleAt( p.parametricPosition ) + ( this.skater.isOnTopSideOfTrackProperty.value ? 0 : Math.PI );
+        this.skater.onTopSideOfTrackProperty.value = !this.skater.onTopSideOfTrackProperty.value;
+        this.skater.angleProperty.value = newTrack.getViewAngleAt( p.parametricPosition ) + ( this.skater.onTopSideOfTrackProperty.value ? 0 : Math.PI );
         this.skater.updatedEmitter.emit();
       }
 
@@ -1791,7 +1760,7 @@ export default class EnergySkateParkModel {
    * it wouldn't be handled in the update loop.
    */
   public trackModified( track: Track ): void {
-    if ( !this.isPlayingProperty.value && this.skater.trackProperty.value === track ) {
+    if ( this.pausedProperty.value && this.skater.trackProperty.value === track ) {
       this.skater.updateEnergy();
     }
 

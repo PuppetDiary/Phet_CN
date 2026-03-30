@@ -1,4 +1,4 @@
-// Copyright 2025-2026, University of Colorado Boulder
+// Copyright 2025, University of Colorado Boulder
 
 /**
  * ForcesListDescription provides an accessible list of the current force arrow values in the Net Force screen.
@@ -10,7 +10,7 @@
 import DerivedProperty from '../../../../axon/js/DerivedProperty.js';
 import { TReadOnlyProperty } from '../../../../axon/js/TReadOnlyProperty.js';
 import { toFixedNumber } from '../../../../dot/js/util/toFixedNumber.js';
-import AccessibleList from '../../../../scenery-phet/js/accessibility/AccessibleList.js';
+import AccessibleListNode from '../../../../scenery-phet/js/accessibility/AccessibleListNode.js';
 import Node from '../../../../scenery/js/nodes/Node.js';
 import getQualitativeForceDescription from '../../common/view/getQualitativeForceDescription.js';
 import forcesAndMotionBasics from '../../forcesAndMotionBasics.js';
@@ -18,6 +18,7 @@ import ForcesAndMotionBasicsFluent from '../../ForcesAndMotionBasicsFluent.js';
 import NetForceModel from '../model/NetForceModel.js';
 
 export default class ForcesListDescription extends Node {
+  private readonly forcesList: AccessibleListNode | null = null;
   public readonly netForceDescriptionProperty: TReadOnlyProperty<string>;
 
   public constructor( private readonly model: NetForceModel ) {
@@ -104,15 +105,15 @@ export default class ForcesListDescription extends Node {
     // "No forces displayed" should be visible when no other forces are visible
     const noForcesVisibleProperty = DerivedProperty.not( anyVisibleProperty );
 
-    // Build the accessible list template with four potential items, each with its own visibility.
-    this.accessibleTemplate = AccessibleList.createTemplateProperty( {
-      listItems: [
-        { stringProperty: leftItemStringProperty, visibleProperty: leftVisibleProperty },
-        { stringProperty: rightItemStringProperty, visibleProperty: rightVisibleProperty },
-        { stringProperty: this.netForceDescriptionProperty, visibleProperty: model.showSumOfForcesProperty },
-        { stringProperty: ForcesAndMotionBasicsFluent.a11y.forces.noForcesDisplayedStringProperty, visibleProperty: noForcesVisibleProperty }
-      ]
-    } );
+    // Build the AccessibleListNode once with four potential items, each with its own visibility
+    this.forcesList = new AccessibleListNode( [
+      { stringProperty: leftItemStringProperty, visibleProperty: leftVisibleProperty },
+      { stringProperty: rightItemStringProperty, visibleProperty: rightVisibleProperty },
+      { stringProperty: this.netForceDescriptionProperty, visibleProperty: model.showSumOfForcesProperty },
+      { stringProperty: ForcesAndMotionBasicsFluent.a11y.forces.noForcesDisplayedStringProperty, visibleProperty: noForcesVisibleProperty }
+    ] );
+
+    this.addChild( this.forcesList );
   }
 
   /**

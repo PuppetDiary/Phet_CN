@@ -1,4 +1,4 @@
-// Copyright 2020-2026, University of Colorado Boulder
+// Copyright 2020-2025, University of Colorado Boulder
 
 /**
  * @author Jesse Greenberg
@@ -15,9 +15,7 @@ export default class IntroModel extends EnergySkateParkFullTrackSetModel {
     super( preferencesModel, tandem, {
 
       // by default the Intro screen does not save samples
-      defaultSaveSamples: false,
-      isShowPathSupported: true,
-      instrumentDataSamples: true
+      defaultSaveSamples: false
     } );
 
     // attach listeners that clear skater path when Properties like direction and dragging change

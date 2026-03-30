@@ -43,7 +43,7 @@ export default class EnergySkateParkTrackSetScreenView extends EnergySkateParkSa
 
     model.sceneProperty.link( scene => {
       _.forEach( model.tracks, ( track, i ) => {
-        trackNodes[ i ].visible = scene === model.trackTypes[ i ];
+        trackNodes[ i ].visible = scene === i;
       } );
 
       // interrupt the DragHandler when scene Property changes since Skater needs to reset to initial position when
@@ -51,17 +51,10 @@ export default class EnergySkateParkTrackSetScreenView extends EnergySkateParkSa
       this.skaterNode.interruptDrag();
     } );
 
-    // When a scene change causes the skater to be returned to the ground (only if displaced), announce it.
-    model.skaterReturnedToGroundBySceneChangeEmitter.addListener( () => {
-      this.skaterNode.addAccessibleContextResponse(
-        EnergySkateParkFluent.a11y.returnSkaterToGroundButton.accessibleContextResponseStringProperty
-      );
-    } );
-
-    // Derive the track shape name from the scene TrackType
+    // Derive the track shape name from the scene index
     const trackShapeNameProperty = new DerivedProperty(
       [ model.sceneProperty ],
-      scene => trackTypeToNameProperty[ scene ].value
+      sceneIndex => trackTypeToNameProperty[ model.trackTypes[ sceneIndex ] ].value
     );
 
     // Dynamic paragraph describing the current track shape and skater status
@@ -73,8 +66,7 @@ export default class EnergySkateParkTrackSetScreenView extends EnergySkateParkSa
         EnergySkateParkFluent.a11y.yourSkatePark.skaterOnTrackStringProperty,
         EnergySkateParkFluent.a11y.yourSkatePark.skaterOffTrackStringProperty
       ],
-      ( scene, trackShapeName, skaterTrack, onTrackString, offTrackString ) => {
-        const sceneIndex = model.trackTypes.indexOf( scene );
+      ( sceneIndex, trackShapeName, skaterTrack, onTrackString, offTrackString ) => {
         const track = model.tracks.get( sceneIndex );
         const visibleControlPointCount = track.controlPoints.filter( cp => cp.visible ).length;
 

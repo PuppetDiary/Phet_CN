@@ -59,6 +59,10 @@ import MovingBackgroundNode from './MovingBackgroundNode.js';
 import PusherNode from './PusherNode.js';
 import SpeedometerNode from './SpeedometerNode.js';
 import WaterBucketNode from './WaterBucketNode.js';
+import FeedbackManager from '../../common/model/FeedbackManager.js';
+import { motionFeedbackRules, frictionFeedbackRules, encouragementRules } from './MotionFeedbackRules.js';
+import { accelerationFeedbackRules } from './AccelerationFeedbackRules.js';
+import TutorialOverlayNode, { type TutorialStep } from '../../common/view/TutorialOverlayNode.js';
 
 const sumOfForcesStringProperty = ForcesAndMotionBasicsFluent.sumOfForcesStringProperty;
 
@@ -75,6 +79,7 @@ const sumOfForcesEqualsZeroStringProperty = ForcesAndMotionBasicsFluent.sumOfFor
 export default class MotionScreenView extends ScreenView {
 
   private readonly resetAllButton: ResetAllButton;
+  private readonly feedbackManager: FeedbackManager;
   private readonly sumArrow: ReadoutArrow;
   private readonly sumOfForcesNode: Node;
   public readonly itemNodes: ItemNode[];
@@ -87,6 +92,13 @@ export default class MotionScreenView extends ScreenView {
   // Keyboard navigation groups
   public readonly itemToolboxGroup: ItemToolboxGroupNode;
   public readonly itemStackGroup: ItemStackGroupNode;
+
+  // Tutorial system
+  private readonly tutorialOverlay: TutorialOverlayNode;
+  private readonly appliedForceControl: AppliedForceControl;
+  private readonly controlPanel: MotionControlPanel;
+  private readonly speedometerNode: SpeedometerNode;
+  private readonly accelerometerNode: Node | null;  // Only available on acceleration screen
 
   /**
    * @param model model for the entire screen
@@ -150,19 +162,19 @@ export default class MotionScreenView extends ScreenView {
       lineWidth: 1
     } );
 
-    const appliedForceControl = new AppliedForceControl( ( rightItemToolboxNode.left - leftItemToolboxNode.right ) - 10, model, tandem.createTandem( 'appliedForceControl' ) );
+    this.appliedForceControl = new AppliedForceControl( ( rightItemToolboxNode.left - leftItemToolboxNode.right ) - 10, model, tandem.createTandem( 'appliedForceControl' ) );
 
     const appliedForcePlayAreaControlNode = new Node( {
       tagName: 'div',
       accessibleHeading: ForcesAndMotionBasicsFluent.a11y.motionScreen.playAreaControls.appliedForceControl.accessibleHeadingStringProperty,
       descriptionContent: ForcesAndMotionBasicsFluent.a11y.motionScreen.playAreaControls.appliedForceControl.descriptionStringProperty,
       appendDescription: false,
-      children: [ appliedForceControl ]
+      children: [ this.appliedForceControl ]
     } );
 
     // The FineCoarseSpinner does not have an accessibleName. Instead, we manually create an association to the
     // "Applied Force Control" heading.
-    appliedForceControl.spinner.addAriaLabelledbyAssociation( {
+    this.appliedForceControl.spinner.addAriaLabelledbyAssociation( {
 
       // This element's focusable element is labelled by...
       thisElementName: PDOMPeer.PRIMARY_SIBLING,
@@ -193,18 +205,21 @@ export default class MotionScreenView extends ScreenView {
     this.addChild( speedDescriptionNode );
 
     // Create the speedometer.  Specify the position after construction so we can set the 'top'
-    const speedometerNode = new SpeedometerNode( model.speedProperty, model.showSpeedProperty, model.showValuesProperty, {
+    this.speedometerNode = new SpeedometerNode( model.speedProperty, model.showSpeedProperty, model.showValuesProperty, {
       x: 300,
       top: 8
     } );
 
-    this.addChild( speedometerNode );
+    this.addChild( this.speedometerNode );
+
+    // Initialize accelerometer node (will be set if on acceleration screen)
+    this.accelerometerNode = null;
 
     // Create and add the control panel (pass dynamic speed description for accessibility announcement)
-    const controlPanel = new MotionControlPanel( model, forcesDescriptionNode.netForceDescriptionProperty, speedDescriptionNode.speedDescriptionProperty, accelerationDescriptionNode.accelerationDescriptionProperty, tandem.createTandem( 'controlPanel' ) );
-    this.addChild( controlPanel );
+    this.controlPanel = new MotionControlPanel( model, forcesDescriptionNode.netForceDescriptionProperty, speedDescriptionNode.speedDescriptionProperty, accelerationDescriptionNode.accelerationDescriptionProperty, tandem.createTandem( 'controlPanel' ) );
+    this.addChild( this.controlPanel );
 
-    const stopwatchDragBounds = new Bounds2( this.layoutBounds.minX, this.layoutBounds.minY, controlPanel.left, 200 );
+    const stopwatchDragBounds = new Bounds2( this.layoutBounds.minX, this.layoutBounds.minY, this.controlPanel.left, 200 );
     const stopwatchNode = new StopwatchNode( model.stopwatch, {
       tandem: tandem.createTandem( 'stopwatchNode' ),
       visibleProperty: model.stopwatch.isVisibleProperty,
@@ -224,7 +239,7 @@ export default class MotionScreenView extends ScreenView {
     } );
 
     // We want to reset the position to what was explicitly set after the stopwatchNode was created.
-    const stopwatchInitialPosition = controlPanel.leftTop.plusXY( -stopwatchNode.width, 10 );
+    const stopwatchInitialPosition = this.controlPanel.leftTop.plusXY( -stopwatchNode.width, 10 );
     model.stopwatch.positionProperty.setInitialValue( stopwatchInitialPosition );
     model.stopwatch.positionProperty.value = stopwatchInitialPosition;
 
@@ -242,7 +257,7 @@ export default class MotionScreenView extends ScreenView {
     const playPauseVerticalOffset = 35;
     const timeControlNode = new TimeControlNode( model.isPlayingProperty, {
       tandem: tandem.createTandem( 'timeControlNode' ),
-      leftCenter: controlPanel.leftBottom.plusXY( 0, playPauseVerticalOffset ),
+      leftCenter: this.controlPanel.leftBottom.plusXY( 0, playPauseVerticalOffset ),
       playPauseStepButtonOptions: {
         stepForwardButtonOptions: {
           listener: () => { model.manualStep(); }
@@ -256,16 +271,17 @@ export default class MotionScreenView extends ScreenView {
         model.reset();
 
         this.grabReleaseCueNode.reset();
+        this.feedbackManager!.reset();
         resetItemFocusState();
       },
       radius: 23,
-      rightCenter: controlPanel.rightBottom.plusXY( 0, playPauseVerticalOffset ),
+      rightCenter: this.controlPanel.rightBottom.plusXY( 0, playPauseVerticalOffset ),
       tandem: tandem.createTandem( 'resetAllButton' )
     } );
 
     // i18n - if the play control buttons are too close to reset all, they should be separated
     if ( timeControlNode.right > this.resetAllButton.left - PLAY_PAUSE_BUFFER ) {
-      timeControlNode.leftCenter = controlPanel.leftBottom.plusXY( -2 * PLAY_PAUSE_BUFFER, playPauseVerticalOffset );
+      timeControlNode.leftCenter = this.controlPanel.leftBottom.plusXY( -2 * PLAY_PAUSE_BUFFER, playPauseVerticalOffset );
     }
 
     this.addChild( timeControlNode );
@@ -307,7 +323,7 @@ export default class MotionScreenView extends ScreenView {
       } );
 
       // put it all together in a VBox
-      const accelerometerWithTickLabels = new Node( {
+      this.accelerometerNode = new Node( {
         children: [ labelText, accelerometerNode, tickLabels ],
         pickable: false,
         centerX: 300,
@@ -315,9 +331,9 @@ export default class MotionScreenView extends ScreenView {
       } );
       labelText.bottom = accelerometerNode.top;
       tickLabels.top = accelerometerNode.bottom;
-      model.showAccelerationProperty.linkAttribute( accelerometerWithTickLabels, 'visible' );
+      model.showAccelerationProperty.linkAttribute( this.accelerometerNode, 'visible' );
 
-      this.addChild( accelerometerWithTickLabels );
+      this.addChild( this.accelerometerNode );
 
       // whenever showValues and acceleration changes, update the label text position
       const initialLabelWidth = labelText.width;
@@ -715,12 +731,12 @@ export default class MotionScreenView extends ScreenView {
       this.appliedForceArrow,
       this.frictionArrow,
       this.sumArrow,
-      speedometerNode,
+      this.speedometerNode,
       stopwatchPlayAreaSection
     ];
 
     this.pdomControlAreaNode.pdomOrder = [
-      controlPanel,
+      this.controlPanel,
       timeControlNode,
       this.resetAllButton
     ];
@@ -730,6 +746,261 @@ export default class MotionScreenView extends ScreenView {
         this.addAccessibleContextResponse( ForcesAndMotionBasicsFluent.a11y.motionScreen.pusherResponses.fellDownAppliedForceZeroStringProperty.value );
       }
     } );
+
+    // Initialize FeedbackManager for positive feedback
+    this.feedbackManager = new FeedbackManager( {
+      tandem: tandem.createTandem( 'feedbackManager' ),
+      layoutBounds: this.layoutBounds
+    } );
+
+    // Register feedback rules based on screen type
+    switch( model.screen ) {
+      case 'motion':
+        motionFeedbackRules.forEach( rule => {
+          this.feedbackManager.registerRule( rule );
+        } );
+        break;
+      case 'friction':
+        frictionFeedbackRules.forEach( rule => {
+          this.feedbackManager.registerRule( rule );
+        } );
+        break;
+      case 'acceleration':
+        accelerationFeedbackRules.forEach( rule => {
+          this.feedbackManager.registerRule( rule );
+        } );
+        break;
+    }
+
+    // Register common encouragement rules for all screens
+    encouragementRules.forEach( rule => {
+      this.feedbackManager.registerRule( rule );
+    } );
+
+    // Set FeedbackManager parent node
+    this.feedbackManager.setParentNode( this );
+
+    // Link model properties to check for feedback triggers
+    this.model.stepEmitter.addListener( () => {
+      this.feedbackManager.update( this.model );
+    } );
+
+    // Reset feedback when reset all is triggered
+    this.model.resetAllEmitter.addListener( () => {
+      this.feedbackManager.reset();
+    } );
+
+    // Initialize Tutorial Overlay
+    this.tutorialOverlay = new TutorialOverlayNode( {
+      layoutBounds: this.layoutBounds,
+      steps: this.getTutorialSteps(),
+      onComplete: () => {
+        // Enable feedback manager after tutorial completes
+        this.feedbackManager.setEnabled( true );
+        // Small delay to ensure tutorial is fully hidden before showing feedback
+        setTimeout( () => {
+          // Show the first feedback immediately, bypassing cooldown checks
+          this.feedbackManager.showFirstFeedback( this.model );
+        }, 400 );
+      }
+    } );
+    this.addChild( this.tutorialOverlay );
+
+    // Show tutorial after a short delay to allow UI to fully render
+    setTimeout( () => {
+      // Disable feedback manager before showing tutorial
+      this.feedbackManager.setEnabled( false );
+      this.tutorialOverlay.restart();
+    }, 1500 );
+  }
+
+  /**
+   * Get tutorial steps based on the current screen
+   */
+  private getTutorialSteps(): TutorialStep[] {
+    switch( this.model.screen ) {
+      case 'motion':
+        return this.getMotionTutorialSteps();
+      case 'friction':
+        return this.getFrictionTutorialSteps();
+      case 'acceleration':
+        return this.getAccelerationTutorialSteps();
+      default:
+        return [];
+    }
+  }
+
+  /**
+   * Get tutorial steps for Motion screen
+   */
+  private getMotionTutorialSteps(): TutorialStep[] {
+    return [
+      {
+        target: this.appliedForceControl,
+        title: '欢迎使用运动实验室！',
+        content: '拖动滑块向右或向左施加推力，观察箱子如何运动。',
+        position: 'right'
+      },
+      {
+        target: this.itemToolboxGroup,
+        title: '添加物体',
+        content: '从工具箱拖动不同物体到滑板上，改变总质量，观察对运动的影响。',
+        position: 'top'
+      },
+      {
+        target: this.speedometerNode,
+        title: '测量速度',
+        content: '速度计显示物体的实时速度，单位是<nobr>m/s</nobr>。',
+        position: 'left',
+        onShow: () => {
+          this.model.showSpeedProperty.value = true;
+        },
+        onHide: () => {
+          this.model.showSpeedProperty.value = false;
+        }
+      },
+      {
+        target: this.controlPanel,
+        title: '显示数据',
+        content: '在控制面板中勾选不同的选项，可以显示力、速度、质量等数值。',
+        position: 'left',
+        onShow: () => {
+          this.model.showValuesProperty.value = true;
+        }
+        // Keep values visible after tutorial completes
+      }
+    ];
+  }
+
+  /**
+   * Get tutorial steps for Friction screen
+   */
+  private getFrictionTutorialSteps(): TutorialStep[] {
+    return [
+      {
+        target: this.controlPanel,
+        title: '欢迎使用摩擦力实验室！',
+        content: '在控制面板中调节摩擦力滑块，改变地面的摩擦系数。向右更粗糙，向左更光滑。',
+        position: 'left'
+      },
+      {
+        target: this.itemStackGroup,
+        title: '观察摩擦力',
+        content: '红色箭头显示摩擦力的大小和方向。摩擦力总是阻碍物体的运动。',
+        position: 'bottom',
+        onShow: () => {
+          this.model.showForceProperty.value = true;
+        },
+        onHide: () => {
+          this.model.showForceProperty.value = false;
+        }
+      },
+      {
+        target: this.appliedForceControl,
+        title: '施加推力',
+        content: '尝试施加不同的力，观察静摩擦力如何抵抗你的推力。',
+        position: 'right'
+      },
+      {
+        target: this.controlPanel,
+        title: '显示数值',
+        content: '勾选 "数值" 可以看到摩擦力的具体数值。',
+        position: 'left',
+        onShow: () => {
+          this.model.showValuesProperty.value = true;
+        }
+        // Keep values visible after tutorial completes
+      }
+    ];
+  }
+
+  /**
+   * Get tutorial steps for Acceleration screen
+   */
+  private getAccelerationTutorialSteps(): TutorialStep[] {
+    return [
+      {
+        target: this.appliedForceControl,
+        title: '欢迎使用加速度实验室！',
+        content: '拖动滑块施加推力，观察物体的加速度变化。',
+        position: 'right'
+      },
+      {
+        target: this.itemToolboxGroup,
+        title: '改变质量',
+        content: '添加不同质量的物体，观察质量对加速度的影响。',
+        position: 'top'
+      },
+      {
+        target: this.speedometerNode,
+        title: '观察速度计',
+        content: '速度计显示物体的实时速度，单位是<nobr>m/s</nobr>。',
+        position: 'left',
+        onShow: () => {
+          this.model.showSpeedProperty.value = true;
+        },
+        onHide: () => {
+          this.model.showSpeedProperty.value = false;
+        }
+      },
+      {
+        target: () => this.accelerometerNode || this.controlPanel,
+        title: '观察加速度计',
+        content: '加速度计显示物体的实时加速度，单位是<nobr>m/s²</nobr>。',
+        position: 'bottom',
+        onShow: () => {
+          this.model.showAccelerationProperty.value = true;
+        },
+        onHide: () => {
+          this.model.showAccelerationProperty.value = false;
+        }
+      },
+      {
+        target: () => {
+          // 创建一个临时节点用于框选加速度计+箱子
+          const container = new Node();
+          // 设置代理边界，覆盖加速度计和箱子
+          const accelBounds = this.accelerometerNode ? this.accelerometerNode.globalBounds : null;
+          const itemBounds = this.itemStackGroup.globalBounds;
+
+          if ( accelBounds ) {
+            Object.defineProperty( container, 'globalBounds', {
+              get: () => new Bounds2(
+                Math.min( accelBounds.minX, itemBounds.minX ),
+                Math.min( accelBounds.minY, itemBounds.minY ),
+                Math.max( accelBounds.maxX, itemBounds.maxX ),
+                Math.max( accelBounds.maxY, itemBounds.maxY )
+              )
+            } );
+          } else {
+            container.globalBounds = itemBounds;
+          }
+
+          return container;
+        },
+        title: '合力与加速度',
+        content: '合力越大，加速度越大。这就是牛顿第二定律 F = ma！',
+        position: 'bottom',
+        onShow: () => {
+          this.model.showAccelerationProperty.value = true;
+          this.model.showSumOfForcesProperty.value = true;
+        },
+        onHide: () => {
+          this.model.showAccelerationProperty.value = false;
+          this.model.showSumOfForcesProperty.value = false;
+        }
+      },
+      {
+        target: this.controlPanel,
+        title: '显示数据',
+        content: '勾选 "加速度" 可以显示加速度数值和加速度计。',
+        position: 'left',
+        onShow: () => {
+          this.model.showAccelerationProperty.value = true;
+        }
+        // Keep acceleration visible after tutorial completes
+      }
+    ];
   }
 
   // Get the height of the objects in the stack (doesn't include skateboard)

@@ -28,6 +28,8 @@ energies:
   potential: Potential
   energy:    Energy
 plots:
+  barGraph:
+    label: Bar Graph
   energyGraph:
     label: Energy Graph
   pieChart:
@@ -43,6 +45,8 @@ visibilityControls:
   path:            Path
   speed:           Speed
 skaterControls:
+  label:              Skater
+  skater1MassPattern: Skater 1 ({{value}} kg)
   restartSkater:      Restart Skater
 trackControls.stickToTrack: Stick to Track
 heightLabels:
@@ -89,50 +93,50 @@ a11y:
   noDataParagraph:      No data to display. Grab skater to get started.
   screenSummary:
     playArea:
-      intro:      >-
-                  At your skate park, a skater can move along a track.
-                  You can explore graphical representations of energy and measure speed.
-      measure:    >-
-                  At your skate park, a skater can move along an adjustable track.
-                  You can explore graphical representations of energy and measure speed.
-                  Additionally, the Energy Sensor measures energy, speed, and height along the skater's path.
-      graphs:     >-
-                  At your skate park, a skater can move along an adjustable track.
-                  You can explore graphical representations of energy and measure speed.
-                  Additionally, the Energy Graph plots energy as a function of position or time.
-      friction:   >-
-                  At your skate park, a skater can move along a track with an adjustable amount of friction.
-                  You can explore graphical representations of energy and measure speed.
+      intro: >-
+        At your skate park, a skater can move along a track.
+        You can explore graphical representations of energy and measure speed.
+      measure: >-
+        At your skate park, a skater can move along an adjustable track.
+        You can explore graphical representations of energy and measure speed.
+        Additionally, the Energy Sensor measures energy, speed, and height along the skater's path.
+      graphs: >-
+        At your skate park, a skater can move along an adjustable track.
+        You can explore graphical representations of energy and measure speed.
+        Additionally, the Energy Graph plots energy as a function of position or time.
+      friction: >-
+        At your skate park, a skater can move along a track with an adjustable amount of friction.
+        You can explore graphical representations of energy and measure speed.
       playground: >-
-                  At your skate park, a skater can move along a custom-built track.
-                  You can explore graphical representations of energy and measure speed.
+        At your skate park, a skater can move along a custom-built track.
+        You can explore graphical representations of energy and measure speed.
     controlArea:
-      withTrackSelection:    >-
-                             You can choose your track shape, adjust experiment settings, and enable measurement tools.
-                             There is a button to pause the sim for closer analysis of energy and speed.
-                             Reset sim to start over.
+      withTrackSelection: >-
+        You can choose your track shape, adjust experiment settings, and enable measurement tools.
+        There is a button to pause the sim for closer analysis of energy and speed.
+        Reset sim to start over.
       withoutTrackSelection: >-
-                             You can adjust experiment settings and enable measurement tools.
-                             There is a button to pause the sim for closer analysis of energy and speed.
-                             Reset sim to start over.
+        You can adjust experiment settings and enable measurement tools.
+        There is a button to pause the sim for closer analysis of energy and speed.
+        Reset sim to start over.
     currentDetails:
-      skaterPhrase:   >-
-                      Currently, skater is { $onTrack ->
-                        [on] on
-                        *[off] off
-                      } the track and { $motion ->
-                        [inMotion] in motion
-                        *[atRest] at rest
-                      }.
+      skaterPhrase: >-
+        Currently, skater is { $onTrack ->
+          [on] on
+          *[off] off
+        } the track and { $motion ->
+          [inMotion] in motion
+          *[atRest] at rest
+        }.
       frictionPhrase: >-
-                      Track surface { $hasFriction ->
-                        [true] has friction
-                        *[false] is frictionless
-                      }.
-      noTrackBuilt:   Currently, no track built.
+        Track surface { $hasFriction ->
+          [true] has friction
+          *[false] is frictionless
+        }.
+      noTrackBuilt: Currently, no track built.
     interactionHint:
       hasTrack: Place skater on the track to begin exploring.
-      noTrack:  Add tracks to start building your own skate park.
+      noTrack: Add tracks to start building your own skate park.
   controlPanel:
     experimentSettingsHeading: Experiment Settings
   keyboardHelpDialog:
@@ -142,11 +146,9 @@ a11y:
       selectOption:       Select option
       cancel:             Cancel
   skaterNode:
-    accessibleName:                 Skater
-    firstGrabContextResponse:          Press J key plus T key to attach skater to nearest track. Space to release.
-    snapToTrackContextResponse:        Skater on track.
-    detachFromTrackContextResponse:    Skater off track.
-    offScreenContextResponse:          Skater off screen. Return skater.
+    accessibleName:   Skater
+    onTrackHelpText:  Use left and right arrow keys or A and D to move along track. Press up arrow or W to detach.
+    offTrackHelpText: Use arrow keys or W, A, S, D to move the skater.
   referenceHeightLine:
     accessibleHeading:  Reference Height
     accessibleName:     Reference Height Line
@@ -171,25 +173,12 @@ a11y:
                                    Add track pieces as needed. Then, use connection options to connect tracks.
                                    Everything is movable with the Arrow keys. Check out Keyboard Shortcuts for more handy shortcuts.
     trackPhraseFixed:              'Track shape is { $trackShape }.'
-    trackPhraseAdjustable:         |-
-                                   Track shape is { $trackShape } with { $numberControlPoints ->
-                                     [one] { $numberControlPoints } adjustable control point
-                                    *[other] { $numberControlPoints } adjustable control points
-                                   }.
-    playgroundTrackPhraseMultiple: |-
-                                   Your custom-built track has { $numberTracks } tracks and { $numberControlPoints ->
-                                     [one] { $numberControlPoints } adjustable control point
-                                    *[other] { $numberControlPoints } adjustable control points
-                                   }.
-    playgroundTrackPhraseSingle:   |-
-                                   Your custom-built track has 1 track and { $numberControlPoints ->
-                                     [one] { $numberControlPoints } adjustable control point
-                                    *[other] { $numberControlPoints } adjustable control points
-                                   }.
+    trackPhraseAdjustable:         'Track shape is { $trackShape } with { $numberControlPoints } adjustable control points.'
+    playgroundTrackPhraseMultiple: 'Your custom-built track has { $numberTracks } tracks and { $numberControlPoints } adjustable control points.'
+    playgroundTrackPhraseSingle:   'Your custom-built track has 1 track and { $numberControlPoints } adjustable control points.'
     playgroundTrackPhraseNone:     No track yet.
     trackAndSkaterParagraph:       '{ $trackPhrase } { $skaterPhrase }'
     skaterOnTrack:                 Skater is on track.
-    skaterOnTrackWithIndex:        'Skater is on track { $index }.'
     skaterOffTrack:                Skater is off track.
   trackNode:
     accessibleHeadingWithIndex: 'Track { $index }'
@@ -215,9 +204,7 @@ a11y:
   energySensorNode:
     accessibleHeading:    Energy Sensor
     accessibleName:       Energy Sensor Probe
-    accessibleHelpText:   >-
-                          Move probe along skater's path to measure speed, height, and energy. 
-                          Path fades away when skater turns around. Pause to analyze values. 
+    accessibleHelpText:   Move probe along skater's path to measure speed, height, and energy.
     nothingToMeasure:     Nothing to measure yet.
     movedOffSamples:      Sensor moved off of sample points.
     sampleReadoutPattern: >-
@@ -287,6 +274,9 @@ a11y:
       accessibleName:   Erase Energy Graph Data
       positionResponse: Data cleared from the Energy Graph.
       timeResponse:     Data cleared from the Energy Graph. Time reset to 0 seconds.
+  controlPointAttachment:
+    left:  Left
+    right: Right
   energyBarGraphAccordionBox:
     accessibleName:             Energy Bar Graph
     accessibleHelpTextExpanded: Bar Graph displays skater's energy in real time. Pause to analyze values.
@@ -342,12 +332,7 @@ a11y:
   gravitySlider:
     accessibleHelpText: Set acceleration due to gravity, ranging from tiny to lots.
   gravityControl:
-    accessibleHelpText:     Set acceleration due to gravity.
-    accessibleValuePattern: >-
-                            {$value} { $units ->
-                              [metersPerSecondSquared] meters per second squared
-                              *[newtonsPerKilogram] newtons per kilogram
-                            }
+    accessibleHelpText: Set acceleration due to gravity.
   gravityComboBox:
     accessibleName:            Gravity Benchmark
     accessibleHelpText:        Set acceleration due to gravity to match the chosen benchmark.
@@ -358,8 +343,7 @@ a11y:
   massSlider:
     accessibleHelpText: Set skater mass, ranging from small to large.
   massControl:
-    accessibleHelpText:     Set skater mass.
-    accessibleValuePattern: '{$value} kilograms'
+    accessibleHelpText: Set skater mass.
   
   # Key names likely need fixing. I copied the phetioIDs from the Intro screen. For animal skaters, list animal type. For example: Skater 7, Goat
   skaterSetOneControls:
@@ -389,18 +373,17 @@ a11y:
     accessibleContextResponseUnchecked: Grid lines hidden.
   referenceHeightCheckbox:
     accessibleHelpText:                 Experiment with or without an adjustable reference height.
-    accessibleContextResponseChecked:   Reference Height added to Play Area.
-    accessibleContextResponseUnchecked: Reference Height hidden.
+    accessibleContextResponseChecked:   Adjustable reference height added to Play Area.
+    accessibleContextResponseUnchecked: Adjustable reference height hidden.
   restartSkaterButton:
     accessibleHelpText: Return skater to most recent starting position and repeat experiment.
   returnSkaterToPreviousStartingPositionButton:
-    accessibleName:            Return Skater to Starting Position
-    accessibleHelpText:        Return skater to most recent starting position and repeat experiment.
-    accessibleContextResponse: Skater returned to starting position.
+    accessibleName:     Return Skater to Starting Position
+    accessibleHelpText: Return skater to most recent starting position and repeat experiment.
   returnSkaterToGroundButton:
-    accessibleName:            Return Skater to Ground
-    accessibleContextResponse: Skater on ground.
+    accessibleName: Return Skater to Ground
   
+  # ESP and ESPB both have Intro & Playground screens. Help text applies to both sims
   screenButtons:
     intro:
       accessibleHelpText: Explore different tracks and skaters and observe how the energy changes.
@@ -410,6 +393,8 @@ a11y:
       accessibleHelpText: Analyze the skater's energy as a function of position or time.
     playground:
       accessibleHelpText: Build your own custom tracks, ramps, and jumps for the skater..
+    friction:
+      accessibleHelpText: Experiment with adding friction to the tracks.
   preferences:
     metersPerSecondSquaredRadioButton: meters per second squared
     newtonsPerKilogramRadioButton:     newtons per kilogram

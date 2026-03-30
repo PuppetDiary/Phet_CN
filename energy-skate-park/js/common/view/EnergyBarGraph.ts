@@ -12,12 +12,15 @@ import NumberProperty from '../../../../axon/js/NumberProperty.js';
 import Property from '../../../../axon/js/Property.js';
 import { TReadOnlyProperty } from '../../../../axon/js/TReadOnlyProperty.js';
 import Range from '../../../../dot/js/Range.js';
+import { roundSymmetric } from '../../../../dot/js/util/roundSymmetric.js';
 import { toFixed } from '../../../../dot/js/util/toFixed.js';
 import BarChartNode from '../../../../griddle/js/BarChartNode.js';
+import merge from '../../../../phet-core/js/merge.js';
 import optionize from '../../../../phet-core/js/optionize.js';
 import MoveToTrashLegendButton from '../../../../scenery-phet/js/buttons/MoveToTrashLegendButton.js';
-import MagnifyingGlassZoomButtonGroup from '../../../../scenery-phet/js/MagnifyingGlassZoomButtonGroup.js';
+import ZoomButton from '../../../../scenery-phet/js/buttons/ZoomButton.js';
 import PhetFont from '../../../../scenery-phet/js/PhetFont.js';
+import HBox from '../../../../scenery/js/layout/nodes/HBox.js';
 import VBox from '../../../../scenery/js/layout/nodes/VBox.js';
 import Node, { NodeOptions } from '../../../../scenery/js/nodes/Node.js';
 import Rectangle from '../../../../scenery/js/nodes/Rectangle.js';
@@ -27,9 +30,12 @@ import sharedSoundPlayers from '../../../../tambo/js/sharedSoundPlayers.js';
 import Tandem from '../../../../tandem/js/Tandem.js';
 import energySkatePark from '../../energySkatePark.js';
 import EnergySkateParkFluent from '../../EnergySkateParkFluent.js';
-import EnergySkateParkColors from '../EnergySkateParkColors.js';
 import EnergySkateParkConstants from '../EnergySkateParkConstants.js';
 import Skater from '../model/Skater.js';
+import EnergySkateParkColors from '../EnergySkateParkColors.js';
+
+// constants
+const ZOOM_BUTTON_TOUCH_DILATION = 5;
 
 type SelfOptions = {
   // include buttons that increase/decrease the scale of the graph?
@@ -87,7 +93,6 @@ export default class EnergyBarGraph extends Node {
       tandem: tandem.createTandem( 'clearThermalButton' ),
       listener: skater.clearThermal.bind( skater ),
       scale: 0.86,
-      enabledPropertyOptions: { phetioReadOnly: true },
       soundPlayer: sharedSoundPlayers.get( 'erase' ),
       accessibleName: EnergySkateParkFluent.a11y.energyBarGraphAccordionBox.clearThermalButton.accessibleNameStringProperty,
       accessibleHelpText: EnergySkateParkFluent.a11y.energyBarGraphAccordionBox.clearThermalButton.accessibleHelpTextStringProperty,
@@ -172,62 +177,69 @@ export default class EnergyBarGraph extends Node {
     let content = null;
     if ( options.showBarGraphZoomButtons ) {
 
-      // Map discrete integer zoom levels to scale factors. Level 0 is MIN_ZOOM_FACTOR (a partial step),
-      // levels 1–9 correspond to 1*delta through 9*delta (= MAX_ZOOM_FACTOR). Default is level 2 (= 1/30).
-      const NUM_ZOOM_LEVELS = 10; // levels 0 through 9
-      const DEFAULT_ZOOM_LEVEL = 2;
-      const levelToScale = ( level: number ): number => {
-        return level === 0 ? EnergySkateParkConstants.MIN_ZOOM_FACTOR : level * EnergySkateParkConstants.ZOOM_FACTOR_DELTA;
-      };
-
-      const zoomProperty = new NumberProperty( DEFAULT_ZOOM_LEVEL, {
-        range: new Range( 0, NUM_ZOOM_LEVELS - 1 ),
-        tandem: tandem.createTandem( 'zoomProperty' ),
-        phetioDocumentation: 'Zoom level for the y-axis of the bar graph, where 0 is the most zoomed out, and 9 is the most zoomed in',
-        phetioFeatured: true
-      } );
-
-      // Keep barGraphScaleProperty in sync with the discrete zoom level.
-      zoomProperty.link( level => {
-        barGraphScaleProperty.value = levelToScale( level );
-      } );
-
-      const zoomLevelResponseProperty = EnergySkateParkFluent.a11y.energyBarGraphAccordionBox.zoomButtonGroup.zoomLevelResponse.createProperty( {
-        level: new DerivedProperty( [ zoomProperty ], level => level + 1 ),
-        max: NUM_ZOOM_LEVELS
-      } );
-
-      const zoomButtonGroup = new MagnifyingGlassZoomButtonGroup( zoomProperty, {
-        orientation: 'horizontal',
-        spacing: 5,
-        magnifyingGlassNodeOptions: {
+      const zoomButtonOptions = {
+        baseColor: ColorConstants.LIGHT_BLUE,
+        magnifyingGlassOptions: {
           glassRadius: 6
         },
-        buttonOptions: {
-          baseColor: ColorConstants.LIGHT_BLUE,
-          xMargin: 7,
-          yMargin: 5
+
+        xMargin: 7,
+        yMargin: 5,
+
+        // these buttons are quite small
+        touchAreaXDilation: ZOOM_BUTTON_TOUCH_DILATION,
+        touchAreaYDilation: ZOOM_BUTTON_TOUCH_DILATION
+      };
+
+      const maxLevel = roundSymmetric( ( EnergySkateParkConstants.MAX_ZOOM_FACTOR - EnergySkateParkConstants.MIN_ZOOM_FACTOR ) / EnergySkateParkConstants.ZOOM_FACTOR_DELTA ) + 1;
+
+      const zoomOutButton = new ZoomButton( merge( {
+        in: false,
+        listener: () => {
+          barGraphScaleProperty.set( Math.max( barGraphScaleProperty.get() - EnergySkateParkConstants.ZOOM_FACTOR_DELTA, EnergySkateParkConstants.MIN_ZOOM_FACTOR ) );
+          zoomOutButton.addAccessibleContextResponse(
+            EnergySkateParkFluent.a11y.energyBarGraphAccordionBox.zoomButtonGroup.zoomLevelResponse.format( {
+              level: roundSymmetric( ( barGraphScaleProperty.value - EnergySkateParkConstants.MIN_ZOOM_FACTOR ) / EnergySkateParkConstants.ZOOM_FACTOR_DELTA ) + 1,
+              max: maxLevel
+            } )
+          );
         },
-        touchAreaXDilation: 5,
-        touchAreaYDilation: 5,
-        zoomInButtonOptions: {
-          accessibleName: EnergySkateParkFluent.a11y.energyBarGraphAccordionBox.zoomButtonGroup.zoomIn.accessibleNameStringProperty,
-          accessibleHelpText: EnergySkateParkFluent.a11y.energyBarGraphAccordionBox.zoomButtonGroup.zoomIn.accessibleHelpTextStringProperty,
-          accessibleContextResponse: zoomLevelResponseProperty
+        touchAreaXShift: -ZOOM_BUTTON_TOUCH_DILATION,
+        tandem: tandem.createTandem( 'zoomOutButton' ),
+        accessibleName: EnergySkateParkFluent.a11y.energyBarGraphAccordionBox.zoomButtonGroup.zoomOut.accessibleNameStringProperty,
+        accessibleHelpText: EnergySkateParkFluent.a11y.energyBarGraphAccordionBox.zoomButtonGroup.zoomOut.accessibleHelpTextStringProperty
+      }, zoomButtonOptions ) );
+      const zoomInButton = new ZoomButton( merge( {
+        in: true,
+        listener: () => {
+          barGraphScaleProperty.set( Math.min( barGraphScaleProperty.get() + EnergySkateParkConstants.ZOOM_FACTOR_DELTA, EnergySkateParkConstants.MAX_ZOOM_FACTOR ) );
+          zoomInButton.addAccessibleContextResponse(
+            EnergySkateParkFluent.a11y.energyBarGraphAccordionBox.zoomButtonGroup.zoomLevelResponse.format( {
+              level: roundSymmetric( ( barGraphScaleProperty.value - EnergySkateParkConstants.MIN_ZOOM_FACTOR ) / EnergySkateParkConstants.ZOOM_FACTOR_DELTA ) + 1,
+              max: maxLevel
+            } )
+          );
         },
-        zoomOutButtonOptions: {
-          accessibleName: EnergySkateParkFluent.a11y.energyBarGraphAccordionBox.zoomButtonGroup.zoomOut.accessibleNameStringProperty,
-          accessibleHelpText: EnergySkateParkFluent.a11y.energyBarGraphAccordionBox.zoomButtonGroup.zoomOut.accessibleHelpTextStringProperty,
-          accessibleContextResponse: zoomLevelResponseProperty
-        },
-        tandem: tandem.createTandem( 'zoomButtonGroup' ),
-        visiblePropertyOptions: { phetioFeatured: true }
+        touchAreaXShift: ZOOM_BUTTON_TOUCH_DILATION,
+        tandem: tandem.createTandem( 'zoomInButton' ),
+        accessibleName: EnergySkateParkFluent.a11y.energyBarGraphAccordionBox.zoomButtonGroup.zoomIn.accessibleNameStringProperty,
+        accessibleHelpText: EnergySkateParkFluent.a11y.energyBarGraphAccordionBox.zoomButtonGroup.zoomIn.accessibleHelpTextStringProperty
+      }, zoomButtonOptions ) );
+
+      const zoomButtons = new HBox( {
+        children: [ zoomOutButton, zoomInButton ],
+        spacing: 5
       } );
 
       content = new VBox( {
-        children: [ energyReadoutNode, this.barChartNode, zoomButtonGroup ],
+        children: [ energyReadoutNode, this.barChartNode, zoomButtons ],
         spacing: 5,
         align: 'left'
+      } );
+
+      barGraphScaleProperty.link( scale => {
+        zoomInButton.enabled = scale < EnergySkateParkConstants.MAX_ZOOM_FACTOR;
+        zoomOutButton.enabled = scale > EnergySkateParkConstants.MIN_ZOOM_FACTOR;
       } );
 
       barGraphScaleProperty.link( () => { this.updateWhenVisible( barGraphVisibleProperty.value ); } );
@@ -274,8 +286,9 @@ export default class EnergyBarGraph extends Node {
   /**
    * Create an icon of the bar graph, to be used in visibility or other controls.
    */
-  public static createBarGraphIcon(): Node {
+  public static createBarGraphIcon( tandem: Tandem ): Node {
     return new Node( {
+      tandem: tandem,
       children: [
         new Rectangle( 0, 0, 20, 20, { fill: 'white', stroke: 'black', lineWidth: 0.5 } ),
         new Rectangle( 3, 14, 5, 6, {

@@ -17,7 +17,6 @@ import affirm from '../../../../perennial-alias/js/browser-and-node/affirm.js';
 import optionize from '../../../../phet-core/js/optionize.js';
 import ModelViewTransform2 from '../../../../phetcommon/js/view/ModelViewTransform2.js';
 import AccessibleDraggableOptions from '../../../../scenery-phet/js/accessibility/grab-drag/AccessibleDraggableOptions.js';
-import ParallelDOM from '../../../../scenery/js/accessibility/pdom/ParallelDOM.js';
 import InteractiveHighlighting from '../../../../scenery/js/accessibility/voicing/InteractiveHighlighting.js';
 import KeyboardListener from '../../../../scenery/js/listeners/KeyboardListener.js';
 import Node, { NodeOptions } from '../../../../scenery/js/nodes/Node.js';
@@ -123,8 +122,7 @@ export default class TrackNode extends Node {
       this.mutate( {
         containerTagName: 'section',
         accessibleHeading: trackHeadingProperty,
-        accessibleHelpText: EnergySkateParkFluent.a11y.trackNode.accessibleHelpTextStringProperty,
-        accessibleHelpTextBehavior: ParallelDOM.HELP_TEXT_BEFORE_CONTENT
+        accessibleHelpText: EnergySkateParkFluent.a11y.trackNode.accessibleHelpTextStringProperty
       } );
       this.accessibleName = trackHeadingProperty;
 
@@ -139,12 +137,18 @@ export default class TrackNode extends Node {
         containerTagName: 'section',
         tagName: 'div',
         accessibleHeading: EnergySkateParkFluent.a11y.trackNode.accessibleHeadingStringProperty,
-        accessibleHelpText: EnergySkateParkFluent.a11y.trackNode.accessibleHelpTextStringProperty,
-        accessibleHelpTextBehavior: ParallelDOM.HELP_TEXT_BEFORE_CONTENT
+        accessibleHelpText: EnergySkateParkFluent.a11y.trackNode.accessibleHelpTextStringProperty
       } );
     }
-    // Non-configurable, non-draggable tracks (e.g. fixed tracks on the Friction screen):
-    // Omit the Track heading entirely since there are no interactive children under it.
+    else if ( !options.isIcon && !options.trackToolboxIcon ) {
+
+      // Non-configurable, non-draggable tracks: heading only, no help text about control points
+      this.mutate( {
+        containerTagName: 'section',
+        tagName: 'div',
+        accessibleHeading: EnergySkateParkFluent.a11y.trackNode.accessibleHeadingStringProperty
+      } );
+    }
 
     this.model = model;
     this.isIcon = !!options.isIcon;
@@ -174,7 +178,7 @@ export default class TrackNode extends Node {
     const stickingToTrackListener = ( sticking: boolean ) => {
       this.centerLine.lineDash = sticking ? [ 11, 8 ] : [];
     };
-    model.isStickingToTrackProperty.link( stickingToTrackListener );
+    model.stickingToTrackProperty.link( stickingToTrackListener );
 
     this.xArray = new Float64Array( track.controlPoints.length );
     this.yArray = new Float64Array( track.controlPoints.length );
@@ -295,7 +299,7 @@ export default class TrackNode extends Node {
     phetioStateSetEmitter.addListener( stateListener );
 
     this.disposeTrackNode = () => {
-      model.isStickingToTrackProperty.unlink( stickingToTrackListener );
+      model.stickingToTrackProperty.unlink( stickingToTrackListener );
       phetioStateSetEmitter.removeListener( stateListener );
       for ( let i = 0; i < this.children.length; i++ ) {
         const child = this.children[ i ];
@@ -379,9 +383,9 @@ export default class TrackNode extends Node {
     this.centerLine.shape = shape;
 
     // Update the skater if the track is moved while the sim is paused, see #84
-    if ( model.skater.trackProperty.value === track && !model.isPlayingProperty.value ) {
+    if ( model.skater.trackProperty.value === track && model.pausedProperty.value ) {
       model.skater.positionProperty.value = track.getPoint( model.skater.parametricPositionProperty.value );
-      model.skater.angleProperty.value = model.skater.trackProperty.value.getViewAngleAt( model.skater.parametricPositionProperty.value ) + ( model.skater.isOnTopSideOfTrackProperty.value ? 0 : Math.PI );
+      model.skater.angleProperty.value = model.skater.trackProperty.value.getViewAngleAt( model.skater.parametricPositionProperty.value ) + ( model.skater.onTopSideOfTrackProperty.value ? 0 : Math.PI );
       model.skater.updatedEmitter.emit();
     }
   }

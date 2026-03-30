@@ -21,10 +21,7 @@ export default class MassNumberControl extends PhysicalNumberControl {
 
     super( EnergySkateParkFluent.physicalControls.massControls.massStringProperty, massProperty, massRange, userControlledProperty, tandem, {
       numberDisplayOptions: {
-        valuePattern: {
-          visualPattern: EnergySkateParkFluent.physicalControls.massControls.massKilogramsPatternStringProperty,
-          accessiblePattern: EnergySkateParkFluent.a11y.massControl.accessibleValuePattern
-        }
+        valuePattern: EnergySkateParkFluent.physicalControls.massControls.massKilogramsPatternStringProperty
       },
       sliderOptions: {
         // round to nearest 5 kg, as requested by design team

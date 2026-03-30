@@ -31,8 +31,7 @@ export default class EnergySkateParkPreferencesModel {
 
     const defaultUnits = EnergySkateParkQueryParameters.altAccelerationUnits ? AccelerationUnits.NEWTONS_PER_KILOGRAM : AccelerationUnits.METERS_PER_SECOND_SQUARED;
     this.accelerationUnitsProperty = new EnumerationProperty( defaultUnits, {
-      tandem: Tandem.PREFERENCES.createTandem( 'accelerationUnitsProperty' ),
-      phetioFeatured: true
+      tandem: Tandem.PREFERENCES.createTandem( 'accelerationUnitsProperty' )
     } );
   }
 

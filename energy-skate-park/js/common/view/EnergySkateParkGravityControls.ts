@@ -9,10 +9,7 @@
 import BooleanProperty from '../../../../axon/js/BooleanProperty.js';
 import Emitter from '../../../../axon/js/Emitter.js';
 import EnumerationProperty from '../../../../axon/js/EnumerationProperty.js';
-import GatedVisibleProperty from '../../../../axon/js/GatedVisibleProperty.js';
 import NumberProperty from '../../../../axon/js/NumberProperty.js';
-import { toFixed } from '../../../../dot/js/util/toFixed.js';
-import affirm from '../../../../perennial-alias/js/browser-and-node/affirm.js';
 import merge from '../../../../phet-core/js/merge.js';
 import optionize from '../../../../phet-core/js/optionize.js';
 import { NumberControlOptions } from '../../../../scenery-phet/js/NumberControl.js';
@@ -21,12 +18,15 @@ import Node from '../../../../scenery/js/nodes/Node.js';
 import { ComboBoxOptions } from '../../../../sun/js/ComboBox.js';
 import { SliderOptions } from '../../../../sun/js/Slider.js';
 import Tandem from '../../../../tandem/js/Tandem.js';
+import DerivedProperty from '../../../../axon/js/DerivedProperty.js';
+import Utils from '../../../../dot/js/Utils.js';
 import energySkatePark from '../../energySkatePark.js';
 import EnergySkateParkFluent from '../../EnergySkateParkFluent.js';
-import { AccelerationUnits } from '../model/EnergySkateParkPreferencesModel.js';
+import EnergySkateParkPreferencesModel, { AccelerationUnits } from '../model/EnergySkateParkPreferencesModel.js';
 import GravityComboBox from './GravityComboBox.js';
 import GravityNumberControl from './GravityNumberControl.js';
 import GravitySlider from './GravitySlider.js';
+import affirm from '../../../../perennial-alias/js/browser-and-node/affirm.js';
 
 type SelfOptions = {
 
@@ -86,61 +86,38 @@ export default class EnergySkateParkGravityControls extends VBox {
         affirm( !options.gravityNumberControlOptions.numberDisplayOptions.valuePattern,
           'valuePattern of the gravity number control is set by EnergySkateParkGravityControls' );
       }
-      const unitsStringProperty = accelerationUnitsProperty.derived(
-        units => units === AccelerationUnits.METERS_PER_SECOND_SQUARED ? 'metersPerSecondSquared' : 'newtonsPerKilogram'
-      );
-      const createAriaValueText = () => EnergySkateParkFluent.a11y.gravityControl.accessibleValuePattern.format( {
-        value: toFixed( gravityMagnitudeProperty.value, 1 ),
-        units: unitsStringProperty.value
-      } );
-
-      const isMetersPerSecondSquaredProperty = accelerationUnitsProperty.derived( units => units === AccelerationUnits.METERS_PER_SECOND_SQUARED );
-      const isNewtonsPerKilogramProperty = accelerationUnitsProperty.derived( units => units === AccelerationUnits.NEWTONS_PER_KILOGRAM );
-
-      const metersPerSecondSquaredTandem = tandem.createTandem( 'gravityInMetersPerSecondSquaredControl' );
-      const newtonsPerKilogramTandem = tandem.createTandem( 'gravityInNewtonsPerKilogramControl' );
-
-      const gravityControlInMetersPerSecondSquared = new GravityNumberControl( gravityMagnitudeProperty, userControlledProperty, metersPerSecondSquaredTandem, merge( {}, options.gravityNumberControlOptions, {
-        visibleProperty: new GatedVisibleProperty( isMetersPerSecondSquaredProperty, metersPerSecondSquaredTandem ),
-        sliderOptions: { createAriaValueText: createAriaValueText }
-      } ) );
-      const gravityControlInNewtonsPerKilogram = new GravityNumberControl( gravityMagnitudeProperty, userControlledProperty, newtonsPerKilogramTandem, merge( {}, options.gravityNumberControlOptions, {
-          visibleProperty: new GatedVisibleProperty( isNewtonsPerKilogramProperty, newtonsPerKilogramTandem ),
+      const gravityControlInMetersPerSecondSquared = new GravityNumberControl( gravityMagnitudeProperty, userControlledProperty, tandem.createTandem( 'gravityInMetersPerSecondSquaredControl' ), options.gravityNumberControlOptions || undefined );
+      const gravityControlInNewtonsPerKilogram = new GravityNumberControl( gravityMagnitudeProperty, userControlledProperty, tandem.createTandem( 'gravityInNewtonsPerKilogramControl' ), merge( {}, options.gravityNumberControlOptions, {
           numberDisplayOptions: {
             valuePattern: EnergySkateParkFluent.physicalControls.gravityControls.gravityNewtonsPerKilogramPatternStringProperty
-          },
-          sliderOptions: { createAriaValueText: createAriaValueText }
+          }
         } )
       );
-
-      gravityControlInMetersPerSecondSquared.slider.descriptionDependencies = [ accelerationUnitsProperty ];
-      gravityControlInNewtonsPerKilogram.slider.descriptionDependencies = [ accelerationUnitsProperty ];
 
       gravityControlInMetersPerSecondSquared.accessibleHelpText = EnergySkateParkFluent.a11y.gravityControl.accessibleHelpTextStringProperty;
       gravityControlInNewtonsPerKilogram.accessibleHelpText = EnergySkateParkFluent.a11y.gravityControl.accessibleHelpTextStringProperty;
 
       children.push( gravityControlInMetersPerSecondSquared );
       children.push( gravityControlInNewtonsPerKilogram );
+
+      // the units of acceleration determine which control is visible
+      accelerationUnitsProperty.link( accelerationUnits => {
+        const inMetersPerSecond = accelerationUnits === EnergySkateParkPreferencesModel.AccelerationUnits.METERS_PER_SECOND_SQUARED;
+        gravityControlInMetersPerSecondSquared.visible = inMetersPerSecond;
+        gravityControlInNewtonsPerKilogram.visible = !inMetersPerSecond;
+      } );
     }
 
     if ( options.includeGravitySlider ) {
       const gravitySlider = new GravitySlider( gravityMagnitudeProperty, userControlledProperty, tandem.createTandem( 'gravityControl' ) );
       gravitySlider.accessibleHelpText = EnergySkateParkFluent.a11y.gravitySlider.accessibleHelpTextStringProperty;
-
-      const sliderUnitsStringProperty = accelerationUnitsProperty.derived(
-        units => units === AccelerationUnits.METERS_PER_SECOND_SQUARED ? 'metersPerSecondSquared' : 'newtonsPerKilogram'
-      );
-      gravitySlider.slider.createAriaValueText = () => EnergySkateParkFluent.a11y.gravityControl.accessibleValuePattern.format( {
-        value: toFixed( gravityMagnitudeProperty.value, 1 ),
-        units: sliderUnitsStringProperty.value
-      } );
-      gravitySlider.slider.descriptionDependencies = [ accelerationUnitsProperty ];
-
       children.push( gravitySlider );
     }
 
     if ( options.includeGravityComboBox ) {
-      const gValueStringProperty = gravityMagnitudeProperty.derived( g => `${toFixed( g, 1 )} meters per second squared` );
+      const gValueStringProperty = new DerivedProperty( [ gravityMagnitudeProperty ],
+        g => `${Utils.toFixed( g, 1 )} meters per second squared`
+      );
       const gravityContextResponseProperty = EnergySkateParkFluent.a11y.gravityComboBox.accessibleContextResponse.createProperty( {
         gravityValue: gValueStringProperty
       } );

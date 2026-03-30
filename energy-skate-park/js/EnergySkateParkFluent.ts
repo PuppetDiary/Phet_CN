@@ -50,6 +50,7 @@ addToMapIfDefined( 'energies_total', 'energies.totalStringProperty' );
 addToMapIfDefined( 'energies_kinetic', 'energies.kineticStringProperty' );
 addToMapIfDefined( 'energies_potential', 'energies.potentialStringProperty' );
 addToMapIfDefined( 'energies_energy', 'energies.energyStringProperty' );
+addToMapIfDefined( 'plots_barGraph_label', 'plots.barGraph.labelStringProperty' );
 addToMapIfDefined( 'plots_energyGraph_label', 'plots.energyGraph.labelStringProperty' );
 addToMapIfDefined( 'plots_pieChart_label', 'plots.pieChart.labelStringProperty' );
 addToMapIfDefined( 'plots_timeSwitchLabel', 'plots.timeSwitchLabelStringProperty' );
@@ -61,6 +62,7 @@ addToMapIfDefined( 'visibilityControls_grid', 'visibilityControls.gridStringProp
 addToMapIfDefined( 'visibilityControls_referenceHeight', 'visibilityControls.referenceHeightStringProperty' );
 addToMapIfDefined( 'visibilityControls_path', 'visibilityControls.pathStringProperty' );
 addToMapIfDefined( 'visibilityControls_speed', 'visibilityControls.speedStringProperty' );
+addToMapIfDefined( 'skaterControls_label', 'skaterControls.labelStringProperty' );
 addToMapIfDefined( 'skaterControls_restartSkater', 'skaterControls.restartSkaterStringProperty' );
 addToMapIfDefined( 'trackControls_stickToTrack', 'trackControls.stickToTrackStringProperty' );
 addToMapIfDefined( 'heightLabels_zeroM', 'heightLabels.zeroMStringProperty' );
@@ -112,10 +114,8 @@ addToMapIfDefined( 'a11y_keyboardHelpDialog_connectTrackEndpoints_moveThroughOpt
 addToMapIfDefined( 'a11y_keyboardHelpDialog_connectTrackEndpoints_selectOption', 'a11y.keyboardHelpDialog.connectTrackEndpoints.selectOptionStringProperty' );
 addToMapIfDefined( 'a11y_keyboardHelpDialog_connectTrackEndpoints_cancel', 'a11y.keyboardHelpDialog.connectTrackEndpoints.cancelStringProperty' );
 addToMapIfDefined( 'a11y_skaterNode_accessibleName', 'a11y.skaterNode.accessibleNameStringProperty' );
-addToMapIfDefined( 'a11y_skaterNode_firstGrabContextResponse', 'a11y.skaterNode.firstGrabContextResponseStringProperty' );
-addToMapIfDefined( 'a11y_skaterNode_snapToTrackContextResponse', 'a11y.skaterNode.snapToTrackContextResponseStringProperty' );
-addToMapIfDefined( 'a11y_skaterNode_detachFromTrackContextResponse', 'a11y.skaterNode.detachFromTrackContextResponseStringProperty' );
-addToMapIfDefined( 'a11y_skaterNode_offScreenContextResponse', 'a11y.skaterNode.offScreenContextResponseStringProperty' );
+addToMapIfDefined( 'a11y_skaterNode_onTrackHelpText', 'a11y.skaterNode.onTrackHelpTextStringProperty' );
+addToMapIfDefined( 'a11y_skaterNode_offTrackHelpText', 'a11y.skaterNode.offTrackHelpTextStringProperty' );
 addToMapIfDefined( 'a11y_referenceHeightLine_accessibleHeading', 'a11y.referenceHeightLine.accessibleHeadingStringProperty' );
 addToMapIfDefined( 'a11y_referenceHeightLine_accessibleName', 'a11y.referenceHeightLine.accessibleNameStringProperty' );
 addToMapIfDefined( 'a11y_referenceHeightLine_accessibleHelpText', 'a11y.referenceHeightLine.accessibleHelpTextStringProperty' );
@@ -136,7 +136,6 @@ addToMapIfDefined( 'a11y_yourSkatePark_playgroundTrackPhraseSingle', 'a11y.yourS
 addToMapIfDefined( 'a11y_yourSkatePark_playgroundTrackPhraseNone', 'a11y.yourSkatePark.playgroundTrackPhraseNoneStringProperty' );
 addToMapIfDefined( 'a11y_yourSkatePark_trackAndSkaterParagraph', 'a11y.yourSkatePark.trackAndSkaterParagraphStringProperty' );
 addToMapIfDefined( 'a11y_yourSkatePark_skaterOnTrack', 'a11y.yourSkatePark.skaterOnTrackStringProperty' );
-addToMapIfDefined( 'a11y_yourSkatePark_skaterOnTrackWithIndex', 'a11y.yourSkatePark.skaterOnTrackWithIndexStringProperty' );
 addToMapIfDefined( 'a11y_yourSkatePark_skaterOffTrack', 'a11y.yourSkatePark.skaterOffTrackStringProperty' );
 addToMapIfDefined( 'a11y_trackNode_accessibleHeadingWithIndex', 'a11y.trackNode.accessibleHeadingWithIndexStringProperty' );
 addToMapIfDefined( 'a11y_trackNode_accessibleHeading', 'a11y.trackNode.accessibleHeadingStringProperty' );
@@ -199,6 +198,8 @@ addToMapIfDefined( 'a11y_energyGraph_variableSwitch_accessibleHelpText', 'a11y.e
 addToMapIfDefined( 'a11y_energyGraph_eraserButton_accessibleName', 'a11y.energyGraph.eraserButton.accessibleNameStringProperty' );
 addToMapIfDefined( 'a11y_energyGraph_eraserButton_positionResponse', 'a11y.energyGraph.eraserButton.positionResponseStringProperty' );
 addToMapIfDefined( 'a11y_energyGraph_eraserButton_timeResponse', 'a11y.energyGraph.eraserButton.timeResponseStringProperty' );
+addToMapIfDefined( 'a11y_controlPointAttachment_left', 'a11y.controlPointAttachment.leftStringProperty' );
+addToMapIfDefined( 'a11y_controlPointAttachment_right', 'a11y.controlPointAttachment.rightStringProperty' );
 addToMapIfDefined( 'a11y_energyBarGraphAccordionBox_accessibleName', 'a11y.energyBarGraphAccordionBox.accessibleNameStringProperty' );
 addToMapIfDefined( 'a11y_energyBarGraphAccordionBox_accessibleHelpTextExpanded', 'a11y.energyBarGraphAccordionBox.accessibleHelpTextExpandedStringProperty' );
 addToMapIfDefined( 'a11y_energyBarGraphAccordionBox_clearThermalButton_accessibleName', 'a11y.energyBarGraphAccordionBox.clearThermalButton.accessibleNameStringProperty' );
@@ -228,13 +229,11 @@ addToMapIfDefined( 'a11y_sceneSelectionRadioButtonGroup_loopRadioButton_accessib
 addToMapIfDefined( 'a11y_frictionSlider_accessibleHelpText', 'a11y.frictionSlider.accessibleHelpTextStringProperty' );
 addToMapIfDefined( 'a11y_gravitySlider_accessibleHelpText', 'a11y.gravitySlider.accessibleHelpTextStringProperty' );
 addToMapIfDefined( 'a11y_gravityControl_accessibleHelpText', 'a11y.gravityControl.accessibleHelpTextStringProperty' );
-addToMapIfDefined( 'a11y_gravityControl_accessibleValuePattern', 'a11y.gravityControl.accessibleValuePatternStringProperty' );
 addToMapIfDefined( 'a11y_gravityComboBox_accessibleName', 'a11y.gravityComboBox.accessibleNameStringProperty' );
 addToMapIfDefined( 'a11y_gravityComboBox_accessibleHelpText', 'a11y.gravityComboBox.accessibleHelpTextStringProperty' );
 addToMapIfDefined( 'a11y_gravityComboBox_accessibleContextResponse', 'a11y.gravityComboBox.accessibleContextResponseStringProperty' );
 addToMapIfDefined( 'a11y_massSlider_accessibleHelpText', 'a11y.massSlider.accessibleHelpTextStringProperty' );
 addToMapIfDefined( 'a11y_massControl_accessibleHelpText', 'a11y.massControl.accessibleHelpTextStringProperty' );
-addToMapIfDefined( 'a11y_massControl_accessibleValuePattern', 'a11y.massControl.accessibleValuePatternStringProperty' );
 addToMapIfDefined( 'a11y_skaterSetOneControls_accessibleName', 'a11y.skaterSetOneControls.accessibleNameStringProperty' );
 addToMapIfDefined( 'a11y_skaterSetOneControls_accessibleHelpText', 'a11y.skaterSetOneControls.accessibleHelpTextStringProperty' );
 addToMapIfDefined( 'a11y_skaterSetOneControls_skater1RadioButton_accessibleName', 'a11y.skaterSetOneControls.skater1RadioButton.accessibleNameStringProperty' );
@@ -254,13 +253,12 @@ addToMapIfDefined( 'a11y_referenceHeightCheckbox_accessibleContextResponseUnchec
 addToMapIfDefined( 'a11y_restartSkaterButton_accessibleHelpText', 'a11y.restartSkaterButton.accessibleHelpTextStringProperty' );
 addToMapIfDefined( 'a11y_returnSkaterToPreviousStartingPositionButton_accessibleName', 'a11y.returnSkaterToPreviousStartingPositionButton.accessibleNameStringProperty' );
 addToMapIfDefined( 'a11y_returnSkaterToPreviousStartingPositionButton_accessibleHelpText', 'a11y.returnSkaterToPreviousStartingPositionButton.accessibleHelpTextStringProperty' );
-addToMapIfDefined( 'a11y_returnSkaterToPreviousStartingPositionButton_accessibleContextResponse', 'a11y.returnSkaterToPreviousStartingPositionButton.accessibleContextResponseStringProperty' );
 addToMapIfDefined( 'a11y_returnSkaterToGroundButton_accessibleName', 'a11y.returnSkaterToGroundButton.accessibleNameStringProperty' );
-addToMapIfDefined( 'a11y_returnSkaterToGroundButton_accessibleContextResponse', 'a11y.returnSkaterToGroundButton.accessibleContextResponseStringProperty' );
 addToMapIfDefined( 'a11y_screenButtons_intro_accessibleHelpText', 'a11y.screenButtons.intro.accessibleHelpTextStringProperty' );
 addToMapIfDefined( 'a11y_screenButtons_measure_accessibleHelpText', 'a11y.screenButtons.measure.accessibleHelpTextStringProperty' );
 addToMapIfDefined( 'a11y_screenButtons_graphs_accessibleHelpText', 'a11y.screenButtons.graphs.accessibleHelpTextStringProperty' );
 addToMapIfDefined( 'a11y_screenButtons_playground_accessibleHelpText', 'a11y.screenButtons.playground.accessibleHelpTextStringProperty' );
+addToMapIfDefined( 'a11y_screenButtons_friction_accessibleHelpText', 'a11y.screenButtons.friction.accessibleHelpTextStringProperty' );
 addToMapIfDefined( 'a11y_preferences_metersPerSecondSquaredRadioButton', 'a11y.preferences.metersPerSecondSquaredRadioButtonStringProperty' );
 addToMapIfDefined( 'a11y_preferences_newtonsPerKilogramRadioButton', 'a11y.preferences.newtonsPerKilogramRadioButtonStringProperty' );
 
@@ -314,6 +312,9 @@ const EnergySkateParkFluent = {
     energyStringProperty: _.get( EnergySkateParkStrings, 'energies.energyStringProperty' )
   },
   plots: {
+    barGraph: {
+      labelStringProperty: _.get( EnergySkateParkStrings, 'plots.barGraph.labelStringProperty' )
+    },
     energyGraph: {
       labelStringProperty: _.get( EnergySkateParkStrings, 'plots.energyGraph.labelStringProperty' )
     },
@@ -333,6 +334,8 @@ const EnergySkateParkFluent = {
     speedStringProperty: _.get( EnergySkateParkStrings, 'visibilityControls.speedStringProperty' )
   },
   skaterControls: {
+    labelStringProperty: _.get( EnergySkateParkStrings, 'skaterControls.labelStringProperty' ),
+    skater1MassPatternStringProperty: _.get( EnergySkateParkStrings, 'skaterControls.skater1MassPatternStringProperty' ),
     restartSkaterStringProperty: _.get( EnergySkateParkStrings, 'skaterControls.restartSkaterStringProperty' )
   },
   trackControls: {
@@ -423,10 +426,8 @@ const EnergySkateParkFluent = {
     },
     skaterNode: {
       accessibleNameStringProperty: new FluentConstant( fluentSupport.bundleProperty, 'a11y_skaterNode_accessibleName', _.get( EnergySkateParkStrings, 'a11y.skaterNode.accessibleNameStringProperty' ) ),
-      firstGrabContextResponseStringProperty: new FluentConstant( fluentSupport.bundleProperty, 'a11y_skaterNode_firstGrabContextResponse', _.get( EnergySkateParkStrings, 'a11y.skaterNode.firstGrabContextResponseStringProperty' ) ),
-      snapToTrackContextResponseStringProperty: new FluentConstant( fluentSupport.bundleProperty, 'a11y_skaterNode_snapToTrackContextResponse', _.get( EnergySkateParkStrings, 'a11y.skaterNode.snapToTrackContextResponseStringProperty' ) ),
-      detachFromTrackContextResponseStringProperty: new FluentConstant( fluentSupport.bundleProperty, 'a11y_skaterNode_detachFromTrackContextResponse', _.get( EnergySkateParkStrings, 'a11y.skaterNode.detachFromTrackContextResponseStringProperty' ) ),
-      offScreenContextResponseStringProperty: new FluentConstant( fluentSupport.bundleProperty, 'a11y_skaterNode_offScreenContextResponse', _.get( EnergySkateParkStrings, 'a11y.skaterNode.offScreenContextResponseStringProperty' ) )
+      onTrackHelpTextStringProperty: new FluentConstant( fluentSupport.bundleProperty, 'a11y_skaterNode_onTrackHelpText', _.get( EnergySkateParkStrings, 'a11y.skaterNode.onTrackHelpTextStringProperty' ) ),
+      offTrackHelpTextStringProperty: new FluentConstant( fluentSupport.bundleProperty, 'a11y_skaterNode_offTrackHelpText', _.get( EnergySkateParkStrings, 'a11y.skaterNode.offTrackHelpTextStringProperty' ) )
     },
     referenceHeightLine: {
       accessibleHeadingStringProperty: new FluentConstant( fluentSupport.bundleProperty, 'a11y_referenceHeightLine_accessibleHeading', _.get( EnergySkateParkStrings, 'a11y.referenceHeightLine.accessibleHeadingStringProperty' ) ),
@@ -457,13 +458,12 @@ const EnergySkateParkFluent = {
       accessibleHeadingStringProperty: new FluentConstant( fluentSupport.bundleProperty, 'a11y_yourSkatePark_accessibleHeading', _.get( EnergySkateParkStrings, 'a11y.yourSkatePark.accessibleHeadingStringProperty' ) ),
       accessibleHelpTextStringProperty: new FluentConstant( fluentSupport.bundleProperty, 'a11y_yourSkatePark_accessibleHelpText', _.get( EnergySkateParkStrings, 'a11y.yourSkatePark.accessibleHelpTextStringProperty' ) ),
       trackPhraseFixed: new FluentPattern<{ trackShape: FluentVariable }>( fluentSupport.bundleProperty, 'a11y_yourSkatePark_trackPhraseFixed', _.get( EnergySkateParkStrings, 'a11y.yourSkatePark.trackPhraseFixedStringProperty' ), [{"name":"trackShape"}] ),
-      trackPhraseAdjustable: new FluentPattern<{ numberControlPoints: number | 'one' | number | 'other' | TReadOnlyProperty<number | 'one' | number | 'other'>, trackShape: FluentVariable }>( fluentSupport.bundleProperty, 'a11y_yourSkatePark_trackPhraseAdjustable', _.get( EnergySkateParkStrings, 'a11y.yourSkatePark.trackPhraseAdjustableStringProperty' ), [{"name":"numberControlPoints","variants":[{"type":"number","value":"one"},{"type":"number","value":"other"}]},{"name":"trackShape"}] ),
-      playgroundTrackPhraseMultiple: new FluentPattern<{ numberControlPoints: number | 'one' | number | 'other' | TReadOnlyProperty<number | 'one' | number | 'other'>, numberTracks: FluentVariable }>( fluentSupport.bundleProperty, 'a11y_yourSkatePark_playgroundTrackPhraseMultiple', _.get( EnergySkateParkStrings, 'a11y.yourSkatePark.playgroundTrackPhraseMultipleStringProperty' ), [{"name":"numberControlPoints","variants":[{"type":"number","value":"one"},{"type":"number","value":"other"}]},{"name":"numberTracks"}] ),
-      playgroundTrackPhraseSingle: new FluentPattern<{ numberControlPoints: number | 'one' | number | 'other' | TReadOnlyProperty<number | 'one' | number | 'other'> }>( fluentSupport.bundleProperty, 'a11y_yourSkatePark_playgroundTrackPhraseSingle', _.get( EnergySkateParkStrings, 'a11y.yourSkatePark.playgroundTrackPhraseSingleStringProperty' ), [{"name":"numberControlPoints","variants":[{"type":"number","value":"one"},{"type":"number","value":"other"}]}] ),
+      trackPhraseAdjustable: new FluentPattern<{ numberControlPoints: FluentVariable, trackShape: FluentVariable }>( fluentSupport.bundleProperty, 'a11y_yourSkatePark_trackPhraseAdjustable', _.get( EnergySkateParkStrings, 'a11y.yourSkatePark.trackPhraseAdjustableStringProperty' ), [{"name":"numberControlPoints"},{"name":"trackShape"}] ),
+      playgroundTrackPhraseMultiple: new FluentPattern<{ numberControlPoints: FluentVariable, numberTracks: FluentVariable }>( fluentSupport.bundleProperty, 'a11y_yourSkatePark_playgroundTrackPhraseMultiple', _.get( EnergySkateParkStrings, 'a11y.yourSkatePark.playgroundTrackPhraseMultipleStringProperty' ), [{"name":"numberControlPoints"},{"name":"numberTracks"}] ),
+      playgroundTrackPhraseSingle: new FluentPattern<{ numberControlPoints: FluentVariable }>( fluentSupport.bundleProperty, 'a11y_yourSkatePark_playgroundTrackPhraseSingle', _.get( EnergySkateParkStrings, 'a11y.yourSkatePark.playgroundTrackPhraseSingleStringProperty' ), [{"name":"numberControlPoints"}] ),
       playgroundTrackPhraseNoneStringProperty: new FluentConstant( fluentSupport.bundleProperty, 'a11y_yourSkatePark_playgroundTrackPhraseNone', _.get( EnergySkateParkStrings, 'a11y.yourSkatePark.playgroundTrackPhraseNoneStringProperty' ) ),
       trackAndSkaterParagraph: new FluentPattern<{ skaterPhrase: FluentVariable, trackPhrase: FluentVariable }>( fluentSupport.bundleProperty, 'a11y_yourSkatePark_trackAndSkaterParagraph', _.get( EnergySkateParkStrings, 'a11y.yourSkatePark.trackAndSkaterParagraphStringProperty' ), [{"name":"skaterPhrase"},{"name":"trackPhrase"}] ),
       skaterOnTrackStringProperty: new FluentConstant( fluentSupport.bundleProperty, 'a11y_yourSkatePark_skaterOnTrack', _.get( EnergySkateParkStrings, 'a11y.yourSkatePark.skaterOnTrackStringProperty' ) ),
-      skaterOnTrackWithIndex: new FluentPattern<{ index: FluentVariable }>( fluentSupport.bundleProperty, 'a11y_yourSkatePark_skaterOnTrackWithIndex', _.get( EnergySkateParkStrings, 'a11y.yourSkatePark.skaterOnTrackWithIndexStringProperty' ), [{"name":"index"}] ),
       skaterOffTrackStringProperty: new FluentConstant( fluentSupport.bundleProperty, 'a11y_yourSkatePark_skaterOffTrack', _.get( EnergySkateParkStrings, 'a11y.yourSkatePark.skaterOffTrackStringProperty' ) )
     },
     trackNode: {
@@ -564,6 +564,10 @@ const EnergySkateParkFluent = {
         timeResponseStringProperty: new FluentConstant( fluentSupport.bundleProperty, 'a11y_energyGraph_eraserButton_timeResponse', _.get( EnergySkateParkStrings, 'a11y.energyGraph.eraserButton.timeResponseStringProperty' ) )
       }
     },
+    controlPointAttachment: {
+      leftStringProperty: new FluentConstant( fluentSupport.bundleProperty, 'a11y_controlPointAttachment_left', _.get( EnergySkateParkStrings, 'a11y.controlPointAttachment.leftStringProperty' ) ),
+      rightStringProperty: new FluentConstant( fluentSupport.bundleProperty, 'a11y_controlPointAttachment_right', _.get( EnergySkateParkStrings, 'a11y.controlPointAttachment.rightStringProperty' ) )
+    },
     energyBarGraphAccordionBox: {
       accessibleNameStringProperty: new FluentConstant( fluentSupport.bundleProperty, 'a11y_energyBarGraphAccordionBox_accessibleName', _.get( EnergySkateParkStrings, 'a11y.energyBarGraphAccordionBox.accessibleNameStringProperty' ) ),
       accessibleHelpTextExpandedStringProperty: new FluentConstant( fluentSupport.bundleProperty, 'a11y_energyBarGraphAccordionBox_accessibleHelpTextExpanded', _.get( EnergySkateParkStrings, 'a11y.energyBarGraphAccordionBox.accessibleHelpTextExpandedStringProperty' ) ),
@@ -630,8 +634,7 @@ const EnergySkateParkFluent = {
       accessibleHelpTextStringProperty: new FluentConstant( fluentSupport.bundleProperty, 'a11y_gravitySlider_accessibleHelpText', _.get( EnergySkateParkStrings, 'a11y.gravitySlider.accessibleHelpTextStringProperty' ) )
     },
     gravityControl: {
-      accessibleHelpTextStringProperty: new FluentConstant( fluentSupport.bundleProperty, 'a11y_gravityControl_accessibleHelpText', _.get( EnergySkateParkStrings, 'a11y.gravityControl.accessibleHelpTextStringProperty' ) ),
-      accessibleValuePattern: new FluentPattern<{ units: 'metersPerSecondSquared' | 'newtonsPerKilogram' | TReadOnlyProperty<'metersPerSecondSquared' | 'newtonsPerKilogram'>, value: FluentVariable }>( fluentSupport.bundleProperty, 'a11y_gravityControl_accessibleValuePattern', _.get( EnergySkateParkStrings, 'a11y.gravityControl.accessibleValuePatternStringProperty' ), [{"name":"units","variants":["metersPerSecondSquared","newtonsPerKilogram"]},{"name":"value"}] )
+      accessibleHelpTextStringProperty: new FluentConstant( fluentSupport.bundleProperty, 'a11y_gravityControl_accessibleHelpText', _.get( EnergySkateParkStrings, 'a11y.gravityControl.accessibleHelpTextStringProperty' ) )
     },
     gravityComboBox: {
       accessibleNameStringProperty: new FluentConstant( fluentSupport.bundleProperty, 'a11y_gravityComboBox_accessibleName', _.get( EnergySkateParkStrings, 'a11y.gravityComboBox.accessibleNameStringProperty' ) ),
@@ -643,8 +646,7 @@ const EnergySkateParkFluent = {
       accessibleHelpTextStringProperty: new FluentConstant( fluentSupport.bundleProperty, 'a11y_massSlider_accessibleHelpText', _.get( EnergySkateParkStrings, 'a11y.massSlider.accessibleHelpTextStringProperty' ) )
     },
     massControl: {
-      accessibleHelpTextStringProperty: new FluentConstant( fluentSupport.bundleProperty, 'a11y_massControl_accessibleHelpText', _.get( EnergySkateParkStrings, 'a11y.massControl.accessibleHelpTextStringProperty' ) ),
-      accessibleValuePattern: new FluentPattern<{ value: FluentVariable }>( fluentSupport.bundleProperty, 'a11y_massControl_accessibleValuePattern', _.get( EnergySkateParkStrings, 'a11y.massControl.accessibleValuePatternStringProperty' ), [{"name":"value"}] )
+      accessibleHelpTextStringProperty: new FluentConstant( fluentSupport.bundleProperty, 'a11y_massControl_accessibleHelpText', _.get( EnergySkateParkStrings, 'a11y.massControl.accessibleHelpTextStringProperty' ) )
     },
     _comment_3: new FluentComment( {"comment":"Key names likely need fixing. I copied the phetioIDs from the Intro screen. For animal skaters, list animal type. For example: Skater 7, Goat","associatedKey":"skaterSetOneControls"} ),
     skaterSetOneControls: {
@@ -690,15 +692,12 @@ const EnergySkateParkFluent = {
     },
     returnSkaterToPreviousStartingPositionButton: {
       accessibleNameStringProperty: new FluentConstant( fluentSupport.bundleProperty, 'a11y_returnSkaterToPreviousStartingPositionButton_accessibleName', _.get( EnergySkateParkStrings, 'a11y.returnSkaterToPreviousStartingPositionButton.accessibleNameStringProperty' ) ),
-      accessibleHelpTextStringProperty: new FluentConstant( fluentSupport.bundleProperty, 'a11y_returnSkaterToPreviousStartingPositionButton_accessibleHelpText', _.get( EnergySkateParkStrings, 'a11y.returnSkaterToPreviousStartingPositionButton.accessibleHelpTextStringProperty' ) ),
-      _comment_0: new FluentComment( {"comment":"Context response stating g value when user interacts with ComboBox. Example for Earth: Gravity now 9.8 meters per second squared.","associatedKey":"accessibleContextResponse"} ),
-      accessibleContextResponseStringProperty: new FluentConstant( fluentSupport.bundleProperty, 'a11y_returnSkaterToPreviousStartingPositionButton_accessibleContextResponse', _.get( EnergySkateParkStrings, 'a11y.returnSkaterToPreviousStartingPositionButton.accessibleContextResponseStringProperty' ) )
+      accessibleHelpTextStringProperty: new FluentConstant( fluentSupport.bundleProperty, 'a11y_returnSkaterToPreviousStartingPositionButton_accessibleHelpText', _.get( EnergySkateParkStrings, 'a11y.returnSkaterToPreviousStartingPositionButton.accessibleHelpTextStringProperty' ) )
     },
     returnSkaterToGroundButton: {
-      accessibleNameStringProperty: new FluentConstant( fluentSupport.bundleProperty, 'a11y_returnSkaterToGroundButton_accessibleName', _.get( EnergySkateParkStrings, 'a11y.returnSkaterToGroundButton.accessibleNameStringProperty' ) ),
-      _comment_0: new FluentComment( {"comment":"Context response stating g value when user interacts with ComboBox. Example for Earth: Gravity now 9.8 meters per second squared.","associatedKey":"accessibleContextResponse"} ),
-      accessibleContextResponseStringProperty: new FluentConstant( fluentSupport.bundleProperty, 'a11y_returnSkaterToGroundButton_accessibleContextResponse', _.get( EnergySkateParkStrings, 'a11y.returnSkaterToGroundButton.accessibleContextResponseStringProperty' ) )
+      accessibleNameStringProperty: new FluentConstant( fluentSupport.bundleProperty, 'a11y_returnSkaterToGroundButton_accessibleName', _.get( EnergySkateParkStrings, 'a11y.returnSkaterToGroundButton.accessibleNameStringProperty' ) )
     },
+    _comment_4: new FluentComment( {"comment":"ESP and ESPB both have Intro & Playground screens. Help text applies to both sims","associatedKey":"screenButtons"} ),
     screenButtons: {
       intro: {
         accessibleHelpTextStringProperty: new FluentConstant( fluentSupport.bundleProperty, 'a11y_screenButtons_intro_accessibleHelpText', _.get( EnergySkateParkStrings, 'a11y.screenButtons.intro.accessibleHelpTextStringProperty' ) )
@@ -711,6 +710,9 @@ const EnergySkateParkFluent = {
       },
       playground: {
         accessibleHelpTextStringProperty: new FluentConstant( fluentSupport.bundleProperty, 'a11y_screenButtons_playground_accessibleHelpText', _.get( EnergySkateParkStrings, 'a11y.screenButtons.playground.accessibleHelpTextStringProperty' ) )
+      },
+      friction: {
+        accessibleHelpTextStringProperty: new FluentConstant( fluentSupport.bundleProperty, 'a11y_screenButtons_friction_accessibleHelpText', _.get( EnergySkateParkStrings, 'a11y.screenButtons.friction.accessibleHelpTextStringProperty' ) )
       }
     },
     preferences: {

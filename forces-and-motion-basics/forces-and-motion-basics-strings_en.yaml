@@ -71,6 +71,27 @@ a11y:
   preferences:
     netForcePullerColorControl:
       accessibleHelpText: Select team colors for tug-of-war game.
+  keyboardHelpDialog:
+    fromAnywhereInSim:
+      startGameDescription:          Start tug-of-war game with { $altOrOptionKey } plus G key.
+      pauseGameDescription:          Pause tug-of-war game with { $altOrOptionKey } plus P key.
+      returnCartToCenterDescription: Return cart to center with { $altOrOptionKey } plus C key.
+    pullerNavigation:
+      selectPullerDescription:      Select puller with Left and Right Arrow keys or A and D keys.
+      grabPullerDescription:        Grab selected puller with Space or Enter keys.
+      moveGrabbedPullerDescription: Move grabbed puller with Left and Right Arrow keys or A and D keys.
+      dropPullerDescription:        Drop puller with Space or Enter keys.
+      returnToToolboxDescription:   Return grabbed puller to toolbox with Delete or Backspace keys.
+      cancelMovement:               Cancel movement with Escape key.
+    objectNavigation:
+      selectObjectDescription:      Select object with Left and Right Arrow keys or A and D keys.
+      grabObjectDescription:        Grab selected object with Space or Enter keys.
+      moveGrabbedObjectDescription: Move grabbed object with Left and Right Arrow keys or A and D keys.
+      dropObjectDescription:        Drop object with Space or Enter keys.
+      returnToToolboxDescription:   Return grabbed object to toolbox with Delete or Backspace keys.
+      cancelMovement:               Cancel movement with Escape key.
+    adjustAppliedForce:
+      zeroAppliedForceDescription: Set applied force to zero with 0 key.
   netForceScreen:
     screenButtonsHelpText: Explore net force in a tug-of-war game.
     colorName:             |-
@@ -356,3 +377,122 @@ a11y:
     accelerationDescriptions:
       speedingUp:  speeding up
       slowingDown: slowing down
+
+# Home Screen Tooltips (新增：首页悬浮提示)
+homeScreen:
+  netForce:
+    tooltipTitle: Net Force
+    tooltipDescription: Explore forces and motion in a tug-of-war game.<br><br>• Add pullers to the rope<br>• Press Go to start<br>• See how forces combine!
+  motion:
+    tooltipTitle: Motion
+    tooltipDescription: Discover how force affects motion.<br><br>• Apply force to objects<br>• Observe speed changes<br>• Learn Newton's laws!
+  friction:
+    tooltipTitle: Friction
+    tooltipDescription: Investigate how friction affects motion.<br><br>• Change friction surfaces<br>• Compare different objects<br>• See friction in action!
+  acceleration:
+    tooltipTitle: Acceleration
+    tooltipDescription: Explore force, mass and acceleration.<br><br>• Measure acceleration<br>• Use the accelerometer<br>• Discover F = ma!
+
+# Tutorial (新增：新手引导)
+tutorial:
+  next: Next
+  skip: Skip Tutorial
+  gotIt: Got it!
+  netForce:
+    step1:
+      title: Welcome to Tug of War!
+      content: Drag people from the toolbox to the knots on the rope. Blue team on the left, red team on the right.
+    step2:
+      title: Start the Game
+      content: Press the 'Go' button to begin the tug-of-war.
+    step3:
+      title: Watch the Forces
+      content: The green dashed arrow shows the sum of all forces. When forces are balanced, the cart won't move.
+    step4:
+      title: Show Values
+      content: Check 'Values' to see exact force numbers.
+    step5:
+      title: View Speed
+      content: Check 'Speed' to display the cart's velocity.
+  motion:
+    step1:
+      title: Apply Force
+      content: Drag the slider to push the crate left or right.
+    step2:
+      title: Add Objects
+      content: Drag objects from the toolbox to the skateboard to change the total mass.
+    step3:
+      title: Measure Speed
+      content: The speedometer shows real-time velocity in meters per second (m/s).
+    step4:
+      title: Show Data
+      content: Use the control panel to display forces, speed, and mass values.
+  friction:
+    step1:
+      title: Adjust Friction
+      content: Move the slider to change the surface friction. Right is rougher, left is smoother.
+    step2:
+      title: Observe Friction
+      content: The red arrow shows friction force. Friction always opposes motion.
+    step3:
+      title: Apply Push Force
+      content: Try different amounts of force and watch static friction resist your push.
+    step4:
+      title: Show Values
+      content: Check 'Values' to see the exact friction force.
+  acceleration:
+    step1:
+      title: Apply Force
+      content: Drag the slider to apply force and observe acceleration changes.
+    step2:
+      title: Accelerometer
+      content: The accelerometer displays real-time acceleration in m/s².
+    step3:
+      title: Change Mass
+      content: Add objects of different mass to see how it affects acceleration.
+    step4:
+      title: Force and Acceleration
+      content: Greater force creates greater acceleration. That's Newton's Second Law, F = ma!
+    step5:
+      title: Show Acceleration
+      content: Check 'Acceleration' to display acceleration values and the accelerometer.
+
+# Feedback Messages (新增：正反馈消息)
+feedback:
+  netForce:
+    firstPuller: Great job! You've attached your first puller.
+    balancedForces: Forces are balanced! The cart barely moves, did you notice?
+    largerForceFaster: Nice observation! Larger force creates faster motion.
+    gameWon: You won! You've mastered force composition and balance.
+    multiplePullers: Great! Keep adding pullers to increase the force.
+    oneSidedForce: Only one side has force! The cart will accelerate in that direction.
+    competitiveGame: Exciting match! Both teams have strong forces.
+    closeGame: Very close match! The forces are nearly equal.
+  motion:
+    forceCreatesMotion: Force creates motion! Watch how it accelerates.
+    constantForceConstantAccel: Constant force creates constant acceleration, speed keeps increasing!
+    multipleObjects: More objects means more mass!
+    noForceMotion: Without force, the object maintains constant velocity.
+    reversedForce: Force opposes motion direction, the object is slowing down!
+  friction:
+    staticFrictionResisting: Friction is resisting your push! Current friction coefficient is {0}.
+    frictionTransition: You've overcome static friction! Now it's kinetic friction, which is weaker.
+    frictionSlowsDown: Friction makes the object slow down! Try adjusting it to see the effect.
+    noFrictionMotion: No friction! The object will keep moving forever.
+    highFriction: Too much friction! Your push isn't strong enough to move it yet.
+    frictionCoefficientDiscovery: Precise friction adjustment, you've discovered a motion pattern!
+    massAffectsAcceleration: More mass means less acceleration! You discovered the F=ma pattern!
+  acceleration:
+    accelerationObserved: The accelerometer shows the object is accelerating!
+    forceAccelRelation: Force {0}N ÷ Mass {1}kg = Acceleration!
+    constantForceConstantAccel: Constant force means constant acceleration.
+    zeroForceZeroAccel: No force means no acceleration, object maintains constant velocity.
+    largerMassSmallerAccel: More mass means less acceleration with the same force!
+    accelerometerActive: The accelerometer shows real-time acceleration values.
+    highAcceleration: Very high acceleration! The object is accelerating quickly.
+    newtonsSecondLawDiscovery: This is Newton's Second Law F=ma! More force means more acceleration, more mass means less acceleration.
+  encouragement:
+    keepExploring: Keep trying different settings, you'll make new discoveries!
+    tryDifferentObjects: Try adding more objects to see how mass affects motion.
+    tryMoreForce: Try increasing the force to see what happens!
+    adjustFriction: Try adjusting the friction to see how it changes motion.

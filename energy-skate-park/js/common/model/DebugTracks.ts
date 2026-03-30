@@ -1,4 +1,4 @@
-// Copyright 2014-2026, University of Colorado Boulder
+// Copyright 2014-2025, University of Colorado Boulder
 
 /**
  * Debug tracks, which can be enabled using the query parameter 'testTrackIndex' with the index of the track to debug.
@@ -30,7 +30,7 @@ export default class DebugTracks {
     let track: Track | null = null;
     if ( EnergySkateParkQueryParameters.testTrackIndex === 1 ) {
 
-      model.isStickingToTrackProperty.value = false;
+      model.stickingToTrackProperty.value = false;
       // The skater falls through model track
       model.skater.positionProperty.set( new Vector2( -5, 8 ) );
       model.skater.released( null, 0 );
@@ -44,7 +44,7 @@ export default class DebugTracks {
     // Skater stutters and slows going over the hump
     if ( EnergySkateParkQueryParameters.testTrackIndex === 2 ) {
 
-      model.isStickingToTrackProperty.value = false;
+      model.stickingToTrackProperty.value = false;
       // The skater falls through model track
       model.skater.positionProperty.set( new Vector2( -5, 7.7 ) );
       model.skater.released( null, 0 );
@@ -58,7 +58,7 @@ export default class DebugTracks {
     // Tricky one--handled OK
     if ( EnergySkateParkQueryParameters.testTrackIndex === 3 ) {
 
-      model.isStickingToTrackProperty.value = false;
+      model.stickingToTrackProperty.value = false;
       // The skater falls through model track
       model.skater.positionProperty.set( new Vector2( -5, 7.7 ) );
       model.skater.released( null, 0 );
@@ -72,7 +72,7 @@ export default class DebugTracks {
     // Wide loop, OK
     if ( EnergySkateParkQueryParameters.testTrackIndex === 4 ) {
 
-      model.isStickingToTrackProperty.value = false;
+      model.stickingToTrackProperty.value = false;
       // The skater falls through model track
       model.skater.positionProperty.set( new Vector2( -5, 7.7 ) );
       model.skater.released( null, 0 );
@@ -86,7 +86,7 @@ export default class DebugTracks {
     // Flickering return skater button, OK (see https://github.com/phetsims/energy-skate-park-basics/issues/121)
     if ( EnergySkateParkQueryParameters.testTrackIndex === 5 ) {
 
-      model.isStickingToTrackProperty.value = false;
+      model.stickingToTrackProperty.value = false;
       // The skater falls through model track
       model.skater.positionProperty.set( new Vector2( -5, 7.7 ) );
       model.skater.released( null, 0 );
@@ -100,7 +100,7 @@ export default class DebugTracks {
     // Passes through track, OK
     if ( EnergySkateParkQueryParameters.testTrackIndex === 6 ) {
 
-      model.isStickingToTrackProperty.value = false;
+      model.stickingToTrackProperty.value = false;
       // The skater falls through model track
       model.skater.positionProperty.set( new Vector2( 5, 7.9 ) );
       model.skater.released( null, 0 );
@@ -114,7 +114,7 @@ export default class DebugTracks {
     // Falls through bottom, OK
     if ( EnergySkateParkQueryParameters.testTrackIndex === 7 ) {
 
-      model.isStickingToTrackProperty.value = false;
+      model.stickingToTrackProperty.value = false;
       // The skater falls through model track
       model.skater.positionProperty.set( new Vector2( 5, 7.9 ) );
       model.skater.released( null, 0 );
@@ -128,7 +128,7 @@ export default class DebugTracks {
     // Falls through loop, PROBLEM
     if ( EnergySkateParkQueryParameters.testTrackIndex === 8 ) {
 
-      model.isStickingToTrackProperty.value = false;
+      model.stickingToTrackProperty.value = false;
       // The skater falls through model track
       model.skater.positionProperty.set( new Vector2( 5, 7.9 ) );
       model.skater.released( null, 0 );
@@ -142,7 +142,7 @@ export default class DebugTracks {
     // Pops upside down in loop, PROBLEM
     if ( EnergySkateParkQueryParameters.testTrackIndex === 9 ) {
 
-      model.isStickingToTrackProperty.value = false;
+      model.stickingToTrackProperty.value = false;
       // The skater falls through model track
       model.skater.positionProperty.set( new Vector2( 5, 7.9 ) );
       model.skater.released( null, 0 );
@@ -156,7 +156,7 @@ export default class DebugTracks {
 
     if ( EnergySkateParkQueryParameters.testTrackIndex === 10 ) {
 
-      model.isStickingToTrackProperty.value = false;
+      model.stickingToTrackProperty.value = false;
       // The skater falls through model track
       model.skater.positionProperty.set( new Vector2( 5, 7.9 ) );
       model.skater.released( null, 0 );
@@ -170,7 +170,7 @@ export default class DebugTracks {
 
     if ( EnergySkateParkQueryParameters.testTrackIndex === 11 ) {
 
-      model.isStickingToTrackProperty.value = false;
+      model.stickingToTrackProperty.value = false;
       // The skater falls through model track
       model.skater.positionProperty.set( new Vector2( 5, 7.9 ) );
       model.skater.released( null, 0 );
@@ -184,7 +184,7 @@ export default class DebugTracks {
 
     if ( EnergySkateParkQueryParameters.testTrackIndex === 12 ) {
 
-      model.isStickingToTrackProperty.value = false;
+      model.stickingToTrackProperty.value = false;
       // The skater falls through model track
       model.skater.positionProperty.set( new Vector2( 5, 7.9 ) );
       model.skater.released( null, 0 );
@@ -198,7 +198,7 @@ export default class DebugTracks {
 
     if ( EnergySkateParkQueryParameters.testTrackIndex === 13 ) {
 
-      model.isStickingToTrackProperty.value = false;
+      model.stickingToTrackProperty.value = false;
       // The skater falls through model track
       model.skater.positionProperty.set( new Vector2( 5, 7.9 ) );
       model.skater.released( null, 0 );
@@ -211,7 +211,7 @@ export default class DebugTracks {
     }
 
     if ( EnergySkateParkQueryParameters.testTrackIndex === 14 ) {
-      model.isStickingToTrackProperty.value = false;
+      model.stickingToTrackProperty.value = false;
       model.skater.positionProperty.set( new Vector2( -6.698445595854922, 6.5278756476683935 ) );
       model.skater.released( null, 0 );
       model.frictionProperty.value = 0.05;
@@ -249,7 +249,7 @@ export default class DebugTracks {
 
     //Test decrease in thermal energy, see https://github.com/phetsims/energy-skate-park-basics/issues/141#issuecomment-59395426
     if ( EnergySkateParkQueryParameters.testTrackIndex === 15 ) {
-      model.isStickingToTrackProperty.value = true;
+      model.stickingToTrackProperty.value = true;
       model.skater.positionProperty.set( new Vector2( -6.698445595854922, 6.5278756476683935 ) );
       model.skater.released( null, 0 );
       model.frictionProperty.value = 0;

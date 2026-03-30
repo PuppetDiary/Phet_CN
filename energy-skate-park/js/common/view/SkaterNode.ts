@@ -88,8 +88,7 @@ export default class SkaterNode extends InteractiveHighlighting( Node ) {
 
       // prevent fitted blocks for the Skater to improve performance, see #213
       preventFit: true,
-      tandem: tandem,
-      phetioVisiblePropertyInstrumented: false
+      tandem: tandem
     } );
 
     // Store references for track attachment hotkey
@@ -98,8 +97,7 @@ export default class SkaterNode extends InteractiveHighlighting( Node ) {
 
     this.selectedSkaterProperty = new NumberProperty( 0, {
       tandem: tandem.createTandem( 'selectedSkaterProperty' ),
-      validValues: SkaterImageSet.SKATER_IMAGE_SETS.map( ( value, index ) => index ),
-      phetioFeatured: true
+      validValues: SkaterImageSet.SKATER_IMAGE_SETS.map( ( value, index ) => index )
     } );
 
     this.skaterImageSetProperty = new DerivedProperty( [ this.selectedSkaterProperty ], selectedSkater => {
@@ -108,10 +106,12 @@ export default class SkaterNode extends InteractiveHighlighting( Node ) {
 
     // left and right Images for the skater
     const leftSkaterImageNode = new Image( this.skaterImageSetProperty.value.leftImageProperty, {
-      cursor: 'pointer'
+      cursor: 'pointer',
+      tandem: tandem.createTandem( 'leftSkaterImageNode' )
     } );
     const rightSkaterImageNode = new Image( this.skaterImageSetProperty.value.rightImageProperty, {
-      cursor: 'pointer'
+      cursor: 'pointer',
+      tandem: tandem.createTandem( 'rightSkaterImageNode' )
     } );
     this.children = [ leftSkaterImageNode, rightSkaterImageNode ];
 
@@ -227,9 +227,9 @@ export default class SkaterNode extends InteractiveHighlighting( Node ) {
 
           // Choose the right side of the track, i.e. the side of the track that would have the skater upside up
           const normal = targetTrack.getUnitNormalVector( targetU );
-          skater.isOnTopSideOfTrackProperty.value = normal.y > 0;
+          skater.onTopSideOfTrackProperty.value = normal.y > 0;
 
-          skater.angleProperty.value = targetTrack.getViewAngleAt( targetU ) + ( skater.isOnTopSideOfTrackProperty.value ? 0 : Math.PI );
+          skater.angleProperty.value = targetTrack.getViewAngleAt( targetU ) + ( skater.onTopSideOfTrackProperty.value ? 0 : Math.PI );
 
           closeEnough = true;
         }
@@ -240,7 +240,7 @@ export default class SkaterNode extends InteractiveHighlighting( Node ) {
 
         // make skater upright if not near the track
         skater.angleProperty.value = 0;
-        skater.isOnTopSideOfTrackProperty.value = true;
+        skater.onTopSideOfTrackProperty.value = true;
 
         skater.positionProperty.value = position;
       }
@@ -258,7 +258,7 @@ export default class SkaterNode extends InteractiveHighlighting( Node ) {
       tandem: tandem.createTandem( 'dragListener' ),
       start: event => {
         userControlledProperty.set( true );
-        skater.userControlledProperty.value = true;
+        skater.draggingProperty.value = true;
 
         // Clear thermal energy whenever skater is grabbed, see #32
         skater.thermalEnergyProperty.value = 0;
@@ -299,7 +299,7 @@ export default class SkaterNode extends InteractiveHighlighting( Node ) {
       onGrab: inputType => {
         if ( inputType === 'pointer' ) { return; } // SoundDragListener handles pointer grabs
         userControlledProperty.set( true );
-        skater.userControlledProperty.value = true;
+        skater.draggingProperty.value = true;
 
         // Clear thermal energy whenever skater is grabbed
         skater.thermalEnergyProperty.value = 0;
@@ -309,13 +309,6 @@ export default class SkaterNode extends InteractiveHighlighting( Node ) {
         this.keyboardTargetU = skater.parametricPositionProperty.value;
 
         sharedSoundPlayers.get( 'grab' ).play();
-
-        // On the first keyboard grab, provide a context response with hints about track attachment and release.
-        if ( this.grabDragInteraction.grabDragUsageTracker.numberOfKeyboardGrabs === 1 ) {
-          this.addAccessibleContextResponse(
-            EnergySkateParkFluent.a11y.skaterNode.firstGrabContextResponseStringProperty
-          );
-        }
       },
 
       onRelease: inputType => {
@@ -376,8 +369,6 @@ export default class SkaterNode extends InteractiveHighlighting( Node ) {
 
       this.keyboardTargetTrack = track;
       this.keyboardTargetU = u;
-
-      this.addAccessibleContextResponse( EnergySkateParkFluent.a11y.skaterNode.snapToTrackContextResponseStringProperty );
     }
   }
 
@@ -444,7 +435,7 @@ export default class SkaterNode extends InteractiveHighlighting( Node ) {
     const delta = shiftPressed ? PARAMETRIC_DELTA_SHIFT : PARAMETRIC_DELTA;
 
     // Determine direction based on which side of track we're on
-    const onTop = skater.isOnTopSideOfTrackProperty.value;
+    const onTop = skater.onTopSideOfTrackProperty.value;
 
     if ( leftPressed && !rightPressed ) {
       const direction = onTop ? -1 : 1;
@@ -473,7 +464,7 @@ export default class SkaterNode extends InteractiveHighlighting( Node ) {
       skater.parametricPositionProperty.value = newU;
       skater.positionProperty.value = track.getPoint( newU );
       skater.angleProperty.value = track.getViewAngleAt( newU ) +
-                                   ( skater.isOnTopSideOfTrackProperty.value ? 0 : Math.PI );
+                                   ( skater.onTopSideOfTrackProperty.value ? 0 : Math.PI );
 
       // Clear velocity when moving with keyboard
       skater.velocityProperty.value = new Vector2( 0, 0 );
@@ -500,7 +491,7 @@ export default class SkaterNode extends InteractiveHighlighting( Node ) {
   private detachFromTrack( skater: Skater, track: Track ): void {
     const u = skater.parametricPositionProperty.value;
     const normal = track.getUnitNormalVector( u );
-    const launchDirection = skater.isOnTopSideOfTrackProperty.value ? normal : normal.negated();
+    const launchDirection = skater.onTopSideOfTrackProperty.value ? normal : normal.negated();
 
     // Detach from track
     skater.trackProperty.value = null;
@@ -516,8 +507,6 @@ export default class SkaterNode extends InteractiveHighlighting( Node ) {
     // Update keyboard target for release
     this.keyboardTargetTrack = null;
     this.keyboardTargetU = null;
-
-    this.addAccessibleContextResponse( EnergySkateParkFluent.a11y.skaterNode.detachFromTrackContextResponseStringProperty );
   }
 
   /**
@@ -563,7 +552,7 @@ export default class SkaterNode extends InteractiveHighlighting( Node ) {
       // Update position (no track snapping during keyboard drag)
       skater.positionProperty.value = newPosition;
       skater.angleProperty.value = 0;
-      skater.isOnTopSideOfTrackProperty.value = true;
+      skater.onTopSideOfTrackProperty.value = true;
 
       // Clear velocity
       skater.velocityProperty.value = new Vector2( 0, 0 );
@@ -575,13 +564,6 @@ export default class SkaterNode extends InteractiveHighlighting( Node ) {
       this.keyboardTargetTrack = null;
       this.keyboardTargetU = null;
     }
-  }
-
-  /**
-   * Reset the GrabDragInteraction so the first-grab context response plays again.
-   */
-  public reset(): void {
-    this.grabDragInteraction.reset();
   }
 
   /**

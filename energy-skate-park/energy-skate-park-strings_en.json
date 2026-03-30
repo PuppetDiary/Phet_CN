@@ -83,6 +83,11 @@
     }
   },
   "plots": {
+    "barGraph": {
+      "label": {
+        "value": "Bar Graph"
+      }
+    },
     "energyGraph": {
       "label": {
         "value": "Energy Graph"
@@ -124,6 +129,12 @@
     }
   },
   "skaterControls": {
+    "label": {
+      "value": "Skater"
+    },
+    "skater1MassPattern": {
+      "value": "Skater 1 ({{value}} kg)"
+    },
     "restartSkater": {
       "value": "Restart Skater"
     }
@@ -320,17 +331,11 @@
       "accessibleName": {
         "value": "Skater"
       },
-      "firstGrabContextResponse": {
-        "value": "Press J key plus T key to attach skater to nearest track. Space to release."
+      "onTrackHelpText": {
+        "value": "Use left and right arrow keys or A and D to move along track. Press up arrow or W to detach."
       },
-      "snapToTrackContextResponse": {
-        "value": "Skater on track."
-      },
-      "detachFromTrackContextResponse": {
-        "value": "Skater off track."
-      },
-      "offScreenContextResponse": {
-        "value": "Skater off screen. Return skater."
+      "offTrackHelpText": {
+        "value": "Use arrow keys or W, A, S, D to move the skater."
       }
     },
     "referenceHeightLine": {
@@ -391,13 +396,13 @@
         "value": "Track shape is { $trackShape }."
       },
       "trackPhraseAdjustable": {
-        "value": "Track shape is { $trackShape } with { $numberControlPoints ->\n  [one] { $numberControlPoints } adjustable control point\n *[other] { $numberControlPoints } adjustable control points\n}."
+        "value": "Track shape is { $trackShape } with { $numberControlPoints } adjustable control points."
       },
       "playgroundTrackPhraseMultiple": {
-        "value": "Your custom-built track has { $numberTracks } tracks and { $numberControlPoints ->\n  [one] { $numberControlPoints } adjustable control point\n *[other] { $numberControlPoints } adjustable control points\n}."
+        "value": "Your custom-built track has { $numberTracks } tracks and { $numberControlPoints } adjustable control points."
       },
       "playgroundTrackPhraseSingle": {
-        "value": "Your custom-built track has 1 track and { $numberControlPoints ->\n  [one] { $numberControlPoints } adjustable control point\n *[other] { $numberControlPoints } adjustable control points\n}."
+        "value": "Your custom-built track has 1 track and { $numberControlPoints } adjustable control points."
       },
       "playgroundTrackPhraseNone": {
         "value": "No track yet."
@@ -407,9 +412,6 @@
       },
       "skaterOnTrack": {
         "value": "Skater is on track."
-      },
-      "skaterOnTrackWithIndex": {
-        "value": "Skater is on track { $index }."
       },
       "skaterOffTrack": {
         "value": "Skater is off track."
@@ -458,7 +460,7 @@
         "value": "Energy Sensor Probe"
       },
       "accessibleHelpText": {
-        "value": "Move probe along skater's path to measure speed, height, and energy.  Path fades away when skater turns around. Pause to analyze values. "
+        "value": "Move probe along skater's path to measure speed, height, and energy."
       },
       "nothingToMeasure": {
         "value": "Nothing to measure yet."
@@ -634,6 +636,14 @@
         }
       }
     },
+    "controlPointAttachment": {
+      "left": {
+        "value": "Left"
+      },
+      "right": {
+        "value": "Right"
+      }
+    },
     "energyBarGraphAccordionBox": {
       "accessibleName": {
         "value": "Energy Bar Graph"
@@ -753,9 +763,6 @@
     "gravityControl": {
       "accessibleHelpText": {
         "value": "Set acceleration due to gravity."
-      },
-      "accessibleValuePattern": {
-        "value": "{$value} { $units ->\n  [metersPerSecondSquared] meters per second squared\n  *[newtonsPerKilogram] newtons per kilogram\n}"
       }
     },
     "gravityComboBox": {
@@ -777,9 +784,6 @@
     "massControl": {
       "accessibleHelpText": {
         "value": "Set skater mass."
-      },
-      "accessibleValuePattern": {
-        "value": "{$value} kilograms"
       }
     },
     "skaterSetOneControls": {
@@ -846,10 +850,10 @@
         "value": "Experiment with or without an adjustable reference height."
       },
       "accessibleContextResponseChecked": {
-        "value": "Reference Height added to Play Area."
+        "value": "Adjustable reference height added to Play Area."
       },
       "accessibleContextResponseUnchecked": {
-        "value": "Reference Height hidden."
+        "value": "Adjustable reference height hidden."
       }
     },
     "restartSkaterButton": {
@@ -863,17 +867,11 @@
       },
       "accessibleHelpText": {
         "value": "Return skater to most recent starting position and repeat experiment."
-      },
-      "accessibleContextResponse": {
-        "value": "Skater returned to starting position."
       }
     },
     "returnSkaterToGroundButton": {
       "accessibleName": {
         "value": "Return Skater to Ground"
-      },
-      "accessibleContextResponse": {
-        "value": "Skater on ground."
       }
     },
     "screenButtons": {
@@ -895,6 +893,11 @@
       "playground": {
         "accessibleHelpText": {
           "value": "Build your own custom tracks, ramps, and jumps for the skater.."
+        }
+      },
+      "friction": {
+        "accessibleHelpText": {
+          "value": "Experiment with adding friction to the tracks."
         }
       }
     },

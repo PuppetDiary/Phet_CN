@@ -8,10 +8,10 @@
  */
 
 import DerivedProperty from '../../../../axon/js/DerivedProperty.js';
-import Multilink from '../../../../axon/js/Multilink.js';
 import Property from '../../../../axon/js/Property.js';
 import { TReadOnlyProperty } from '../../../../axon/js/TReadOnlyProperty.js';
 import Dimension2 from '../../../../dot/js/Dimension2.js';
+import merge from '../../../../phet-core/js/merge.js';
 import { combineOptions } from '../../../../phet-core/js/optionize.js';
 import ModelViewTransform2 from '../../../../phetcommon/js/view/ModelViewTransform2.js';
 import EraserButton from '../../../../scenery-phet/js/buttons/EraserButton.js';
@@ -179,8 +179,12 @@ export default class EnergyGraphAccordionBox extends AccordionBox {
       maxWidth: 100
     };
     const variableSwitchTandem = tandem.createTandem( 'variableSwitch' );
-    const positionLabelText = new Text( positionSwitchLabelStringProperty, switchLabelOptions );
-    const timeLabelText = new Text( timeSwitchLabelStringProperty, switchLabelOptions );
+    const positionLabelText = new Text( positionSwitchLabelStringProperty, merge( {
+      tandem: variableSwitchTandem.createTandem( 'positionLabelText' )
+    }, switchLabelOptions ) );
+    const timeLabelText = new Text( timeSwitchLabelStringProperty, merge( {
+      tandem: variableSwitchTandem.createTandem( 'timeLabelText' )
+    }, switchLabelOptions ) );
 
     const variableSwitch = new ABSwitch( model.independentVariableProperty, 'position', positionLabelText, 'time', timeLabelText, {
       toggleSwitchOptions: { size: SWITCH_SIZE },
@@ -188,10 +192,10 @@ export default class EnergyGraphAccordionBox extends AccordionBox {
       tandem: variableSwitchTandem
     } );
 
-    const rangeMinProperty = new DerivedProperty( [ model.energyGraphZoomIndexProperty ],
+    const rangeMinProperty = new DerivedProperty( [ model.energyPlotScaleIndexProperty ],
       index => GraphsConstants.PLOT_RANGES[ index ].min
     );
-    const rangeMaxProperty = new DerivedProperty( [ model.energyGraphZoomIndexProperty ],
+    const rangeMaxProperty = new DerivedProperty( [ model.energyPlotScaleIndexProperty ],
       index => GraphsConstants.PLOT_RANGES[ index ].max
     );
     const zoomLevelResponseProperty = EnergySkateParkFluent.a11y.energyGraph.zoomButtonGroup.zoomLevelResponse.createProperty( {
@@ -199,7 +203,7 @@ export default class EnergyGraphAccordionBox extends AccordionBox {
       max: rangeMaxProperty
     } );
 
-    const zoomButtonGroup = new MagnifyingGlassZoomButtonGroup( model.energyGraphZoomIndexProperty, {
+    const zoomButtonGroup = new MagnifyingGlassZoomButtonGroup( model.energyPlotScaleIndexProperty, {
       magnifyingGlassNodeOptions: {
         glassRadius: 6
       },
@@ -224,8 +228,7 @@ export default class EnergyGraphAccordionBox extends AccordionBox {
 
       spacing: 7,
       orientation: 'vertical',
-      tandem: tandem.createTandem( 'zoomButtonGroup' ),
-      visiblePropertyOptions: { phetioFeatured: true }
+      tandem: tandem.createTandem( 'zoomButtonGroup' )
     } );
 
     // graph labels - y-axis includes zoom buttons as part of the label
@@ -259,7 +262,7 @@ export default class EnergyGraphAccordionBox extends AccordionBox {
     checkboxGroup.rightCenter = yLabel.leftCenter.minusXY( 10, 0 );
 
     // PDOM ordering within the accordion box content
-    contentNode.pdomOrder = [ graphDescriptionNode, checkboxHelpNode, checkboxGroup, yLabel, energyPlot ];
+    contentNode.pdomOrder = [ graphDescriptionNode, checkboxHelpNode, checkboxGroup, energyPlot, yLabel ];
 
     const buttonYMargin = 5;
     const contentYMargin = 3;
@@ -285,8 +288,8 @@ export default class EnergyGraphAccordionBox extends AccordionBox {
         touchAreaYDilation: 6
       },
 
-      expandedProperty: model.energyGraphExpandedProperty,
-      tandem: tandem
+      expandedProperty: model.energyPlotVisibleProperty,
+      tandem: tandem.createTandem( 'accordionBox' )
     }, EnergySkateParkConstants.PANEL_OPTIONS ) );
 
     this.variableSwitch = variableSwitch;
@@ -303,10 +306,10 @@ export default class EnergyGraphAccordionBox extends AccordionBox {
     } );
 
     // The variable switch and eraser button are part of the title layout but should only be visible when
-    // expanded and when the accordion box itself is visible
-    Multilink.multilink( [ this.expandedProperty, this.visibleProperty ], ( expanded, visible ) => {
-      variableSwitch.visible = expanded && visible;
-      eraserButton.visible = expanded && visible;
+    // expanded
+    this.expandedProperty.link( expanded => {
+      variableSwitch.visible = expanded;
+      eraserButton.visible = expanded;
     } );
 
     this.energyPlot = energyPlot;

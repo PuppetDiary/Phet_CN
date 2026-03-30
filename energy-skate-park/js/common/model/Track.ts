@@ -13,7 +13,6 @@ import Emitter from '../../../../axon/js/Emitter.js';
 import { TReadOnlyProperty } from '../../../../axon/js/TReadOnlyProperty.js';
 import Bounds2 from '../../../../dot/js/Bounds2.js';
 import Vector2 from '../../../../dot/js/Vector2.js';
-import affirm from '../../../../perennial-alias/js/browser-and-node/affirm.js';
 import optionize from '../../../../phet-core/js/optionize.js';
 import SceneryEvent from '../../../../scenery/js/input/SceneryEvent.js';
 import DragListener from '../../../../scenery/js/listeners/DragListener.js';
@@ -29,6 +28,7 @@ import energySkatePark from '../../energySkatePark.js';
 import SplineEvaluation, { Spline } from '../SplineEvaluation.js';
 import ControlPoint from './ControlPoint.js';
 import EnergySkateParkModel from './EnergySkateParkModel.js';
+import affirm from '../../../../perennial-alias/js/browser-and-node/affirm.js';
 
 // options for a track that is fully interactive - it can be dragged, control points can be moved, broken into
 // different tracks, and combined with another track
@@ -85,7 +85,7 @@ export default class Track extends PhetioObject {
   public readonly smoothedEmitter = new Emitter();
   public readonly updateEmitter = new Emitter();
   public readonly removeEmitter = new Emitter();
-  public readonly forwardingDragStartEmitter = new Emitter<[ PressListenerEvent ]>( { parameters: [ { valueType: SceneryEvent } ] } );
+  public readonly forwardingDragStartEmitter = new Emitter<[PressListenerEvent]>( { parameters: [ { valueType: SceneryEvent } ] } );
   public readonly model: EnergySkateParkModel;
   public readonly draggable: boolean;
   public readonly splittable: boolean;
@@ -182,8 +182,7 @@ export default class Track extends PhetioObject {
     // the play area
     this.physicalProperty = new BooleanProperty( false, {
       tandem: tandem.createTandem( 'physicalProperty' ),
-      phetioState: options.phetioState, // Participate in state only if parent track is too
-      phetioReadOnly: true
+      phetioState: options.phetioState // Participate in state only if parent track is too
     } );
 
     this.leftThePanelProperty = new BooleanProperty( false );

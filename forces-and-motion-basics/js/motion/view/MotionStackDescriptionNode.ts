@@ -1,4 +1,4 @@
-// Copyright 2025-2026, University of Colorado Boulder
+// Copyright 2025, University of Colorado Boulder
 
 /**
  * MotionStackDescription shows an accessible list of stacked items under the Skateboard/Stack heading.
@@ -14,7 +14,7 @@
  */
 
 import DerivedProperty from '../../../../axon/js/DerivedProperty.js';
-import AccessibleList from '../../../../scenery-phet/js/accessibility/AccessibleList.js';
+import AccessibleListNode from '../../../../scenery-phet/js/accessibility/AccessibleListNode.js';
 import Node from '../../../../scenery/js/nodes/Node.js';
 import forcesAndMotionBasics from '../../forcesAndMotionBasics.js';
 import ForcesAndMotionBasicsFluent from '../../ForcesAndMotionBasicsFluent.js';
@@ -101,13 +101,12 @@ export default class MotionStackDescriptionNode extends Node {
       return item ? getAccessibleName( item ) : ''; // bottom of stack, if present
     } );
 
-    // Accessible list with leading paragraph, shown only when there are items.
-    this.accessibleTemplate = AccessibleList.createTemplateProperty( {
-      listItems: [
-        { stringProperty: topStringProperty, visibleProperty: topVisibleProperty },
-        { stringProperty: middleStringProperty, visibleProperty: middleVisibleProperty },
-        { stringProperty: bottomStringProperty, visibleProperty: bottomVisibleProperty }
-      ],
+    // The list node with leading paragraph, shown only when there are items
+    const listNode = new AccessibleListNode( [
+      { stringProperty: topStringProperty, visibleProperty: topVisibleProperty },
+      { stringProperty: middleStringProperty, visibleProperty: middleVisibleProperty },
+      { stringProperty: bottomStringProperty, visibleProperty: bottomVisibleProperty }
+    ], {
       leadingParagraphStringProperty: leadingParagraphStringProperty,
       visibleProperty: hasItemsProperty
     } );
@@ -120,6 +119,7 @@ export default class MotionStackDescriptionNode extends Node {
     } );
 
     this.addChild( emptyNode );
+    this.addChild( listNode );
   }
 }
 

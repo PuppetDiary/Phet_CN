@@ -59,11 +59,11 @@ export default class Skater {
 
   // Speed along the parametric spline dimension, formally 'u dot', indicating speed and direction
   // (+/-) along the track spline in meters per second.  Not technically the derivative of 'u' since it is the
-  // Euclidean speed.
+  // euclidean speed.
   public readonly parametricSpeedProperty: NumberProperty;
 
   // True if the skater is pointing up on the track, false if attached to underside of track
-  public readonly isOnTopSideOfTrackProperty: BooleanProperty;
+  public readonly onTopSideOfTrackProperty: BooleanProperty;
 
   // Gravity magnitude, without direction, which is easier to set with controls (like sliders) because
   // conceptual minimum value is less than maximum value.
@@ -89,7 +89,7 @@ export default class Skater {
   public readonly velocityProperty: Vector2Property;
 
   //  - True if the user is dragging the skater with a pointer
-  public readonly userControlledProperty: BooleanProperty;
+  public readonly draggingProperty: BooleanProperty;
 
   //  - Energies are in Joules
   public readonly kineticEnergyProperty: NumberProperty;
@@ -136,7 +136,7 @@ export default class Skater {
   // Boolean flag that indicates whether the skater has moved from his initial position, and hence can be 'returned',
   // For making the 'return skater' button enabled/disabled
   // If this is a performance concern, perhaps it could just be dropped as a feature
-  public readonly hasMovedProperty: TReadOnlyProperty<boolean>;
+  public readonly movedProperty: TReadOnlyProperty<boolean>;
   private readonly startingAngleProperty: NumberProperty;
   private startingTrackControlPointSources?: Vector2[];
 
@@ -153,14 +153,12 @@ export default class Skater {
 
     this.trackProperty = new Property<Track | null>( null, {
       tandem: tandem.createTandem( 'trackProperty' ),
-      phetioValueType: NullableIO( ReferenceIO( Track.TrackIO ) ),
-      phetioReadOnly: true
+      phetioValueType: NullableIO( ReferenceIO( Track.TrackIO ) )
     } );
 
     this.parametricPositionProperty = new Property( 0, {
       tandem: tandem.createTandem( 'parametricPositionProperty' ),
-      phetioValueType: NullableIO( NumberIO ),
-      phetioReadOnly: true
+      phetioValueType: NullableIO( NumberIO )
     } );
 
     this.parametricSpeedProperty = new NumberProperty( 0, {
@@ -168,17 +166,14 @@ export default class Skater {
       phetioReadOnly: true
     } );
 
-    this.isOnTopSideOfTrackProperty = new BooleanProperty( true, {
-      tandem: tandem.createTandem( 'isOnTopSideOfTrackProperty' )
+    this.onTopSideOfTrackProperty = new BooleanProperty( true, {
+      tandem: tandem.createTandem( 'onTopSideOfTrackProperty' )
     } );
 
     this.gravityMagnitudeProperty = new NumberProperty( 9.8, {
-
-      // It is convenient to define the gravity magnitude here in the skater, however in the tandem tree it should appear as above.
-      tandem: tandem.parentTandem!.createTandem( 'gravityMagnitudeProperty' ),
+      tandem: tandem.createTandem( 'gravityMagnitudeProperty' ),
       units: 'm/s/s',
-      range: new Range( Math.abs( EnergySkateParkConstants.MIN_GRAVITY ), Math.abs( EnergySkateParkConstants.MAX_GRAVITY ) ),
-      phetioFeatured: true
+      range: new Range( Math.abs( EnergySkateParkConstants.MIN_GRAVITY ), Math.abs( EnergySkateParkConstants.MAX_GRAVITY ) )
     } );
 
     this.gravityProperty = new DerivedProperty( [ this.gravityMagnitudeProperty ], gravity => {
@@ -190,71 +185,56 @@ export default class Skater {
     } );
 
     this.referenceHeightProperty = new NumberProperty( 0, {
-
-      // It is convenient to define the reference height here in the skater, however in the tandem tree it should appear as above.
-      tandem: tandem.parentTandem!.createTandem( 'referenceHeightProperty' ),
+      tandem: tandem.createTandem( 'referenceHeightProperty' ),
       units: 'm',
-      range: options.referenceHeightRange,
-      phetioFeatured: true
+      range: options.referenceHeightRange
     } );
 
     this.positionProperty = new Vector2Property( new Vector2( 3.5, 0 ), {
-      tandem: tandem.createTandem( 'positionProperty' ),
-      phetioReadOnly: true
+      tandem: tandem.createTandem( 'positionProperty' )
     } );
 
     this.massProperty = new NumberProperty( options.defaultMass, {
       range: options.massRange,
       tandem: tandem.createTandem( 'massProperty' ),
-      units: 'kg',
-      phetioFeatured: true
+      units: 'kg'
     } );
 
     // we add other states later like 'forward'
     this.directionProperty = new StringUnionProperty<'left' | 'right'>( 'left', {
       validValues: [ 'left', 'right' ],
-      tandem: tandem.createTandem( 'directionProperty' ),
-      phetioReadOnly: true
+      tandem: tandem.createTandem( 'directionProperty' )
     } );
 
     this.velocityProperty = new Vector2Property( new Vector2( 0, 0 ), {
-      tandem: tandem.createTandem( 'velocityProperty' ),
-      phetioReadOnly: true
+      tandem: tandem.createTandem( 'velocityProperty' )
     } );
 
-    this.userControlledProperty = new BooleanProperty( false, {
-      tandem: tandem.createTandem( 'userControlledProperty' ),
-      phetioReadOnly: true
+    this.draggingProperty = new BooleanProperty( false, {
+      tandem: tandem.createTandem( 'draggingProperty' )
     } );
-
-    const energyTandem = tandem.createTandem( 'energy' );
 
     this.kineticEnergyProperty = new NumberProperty( 0, {
-      tandem: energyTandem.createTandem( 'kineticEnergyProperty' ),
-      units: 'J',
-      phetioReadOnly: true,
-      phetioFeatured: true
+      tandem: tandem.createTandem( 'kineticEnergyProperty' ),
+      units: 'J'
     } );
 
     this.potentialEnergyProperty = new NumberProperty( 0, {
-      tandem: energyTandem.createTandem( 'potentialEnergyProperty' ),
+      tandem: tandem.createTandem( 'potentialEnergyProperty' ),
       units: 'J',
-      phetioReadOnly: true,
-      phetioFeatured: true
+      phetioReadOnly: true
     } );
 
     this.thermalEnergyProperty = new NumberProperty( 0, {
-      tandem: energyTandem.createTandem( 'thermalEnergyProperty' ),
+      tandem: tandem.createTandem( 'thermalEnergyProperty' ),
       units: 'J',
-      phetioReadOnly: true,
-      phetioFeatured: true
+      phetioReadOnly: true
     } );
 
     this.totalEnergyProperty = new NumberProperty( 0, {
-      tandem: energyTandem.createTandem( 'totalEnergyProperty' ),
+      tandem: tandem.createTandem( 'totalEnergyProperty' ),
       units: 'J',
-      phetioReadOnly: true,
-      phetioFeatured: true
+      phetioReadOnly: true
     } );
 
     this.angleProperty = new NumberProperty( 0, {
@@ -263,38 +243,34 @@ export default class Skater {
       phetioReadOnly: true
     } );
 
-    const restartTandem = tandem.createTandem( 'restart' );
-
     this.startingPositionProperty = new Vector2Property( new Vector2( 3.5, 0 ), {
-      tandem: restartTandem.createTandem( 'startingPositionProperty' ),
-      phetioReadOnly: true
+      tandem: tandem.createTandem( 'startingPositionProperty' )
     } );
 
     this.startingUProperty = new Property( 0, {
-      tandem: restartTandem.createTandem( 'startingUProperty' ),
-      phetioValueType: NullableIO( NumberIO ),
-      phetioReadOnly: true
+      tandem: tandem.createTandem( 'startingUProperty' ),
+      phetioValueType: NullableIO( NumberIO )
     } );
 
     this.startingUpProperty = new BooleanProperty( true, {
-      tandem: restartTandem.createTandem( 'startingUpProperty' ),
-      phetioReadOnly: true
+      tandem: tandem.createTandem( 'startingUpProperty' )
     } );
 
     this.startingAngleProperty = new NumberProperty( 0, {
-      tandem: restartTandem.createTandem( 'startingAngleProperty' ),
-      units: 'radians',
-      phetioReadOnly: true
+      tandem: tandem.createTandem( 'startingAngleProperty' ),
+      units: 'radians'
     } );
 
     this.startingTrackProperty = new Property<Track | null>( null, {
       valueType: [ null, Track ],
-      tandem: restartTandem.createTandem( 'startingTrackProperty' ),
-      phetioValueType: NullableIO( ReferenceIO( Track.TrackIO ) ),
-      phetioReadOnly: true
+      tandem: tandem.createTandem( 'startingTrackProperty' ),
+      phetioValueType: NullableIO( ReferenceIO( Track.TrackIO ) )
     } );
 
-    this.headPositionProperty = new Vector2Property( this.getHeadPosition() );
+    this.headPositionProperty = new Vector2Property( this.getHeadPosition(), {
+      tandem: tandem.createTandem( 'headPositionProperty' ),
+      phetioReadOnly: true
+    } );
 
     this.updatedEmitter = new Emitter();
     this.energyChangedEmitter = new Emitter();
@@ -304,13 +280,12 @@ export default class Skater {
     this.speedProperty = new DerivedProperty( [ this.velocityProperty ], velocity => velocity.magnitude, {
       tandem: tandem.createTandem( 'speedProperty' ),
       units: 'm/s',
-      phetioValueType: NumberIO,
-      phetioFeatured: true
+      phetioValueType: NumberIO
     } );
 
     // Derived - Zero the kinetic energy when draggingDerived, see #22
-    this.userControlledProperty.link( userControlled => {
-      if ( userControlled ) {
+    this.draggingProperty.link( dragging => {
+      if ( dragging ) {
         this.velocityProperty.value = new Vector2( 0, 0 );
       }
     } );
@@ -322,21 +297,21 @@ export default class Skater {
       const speedThreshold = 0.01;
 
       if ( parametricSpeed > speedThreshold ) {
-        this.directionProperty.value = this.isOnTopSideOfTrackProperty.value ? 'right' : 'left';
+        this.directionProperty.value = this.onTopSideOfTrackProperty.value ? 'right' : 'left';
       }
       else if ( parametricSpeed < -speedThreshold ) {
-        this.directionProperty.value = this.isOnTopSideOfTrackProperty.value ? 'left' : 'right';
+        this.directionProperty.value = this.onTopSideOfTrackProperty.value ? 'left' : 'right';
       }
       else {
         // Keep the same direction
       }
     } );
 
-    this.hasMovedProperty = new DerivedProperty( [ this.positionProperty, this.startingPositionProperty, this.userControlledProperty ],
+    this.movedProperty = new DerivedProperty( [ this.positionProperty, this.startingPositionProperty, this.draggingProperty ],
       ( x, x0, dragging ) => {
         return !dragging && ( x.x !== x0.x || x.y !== x0.y );
       }, {
-        tandem: tandem.createTandem( 'hasMovedProperty' ),
+        tandem: tandem.createTandem( 'movedProperty' ),
         phetioValueType: BooleanIO
       } );
 
@@ -347,10 +322,17 @@ export default class Skater {
 
     this.updateEnergy();
 
-    this.updatedEmitter.addListener( () => this.updateHeadPosition() );
-    phetioStateSetEmitter.addListener( () => this.updateHeadPosition() );
+    this.updatedEmitter.addListener( () => {
+      this.updateHeadPosition();
+    } );
 
-    this.allowClearingThermalEnergyProperty = this.thermalEnergyProperty.derived( thermalEnergy => thermalEnergy > 1E-2 );
+    this.allowClearingThermalEnergyProperty = new DerivedProperty( [ this.thermalEnergyProperty ],
+      thermalEnergy => {
+        return thermalEnergy > 1E-2;
+      }, {
+        tandem: tandem.createTandem( 'allowClearingThermalEnergyProperty' ),
+        phetioValueType: BooleanIO
+      } );
 
     // In the state wrapper, when the state changes, we must update the skater node
     phetioStateSetEmitter.addListener( () => {
@@ -413,11 +395,11 @@ export default class Skater {
     this.trackProperty.reset();
     this.parametricPositionProperty.reset();
     this.parametricSpeedProperty.reset();
-    this.isOnTopSideOfTrackProperty.reset();
+    this.onTopSideOfTrackProperty.reset();
     this.positionProperty.reset();
     this.directionProperty.reset();
     this.velocityProperty.reset();
-    this.userControlledProperty.reset();
+    this.draggingProperty.reset();
     this.kineticEnergyProperty.reset();
     this.potentialEnergyProperty.reset();
     this.thermalEnergyProperty.reset();
@@ -445,7 +427,7 @@ export default class Skater {
     ) {
       this.parametricPositionProperty.value = this.startingUProperty.value;
       this.angleProperty.value = this.startingAngleProperty.value;
-      this.isOnTopSideOfTrackProperty.value = this.startingUpProperty.value;
+      this.onTopSideOfTrackProperty.value = this.startingUpProperty.value;
       this.parametricSpeedProperty.value = 0;
     }
     else {
@@ -512,7 +494,7 @@ export default class Skater {
    * @param targetU - The parametric position along the track to start on (if any)
    */
   public released( targetTrack: Track | null, targetU: number ): void {
-    this.userControlledProperty.value = false;
+    this.draggingProperty.value = false;
     this.velocityProperty.value = new Vector2( 0, 0 );
     this.parametricSpeedProperty.value = 0;
     this.trackProperty.value = targetTrack;
@@ -522,7 +504,7 @@ export default class Skater {
     }
     this.startingPositionProperty.value = this.positionProperty.value.copy();
     this.startingUProperty.value = targetU;
-    this.startingUpProperty.value = this.isOnTopSideOfTrackProperty.value;
+    this.startingUpProperty.value = this.onTopSideOfTrackProperty.value;
     this.startingTrackProperty.value = targetTrack;
 
     // Record the starting track control points to make sure the track hasn't changed during return this.
@@ -543,8 +525,8 @@ export default class Skater {
     this.positionProperty.value = track.getPoint( u );
 
     const normal = track.getUnitNormalVector( u );
-    this.isOnTopSideOfTrackProperty.value = normal.y > 0;
-    this.angleProperty.value = track.getViewAngleAt( u ) + ( this.isOnTopSideOfTrackProperty.value ? 0 : Math.PI );
+    this.onTopSideOfTrackProperty.value = normal.y > 0;
+    this.angleProperty.value = track.getViewAngleAt( u ) + ( this.onTopSideOfTrackProperty.value ? 0 : Math.PI );
 
     this.velocityProperty.value = new Vector2( 0, 0 );
     this.parametricSpeedProperty.value = 0;
