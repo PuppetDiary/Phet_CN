@@ -24,7 +24,7 @@
     ]
   },
   "currentUnits": {
-    "value": "毫安",
+    "value": "mA",
     "history": [
       {
         "userId": 162142,
@@ -32,11 +32,18 @@
         "oldValue": "",
         "newValue": "毫安",
         "explanation": null
+      },
+      {
+        "userId": 0,
+        "timestamp": 1743484800000,
+        "oldValue": "毫安",
+        "newValue": "mA",
+        "explanation": "统一单位为英文表示"
       }
     ]
   },
   "ohms-law.title": {
-    "value": "部分电路欧姆定律",
+    "value": "欧姆定律",
     "history": [
       {
         "userId": 162142,
@@ -44,6 +51,13 @@
         "oldValue": "",
         "newValue": "部分电路欧姆定律",
         "explanation": null
+      },
+      {
+        "userId": 0,
+        "timestamp": 1743484800000,
+        "oldValue": "部分电路欧姆定律",
+        "newValue": "欧姆定律",
+        "explanation": "简化标题"
       }
     ]
   },

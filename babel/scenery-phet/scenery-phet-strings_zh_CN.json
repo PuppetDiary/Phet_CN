@@ -508,6 +508,17 @@
       }
     ]
   },
+  "keyboardHelpDialog.comboBox.headingString": {
+    "value": "更改选项",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1775559000000,
+        "oldValue": "",
+        "newValue": "更改选项"
+      }
+    ]
+  },
   "keyboardHelpDialog.comboBox.closeWithoutChanging": {
     "value": "4.关闭清单不做改变",
     "history": [

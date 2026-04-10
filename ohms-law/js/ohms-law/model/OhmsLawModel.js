@@ -82,13 +82,14 @@ class OhmsLawModel {
   }
 
   /**
-   * Get the normalized current, based on the allowable values for current in this sim.
+   * Get the normalized current for visual display.
+   * A logarithmic mapping is used so the current indicators can still change smoothly across the very wide
+   * current range in this sim.
    * @public
    * @returns {number}
    */
   getNormalizedCurrent() {
-    const range = OhmsLawModel.getCurrentRange();
-    return ( this.currentProperty.get() - range.min ) / range.getLength();
+    return OhmsLawModel.getNormalizedCurrentForDisplay( this.currentProperty.get() );
   }
 
   /**
@@ -111,7 +112,7 @@ class OhmsLawModel {
     let current = this.currentProperty.value;
     const units = this.currentUnitsProperty.value;
     if ( units === CurrentUnit.AMPS ) {
-      current = current / 100;
+      current = current / 1000;
     }
     return Utils.toFixed( current, CurrentUnit.getSigFigs( units ) );
   }
@@ -147,6 +148,18 @@ class OhmsLawModel {
       this.currentRange = new Range( OhmsLawModel.getMinCurrent(), OhmsLawModel.getMaxCurrent() );
     }
     return this.currentRange;
+  }
+
+  /**
+   * Get the normalized current for visual display, using a logarithmic mapping across the current range.
+   * @param {number} current - current in milliamps
+   * @returns {number}
+   * @public
+   */
+  static getNormalizedCurrentForDisplay( current ) {
+    const range = OhmsLawModel.getCurrentRange();
+    const clampedCurrent = Utils.clamp( current, range.min, range.max );
+    return Math.log( clampedCurrent / range.min ) / Math.log( range.max / range.min );
   }
 }
 

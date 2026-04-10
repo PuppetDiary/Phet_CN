@@ -1,12 +1,12 @@
 {
   "distanceUnitsPattern": {
-    "value": "{{distance}} 千米",
+    "value": "{{distance}} 米",
     "history": [
       {
         "userId": 685789,
         "timestamp": 1573111198401,
         "oldValue": "",
-        "newValue": "{{distance}} 千米",
+        "newValue": "{{distance}} 米",
         "explanation": null
       }
     ]
@@ -99,11 +99,11 @@
       "history": []
     },
     "distanceArrowVisible": {
-      "value": "以千米为单位测量距离。",
+      "value": "以米为单位测量距离。",
       "history": []
     },
     "distanceCheckboxHelpText": {
-      "value": "以千米为单位测量球之间的距离。",
+      "value": "以米为单位测量球之间的距离。",
       "history": []
     },
     "forceArrowCapitalized": {
@@ -119,11 +119,11 @@
       "history": []
     },
     "kilometer": {
-      "value": "千米",
+      "value": "米",
       "history": []
     },
     "kilometers": {
-      "value": "千米",
+      "value": "米",
       "history": []
     },
     "massBillionsPattern": {
@@ -198,11 +198,11 @@
         "history": []
       },
       "distanceKilometersPattern": {
-        "value": "{{distance}} 千米",
+        "value": "{{distance}} 米",
         "history": []
       },
       "distanceShownResponse": {
-        "value": "以千米测量",
+        "value": "以米测量",
         "history": []
       },
       "forceValuesHiddenResponse": {

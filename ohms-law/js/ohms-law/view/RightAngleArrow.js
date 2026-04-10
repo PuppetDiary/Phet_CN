@@ -15,6 +15,7 @@ import PhetColorScheme from '../../../../scenery-phet/js/PhetColorScheme.js';
 import Path from '../../../../scenery/js/nodes/Path.js';
 import Tandem from '../../../../tandem/js/Tandem.js';
 import ohmsLaw from '../../ohmsLaw.js';
+import OhmsLawModel from '../model/OhmsLawModel.js';
 
 // constants
 // points for the arrow
@@ -29,6 +30,9 @@ const POINTS = [
   new Vector2( -25, 5 ),
   new Vector2( 5, 5 ) // inner corner
 ];
+
+const MIN_ARROW_SCALE = 0.35;
+const MAX_ARROW_SCALE = 6.8;
 
 class RightAngleArrow extends Path {
   /**
@@ -57,9 +61,10 @@ class RightAngleArrow extends Path {
     // Present for the lifetime of the simulation
     currentProperty.lazyLink( current => {
 
-      // Scale the arrows based on the value of the current.
-      // Exponential scaling algorithm.  Linear makes the changes too big.
-      const scale = Math.pow( ( current * 0.1 ), 0.7 );
+      // Scale the arrows based on the value of the current using the same wide-range normalization as the
+      // current letter in the equation, so both change smoothly across the full slider ranges.
+      const normalizedCurrent = OhmsLawModel.getNormalizedCurrentForDisplay( current );
+      const scale = MIN_ARROW_SCALE + ( MAX_ARROW_SCALE - MIN_ARROW_SCALE ) * normalizedCurrent;
 
       this.setScaleMagnitude( scale );
     } );

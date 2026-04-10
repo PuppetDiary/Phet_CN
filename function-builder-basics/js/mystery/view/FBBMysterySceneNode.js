@@ -6,16 +6,13 @@
  * @author Chris Malley (PixelZoom, Inc.)
  */
 
-import BooleanProperty from '../../../../axon/js/BooleanProperty.js';
 import dotRandom from '../../../../dot/js/dotRandom.js';
-import FBColors from '../../../../function-builder/js/common/FBColors.js';
 import FBQueryParameters from '../../../../function-builder/js/common/FBQueryParameters.js';
 import ImageCard from '../../../../function-builder/js/common/model/cards/ImageCard.js';
 import ImageCardNode from '../../../../function-builder/js/common/view/cards/ImageCardNode.js';
 import CardContainer from '../../../../function-builder/js/common/view/containers/CardContainer.js';
 import FBSceneNode from '../../../../function-builder/js/common/view/FBSceneNode.js';
 import merge from '../../../../phet-core/js/merge.js';
-import EyeToggleButton from '../../../../scenery-phet/js/buttons/EyeToggleButton.js';
 import RefreshButton from '../../../../scenery-phet/js/buttons/RefreshButton.js';
 import PhetFont from '../../../../scenery-phet/js/PhetFont.js';
 import Text from '../../../../scenery/js/nodes/Text.js';
@@ -53,48 +50,6 @@ export default class FBBMysterySceneNode extends FBSceneNode {
 
     super( scene, layoutBounds, FBBMysteryFunctionNode, options );
 
-    const self = this;
-
-    // Toggle buttons below each builder slot, for revealing identity of functions
-    this.revealProperties = [];  // {Property.<boolean>[]}
-    this.revealButtons = []; // {EyeToggleButton[]}
-    for ( let i = 0; i < scene.builder.numberOfSlots; i++ ) {
-
-      // create a closure for slotNumber using an IIFE
-      ( () => {
-
-        const slotNumber = i;
-
-        // Property associated with the slot
-        const revealProperty = new BooleanProperty( false );
-        self.revealProperties.push( revealProperty );
-
-        // wire up Property to control the function that's in the slot
-        // unlink unnecessary, instances exist for lifetime of the sim
-        revealProperty.link( reveal => {
-          const functionNode = self.builderNode.getFunctionNode( slotNumber );
-          if ( functionNode ) {
-            functionNode.identityVisibleProperty.set( reveal );
-          }
-        } );
-
-        // button below the slot
-        const slotPosition = scene.builder.slots[ slotNumber ].position;
-        const revealButton = new EyeToggleButton( revealProperty, {
-          baseColor: FBColors.HIDDEN_FUNCTION,
-          scale: 0.75,
-          centerX: slotPosition.x,
-          top: slotPosition.y + 65
-        } );
-        self.revealButtons.push( revealButton );
-        self.controlsLayer.addChild( revealButton );
-
-        // touchArea
-        revealButton.touchArea = revealButton.localBounds.dilatedXY( 25, 15 );
-
-      } )();
-    }
-
     // button for generating a new challenge
     const generateButton = new RefreshButton( {
       listener: () => scene.nextChallenge(),
@@ -123,11 +78,6 @@ export default class FBBMysterySceneNode extends FBSceneNode {
     // Enable features based on number of cards that have been moved to the output carousel.
     // unlink unnecessary, instances exist for lifetime of the sim.
     this.outputCarousel.numberOfCardsProperty.link( numberOfCards => {
-
-      // enabled function reveal buttons
-      this.revealButtons.forEach( revealButton => {
-        revealButton.enabled = revealButton.enabled || ( numberOfCards === 3 );
-      } );
 
       // enable 'See Inside' checkbox
       this.seeInsideCheckbox.enabled = this.seeInsideCheckbox.enabled || ( numberOfCards === 1 );
@@ -175,19 +125,11 @@ export default class FBBMysterySceneNode extends FBSceneNode {
    */
   resetChallengeControls() {
 
-    // reset Properties for revealing function identity
-    this.revealProperties.forEach( revealProperty => revealProperty.reset() );
-
-    // disable buttons for revealing function identity
-    this.revealButtons.forEach( revealButton => {
-      revealButton.enabled = false;
-    } );
-
     // reset 'See Inside' property
     this.seeInsideProperty.reset();
 
-    // disable 'See Inside' checkbox
-    this.seeInsideCheckbox.enabled = false;
+    // Start enabled for all mystery games (1/2/3 slots).
+    this.seeInsideCheckbox.enabled = true;
   }
 
   /**
