@@ -1,4 +1,4 @@
-// Copyright 2025, University of Colorado Boulder
+// Copyright 2025-2026, University of Colorado Boulder
 
 /**
  * Particle (e.g., O2, CO2) is moving directly across the lipid bilayer without a channel or transporter.
@@ -8,7 +8,6 @@
  */
 
 import IntentionalAny from '../../../../../phet-core/js/types/IntentionalAny.js';
-import membraneTransport from '../../../membraneTransport.js';
 import MembraneTransportModel from '../MembraneTransportModel.js';
 import Particle from '../Particle.js';
 import DirectionalMovementMode from './DirectionalMovementMode.js';
@@ -34,5 +33,3 @@ export default class PassiveDiffusionMode extends DirectionalMovementMode {
     return new PassiveDiffusionMode( stateObject.direction );
   }
 }
-
-membraneTransport.register( 'PassiveDiffusionMode', PassiveDiffusionMode );

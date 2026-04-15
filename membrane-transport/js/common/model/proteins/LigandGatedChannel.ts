@@ -1,4 +1,4 @@
-// Copyright 2025, University of Colorado Boulder
+// Copyright 2025-2026, University of Colorado Boulder
 
 /**
  * A model component for a ligand-gated channel. When a ligand binds to the channel, it opens and allows ions to pass
@@ -9,7 +9,6 @@
 
 import Emitter from '../../../../../axon/js/Emitter.js';
 import Vector2 from '../../../../../dot/js/Vector2.js';
-import membraneTransport from '../../../membraneTransport.js';
 import MembraneTransportConstants from '../../MembraneTransportConstants.js';
 import Ligand from '../Ligand.js';
 import MembraneTransportModel from '../MembraneTransportModel.js';
@@ -193,5 +192,3 @@ export default class LigandGatedChannel extends TransportProtein<LigandGatedChan
     super.clear( slot );
   }
 }
-
-membraneTransport.register( 'LigandGatedChannel', LigandGatedChannel );

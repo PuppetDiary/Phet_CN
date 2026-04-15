@@ -1,4 +1,4 @@
-// Copyright 2025, University of Colorado Boulder
+// Copyright 2025-2026, University of Colorado Boulder
 
 /**
  * MembraneTransportSounds centralizes all sound effects for this simulation. It defines, configures, and registers
@@ -54,7 +54,6 @@ import soluteCrossingOxygen_mp3 from '../../sounds/soluteCrossingOxygen_mp3.js';
 import soluteCrossingOxygenOutward_mp3 from '../../sounds/soluteCrossingOxygenOutward_mp3.js';
 import soluteCrossingPotassium_mp3 from '../../sounds/soluteCrossingPotassium_mp3.js';
 import soluteCrossingSodium_mp3 from '../../sounds/soluteCrossingSodium_mp3.js';
-import membraneTransport from '../membraneTransport.js';
 import MembraneTransportPreferences from './MembraneTransportPreferences.js';
 
 // Taken from CardSounds.ts
@@ -443,5 +442,3 @@ export default class MembraneTransportSounds {
   }
 
 }
-
-membraneTransport.register( 'MembraneTransportSounds', MembraneTransportSounds );

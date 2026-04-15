@@ -1,4 +1,4 @@
-// Copyright 2025, University of Colorado Boulder
+// Copyright 2025-2026, University of Colorado Boulder
 
 /**
  * The model for a ligand, which can bind to the ligand gated channels to open them.
@@ -8,7 +8,6 @@
  */
 
 import Vector2 from '../../../../dot/js/Vector2.js';
-import membraneTransport from '../../membraneTransport.js';
 import MembraneTransportModel from './MembraneTransportModel.js';
 import Particle from './Particle.js';
 import LigandBoundMode from './particleModes/LigandBoundMode.js';
@@ -46,5 +45,3 @@ export default class Ligand extends Particle {
     }
   }
 }
-
-membraneTransport.register( 'Ligand', Ligand );

@@ -1,4 +1,4 @@
-// Copyright 2025, University of Colorado Boulder
+// Copyright 2025-2026, University of Colorado Boulder
 
 /**
  * TransportProtein keeps track of stateful model information for a transport protein that is actively in a slot.
@@ -15,7 +15,6 @@ import Property from '../../../../../axon/js/Property.js';
 import { TReadOnlyProperty } from '../../../../../axon/js/TReadOnlyProperty.js';
 import Bounds2 from '../../../../../dot/js/Bounds2.js';
 import affirm from '../../../../../perennial-alias/js/browser-and-node/affirm.js';
-import membraneTransport from '../../../membraneTransport.js';
 import MembraneTransportConstants from '../../MembraneTransportConstants.js';
 import MembraneTransportModel from '../MembraneTransportModel.js';
 import Particle, { ParticleModeWithSlot } from '../Particle.js';
@@ -137,5 +136,3 @@ export default abstract class TransportProtein<State extends AllStates = AllStat
     this.stateProperty.reset();
   }
 }
-
-membraneTransport.register( 'TransportProtein', TransportProtein );

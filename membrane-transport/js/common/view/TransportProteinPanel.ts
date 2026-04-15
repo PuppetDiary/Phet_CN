@@ -1,4 +1,4 @@
-// Copyright 2025, University of Colorado Boulder
+// Copyright 2025-2026, University of Colorado Boulder
 
 /**
  * Shows the transport proteins which can be dragged into the play area, along with their respective controls, if any.
@@ -18,7 +18,6 @@ import VBox from '../../../../scenery/js/layout/nodes/VBox.js';
 import Node from '../../../../scenery/js/nodes/Node.js';
 import Panel from '../../../../sun/js/Panel.js';
 import Tandem from '../../../../tandem/js/Tandem.js';
-import membraneTransport from '../../membraneTransport.js';
 import MembraneTransportFluent from '../../MembraneTransportFluent.js';
 import MembraneTransportConstants from '../MembraneTransportConstants.js';
 import MembraneTransportModel from '../model/MembraneTransportModel.js';
@@ -253,5 +252,3 @@ export default class TransportProteinPanel extends Panel {
     return transportProteinToolNode;
   }
 }
-
-membraneTransport.register( 'TransportProteinPanel', TransportProteinPanel );

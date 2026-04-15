@@ -69,6 +69,7 @@ type SelfOptions = {
   showUnselectedHomeScreenIconFrame?: boolean;
   navigationBarIcon?: ScreenIcon | null;
   showScreenIconFrameForNavigationBarFill?: string | null;
+  useNaturalNavigationBarButtonWidth?: boolean;
 
   // dt cap in seconds, see https://github.com/phetsims/joist/issues/130
   maxDT?: number;
@@ -104,6 +105,7 @@ class Screen<M extends TModel, V extends ScreenView> extends PhetioObject {
   public readonly showScreenIconFrameForNavigationBarFill: string | null;
   public readonly homeScreenIcon: ScreenIcon | null;
   public navigationBarIcon: ScreenIcon | null;
+  public readonly useNaturalNavigationBarButtonWidth: boolean;
   public readonly showUnselectedHomeScreenIconFrame: boolean;
   public readonly createKeyboardHelpNode: null | ( ( tandem: Tandem ) => Node ); // joist-internal
   public readonly pdomDisplayNameProperty: TReadOnlyProperty<string>;
@@ -148,6 +150,7 @@ class Screen<M extends TModel, V extends ScreenView> extends PhetioObject {
       // {string|null} show a frame around the screen icon when the navbar's background fill is this color
       // 'black', 'white', or null (no frame)
       showScreenIconFrameForNavigationBarFill: null,
+      useNaturalNavigationBarButtonWidth: false,
 
       maxDT: 0.5,
 
@@ -214,6 +217,7 @@ class Screen<M extends TModel, V extends ScreenView> extends PhetioObject {
 
     this.homeScreenIcon = options.homeScreenIcon;
     this.navigationBarIcon = options.navigationBarIcon;
+    this.useNaturalNavigationBarButtonWidth = options.useNaturalNavigationBarButtonWidth;
     this.showUnselectedHomeScreenIconFrame = options.showUnselectedHomeScreenIconFrame;
     this.showScreenIconFrameForNavigationBarFill = options.showScreenIconFrameForNavigationBarFill;
     this.createKeyboardHelpNode = options.createKeyboardHelpNode;

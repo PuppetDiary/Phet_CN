@@ -1,4 +1,4 @@
-// Copyright 2025, University of Colorado Boulder
+// Copyright 2025-2026, University of Colorado Boulder
 
 /**
  * Ligand's position is being directly controlled by user input (e.g., dragging).
@@ -8,7 +8,6 @@
  */
 
 import IntentionalAny from '../../../../../phet-core/js/types/IntentionalAny.js';
-import membraneTransport from '../../../membraneTransport.js';
 import MembraneTransportModel from '../MembraneTransportModel.js';
 import Particle from '../Particle.js';
 import BaseParticleMode from './BaseParticleMode.js';
@@ -35,5 +34,3 @@ export default class UserControlledMode extends BaseParticleMode {
     return new UserControlledMode();
   }
 }
-
-membraneTransport.register( 'UserControlledMode', UserControlledMode );

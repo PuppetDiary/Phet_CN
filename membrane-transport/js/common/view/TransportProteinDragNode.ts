@@ -1,4 +1,4 @@
-// Copyright 2025, University of Colorado Boulder
+// Copyright 2025-2026, University of Colorado Boulder
 
 /**
  * Display the membrane transport protein for a node, which can be dragged out of the toolbox and dropped into specific targets
@@ -20,7 +20,6 @@ import DragListener from '../../../../scenery/js/listeners/DragListener.js';
 import { PressListenerEvent } from '../../../../scenery/js/listeners/PressListener.js';
 import Node from '../../../../scenery/js/nodes/Node.js';
 import Tandem from '../../../../tandem/js/Tandem.js';
-import membraneTransport from '../../membraneTransport.js';
 import MembraneTransportSounds from '../MembraneTransportSounds.js';
 import TransportProteinType from '../model/proteins/TransportProteinType.js';
 import Slot from '../model/Slot.js';
@@ -244,5 +243,3 @@ export default class TransportProteinDragNode extends Node {
     return this.positionProperty.value;
   }
 }
-
-membraneTransport.register( 'TransportProteinDragNode', TransportProteinDragNode );

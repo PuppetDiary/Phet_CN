@@ -1,4 +1,4 @@
-// Copyright 2025, University of Colorado Boulder
+// Copyright 2025-2026, University of Colorado Boulder
 
 /**
  * Abstract base class for particle modes that involve directional movement across the membrane.
@@ -11,7 +11,6 @@
 import dotRandom from '../../../../../dot/js/dotRandom.js';
 import Vector2 from '../../../../../dot/js/Vector2.js';
 import affirm from '../../../../../perennial-alias/js/browser-and-node/affirm.js';
-import membraneTransport from '../../../membraneTransport.js';
 import MembraneTransportConstants from '../../MembraneTransportConstants.js';
 import MembraneTransportModel from '../MembraneTransportModel.js';
 import Particle from '../Particle.js';
@@ -96,5 +95,3 @@ export default abstract class DirectionalMovementMode extends BaseParticleMode {
 
   protected abstract handleSpecificBehavior( dt: number, particle: Particle, model: MembraneTransportModel ): void;
 }
-
-membraneTransport.register( 'DirectionalMovementMode', DirectionalMovementMode );

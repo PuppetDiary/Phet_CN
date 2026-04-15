@@ -1,4 +1,4 @@
-// Copyright 2025, University of Colorado Boulder
+// Copyright 2025-2026, University of Colorado Boulder
 
 /**
  * The canvas renderer for background content in the observation window. This is for rendering many particles that are
@@ -19,7 +19,6 @@ import CanvasNode from '../../../../scenery/js/nodes/CanvasNode.js';
 import Image from '../../../../scenery/js/nodes/Image.js';
 import MembraneTransportColors from '../../common/MembraneTransportColors.js';
 import MembraneTransportConstants from '../../common/MembraneTransportConstants.js';
-import membraneTransport from '../../membraneTransport.js';
 import { getFeatureSetSoluteTypes } from '../MembraneTransportFeatureSet.js';
 import MembraneTransportPreferences from '../MembraneTransportPreferences.js';
 import MembraneTransportModel from '../model/MembraneTransportModel.js';
@@ -440,4 +439,3 @@ export default class ObservationWindowCanvasNode extends CanvasNode {
     context.stroke();
   }
 }
-membraneTransport.register( 'ObservationWindowCanvasNode', ObservationWindowCanvasNode );

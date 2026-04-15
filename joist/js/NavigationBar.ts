@@ -250,7 +250,7 @@ class NavigationBar extends Node {
           screen,
           sim.simScreens.indexOf( screen ),
           NAVIGATION_BAR_SIZE.height, {
-            maxButtonWidth: screenButtonWidth,
+            maxButtonWidth: screen.useNaturalNavigationBarButtonWidth ? null : screenButtonWidth,
             tandem: screen.tandem.supplied ? tandem.createTandem( `${screen.tandem.name}Button` ) : Tandem.REQUIRED
           } );
       } );
@@ -265,9 +265,12 @@ class NavigationBar extends Node {
 
       const screenButtonMap = new Map<AnyScreen, Node>();
       screenButtons.forEach( screenButton => {
+        const alignWidth = screenButton.screen.useNaturalNavigationBarButtonWidth ?
+                           Math.max( MINIMUM_SCREEN_BUTTON_WIDTH, screenButton.width ) :
+                           maxScreenButtonWidth;
         screenButtonMap.set( screenButton.screen, new AlignBox( screenButton, {
           excludeInvisibleChildrenFromBounds: true,
-          alignBounds: new Bounds2( 0, 0, maxScreenButtonWidth, maxScreenButtonHeight ),
+          alignBounds: new Bounds2( 0, 0, alignWidth, maxScreenButtonHeight ),
           visibleProperty: screenButton.visibleProperty
         } ) );
       } );

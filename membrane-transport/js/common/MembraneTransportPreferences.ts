@@ -1,4 +1,4 @@
-// Copyright 2025, University of Colorado Boulder
+// Copyright 2025-2026, University of Colorado Boulder
 
 /**
  * Sim-specific preferences for Membrane Transport.
@@ -8,7 +8,6 @@
 
 import BooleanProperty from '../../../axon/js/BooleanProperty.js';
 import Tandem from '../../../tandem/js/Tandem.js';
-import membraneTransport from '../membraneTransport.js';
 import MembraneTransportQueryParameters from './MembraneTransportQueryParameters.js';
 
 export default class MembraneTransportPreferences {
@@ -40,5 +39,3 @@ export default class MembraneTransportPreferences {
     // This is a singleton, so prevent instantiation.
   }
 }
-
-membraneTransport.register( 'MembraneTransportPreferences', MembraneTransportPreferences );

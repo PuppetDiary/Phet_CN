@@ -1,4 +1,4 @@
-// Copyright 2025, University of Colorado Boulder
+// Copyright 2025-2026, University of Colorado Boulder
 
 /**
  * A model component for a potassium voltage-gated channel.
@@ -6,7 +6,6 @@
  * @author Sam Reid (PhET Interactive Simulations)
  */
 
-import membraneTransport from '../../../membraneTransport.js';
 import MembraneTransportModel from '../MembraneTransportModel.js';
 import VoltageGatedChannel from './VoltageGatedChannel.js';
 
@@ -29,5 +28,3 @@ export default class PotassiumVoltageGatedChannel extends VoltageGatedChannel<Vo
     return state === 'open30mV';
   }
 }
-
-membraneTransport.register( 'PotassiumVoltageGatedChannel', PotassiumVoltageGatedChannel );

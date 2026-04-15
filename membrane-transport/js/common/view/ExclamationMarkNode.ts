@@ -1,4 +1,4 @@
-// Copyright 2025, University of Colorado Boulder
+// Copyright 2025-2026, University of Colorado Boulder
 
 /**
  * A styled exclamation mark Text node used to draw attention to conditions in the sim.
@@ -8,7 +8,6 @@
 
 import PhetFont from '../../../../scenery-phet/js/PhetFont.js';
 import Text, { TextOptions } from '../../../../scenery/js/nodes/Text.js';
-import membraneTransport from '../../membraneTransport.js';
 
 export default class ExclamationMarkNode extends Text {
   public constructor( options?: TextOptions ) {
@@ -27,5 +26,3 @@ export default class ExclamationMarkNode extends Text {
     options && this.mutate( options );
   }
 }
-
-membraneTransport.register( 'ExclamationMarkNode', ExclamationMarkNode );

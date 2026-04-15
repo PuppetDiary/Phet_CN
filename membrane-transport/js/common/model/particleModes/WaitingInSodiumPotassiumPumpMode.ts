@@ -1,4 +1,4 @@
-// Copyright 2025, University of Colorado Boulder
+// Copyright 2025-2026, University of Colorado Boulder
 
 /**
  * Particle is occupying a binding site within the Sodium-Potassium Pump, waiting for the transport cycle to proceed.
@@ -8,7 +8,6 @@
  */
 
 import IntentionalAny from '../../../../../phet-core/js/types/IntentionalAny.js';
-import membraneTransport from '../../../membraneTransport.js';
 import MembraneTransportModel from '../MembraneTransportModel.js';
 import Particle from '../Particle.js';
 import SodiumPotassiumPump from '../proteins/SodiumPotassiumPump.js';
@@ -49,5 +48,3 @@ export default class WaitingInSodiumPotassiumPumpMode extends BaseParticleMode {
     );
   }
 }
-
-membraneTransport.register( 'WaitingInSodiumPotassiumPumpMode', WaitingInSodiumPotassiumPumpMode );

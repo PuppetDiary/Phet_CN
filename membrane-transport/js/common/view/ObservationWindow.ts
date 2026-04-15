@@ -1,4 +1,4 @@
-// Copyright 2025, University of Colorado Boulder
+// Copyright 2025-2026, University of Colorado Boulder
 
 /**
  * Shows the rectangle with the cross-section of the cell membrane where solutes, ligands, transport proteins are.
@@ -22,7 +22,6 @@ import Text from '../../../../scenery/js/nodes/Text.js';
 import Panel from '../../../../sun/js/Panel.js';
 import Tandem from '../../../../tandem/js/Tandem.js';
 import MembraneTransportConstants from '../../common/MembraneTransportConstants.js';
-import membraneTransport from '../../membraneTransport.js';
 import MembraneTransportFluent from '../../MembraneTransportFluent.js';
 import { getFeatureSetHasLigands } from '../MembraneTransportFeatureSet.js';
 import MembraneTransportModel from '../model/MembraneTransportModel.js';
@@ -262,5 +261,3 @@ export default class ObservationWindow extends Node {
     } );
   }
 }
-
-membraneTransport.register( 'ObservationWindow', ObservationWindow );

@@ -1,4 +1,4 @@
-// Copyright 2025, University of Colorado Boulder
+// Copyright 2025-2026, University of Colorado Boulder
 
 /**
  * Particle (Sodium or Glucose) is moving towards a specific binding site on the Sodium-Glucose Cotransporter.
@@ -10,7 +10,6 @@
 import Vector2 from '../../../../../dot/js/Vector2.js';
 import affirm from '../../../../../perennial-alias/js/browser-and-node/affirm.js';
 import IntentionalAny from '../../../../../phet-core/js/types/IntentionalAny.js';
-import membraneTransport from '../../../membraneTransport.js';
 import MembraneTransportModel from '../MembraneTransportModel.js';
 import Particle from '../Particle.js';
 import SodiumGlucoseCotransporter from '../proteins/SodiumGlucoseCotransporter.js';
@@ -76,5 +75,3 @@ export default class MoveToSodiumGlucoseTransporterMode extends MoveToTargetMode
     );
   }
 }
-
-membraneTransport.register( 'MoveToSodiumGlucoseTransporterMode', MoveToSodiumGlucoseTransporterMode );

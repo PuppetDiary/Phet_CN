@@ -1,4 +1,4 @@
-// Copyright 2025, University of Colorado Boulder
+// Copyright 2025-2026, University of Colorado Boulder
 
 /**
  * The model for a particle in membrane transport.
@@ -16,7 +16,6 @@ import affirm from '../../../../perennial-alias/js/browser-and-node/affirm.js';
 import IntentionalAny from '../../../../phet-core/js/types/IntentionalAny.js';
 import PhetioObject from '../../../../tandem/js/PhetioObject.js';
 import MembraneTransportConstants from '../../common/MembraneTransportConstants.js';
-import membraneTransport from '../../membraneTransport.js';
 import MembraneTransportPreferences from '../MembraneTransportPreferences.js';
 
 // the model bounds are inferred from the view dimensions
@@ -262,5 +261,3 @@ export default abstract class Particle {
     }
   }
 }
-
-membraneTransport.register( 'Particle', Particle );

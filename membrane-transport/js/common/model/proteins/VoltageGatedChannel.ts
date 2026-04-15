@@ -1,4 +1,4 @@
-// Copyright 2025, University of Colorado Boulder
+// Copyright 2025-2026, University of Colorado Boulder
 
 /**
  * A model component for a voltage-gated channel.
@@ -6,7 +6,6 @@
  * @author Sam Reid (PhET Interactive Simulations)
  */
 
-import membraneTransport from '../../../membraneTransport.js';
 import MembraneTransportModel from '../MembraneTransportModel.js';
 import SoluteType from '../SoluteType.js';
 import TransportProtein from './TransportProtein.js';
@@ -71,5 +70,3 @@ export default abstract class VoltageGatedChannel<T extends 'closedNegative70mV'
            this.model.checkGradientForCrossing( soluteType, location );
   }
 }
-
-membraneTransport.register( 'VoltageGatedChannel', VoltageGatedChannel );

@@ -24,7 +24,7 @@ import WireBox from './WireBox.js';
 
 // constants
 const SLIDER_CLICK_LEVEL = 0.25;
-const WIRE_BOX_BOTTOM_MARGIN = 40;
+const WIRE_BOX_BOTTOM_MARGIN = 90;
 
 class OhmsLawScreenView extends ScreenView {
 

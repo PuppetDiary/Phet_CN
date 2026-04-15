@@ -1,4 +1,4 @@
-// Copyright 2024-2025, University of Colorado Boulder
+// Copyright 2024-2026, University of Colorado Boulder
 
 /**
  * ScreenView for the Membrane Transport simulation. Note that this provides the full features of the Playground screen,
@@ -29,7 +29,6 @@ import Text from '../../../../scenery/js/nodes/Text.js';
 import Checkbox, { CheckboxOptions } from '../../../../sun/js/Checkbox.js';
 import cell_svg from '../../../images/cell_svg.js';
 import MembraneTransportConstants from '../../common/MembraneTransportConstants.js';
-import membraneTransport from '../../membraneTransport.js';
 import MembraneTransportFluent from '../../MembraneTransportFluent.js';
 import MembraneTransportColors from '../MembraneTransportColors.js';
 import { getFeatureSetSoluteTypes, getFeatureSetTransportProteins } from '../MembraneTransportFeatureSet.js';
@@ -462,5 +461,3 @@ export default class MembraneTransportScreenView extends ScreenView {
     return this.transportProteinPanel!.getTransportProteinToolNode( type );
   }
 }
-
-membraneTransport.register( 'MembraneTransportScreenView', MembraneTransportScreenView );
