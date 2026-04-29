@@ -13,6 +13,7 @@ type TBrand = {
   getLinks: typeof getLinks;
   logoOnBlackBackground: HTMLImageElement;
   logoOnWhiteBackground: HTMLImageElement;
+  navigationBarLogoScale?: number;
 };
 
 export default TBrand;

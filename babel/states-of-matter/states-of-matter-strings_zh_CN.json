@@ -228,13 +228,13 @@
     ]
   },
   "hideForces": {
-    "value": "隐藏的力",
+    "value": "隐藏力",
     "history": [
       {
         "userId": 293040,
         "timestamp": 1492501937516,
         "oldValue": "",
-        "newValue": "隐藏的力",
+        "newValue": "隐藏力",
         "explanation": null
       }
     ]

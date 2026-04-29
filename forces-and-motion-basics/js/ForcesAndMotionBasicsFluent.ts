@@ -294,6 +294,7 @@ const ForcesAndMotionBasicsFluent = {
   pattern: {
     "0massUnitsKilogramsStringProperty": _.get( ForcesAndMotionBasicsStrings, 'pattern.0massUnitsKilogramsStringProperty' ),
     "0valueUnitsNewtonsStringProperty": _.get( ForcesAndMotionBasicsStrings, 'pattern.0valueUnitsNewtonsStringProperty' ),
+    "0valueUnitsVelocityStringProperty": _.get( ForcesAndMotionBasicsStrings, 'pattern.0valueUnitsVelocityStringProperty' ),
     "0name": {
       "1valueUnitsAccelerationStringProperty": _.get( ForcesAndMotionBasicsStrings, 'pattern.0name.1valueUnitsAccelerationStringProperty' ),
       "1valueUnitsVelocityStringProperty": _.get( ForcesAndMotionBasicsStrings, 'pattern.0name.1valueUnitsVelocityStringProperty' )

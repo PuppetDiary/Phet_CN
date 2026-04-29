@@ -7,6 +7,8 @@
  */
 
 import PreferencesModel from '../../joist/js/preferences/PreferencesModel.js';
+import logo_png from '../../brand/adapted-from-phet/images/logo_png.js';
+import logoOnWhite_png from '../../brand/adapted-from-phet/images/logoOnWhite_png.js';
 import Sim, { SimOptions } from '../../joist/js/Sim.js';
 import simLauncher from '../../joist/js/simLauncher.js';
 import Tandem from '../../tandem/js/Tandem.js';
@@ -51,6 +53,13 @@ simLauncher.launch( () => {
         } ]
       }
     } ),
+
+    // Reduce the brand footprint so the four screen tabs keep a readable size in zh_CN.
+    navigationBarBrand: {
+      logoOnBlackBackground: logo_png,
+      logoOnWhiteBackground: logoOnWhite_png,
+      logoScale: 0.18
+    },
 
     phetioDesigned: true
   };

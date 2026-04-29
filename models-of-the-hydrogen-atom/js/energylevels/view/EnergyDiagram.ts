@@ -9,7 +9,9 @@
  * @author Chris Malley (PixelZoom, Inc.)
  */
 
+import DerivedProperty from '../../../../axon/js/DerivedProperty.js';
 import Dimension2 from '../../../../dot/js/Dimension2.js';
+import localeProperty from '../../../../joist/js/i18n/localeProperty.js';
 import optionize from '../../../../phet-core/js/optionize.js';
 import PickRequired from '../../../../phet-core/js/types/PickRequired.js';
 import ArrowNode from '../../../../scenery-phet/js/ArrowNode.js';
@@ -38,6 +40,9 @@ const X_SPACING = 22;
 // These values were set empirically. Using actual energy values results in visual overlap of the levels, since
 // higher levels are closely spaced.
 const Y_OFFSETS = [ 0.025, 0.60, 0.73, 0.81, 0.86, 0.90 ];
+
+const isStackedChineseLocale = ( locale: string ): boolean => locale.startsWith( 'zh' );
+const toStackedText = ( text: string ): string => text.split( '' ).join( '\n' );
 
 type SelfOptions = {
 
@@ -95,11 +100,18 @@ export default class EnergyDiagram extends Node {
       stroke: null
     } );
 
-    const energyText = new Text( ModelsOfTheHydrogenAtomStrings.energyStringProperty, {
+    const energyStringProperty = new DerivedProperty(
+      [ localeProperty, ModelsOfTheHydrogenAtomStrings.energyStringProperty ],
+      ( locale, string ) => isStackedChineseLocale( locale ) ? toStackedText( string ) : string
+    );
+    const energyText = new Text( energyStringProperty, {
       font: new PhetFont( 12 ),
       rotation: -Math.PI / 2,
       maxWidth: energyAxisLength / 2,
       fill: MOTHAColors.invertibleTextFillProperty
+    } );
+    localeProperty.link( locale => {
+      energyText.rotation = isStackedChineseLocale( locale ) ? 0 : -Math.PI / 2;
     } );
 
     const energyAxisHBox = new HBox( {

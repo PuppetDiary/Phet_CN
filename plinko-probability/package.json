@@ -20,6 +20,9 @@
       "adapted-from-phet"
     ],
     "simulation": true,
+    "simFeatures": {
+      "supportsSound": true
+    },
     "supportsOutputJS": true,
     "published": true,
     "screenNameKeys": [

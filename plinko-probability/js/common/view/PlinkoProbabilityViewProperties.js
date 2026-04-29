@@ -30,7 +30,9 @@ class PlinkoProbabilityViewProperties {
     } );
     this.expandedAccordionBoxProperty = new BooleanProperty( true );
     this.isTheoreticalHistogramVisibleProperty = new BooleanProperty( false );
-    this.isSoundEnabledProperty = new BooleanProperty( false );
+    // Keep peg-hit sound enabled by default so the in-sim sound toggle and global audio toggle are consistent
+    // for typical learners who expect immediate feedback after turning audio on.
+    this.isSoundEnabledProperty = new BooleanProperty( true );
   }
 
 
@@ -39,7 +41,7 @@ class PlinkoProbabilityViewProperties {
     this.histogramModeProperty.reset();
     this.expandedAccordionBoxProperty.reset();
     this.isTheoreticalHistogramVisibleProperty.reset();
-    this.isSoundEnabledProperty.reset();
+    // Do not reset this Property. Reset All should clear simulation state, not silently disable audio feedback.
   }
 }
 

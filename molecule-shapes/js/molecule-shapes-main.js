@@ -9,6 +9,7 @@
 import PreferencesModel from '../../joist/js/preferences/PreferencesModel.js';
 import Sim from '../../joist/js/Sim.js';
 import simLauncher from '../../joist/js/simLauncher.js';
+import adaptedFromPhetLogoOnWhite_png from '../../brand/adapted-from-phet/images/logoOnWhite_png.js';
 import CanvasWarningNode from '../../scenery-phet/js/CanvasWarningNode.js';
 import Tandem from '../../tandem/js/Tandem.js';
 import MoleculeShapesGlobals from './common/MoleculeShapesGlobals.js';
@@ -43,6 +44,15 @@ const simOptions = {
   // phet-io options
   phetioDesigned: true
 };
+
+// Molecule Shapes home screen uses a light navigation bar.
+// For adapted-from-phet builds, force the black-text GKX logo so it remains visible on white backgrounds.
+if ( phet.chipper.brand === 'adapted-from-phet' ) {
+  simOptions.navigationBarBrand = {
+    logoOnBlackBackground: adaptedFromPhetLogoOnWhite_png,
+    logoOnWhiteBackground: adaptedFromPhetLogoOnWhite_png
+  };
+}
 
 // NOTE: ?webgl=false will trigger Canvas rendering with a reduced poly-count
 

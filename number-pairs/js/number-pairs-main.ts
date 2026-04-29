@@ -7,6 +7,8 @@
  */
 
 import DerivedProperty from '../../axon/js/DerivedProperty.js';
+import logo_png from '../../brand/adapted-from-phet/images/logo_png.js';
+import logoOnWhite_png from '../../brand/adapted-from-phet/images/logoOnWhite_png.js';
 import audioManager from '../../joist/js/audioManager.js';
 import Sim from '../../joist/js/Sim.js';
 import simLauncher from '../../joist/js/simLauncher.js';
@@ -46,7 +48,12 @@ simLauncher.launch( () => {
       soundDesign: '',
       thanks: ''
     },
-    preferencesModel: new NumberPairsPreferencesModel()
+    preferencesModel: new NumberPairsPreferencesModel(),
+    navigationBarBrand: {
+      logoOnBlackBackground: logo_png,
+      logoOnWhiteBackground: logoOnWhite_png,
+      logoScale: 0.18
+    }
   } );
   sim.start();
 

@@ -8,6 +8,7 @@
  */
 
 import Sound from '../../../../vibe/js/Sound.js';
+import phetAudioContext from '../../../../tambo/js/phetAudioContext.js';
 import bonk1ForPlinko_mp3 from '../../../sounds/bonk1ForPlinko_mp3.js';
 import bonk2ForPlinko_mp3 from '../../../sounds/bonk2ForPlinko_mp3.js';
 import plinkoProbability from '../../plinkoProbability.js';
@@ -24,6 +25,16 @@ class PegSoundGeneration {
     this.bonk2Sound = new Sound( bonk2ForPlinko_mp3 );  // @private
     this.soundTimeElapsed = 0;  // @private - number used to keep track of the last sound playing
     this.isSoundEnabledProperty = isSoundEnabledProperty; // @private
+
+    // Some browsers keep AudioContext suspended until a gesture. Resume eagerly when sound is enabled
+    // so peg-hit sounds become audible as soon as possible.
+    this.isSoundEnabledProperty.link( isSoundEnabled => {
+      if ( isSoundEnabled && phetAudioContext.state !== 'running' ) {
+        phetAudioContext.resume().catch( () => {
+          // The existing Sound implementation will retry on later user gestures.
+        } );
+      }
+    } );
   }
 
 

@@ -924,7 +924,7 @@
     "value": "材料 Y"
   },
   "material.pvc": {
-    "value": "PVC"
+    "value": "聚氯乙烯"
   },
   "shapeTagPattern": {
     "value": "形状 {{tag}}"

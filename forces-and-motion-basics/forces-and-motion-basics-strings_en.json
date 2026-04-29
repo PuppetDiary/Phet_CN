@@ -38,6 +38,9 @@
   "pattern.0valueUnitsNewtons": {
     "value": "{0} newtons"
   },
+  "pattern.0valueUnitsVelocity": {
+    "value": "{0} m/s"
+  },
   "acceleration": {
     "value": "Acceleration"
   },
@@ -45,7 +48,7 @@
     "value": "{0}: {1} m/s<sup>2</sup>"
   },
   "pattern.0name.1valueUnitsVelocity": {
-    "value": "{0} m/s"
+    "value": "{0}: {1} m/s"
   },
   "lots": {
     "value": "Lots"

@@ -26,6 +26,7 @@ class AllLawsScreen extends Screen<KeplersLawsModel, KeplersLawsScreenView> {
     const options = {
       name: KeplersLawsStrings.screen.allLawsStringProperty,
       homeScreenIcon: new AllLawsScreenIcon(),
+      useNaturalNavigationBarButtonWidth: true,
       backgroundColorProperty: SolarSystemCommonColors.backgroundProperty,
       tandem: tandem,
       createKeyboardHelpNode: () => new KeplersLawsKeyboardHelpContent( true )

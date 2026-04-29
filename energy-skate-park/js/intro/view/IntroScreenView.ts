@@ -98,7 +98,7 @@ export default class IntroScreenView extends EnergySkateParkTrackSetScreenView {
         // Step 1: Welcome — full-screen overlay (no target highlight)
         target: null,
         title: '欢迎来到能量滑板公园！',
-        content: '这里你可以研究能量转换的规律。\n把滑板拖到轨道高处放开，观察动能、\n势能、热能之间的转换！',
+        content: '这里你可以研究能量转换的规律。\n把滑板拖到轨道高处再放开，\n观察动能、势能、热能\n之间如何相互转换！',
         position: 'center'
       },
       {

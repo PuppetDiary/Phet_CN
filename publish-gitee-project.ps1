@@ -17,6 +17,11 @@ function Write-Info {
     Write-Host "[gitee] $Message"
 }
 
+function Write-Warn {
+    param([string]$Message)
+    Write-Warning "[gitee] $Message"
+}
+
 function Get-HttpErrorBody {
     param($ErrorRecord)
 
@@ -65,12 +70,19 @@ function Invoke-GiteeRest {
 
         [hashtable]$Body,
 
-        [switch]$AllowNotFound
+        [switch]$AllowNotFound,
+        [switch]$PatchAsForm
     )
 
     try {
         if ($Method -eq 'GET') {
             return Invoke-RestMethod -Method Get -Uri $Uri -UseBasicParsing
+        }
+
+        if ($Method -eq 'PATCH' -and $PatchAsForm) {
+            $formBody = if ($Body) { ConvertTo-FormBody -Body $Body } else { '' }
+            $utf8FormBody = [System.Text.Encoding]::UTF8.GetBytes($formBody)
+            return Invoke-RestMethod -Method Patch -Uri $Uri -Body $utf8FormBody -ContentType 'application/x-www-form-urlencoded; charset=utf-8' -UseBasicParsing
         }
 
         if ($Method -eq 'PATCH') {
@@ -170,6 +182,9 @@ function Get-RelativePath {
 
     $base = (Resolve-Path $BasePath).Path.TrimEnd('\') + '\'
     $target = (Resolve-Path $TargetPath).Path
+    if (Test-Path $target -PathType Container) {
+        $target = $target.TrimEnd('\') + '\'
+    }
     $baseUri = New-Object System.Uri($base)
     $targetUri = New-Object System.Uri($target)
     return [System.Uri]::UnescapeDataString($baseUri.MakeRelativeUri($targetUri).ToString()) -replace '/', '\'
@@ -249,16 +264,15 @@ function Update-GiteeRepo {
 
     $uri = 'https://gitee.com/api/v5/repos/' +
         [System.Uri]::EscapeDataString($RepoOwner) + '/' +
-        [System.Uri]::EscapeDataString($RepoName)
+        [System.Uri]::EscapeDataString($RepoName) +
+        '?access_token=' + [System.Uri]::EscapeDataString($AccessToken)
 
     $body = @{
-        access_token = $AccessToken
-        name = $RepoName
         description = $Description
-        private = if ($MakePrivate) { 'true' } else { 'false' }
+        private = if ($MakePrivate) { '1' } else { '0' }
     }
 
-    return Invoke-GiteeRest -Method PATCH -Uri $uri -Body $body
+    return Invoke-GiteeRest -Method PATCH -Uri $uri -Body $body -PatchAsForm
 }
 
 function Ensure-GiteeRepoSettings {
@@ -270,17 +284,23 @@ function Ensure-GiteeRepoSettings {
         [switch]$MakePrivate
     )
 
-    for ($attempt = 1; $attempt -le 10; $attempt++) {
+    for ($attempt = 1; $attempt -le 20; $attempt++) {
         try {
             return Update-GiteeRepo -RepoOwner $RepoOwner -RepoName $RepoName -AccessToken $AccessToken -Description $Description -MakePrivate:$MakePrivate
         }
         catch {
-            if ($attempt -eq 10) {
+            $message = [string]$_.Exception.Message
+            $isTransient = ($message -match '404') -or
+                ($message -match '(?i)not\s*found') -or
+                ($message -match '初始化') -or
+                ($message -match '(?i)initializ')
+
+            if (-not $isTransient -or $attempt -eq 20) {
                 throw
             }
 
             Write-Info '等待 Gitee 完成仓库初始化后再更新设置'
-            Start-Sleep -Seconds 2
+            Start-Sleep -Seconds 3
         }
     }
 }
@@ -298,8 +318,18 @@ function Get-ProjectFilesFromGit {
     }
 
     $repoRoot = ([string]($gitRootOutput | Select-Object -First 1)).Trim()
-    $projectSpec = Get-RelativePath -BasePath $repoRoot -TargetPath $projectFullPath
-    $projectSpec = $projectSpec.Replace('\', '/')
+    $projectSpec = if ([string]::Equals($repoRoot.TrimEnd('\'), $projectFullPath.TrimEnd('\'), [System.StringComparison]::OrdinalIgnoreCase)) {
+        '.'
+    }
+    else {
+        $relativeProjectPath = Get-RelativePath -BasePath $repoRoot -TargetPath $projectFullPath
+        if ([string]::IsNullOrWhiteSpace($relativeProjectPath)) {
+            '.'
+        }
+        else {
+            $relativeProjectPath.Replace('\', '/')
+        }
+    }
 
     $gitFiles = & git -C $repoRoot ls-files --cached --modified --others --exclude-standard --full-name -- $projectSpec
     if ($LASTEXITCODE -ne 0) {
@@ -312,7 +342,12 @@ function Get-ProjectFilesFromGit {
             continue
         }
 
-        $relativePath = $gitFile.Substring($projectSpec.Length).TrimStart('/').Replace('/', '\')
+        $relativePath = if ($projectSpec -eq '.') {
+            $gitFile.Replace('/', '\')
+        }
+        else {
+            $gitFile.Substring($projectSpec.Length).TrimStart('/').Replace('/', '\')
+        }
         if ([string]::IsNullOrWhiteSpace($relativePath)) {
             continue
         }
@@ -502,7 +537,12 @@ try {
     $status = Invoke-Git -WorkingDirectory $stagePath -Arguments @('status', '--porcelain')
     if (-not $status) {
         Write-Info '没有变更，远程仓库无需更新'
-        $repoInfo = Ensure-GiteeRepoSettings -RepoOwner $Owner -RepoName $repoName -AccessToken $Token -Description $repoDescription -MakePrivate:$Private
+        try {
+            $repoInfo = Ensure-GiteeRepoSettings -RepoOwner $Owner -RepoName $repoName -AccessToken $Token -Description $repoDescription -MakePrivate:$Private
+        }
+        catch {
+            Write-Warn ("仓库已同步，但更新仓库设置失败：{0}" -f $_.Exception.Message)
+        }
         Write-Host $publicRepoUrl
         return
     }
@@ -513,7 +553,12 @@ try {
     Write-Info "推送到 $Owner/$repoName 的 $branch 分支"
     Invoke-Git -WorkingDirectory $stagePath -Arguments @('push', '-u', 'origin', $branch) | Out-Null
 
-    $repoInfo = Ensure-GiteeRepoSettings -RepoOwner $Owner -RepoName $repoName -AccessToken $Token -Description $repoDescription -MakePrivate:$Private
+    try {
+        $repoInfo = Ensure-GiteeRepoSettings -RepoOwner $Owner -RepoName $repoName -AccessToken $Token -Description $repoDescription -MakePrivate:$Private
+    }
+    catch {
+        Write-Warn ("代码已推送，但更新仓库设置失败：{0}" -f $_.Exception.Message)
+    }
     Write-Host $publicRepoUrl
 }
 finally {

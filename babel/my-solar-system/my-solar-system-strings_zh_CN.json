@@ -297,13 +297,13 @@
     ]
   },
   "my-solar-system.title": {
-    "value": "My Solar System_我的太阳系",
+    "value": "我的太阳系",
     "history": [
       {
         "userId": 0,
         "timestamp": 1773333553822,
         "oldValue": "",
-        "newValue": "My Solar System_我的太阳系"
+        "newValue": "我的太阳系"
       }
     ]
   },

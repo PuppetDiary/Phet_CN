@@ -26,6 +26,7 @@ class SecondLawScreen extends Screen<KeplersLawsModel, KeplersLawsScreenView> {
     const options = {
       name: KeplersLawsStrings.screen.secondLawStringProperty,
       homeScreenIcon: new SecondLawScreenIcon(),
+      useNaturalNavigationBarButtonWidth: true,
       backgroundColorProperty: SolarSystemCommonColors.backgroundProperty,
       tandem: tandem,
       createKeyboardHelpNode: () => new KeplersLawsKeyboardHelpContent( false )

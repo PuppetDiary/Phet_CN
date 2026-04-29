@@ -28,6 +28,7 @@ type StringsType = {
   'pattern': {
     '0massUnitsKilogramsStringProperty': LocalizedStringProperty;
     '0valueUnitsNewtonsStringProperty': LocalizedStringProperty;
+    '0valueUnitsVelocityStringProperty': LocalizedStringProperty;
     '0name': {
       '1valueUnitsAccelerationStringProperty': LocalizedStringProperty;
       '1valueUnitsVelocityStringProperty': LocalizedStringProperty;

@@ -17,7 +17,7 @@ import forcesAndMotionBasics from '../../forcesAndMotionBasics.js';
 import ForcesAndMotionBasicsFluent from '../../ForcesAndMotionBasicsFluent.js';
 import MotionConstants from '../MotionConstants.js';
 
-const pattern0Name1ValueUnitsVelocityStringProperty = ForcesAndMotionBasicsFluent.pattern[ '0name' ][ '1valueUnitsVelocityStringProperty' ];
+const pattern0ValueUnitsVelocityStringProperty = ForcesAndMotionBasicsFluent.pattern[ '0valueUnitsVelocityStringProperty' ];
 const speedStringProperty = ForcesAndMotionBasicsFluent.speedStringProperty;
 
 type SelfOptions = {
@@ -44,7 +44,7 @@ export default class SpeedometerNode extends Node {
     const gaugeNode = new ValueGaugeNode( speedProperty, speedStringProperty, new Range( 0, MotionConstants.MAX_SPEED ), {
       radius: gaugeRadius,
       numberDisplayOptions: {
-        valuePattern: pattern0Name1ValueUnitsVelocityStringProperty,
+        valuePattern: pattern0ValueUnitsVelocityStringProperty,
         decimalPlaces: 1,
         textOptions: {
           maxWidth: gaugeRadius * 1.3

@@ -11,9 +11,10 @@ appliedForce:                          Applied Force
 rightForce:                            Right Force
 pattern.0massUnitsKilograms:           '{0} kg'
 pattern.0valueUnitsNewtons:            '{0} newtons'
+pattern.0valueUnitsVelocity:           '{0} m/s'
 acceleration:                          Acceleration
 pattern.0name.1valueUnitsAcceleration: '{0}: {1} m/s<sup>2</sup>'
-pattern.0name.1valueUnitsVelocity:     '{0} m/s'
+pattern.0name.1valueUnitsVelocity:     '{0}: {1} m/s'
 lots:                                  Lots
 forces:                                Forces
 netForce:                              Net Force

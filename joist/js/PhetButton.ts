@@ -62,12 +62,13 @@ class PhetButton extends JoistButton {
     // The logo images are loaded from the brand which is selected via query parameter (during unbuilt mode)
     // or a grunt option (during the build), please see initialize-globals.js window.phet.chipper.brand for more
     // details
-    const logoOnBlackBackground = Brand.logoOnBlackBackground;
-    const logoOnWhiteBackground = Brand.logoOnWhiteBackground;
+    const logoOnBlackBackground = sim.navigationBarBrand.logoOnBlackBackground || Brand.logoOnBlackBackground;
+    const logoOnWhiteBackground = sim.navigationBarBrand.logoOnWhiteBackground || Brand.logoOnWhiteBackground;
+    const logoScale = sim.navigationBarBrand.logoScale || Brand.navigationBarLogoScale || PHET_LOGO_SCALE;
 
     // PhET logo
     const logoImage = new Image( logoOnBlackBackground, {
-      scale: PHET_LOGO_SCALE / logoOnBlackBackground.height * PHET_LOGO_HEIGHT * 0.85,
+      scale: logoScale / logoOnBlackBackground.height * PHET_LOGO_HEIGHT * 0.85,
       pickable: false
     } );
 

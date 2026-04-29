@@ -28,6 +28,7 @@ class ThirdLawScreen extends Screen<KeplersLawsModel, KeplersLawsScreenView> {
     const options = {
       name: KeplersLawsStrings.screen.thirdLawStringProperty,
       homeScreenIcon: new ThirdLawScreenIcon(),
+      useNaturalNavigationBarButtonWidth: true,
       backgroundColorProperty: SolarSystemCommonColors.backgroundProperty,
       tandem: tandem,
       createKeyboardHelpNode: () => new KeplersLawsKeyboardHelpContent( true )

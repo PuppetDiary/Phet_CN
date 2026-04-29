@@ -31,6 +31,7 @@ export default class IntroScreen extends Screen<IntroModel, IntroScreenView> {
       createKeyboardHelpNode: () => new IntroScreenKeyboardHelpNode(),
       homeScreenIcon: new IntroScreenIcon( { size: Screen.MINIMUM_HOME_SCREEN_ICON_SIZE } ),
       navigationBarIcon: new IntroScreenIcon( { size: Screen.MINIMUM_NAVBAR_ICON_SIZE } ),
+      useNaturalNavigationBarButtonWidth: true,
       screenButtonsHelpText: NumberPairsFluent.a11y.screenButtonsHelpText.intro.createProperty( {
         min: NumberPairsConstants.TEN_TOTAL_RANGE.min,
         max: NumberPairsConstants.TEN_TOTAL_RANGE.max

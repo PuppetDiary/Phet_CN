@@ -31,6 +31,7 @@ export default class TenScreen extends Screen<TenModel, TenScreenView> {
       createKeyboardHelpNode: () => new TenScreenKeyboardHelpNode(),
       homeScreenIcon: new TenScreenIcon( { size: Screen.MINIMUM_HOME_SCREEN_ICON_SIZE } ),
       navigationBarIcon: new TenScreenIcon( { size: Screen.MINIMUM_NAVBAR_ICON_SIZE } ),
+      useNaturalNavigationBarButtonWidth: true,
       screenButtonsHelpText: NumberPairsFluent.a11y.screenButtonsHelpText.ten.createProperty( {
         min: NumberPairsConstants.TEN_TOTAL_RANGE.min,
         max: NumberPairsConstants.TEN_TOTAL_RANGE.max

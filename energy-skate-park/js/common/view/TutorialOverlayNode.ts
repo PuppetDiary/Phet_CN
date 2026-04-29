@@ -81,7 +81,8 @@ class TutorialOverlayNode extends Node {
     private layoutBounds: Bounds2;
 
     private readonly highlightPadding: number = 10;
-    private readonly contentBoxWidth: number = 340;
+    // Narrower tutorial card improves Chinese line wrapping on the welcome step.
+    private readonly contentBoxWidth: number = 300;
 
     public constructor(providedOptions?: TutorialOverlayNodeOptions) {
 
