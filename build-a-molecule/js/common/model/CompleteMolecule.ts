@@ -87,6 +87,73 @@ const TRANSLATABLE_MOLECULE_NAMES: Record<string, string> = {
   water: BuildAMoleculeStrings.water
 };
 
+// Targeted Chinese translations used for names that are not in BuildAMoleculeStrings.
+// The playground screen can show thousands of molecule names from data files, so we provide
+// high-value exact matches plus rule-based replacements as a fallback.
+const CHINESE_MOLECULE_NAME_OVERRIDES: Record<string, string> = {
+  bromomethane: '溴甲烷',
+  ethane: '乙烷',
+  oxidoammonium: '氧化铵',
+  'trimethyl(methylene)phosphorane': '三甲基（亚甲基）膦烷',
+  'nitrosyl hydride': '亚硝酰氢',
+  'boryl borane': '硼基硼烷',
+  bromohydrazine: '溴化肼',
+  thioxoboron: '硫化硼',
+  thioxosilicon: '硫化硅',
+  'hydrogen chloride': '氯化氢',
+  // '1,4-dichlorobut-2-ene': '1,4-二氯丁-2-烯'
+};
+
+// Ordered by specificity (longer tokens first) so replacements stay chemically sensible.
+const CHINESE_MOLECULE_NAME_REPLACEMENTS: Array<[RegExp, string]> = [
+  [ /trimethyl/g, '三甲基' ],
+  [ /dimethyl/g, '二甲基' ],
+  [ /methyl/g, '甲基' ],
+  [ /ethylidene/g, '亚乙基' ],
+  [ /ethyl/g, '乙基' ],
+  [ /propyl/g, '丙基' ],
+  [ /butyl/g, '丁基' ],
+  [ /vinyloxy/g, '乙烯氧基' ],
+  [ /vinyl/g, '乙烯基' ],
+  [ /methylene/g, '亚甲基' ],
+  [ /methanidyl/g, '亚甲基' ],
+  [ /methoxy/g, '甲氧基' ],
+  [ /ethoxy/g, '乙氧基' ],
+  [ /propoxy/g, '丙氧基' ],
+  [ /butoxy/g, '丁氧基' ],
+  [ /ammonium/g, '铵' ],
+  [ /amine/g, '胺' ],
+  [ /amino/g, '氨基' ],
+  [ /imino/g, '亚氨基' ],
+  [ /hydrazino/g, '肼基' ],
+  [ /hydrazine/g, '肼' ],
+  [ /hydroxy/g, '羟基' ],
+  [ /hydride/g, '氢化物' ],
+  [ /nitrosyl/g, '亚硝酰' ],
+  [ /nitroso/g, '亚硝基' ],
+  [ /nitro/g, '硝基' ],
+  [ /oxido/g, '氧化' ],
+  [ /thioxo/g, '硫化' ],
+  [ /peroxy/g, '过氧基' ],
+  [ /isocyanato/g, '异氰酸基' ],
+  [ /isocyano/g, '异氰基' ],
+  [ /cyano/g, '氰基' ],
+  [ /carboxy/g, '羧基' ],
+  [ /ureido/g, '脲基' ],
+  [ /boryl/g, '硼基' ],
+  [ /chloro/g, '氯' ],
+  [ /fluoro/g, '氟' ],
+  [ /bromo/g, '溴' ],
+  [ /iodo/g, '碘' ],
+  [ /methanediol/g, '甲烷二醇' ],
+  [ /methanetriol/g, '甲烷三醇' ],
+  [ /methane/g, '甲烷' ],
+  [ /ethane/g, '乙烷' ],
+  [ /propane/g, '丙烷' ],
+  [ /butane/g, '丁烷' ],
+  [ /phosphorane/g, '膦烷' ]
+];
+
 // Node types used for molecules
 const nodeTypes = [
   Cl2Node, CO2Node, CO2Node, CS2Node, F2Node, H2Node, N2Node, NONode, N2ONode, O2Node, C2H2Node, C2H4Node, C2H5ClNode,
@@ -153,10 +220,18 @@ class CompleteMolecule extends MoleculeStructure {
     if ( translatableCommonName ) {
       return translatableCommonName;
     }
-    else {
-      // if we didn't find it in the strings file, pull it from our English data
-      return this.commonName;
+
+    // For zh_CN, provide a best-effort fallback translation for the large playground molecule list.
+    const locale = phet.chipper.locale || '';
+    if ( locale.toLowerCase() === 'zh_cn' ) {
+      const translatedName = CompleteMolecule.getChineseFallbackDisplayName( this.commonName );
+      if ( translatedName ) {
+        return translatedName;
+      }
     }
+
+    // if we didn't find it in the strings file, pull it from our English data
+    return this.commonName;
   }
 
   /**
@@ -220,6 +295,30 @@ class CompleteMolecule extends MoleculeStructure {
       }
     }
     return characters.join( '' );
+  }
+
+  /**
+   * Best-effort Chinese fallback translation for molecule names that are not in BuildAMoleculeStrings.
+   * Returns null when no meaningful conversion was possible.
+   */
+  private static getChineseFallbackDisplayName( englishName: string ): string | null {
+    const normalizedName = englishName.toLowerCase();
+
+    const exactMatch = CHINESE_MOLECULE_NAME_OVERRIDES[ normalizedName ];
+    if ( exactMatch ) {
+      return exactMatch;
+    }
+
+    let translated = normalizedName;
+    CHINESE_MOLECULE_NAME_REPLACEMENTS.forEach( ( [ pattern, replacement ] ) => {
+      translated = translated.replace( pattern, replacement );
+    } );
+
+    if ( translated === normalizedName ) {
+      return null;
+    }
+
+    return translated;
   }
 
   /*---------------------------------------------------------------------------*

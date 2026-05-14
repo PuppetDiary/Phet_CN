@@ -49,6 +49,9 @@ export default class PeriodDivisionsPanel extends Panel {
       layoutOptions: {
         align: 'center'
       },
+      numberDisplayOptions: {
+        align: 'center'
+      },
       touchAreaXDilation: 15,
       touchAreaYDilation: 2,
       arrowsSoundPlayer: nullSoundPlayer,

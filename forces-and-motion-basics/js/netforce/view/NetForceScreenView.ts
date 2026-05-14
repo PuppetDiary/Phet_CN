@@ -489,6 +489,11 @@ export default class NetForceScreenView extends ScreenView {
     } );
     this.addChild( this.tutorialOverlay );
 
+    // Keep tutorial overlay full-screen when the ScreenView is letterboxed or resized.
+    this.visibleBoundsProperty.link( bounds => {
+      this.tutorialOverlay.setOverlayBounds( bounds );
+    } );
+
     // Show tutorial after a short delay to allow UI to fully render
     setTimeout( () => {
       // Disable feedback manager before showing tutorial

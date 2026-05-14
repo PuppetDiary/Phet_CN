@@ -211,6 +211,28 @@ class TutorialOverlayNode extends Node {
   }
 
   /**
+   * Keep overlay backdrop synchronized with the current visible area.
+   * This makes the guidance layer cover the full screen, including letterboxed margins.
+   */
+  public setOverlayBounds( bounds: Bounds2 ): void {
+    this.layoutBounds = bounds;
+    this.backdrop.setRectBounds( bounds );
+
+    // Keep content constrained to updated bounds when visible.
+    if ( this.visible && this.currentStepIndex >= 0 && this.currentStepIndex < this.steps.length ) {
+      const step = this.steps[ this.currentStepIndex ];
+      const target = typeof step.target === 'function' ? step.target() : step.target;
+
+      if ( target ) {
+        this.positionContentBox( target, step.position || 'bottom' );
+      }
+      else {
+        this.contentBox.center = this.layoutBounds.center;
+      }
+    }
+  }
+
+  /**
    * Show a specific tutorial step
    */
   private showStep( index: number ): void {
