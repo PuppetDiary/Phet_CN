@@ -1,4 +1,4 @@
-// Copyright 2024-2025, University of Colorado Boulder
+// Copyright 2024-2026, University of Colorado Boulder
 
 /**
  * Defines query parameters that are specific to this simulation.
@@ -10,7 +10,6 @@
 
 import logGlobal from '../../../phet-core/js/logGlobal.js';
 import { QueryStringMachine } from '../../../query-string-machine/js/QueryStringMachineModule.js';
-import membraneTransport from '../membraneTransport.js';
 
 const MembraneTransportQueryParameters = QueryStringMachine.getAll( {
 
@@ -30,11 +29,9 @@ const MembraneTransportQueryParameters = QueryStringMachine.getAll( {
   }
 } );
 
-membraneTransport.register( 'MembraneTransportQueryParameters', MembraneTransportQueryParameters );
-
 // Log query parameters
 logGlobal( 'phet.chipper.queryParameters' );
 logGlobal( 'phet.preloads.phetio.queryParameters' );
-logGlobal( 'phet.membraneTransport.MembraneTransportQueryParameters' );
+phet.log && phet.log( `MembraneTransportQueryParameters: ${JSON.stringify( MembraneTransportQueryParameters, null, 2 )}` );
 
 export default MembraneTransportQueryParameters;

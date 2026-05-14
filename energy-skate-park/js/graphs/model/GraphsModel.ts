@@ -31,13 +31,13 @@ export default class GraphsModel extends EnergySkateParkTrackSetModel {
   public readonly totalEnergyDataVisibleProperty: BooleanProperty;
 
   // index pointing to the range plotted on the energy plot, see GraphsConstants.PLOT_RANGES
-  public readonly energyGraphZoomIndexProperty: NumberProperty;
+  public readonly energyPlotScaleIndexProperty: NumberProperty;
 
   // sets the independent variable for the graph display
   public readonly independentVariableProperty: StringUnionProperty<'position' | 'time'>;
 
-  // Whether the energy graph accordion box is expanded
-  public readonly energyGraphExpandedProperty: BooleanProperty;
+  // or not the energy plot is visible
+  public readonly energyPlotVisibleProperty: BooleanProperty;
 
   public constructor( preferencesModel: EnergySkateParkPreferencesModel, tandem: Tandem ) {
 
@@ -48,10 +48,8 @@ export default class GraphsModel extends EnergySkateParkTrackSetModel {
     const trackHeight = GraphsConstants.TRACK_HEIGHT;
     const trackWidth = GraphsConstants.TRACK_WIDTH;
 
-    const graphTandem = tandem.createTandem( 'graph' );
-
     // track set model with no friction
-    super( preferencesModel, tandem, {
+    super( preferencesModel, tandem.createTandem( 'graphsModel' ), {
 
       // the Graphs screen contains a parabola and double well premade track
       trackTypes: [
@@ -106,9 +104,6 @@ export default class GraphsModel extends EnergySkateParkTrackSetModel {
       // premade tracks can be modified
       tracksConfigurable: tracksConfigurable,
 
-      // the Graphs screen uses an energy plot instead of a bar graph
-      showBarGraph: false,
-
       // interval at which we save skater samples
       saveSampleInterval: 0.01,
 
@@ -117,45 +112,34 @@ export default class GraphsModel extends EnergySkateParkTrackSetModel {
       sampleFadeDecay: 0.5,
 
       // to prevent a memory leak if we run for a long time without clearing
-      maxNumberOfSamples: 1000,
-
-      instrumentDataSamples: true,
-      sampleTimePropertyTandem: graphTandem.createTandem( 'sampleTimeProperty' )
+      maxNumberOfSamples: 1000
     } );
 
     this.kineticEnergyDataVisibleProperty = new BooleanProperty( true, {
-      tandem: graphTandem.createTandem( 'kineticEnergyDataVisibleProperty' ),
-      phetioFeatured: true
+      tandem: tandem.createTandem( 'kineticEnergyDataVisibleProperty' )
     } );
     this.potentialEnergyDataVisibleProperty = new BooleanProperty( true, {
-      tandem: graphTandem.createTandem( 'potentialEnergyDataVisibleProperty' ),
-      phetioFeatured: true
+      tandem: tandem.createTandem( 'potentialEnergyDataVisibleProperty' )
     } );
     this.thermalEnergyDataVisibleProperty = new BooleanProperty( true, {
-      tandem: graphTandem.createTandem( 'thermalEnergyDataVisibleProperty' ),
-      phetioFeatured: true
+      tandem: tandem.createTandem( 'thermalEnergyDataVisibleProperty' )
     } );
     this.totalEnergyDataVisibleProperty = new BooleanProperty( true, {
-      tandem: graphTandem.createTandem( 'totalEnergyDataVisibleProperty' ),
-      phetioFeatured: true
+      tandem: tandem.createTandem( 'totalEnergyDataVisibleProperty' )
     } );
 
-    this.energyGraphZoomIndexProperty = new NumberProperty( 11, {
+    this.energyPlotScaleIndexProperty = new NumberProperty( 11, {
       range: new Range( 0, GraphsConstants.PLOT_RANGES.length - 1 ),
-      tandem: graphTandem.createTandem( 'energyGraphZoomIndexProperty' ),
-      phetioFeatured: true
+      tandem: tandem.createTandem( 'energyPlotScaleIndexProperty' )
     } );
 
     this.independentVariableProperty = new StringUnionProperty( 'position', {
       validValues: [ 'position', 'time' ],
-      tandem: graphTandem.createTandem( 'independentVariableProperty' ),
-      phetioDocumentation: 'The independent variable in the energy graph.',
-      phetioFeatured: true
+      tandem: tandem.createTandem( 'independentVariableProperty' )
     } );
 
-    this.energyGraphExpandedProperty = new BooleanProperty( true, {
-      tandem: graphTandem.createTandem( 'energyGraphExpandedProperty' ),
-      phetioFeatured: true
+    this.energyPlotVisibleProperty = new BooleanProperty( true, {
+      tandem: tandem.createTandem( 'energyPlotVisibleProperty' )
     } );
 
     // existing data fades away before removal when the skater direction changes
@@ -179,7 +163,7 @@ export default class GraphsModel extends EnergySkateParkTrackSetModel {
       this.clearEnergyData();
     } );
 
-    this.skater.userControlledProperty.link( userControlled => {
+    this.skater.draggingProperty.link( isDragging => {
       if ( isSettingPhetioStateProperty.value ) { return; }
 
       if ( this.independentVariableProperty.get() === 'position' ) {
@@ -187,14 +171,14 @@ export default class GraphsModel extends EnergySkateParkTrackSetModel {
         // if plotting against position don't save any skater samples while dragging, but if plotting against time
         // it is still useful to see data as potential energy changes
         this.clearEnergyData();
-        this.preventSampleSave = userControlled;
+        this.preventSampleSave = isDragging;
       }
       else {
 
         // if plotting against time, it is still useful to see changing data as potential energy changes, but prevent
         // sample saving while paused and dragging so that we don't add data while paused, but still save data
         // while manually stepping
-        this.preventSampleSave = userControlled && !this.isPlayingProperty.get();
+        this.preventSampleSave = isDragging && this.pausedProperty.get();
       }
     } );
 
@@ -260,14 +244,14 @@ export default class GraphsModel extends EnergySkateParkTrackSetModel {
   public override reset(): void {
     super.reset();
 
-    this.energyGraphExpandedProperty.reset();
+    this.energyPlotVisibleProperty.reset();
 
     this.kineticEnergyDataVisibleProperty.reset();
     this.potentialEnergyDataVisibleProperty.reset();
     this.thermalEnergyDataVisibleProperty.reset();
     this.totalEnergyDataVisibleProperty.reset();
 
-    this.energyGraphZoomIndexProperty.reset();
+    this.energyPlotScaleIndexProperty.reset();
     this.independentVariableProperty.reset();
 
     this.clearEnergyData();
@@ -280,7 +264,7 @@ export default class GraphsModel extends EnergySkateParkTrackSetModel {
     super.step( dt );
 
     // for the "Graphs" screen we want to update energies while dragging so that they are recorded on the graph
-    if ( this.skater.userControlledProperty.get() && this.isPlayingProperty.get() ) {
+    if ( this.skater.draggingProperty.get() && !this.pausedProperty.get() ) {
       const initialStateCopy = new SkaterState( this.skater );
       this.stepModel( dt, initialStateCopy );
     }

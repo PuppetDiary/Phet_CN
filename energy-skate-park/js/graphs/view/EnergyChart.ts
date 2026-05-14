@@ -29,9 +29,8 @@ import Text from '../../../../scenery/js/nodes/Text.js';
 import isSettingPhetioStateProperty from '../../../../tandem/js/isSettingPhetioStateProperty.js';
 import phetioStateSetEmitter from '../../../../tandem/js/phetioStateSetEmitter.js';
 import Tandem from '../../../../tandem/js/Tandem.js';
-import EnergySkateParkColors from '../../common/EnergySkateParkColors.js';
-import EnergySkateParkConstants from '../../common/EnergySkateParkConstants.js';
 import EnergySkateParkDataSample from '../../common/model/EnergySkateParkDataSample.js';
+import EnergySkateParkColors from '../../common/EnergySkateParkColors.js';
 import BoundaryReachedSoundPlayer from '../../common/view/BoundaryReachedSoundPlayer.js';
 import energySkatePark from '../../energySkatePark.js';
 import EnergySkateParkFluent from '../../EnergySkateParkFluent.js';
@@ -46,7 +45,9 @@ const TIME_STEP_X = 2; // in seconds
 const POSITION_MAX_X = 10; // in meters
 const POSITION_STEP_X = 1; // in meters
 
-const POSITION_PLOT_OFFSET = EnergySkateParkConstants.POSITION_PLOT_OFFSET;
+// Origin in the model is at center of screen, but plots align 0 meters at the left edge of the track, 5 meters
+// left of origin
+const POSITION_PLOT_OFFSET = 5;
 
 export default class EnergyChart extends XYCursorChartNode {
   private readonly kineticEnergyDataSeries: DynamicSeries;
@@ -60,11 +61,11 @@ export default class EnergyChart extends XYCursorChartNode {
     const dragStartedEmitter = new Emitter();
     const cursorBoundarySoundPlayer = new BoundaryReachedSoundPlayer();
 
-    // whether the sim was playing when dragging started, if playing on drag start we will resume
+    // whether the sim was paused when dragging started, if not paused on drag start we will resume
     // sim play when dragging ends
-    let wasPlayingOnDragStart = true;
+    let pausedOnDragStart = false;
 
-    const plotRange = GraphsConstants.PLOT_RANGES[ model.energyGraphZoomIndexProperty.get() ];
+    const plotRange = GraphsConstants.PLOT_RANGES[ model.energyPlotScaleIndexProperty.get() ];
 
     const modelViewTransformProperty = new Property( ModelViewTransform2.createRectangleInvertedYMapping(
       new Bounds2( 0, plotRange.min, TIME_MAX_X, plotRange.max ),
@@ -109,10 +110,10 @@ export default class EnergyChart extends XYCursorChartNode {
         includeDragCue: true,
 
         startDrag: () => {
-          wasPlayingOnDragStart = model.isPlayingProperty.get();
+          pausedOnDragStart = model.pausedProperty.get();
 
-          if ( wasPlayingOnDragStart ) {
-            model.isPlayingProperty.set( false );
+          if ( !pausedOnDragStart ) {
+            model.pausedProperty.set( true );
           }
 
           dragStartedEmitter.emit();
@@ -140,8 +141,8 @@ export default class EnergyChart extends XYCursorChartNode {
         },
         endDrag: () => {
 
-          if ( wasPlayingOnDragStart ) {
-            model.isPlayingProperty.set( true );
+          if ( !pausedOnDragStart ) {
+            model.pausedProperty.set( false );
           }
 
           dragEndedEmitter.emit();
@@ -165,17 +166,16 @@ export default class EnergyChart extends XYCursorChartNode {
     this.chartCursor.ariaRole = 'application';
     this.chartCursor.accessibleName = EnergySkateParkFluent.a11y.energyGraph.graphCursor.accessibleNameStringProperty;
     this.chartCursor.accessibleHelpText = EnergySkateParkFluent.a11y.energyGraph.graphCursor.accessibleHelpTextStringProperty;
-    this.chartCursor.accessibleRoleDescription = SceneryPhetFluent.a11y.grabDrag.movableStringProperty;
 
     // Space/Enter toggles pause
     this.chartCursor.addInputListener( new KeyboardListener( {
       keyStringProperties: GraphCursorControlsKeyboardHelpSection.TOGGLE_PAUSE_HOTKEY_DATA.keyStringProperties,
       fire: () => {
-        model.isPlayingProperty.toggle();
+        model.pausedProperty.toggle();
         this.chartCursor.addAccessibleContextResponse(
-          model.isPlayingProperty.value
-          ? SceneryPhetFluent.a11y.playPauseButton.playingAccessibleContextResponseStringProperty
-          : SceneryPhetFluent.a11y.playPauseButton.pausedAccessibleContextResponseStringProperty
+          model.pausedProperty.value
+            ? SceneryPhetFluent.a11y.playPauseButton.pausedAccessibleContextResponseStringProperty
+            : SceneryPhetFluent.a11y.playPauseButton.playingAccessibleContextResponseStringProperty
         );
       }
     } ) );
@@ -187,10 +187,10 @@ export default class EnergyChart extends XYCursorChartNode {
       keyboardDragDirection: 'leftRight',
       transform: modelViewTransformProperty,
       start: () => {
-        wasPlayingOnDragStart = model.isPlayingProperty.get();
+        pausedOnDragStart = model.pausedProperty.get();
 
-        if ( wasPlayingOnDragStart ) {
-          model.isPlayingProperty.set( false );
+        if ( !pausedOnDragStart ) {
+          model.pausedProperty.set( true );
         }
 
         dragStartedEmitter.emit();
@@ -213,8 +213,8 @@ export default class EnergyChart extends XYCursorChartNode {
         model.skater.updatedEmitter.emit();
       },
       end: () => {
-        if ( wasPlayingOnDragStart ) {
-          model.isPlayingProperty.set( true );
+        if ( !pausedOnDragStart ) {
+          model.pausedProperty.set( false );
         }
 
         dragEndedEmitter.emit();
@@ -273,7 +273,7 @@ export default class EnergyChart extends XYCursorChartNode {
 
     // update the transform for the plot so that recorded data is visible
     const updateModelViewTransformProperty = () => {
-      const newRange = GraphsConstants.PLOT_RANGES[ model.energyGraphZoomIndexProperty.get() ];
+      const newRange = GraphsConstants.PLOT_RANGES[ model.energyPlotScaleIndexProperty.get() ];
       const newMaxY = newRange.max;
       const newMinY = newRange.min;
 
@@ -325,7 +325,7 @@ export default class EnergyChart extends XYCursorChartNode {
     } );
 
     // calculate new range of plot when zooming in or out
-    model.energyGraphZoomIndexProperty.link( scaleIndex => {
+    model.energyPlotScaleIndexProperty.link( scaleIndex => {
       const newRange = GraphsConstants.PLOT_RANGES[ scaleIndex ];
       const newMaxY = newRange.max;
       const newMinY = newRange.min;
@@ -343,7 +343,7 @@ export default class EnergyChart extends XYCursorChartNode {
     // update range, domain, and plot style of plot when the independent variable changes - cursor is invisible for
     // plots against position
     model.independentVariableProperty.link( independentVariable => {
-      const newRange = GraphsConstants.PLOT_RANGES[ model.energyGraphZoomIndexProperty.get() ];
+      const newRange = GraphsConstants.PLOT_RANGES[ model.energyPlotScaleIndexProperty.get() ];
       const newMaxY = newRange.max;
       const newMinY = newRange.min;
       const horizontalLineSpacing = ( newMaxY - newMinY ) / 4;

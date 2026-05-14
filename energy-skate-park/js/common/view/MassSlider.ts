@@ -11,7 +11,6 @@ import NumberProperty from '../../../../axon/js/NumberProperty.js';
 import Range from '../../../../dot/js/Range.js';
 import Utils from '../../../../dot/js/Utils.js';
 import Tandem from '../../../../tandem/js/Tandem.js';
-import { toFixed } from '../../../../dot/js/util/toFixed.js';
 import energySkatePark from '../../energySkatePark.js';
 import EnergySkateParkFluent from '../../EnergySkateParkFluent.js';
 import PhysicalSlider from './PhysicalSlider.js';
@@ -24,10 +23,7 @@ export default class MassSlider extends PhysicalSlider {
       minLabelProperty: EnergySkateParkFluent.physicalControls.smallStringProperty,
       maxLabelProperty: EnergySkateParkFluent.physicalControls.largeStringProperty,
       sliderOptions: {
-        constrainValue: value => Utils.roundToInterval( value, 5 ),
-        createAriaValueText: ( value: number ) => EnergySkateParkFluent.a11y.massControl.accessibleValuePattern.format( {
-          value: toFixed( value, 0 )
-        } )
+        constrainValue: value => Utils.roundToInterval( value, 5 )
       }
     } );
 

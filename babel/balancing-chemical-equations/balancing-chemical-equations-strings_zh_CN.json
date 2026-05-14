@@ -283,7 +283,7 @@
     ]
   },
   "screen.introduction": {
-    "value": "介绍",
+    "value": "入门",
     "history": [
       {
         "userId": 293040,
@@ -374,7 +374,7 @@
     ]
   },
   "screen.intro": {
-    "value": "介绍"
+    "value": "入门"
   },
   "screen.equations": {
     "value": "方程式"

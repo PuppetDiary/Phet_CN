@@ -180,7 +180,7 @@
     },
     "0name": {
       "1valueUnitsAcceleration": {
-        "value": "{0}: {1} m/s<sup>2</sup>",
+        "value": "{0}: {1} m/s²",
         "history": []
       },
       "1valueUnitsVelocity": {
@@ -193,7 +193,7 @@
       "history": []
     },
     "0valueUnitsNewtons": {
-      "value": "{0} newtons",
+      "value": "{0} 牛顿",
       "history": []
     }
   },
@@ -1237,6 +1237,18 @@
       }
     ]
   },
+  "pattern.0valueUnitsVelocity": {
+    "value": "{0} m/s",
+    "history": [
+      {
+        "userId": 293040,
+        "timestamp": 1458182268971,
+        "oldValue": "",
+        "newValue": "{0} m/s",
+        "explanation": null
+      }
+    ]
+  },
   "pattern.0name.1valueUnitsAcceleration": {
     "value": "{0}: {1} 加速度",
     "history": [
@@ -1250,13 +1262,13 @@
     ]
   },
   "pattern.0name.1valueUnitsVelocity": {
-    "value": "{0}: {1} 速度",
+    "value": "{0}: {1} m/s",
     "history": [
       {
         "userId": 293040,
         "timestamp": 1458182268971,
         "oldValue": "",
-        "newValue": "{0}: {1} 速度",
+        "newValue": "{0}: {1} m/s",
         "explanation": null
       }
     ]

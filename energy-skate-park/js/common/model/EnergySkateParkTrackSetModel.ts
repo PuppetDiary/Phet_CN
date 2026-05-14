@@ -5,9 +5,8 @@
  * @author Jesse Greenberg (PhET Interactive Simulations)
  */
 
-import Emitter from '../../../../axon/js/Emitter.js';
 import Multilink from '../../../../axon/js/Multilink.js';
-import StringUnionProperty from '../../../../axon/js/StringUnionProperty.js';
+import NumberProperty from '../../../../axon/js/NumberProperty.js';
 import Bounds2 from '../../../../dot/js/Bounds2.js';
 import optionize, { combineOptions } from '../../../../phet-core/js/optionize.js';
 import isSettingPhetioStateProperty from '../../../../tandem/js/isSettingPhetioStateProperty.js';
@@ -32,7 +31,7 @@ type InitializePremadeTracksOptions = {
 };
 
 type SelfOptions = {
-  trackTypes?: ReadonlyArray<TrackType>;
+  trackTypes?: TrackType[];
   initializePremadeTracksOptions?: InitializePremadeTracksOptions | null;
 };
 
@@ -40,12 +39,9 @@ export type EnergySkateParkTrackSetModelOptions = SelfOptions & EnergySkateParkS
 
 export default class EnergySkateParkTrackSetModel extends EnergySkateParkSaveSampleModel {
 
-  // Indicates the currently selected scene by track type name (e.g. 'PARABOLA', 'DOUBLE_WELL').
-  public readonly sceneProperty: StringUnionProperty<TrackType>;
-  public readonly trackTypes: ReadonlyArray<TrackType>;
-
-  // Emits when a scene change causes the skater to be returned to the ground (only when skater was actually displaced).
-  public readonly skaterReturnedToGroundBySceneChangeEmitter: Emitter;
+  // Indicates the currently selected scene. There can be any number of scenes, do we need to pass this in as a param
+  public readonly sceneProperty: NumberProperty;
+  public readonly trackTypes: TrackType[];
 
   public constructor( preferencesModel: EnergySkateParkPreferencesModel, tandem: Tandem, providedOptions: EnergySkateParkTrackSetModelOptions ) {
     const options = optionize<EnergySkateParkSaveSampleModelOptions, SelfOptions, EnergySkateParkSaveSampleModelOptions>()( {
@@ -63,19 +59,15 @@ export default class EnergySkateParkTrackSetModel extends EnergySkateParkSaveSam
 
     super( preferencesModel, tandem, options );
 
-    this.trackTypes = options.trackTypes;
-
-    this.sceneProperty = new StringUnionProperty( options.trackTypes[ 0 ], {
+    this.sceneProperty = new NumberProperty( 0, {
       tandem: tandem.createTandem( 'sceneProperty' ),
-      validValues: [ ...options.trackTypes ],
-      phetioFeatured: true,
-      phetioDocumentation: 'The currently selected premade track scene'
+      validValues: [ 0, 1, 2, 3 ]
     } );
-
-    this.skaterReturnedToGroundBySceneChangeEmitter = new Emitter();
 
     // When the scene changes, also change the tracks.
     this.sceneProperty.link( this.updateActiveTrack.bind( this ) );
+
+    this.trackTypes = options.trackTypes;
 
     // initialize and add the desired tracks for this EnergySkateParkTrackSetModel
     this.initializePremadeTracks( tandem, options.initializePremadeTracksOptions );
@@ -85,14 +77,9 @@ export default class EnergySkateParkTrackSetModel extends EnergySkateParkSaveSam
    * When the scene changes or tracks are added to the track set, update which track is visible and physically
    * interactive.
    *
-   * @param trackType - the TrackType identifying the scene
+   * @param sceneIndex - index identifying the scene
    */
-  private updateActiveTrack( trackType: TrackType ): void {
-
-    // Check if the skater is displaced from starting position before resetting, so we can announce the return to ground.
-    const skaterWasDisplaced = this.skater.hasMovedProperty.value || this.skater.trackProperty.value !== null;
-
-    const sceneIndex = this.trackTypes.indexOf( trackType );
+  private updateActiveTrack( sceneIndex: number ): void {
     for ( let i = 0; i < this.tracks.length; i++ ) {
       const track = this.tracks.get( i );
       track.physicalProperty.value = ( i === sceneIndex );
@@ -123,10 +110,6 @@ export default class EnergySkateParkTrackSetModel extends EnergySkateParkSaveSam
 
     // The skater should detach from track when the scene changes.  Code elsewhere also resets the position of the skater.
     this.skater.trackProperty.value = null;
-
-    if ( skaterWasDisplaced ) {
-      this.skaterReturnedToGroundBySceneChangeEmitter.emit();
-    }
   }
 
   /**
@@ -141,42 +124,39 @@ export default class EnergySkateParkTrackSetModel extends EnergySkateParkSaveSam
       if ( trackType === 'PARABOLA' ) {
         const parabolaTrackTandem = tandem.createTandem( 'tracks' ).createTandem( 'parabolaTrack' );
         const parabolaControlPoints = PremadeTracks.createParabolaControlPoints( this, parabolaTrackTandem, options.parabolaControlPointOptions ?? {} );
-        const parabolaTrack = EnergySkateParkTrackSetModel.createPremadeTrack( this, parabolaControlPoints, combineOptions<TrackOptions>( {},
-          options.parabolaTrackOptions, {
-            tandem: parabolaTrackTandem
-          } ) );
+        const parabolaTrack = EnergySkateParkTrackSetModel.createPremadeTrack( this, parabolaControlPoints, combineOptions<TrackOptions>( {
+          tandem: parabolaTrackTandem
+        }, options.parabolaTrackOptions ) );
 
         tracks.push( parabolaTrack );
       }
       else if ( trackType === 'RAMP' ) {
-        const rampTrackTandem = tandem.createTandem( 'tracks' ).createTandem( 'rampTrack' );
-        const rampControlPoints = PremadeTracks.createSlopeControlPoints( this, rampTrackTandem, options.slopeControlPointOptions ?? {} );
-        const rampTrack = EnergySkateParkTrackSetModel.createPremadeTrack( this, rampControlPoints, combineOptions<TrackOptions>( {
+        const slopeTrackTandem = tandem.createTandem( 'tracks' ).createTandem( 'slopeTrack' );
+        const slopeControlPoints = PremadeTracks.createSlopeControlPoints( this, slopeTrackTandem, options.slopeControlPointOptions ?? {} );
+        const slopeTrack = EnergySkateParkTrackSetModel.createPremadeTrack( this, slopeControlPoints, combineOptions<TrackOptions>( {
 
           // Flag to indicate whether the skater transitions from the right edge of this track directly to the ground
           // see #164
-          slopeToGround: true
-        }, options.slopeTrackOptions, {
-          tandem: rampTrackTandem
-        } ) );
-        tracks.push( rampTrack );
+          slopeToGround: true,
+          tandem: slopeTrackTandem
+        }, options.slopeTrackOptions ) );
+        tracks.push( slopeTrack );
       }
       else if ( trackType === 'DOUBLE_WELL' ) {
         const doubleWellTandem = tandem.createTandem( 'tracks' ).createTandem( 'doubleWellTrack' );
         const doubleWellControlPoints = PremadeTracks.createDoubleWellControlPoints( this, doubleWellTandem, options.doubleWellControlPointOptions ?? {} );
-        const doubleWellTrack = EnergySkateParkTrackSetModel.createPremadeTrack( this, doubleWellControlPoints, combineOptions<TrackOptions>( {}, options.doubleWellTrackOptions, {
+        const doubleWellTrack = EnergySkateParkTrackSetModel.createPremadeTrack( this, doubleWellControlPoints, combineOptions<TrackOptions>( {
           tandem: doubleWellTandem
-        } ) );
+        }, options.doubleWellTrackOptions ) );
         tracks.push( doubleWellTrack );
       }
       else if ( trackType === 'LOOP' ) {
         const loopTrackTandem = tandem.createTandem( 'tracks' ).createTandem( 'loopTrack' );
         const loopControlPoints = PremadeTracks.createLoopControlPoints( this, loopTrackTandem, options.loopControlPointOptions ?? {} );
         const loopTrack = EnergySkateParkTrackSetModel.createPremadeTrack( this, loopControlPoints, combineOptions<TrackOptions>( {
-          draggable: this.tracksDraggable
-        }, options.loopTrackOptions, {
+          draggable: this.tracksDraggable,
           tandem: loopTrackTandem
-        } ) );
+        }, options.loopTrackOptions ) );
         tracks.push( loopTrack );
       }
     } );
@@ -214,7 +194,7 @@ export default class EnergySkateParkTrackSetModel extends EnergySkateParkSaveSam
         this.clearEnergyData();
       }
     };
-    Multilink.multilink( [ this.pathVisibleProperty, this.skater.userControlledProperty, this.sceneProperty ], boundClearSamples );
+    Multilink.multilink( [ this.saveSamplesProperty, this.skater.draggingProperty, this.sceneProperty ], boundClearSamples );
     this.skater.returnedEmitter.addListener( boundClearSamples );
     this.trackChangedEmitter.addListener( boundClearSamples );
   }

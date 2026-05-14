@@ -12,7 +12,6 @@ import PDLScreenIconFactory from '../common/view/PDLScreenIconFactory.js';
 import projectileDataLab from '../projectileDataLab.js';
 import ProjectileDataLabStrings from '../ProjectileDataLabStrings.js';
 import MeasuresModel from './model/MeasuresModel.js';
-import MeasuresKeyboardHelpNode from './view/MeasuresKeyboardHelpNode.js';
 import MeasuresScreenView from './view/MeasuresScreenView.js';
 
 type SelfOptions = EmptySelfOptions;
@@ -25,8 +24,7 @@ export default class MeasuresScreen extends Screen<MeasuresModel, MeasuresScreen
 
     const options = optionize<MeasuresScreenOptions, SelfOptions, ScreenOptions>()( {
       name: ProjectileDataLabStrings.screen.measuresStringProperty,
-      homeScreenIcon: PDLScreenIconFactory.createMeasuresScreenIcon(),
-      createKeyboardHelpNode: () => new MeasuresKeyboardHelpNode()
+      homeScreenIcon: PDLScreenIconFactory.createMeasuresScreenIcon()
     }, providedOptions );
 
     super(

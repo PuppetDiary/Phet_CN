@@ -24,6 +24,7 @@ import WireBox from './WireBox.js';
 
 // constants
 const SLIDER_CLICK_LEVEL = 0.25;
+const WIRE_BOX_BOTTOM_MARGIN = 90;
 
 class OhmsLawScreenView extends ScreenView {
 
@@ -106,8 +107,8 @@ class OhmsLawScreenView extends ScreenView {
     // layout for the screen
     formulaNode.centerY = this.layoutBounds.bottom / 4.75;
 
-    wireBox.centerX = formulaNode.centerX;
-    wireBox.bottom = this.layoutBounds.bottom - 30; // empirically determined
+    wireBox.x = formulaNode.centerX - OhmsLawConstants.WIRE_WIDTH / 2;
+    wireBox.y = this.layoutBounds.bottom - WIRE_BOX_BOTTOM_MARGIN - OhmsLawConstants.WIRE_HEIGHT; // empirically determined
 
     controlPanel.right = this.layoutBounds.width - 50; // empirically determined
     controlPanel.top = this.layoutBounds.top + 20;
@@ -116,7 +117,7 @@ class OhmsLawScreenView extends ScreenView {
     resetAllButton.bottom = this.layoutBounds.bottom - 20;
 
     // 4 is empirically spacing to better align the top of the readout with the top of the radio button heading.
-    unitsRadioButtonContainer.centerY = wireBox.centerY + 4;
+    unitsRadioButtonContainer.centerY = wireBox.y + OhmsLawConstants.WIRE_HEIGHT / 2 + 4;
     unitsRadioButtonContainer.left = controlPanel.left;
   }
 

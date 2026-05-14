@@ -125,10 +125,16 @@ export default class MotionModel {
   public readonly resetAllEmitter = new Emitter();
   public readonly stepEmitter = new Emitter();
 
+  // broadcast when friction transition is detected (static to kinetic)
+  public readonly frictionTransitionDetectedEmitter = new Emitter();
+
   public readonly items: Item[];
 
   public readonly stopwatch: Stopwatch;
   private view!: MotionScreenView;
+
+  // Track previous velocity for friction transition detection
+  private previousVelocity: number = 0;
 
   /**
    * @param screen String that indicates which of the 3 screens this model represents
@@ -589,9 +595,35 @@ export default class MotionModel {
   }
 
   /**
+   * Detect transition from static friction to kinetic friction.
+   * This happens when an object goes from being stationary (velocity ~ 0) to moving.
+   *
+   * @param oldVelocity - velocity before the step
+   * @param newVelocity - velocity after the step
+   */
+  private detectFrictionTransition( oldVelocity: number, newVelocity: number ): void {
+    const velocityThreshold = 1E-12; // Same threshold used in getFrictionForce()
+
+    const wasStatic = Math.abs( oldVelocity ) <= velocityThreshold;
+    const isMoving = Math.abs( newVelocity ) > velocityThreshold;
+    const hasFriction = this.frictionCoefficientProperty.value > 0;
+
+    // Transition from static to kinetic with friction present
+    if ( wasStatic && isMoving && hasFriction ) {
+      this.frictionTransitionDetectedEmitter.emit();
+    }
+
+    // Update previous velocity for next comparison
+    this.previousVelocity = newVelocity;
+  }
+
+  /**
    * Update the physics.
    */
   public step( dt: number ): void {
+
+    // Store current velocity before update for transition detection
+    const currentVelocity = this.velocityProperty.value;
 
     // Computes the new forces and sets them to the corresponding properties
     // The first part of stepInTime is to compute and set the forces.  This is factored out because the forces must
@@ -607,6 +639,9 @@ export default class MotionModel {
     for ( let i = 0; i < this.items.length; i++ ) {
       this.items[ i ].step( dt );
     }
+
+    // Detect friction transition from static to kinetic
+    this.detectFrictionTransition( currentVelocity, this.velocityProperty.value );
 
     // notify that the sim has stepped to calculate forces.  This needs to update even when the sim is paused.
     this.stepEmitter.emit();

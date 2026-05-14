@@ -108,6 +108,7 @@ export default class MicroScreenView extends ScreenView {
       visibleProperty: viewProperties.particleCountsVisibleProperty,
       tandem: tandem.createTandem( 'particleCountsNode' )
     } );
+    particleCountsNode.setScaleMagnitude( 0.88 );
 
     // beaker control panel
     const beakerControlPanel = new BeakerControlPanel(
@@ -195,7 +196,7 @@ export default class MicroScreenView extends ScreenView {
     this.addChild( screenViewRootNode );
 
     // Layout of nodes that don't have a position specified in the model
-    particleCountsNode.centerX = beakerNode.centerX;
+    particleCountsNode.centerX = beakerNode.centerX - 18;
     particleCountsNode.bottom = beakerNode.bottom - 25;
 
     beakerControlPanel.boundsProperty.link( bounds => {

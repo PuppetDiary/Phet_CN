@@ -110,7 +110,7 @@
     ]
   },
   "yourNewBest": {
-    "value": "(你最新最棒的!)",
+    "value": "(你是最棒的！)",
     "history": [
       {
         "userId": 162142,
@@ -239,7 +239,7 @@
     ]
   },
   "label.score.max": {
-    "value": "得分: {0} 总分 {1}",
+    "value": "得分: {0} 总分: {1}",
     "history": [
       {
         "userId": 162142,

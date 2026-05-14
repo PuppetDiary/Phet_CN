@@ -1,4 +1,4 @@
-// Copyright 2025, University of Colorado Boulder
+// Copyright 2025-2026, University of Colorado Boulder
 
 /**
  * Particle (a ligand) is currently attached to the binding site of a LigandGatedChannel.
@@ -9,7 +9,6 @@
 
 import affirm from '../../../../../perennial-alias/js/browser-and-node/affirm.js';
 import IntentionalAny from '../../../../../phet-core/js/types/IntentionalAny.js';
-import membraneTransport from '../../../membraneTransport.js';
 import MembraneTransportModel from '../MembraneTransportModel.js';
 import Particle from '../Particle.js';
 import LigandGatedChannel from '../proteins/LigandGatedChannel.js';
@@ -49,5 +48,3 @@ export default class LigandBoundMode extends BaseParticleMode {
     );
   }
 }
-
-membraneTransport.register( 'LigandBoundMode', LigandBoundMode );

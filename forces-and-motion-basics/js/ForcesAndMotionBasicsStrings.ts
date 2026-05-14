@@ -1,4 +1,4 @@
-// Copyright 2021-2026, University of Colorado Boulder
+// Copyright 2021-2025, University of Colorado Boulder
 
 /* eslint-disable */
 /* @formatter:off */
@@ -28,6 +28,7 @@ type StringsType = {
   'pattern': {
     '0massUnitsKilogramsStringProperty': LocalizedStringProperty;
     '0valueUnitsNewtonsStringProperty': LocalizedStringProperty;
+    '0valueUnitsVelocityStringProperty': LocalizedStringProperty;
     '0name': {
       '1valueUnitsAccelerationStringProperty': LocalizedStringProperty;
       '1valueUnitsVelocityStringProperty': LocalizedStringProperty;
@@ -90,6 +91,32 @@ type StringsType = {
     'preferences': {
       'netForcePullerColorControl': {
         'accessibleHelpTextStringProperty': LocalizedStringProperty;
+      }
+    };
+    'keyboardHelpDialog': {
+      'fromAnywhereInSim': {
+        'startGameDescriptionStringProperty': LocalizedStringProperty;
+        'pauseGameDescriptionStringProperty': LocalizedStringProperty;
+        'returnCartToCenterDescriptionStringProperty': LocalizedStringProperty;
+      };
+      'pullerNavigation': {
+        'selectPullerDescriptionStringProperty': LocalizedStringProperty;
+        'grabPullerDescriptionStringProperty': LocalizedStringProperty;
+        'moveGrabbedPullerDescriptionStringProperty': LocalizedStringProperty;
+        'dropPullerDescriptionStringProperty': LocalizedStringProperty;
+        'returnToToolboxDescriptionStringProperty': LocalizedStringProperty;
+        'cancelMovementStringProperty': LocalizedStringProperty;
+      };
+      'objectNavigation': {
+        'selectObjectDescriptionStringProperty': LocalizedStringProperty;
+        'grabObjectDescriptionStringProperty': LocalizedStringProperty;
+        'moveGrabbedObjectDescriptionStringProperty': LocalizedStringProperty;
+        'dropObjectDescriptionStringProperty': LocalizedStringProperty;
+        'returnToToolboxDescriptionStringProperty': LocalizedStringProperty;
+        'cancelMovementStringProperty': LocalizedStringProperty;
+      };
+      'adjustAppliedForce': {
+        'zeroAppliedForceDescriptionStringProperty': LocalizedStringProperty;
       }
     };
     'netForceScreen': {

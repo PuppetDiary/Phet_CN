@@ -31,13 +31,21 @@ export default class ToolboxPanel extends Panel {
   public readonly stopwatchToolNode: Node;
   public readonly measuringTapeToolNode: Node;
 
-  public constructor( model: EnergySkateParkModel, view: EnergySkateParkScreenView, tandem: Tandem ) {
+  public constructor( model: EnergySkateParkModel, view: EnergySkateParkScreenView, tandem: Tandem, providedOptions?: PanelOptions ) {
+    const options = combineOptions<PanelOptions>( {
+      align: 'center',
+
+      // smaller y margin to save space when used with very tall ControlPanels (like in the intro screen)
+      yMargin: 2,
+
+      xMargin: 25,
+
+      accessibleHeading: EnergySkateParkFluent.a11y.toolboxPanel.accessibleHeadingStringProperty
+    }, EnergySkateParkConstants.PANEL_OPTIONS, providedOptions );
 
     // create the icons
     const measuringTapeIcon = MeasuringTapeNode.createIcon( {
-      crosshairColor: 'black',
-      tandem: tandem.createTandem( 'measuringTapeIcon' ),
-      visiblePropertyOptions: { phetioFeatured: true }
+      crosshairColor: 'black'
     } );
     measuringTapeIcon.setScaleMagnitude( 0.7 );
 
@@ -54,8 +62,7 @@ export default class ToolboxPanel extends Panel {
     } ), {
       resolution: 5,
       nodeOptions: {
-        tandem: tandem.createTandem( 'stopwatchIcon' ),
-        visiblePropertyOptions: { phetioFeatured: true }
+        tandem: tandem.createTandem( 'timerIcon' )
       }
     } );
     stopwatchIcon.setScaleMagnitude( 0.4 );
@@ -77,7 +84,6 @@ export default class ToolboxPanel extends Panel {
 
     // align icons for panel
     const icons = new HBox( {
-      spacing: 30,
       children: [ stopwatchIconWrapper, measuringTapeIconWrapper ],
       align: 'center',
 
@@ -85,20 +91,7 @@ export default class ToolboxPanel extends Panel {
       excludeInvisibleChildrenFromBounds: false
     } );
 
-    super( icons, combineOptions<PanelOptions>( {
-        align: 'center',
-
-        // smaller y margin to save space when used with very tall ControlPanels (like in the intro screen)
-        yMargin: 2,
-
-        xMargin: 25,
-
-        tandem: tandem,
-        visiblePropertyOptions: { phetioFeatured: true },
-        accessibleHeading: EnergySkateParkFluent.a11y.toolboxPanel.accessibleHeadingStringProperty
-      },
-      EnergySkateParkConstants.PANEL_OPTIONS,
-      {} ) );
+    super( icons, options );
 
     // create a forwarding listener for the MeasuringTapeNode DragListener
     measuringTapeIconWrapper.addInputListener( DragListener.createForwardingListener( event => {

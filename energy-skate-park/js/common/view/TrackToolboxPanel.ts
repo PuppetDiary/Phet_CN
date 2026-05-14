@@ -10,9 +10,9 @@
 
 import Vector2 from '../../../../dot/js/Vector2.js';
 import { combineOptions } from '../../../../phet-core/js/optionize.js';
-import InteractiveHighlightingNode from '../../../../scenery/js/accessibility/voicing/nodes/InteractiveHighlightingNode.js';
 import DragListener from '../../../../scenery/js/listeners/DragListener.js';
 import KeyboardListener from '../../../../scenery/js/listeners/KeyboardListener.js';
+import InteractiveHighlightingNode from '../../../../scenery/js/accessibility/voicing/nodes/InteractiveHighlightingNode.js';
 import Panel, { PanelOptions } from '../../../../sun/js/Panel.js';
 import Tandem from '../../../../tandem/js/Tandem.js';
 import energySkatePark from '../../energySkatePark.js';
@@ -24,13 +24,10 @@ import TrackNode from './TrackNode.js';
 
 export default class TrackToolboxPanel extends Panel {
 
-  public constructor( model: EnergySkateParkPlaygroundModel, view: EnergySkateParkPlaygroundScreenView, providedOptions?: PanelOptions ) {
+  public constructor( model: EnergySkateParkPlaygroundModel, view: EnergySkateParkPlaygroundScreenView, tandem: Tandem, providedOptions?: PanelOptions ) {
 
     const options = combineOptions<PanelOptions>( {
-      resize: false, // do not disappear when all tracks are out
-      visiblePropertyOptions: {
-        phetioFeatured: true
-      }
+      resize: false // do not disappear when all tracks are out
     }, EnergySkateParkConstants.PANEL_OPTIONS, providedOptions );
 
     const iconTrack = model.createDraggableTrack( {
@@ -41,7 +38,7 @@ export default class TrackToolboxPanel extends Panel {
     } );
 
     // Wrap the TrackNode in a Node so we can add button-like PDOM attributes without affecting TrackNode itself
-    const trackIconNode = new TrackNode( iconTrack, view.modelViewTransform, model.availableModelBoundsProperty, Tandem.OPT_OUT, {
+    const trackIconNode = new TrackNode( iconTrack, view.modelViewTransform, model.availableModelBoundsProperty, tandem.createTandem( 'iconNode' ), {
       trackToolboxIcon: true
     } );
 

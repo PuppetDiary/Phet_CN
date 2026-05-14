@@ -11,7 +11,6 @@ import Tandem from '../../../tandem/js/Tandem.js';
 import buildAnAtom from '../buildAnAtom.js';
 import BuildAnAtomFluent from '../BuildAnAtomFluent.js';
 import BAAModel from '../common/model/BAAModel.js';
-import BAAKeyboardHelpContent from '../common/view/BAAKeyboardHelpContent.js';
 import AtomScreenIcon from './view/AtomScreenIcon.js';
 import AtomScreenView from './view/AtomScreenView.js';
 
@@ -26,9 +25,7 @@ class AtomScreen extends Screen<BAAModel, AtomScreenView> {
         screenButtonsHelpText: BuildAnAtomFluent.a11y.atomScreen.screenIcon.accessibleHelpTextStringProperty,
 
         homeScreenIcon: new AtomScreenIcon(),
-        tandem: tandem,
-
-        createKeyboardHelpNode: () => new BAAKeyboardHelpContent()
+        tandem: tandem
 
       }
     );

@@ -35,7 +35,7 @@
     ]
   },
   "key.capsLock": {
-    "value": "锁定大写",
+    "value": "Caps Lock",
     "history": [
       {
         "userId": 143772,
@@ -53,7 +53,7 @@
     ]
   },
   "key.end": {
-    "value": "结束",
+    "value": "End",
     "history": [
       {
         "userId": 685789,
@@ -72,7 +72,7 @@
     ]
   },
   "key.enter": {
-    "value": "输入",
+    "value": "Enter",
     "history": [
       {
         "userId": 293040,
@@ -110,7 +110,7 @@
     ]
   },
   "key.esc": {
-    "value": "退出",
+    "value": "Esc",
     "history": [
       {
         "userId": 685789,
@@ -176,7 +176,7 @@
     ]
   },
   "key.home": {
-    "value": "主页",
+    "value": "Home",
     "history": [
       {
         "userId": 685789,
@@ -243,7 +243,7 @@
     ]
   },
   "key.pageDown": {
-    "value": "下翻",
+    "value": "Pg Dn",
     "history": [
       {
         "userId": 293040,
@@ -283,7 +283,7 @@
     ]
   },
   "key.pageUp": {
-    "value": "上翻",
+    "value": "Pg Up",
     "history": [
       {
         "userId": 293040,
@@ -368,7 +368,7 @@
     ]
   },
   "key.space": {
-    "value": "空格",
+    "value": "Space",
     "history": [
       {
         "userId": 293040,
@@ -505,6 +505,17 @@
         "timestamp": 1665427309118,
         "oldValue": "",
         "newValue": "3.选择新的{{thingSingular}}"
+      }
+    ]
+  },
+  "keyboardHelpDialog.comboBox.headingString": {
+    "value": "更改选项",
+    "history": [
+      {
+        "userId": 0,
+        "timestamp": 1775559000000,
+        "oldValue": "",
+        "newValue": "更改选项"
       }
     ]
   },
@@ -835,7 +846,7 @@
     ]
   },
   "key.backspace": {
-    "value": "返回",
+    "value": "Backspace",
     "history": [
       {
         "userId": 293040,
@@ -846,7 +857,7 @@
     ]
   },
   "key.c": {
-    "value": "C\nC",
+    "value": "C",
     "history": [
       {
         "userId": 293040,
@@ -868,7 +879,7 @@
     ]
   },
   "key.delete": {
-    "value": "删除",
+    "value": "Delete",
     "history": [
       {
         "userId": 293040,
@@ -890,7 +901,7 @@
     ]
   },
   "key.option": {
-    "value": "选择",
+    "value": "Option",
     "history": [
       {
         "userId": 293040,

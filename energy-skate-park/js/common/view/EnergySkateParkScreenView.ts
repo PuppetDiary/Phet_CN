@@ -7,6 +7,7 @@
  * @author Jesse Greenberg (PhET Interactive Simulations)
  */
 
+import BooleanProperty from '../../../../axon/js/BooleanProperty.js';
 import DerivedProperty from '../../../../axon/js/DerivedProperty.js';
 import Property from '../../../../axon/js/Property.js';
 import Bounds2 from '../../../../dot/js/Bounds2.js';
@@ -148,6 +149,7 @@ export default class EnergySkateParkScreenView extends ScreenView {
   // the bar chart showing energy distribution
   private readonly energyBarGraphAccordionBox?: EnergyBarGraphAccordionBox;
   private readonly resetAllButton: ResetAllButton;
+  private readonly returnSkaterButton: RectangularPushButton;
 
   // for layout or repositioning in subtypes
   protected readonly speedometerNode: ValueGaugeNode;
@@ -247,7 +249,7 @@ export default class EnergySkateParkScreenView extends ScreenView {
     this.backgroundNode = new BackgroundNode( this.layoutBounds, this.visibleBoundsProperty );
     this.bottomLayer.addChild( this.backgroundNode );
 
-    this.gridNode = new EnergySkateParkGridNode( model.gridVisibleProperty, model.skater.referenceHeightProperty, this.visibleBoundsProperty, modelViewTransform );
+    this.gridNode = new EnergySkateParkGridNode( model.gridVisibleProperty, model.skater.referenceHeightProperty, this.visibleBoundsProperty, modelViewTransform, tandem.createTandem( 'energySkateParkGridNode' ) );
     this.bottomLayer.addChild( this.gridNode );
 
     this.controlPanel = new EnergySkateParkControlPanel( model, this, tandem.createTandem( 'controlPanel' ), options.controlPanelOptions || undefined );
@@ -256,7 +258,7 @@ export default class EnergySkateParkScreenView extends ScreenView {
       model.skater,
       model.clearThermal.bind( model ),
       model.pieChartVisibleProperty,
-      tandem.createTandem( 'pieChartLegendNode' ),
+      tandem.createTandem( 'pieChartLegend' ),
       options.pieChartLegendOptions || undefined
     );
     this.bottomLayer.addChild( this.pieChartLegend );
@@ -284,28 +286,28 @@ export default class EnergySkateParkScreenView extends ScreenView {
     this.bottomLayer.addChild( this.resetAllButton );
 
     // The button to return the skater
-    const restartSkaterButton = new RectangularPushButton( {
+    this.returnSkaterButton = new RectangularPushButton( {
       content: new Text( controlsRestartSkaterStringProperty, {
+        tandem: tandem.createTandem( 'restartSkaterText' ),
         maxWidth: 90,
         font: EnergySkateParkConstants.CONTROL_LABEL_FONT
       } ),
       listener: model.returnSkater.bind( model ),
       centerY: this.resetAllButton.centerY,
       // X updated in layoutBounds since the reset all button can move horizontally
-      tandem: tandem.createTandem( 'restartSkaterButton' ),
-      accessibleHelpText: EnergySkateParkFluent.a11y.restartSkaterButton.accessibleHelpTextStringProperty,
-      accessibleContextResponse: EnergySkateParkFluent.a11y.returnSkaterToPreviousStartingPositionButton.accessibleContextResponseStringProperty
+      tandem: tandem.createTandem( 'returnSkaterButton' ),
+      accessibleHelpText: EnergySkateParkFluent.a11y.restartSkaterButton.accessibleHelpTextStringProperty
     } );
 
     // Disable the return skater button when the skater is already at his initial coordinates
-    model.skater.hasMovedProperty.linkAttribute( restartSkaterButton, 'enabled' );
-    this.bottomLayer.addChild( restartSkaterButton );
+    model.skater.movedProperty.linkAttribute( this.returnSkaterButton, 'enabled' );
+    this.bottomLayer.addChild( this.returnSkaterButton );
 
     // Global hotkey to restart the skater, same behavior as the returnSkaterButton
     KeyboardListener.createGlobal( this, {
       keyStringProperties: EnergySkateParkScreenView.RESTART_SKATER_HOTKEY_DATA.keyStringProperties,
       fire: () => {
-        if ( model.skater.hasMovedProperty.value ) {
+        if ( model.skater.movedProperty.value ) {
           model.returnSkater();
         }
       }
@@ -327,6 +329,7 @@ export default class EnergySkateParkScreenView extends ScreenView {
       updateWhenInvisible: false,
       pickable: false,
       radius: gaugeRadius,
+      tandem: tandem.createTandem( 'speedometerNode' ),
       accessibleHeading: EnergySkateParkFluent.a11y.speedometer.accessibleHeadingStringProperty,
       accessibleParagraph: EnergySkateParkFluent.a11y.speedometer.accessibleParagraph.createProperty( {
         speed: formattedSpeedProperty
@@ -341,7 +344,9 @@ export default class EnergySkateParkScreenView extends ScreenView {
     this.speedometerNode.top = this.layoutBounds.minY + 5;
     this.bottomLayer.addChild( this.speedometerNode );
 
-    this.trackLayer = new Node();
+    this.trackLayer = new Node( {
+      tandem: tandem.createTandem( 'trackLayer' )
+    } );
 
     // tracks on top of panels and non-interactive visualizations
     this.topLayer.addChild( this.trackLayer );
@@ -372,8 +377,7 @@ export default class EnergySkateParkScreenView extends ScreenView {
           }
         },
         tandem: tandem.createTandem( 'measuringTapeNode' ),
-        crosshairColor: 'black',
-        phetioFeaturedMeasuredDistanceProperty: true
+        crosshairColor: 'black'
       } );
 
       this.stopwatchNode = new StopwatchNode( model.stopwatch, {
@@ -459,7 +463,7 @@ export default class EnergySkateParkScreenView extends ScreenView {
       }
     } );
 
-    ManualConstraint.create( this, [ this.resetAllButton, restartSkaterButton ], ( resetAllButtonProxy, returnSkaterButtonProxy ) => {
+    ManualConstraint.create( this, [ this.resetAllButton, this.returnSkaterButton ], ( resetAllButtonProxy, returnSkaterButtonProxy ) => {
       returnSkaterButtonProxy.right = resetAllButtonProxy.left - 10;
       returnSkaterButtonProxy.centerY = resetAllButtonProxy.centerY;
     } );
@@ -469,22 +473,14 @@ export default class EnergySkateParkScreenView extends ScreenView {
       model.skater.referenceHeightProperty,
       model.referenceHeightVisibleProperty,
       model.userControlledPropertySet.referenceHeightControlledProperty,
-      tandem.createTandem( 'referenceHeightLineNode' )
+      tandem.createTandem( 'referenceHeightLine' )
     );
     this.topLayer.addChild( this.referenceHeightLine );
 
     // skaterNode is above most things as it is the primary draggable object
     this.topLayer.addChild( this.skaterNode );
 
-    // When the skater attaches to or detaches from a track during a physics step, announce it to screen readers.
-    model.skaterAttachedToTrackEmitter.addListener( () => {
-      this.skaterNode.addAccessibleContextResponse( EnergySkateParkFluent.a11y.skaterNode.snapToTrackContextResponseStringProperty );
-    } );
-    model.skaterDetachedFromTrackEmitter.addListener( () => {
-      this.skaterNode.addAccessibleContextResponse( EnergySkateParkFluent.a11y.skaterNode.detachFromTrackContextResponseStringProperty );
-    } );
-
-    const pieChartNode = new PieChartNode( model.skater, model.pieChartVisibleProperty, modelViewTransform );
+    const pieChartNode = new PieChartNode( model.skater, model.pieChartVisibleProperty, modelViewTransform, tandem.createTandem( 'pieChartNode' ) );
     this.topLayer.addChild( pieChartNode );
 
     // relative to the control panel, but this will not float with the layout
@@ -500,17 +496,10 @@ export default class EnergySkateParkScreenView extends ScreenView {
 
       // green means "go" since the skater will likely start moving at this point
       baseColor: EnergySkateParkColors.kineticEnergyColorProperty,
-      listener: () => {
-        model.returnSkater();
-      },
+      listener: model.returnSkater.bind( model ),
       tandem: tandem.createTandem( 'returnSkaterToPreviousStartingPositionButton' ),
-      visiblePropertyOptions: { phetioReadOnly: true },
       accessibleName: EnergySkateParkFluent.a11y.returnSkaterToPreviousStartingPositionButton.accessibleNameStringProperty,
-      accessibleHelpText: EnergySkateParkFluent.a11y.returnSkaterToPreviousStartingPositionButton.accessibleHelpTextStringProperty,
-      accessibleContextResponse: EnergySkateParkFluent.a11y.returnSkaterToPreviousStartingPositionButton.accessibleContextResponseStringProperty,
-
-      // The button becomes invisible after firing (skater returns in-bounds), so alert even when not displayed.
-      accessibleContextResponseOptions: { alertWhenNotDisplayed: true }
+      accessibleHelpText: EnergySkateParkFluent.a11y.returnSkaterToPreviousStartingPositionButton.accessibleHelpTextStringProperty
     } );
 
     const skaterIconImage2 = new Image( this.skaterNode.skaterImageSetProperty.value.leftImageProperty, {
@@ -528,12 +517,7 @@ export default class EnergySkateParkScreenView extends ScreenView {
         model.skater.resetPosition();
         model.userControlledPropertySet.skaterControlledProperty.set( false );
       },
-      visiblePropertyOptions: { phetioReadOnly: true },
-      tandem: tandem.createTandem( 'returnSkaterToGroundButton' ),
-      accessibleContextResponse: EnergySkateParkFluent.a11y.returnSkaterToGroundButton.accessibleContextResponseStringProperty,
-
-      // The button becomes invisible after firing (skater returns in-bounds), so alert even when not displayed.
-      accessibleContextResponseOptions: { alertWhenNotDisplayed: true }
+      tandem: tandem.createTandem( 'returnSkaterToGroundButton' )
     } );
 
     this.skaterNode.skaterImageSetProperty.link( skaterImageSet => {
@@ -542,7 +526,7 @@ export default class EnergySkateParkScreenView extends ScreenView {
     } );
 
     // the "return skater" buttons are in the top layer so that they can be on top of the track and easily visible
-    // when the skater goes offscreen
+    // when the skater goes off screen
     this.topLayer.addChild( returnSkaterToPreviousStartingPositionButton );
     this.topLayer.addChild( returnSkaterToGroundButton );
 
@@ -552,7 +536,17 @@ export default class EnergySkateParkScreenView extends ScreenView {
     } );
     this.addChild( this.yourSkateParkHeadingNode );
 
-    this.timeControlNode = new TimeControlNode( model.isPlayingProperty, {
+    const playingProperty = new BooleanProperty( !model.pausedProperty.value, {
+      tandem: tandem.createTandem( 'playingProperty' )
+    } );
+    model.pausedProperty.link( paused => {
+      playingProperty.set( !paused );
+    } );
+    playingProperty.link( playing => {
+      model.pausedProperty.set( !playing );
+    } );
+
+    this.timeControlNode = new TimeControlNode( playingProperty, {
       tandem: tandem.createTandem( 'timeControlNode' ),
       timeSpeedProperty: model.timeSpeedProperty,
       flowBoxSpacing: 23.3, // extra spacing avoids pointer area overlap when play pause button size increases
@@ -595,7 +589,6 @@ export default class EnergySkateParkScreenView extends ScreenView {
       returnSkaterToPreviousStartingPositionButton.visible = buttonsVisible;
 
       if ( buttonsVisible ) {
-        this.skaterNode.addAccessibleContextResponse( EnergySkateParkFluent.a11y.skaterNode.offScreenContextResponseStringProperty );
 
         // Put the button where the skater will appear.  Nudge it up a bit so the mouse can hit it from the drop site,
         // without being moved at all (to simplify repeat runs).
@@ -615,10 +608,9 @@ export default class EnergySkateParkScreenView extends ScreenView {
       }
     } );
 
-    // When the model resets, go back to the default image set for the skater and reset grab interaction state.
+    // When the model resets, go back to the default image set for the skater.
     this.model.resetEmitter.addListener( () => {
       this.skaterNode.selectedSkaterProperty.reset();
-      this.skaterNode.reset();
     } );
 
     // For debugging the visible bounds
@@ -674,7 +666,7 @@ export default class EnergySkateParkScreenView extends ScreenView {
       this.controlPanelVBox,
       ...this.visibilityControlsPanel ? [ this.visibilityControlsPanel ] : [],
       this.timeControlNode,
-      restartSkaterButton,
+      this.returnSkaterButton,
       this.resetAllButton
     ];
   }

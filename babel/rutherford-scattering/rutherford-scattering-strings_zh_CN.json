@@ -339,89 +339,89 @@
     "screenSummary": {
       "rutherfordAtom": {
         "playArea": {
-          "value": "A source that can stream alpha particles onto a thin foil.  An observation window shows a highly magnified view of the foil.  You can adjust the energy of the alpha particles and the number of protons  and neutrons comprising the atoms in the foil."
+          "value": "一个可以向薄箔发射α粒子的粒子源。观察窗口显示箔的高度放大视图。您可以调整α粒子的能量以及构成箔中原子的质子和中子数量。"
         },
         "controlArea": {
-          "value": "You can choose between atomic and nuclear scale views of the experiment.  There are buttons to pause and step incrementally through observations and a  button to reset the sim."
+          "value": "您可以在原子尺度和核尺度视图之间切换。有暂停按钮和逐步观察按钮，以及重置模拟的按钮。"
         },
         "interactionHint": {
-          "value": "Turn on alpha particle source to begin observations."
+          "value": "打开α粒子源以开始观察。"
         }
       },
       "plumPuddingAtom": {
         "playArea": {
-          "value": "A source that can stream alpha particles onto a thin foil.  An observation window shows a highly magnified view of the foil.  You can adjust the energy of the alpha particles."
+          "value": "一个可以向薄箔发射α粒子的粒子源。观察窗口显示箔的高度放大视图。您可以调整α粒子的能量。"
         },
         "controlArea": {
-          "value": "There are buttons to pause and step incrementally through observations and a  button to reset the sim."
+          "value": "有暂停按钮和逐步观察按钮，以及重置模拟的按钮。"
         },
         "interactionHint": {
-          "value": "Turn on alpha particle source to begin observations."
+          "value": "打开α粒子源以开始观察。"
         }
       }
     },
     "observationWindow": {
-      "value": "Observation Window"
+      "value": "观察窗口"
     },
     "atomSpaceDescription": {
-      "value": "An atomic scale view of the foil is shown. Portions of five tightly packed atoms are visible, with three nuclei visible in the scene."
+      "value": "显示箔的原子尺度视图。可以看到五个紧密排列的原子的部分，场景中可见三个原子核。"
     },
     "nucleusSpaceDescription": {
-      "value": "A nuclear scale view of the foil is shown. A single nucleus is visible with a representative number of protons and neutrons."
+      "value": "显示箔的核尺度视图。可以看到一个原子核，其中包含代表性数量的质子和中子。"
     },
     "toggleAlphaParticle": {
-      "value": "Alpha Particle Source"
+      "value": "α粒子源"
     },
     "alphaParticlesHelpText": {
-      "value": "Start and stop stream of alpha particles."
+      "value": "启动和停止α粒子流。"
     },
     "alphaParticleSettings": {
-      "value": "Alpha Particle Settings"
+      "value": "α粒子设置"
     },
     "energySliderDescription": {
-      "value": "Adjust the energy of particles in the alpha particle stream."
+      "value": "调整α粒子流中粒子的能量。"
     },
     "energy": {
-      "value": "Energy"
+      "value": "能量"
     },
     "traces": {
-      "value": "Traces"
+      "value": "轨迹"
     },
     "traceCheckboxDescription": {
-      "value": "Observe particles in stream with or without traces."
+      "value": "观察带有或不带有轨迹的粒子流。"
     },
     "atomSettings": {
-      "value": "Atom Settings"
+      "value": "原子设置"
     },
     "protonsValuePattern": {
-      "value": "Protons"
+      "value": "质子"
     },
     "protonsPerAtomValuePattern": {
-      "value": "Protons per Atom { $protons }"
+      "value": "每个原子的质子数 { $protons }"
     },
     "protonSliderDescription": {
-      "value": "Adjust number of protons per atom in foil."
+      "value": "调整箔中每个原子的质子数。"
     },
     "neutronsValuePattern": {
-      "value": "Neutrons"
+      "value": "中子"
     },
     "neutronsPerAtomValuePattern": {
-      "value": "Neutrons per Atom { $neutrons }"
+      "value": "每个原子的中子数 { $neutrons }"
     },
     "neutronSliderDescription": {
-      "value": "Adjust number of neutrons per atom in foil."
+      "value": "调整箔中每个原子的中子数。"
     },
     "atomicScaleView": {
-      "value": "Atomic Scale"
+      "value": "原子尺度"
     },
     "nuclearScaleView": {
-      "value": "Nuclear Scale"
+      "value": "核尺度"
     },
     "switchScale": {
-      "value": "Experiment View"
+      "value": "实验视图"
     },
     "switchScaleDescription": {
-      "value": "Observe experiments at nuclear or atomic scales."
+      "value": "在核尺度或原子尺度下观察实验。"
     }
   }
 }

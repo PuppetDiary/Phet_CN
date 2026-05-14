@@ -7,7 +7,7 @@
  * @author Jesse Greenberg (PhET Interactive Simulations)
  */
 
-import { EmptySelfOptions, optionize4 } from '../../../../phet-core/js/optionize.js';
+import { combineOptions } from '../../../../phet-core/js/optionize.js';
 import Panel, { PanelOptions } from '../../../../sun/js/Panel.js';
 import Tandem from '../../../../tandem/js/Tandem.js';
 import energySkatePark from '../../energySkatePark.js';
@@ -15,30 +15,16 @@ import EnergySkateParkConstants from '../EnergySkateParkConstants.js';
 import EnergySkateParkModel from '../model/EnergySkateParkModel.js';
 import EnergySkateParkVisibilityControls from './EnergySkateParkVisibilityControls.js';
 
-type SelfOptions = EmptySelfOptions;
-export type VisibilityControlsPanelOptions = SelfOptions & PanelOptions;
-
 export default class VisibilityControlsPanel extends Panel {
 
-  public constructor( model: EnergySkateParkModel, tandem: Tandem, providedOptions?: VisibilityControlsPanelOptions ) {
-    const options = optionize4<VisibilityControlsPanelOptions, SelfOptions, PanelOptions>()(
-      {},
-      EnergySkateParkConstants.PANEL_OPTIONS,
-      {
-        tandem: tandem,
-        visiblePropertyOptions: {
-          phetioFeatured: true
-        }
-      },
-      providedOptions
-    );
+  public constructor( model: EnergySkateParkModel, tandem: Tandem, providedOptions?: PanelOptions ) {
+    const options = combineOptions<PanelOptions>( {}, EnergySkateParkConstants.PANEL_OPTIONS, providedOptions );
 
-    const content = new EnergySkateParkVisibilityControls( model, tandem.createTandem( 'checkboxGroup' ), {
+    const content = new EnergySkateParkVisibilityControls( model, tandem, {
       showPieChartCheckbox: false,
       showSpeedCheckbox: false,
       showGridCheckbox: true,
-      showReferenceHeightCheckbox: true,
-      phetioVisiblePropertyInstrumented: false
+      showReferenceHeightCheckbox: true
     } );
 
     super( content, options );

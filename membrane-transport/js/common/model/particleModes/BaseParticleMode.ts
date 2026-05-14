@@ -1,4 +1,4 @@
-// Copyright 2025, University of Colorado Boulder
+// Copyright 2025-2026, University of Colorado Boulder
 
 /**
  * Base class for all particle modes in membrane transport.
@@ -38,7 +38,6 @@
  */
 
 import IntentionalAny from '../../../../../phet-core/js/types/IntentionalAny.js';
-import membraneTransport from '../../../membraneTransport.js';
 import MembraneTransportModel from '../MembraneTransportModel.js';
 import Particle from '../Particle.js';
 
@@ -70,5 +69,3 @@ export default abstract class BaseParticleMode {
     throw new Error( 'fromStateObject must be implemented by subclasses' );
   }
 }
-
-membraneTransport.register( 'BaseParticleMode', BaseParticleMode );

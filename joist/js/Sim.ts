@@ -120,6 +120,13 @@ type SelfOptions = {
   // costs. Setting this to true MAY increase the amount of time needed to switch screens.
   // See https://github.com/phetsims/faradays-electromagnetic-lab/issues/153
   detachInactiveScreenViews?: boolean;
+
+  // Optional per-sim override for the navigation bar brand logo.
+  navigationBarBrand?: {
+    logoOnBlackBackground?: HTMLImageElement;
+    logoOnWhiteBackground?: HTMLImageElement;
+    logoScale?: number;
+  };
 };
 
 export type SimOptions = SelfOptions & PickOptional<PhetioObjectOptions, 'phetioDesigned'>;
@@ -205,6 +212,11 @@ export default class Sim extends PhetioObject {
   public readonly screenBoundsProperty = new Property<Bounds2 | null>( null );
 
   public readonly lookAndFeel = new LookAndFeel();
+  public readonly navigationBarBrand: {
+    logoOnBlackBackground?: HTMLImageElement;
+    logoOnWhiteBackground?: HTMLImageElement;
+    logoScale?: number;
+  };
   private readonly memoryMonitor = new MemoryMonitor();
 
   // public (read-only) {boolean} - if true, add support specific to accessible technology that work with touch devices.
@@ -316,6 +328,7 @@ export default class Sim extends PhetioObject {
       // Passed to SimDisplay, but a top level option for API ease.
       webgl: SimDisplay.DEFAULT_WEBGL,
       detachInactiveScreenViews: false,
+      navigationBarBrand: {},
 
       // phet-io
       phetioState: false,
@@ -339,6 +352,7 @@ export default class Sim extends PhetioObject {
 
     this.credits = options.credits;
     this.detachInactiveScreenViews = options.detachInactiveScreenViews;
+    this.navigationBarBrand = options.navigationBarBrand;
 
     this.simNameProperty = simNameProperty;
 

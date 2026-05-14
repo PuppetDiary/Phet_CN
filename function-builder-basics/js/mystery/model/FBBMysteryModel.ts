@@ -1,4 +1,4 @@
-// Copyright 2017-2024, University of Colorado Boulder
+// Copyright 2017-2026, University of Colorado Boulder
 
 /**
  * Model for the 'Mystery' screen in 'Function Builder: Basics'.
@@ -8,7 +8,6 @@
 
 import FBModel from '../../../../function-builder/js/common/model/FBModel.js';
 import Tandem from '../../../../tandem/js/Tandem.js';
-import functionBuilderBasics from '../../functionBuilderBasics.js';
 import FBBMysteryChallenges from './FBBMysteryChallenges.js';
 import FBBMysteryScene from './FBBMysteryScene.js';
 
@@ -22,5 +21,3 @@ export default class FBBMysteryModel extends FBModel {
     ] );
   }
 }
-
-functionBuilderBasics.register( 'FBBMysteryModel', FBBMysteryModel );

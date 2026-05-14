@@ -35,15 +35,6 @@ type SelfOptions = {
 
   // the maximum number of EnergySkateParkDataSamples saved by this model, to prevent from saving too many if we run without encountering a case that clears old samples
   maxNumberOfSamples?: number;
-
-  // whether the path is displayable on this screen - if true, pathVisibleProperty is instrumented
-  isShowPathSupported?: boolean;
-
-  // whether dataSamples should be instrumented - true for screens that display path dots or energy plots
-  instrumentDataSamples?: boolean;
-
-  // tandem for sampleTimeProperty, defaults to Tandem.OPT_OUT since only the Graphs screen needs it under a custom parent
-  sampleTimePropertyTandem?: Tandem;
 };
 
 export type EnergySkateParkSaveSampleModelOptions = SelfOptions & EnergySkateParkModelOptions;
@@ -62,7 +53,7 @@ export default class EnergySkateParkSaveSampleModel extends EnergySkateParkModel
   protected limitNumberOfSamples: boolean;
 
   // controls whether samples are saved as the model steps through time
-  public readonly pathVisibleProperty: BooleanProperty;
+  public readonly saveSamplesProperty: BooleanProperty;
 
   // set to true to prevent the model from saving any more samples, even if
   // saveSamplesProperty is true - this can be used instead of (or in combination with) maxNumberOfSamples\
@@ -85,10 +76,7 @@ export default class EnergySkateParkSaveSampleModel extends EnergySkateParkModel
       defaultSaveSamples: true,
       saveSampleInterval: 0.1,
       sampleFadeDecay: 0.95,
-      maxNumberOfSamples: 50,
-      isShowPathSupported: false,
-      instrumentDataSamples: false,
-      sampleTimePropertyTandem: Tandem.OPT_OUT
+      maxNumberOfSamples: 50
     }, providedOptions );
 
     super( preferencesModel, tandem, options );
@@ -99,19 +87,14 @@ export default class EnergySkateParkSaveSampleModel extends EnergySkateParkModel
 
     this.timeSinceSampleSave = 0;
     this.limitNumberOfSamples = true;
-    this.pathVisibleProperty = new BooleanProperty( options.defaultSaveSamples, {
-      tandem: options.isShowPathSupported ? tandem.createTandem( 'visibleProperties' ).createTandem( 'pathVisibleProperty' ) : Tandem.OPT_OUT
-    } );
+    this.saveSamplesProperty = new BooleanProperty( options.defaultSaveSamples, { tandem: tandem.createTandem( 'saveSamplesProperty' ) } );
     this.preventSampleSave = false;
     this.sampleTimeProperty = new NumberProperty( 0, {
-      tandem: options.sampleTimePropertyTandem,
-      phetioFeatured: true
+      tandem: tandem.createTandem( 'sampleTimeProperty' )
     } );
     this.dataSamples = createObservableArray( {
-      tandem: options.instrumentDataSamples ? tandem.createTandem( 'dataSamples' ) : Tandem.OPT_OUT,
-      phetioType: createObservableArray.ObservableArrayIO( EnergySkateParkDataSample.EnergySkateParkDataSampleIO ),
-      phetioFeatured: true,
-      lengthPropertyOptions: { phetioFeatured: true }
+      tandem: tandem.createTandem( 'dataSamples' ),
+      phetioType: createObservableArray.ObservableArrayIO( EnergySkateParkDataSample.EnergySkateParkDataSampleIO )
     } );
     this.batchRemoveSamplesEmitter = new Emitter( {
       parameters: [ {
@@ -126,9 +109,9 @@ export default class EnergySkateParkSaveSampleModel extends EnergySkateParkModel
   public setFromSample( dataSample: EnergySkateParkDataSample ): void {
     dataSample.skaterState.setToSkater( this.skater );
 
-    // restore friction and isStickingToTrackProperty (not set on Skater by setToSkater)
+    // restore friction and stickingToTrackProperty (not set on Skater by setToSkater)
     this.frictionProperty.set( dataSample.friction );
-    this.isStickingToTrackProperty.set( dataSample.stickingToTrack );
+    this.stickingToTrackProperty.set( dataSample.stickingToTrack );
 
     if ( dataSample.track ) {
 
@@ -181,11 +164,11 @@ export default class EnergySkateParkSaveSampleModel extends EnergySkateParkModel
   protected override stepModel( dt: number, skaterState: SkaterState ): SkaterState {
     const updatedState = super.stepModel( dt, skaterState );
 
-    if ( this.pathVisibleProperty.get() ) {
+    if ( this.saveSamplesProperty.get() ) {
       this.timeSinceSampleSave = this.timeSinceSampleSave + dt;
 
       if ( !this.preventSampleSave && this.timeSinceSampleSave > this.saveSampleInterval ) {
-        const newSample = new EnergySkateParkDataSample( updatedState, this.frictionProperty.get(), this.sampleTimeProperty.get(), this.isStickingToTrackProperty.get(), this.sampleFadeDecay );
+        const newSample = new EnergySkateParkDataSample( updatedState, this.frictionProperty.get(), this.sampleTimeProperty.get(), this.stickingToTrackProperty.get(), this.sampleFadeDecay );
         this.dataSamples.add( newSample );
         this.timeSinceSampleSave = 0;
         this.sampleTimeProperty.set( this.sampleTimeProperty.get() + dt );
@@ -228,7 +211,7 @@ export default class EnergySkateParkSaveSampleModel extends EnergySkateParkModel
     this.clearEnergyData();
 
     this.sampleTimeProperty.reset();
-    this.pathVisibleProperty.reset();
+    this.saveSamplesProperty.reset();
   }
 }
 

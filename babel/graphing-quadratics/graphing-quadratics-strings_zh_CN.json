@@ -133,19 +133,19 @@
   },
   "screen": {
     "explore": {
-      "value": "Explore",
+      "value": "探索",
       "history": []
     },
     "focusAndDirectrix": {
-      "value": "Focus & Directrix",
+      "value": "焦点和准线",
       "history": []
     },
     "standardForm": {
-      "value": "Standard Form",
+      "value": "标准形式",
       "history": []
     },
     "vertexForm": {
-      "value": "Vertex Form",
+      "value": "顶点形式",
       "history": []
     }
   },

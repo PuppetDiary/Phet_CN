@@ -10,6 +10,7 @@
 import PreferencesModel from '../../joist/js/preferences/PreferencesModel.js';
 import Sim, { SimOptions } from '../../joist/js/Sim.js';
 import simLauncher from '../../joist/js/simLauncher.js';
+import logoOnWhite_png from '../../brand/adapted-from-phet/images/logoOnWhite_png.js';
 import SolarSystemCommonConstants from '../../solar-system-common/js/SolarSystemCommonConstants.js';
 import soundManager from '../../tambo/js/soundManager.js';
 import Tandem from '../../tandem/js/Tandem.js';
@@ -34,6 +35,11 @@ const simOptions: SimOptions = {
       supportsProjectorMode: true
     }
   } ),
+
+  navigationBarBrand: {
+    // This sim uses a black scene background and a white navigation bar, so force the black GKX logo variant.
+    logoOnWhiteBackground: logoOnWhite_png
+  },
 
   phetioDesigned: true
 };

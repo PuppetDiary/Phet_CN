@@ -1,4 +1,4 @@
-// Copyright 2017-2025, University of Colorado Boulder
+// Copyright 2017-2026, University of Colorado Boulder
 
 /**
  * Function for the 'Mystery' screen in 'Function Builder: Basics'.
@@ -11,7 +11,6 @@ import ImageFunctionNode from '../../../../function-builder/js/common/view/funct
 import FunctionBuilderStrings from '../../../../function-builder/js/FunctionBuilderStrings.js';
 import merge from '../../../../phet-core/js/merge.js';
 import Text from '../../../../scenery/js/nodes/Text.js';
-import functionBuilderBasics from '../../functionBuilderBasics.js';
 
 export default class FBBMysteryFunctionNode extends ImageFunctionNode {
   /**
@@ -53,5 +52,3 @@ export default class FBBMysteryFunctionNode extends ImageFunctionNode {
     this.hiddenNode.fill = color;
   }
 }
-
-functionBuilderBasics.register( 'FBBMysteryFunctionNode', FBBMysteryFunctionNode );

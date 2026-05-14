@@ -32,6 +32,7 @@ export default class GameScreen extends Screen<GameModel, GameScreenView> {
       name: NumberPairsFluent.screen.gameStringProperty,
       createKeyboardHelpNode: () => new GameScreenKeyboardHelpNode(),
       backgroundColorProperty: NumberPairsColors.introScreenBackgroundColorProperty,
+      useNaturalNavigationBarButtonWidth: true,
       homeScreenIcon: new ScreenIcon( new Rectangle( 0, 0, 100, 100, {
         fill: null, stroke: null, children: [
           new StarNode( {

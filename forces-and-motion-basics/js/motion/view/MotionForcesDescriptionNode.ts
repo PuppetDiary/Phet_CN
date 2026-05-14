@@ -1,4 +1,4 @@
-// Copyright 2025-2026, University of Colorado Boulder
+// Copyright 2025, University of Colorado Boulder
 
 /**
  * MotionForcesListDescription provides an accessible list of the current force arrow values in the Motion screens.
@@ -18,7 +18,7 @@ import DerivedProperty from '../../../../axon/js/DerivedProperty.js';
 import { TReadOnlyProperty } from '../../../../axon/js/TReadOnlyProperty.js';
 import { roundSymmetric } from '../../../../dot/js/util/roundSymmetric.js';
 import { toFixedNumber } from '../../../../dot/js/util/toFixedNumber.js';
-import AccessibleList from '../../../../scenery-phet/js/accessibility/AccessibleList.js';
+import AccessibleListNode from '../../../../scenery-phet/js/accessibility/AccessibleListNode.js';
 import Node from '../../../../scenery/js/nodes/Node.js';
 import getQualitativeForceDescription from '../../common/view/getQualitativeForceDescription.js';
 import forcesAndMotionBasics from '../../forcesAndMotionBasics.js';
@@ -28,14 +28,10 @@ import MotionModel from '../model/MotionModel.js';
 const THRESHOLD = 1e-6;
 
 export default class MotionForcesDescriptionNode extends Node {
+  private readonly forcesList: AccessibleListNode | null = null;
   public readonly netForceDescriptionProperty: TReadOnlyProperty<string>;
 
   public constructor( model: MotionModel ) {
-
-    super( {
-      tagName: 'div',
-      accessibleHeading: ForcesAndMotionBasicsFluent.a11y.forces.motionScreensHeadingStringProperty
-    } );
 
     // Rounded values to match on-screen arrow labels (see MotionScreenView implementation)
     const roundedAppliedForceProperty = new DerivedProperty( [ model.appliedForceProperty ], f => roundSymmetric( f ) );
@@ -47,6 +43,11 @@ export default class MotionForcesDescriptionNode extends Node {
     const appliedVisibleProperty = new DerivedProperty( [ model.showForceProperty, roundedAppliedForceProperty ], ( show, f ) => show && Math.abs( f ) > THRESHOLD );
     const frictionVisibleProperty = new DerivedProperty( [ model.showForceProperty, roundedFrictionForceProperty ], ( show, f ) => show && Math.abs( f ) > THRESHOLD );
     const anyVisibleProperty = DerivedProperty.or( [ appliedVisibleProperty, frictionVisibleProperty, model.showSumOfForcesProperty ] );
+
+    super( {
+      tagName: 'div',
+      accessibleHeading: ForcesAndMotionBasicsFluent.a11y.forces.motionScreensHeadingStringProperty
+    } );
 
     // Dependencies for qualitative descriptions so language changes recompute values
     const qualitativeStringDependencies = [
@@ -135,14 +136,14 @@ export default class MotionForcesDescriptionNode extends Node {
     // "No forces displayed" should be visible when no other forces are visible
     const noForcesVisibleProperty = DerivedProperty.not( anyVisibleProperty );
 
-    this.accessibleTemplate = AccessibleList.createTemplateProperty( {
-      listItems: [
-        { stringProperty: appliedItemStringProperty, visibleProperty: appliedVisibleProperty },
-        { stringProperty: frictionItemStringProperty, visibleProperty: frictionVisibleProperty },
-        { stringProperty: this.netForceDescriptionProperty, visibleProperty: model.showSumOfForcesProperty },
-        { stringProperty: ForcesAndMotionBasicsFluent.a11y.forces.noForcesDisplayedStringProperty, visibleProperty: noForcesVisibleProperty }
-      ]
-    } );
+    this.forcesList = new AccessibleListNode( [
+      { stringProperty: appliedItemStringProperty, visibleProperty: appliedVisibleProperty },
+      { stringProperty: frictionItemStringProperty, visibleProperty: frictionVisibleProperty },
+      { stringProperty: this.netForceDescriptionProperty, visibleProperty: model.showSumOfForcesProperty },
+      { stringProperty: ForcesAndMotionBasicsFluent.a11y.forces.noForcesDisplayedStringProperty, visibleProperty: noForcesVisibleProperty }
+    ] );
+
+    this.addChild( this.forcesList );
   }
 
   private getForceDescription( force: number, showValues: boolean ): string {

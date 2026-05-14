@@ -1,4 +1,4 @@
-// Copyright 2017-2023, University of Colorado Boulder
+// Copyright 2017-2026, University of Colorado Boulder
 
 /**
  * ScreenView for the 'Mystery' screen in 'Function Builder: Basics'.
@@ -8,7 +8,6 @@
 
 import FBScreenView from '../../../../function-builder/js/common/view/FBScreenView.js';
 import Tandem from '../../../../tandem/js/Tandem.js';
-import functionBuilderBasics from '../../functionBuilderBasics.js';
 import FBBMysteryModel from '../model/FBBMysteryModel.js';
 import FBBMysterySceneNode from './FBBMysterySceneNode.js';
 
@@ -21,5 +20,3 @@ export default class FBBMysteryScreenView extends FBScreenView {
     } );
   }
 }
-
-functionBuilderBasics.register( 'FBBMysteryScreenView', FBBMysteryScreenView );

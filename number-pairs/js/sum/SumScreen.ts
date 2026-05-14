@@ -31,6 +31,7 @@ export default class SumScreen extends Screen<SumModel, SumScreenView> {
       createKeyboardHelpNode: () => new SumScreenKeyboardHelpNode(),
       homeScreenIcon: new SumScreenIcon( { size: Screen.MINIMUM_HOME_SCREEN_ICON_SIZE } ),
       navigationBarIcon: new SumScreenIcon( { size: Screen.MINIMUM_NAVBAR_ICON_SIZE } ),
+      useNaturalNavigationBarButtonWidth: true,
       screenButtonsHelpText: NumberPairsFluent.a11y.screenButtonsHelpText.sum.createProperty( {
         min: NumberPairsConstants.SUM_TOTAL_RANGE.min,
         max: NumberPairsConstants.SUM_TOTAL_RANGE.max

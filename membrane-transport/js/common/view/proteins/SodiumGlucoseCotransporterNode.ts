@@ -1,4 +1,4 @@
-// Copyright 2025, University of Colorado Boulder
+// Copyright 2025-2026, University of Colorado Boulder
 
 /**
  * Scenery Node for a SodiumGlucoseCotransporter, used to represent the transport protein in the membrane.
@@ -10,7 +10,6 @@ import Image from '../../../../../scenery/js/nodes/Image.js';
 
 import sodiumGlucoseCotransporterState1_svg from '../../../../images/sodiumGlucoseCotransporterState1_svg.js';
 import sodiumGlucoseCotransporterState3_svg from '../../../../images/sodiumGlucoseCotransporterState3_svg.js';
-import membraneTransport from '../../../membraneTransport.js';
 import MembraneTransportSounds from '../../MembraneTransportSounds.js';
 import SodiumGlucoseCotransporter from '../../model/proteins/SodiumGlucoseCotransporter.js';
 import TransportProteinNode from './TransportProteinNode.js';
@@ -59,5 +58,3 @@ export default class SodiumGlucoseCotransporterNode extends TransportProteinNode
     }
   }
 }
-
-membraneTransport.register( 'SodiumGlucoseCotransporterNode', SodiumGlucoseCotransporterNode );

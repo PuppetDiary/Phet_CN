@@ -228,13 +228,20 @@
     ]
   },
   "addMutation": {
-    "value": "怎加突变型",
+    "value": "增加突变型",
     "history": [
       {
         "userId": 685789,
         "timestamp": 1604052841829,
         "oldValue": "",
         "newValue": "怎加突变型",
+        "explanation": null
+      },
+      {
+        "userId": 0,
+        "timestamp": 1743014400000,
+        "oldValue": "怎加突变型",
+        "newValue": "增加突变型",
         "explanation": null
       }
     ]
@@ -624,7 +631,7 @@
     ]
   },
   "screen.intro": {
-    "value": "介绍",
+    "value": "基础实验",
     "history": [
       {
         "userId": 685789,
@@ -632,17 +639,31 @@
         "oldValue": "",
         "newValue": "介绍",
         "explanation": null
+      },
+      {
+        "userId": 0,
+        "timestamp": 1743014400000,
+        "oldValue": "介绍",
+        "newValue": "基础实验",
+        "explanation": null
       }
     ]
   },
   "screen.lab": {
-    "value": "实验室",
+    "value": "高级实验",
     "history": [
       {
         "userId": 685789,
         "timestamp": 1604052841829,
         "oldValue": "",
         "newValue": "实验室",
+        "explanation": null
+      },
+      {
+        "userId": 0,
+        "timestamp": 1743014400000,
+        "oldValue": "实验室",
+        "newValue": "高级实验",
         "explanation": null
       }
     ]

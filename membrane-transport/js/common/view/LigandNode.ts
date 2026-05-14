@@ -1,4 +1,4 @@
-// Copyright 2025, University of Colorado Boulder
+// Copyright 2025-2026, University of Colorado Boulder
 
 /**
  * LigandNode is a node that represents a ligand in the simulation.
@@ -34,7 +34,6 @@ import Node from '../../../../scenery/js/nodes/Node.js';
 import Tandem from '../../../../tandem/js/Tandem.js';
 import { AriaLive } from '../../../../utterance-queue/js/AriaLiveAnnouncer.js';
 import Utterance, { AlertableNoUtterance } from '../../../../utterance-queue/js/Utterance.js';
-import membraneTransport from '../../membraneTransport.js';
 import MembraneTransportFluent from '../../MembraneTransportFluent.js';
 import MembraneTransportConstants from '../MembraneTransportConstants.js';
 import MembraneTransportHotkeyData from '../MembraneTransportHotkeyData.js';
@@ -81,7 +80,7 @@ export default class LigandNode extends VoicingNode {
   private readonly utterance = new Utterance( {
 
     // A longer delay to prevent this content from being spoken too frequently.
-    alertStableDelay: 500,
+    alertDelay: 500,
 
     // All responses from the ligand are due to user interactions and we want them to interrupt
     // stale responses. See https://github.com/phetsims/membrane-transport/issues/491.
@@ -99,7 +98,7 @@ export default class LigandNode extends VoicingNode {
   private readonly releaseUtterance = new Utterance( {
 
     // A longer delay to prevent this content from being spoken too frequently.
-    alertStableDelay: 500,
+    alertDelay: 500,
 
     // All responses from the ligand are due to user interactions and we want them to interrupt
     // stale responses. See https://github.com/phetsims/membrane-transport/issues/491.
@@ -718,4 +717,3 @@ export default class LigandNode extends VoicingNode {
     this.updateVisualPosition();
   }
 }
-membraneTransport.register( 'LigandNode', LigandNode );

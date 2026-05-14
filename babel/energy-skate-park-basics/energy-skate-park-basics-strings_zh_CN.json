@@ -851,15 +851,15 @@
   },
   "screen": {
     "friction": {
-      "value": "Friction",
+      "value": "摩擦",
       "history": []
     },
     "introduction": {
-      "value": "Intro",
+      "value": "介绍",
       "history": []
     },
     "trackPlayground": {
-      "value": "Playground",
+      "value": "轨道游乐场",
       "history": []
     }
   },

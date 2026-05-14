@@ -283,13 +283,13 @@
     ]
   },
   "sulfur": {
-    "value": "硫磺",
+    "value": "硫",
     "history": [
       {
         "userId": 293040,
         "timestamp": 1470537296121,
         "oldValue": "",
-        "newValue": "硫磺",
+        "newValue": "硫",
         "explanation": null
       }
     ]

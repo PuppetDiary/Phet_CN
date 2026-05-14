@@ -1,4 +1,4 @@
-// Copyright 2017-2023, University of Colorado Boulder
+// Copyright 2017-2026, University of Colorado Boulder
 
 /**
  * The 'Mystery' screen in 'Function Builder: Basics'.
@@ -13,7 +13,6 @@ import FBIconFactory from '../../../function-builder/js/common/view/FBIconFactor
 import FunctionBuilderStrings from '../../../function-builder/js/FunctionBuilderStrings.js';
 import Screen from '../../../joist/js/Screen.js';
 import Tandem from '../../../tandem/js/Tandem.js';
-import functionBuilderBasics from '../functionBuilderBasics.js';
 import FBBMysteryModel from './model/FBBMysteryModel.js';
 import FBBMysteryScreenView from './view/FBBMysteryScreenView.js';
 
@@ -40,5 +39,3 @@ export default class FBBMysteryScreen extends Screen<FBBMysteryModel, FBBMystery
     );
   }
 }
-
-functionBuilderBasics.register( 'FBBMysteryScreen', FBBMysteryScreen );

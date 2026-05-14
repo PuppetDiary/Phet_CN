@@ -27,7 +27,7 @@ export default class SkaterState {
   public mass!: number;
   public track!: Track | null;
   private angle!: number;
-  public isOnTopSideOfTrack!: boolean;
+  public onTopSideOfTrack!: boolean;
   public parametricPosition!: number;
   public parametricSpeed!: number;
   public dragging!: boolean;
@@ -75,7 +75,7 @@ export default class SkaterState {
     this.mass = getValue( 'mass', anySource );
     this.track = getValue( 'track', anySource );
     this.angle = getValue( 'angle', anySource );
-    this.isOnTopSideOfTrack = getValue( 'isOnTopSideOfTrack', anySource );
+    this.onTopSideOfTrack = getValue( 'onTopSideOfTrack', anySource );
     this.parametricPosition = getValue( 'parametricPosition', anySource );
     this.parametricSpeed = getValue( 'parametricSpeed', anySource );
     this.dragging = getValue( 'dragging', anySource );
@@ -142,7 +142,7 @@ export default class SkaterState {
     skater.parametricPositionProperty.value = this.parametricPosition;
     skater.parametricSpeedProperty.value = this.parametricSpeed;
     skater.thermalEnergyProperty.value = this.thermalEnergy;
-    skater.isOnTopSideOfTrackProperty.value = this.isOnTopSideOfTrack;
+    skater.onTopSideOfTrackProperty.value = this.onTopSideOfTrack;
 
     skater.massProperty.value = this.mass;
     skater.gravityMagnitudeProperty.value = Math.abs( this.gravity );
@@ -150,7 +150,7 @@ export default class SkaterState {
     skater.referenceHeightProperty.value = this.referenceHeight;
 
     // only an angle to restore if skater is attached to a track and skater is not being dragged
-    skater.angleProperty.value = ( skater.trackProperty.value && !this.dragging ) ? skater.trackProperty.value.getViewAngleAt( this.parametricPosition ) + ( this.isOnTopSideOfTrack ? 0 : Math.PI ) : this.angle;
+    skater.angleProperty.value = ( skater.trackProperty.value && !this.dragging ) ? skater.trackProperty.value.getViewAngleAt( this.parametricPosition ) + ( this.onTopSideOfTrack ? 0 : Math.PI ) : this.angle;
     skater.updateEnergy();
   }
 
@@ -194,13 +194,13 @@ export default class SkaterState {
     positionX: number,
     positionY: number,
     angle: number,
-    isOnTopSideOfTrack: boolean,
+    onTopSideOfTrack: boolean,
     velocityX: number,
     velocityY: number
   ): SkaterState {
     const state = new SkaterState( this );
     state.angle = angle;
-    state.isOnTopSideOfTrack = isOnTopSideOfTrack;
+    state.onTopSideOfTrack = onTopSideOfTrack;
     state.velocityX = velocityX;
     state.velocityY = velocityY;
     state.positionX = positionX;
@@ -241,7 +241,7 @@ export default class SkaterState {
     const state = new SkaterState( this );
     state.thermalEnergy = thermalEnergy;
     state.track = null;
-    state.isOnTopSideOfTrack = true;
+    state.onTopSideOfTrack = true;
     state.angle = 0;
     state.velocityX = velocityX;
     state.velocityY = velocityY;
@@ -263,7 +263,7 @@ export default class SkaterState {
     state.velocityX = 0;
     state.velocityY = 0;
     state.angle = 0;
-    state.isOnTopSideOfTrack = true;
+    state.onTopSideOfTrack = true;
     return state;
   }
 
@@ -321,13 +321,13 @@ export default class SkaterState {
   /**
    * Return SkaterState to track, creating and returning a new SkaterState.
    */
-  public attachToTrack( thermalEnergy: number, track: Track, isOnTopSideOfTrack: boolean, parametricPosition: number, parametricSpeed: number, velocityX: number, velocityY: number, positionX: number, positionY: number ): SkaterState {
+  public attachToTrack( thermalEnergy: number, track: Track, onTopSideOfTrack: boolean, parametricPosition: number, parametricSpeed: number, velocityX: number, velocityY: number, positionX: number, positionY: number ): SkaterState {
     affirm( thermalEnergy >= 0 );
 
     const state = new SkaterState( this );
     state.thermalEnergy = thermalEnergy;
     state.track = track;
-    state.isOnTopSideOfTrack = isOnTopSideOfTrack;
+    state.onTopSideOfTrack = onTopSideOfTrack;
     state.parametricPosition = parametricPosition;
     state.parametricSpeed = parametricSpeed;
     state.velocityX = velocityX;
@@ -349,7 +349,7 @@ export default class SkaterState {
   public static fromPlainObject( data: {
     positionX: number; positionY: number; velocityX: number; velocityY: number;
     gravity: number; referenceHeight: number; mass: number; track: Track | null;
-    angle: number; isOnTopSideOfTrack: boolean; parametricPosition: number;
+    angle: number; onTopSideOfTrack: boolean; parametricPosition: number;
     parametricSpeed: number; dragging: boolean; thermalEnergy: number;
   } ): SkaterState {
     const source = Object.create( SkaterState.prototype ) as SkaterState;

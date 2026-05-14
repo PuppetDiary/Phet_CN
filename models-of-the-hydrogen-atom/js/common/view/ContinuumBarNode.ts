@@ -7,6 +7,8 @@
  * @author Chris Malley (PixelZoom, Inc.)
  */
 
+import DerivedProperty from '../../../../axon/js/DerivedProperty.js';
+import localeProperty from '../../../../joist/js/i18n/localeProperty.js';
 import PhetFont from '../../../../scenery-phet/js/PhetFont.js';
 import Node from '../../../../scenery/js/nodes/Node.js';
 import Rectangle from '../../../../scenery/js/nodes/Rectangle.js';
@@ -21,19 +23,34 @@ const X_MARGIN = 5;
 const Y_MARGIN = 6;
 const FONT = new PhetFont( 14 );
 
+const isStackedChineseLocale = ( locale: string ): boolean => locale.startsWith( 'zh' );
+const toStackedText = ( text: string ): string => text.split( '' ).join( '\n' );
+
 export default class ContinuumBarNode extends Node {
 
   public constructor( barHeight: number, tandem: Tandem ) {
 
     // labels
+    const classicalStringProperty = new DerivedProperty(
+      [ localeProperty, ModelsOfTheHydrogenAtomStrings.classicalStringProperty ],
+      ( locale, string ) => isStackedChineseLocale( locale ) ? toStackedText( string ) : string
+    );
+    const quantumStringProperty = new DerivedProperty(
+      [ localeProperty, ModelsOfTheHydrogenAtomStrings.quantumStringProperty ],
+      ( locale, string ) => isStackedChineseLocale( locale ) ? toStackedText( string ) : string
+    );
     const textOptions = {
       font: FONT,
       fill: MOTHAColors.continuumBarTextFillProperty,
       rotation: Math.PI / 2,
       maxWidth: 0.4 * barHeight
     };
-    const classicalText = new Text( ModelsOfTheHydrogenAtomStrings.classicalStringProperty, textOptions );
-    const quantumText = new Text( ModelsOfTheHydrogenAtomStrings.quantumStringProperty, textOptions );
+    const classicalText = new Text( classicalStringProperty, textOptions );
+    const quantumText = new Text( quantumStringProperty, textOptions );
+    localeProperty.link( locale => {
+      classicalText.rotation = isStackedChineseLocale( locale ) ? 0 : Math.PI / 2;
+      quantumText.rotation = isStackedChineseLocale( locale ) ? 0 : Math.PI / 2;
+    } );
 
     const barWidth = Math.max( classicalText.width, quantumText.width ) + ( 2 * X_MARGIN );
     const barNode = new Rectangle( 0, 0, barWidth, barHeight, {

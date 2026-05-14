@@ -1,4 +1,4 @@
-// Copyright 2024-2025, University of Colorado Boulder
+// Copyright 2024-2026, University of Colorado Boulder
 
 /**
  * Base class for any of the screens in the Membrane Transport simulation.  This class is responsible for creating the model and view.
@@ -36,6 +36,7 @@ export default class MembraneTransportScreen extends Screen<MembraneTransportMod
         backgroundColorProperty: MembraneTransportColors.outsideCellColorProperty,
         tandem: tandem,
         createKeyboardHelpNode: () => new MembraneTransportKeyboardHelpNode( featureSet ),
+        useNaturalNavigationBarButtonWidth: true,
         screenButtonsHelpText: screenButtonHelpTextProperty,
         homeScreenIcon: new ScreenIcon( new Image( homeScreenIcon ), {
           maxIconWidthProportion: 1,

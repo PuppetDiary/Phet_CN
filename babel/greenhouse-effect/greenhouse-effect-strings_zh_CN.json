@@ -418,13 +418,19 @@
     ]
   },
   "greenhouse-effect.title": {
-    "value": "Greenhouse Effect_温室效应",
+    "value": "温室效应",
     "history": [
       {
         "userId": 0,
         "timestamp": 1773333553810,
         "oldValue": "",
         "newValue": "Greenhouse Effect_温室效应"
+      },
+      {
+        "userId": 0,
+        "timestamp": 1743014400000,
+        "oldValue": "Greenhouse Effect_温室效应",
+        "newValue": "温室效应"
       }
     ]
   },

@@ -21,11 +21,11 @@ import RectangularRadioButtonGroup, { RectangularRadioButtonGroupOptions } from 
 import Tandem from '../../../../tandem/js/Tandem.js';
 import energySkatePark from '../../energySkatePark.js';
 import EnergySkateParkFluent from '../../EnergySkateParkFluent.js';
-import EnergySkateParkColors from '../EnergySkateParkColors.js';
 import EnergySkateParkConstants from '../EnergySkateParkConstants.js';
 import EnergySkateParkTrackSetModel from '../model/EnergySkateParkTrackSetModel.js';
 import PremadeTracks, { TrackType } from '../model/PremadeTracks.js';
 import BackgroundNode from './BackgroundNode.js';
+import EnergySkateParkColors from '../EnergySkateParkColors.js';
 import EnergySkateParkScreenView from './EnergySkateParkScreenView.js';
 import TrackNode from './TrackNode.js';
 
@@ -36,7 +36,7 @@ type SelfOptions = {
 
 type SceneSelectionRadioButtonGroupOptions = SelfOptions & RectangularRadioButtonGroupOptions;
 
-export default class SceneSelectionRadioButtonGroup extends RectangularRadioButtonGroup<TrackType> {
+export default class SceneSelectionRadioButtonGroup extends RectangularRadioButtonGroup<number> {
 
   /**
    * Construct a SceneSelectionRadioButtonGroup.  Pass the entire model since it is used to create TrackNode
@@ -116,10 +116,9 @@ export default class SceneSelectionRadioButtonGroup extends RectangularRadioButt
         children.push( background );
       }
 
-      const trackType = model.trackTypes[ index ];
-      const track = createIconTrack( trackType );
+      const track = createIconTrack( model.trackTypes[ index ] );
 
-      const trackNode = new TrackNode( track, view.modelViewTransform, new Property( Bounds2.EVERYTHING ), Tandem.OPT_OUT, {
+      const trackNode = new TrackNode( track, view.modelViewTransform, new Property( Bounds2.EVERYTHING ), tandem.createTandem( `trackNode${index}` ), {
         isIcon: true
       } );
 
@@ -131,6 +130,7 @@ export default class SceneSelectionRadioButtonGroup extends RectangularRadioButt
       iconNode.pickable = false;
 
       return new Node( {
+        tandem: tandem.createTandem( `contentNode${index}` ),
         children: children
       } );
     };
@@ -154,7 +154,7 @@ export default class SceneSelectionRadioButtonGroup extends RectangularRadioButt
       LOOP: EnergySkateParkFluent.a11y.sceneSelectionRadioButtonGroup.loopRadioButton.accessibleNameStringProperty
     };
 
-    const radioButtonContent: { value: TrackType; createNode: () => Node; tandemName: string; options?: object }[] = [];
+    const radioButtonContent: { value: number; createNode: () => Node; tandemName: string; options?: object }[] = [];
     _.forEach( contents, ( node, i ) => {
 
       // scalar chosen so that buttons are appropriately sized in the control panel
@@ -176,16 +176,10 @@ export default class SceneSelectionRadioButtonGroup extends RectangularRadioButt
         setterFunction.call( alignedNode, margin );
       }
 
-      const trackType = model.trackTypes[ i ];
-
       radioButtonContent.push( {
-        value: trackType,
+        value: i,
         createNode: () => alignedNode,
-        tandemName: trackType === 'PARABOLA' ? 'parabolaRadioButton' :
-                    trackType === 'RAMP' ? 'rampRadioButton' :
-                    trackType === 'DOUBLE_WELL' ? 'doubleWellRadioButton' :
-                    trackType === 'LOOP' ? 'loopRadioButton' :
-                    ( () => {throw new Error( 'Unsupported track type: ' + trackType );} )(),
+        tandemName: `scene${i + 1}RadioButton`,
         options: {
           accessibleName: sceneAccessibleNameMap[ model.trackTypes[ i ] ]
         }

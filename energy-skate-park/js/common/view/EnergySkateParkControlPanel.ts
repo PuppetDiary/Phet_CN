@@ -8,7 +8,7 @@
  */
 
 import merge from '../../../../phet-core/js/merge.js';
-import optionize, { combineOptions } from '../../../../phet-core/js/optionize.js';
+import optionize from '../../../../phet-core/js/optionize.js';
 
 import HSeparator from '../../../../scenery/js/layout/nodes/HSeparator.js';
 import VBox from '../../../../scenery/js/layout/nodes/VBox.js';
@@ -59,9 +59,13 @@ export type EnergySkateParkControlPanelOptions = SelfOptions & PanelOptions;
 
 export default class EnergySkateParkControlPanel extends Panel {
 
-  public constructor( model: EnergySkateParkModel, screenView: EnergySkateParkScreenView, tandem: Tandem, providedOptions?: EnergySkateParkControlPanelOptions ) {
+  // Exposed for tutorial overlay targeting
+  public readonly visibilityControlsNode!: Node;
+  public readonly experimentSettingsNode!: Node | null;
 
-    const options = optionize<EnergySkateParkControlPanelOptions, SelfOptions, PanelOptions>()( {
+  public constructor(model: EnergySkateParkModel, screenView: EnergySkateParkScreenView, tandem: Tandem, providedOptions?: EnergySkateParkControlPanelOptions) {
+
+    const options = optionize<EnergySkateParkControlPanelOptions, SelfOptions, PanelOptions>()({
       showTrackButtons: true,
       showFrictionControls: true,
       showGravityControls: true,
@@ -70,89 +74,77 @@ export default class EnergySkateParkControlPanel extends Panel {
       visibilityControlsOptions: null,
       gravityControlsOptions: null,
       massControlsOptions: null
-    }, providedOptions );
+    }, providedOptions);
 
     const userControlledPropertySet = model.userControlledPropertySet;
 
     // all contents of the control panel will be added to this array
     const children: Node[] = [];
 
-    let trackSelectionRadioButtonGroup = null;
-    if ( options.showTrackButtons && model instanceof EnergySkateParkTrackSetModel ) {
-      trackSelectionRadioButtonGroup = new SceneSelectionRadioButtonGroup( model, screenView, tandem.createTandem( 'trackSelectionRadioButtonGroup' ) );
-      children.push( trackSelectionRadioButtonGroup );
+    let trackRadioButtons = null;
+    if (options.showTrackButtons && model instanceof EnergySkateParkTrackSetModel) {
+      trackRadioButtons = new SceneSelectionRadioButtonGroup(model, screenView, tandem.createTandem('sceneSelectionRadioButtonGroup'));
+      children.push(trackRadioButtons);
     }
 
     // Collect friction, gravity, and mass controls to group under an "Experiment Settings" heading for a11y
     const experimentSettingsChildren: Node[] = [];
 
-    // Group friction and gravity controls into one VBox
-    const frictionGravityChildren: Node[] = [];
-    if ( options.showFrictionControls ) {
-      frictionGravityChildren.push( new FrictionSlider( model.frictionProperty, userControlledPropertySet.frictionControlledProperty, tandem.createTandem( 'frictionControl' ) ) );
+    if (options.showFrictionControls) {
+      experimentSettingsChildren.push(new FrictionSlider(model.frictionProperty, userControlledPropertySet.frictionControlledProperty, tandem.createTandem('frictionControl')));
     }
 
-    if ( options.showGravityControls ) {
-      frictionGravityChildren.push( new EnergySkateParkGravityControls( model.skater.gravityMagnitudeProperty, userControlledPropertySet.gravityControlledProperty, model.preferencesModel.accelerationUnitsProperty, model.resetEmitter, screenView, tandem.createTandem( 'gravityControls' ), options.gravityControlsOptions || undefined ) );
+    if (options.showGravityControls) {
+      experimentSettingsChildren.push(new EnergySkateParkGravityControls(model.skater.gravityMagnitudeProperty, userControlledPropertySet.gravityControlledProperty, model.preferencesModel.accelerationUnitsProperty, model.resetEmitter, screenView, tandem.createTandem('energySkateParkGravityControls'), options.gravityControlsOptions || undefined));
     }
 
-    if ( frictionGravityChildren.length > 0 ) {
-      experimentSettingsChildren.push( new VBox( { spacing: 8, stretch: true, children: frictionGravityChildren } ) );
+    // one separator after friction and/or gravity controls (preserving original visual layout)
+    if (options.showFrictionControls || options.showGravityControls) {
+      experimentSettingsChildren.push(new HSeparator());
     }
 
-    // Group mass controls and skater radio buttons into another VBox
-    const massSkaterChildren: Node[] = [];
-    if ( options.showMassControls ) {
-      massSkaterChildren.push( new EnergySkateParkMassControls( model.skater.massProperty, userControlledPropertySet.massControlledProperty, model.skater.massRange, tandem, options.massControlsOptions || undefined ) );
-    }
-
-    if ( options.showSkaterControls ) {
-      massSkaterChildren.push( new SkaterRadioButtonGroup(
-        screenView.skaterNode.selectedSkaterProperty,
-        tandem.createTandem( 'skaterSelectionRadioButtonGroup' )
-      ) );
-    }
-
-    // HSeparator between the two groups
-    if ( frictionGravityChildren.length > 0 && massSkaterChildren.length > 0 ) {
-      experimentSettingsChildren.push( new HSeparator() );
-    }
-
-    if ( massSkaterChildren.length > 0 ) {
-      experimentSettingsChildren.push( new VBox( { spacing: 8, stretch: true, children: massSkaterChildren } ) );
+    if (options.showMassControls) {
+      experimentSettingsChildren.push(new EnergySkateParkMassControls(model.skater.massProperty, userControlledPropertySet.massControlledProperty, model.skater.massRange, tandem.createTandem('energySkateParkMassControls'), options.massControlsOptions || undefined));
     }
 
     let experimentSettingsNode: Node | null = null;
-    if ( experimentSettingsChildren.length > 0 ) {
-      experimentSettingsNode = new VBox( {
+    if (experimentSettingsChildren.length > 0) {
+      experimentSettingsNode = new VBox({
         spacing: 8,
         stretch: true,
         children: experimentSettingsChildren,
         accessibleHeading: EnergySkateParkFluent.a11y.controlPanel.experimentSettingsHeadingStringProperty
-      } );
-      children.push( experimentSettingsNode );
+      });
+      children.push(experimentSettingsNode);
     }
 
-    const visibilityControls = new EnergySkateParkVisibilityControls( model, tandem.createTandem( 'visibilityControls' ), combineOptions<EnergySkateParkVisibilityControlsOptions>( {
-      visiblePropertyOptions: { phetioFeatured: true }
-    }, options.visibilityControlsOptions || {} ) );
-    children.unshift( visibilityControls );
+    if (options.showSkaterControls) {
+      const skaterRadioButtonGroup = new SkaterRadioButtonGroup(screenView.skaterNode.selectedSkaterProperty,
+        tandem.createTandem('skaterSetOneControls'));
+      children.push(skaterRadioButtonGroup);
+    }
+
+    const visibilityControls = new EnergySkateParkVisibilityControls(model, tandem.createTandem('visibilityControls'), options.visibilityControlsOptions || undefined);
+    children.unshift(visibilityControls);
 
     // one separator after visibility controls
-    children.splice( children.indexOf( visibilityControls ) + 1, 0, new HSeparator() );
+    children.splice(children.indexOf(visibilityControls) + 1, 0, new HSeparator());
 
     // one separator after scene selection buttons
-    trackSelectionRadioButtonGroup && children.splice( children.indexOf( trackSelectionRadioButtonGroup ) + 1, 0, new HSeparator() );
+    trackRadioButtons && children.splice(children.indexOf(trackRadioButtons) + 1, 0, new HSeparator());
 
-    const content = new VBox( { spacing: 8, stretch: true, children: children } );
+    const content = new VBox({ spacing: 8, stretch: true, children: children });
 
-    super( content, merge( {
+    super(content, merge({
       xMargin: 5,
       yMargin: 5,
-      tandem: tandem,
-      visiblePropertyOptions: { phetioFeatured: true }
-    }, EnergySkateParkConstants.PANEL_OPTIONS ) );
+      tandem: tandem
+    }, EnergySkateParkConstants.PANEL_OPTIONS));
+
+    // Expose sub-nodes for tutorial overlay targeting (must be after super())
+    this.visibilityControlsNode = visibilityControls;
+    this.experimentSettingsNode = experimentSettingsNode;
   }
 }
 
-energySkatePark.register( 'EnergySkateParkControlPanel', EnergySkateParkControlPanel );
+energySkatePark.register('EnergySkateParkControlPanel', EnergySkateParkControlPanel);

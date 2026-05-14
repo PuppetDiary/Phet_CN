@@ -446,6 +446,10 @@ export default class ComboBox<T> extends WidthSizable( Node ) {
     // Attach to the listbox directly (not this ComboBox) because the listbox is not a child of ComboBox.
     this.listBox.addInputListener( focusOutInputListener );
 
+    // The initial arrow direction based on list position
+    const initialArrowDirection: 'up' | 'down' = ( options.listPosition === 'below' ) ? 'down' : 'up';
+    const flippedArrowDirection: 'up' | 'down' = ( initialArrowDirection === 'up' ) ? 'down' : 'up';
+
     this.listBox.visibleProperty.link( visible => {
       if ( visible ) {
 
@@ -453,12 +457,18 @@ export default class ComboBox<T> extends WidthSizable( Node ) {
         this.scaleListBox();
         this.listBox.moveToFront();
 
+        // Flip the arrow direction when the list box is visible
+        this.button.setArrowDirection( flippedArrowDirection );
+
         // manage clickToDismissListener
         assert && assert( !this.display, 'unexpected display' );
         this.display = this.getUniqueTrail().rootNode().getRootedDisplays()[ 0 ];
         this.display.addInputListener( this.clickToDismissListener );
       }
       else {
+
+        // Restore the arrow direction when the list box is hidden
+        this.button.setArrowDirection( initialArrowDirection );
 
         // manage clickToDismissListener
         if ( this.display && this.display.hasInputListener( this.clickToDismissListener ) ) {

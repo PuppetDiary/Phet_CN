@@ -50,6 +50,9 @@ type StringsType = {
     'energyStringProperty': LocalizedStringProperty;
   };
   'plots': {
+    'barGraph': {
+      'labelStringProperty': LocalizedStringProperty;
+    };
     'energyGraph': {
       'labelStringProperty': LocalizedStringProperty;
     };
@@ -69,6 +72,8 @@ type StringsType = {
     'speedStringProperty': LocalizedStringProperty;
   };
   'skaterControls': {
+    'labelStringProperty': LocalizedStringProperty;
+    'skater1MassPatternStringProperty': LocalizedStringProperty;
     'restartSkaterStringProperty': LocalizedStringProperty;
   };
   'trackControls': {
@@ -159,10 +164,8 @@ type StringsType = {
     };
     'skaterNode': {
       'accessibleNameStringProperty': LocalizedStringProperty;
-      'firstGrabContextResponseStringProperty': LocalizedStringProperty;
-      'snapToTrackContextResponseStringProperty': LocalizedStringProperty;
-      'detachFromTrackContextResponseStringProperty': LocalizedStringProperty;
-      'offScreenContextResponseStringProperty': LocalizedStringProperty;
+      'onTrackHelpTextStringProperty': LocalizedStringProperty;
+      'offTrackHelpTextStringProperty': LocalizedStringProperty;
     };
     'referenceHeightLine': {
       'accessibleHeadingStringProperty': LocalizedStringProperty;
@@ -199,7 +202,6 @@ type StringsType = {
       'playgroundTrackPhraseNoneStringProperty': LocalizedStringProperty;
       'trackAndSkaterParagraphStringProperty': LocalizedStringProperty;
       'skaterOnTrackStringProperty': LocalizedStringProperty;
-      'skaterOnTrackWithIndexStringProperty': LocalizedStringProperty;
       'skaterOffTrackStringProperty': LocalizedStringProperty;
     };
     'trackNode': {
@@ -299,6 +301,10 @@ type StringsType = {
         'timeResponseStringProperty': LocalizedStringProperty;
       }
     };
+    'controlPointAttachment': {
+      'leftStringProperty': LocalizedStringProperty;
+      'rightStringProperty': LocalizedStringProperty;
+    };
     'energyBarGraphAccordionBox': {
       'accessibleNameStringProperty': LocalizedStringProperty;
       'accessibleHelpTextExpandedStringProperty': LocalizedStringProperty;
@@ -361,7 +367,6 @@ type StringsType = {
     };
     'gravityControl': {
       'accessibleHelpTextStringProperty': LocalizedStringProperty;
-      'accessibleValuePatternStringProperty': LocalizedStringProperty;
     };
     'gravityComboBox': {
       'accessibleNameStringProperty': LocalizedStringProperty;
@@ -373,7 +378,6 @@ type StringsType = {
     };
     'massControl': {
       'accessibleHelpTextStringProperty': LocalizedStringProperty;
-      'accessibleValuePatternStringProperty': LocalizedStringProperty;
     };
     'skaterSetOneControls': {
       'accessibleNameStringProperty': LocalizedStringProperty;
@@ -419,11 +423,9 @@ type StringsType = {
     'returnSkaterToPreviousStartingPositionButton': {
       'accessibleNameStringProperty': LocalizedStringProperty;
       'accessibleHelpTextStringProperty': LocalizedStringProperty;
-      'accessibleContextResponseStringProperty': LocalizedStringProperty;
     };
     'returnSkaterToGroundButton': {
       'accessibleNameStringProperty': LocalizedStringProperty;
-      'accessibleContextResponseStringProperty': LocalizedStringProperty;
     };
     'screenButtons': {
       'intro': {
@@ -436,6 +438,9 @@ type StringsType = {
         'accessibleHelpTextStringProperty': LocalizedStringProperty;
       };
       'playground': {
+        'accessibleHelpTextStringProperty': LocalizedStringProperty;
+      };
+      'friction': {
         'accessibleHelpTextStringProperty': LocalizedStringProperty;
       }
     };

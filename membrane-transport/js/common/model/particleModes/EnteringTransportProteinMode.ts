@@ -1,4 +1,4 @@
-// Copyright 2025, University of Colorado Boulder
+// Copyright 2025-2026, University of Colorado Boulder
 
 /**
  * Particle is in the initial phase of entering a transport protein channel from either the inside or outside.
@@ -9,7 +9,6 @@
  */
 
 import IntentionalAny from '../../../../../phet-core/js/types/IntentionalAny.js';
-import membraneTransport from '../../../membraneTransport.js';
 import MembraneTransportConstants from '../../MembraneTransportConstants.js';
 import MembraneTransportModel from '../MembraneTransportModel.js';
 import Particle from '../Particle.js';
@@ -57,5 +56,3 @@ export default class EnteringTransportProteinMode extends BaseParticleMode {
     return new EnteringTransportProteinMode( slot, stateObject.direction );
   }
 }
-
-membraneTransport.register( 'EnteringTransportProteinMode', EnteringTransportProteinMode );

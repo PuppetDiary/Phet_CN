@@ -1,4 +1,4 @@
-// Copyright 2024-2025, University of Colorado Boulder
+// Copyright 2024-2026, University of Colorado Boulder
 
 /**
  * Defines the colors for this sim.
@@ -83,5 +83,4 @@ const MembraneTransportColors = {
   } )
 };
 
-membraneTransport.register( 'MembraneTransportColors', MembraneTransportColors );
 export default MembraneTransportColors;

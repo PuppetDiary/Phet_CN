@@ -89,7 +89,7 @@ class PegControls extends Panel {
       value: PlinkoProbabilityConstants.BINARY_PROBABILITY_RANGE.min,
       label: new Text( PlinkoProbabilityConstants.BINARY_PROBABILITY_RANGE.min, tickLabelOptions )
     }, {
-      value: PlinkoProbabilityConstants.ROWS_RANGE.max,
+      value: PlinkoProbabilityConstants.BINARY_PROBABILITY_RANGE.max,
       label: new Text( PlinkoProbabilityConstants.BINARY_PROBABILITY_RANGE.max, tickLabelOptions )
     } ];
 

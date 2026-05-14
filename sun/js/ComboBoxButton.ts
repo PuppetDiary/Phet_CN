@@ -336,6 +336,30 @@ export default class ComboBoxButton<T> extends RectangularPushButton {
   }
 
   /**
+   * Sets the arrow direction dynamically, e.g. to flip the arrow when the list box is shown/hidden.
+   */
+  public setArrowDirection( direction: 'up' | 'down' ): void {
+    const bounds = this.arrow.localBounds;
+    const width = bounds.width;
+    const height = bounds.height;
+
+    if ( direction === 'up' ) {
+      this.arrow.shape = new Shape()
+        .moveTo( 0, height )
+        .lineTo( width / 2, 0 )
+        .lineTo( width, height )
+        .close();
+    }
+    else {
+      this.arrow.shape = new Shape()
+        .moveTo( 0, 0 )
+        .lineTo( width, 0 )
+        .lineTo( width / 2, height )
+        .close();
+    }
+  }
+
+  /**
    * Call to block voicing from occurring upon this button's next focus event.
    * For use by ComboBox.
    */

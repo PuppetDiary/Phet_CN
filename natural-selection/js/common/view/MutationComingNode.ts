@@ -50,7 +50,8 @@ export default class MutationComingNode extends Node {
 
     const labelText = new Text( NaturalSelectionStrings.mutationComingStringProperty, {
       font: NaturalSelectionConstants.MUTATION_COMING_FONT,
-      maxWidth: 128 // determined empirically
+      maxWidth: 128, // determined empirically
+      visible: false // hide the text, keep only the × button
     } );
 
     const hBox = new HBox( {

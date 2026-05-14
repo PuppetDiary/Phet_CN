@@ -1,4 +1,4 @@
-﻿/* eslint-disable */
+/* eslint-disable */
 /* @formatter:off */
 
 import asyncLoader from '../../../phet-core/js/asyncLoader.js';

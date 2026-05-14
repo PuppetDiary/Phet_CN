@@ -1,4 +1,4 @@
-// Copyright 2025, University of Colorado Boulder
+// Copyright 2025-2026, University of Colorado Boulder
 
 /**
  * A target zone where a membrane transport protein can be dropped. When the user drags a transport protein toward this slot, it
@@ -9,7 +9,6 @@
 
 import ModelViewTransform2 from '../../../../phetcommon/js/view/ModelViewTransform2.js';
 import Rectangle from '../../../../scenery/js/nodes/Rectangle.js';
-import membraneTransport from '../../membraneTransport.js';
 import Slot from '../model/Slot.js';
 
 export default class SlotDragIndicatorNode extends Rectangle {
@@ -29,5 +28,3 @@ export default class SlotDragIndicatorNode extends Rectangle {
     } );
   }
 }
-
-membraneTransport.register( 'SlotDragIndicatorNode', SlotDragIndicatorNode );

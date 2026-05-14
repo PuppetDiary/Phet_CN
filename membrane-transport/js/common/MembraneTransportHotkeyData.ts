@@ -1,4 +1,4 @@
-// Copyright 2025, University of Colorado Boulder
+// Copyright 2025-2026, University of Colorado Boulder
 
 /**
  * HotkeyData for the KeyboardListeners in MembraneTransport.
@@ -129,5 +129,3 @@ export default class MembraneTransportHotkeyData {
     )
   };
 }
-
-membraneTransport.register( 'MembraneTransportHotkeyData', MembraneTransportHotkeyData );

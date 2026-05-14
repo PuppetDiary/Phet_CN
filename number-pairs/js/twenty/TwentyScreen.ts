@@ -31,6 +31,7 @@ export default class TwentyScreen extends Screen<TwentyModel, TwentyScreenView> 
       createKeyboardHelpNode: () => new TwentyScreenKeyboardHelpNode(),
       homeScreenIcon: new TwentyScreenIcon( { size: Screen.MINIMUM_HOME_SCREEN_ICON_SIZE } ),
       navigationBarIcon: new TwentyScreenIcon( { size: Screen.MINIMUM_NAVBAR_ICON_SIZE } ),
+      useNaturalNavigationBarButtonWidth: true,
       screenButtonsHelpText: NumberPairsFluent.a11y.screenButtonsHelpText.twenty.createProperty( {
         min: NumberPairsConstants.TWENTY_TOTAL_RANGE.min,
         max: NumberPairsConstants.TWENTY_TOTAL_RANGE.max

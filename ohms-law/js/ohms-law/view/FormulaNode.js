@@ -30,10 +30,10 @@ const voltageSymbolString = OhmsLawStrings.voltageSymbol;
 
 // constants
 const TEXT_FONT = new PhetFont( { family: OhmsLawConstants.FONT_FAMILY, size: 20, weight: 'bold' } );
-const CURRENT_SCALE_M = 150; // empirically determined
-const CURRENT_SCALE_B = 1; // empirically determined
 const OTHERS_SCALE_M = 16; // empirically determined
 const OTHERS_SCALE_B = 4; // empirically determined
+const CURRENT_MIN_SCALE = 1.25;
+const CURRENT_MAX_SCALE = OTHERS_SCALE_M + OTHERS_SCALE_B;
 
 class FormulaNode extends Node {
   /**
@@ -78,7 +78,9 @@ class FormulaNode extends Node {
     // Scale the text as the associated value changes. Present for the lifetime of the sim; no need to dispose.
     model.currentProperty.link( () => {
       this.currentLetterNode.setTranslation( currentXPosition, 0 );
-      this.currentLetterNode.setScaleMagnitude( CURRENT_SCALE_M * model.getNormalizedCurrent() + CURRENT_SCALE_B );
+      this.currentLetterNode.setScaleMagnitude(
+        CURRENT_MIN_SCALE + ( CURRENT_MAX_SCALE - CURRENT_MIN_SCALE ) * model.getNormalizedCurrent()
+      );
     } );
 
     // Create the Voltage Letter

@@ -1,4 +1,4 @@
-// Copyright 2025, University of Colorado Boulder
+// Copyright 2025-2026, University of Colorado Boulder
 
 /**
  * MembraneTransportPreferencesNode is the user interface for sim-specific preferences, accessed via the Preferences dialog.
@@ -20,7 +20,6 @@ import VBox from '../../../../scenery/js/layout/nodes/VBox.js';
 import Text from '../../../../scenery/js/nodes/Text.js';
 import ToggleSwitch, { ToggleSwitchOptions } from '../../../../sun/js/ToggleSwitch.js';
 import Tandem from '../../../../tandem/js/Tandem.js';
-import membraneTransport from '../../membraneTransport.js';
 import MembraneTransportFluent from '../../MembraneTransportFluent.js';
 import MembraneTransportPreferences from '../MembraneTransportPreferences.js';
 
@@ -99,5 +98,3 @@ export default class MembraneTransportPreferencesNode extends VBox {
     } );
   }
 }
-
-membraneTransport.register( 'MembraneTransportPreferencesNode', MembraneTransportPreferencesNode );

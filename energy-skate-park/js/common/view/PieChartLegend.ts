@@ -27,9 +27,9 @@ import sharedSoundPlayers from '../../../../tambo/js/sharedSoundPlayers.js';
 import Tandem from '../../../../tandem/js/Tandem.js';
 import energySkatePark from '../../energySkatePark.js';
 import EnergySkateParkFluent from '../../EnergySkateParkFluent.js';
-import EnergySkateParkColors from '../EnergySkateParkColors.js';
 import EnergySkateParkConstants from '../EnergySkateParkConstants.js';
 import Skater from '../model/Skater.js';
+import EnergySkateParkColors from '../EnergySkateParkColors.js';
 
 const energyEnergyStringProperty = EnergySkateParkFluent.energies.energyStringProperty;
 const energyKineticStringProperty = EnergySkateParkFluent.energies.kineticStringProperty;
@@ -61,8 +61,9 @@ export default class PieChartLegend extends Panel {
     }, providedOptions );
 
     // The x-coordinate of a bar chart bar
-    const createLabel = ( index: number, title: string | TReadOnlyProperty<string> ) => {
+    const createLabel = ( index: number, title: string | TReadOnlyProperty<string>, tandemName: string ) => {
       return new Text( title, {
+        tandem: tandem.createTandem( tandemName ),
         font: EnergySkateParkConstants.CONTROL_LABEL_FONT,
         pickable: false,
         maxWidth: 97 // selected by choosing the length of widest English string in ?stringTest=double
@@ -82,10 +83,10 @@ export default class PieChartLegend extends Panel {
     const thermalBar = createBar( 2, EnergySkateParkColors.thermalEnergyColorProperty );
     const totalBar = createBar( 3, EnergySkateParkColors.totalEnergyColorProperty );
 
-    const kineticLabel = createLabel( 0, energyKineticStringProperty );
-    const potentialLabel = createLabel( 1, energyPotentialStringProperty );
-    const thermalLabel = createLabel( 2, energyThermalStringProperty );
-    const totalLabel = createLabel( 3, energyTotalStringProperty );
+    const kineticLabel = createLabel( 0, energyKineticStringProperty, 'kineticEnergyLabelText' );
+    const potentialLabel = createLabel( 1, energyPotentialStringProperty, 'potentialEnergyLabelText' );
+    const thermalLabel = createLabel( 2, energyThermalStringProperty, 'thermalEnergyLabelText' );
+    const totalLabel = createLabel( 3, energyTotalStringProperty, 'totalEnergyLabelText' );
 
     const clearThermalButton = new MoveToTrashLegendButton( {
       arrowColor: EnergySkateParkColors.thermalEnergyColorProperty,
@@ -94,7 +95,6 @@ export default class PieChartLegend extends Panel {
       centerX: thermalLabel.centerX,
       y: thermalLabel.bottom + 15,
       scale: 0.8,
-      enabledPropertyOptions: { phetioReadOnly: true },
       soundPlayer: sharedSoundPlayers.get( 'erase' ),
       accessibleName: EnergySkateParkFluent.a11y.energyBarGraphAccordionBox.clearThermalButton.accessibleNameStringProperty,
       accessibleHelpText: EnergySkateParkFluent.a11y.energyBarGraphAccordionBox.clearThermalButton.accessibleHelpTextStringProperty,
@@ -127,6 +127,7 @@ export default class PieChartLegend extends Panel {
     const contentNode = new VBox( { spacing: 6, align: 'left', children: children } );
 
     const titleText = new Text( energyEnergyStringProperty, {
+      tandem: tandem.createTandem( 'titleText' ),
       fill: 'black',
       font: new PhetFont( 17 ),
       pickable: false,
@@ -204,11 +205,7 @@ export default class PieChartLegend extends Panel {
 
       // The list describing energies is placed after the focusable panel children.
       appendAccessibleTemplate: true
-    }, EnergySkateParkConstants.GRAPH_PANEL_OPTIONS, {
-      visiblePropertyOptions: {
-        phetioReadOnly: true
-      }
-    } ) );
+    }, EnergySkateParkConstants.GRAPH_PANEL_OPTIONS ) );
 
     const strutGlobal = clearThermalButtonStrut.parentToGlobalPoint( clearThermalButtonStrut.center );
     const buttonLocal = clearThermalButton.globalToParentPoint( strutGlobal );

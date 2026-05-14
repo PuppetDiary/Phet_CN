@@ -1,4 +1,4 @@
-// Copyright 2025, University of Colorado Boulder
+// Copyright 2025-2026, University of Colorado Boulder
 
 /**
  * Artwork for the voltage-gated channel protein.
@@ -9,7 +9,6 @@
 import Image from '../../../../../scenery/js/nodes/Image.js';
 import sodiumVoltageGatedClosed_svg from '../../../../images/sodiumVoltageGatedClosed_svg.js';
 import sodiumVoltageGatedOpen_svg from '../../../../images/sodiumVoltageGatedOpen_svg.js';
-import membraneTransport from '../../../membraneTransport.js';
 import MembraneTransportSounds from '../../MembraneTransportSounds.js';
 import SodiumVoltageGatedChannel from '../../model/proteins/SodiumVoltageGatedChannel.js';
 import TransportProteinNode from './TransportProteinNode.js';
@@ -54,5 +53,3 @@ export default class SodiumVoltageGatedChannelNode extends TransportProteinNode 
     }
   }
 }
-
-membraneTransport.register( 'SodiumVoltageGatedChannelNode', SodiumVoltageGatedChannelNode );

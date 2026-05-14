@@ -1,4 +1,4 @@
-// Copyright 2025, University of Colorado Boulder
+// Copyright 2025-2026, University of Colorado Boulder
 
 /**
  * SortOrDeleteProteinsKeyboardHelpSection describes the keyboard controls for sorting and deleting
@@ -8,7 +8,6 @@
  */
 
 import KeyboardHelpSection from '../../../../scenery-phet/js/keyboard/help/KeyboardHelpSection.js';
-import membraneTransport from '../../membraneTransport.js';
 import MembraneTransportFluent from '../../MembraneTransportFluent.js';
 import MembraneTransportConstants from '../MembraneTransportConstants.js';
 import MembraneTransportHotkeyData from '../MembraneTransportHotkeyData.js';
@@ -41,5 +40,3 @@ export default class SortOrDeleteProteinsKeyboardHelpSection extends KeyboardHel
     ] );
   }
 }
-
-membraneTransport.register( 'SortOrDeleteProteinsKeyboardHelpSection', SortOrDeleteProteinsKeyboardHelpSection );
